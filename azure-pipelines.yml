@@ -10,18 +10,27 @@ pool:
   vmImage: 'VS2017-Win2016'
 
 variables:
-  baseProject: 'Lett.Extensions/Lett.Extensions.csproj'
-  buildConfiguration: 'Release'
+  baseProject: 'Lett.Extensions/Lett.Extensions.csproj'           # 主体项目文件
+  testProject: 'Lett.Extensions.Test/Lett.Extensions.Test.csproj' # 单元测试项目文件
+  buildConfiguration: 'Release'                                   # 编译配置
 
 steps:
 - task: DotNetCoreCLI@2
+  displayName: 还原nuget包
   inputs:
     command: restore
     projects: '$(baseProject)'
 
 - task: DotNetCoreCLI@2
-  displayName: Build
+  displayName: 开始编译
   inputs:
     command: build
     projects: '$(baseProject)'
+    arguments: '--configuration $(buildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  displayName: 单元测试
+  inputs:
+    command: test
+    projects: '$(testProject)'
     arguments: '--configuration $(buildConfiguration)'
