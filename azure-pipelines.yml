@@ -13,6 +13,9 @@ variables:
   baseProject: 'Lett.Extensions/Lett.Extensions.csproj'           # 主体项目文件
   testProject: 'Lett.Extensions.Test/Lett.Extensions.Test.csproj' # 单元测试项目文件
   buildConfiguration: 'Release'                                   # 编译配置
+  Major: '0'
+  Minor: '0'
+  Patch: '1'
 
 steps:
 - task: DotNetCoreCLI@2
@@ -41,3 +44,18 @@ steps:
   inputs:
     testRunner: VSTest
     testResultsFiles: '**/*.trx'
+
+- task: NuGetCommand@2
+  inputs:
+    command: pack
+    versioningScheme: byBuildNumber
+    majorVersion: '$(Major)'
+    minorVersion: '$(Minor)'
+    patchVersion: '$(Patch)'
+
+- task: NuGetCommand@2
+  inputs:
+    command: push
+    nuGetFeedType: external
+    publishFeedCredentials: '$(NuGetApiKey)'
+    versioningScheme: byPrereleaseNumber
