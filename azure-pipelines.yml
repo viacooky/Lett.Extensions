@@ -34,3 +34,10 @@ steps:
     command: test
     projects: '$(testProject)'
     arguments: '--configuration $(buildConfiguration)'
+
+- task: PublishTestResults@2
+  displayName: 发布测试报告
+  condition: succeededOrFailed()
+  inputs:
+    testRunner: VSTest
+    testResultsFiles: '**/*.trx'
