@@ -61,7 +61,7 @@ steps:
   inputs:
     command: push
     nuGetFeedType: external
-    publishFeedCredentials: 'publishFeedCredentials'
+    publishFeedCredentials: '$(NuGetApiKey)'
     versioningScheme: byPrereleaseNumber
     majorVersion: '$(Major)'
     minorVersion: '$(Minor)'
