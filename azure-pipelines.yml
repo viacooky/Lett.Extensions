@@ -27,16 +27,13 @@ steps:
   displayName: '测试'
   inputs:
     command: test
-    projects: '$(Parameters.TestProjects)'
-    arguments: '--configuration $(BuildConfiguration)'
-
-- task: DotNetCoreCLI@2
-  displayName: 'dotnet pack'
+    projects: '$(TestProject)'
+    arguments: '--configuration $(BuildConfiguration) --logger trx'
+  
+- task: PublishTestResults@2
   inputs:
-    command: pack
-    packagesToPack: '$(BaseProject)'
-    versioningScheme: byEnvVar
-    versionEnvVar: $(envVar)
+    testRunner: VSTest
+    testResultsFiles: '**/*.trx'
 
 - task: NuGetCommand@2
   displayName: 'NuGet Push'
