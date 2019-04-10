@@ -5,8 +5,8 @@ pool:
   vmImage: 'VS2017-Win2016'
 
 variables:
-  baseProject: 'Lett.Extensions/Lett.Extensions.csproj'           # 主体项目文件
-  testProject: 'Lett.Extensions.Test/Lett.Extensions.Test.csproj' # 单元测试项目文件
+  baseProject: '**/Lett.Extensions.csproj'           # 主体项目文件
+  testProject: '**/Lett.Extensions.Test.csproj' # 单元测试项目文件
   buildConfiguration: 'Release'                                   # 编译配置
 steps:
 - task: DotNetCoreCLI@2
