@@ -7,7 +7,10 @@ pool:
   name: Hosted Windows 2019 with VS2019
 
 variables:
+  BuildConfiguration: 'Release'
+  BuildPlatform: 'any cpu'
   BaseProject: '**/Lett.Extensions.csproj'
+  TestProject: '**/*[Tt]ests/*.csproj'
   envVar: '1.0.0-RC'
 
 steps:
@@ -15,19 +18,19 @@ steps:
   displayName: '还原NuGet包'
   inputs:
     command: restore
-    projects: '$(Parameters.RestoreBuildProjects)'
+    projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
   displayName: '编译'
   inputs:
-    projects: '$(Parameters.RestoreBuildProjects)'
+    projects: '**/*.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
   displayName: '测试'
   inputs:
     command: test
-    projects: '$(Parameters.TestProjects)'
+    projects: '$(TestProject)'
     arguments: '--configuration $(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
