@@ -38,8 +38,11 @@ steps:
   inputs:
     command: pack
     packagesToPack: '$(BaseProject)'
-    versioningScheme: byEnvVar
-    versionEnvVar: $(envVar)
+    versioningScheme: byPrereleaseNumber
+    majorVersion: '1'
+    minorVersion: '0'
+    patchVersion: '0'
+
 
 - task: NuGetCommand@2
   displayName: 'NuGet Push'
