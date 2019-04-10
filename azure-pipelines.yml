@@ -8,7 +8,7 @@ variables:
   BuildConfiguration: 'Release'
   BuildPlatform: 'any cpu'
   BaseProject: '**/Lett.Extensions.csproj'
-  TestProject: '**/*[Tt]ests/*.csproj'
+  TestProject: '**/Lett.Extensions.Test.csproj'
   envVar: '1.0.0-RC'
 
 steps:
