@@ -32,9 +32,8 @@ steps:
     arguments: '--configuration $(BuildConfiguration) --logger trx'
   
 - task: PublishTestResults@2
-  condition: succeededOrFailed()
   inputs:
     testRunner: VSTest
-    testResultsFiles: '**/*.trx'
+    testResultsFiles: '**/TEST-*.trx'
 
 
