@@ -29,23 +29,12 @@ steps:
   inputs:
     command: test
     projects: '$(TestProject)'
-    arguments: '--configuration $(BuildConfiguration)'
-
-- task: DotNetCoreCLI@2
-  displayName: 'dotnet pack'
+    arguments: '--configuration $(BuildConfiguration) --logger trx'
+  
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
   inputs:
-    command: pack
-    packagesToPack: '$(BaseProject)'
-    versioningScheme: byPrereleaseNumber
-    majorVersion: '1'
-    minorVersion: '0'
-    patchVersion: '0'
+    testRunner: VSTest
+    testResultsFiles: '**/*.trx'
 
-
-- task: NuGetCommand@2
-  displayName: 'NuGet Push'
-  inputs:
-    command: push
-    nuGetFeedType: external
-    publishFeedCredentials: publishFeedCredentials
 
