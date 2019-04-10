@@ -34,6 +34,6 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testRunner: VSTest
-    testResultsFiles: '**/TEST-*.trx'
+    testResultsFiles: '**/*.trx'
 
 
