@@ -1,0 +1,47 @@
+trigger:
+  tags:
+    include:
+    - v.*
+
+pool:
+  name: Hosted Windows 2019 with VS2019
+
+variables:
+  BaseProject: '**/Lett.Extensions.csproj'
+  envVar: '1.0.0-RC'
+
+steps:
+- task: DotNetCoreCLI@2
+  displayName: '还原NuGet包'
+  inputs:
+    command: restore
+    projects: '$(Parameters.RestoreBuildProjects)'
+
+- task: DotNetCoreCLI@2
+  displayName: '编译'
+  inputs:
+    projects: '$(Parameters.RestoreBuildProjects)'
+    arguments: '--configuration $(BuildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  displayName: '测试'
+  inputs:
+    command: test
+    projects: '$(Parameters.TestProjects)'
+    arguments: '--configuration $(BuildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet pack'
+  inputs:
+    command: pack
+    packagesToPack: '$(BaseProject)'
+    versioningScheme: byEnvVar
+    versionEnvVar: $(envVar)
+
+- task: NuGetCommand@2
+  displayName: 'NuGet Push'
+  inputs:
+    command: push
+    nuGetFeedType: external
+    publishFeedCredentials: publishFeedCredentials
+
