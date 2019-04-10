@@ -29,11 +29,11 @@ steps:
   inputs:
     command: test
     projects: '$(TestProject)'
-    arguments: '--configuration $(BuildConfiguration) --logger trx'
+    arguments: '--configuration $(BuildConfiguration)'
   
-- task: PublishTestResults@2
-  inputs:
-    testRunner: VSTest
-    testResultsFiles: '**/*.trx'
+# - task: PublishTestResults@2
+#   inputs:
+#     testRunner: VSTest
+#     testResultsFiles: '**/*.trx'
 
 
