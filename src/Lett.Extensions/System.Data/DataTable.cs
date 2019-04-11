@@ -1,4 +1,6 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using Lett.Extensions.Exceptions;
 
 namespace Lett.Extensions
@@ -35,6 +37,16 @@ namespace Lett.Extensions
         {
             if (!@this.HasRows()) throw new LettExtensionsDataTableException("当前DataTable没有行");
             return @this.Rows[@this.Rows.Count - 1];
+        }
+
+        /// <summary>
+        /// 获取DataRow可枚举对象
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        public static IEnumerable<DataRow> RowsEnumerable(this DataTable @this)
+        {
+            return @this.Rows.Cast<DataRow>();
         }
     }
 }
