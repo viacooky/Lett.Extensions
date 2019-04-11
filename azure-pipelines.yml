@@ -9,9 +9,10 @@ variables:
   BuildPlatform: 'any cpu'
   BaseProject: '**/Lett.Extensions.csproj'
   TestProject: '**/Lett.Extensions.Test.csproj'
-  envVar: '1.0.0-RC'
 
 steps:
+- script: 'echo $(build.SourceLabel)'
+- script: 'echo $(build.BuildNumber)'
 - task: DotNetCoreCLI@2
   displayName: '还原NuGet包'
   inputs:
@@ -30,10 +31,14 @@ steps:
     command: test
     projects: '$(TestProject)'
     arguments: '--configuration $(BuildConfiguration)'
-  
-# - task: PublishTestResults@2
-#   inputs:
-#     testRunner: VSTest
-#     testResultsFiles: '**/*.trx'
 
-
+- task: DotNetCoreCLI@2
+  displayName: '打包'
+  inputs:
+    command: pack
+    projects: '$(BaseProject)'
+    arguments: '--configuration $(BuildConfiguration)'
+    versioningScheme: byPrereleaseNumber
+    majorVersion: 0
+    minorVersion: 0
+    patchVersion: 2
