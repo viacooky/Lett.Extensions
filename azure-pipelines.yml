@@ -1,13 +1,14 @@
 trigger:
-  tags:
-    include:
-    - v.*
+- master
 
 pool:
   name: Hosted Windows 2019 with VS2019
 
 variables:
+  BuildConfiguration: 'Release'
+  BuildPlatform: 'any cpu'
   BaseProject: '**/Lett.Extensions.csproj'
+  TestProject: '**/Lett.Extensions.Test.csproj'
   envVar: '1.0.0-RC'
 
 steps:
@@ -15,12 +16,12 @@ steps:
   displayName: '还原NuGet包'
   inputs:
     command: restore
-    projects: '$(Parameters.RestoreBuildProjects)'
+    projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
   displayName: '编译'
   inputs:
-    projects: '$(Parameters.RestoreBuildProjects)'
+    projects: '**/*.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
@@ -28,17 +29,11 @@ steps:
   inputs:
     command: test
     projects: '$(TestProject)'
-    arguments: '--configuration $(BuildConfiguration) --logger trx'
+    arguments: '--configuration $(BuildConfiguration)'
   
-- task: PublishTestResults@2
-  inputs:
-    testRunner: VSTest
-    testResultsFiles: '**/*.trx'
+# - task: PublishTestResults@2
+#   inputs:
+#     testRunner: VSTest
+#     testResultsFiles: '**/*.trx'
 
-- task: NuGetCommand@2
-  displayName: 'NuGet Push'
-  inputs:
-    command: push
-    nuGetFeedType: external
-    publishFeedCredentials: publishFeedCredentials
 
