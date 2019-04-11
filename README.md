@@ -9,4 +9,3 @@ Some C# extension methods
 ## Documents
 
 Wait for me...
-https://dev.azure.com/viacooky/Lett.Extensions/_build/results?buildId=42
