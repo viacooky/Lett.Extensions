@@ -21,7 +21,7 @@ steps:
 - task: DotNetCoreCLI@2
   displayName: '编译'
   inputs:
-    projects: '**/*.csproj'
+    projects: '$(BaseProject)'
     arguments: '--configuration $(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
