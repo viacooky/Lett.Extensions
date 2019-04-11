@@ -16,8 +16,4 @@
     <ProjectReference Include="..\Lett.Extensions\Lett.Extensions.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="新文件夹\" />
-  </ItemGroup>
-
 </Project>

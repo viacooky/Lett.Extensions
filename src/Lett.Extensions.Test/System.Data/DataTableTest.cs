@@ -43,7 +43,6 @@ namespace Lett.Extensions.Test
         [TestMethod]
         public void RowsEnumerable_Test()
         {
-            
             _testTable1.Rows.Clear();
             Assert.IsNull(_testTable1.RowsEnumerable().FirstOrDefault());
             // 添加行
@@ -51,8 +50,7 @@ namespace Lett.Extensions.Test
             var tmp = _testTable1.RowsEnumerable().FirstOrDefault();
             Assert.IsNotNull(tmp);
             var tmp2 = _testTable1.RowsEnumerable().Where(s => s.Cell<string>("FRowId").Equals("RowId_3"));
-            Assert.AreEqual(tmp2.Count(),1);
-
+            Assert.AreEqual(tmp2.Count(), 1);
         }
     }
 }

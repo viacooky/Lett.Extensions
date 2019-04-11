@@ -40,7 +40,7 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        /// 获取DataRow可枚举对象
+        ///     获取DataRow可枚举对象
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
