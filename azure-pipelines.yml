@@ -1,5 +1,5 @@
-trigger:
-- master
+# trigger:
+# - master
 
 pool:
   name: Hosted Windows 2019 with VS2019
@@ -9,8 +9,6 @@ variables:
   BuildPlatform: 'any cpu'
   BaseProject: '**/Lett.Extensions.csproj'
   TestProject: '**/Lett.Extensions.Test.csproj'
-  Major: '0'
-  Minor: '1'
 
 steps:
 - script: 'echo $(build.SourceLabel)'
