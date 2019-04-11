@@ -9,6 +9,8 @@ variables:
   BuildPlatform: 'any cpu'
   BaseProject: '**/Lett.Extensions.csproj'
   TestProject: '**/Lett.Extensions.Test.csproj'
+  Major: '0'
+  Minor: '1'
 
 steps:
 - script: 'echo $(build.SourceLabel)'
@@ -39,6 +41,13 @@ steps:
     projects: '$(BaseProject)'
     arguments: '--configuration $(BuildConfiguration)'
     versioningScheme: byPrereleaseNumber
-    majorVersion: 0
-    minorVersion: 0
-    patchVersion: 2
+    majorVersion: '$(Major)'
+    minorVersion: '$(Minor)'
+
+- task: NuGetCommand@2
+  displayName: 'NuGet 发布'
+  inputs:
+    command: push
+    nuGetFeedType: external
+    publishFeedCredentials: nuget.org
+    packagesToPush: '**/*.nupkg;!**/*.symbols.nupkg'
