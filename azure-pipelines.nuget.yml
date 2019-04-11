@@ -38,7 +38,7 @@ steps:
       projects: '$(BaseProject)'
       arguments: '--configuration $(BuildConfiguration)'
       versioningScheme: byEnvVar
-      versionEnvVar: $(packVersion)
+      versionEnvVar: packVersion
 
   - task: NuGetCommand@2
     displayName: 'NuGet 发布'
