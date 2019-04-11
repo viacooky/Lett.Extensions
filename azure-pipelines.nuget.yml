@@ -1,10 +1,4 @@
-trigger:
-  branches:
-    include:
-      - '*'
-  tags:
-    include:
-      - v.*
+trigger: none
 
 pool:
   name: Hosted Windows 2019 with VS2019
