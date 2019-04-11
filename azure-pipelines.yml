@@ -1,5 +1,10 @@
-# trigger:
-# - master
+trigger:
+  branches:
+    include:
+    - '*'
+  tags:
+    include:
+    - v.*
 
 pool:
   name: Hosted Windows 2019 with VS2019
