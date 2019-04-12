@@ -7,23 +7,6 @@ namespace Lett.Extensions
     public static partial class Extensions
     {
         /// <summary>
-        ///     获取MD5
-        /// </summary>
-        /// <param name="this"></param>
-        /// <returns></returns>
-        public static string ToMd5String(this string @this)
-        {
-            using (var md5 = MD5.Create())
-            {
-                var bytes = md5.ComputeHash(Encoding.UTF8.GetBytes(@this));
-                var sb    = new StringBuilder();
-                foreach (var t in bytes) sb.Append(t.ToString("x2"));
-
-                return sb.ToString();
-            }
-        }
-
-        /// <summary>
         ///     BASE64编码
         ///     ps: 转换失败返回NULL
         /// </summary>

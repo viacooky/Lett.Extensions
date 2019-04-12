@@ -54,5 +54,18 @@ namespace Lett.Extensions
         {
             return @this.All(char.IsLower);
         }
+
+        /// <summary>
+        ///     忽略大小写比较
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static bool IgnoreCaseEquals(this string @this, string value)
+        {
+            return @this.Equals(value, StringComparison.CurrentCultureIgnoreCase);
+        }
+
+
     }
 }
