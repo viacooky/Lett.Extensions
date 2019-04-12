@@ -41,7 +41,7 @@ namespace Lett.Extensions.Test
             Assert.IsTrue("ftp://sdf.com".IsUrl());
             Assert.IsTrue("http://sdf.c.dddd.cccc.saaa.com".IsUrl());
             Assert.IsTrue("aaaadd://sdf.com".IsUrl());
-            Assert.IsFalse("/sdf.com".IsUrl());
+            Assert.IsFalse("sdf.com".IsUrl());
             Assert.IsFalse("www.sdf.com".IsUrl());
             Assert.IsFalse("www.asdfwww.sdf.com".IsUrl());
         }
