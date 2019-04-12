@@ -24,19 +24,19 @@ namespace Lett.Extensions.Test
 
     public enum MyEnum
     {
-        [System.ComponentModel.Description("这里是EnumValue0的说明")]
+        [global::System.ComponentModel.Description("这里是EnumValue0的说明")]
         EnumValue0 = 0,
 
-        [System.ComponentModel.Description("这里是EnumValue1的说明")]
+        [global::System.ComponentModel.Description("这里是EnumValue1的说明")]
         EnumValue1 = 1,
 
-        [System.ComponentModel.Description("这里是EnumValue20的说明")]
+        [global::System.ComponentModel.Description("这里是EnumValue20的说明")]
         EnumValue20 = 20
     }
 
     public enum MyEnum2
     {
-        [System.ComponentModel.Description("这里是Enum2Value0的说明")]
+        [global::System.ComponentModel.Description("这里是Enum2Value0的说明")]
         Enum2Value0 = 100
     }
 }
