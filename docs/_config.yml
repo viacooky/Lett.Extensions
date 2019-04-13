@@ -1,2 +1,2 @@
 remote_theme: pmarsceill/just-the-docs
-exclude: template/*
+exclude: ExtensionMethods/template/*
