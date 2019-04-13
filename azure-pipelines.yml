@@ -1,7 +1,12 @@
 trigger:
   branches:
     include:
-    - '*'
+      - '*'
+  paths:
+    exclude:
+      - README.md
+      - docs/*
+      - docs/README.md
 
 pool:
   name: Hosted Windows 2019 with VS2019
@@ -13,24 +18,23 @@ variables:
   TestProject: '**/Lett.Extensions.Test.csproj'
 
 steps:
-- script: 'echo $(build.SourceLabel)'
-- script: 'echo $(build.BuildNumber)'
-- task: DotNetCoreCLI@2
-  displayName: '还原NuGet包'
-  inputs:
-    command: restore
-    projects: '**/*.csproj'
+  - script: 'echo $(build.SourceLabel)'
+  - script: 'echo $(build.BuildNumber)'
+  - task: DotNetCoreCLI@2
+    displayName: '还原NuGet包'
+    inputs:
+      command: restore
+      projects: '**/*.csproj'
 
-- task: DotNetCoreCLI@2
-  displayName: '编译'
-  inputs:
-    projects: '$(BaseProject)'
-    arguments: '--configuration $(BuildConfiguration)'
+  - task: DotNetCoreCLI@2
+    displayName: '编译'
+    inputs:
+      projects: '$(BaseProject)'
+      arguments: '--configuration $(BuildConfiguration)'
 
-- task: DotNetCoreCLI@2
-  displayName: '测试'
-  inputs:
-    command: test
-    projects: '$(TestProject)'
-    arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
-
+  - task: DotNetCoreCLI@2
+    displayName: '测试'
+    inputs:
+      command: test
+      projects: '$(TestProject)'
+      arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
