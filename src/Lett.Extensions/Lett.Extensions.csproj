@@ -9,6 +9,9 @@
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Version>0.0.1</Version>
     <LangVersion>latest</LangVersion>
+    <Title>Lett.Extensions</Title>
+    <Description>Common C# extensions methods collection</Description>
+    <PackageTags>Extension;C#</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

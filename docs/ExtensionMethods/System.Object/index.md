@@ -14,6 +14,8 @@
 | `As<T>()`                           | 对象强转换,失败则返回 default(T)                     |
 | `As<T>(Func<T> func)`               | 对象强转换,失败则返回 func                           |
 | `As<T>(T defaultValue)`             | 对象强转换,失败则返回 defaultValue                   |
+| `DeepClone<T>()`                    | 深复制                                               |
+| `IsDBNull()`                        | 是否 DBNull                                          |
 
 ### Examples
 
