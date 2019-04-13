@@ -4,6 +4,7 @@
 [![Nuget](https://img.shields.io/nuget/v/Lett.Extensions.svg)](https://www.nuget.org/packages/Lett.Extensions/)
 ![Azure DevOps tests (compact)](https://img.shields.io/azure-devops/tests/viacooky/Lett.Extensions/9.svg)
 ![Azure DevOps coverage (branch)](https://img.shields.io/azure-devops/coverage/viacooky/Lett.Extensions/9/master.svg?color=9cf)
+![GitHub](https://img.shields.io/github/license/viacooky/Lett.Extensions.svg)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 WebSite https://viacooky.github.io/Lett.Extensions/
@@ -30,7 +31,7 @@ NuGet: https://www.nuget.org/packages/Lett.Extensions/
 [more...](https://viacooky.github.io/Lett.Extensions/)
 
 ## Change log
-## [0.1.4](2019-04-14)
+## 0.1.4 (2019-04-14)
 
 ### Features / 新增功能
 
