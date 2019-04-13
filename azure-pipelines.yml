@@ -1,12 +1,14 @@
 trigger:
   branches:
     include:
-      - '*'
+      - master
+      - develop
+      - release/*
   paths:
     exclude:
       - README.md
       - docs/*
-      - docs/README.md
+      - docs/*.md
 
 pool:
   name: Hosted Windows 2019 with VS2019
@@ -18,8 +20,6 @@ variables:
   TestProject: '**/Lett.Extensions.Test.csproj'
 
 steps:
-  - script: 'echo $(build.SourceLabel)'
-  - script: 'echo $(build.BuildNumber)'
   - task: DotNetCoreCLI@2
     displayName: '还原NuGet包'
     inputs:
