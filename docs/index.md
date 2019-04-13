@@ -1,7 +1,13 @@
 # Lett.Extensions
 
-一个常用的dotnet拓展方法库
+Common C# extension methods collection
 
-## 说明
+## Extension Methods
 
-...
+- [System.Collections.Generic](./ExtensionMethods/System.Collections.Generic/index.md)
+- [System.Data](./ExtensionMethods/System.Data/index.md)
+- [System.DateTime](./ExtensionMethods/System.DateTime/index.md)
+- [System.Enum](./ExtensionMethods/System.Enum/index.md)
+- [System.Object](./ExtensionMethods/System.Object/index.md)
+- [System.String](./ExtensionMethods/System.String/index.md)
+- [System.String](./ExtensionMethods/System.Type/index.md)
