@@ -6,9 +6,19 @@
 ![Azure DevOps coverage (branch)](https://img.shields.io/azure-devops/coverage/viacooky/Lett.Extensions/9/master.svg?color=9cf)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
+---
 
 Some C# extension methods
+
+## Tutorial how to use this lib
+
+* 
 
 ## Documents
 
 Wait for me....
+
+## Change log
+
+Wait for me....
+
