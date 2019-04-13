@@ -9,9 +9,9 @@
 
 Common C# extension methods collection
 
-NuGet: https://www.nuget.org/packages/Lett.Extensions/
+NuGet: [https://www.nuget.org/packages/Lett.Extensions/](https://www.nuget.org/packages/Lett.Extensions/)
 
-GitHub: https://github.com/viacooky/Lett.Extensions/
+GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacooky/Lett.Extensions/)
 
 
 ## How to use
