@@ -29,7 +29,7 @@ steps:
     inputs:
       command: test
       projects: '$(TestProject)'
-      arguments: '--configuration $(BuildConfiguration)'
+      arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
 
   - task: DotNetCoreCLI@2
     displayName: '打包'
