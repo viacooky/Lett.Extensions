@@ -18,20 +18,29 @@ NuGet: https://www.nuget.org/packages/Lett.Extensions/
 
 ## Documents
 
-- [System.Collections.Generic](./ExtensionMethods/System.Collections.Generic/index.md)
-- [System.Data](./ExtensionMethods/System.Data/index.md)
-- [System.DateTime](./ExtensionMethods/System.DateTime/index.md)
-- [System.Enum](./ExtensionMethods/System.Enum/index.md)
-- [System.Int32](./ExtensionMethods/System.Int32/index.md)
-- [System.Object](./ExtensionMethods/System.Object/index.md)
-- [System.String](./ExtensionMethods/System.String/index.md)
-- [System.Type](./ExtensionMethods/System.Type/index.md)
+- [System.Collections.Generic](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Collections.Generic/index.md)
+- [System.Data](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Data/index.md)
+- [System.DateTime](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.DateTime/index.md)
+- [System.Enum](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Enum/index.md)
+- [System.Int32](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Int32/index.md)
+- [System.Object](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Object/index.md)
+- [System.String](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.String/index.md)
+- [System.Type](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Type/index.md)
 
 [more...](https://viacooky.github.io/Lett.Extensions/)
 
 ## Change log
+## [0.1.4](2019-04-14)
 
-[more...](./docs/CHANGELOG.md)
+### Features / 新增功能
+
+- 增加 Object.IsDBNull 方法
+
+### Refactored / 优化重构
+
+- 调整 Int32.GetEnumDescription()方法位置，使用无感知
+
+[more...](https://viacooky.github.io/Lett.Extensions/CHANGELOG.html)
 
 ## Thanks
 
