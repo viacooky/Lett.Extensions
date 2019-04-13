@@ -7,15 +7,27 @@
 ![GitHub](https://img.shields.io/github/license/viacooky/Lett.Extensions.svg)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
-WebSite https://viacooky.github.io/Lett.Extensions/
-
 ---
 
 Common C# extensions methods collection
 
+NuGet: https://www.nuget.org/packages/Lett.Extensions/
+
+Project Site https://viacooky.github.io/Lett.Extensions/
+
 ## How to use
 
-NuGet: https://www.nuget.org/packages/Lett.Extensions/
+* Package Manager 
+
+  `Install-Package Lett.Extensions`
+
+* Nuget cli
+
+  `nuget install Lett.Extensions`
+
+* .Net cli
+
+  `dotnet add package Lett.Extensions`
 
 ## Documents
 
