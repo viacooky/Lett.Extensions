@@ -6,19 +6,24 @@
 ![Azure DevOps coverage (branch)](https://img.shields.io/azure-devops/coverage/viacooky/Lett.Extensions/9/master.svg?color=9cf)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
+WebSite https://viacooky.github.io/Lett.Extensions/
+
 ---
 
-Some C# extension methods
+Common C# extensions methods collection
 
-## Tutorial how to use this lib
+## How to use
 
-* 
+NuGet: https://www.nuget.org/packages/Lett.Extensions/
 
 ## Documents
 
-Wait for me....
+[more](/docs)
 
 ## Change log
 
-Wait for me....
+[more](/docs/CHANGELOG.md)
 
+## Thinks
+
+Inspired by [Z.ExtensionMethods](https://github.com/zzzprojects/Z.ExtensionMethods)
