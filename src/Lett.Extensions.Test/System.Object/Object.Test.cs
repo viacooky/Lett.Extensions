@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Lett.Extensions.Test.System.Object
+namespace Lett.Extensions.Test
 {
-    class ObjectTest
+    [TestClass]
+    public class ObjectTest
     {
+        
+        public void DeepClone_Test()
+        {
+            // TODO 
+        }
     }
 }

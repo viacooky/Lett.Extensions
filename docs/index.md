@@ -10,4 +10,4 @@ Common C# extension methods collection
 - [System.Enum](./ExtensionMethods/System.Enum/index.md)
 - [System.Object](./ExtensionMethods/System.Object/index.md)
 - [System.String](./ExtensionMethods/System.String/index.md)
-- [System.String](./ExtensionMethods/System.Type/index.md)
+- [System.Type](./ExtensionMethods/System.Type/index.md)

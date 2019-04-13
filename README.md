@@ -32,6 +32,6 @@ NuGet: https://www.nuget.org/packages/Lett.Extensions/
 
 [more...](./docs/CHANGELOG.md)
 
-## Thinks
+## Thanks
 
 Inspired by [Z.ExtensionMethods](https://github.com/zzzprojects/Z.ExtensionMethods)
