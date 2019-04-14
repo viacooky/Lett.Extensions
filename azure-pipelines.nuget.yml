@@ -10,8 +10,6 @@ variables:
   TestProject: '**/Lett.Extensions.Test.csproj'
 
 steps:
-  - script: 'echo $(build.SourceLabel)'
-  - script: 'echo $(build.BuildNumber)'
   - task: DotNetCoreCLI@2
     displayName: '还原NuGet包'
     inputs:

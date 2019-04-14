@@ -1,6 +1,6 @@
 # System.DateTime
 
-## System.Data.DataRow
+## System.DateTime
 
 ### Methods
 
