@@ -20,12 +20,15 @@
 
 ### Methods
 
-| Method             | Description                                                     |
-| ------------------ | --------------------------------------------------------------- |
-| `HasRows()`        | 是否存在数据行                                                  |
-| `FirstRow()`       | 获取首行, 不存在数据行时，返回 LettExtensionsDataTableException |
-| `LastRow()`        | 获取末行, 不存在数据行时，返回 LettExtensionsDataTableException |
-| `RowsEnumerable()` | 获取 DataRow 可枚举对象                                         |
+| Method                                 | Description                                                                         |
+| -------------------------------------- | ----------------------------------------------------------------------------------- |
+| `HasRows()`                            | 是否存在数据行                                                                      |
+| `FirstRow()`                           | 获取首行, 不存在数据行时，抛出 LettExtensionsDataTableException                     |
+| `LastRow()`                            | 获取末行, 不存在数据行时，抛出 LettExtensionsDataTableException                     |
+| `RowsEnumerable()`                     | 获取 DataRow 可枚举对象                                                             |
+| `ColumnsEnumerable()`                  | 获取 DataColumn 可枚举对象                                                          |
+| `GetColumnDataType(string columnName)` | 获取 Column 的数据类型，columnName 不存在时，抛出 LettExtensionsDataTableException  |
+| `GetColumnDataType(int index)`         | 获取 Column 的数据类型，index 超出数组范围时，抛出 LettExtensionsDataTableException |
 
 ### Examples
 
