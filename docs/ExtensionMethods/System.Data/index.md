@@ -35,3 +35,17 @@
 ```C#
 
 ```
+
+## System.Data.DataColumnCollection
+
+### Methods
+
+| Method                           | Description         |
+| -------------------------------- | ------------------- |
+| `AddRange(string[] columnNames)` | 批量增加 DataColumn |
+
+### Examples
+
+```C#
+
+```
