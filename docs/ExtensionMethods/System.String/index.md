@@ -13,6 +13,7 @@
 | `IgnoreCaseEquals(string value)` | 忽略大小写比较             |
 | `Base64Encode()`                 | BASE64 编码, 失败返回 null |
 | `Base64Decode()`                 | BASE64 解码, 失败返回 null |
+| `IsNullOrWhiteSpace()`           | 是否 null 或空白           |
 
 ### Examples
 

@@ -29,10 +29,7 @@ namespace Lett.Extensions
                 var uri = new Uri(@this);
                 return true;
             }
-            catch
-            {
-                return false;
-            }
+            catch { return false; }
         }
 
         /// <summary>
@@ -67,5 +64,14 @@ namespace Lett.Extensions
         }
 
 
+        /// <summary>
+        ///     是否null或空白
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        public static bool IsNullOrWhiteSpace(this string @this)
+        {
+            return string.IsNullOrWhiteSpace(@this);
+        }
     }
 }

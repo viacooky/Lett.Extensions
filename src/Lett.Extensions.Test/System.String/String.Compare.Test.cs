@@ -51,5 +51,20 @@ namespace Lett.Extensions.Test
         {
             Assert.IsTrue("aaa".IgnoreCaseEquals("AaA"));
         }
+
+        [TestMethod]
+        public void IsNullOrWhiteSpace_Test()
+        {
+            var t = "   "; // space
+            Assert.IsTrue(t.IsNullOrWhiteSpace());
+            t = "    "; // tab
+            Assert.IsTrue(t.IsNullOrWhiteSpace());
+            t = "\r";
+            Assert.IsTrue(t.IsNullOrWhiteSpace());
+            t = "\n";
+            Assert.IsTrue(t.IsNullOrWhiteSpace());
+            t = "\r\n";
+            Assert.IsTrue(t.IsNullOrWhiteSpace());
+        }
     }
 }
