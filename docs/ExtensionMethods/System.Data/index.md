@@ -9,6 +9,7 @@
 | `Cell<T>(string columnName)`                 | 获取当前行中某个列的值,失败则返回 default(T)   |
 | `Cell<T>(string columnName, Func<T> func)`   | 获取当前行中某个列的值,失败则返回 func         |
 | `Cell<T>(string columnName, T defaultValue)` | 获取当前行中某个列的值,失败则返回 defaultValue |
+| `ToEntity<T>()`                              | 转换为实体                                     |
 
 ### Examples
 
@@ -29,6 +30,7 @@
 | `ColumnsEnumerable()`                  | 获取 DataColumn 可枚举对象                                                          |
 | `GetColumnDataType(string columnName)` | 获取 Column 的数据类型，columnName 不存在时，抛出 LettExtensionsDataTableException  |
 | `GetColumnDataType(int index)`         | 获取 Column 的数据类型，index 超出数组范围时，抛出 LettExtensionsDataTableException |
+| `ToEntityList()`                       | 转换为实体列表                                                                      |
 
 ### Examples
 

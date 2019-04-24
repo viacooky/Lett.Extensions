@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Reflection;
 
 namespace Lett.Extensions
 {
@@ -43,6 +44,33 @@ namespace Lett.Extensions
             return @this.Table.Columns.Contains(columnName)
                 ? @this[columnName].To(defaultValue)
                 : defaultValue;
+        }
+
+        /// <summary>
+        ///     转换为实体
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        public static T ToEntity<T>(this DataRow @this) where T : class, new()
+        {
+            var type       = typeof(T);
+            var fields     = type.GetFields(BindingFlags.Public | BindingFlags.Instance);
+            var properties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
+
+            var obj = new T();
+
+            // fields
+            foreach (var fieldInfo in fields)
+                if (@this.Table.Columns.Contains(fieldInfo.Name))
+                    fieldInfo.SetValue(obj, @this[fieldInfo.Name]);
+
+            // properties
+            foreach (var propertyInfo in properties)
+                if (@this.Table.Columns.Contains(propertyInfo.Name))
+                    propertyInfo.SetValue(obj, @this[propertyInfo.Name]);
+
+            return obj;
         }
     }
 }
