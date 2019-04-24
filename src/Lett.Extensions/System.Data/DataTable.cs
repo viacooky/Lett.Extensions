@@ -88,5 +88,16 @@ namespace Lett.Extensions
             if (@this.Columns.Count - 1 < index) throw new LettExtensionsDataTableException("索引超出了数组范围");
             return @this.Columns[index].DataType;
         }
+
+        /// <summary>
+        ///     转换为实体列表
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        public static List<T> ToEntityList<T>(this DataTable @this) where T : class, new()
+        {
+            return @this.RowsEnumerable().Select(s => s.ToEntity<T>()).ToList();
+        }
     }
 }
