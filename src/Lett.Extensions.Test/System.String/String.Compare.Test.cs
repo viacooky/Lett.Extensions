@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
@@ -50,6 +49,45 @@ namespace Lett.Extensions.Test
         public void IgnoreCaseEquals_Test()
         {
             Assert.IsTrue("aaa".IgnoreCaseEquals("AaA"));
+        }
+
+        [TestMethod]
+        public void IsNullOrWhiteSpace_Test()
+        {
+            Assert.IsTrue("   ".IsNullOrWhiteSpace());  // space
+            Assert.IsTrue("    ".IsNullOrWhiteSpace()); // tab
+            Assert.IsTrue("\r".IsNullOrWhiteSpace());   // \r
+            Assert.IsTrue("\n".IsNullOrWhiteSpace());   // \n
+            Assert.IsTrue("\r\n".IsNullOrWhiteSpace()); // \r\n
+            Assert.IsTrue("\t".IsNullOrWhiteSpace());   // \t
+        }
+
+        [TestMethod]
+        public void ContainsAll_Test()
+        {
+            var a = "aaabbbccc";
+            var b = new[] {"aaa", "bbb"};
+            Assert.IsTrue(a.ContainsAll(b));
+            var c = new[] {"a", "b", "c"};
+            Assert.IsTrue(a.ContainsAll(c));
+            var d = new List<string> {"aaa", "bbb", "c"};
+            Assert.IsTrue(a.ContainsAll(d));
+            var e = new List<string> {"aaa", "bbb", "d"};
+            Assert.IsFalse(a.ContainsAll(e));
+            var f = new[] {"AAA", "bbb"};
+            Assert.IsFalse(a.ContainsAll(f, StringComparison.Ordinal));
+        }
+
+        [TestMethod]
+        public void ContainsAny_Test()
+        {
+            var a = "aaabbbccc";
+            var b = new[] {"a", "dd", "eee"};
+            Assert.IsTrue(a.ContainsAny(b));
+            var c = new[] {"A", "dddd"};
+            Assert.IsTrue(a.ContainsAny(c));
+            var d = new[] {"A", "B"};
+            Assert.IsFalse(a.ContainsAny(d, StringComparison.Ordinal));
         }
     }
 }
