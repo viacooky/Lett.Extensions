@@ -5,13 +5,17 @@
     <Authors>viacooky</Authors>
     <PackageLicenseExpression></PackageLicenseExpression>
     <RepositoryType>Git</RepositoryType>
-    <PackageProjectUrl>https://github.com/viacooky/Lett.Extensions</PackageProjectUrl>
+    <PackageProjectUrl>https://viacooky.github.io/Lett.Extensions/</PackageProjectUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Version>0.0.1</Version>
     <LangVersion>latest</LangVersion>
     <Title>Lett.Extensions</Title>
-    <Description>Common C# extensions methods collection</Description>
+    <Description>Common C# extensions methods collection
+Docs: https://viacooky.github.io/Lett.Extensions/</Description>
     <PackageTags>Extension;C#</PackageTags>
+    <PackageIconUrl></PackageIconUrl>
+    <RepositoryUrl>https://github.com/viacooky/Lett.Extensions</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
