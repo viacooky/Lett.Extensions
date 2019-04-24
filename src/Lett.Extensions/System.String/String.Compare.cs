@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -72,6 +73,31 @@ namespace Lett.Extensions
         public static bool IsNullOrWhiteSpace(this string @this)
         {
             return string.IsNullOrWhiteSpace(@this);
+        }
+
+        /// <summary>
+        ///     是否全部包含，默认不区分大小写
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="values"></param>
+        /// <param name="comparisonType"></param>
+        /// <returns></returns>
+        public static bool ContainsAll(this string @this, IEnumerable<string> values, StringComparison comparisonType = StringComparison.CurrentCultureIgnoreCase)
+        {
+            return values.All(s => @this.IndexOf(s, comparisonType) >= 0);
+        }
+
+
+        /// <summary>
+        ///     是否包含任意一个，默认不区分大小写
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="values"></param>
+        /// <param name="comparisonType"></param>
+        /// <returns></returns>
+        public static bool ContainsAny(this string @this, IEnumerable<string> values, StringComparison comparisonType = StringComparison.CurrentCultureIgnoreCase)
+        {
+            return values.Any(s => @this.IndexOf(s, comparisonType) >= 0);
         }
     }
 }
