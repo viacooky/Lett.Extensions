@@ -17,15 +17,15 @@ Project Site https://viacooky.github.io/Lett.Extensions/
 
 ## How to use
 
-* Package Manager 
+- Package Manager
 
   `Install-Package Lett.Extensions`
 
-* Nuget cli
+- Nuget cli
 
   `nuget install Lett.Extensions`
 
-* .Net cli
+- .Net cli
 
   `dotnet add package Lett.Extensions`
 
@@ -43,13 +43,26 @@ Project Site https://viacooky.github.io/Lett.Extensions/
 [more...](https://viacooky.github.io/Lett.Extensions/)
 
 ## Change log
-## 0.1.4 (2019-04-14)
 
-### Features / 新增功能
+### 0.1.5 (2019-04-24)
+
+#### Features / 新增功能
+
+- DataRow.Cell<T>() 系列方法，增加泛型约定为 实现了 IConvertible 接口的类型 如：Boolean, Byte, Char, DateTime, System.DBNull, Decimal, Double, System.Enum, Int16, Int32, Int64, SByte, Single, String, UInt16, UInt32, UInt64 等
+- 增加 Object.To<T>() 方法的泛型约束为 实现了 IConvertible 接口的类型 如：Boolean, Byte, Char, DateTime, System.DBNull, Decimal, Double, System.Enum, Int16, Int32, Int64, SByte, Single, String, UInt16, UInt32, UInt64 等
+- 增加 DataTable DataRow 转换实体方法
+- 增加 DataColumnCollectionTest.AddRange 方法
+- 获取 DataColumn 可枚举对象 ColumnsEnumerable()
+- 获取 Column 的数据类型 GetColumnDataType(string columnName)
+- 获取 Column 的数据类型 GetColumnDataType(int index)
+
+### 0.1.4 (2019-04-14)
+
+#### Features / 新增功能
 
 - 增加 Object.IsDBNull 方法
 
-### Refactored / 优化重构
+#### Refactored / 优化重构
 
 - 调整 Int32.GetEnumDescription()方法位置，使用无感知
 

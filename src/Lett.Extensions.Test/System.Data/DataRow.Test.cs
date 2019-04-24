@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Data;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -34,6 +35,34 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(firstRow.Cell("NotExistColumn", "abc"), "abc");
             // 不存在的列 , 默认值 委托
             Assert.AreEqual(firstRow.Cell("NotExistColumn", () => "func return value"), "func return value");
+        }
+
+        [TestMethod]
+        public void ToEntity_Test()
+        {
+            var dt = new DataTable();
+            dt.Columns.AddRange(new[] {"PublicField1", "Property1", "AutoProperty1", "notExistField"});
+            dt.Rows.Add("publicFieldValue", "PropertyValue", "AutoProperty1Value", "notExistFieldValue");
+
+            var rs = dt.Rows[0].ToEntity<TestClass1>();
+            Assert.AreEqual(rs.PublicField1, "publicFieldValue");
+            Assert.AreEqual(rs.Property1, "PropertyValue");
+            Assert.AreEqual(rs.AutoProperty1, "AutoProperty1Value");
+        }
+
+        private class TestClass1
+        {
+            public string PublicField1;
+
+            private string _field1;
+
+            public string Property1
+            {
+                get { return _field1; }
+                set { _field1 = value; }
+            }
+
+            public string AutoProperty1 { get; set; }
         }
     }
 }
