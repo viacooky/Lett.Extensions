@@ -13,7 +13,7 @@ namespace Lett.Extensions
         /// <param name="this"></param>
         /// <param name="columnName">列名</param>
         /// <returns></returns>
-        public static T Cell<T>(this DataRow @this, string columnName)
+        public static T Cell<T>(this DataRow @this, string columnName) where T : IConvertible
         {
             return @this.Cell(columnName, default(T));
         }
@@ -26,7 +26,7 @@ namespace Lett.Extensions
         /// <param name="columnName">列名</param>
         /// <param name="func"></param>
         /// <returns></returns>
-        public static T Cell<T>(this DataRow @this, string columnName, Func<T> func)
+        public static T Cell<T>(this DataRow @this, string columnName, Func<T> func) where T : IConvertible
         {
             return @this.Cell(columnName, func.Invoke());
         }
@@ -39,7 +39,7 @@ namespace Lett.Extensions
         /// <param name="columnName">列名</param>
         /// <param name="defaultValue">默认值</param>
         /// <returns></returns>
-        public static T Cell<T>(this DataRow @this, string columnName, T defaultValue)
+        public static T Cell<T>(this DataRow @this, string columnName, T defaultValue) where T : IConvertible
         {
             return @this.Table.Columns.Contains(columnName)
                 ? @this[columnName].To(defaultValue)
