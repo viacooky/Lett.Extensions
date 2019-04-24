@@ -1,5 +1,13 @@
 # Change log / 更新日志
 
+## 0.1.6 (2019-04-25)
+
+### Features / 新增功能
+
+- 增加 String.IsNullOrWhiteSpace() 是否 null 或空白
+- 增加 String.ContainsAll() 是否全部包含，默认不区分大小写
+- 增加 String.ContainsAny() 是否包含任意一个，默认不区分大小写
+
 ## 0.1.5 (2019-04-24)
 
 ### Features / 新增功能
