@@ -16,6 +16,9 @@
 | `IsNullOrWhiteSpace()`                                                     | 是否 null 或空白                   |
 | `ContainsAll(IEnumerable<string> values, StringComparison comparisonType)` | 是否全部包含，默认不区分大小写     |
 | `ContainsAny(IEnumerable<string> values, StringComparison comparisonType)` | 是否包含任意一个，默认不区分大小写 |
+| `Format(object[] args)`                                                    | 格式化                             |
+| `Left(int length)`                                                         | 从左侧返回指定长度的字符串         |
+| `Right(int length)`                                                        | 从右侧返回指定长度的字符串         |
 
 ### Examples
 

@@ -64,7 +64,6 @@ namespace Lett.Extensions
             return @this.Equals(value, StringComparison.CurrentCultureIgnoreCase);
         }
 
-
         /// <summary>
         ///     是否null或空白
         /// </summary>
@@ -86,7 +85,6 @@ namespace Lett.Extensions
         {
             return values.All(s => @this.IndexOf(s, comparisonType) >= 0);
         }
-
 
         /// <summary>
         ///     是否包含任意一个，默认不区分大小写
