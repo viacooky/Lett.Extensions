@@ -13,18 +13,17 @@ NuGet: [https://www.nuget.org/packages/Lett.Extensions/](https://www.nuget.org/p
 
 GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacooky/Lett.Extensions/)
 
-
 ## How to use
 
-* Package Manager 
+- Package Manager
 
   `Install-Package Lett.Extensions`
 
-* Nuget cli
+- Nuget cli
 
   `nuget install Lett.Extensions`
 
-* .Net cli
+- .Net cli
 
   `dotnet add package Lett.Extensions`
 
@@ -38,3 +37,24 @@ GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacoo
 - [System.Object](./ExtensionMethods/System.Object/index.md)
 - [System.String](./ExtensionMethods/System.String/index.md)
 - [System.Type](./ExtensionMethods/System.Type/index.md)
+
+## Change Logs
+
+### 0.1.7 (2019-04-28)
+
+#### Features / 新增功能
+
+- 增加 `System.String` 拓展方法
+  - `Format(object[] args)` 格式化
+  - `Left(int length)` 从左侧返回指定长度的字符串
+  - `Right(int length)` 从右侧返回指定长度的字符串
+
+### 0.1.6 (2019-04-25)
+
+#### Features / 新增功能
+
+- 增加 `String.IsNullOrWhiteSpace()` 是否 null 或空白
+- 增加 `String.ContainsAll()` 是否全部包含，默认不区分大小写
+- 增加 `String.ContainsAny()` 是否包含任意一个，默认不区分大小写
+
+[more...](./CHANGELOG.md)
