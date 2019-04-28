@@ -11,7 +11,8 @@
     <LangVersion>latest</LangVersion>
     <Title>Lett.Extensions</Title>
     <Description>Common C# extensions methods collection
-Docs: https://viacooky.github.io/Lett.Extensions/</Description>
+Docs: https://viacooky.github.io/Lett.Extensions/
+ChangeLog: https://viacooky.github.io/Lett.Extensions/CHANGELOG.html</Description>
     <PackageTags>Extension;C#</PackageTags>
     <PackageIconUrl></PackageIconUrl>
     <RepositoryUrl>https://github.com/viacooky/Lett.Extensions</RepositoryUrl>
