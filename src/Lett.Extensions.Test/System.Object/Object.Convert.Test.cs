@@ -15,7 +15,7 @@ namespace Lett.Extensions.Test
             // string to int
             Assert.AreEqual("11".To<int>(), 11);
 
-            Assert.AreEqual("2018-01-01 23:59:59".To<DateTime>(),new DateTime(2018,1,1,23,59,59));
+            Assert.AreEqual("2018-01-01 23:59:59".To<DateTime>(), new DateTime(2018, 1, 1, 23, 59, 59));
         }
     }
 }

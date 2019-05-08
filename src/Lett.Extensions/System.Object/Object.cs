@@ -4,7 +4,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace Lett.Extensions
 {
     /// <summary>
-    /// object 扩展方法
+    ///     object 扩展方法
     /// </summary>
     public static partial class ObjectExtensions
     {

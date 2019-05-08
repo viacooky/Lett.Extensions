@@ -4,9 +4,9 @@ using System.ComponentModel;
 namespace Lett.Extensions
 {
     /// <summary>
-    /// Enum 扩展方法
+    ///     Enum 扩展方法
     /// </summary>
-    public static partial class EnumExtensions
+    public static class EnumExtensions
     {
         /// <summary>
         ///     获取枚举描述
@@ -24,10 +24,8 @@ namespace Lett.Extensions
             var fieldInfo = enumType.GetField(enumName);
             if (fieldInfo == null) return null;
             return Attribute.GetCustomAttribute(fieldInfo, typeof(DescriptionAttribute), false) is DescriptionAttribute descAttr
-                ? descAttr.Description
-                : null;
+                       ? descAttr.Description
+                       : null;
         }
-
-        
     }
 }

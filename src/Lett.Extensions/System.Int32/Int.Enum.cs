@@ -3,7 +3,7 @@ using System;
 namespace Lett.Extensions
 {
     /// <summary>
-    /// int 扩展方法
+    ///     int 扩展方法 - 枚举
     /// </summary>
     public static partial class IntExtensions
     {

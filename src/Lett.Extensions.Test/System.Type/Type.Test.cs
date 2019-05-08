@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
 {
@@ -18,7 +15,7 @@ namespace Lett.Extensions.Test
 
     public class Class1
     {
-        public string PropertyA { get; set; }
+        public  string PropertyA { get; set; }
         private string PropertyB { get; set; }
     }
 }

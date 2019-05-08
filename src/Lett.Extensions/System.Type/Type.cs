@@ -4,9 +4,9 @@ using System.Linq;
 namespace Lett.Extensions
 {
     /// <summary>
-    /// type 扩展方法
+    ///     type 扩展方法
     /// </summary>
-    public static partial class TypeExtensions
+    public static class TypeExtensions
     {
         /// <summary>
         ///     是否包含Property

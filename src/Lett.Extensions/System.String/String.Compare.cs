@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 namespace Lett.Extensions
 {
     /// <summary>
-    /// string 扩展方法 - 比较
+    ///     string 扩展方法 - 比较
     /// </summary>
     public static partial class StringExtensions
     {

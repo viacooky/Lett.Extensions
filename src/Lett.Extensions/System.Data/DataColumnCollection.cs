@@ -2,11 +2,10 @@
 
 namespace Lett.Extensions
 {
-    
     /// <summary>
-    /// DataColumnCollection 扩展方法
+    ///     DataColumnCollection 扩展方法
     /// </summary>
-    public static partial class DataColumnCollectionExtensions
+    public static class DataColumnCollectionExtensions
     {
         /// <summary>
         ///     批量增加 DataColumn

@@ -5,9 +5,9 @@ using System.Reflection;
 namespace Lett.Extensions
 {
     /// <summary>
-    /// DataRow 扩展方法
+    ///     DataRow 扩展方法
     /// </summary>
-    public static partial class DataRowExtensions
+    public static class DataRowExtensions
     {
         /// <summary>
         ///     获取当前行中某个列的值
@@ -45,8 +45,8 @@ namespace Lett.Extensions
         public static T Cell<T>(this DataRow @this, string columnName, T defaultValue) where T : IConvertible
         {
             return @this.Table.Columns.Contains(columnName)
-                ? @this[columnName].To(defaultValue)
-                : defaultValue;
+                       ? @this[columnName].To(defaultValue)
+                       : defaultValue;
         }
 
         /// <summary>

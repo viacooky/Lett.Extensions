@@ -7,9 +7,9 @@ using Lett.Extensions.Exceptions;
 namespace Lett.Extensions
 {
     /// <summary>
-    /// DataTable 扩展方法
+    ///     DataTable 扩展方法
     /// </summary>
-    public static partial class DataTableExtensions
+    public static class DataTableExtensions
     {
         /// <summary>
         ///     是否存在数据行

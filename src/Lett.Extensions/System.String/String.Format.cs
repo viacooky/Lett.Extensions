@@ -1,7 +1,7 @@
 ﻿namespace Lett.Extensions
 {
     /// <summary>
-    /// string 扩展方法 - 格式化
+    ///     string 扩展方法 - 格式化
     /// </summary>
     public static partial class StringExtensions
     {

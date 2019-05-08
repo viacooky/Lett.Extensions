@@ -57,14 +57,8 @@ namespace Lett.Extensions
                 return (T) Enum.Parse(typeof(T), @this.ToString(), true);
             }
 
-            try
-            {
-                return (T) Convert.ChangeType(@this, typeof(T));
-            }
-            catch
-            {
-                return defaultValue;
-            }
+            try { return (T) Convert.ChangeType(@this, typeof(T)); }
+            catch { return defaultValue; }
         }
 
         #endregion
@@ -125,14 +119,8 @@ namespace Lett.Extensions
         /// <returns></returns>
         public static T As<T>(this object @this, T defaultValue)
         {
-            try
-            {
-                return (T) @this;
-            }
-            catch
-            {
-                return defaultValue;
-            }
+            try { return (T) @this; }
+            catch { return defaultValue; }
         }
 
         #endregion

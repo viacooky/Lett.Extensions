@@ -5,7 +5,6 @@ using System.Linq;
 using Lett.Extensions.Exceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-
 namespace Lett.Extensions.Test
 {
     [TestClass]
@@ -154,7 +153,7 @@ namespace Lett.Extensions.Test
                 i++;
             }
 
-            var startTime        = DateTime.Now;
+            var startTime = DateTime.Now;
             dt.ToEntityList<TestClass1>();
             var usedMilliseconds = (DateTime.Now - startTime).TotalMilliseconds;
             Console.WriteLine($"10K Rows used time: {usedMilliseconds} ms");
@@ -189,10 +188,8 @@ namespace Lett.Extensions.Test
         [SuppressMessage("ReSharper", "UnusedAutoPropertyAccessor.Local")]
         private class TestClass1
         {
-            public string PublicField;
-
-
             private string _field;
+            public  string PublicField;
 
             public string Property
             {
