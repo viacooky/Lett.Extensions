@@ -3,7 +3,10 @@ using System.Text;
 
 namespace Lett.Extensions
 {
-    public static partial class Extensions
+    /// <summary>
+    /// string 扩展方法 - 比较
+    /// </summary>
+    public static partial class StringExtensions
     {
         /// <summary>
         ///     BASE64编码

@@ -3,7 +3,10 @@ using System.Linq;
 
 namespace Lett.Extensions
 {
-    public static partial class Extensions
+    /// <summary>
+    /// type 扩展方法
+    /// </summary>
+    public static partial class TypeExtensions
     {
         /// <summary>
         ///     是否包含Property

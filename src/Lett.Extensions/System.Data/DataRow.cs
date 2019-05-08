@@ -4,7 +4,10 @@ using System.Reflection;
 
 namespace Lett.Extensions
 {
-    public static partial class Extensions
+    /// <summary>
+    /// DataRow 扩展方法
+    /// </summary>
+    public static partial class DataRowExtensions
     {
         /// <summary>
         ///     获取当前行中某个列的值

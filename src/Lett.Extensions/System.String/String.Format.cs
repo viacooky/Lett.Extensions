@@ -1,6 +1,9 @@
 ﻿namespace Lett.Extensions
 {
-    public static partial class Extensions
+    /// <summary>
+    /// string 扩展方法 - 格式化
+    /// </summary>
+    public static partial class StringExtensions
     {
         /// <summary>
         ///     格式化

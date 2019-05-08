@@ -3,9 +3,9 @@
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     对象转换相关拓展方法
+    ///     object 扩展方法 - 对象转换
     /// </summary>
-    public static partial class Extensions
+    public static partial class ObjectExtensions
     {
         #region 对象转换
 

@@ -3,7 +3,10 @@ using System.ComponentModel;
 
 namespace Lett.Extensions
 {
-    public static partial class Extensions
+    /// <summary>
+    /// Enum 扩展方法
+    /// </summary>
+    public static partial class EnumExtensions
     {
         /// <summary>
         ///     获取枚举描述
