@@ -1,4 +1,3 @@
-using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
@@ -14,7 +13,7 @@ namespace Lett.Extensions.Test
             Assert.IsFalse(1.IsEven());
             Assert.IsFalse((-1).IsEven());
         }
-        
+
         [TestMethod]
         public void IsOdd_Test()
         {
@@ -27,11 +26,10 @@ namespace Lett.Extensions.Test
         [TestMethod]
         public void IsInRange_Test()
         {
-            Assert.IsTrue(10.IsInRange(0,10));
-            Assert.IsTrue(0.IsInRange(-1,1));
-            Assert.IsFalse(1.IsInRange(2,3));
-            Assert.IsFalse((-1).IsInRange(0,10));
+            Assert.IsTrue(10.IsInRange(0, 10));
+            Assert.IsTrue(0.IsInRange(-1, 1));
+            Assert.IsFalse(1.IsInRange(2, 3));
+            Assert.IsFalse((-1).IsInRange(0, 10));
         }
-
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
@@ -10,13 +9,12 @@ namespace Lett.Extensions.Test
         public void Times_Test()
         {
             var rs = 0L;
-            10L.Times(() => rs+=1);
-            Assert.AreEqual(rs,10);
+            10L.Times(() => rs += 1);
+            Assert.AreEqual(rs, 10);
 
             var rs2 = 0L;
             10L.Times(i => rs2 += i);
-            Assert.AreEqual(rs2,45L);
+            Assert.AreEqual(rs2, 45L);
         }
-
     }
 }
