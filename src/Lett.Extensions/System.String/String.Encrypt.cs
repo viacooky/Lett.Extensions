@@ -4,7 +4,7 @@ using System.Text;
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     string 扩展方法 - 比较
+    ///     string 扩展方法 - 加密
     /// </summary>
     public static partial class StringExtensions
     {
