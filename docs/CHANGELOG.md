@@ -1,6 +1,61 @@
 # Change log / 更新日志
 
+### 0.1.8 (2019-05-13)
+
+#### Features / 新增功能
+
+- 增加`string`扩展方法:
+  - `ToBytes(Encoding encoding = null)` 转换为 byte 数组
+  - `IsLike(string pattern)` \*通配符比较是否相似 (特殊字符 用 \ 转义)
+  - `RegexIsMatch(string pattern)` 正则表达式 - 是否匹配
+  - `RegexMatches(string pattern)` 正则表达式匹配 - 所有匹配对象
+  - `RegexMatch(string pattern)` 正则表达式匹配 - 单个匹配对象
+  - `RegexSplit(string pattern)` 正则表达式拆分字符串
+  - `RegexReplace(string pattern, string replacement)` 正则表达式替换字符串
+  - `RegexReplace(string pattern, MatchEvaluator evaluator)` 正则表达式替换字符串
+- 增加`byte[]`扩展方法:
+  - `ToString(Encoding encoding)` 转换为字符串
+- 增加`ICollection`扩展方法:
+  - `AddIfNotContains<T>(@this, T item)` 如果不包含，则添加
+  - `AddIfNotContains<T>(ICollection<T> items)` 如果不包含，则添加
+- 增加`bool`扩展方法:
+  - `IfTrue(Action action)` 结果为 True 时，执行方法
+  - `IfTrue(T result)` 结果为 True 时，返回参数 (结果为 False 时，返回参数类型默认值)
+  - `IfFalse(Action action)` 结果为 False 时，执行方法
+  - `IfTrue(T result)` 结果为 False 时，返回参数 (结果为 True 时，返回参数类型默认值)
+- 增加`int`扩展方法:
+  - `IsEven()` 是否偶数
+  - `IsOdd()` 是否奇数
+  - `Times(Action action)` 执行次数操作，次数基于原 int 值
+  - `Times(Action<int> action)` 执行次数操作，次数基于原 int 值
+  - `IsInRange(int min, int max)` 是否在指定范围内
+- 增加`long`扩展方法:
+  - `IsEven()` 是否偶数
+  - `IsOdd()` 是否奇数
+  - `Times(Action action)` 执行次数操作，次数基于原 int 值
+  - `Times(Action<long> action)` 执行次数操作，次数基于原 int 值
+  - `IsInRange(long min, long max)` 是否在指定范围内
+
+#### Changed / 变更
+
+- 对扩展方法类名进行规范重命名
+  - 统一命名空间 `Lett.Extensions.Exceptions`
+  - `IEnumerableExtensions` IEnumerable 扩展方法
+  - `DataColumnCollectionExtensions` DataColumnCollection 扩展方法
+  - `DataRowExtensions` DataRow 扩展方法
+  - `DataTableExtensions` DataTable 扩展方法
+  - `DateTimeExtensions` DateTime 扩展方法
+  - `EnumExtensions` Enum 扩展方法
+  - `IntExtensions` int 扩展方法
+  - `ObjectExtensions` object 扩展方法
+  - `StringExtensions` string 扩展方法
+  - `TypeExtensions` type 扩展方法
+- 类名变更：
+  - `LettExtensionsDataTableException` -> `DataTableException`
+
 ### 0.1.7 (2019-04-28)
+
+#### Features / 新增功能
 
 - 增加 `System.String` 拓展方法
   - `Format(object[] args)` 格式化
@@ -27,8 +82,9 @@
 
 #### Changed / 变更
 
-- `DataRow.Cell<T>()` 系列方法，泛型约定调整为 实现了 `IConvertible` 接口的类型 如：Boolean, Byte, Char, DateTime, System.DBNull, Decimal, Double, System.Enum, Int16, Int32, Int64, SByte, Single, String, UInt16, UInt32, UInt64 等
-- `Object.To<T>()` 方法的泛型约定调整为 实现了 `IConvertible` 接口的类型 如：Boolean, Byte, Char, DateTime, System.DBNull, Decimal, Double, System.Enum, Int16, Int32, Int64, SByte, Single, String, UInt16, UInt32, UInt64 等
+- `DataRow.Cell<T>()` 系列方法，泛型约定调整为 实现了 `IConvertible` 接口的类型
+- `Object.To<T>()` 方法的泛型约定调整为 实现了 `IConvertible` 接口的类型
+- 实现了 `IConvertible` 接口的类型 如：Boolean, Byte, Char, DateTime, System.DBNull, Decimal, Double, System.Enum, Int16, Int32, Int64, SByte, Single, String, UInt16, UInt32, UInt64 等
 
 ### 0.1.4 (2019-04-14)
 

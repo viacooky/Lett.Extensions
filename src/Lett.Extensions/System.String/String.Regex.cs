@@ -20,7 +20,7 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     正则表达式匹配 - 单个匹配对象
+        ///     正则表达式 - 单个匹配对象
         /// </summary>
         /// <param name="this">源字符串</param>
         /// <param name="pattern">正则表达式</param>
@@ -32,7 +32,7 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     正则表达式匹配 - 所有匹配对象
+        ///     正则表达式 - 所有匹配对象
         /// </summary>
         /// <param name="this">源字符串</param>
         /// <param name="pattern">正则表达式</param>
@@ -44,7 +44,7 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     正则表达式拆分字符串
+        ///     正则表达式 - 拆分字符串
         /// </summary>
         /// <param name="this">源字符串</param>
         /// <param name="pattern">正则表达式</param>
@@ -56,7 +56,7 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     正则表达式替换字符串
+        ///     正则表达式 - 替换字符串
         /// </summary>
         /// <param name="this">源字符串</param>
         /// <param name="pattern">正则表达式</param>
@@ -69,7 +69,7 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     正则表达式替换字符串
+        ///     正则表达式 - 替换字符串
         /// </summary>
         /// <param name="this">源字符串</param>
         /// <param name="pattern">正则表达式</param>
