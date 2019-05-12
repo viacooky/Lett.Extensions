@@ -4,7 +4,7 @@ using System.Linq;
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     IEnumerableExtensions 扩展方法
+    ///     IEnumerable 扩展方法
     /// </summary>
     // ReSharper disable once InconsistentNaming
     public static class IEnumerableExtensions
