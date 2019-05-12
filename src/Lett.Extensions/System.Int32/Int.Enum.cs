@@ -2,7 +2,10 @@ using System;
 
 namespace Lett.Extensions
 {
-    public static partial class Extensions
+    /// <summary>
+    ///     int 扩展方法 - 枚举
+    /// </summary>
+    public static partial class IntExtensions
     {
         /// <summary>
         ///     获取对应枚举的描述

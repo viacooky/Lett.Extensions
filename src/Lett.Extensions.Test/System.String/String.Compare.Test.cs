@@ -89,5 +89,38 @@ namespace Lett.Extensions.Test
             var d = new[] {"A", "B"};
             Assert.IsFalse(a.ContainsAny(d, StringComparison.Ordinal));
         }
+
+
+        [TestMethod]
+        public void IsLike_Test()
+        {
+            var test1 = "abcdefg\r\nabcdefghijk";
+            Assert.IsTrue(test1.IsLike("abc*"));
+            Assert.IsTrue(test1.IsLike("a*"));
+            Assert.IsTrue(test1.IsLike("*ijk"));
+            Assert.IsTrue(test1.IsLike("abc*fg*"));
+
+            var test2 = "aaaaa*bbbb*ccccc";
+            Assert.IsTrue(test2.IsLike(@"*b\*c*"));
+
+
+            var test3 = "aaaa*bbbbb";
+            Assert.IsTrue(test3.IsLike("aaaa*bbbbb"));
+
+            var test4 = "abcdef<<";
+            Assert.IsTrue(test4.IsLike(@"*\<\<"));
+            Assert.IsTrue(test4.IsLike(@"*"));
+            Assert.IsTrue(test4.IsLike(test4));
+
+
+            var test5 = "";
+            Assert.IsTrue(test5.IsLike(""));
+            Assert.IsTrue(test5.IsLike("*"));
+            Assert.IsFalse(test5.IsLike("abc*"));
+
+            string test6 = null;
+            Assert.IsFalse(test6.IsLike(null));
+            Assert.IsTrue(test5.IsLike("*"));
+        }
     }
 }

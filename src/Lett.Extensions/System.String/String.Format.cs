@@ -1,6 +1,9 @@
 ﻿namespace Lett.Extensions
 {
-    public static partial class Extensions
+    /// <summary>
+    ///     string 扩展方法 - 格式化
+    /// </summary>
+    public static partial class StringExtensions
     {
         /// <summary>
         ///     格式化
@@ -8,6 +11,12 @@
         /// <param name="this"></param>
         /// <param name="args"></param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        /// var tmp = "{0}-{1}";
+        /// tmp.Format(new[]{"aaa","bbb"}); // "aaa-bbb" 
+        /// </code>
+        /// </example>
         public static string Format(this string @this, params object[] args)
         {
             return string.Format(@this, args);

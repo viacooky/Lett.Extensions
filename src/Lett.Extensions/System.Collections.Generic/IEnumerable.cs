@@ -3,7 +3,11 @@ using System.Linq;
 
 namespace Lett.Extensions
 {
-    public static partial class Extensions
+    /// <summary>
+    ///     IEnumerable 扩展方法
+    /// </summary>
+    // ReSharper disable once InconsistentNaming
+    public static class IEnumerableExtensions
     {
         /// <summary>
         ///     是否空或空集合

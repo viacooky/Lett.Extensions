@@ -5,7 +5,6 @@ using System.Linq;
 using Lett.Extensions.Exceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-
 namespace Lett.Extensions.Test
 {
     [TestClass]
@@ -28,8 +27,8 @@ namespace Lett.Extensions.Test
             // 空行Datatable情况
             _testTable1.Rows.Clear();
             Assert.IsFalse(_testTable1.HasRows());
-            Assert.ThrowsException<LettExtensionsDataTableException>(() => _testTable1.FirstRow());
-            Assert.ThrowsException<LettExtensionsDataTableException>(() => _testTable1.LastRow());
+            Assert.ThrowsException<DataTableException>(() => _testTable1.FirstRow());
+            Assert.ThrowsException<DataTableException>(() => _testTable1.LastRow());
         }
 
         [TestMethod]
@@ -87,7 +86,7 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(dt.GetColumnDataType("Col_Bool"), typeof(bool));
             Assert.AreEqual(dt.GetColumnDataType("Col_DateTime"), typeof(DateTime));
 
-            Assert.ThrowsException<LettExtensionsDataTableException>(() => { dt.GetColumnDataType("not_Exist"); });
+            Assert.ThrowsException<DataTableException>(() => { dt.GetColumnDataType("not_Exist"); });
         }
 
 
@@ -112,8 +111,8 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(dt.GetColumnDataType(5), typeof(bool));
             Assert.AreEqual(dt.GetColumnDataType(6), typeof(DateTime));
 
-            Assert.ThrowsException<LettExtensionsDataTableException>(() => { dt.GetColumnDataType(-1); });
-            Assert.ThrowsException<LettExtensionsDataTableException>(() => { dt.GetColumnDataType(7); });
+            Assert.ThrowsException<DataTableException>(() => { dt.GetColumnDataType(-1); });
+            Assert.ThrowsException<DataTableException>(() => { dt.GetColumnDataType(7); });
         }
 
 
@@ -154,7 +153,7 @@ namespace Lett.Extensions.Test
                 i++;
             }
 
-            var startTime        = DateTime.Now;
+            var startTime = DateTime.Now;
             dt.ToEntityList<TestClass1>();
             var usedMilliseconds = (DateTime.Now - startTime).TotalMilliseconds;
             Console.WriteLine($"10K Rows used time: {usedMilliseconds} ms");
@@ -189,10 +188,8 @@ namespace Lett.Extensions.Test
         [SuppressMessage("ReSharper", "UnusedAutoPropertyAccessor.Local")]
         private class TestClass1
         {
-            public string PublicField;
-
-
             private string _field;
+            public  string PublicField;
 
             public string Property
             {

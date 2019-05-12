@@ -31,40 +31,47 @@ Project Site https://viacooky.github.io/Lett.Extensions/
 
 ## Documents
 
-- [System.Collections.Generic](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Collections.Generic/)
-- [System.Data](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Data/)
-- [System.DateTime](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.DateTime/)
-- [System.Enum](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Enum/)
-- [System.Int32](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Int32/)
-- [System.Object](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Object/)
-- [System.String](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.String/)
-- [System.Type](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Type/)
+- [System.Byte](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Byte/index.md)
+- [System.Collections.Generic](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Collections.Generic/index.md)
+- [System.Data](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Data/index.md)
+- [System.DateTime](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.DateTime/index.md)
+- [System.Enum](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Enum/index.md)
+- [System.Int32](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Int32/index.md)
+- [System.Int32](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Int64/index.md)
+- [System.Object](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Object/index.md)
+- [System.String](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.String/index.md)
+- [System.Type](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Type/index.md)
 
 [more...](https://viacooky.github.io/Lett.Extensions/)
 
 ## Change log
 
-### 0.1.5 (2019-04-24)
+### 0.1.8 (2019-05-13)
 
 #### Features / 新增功能
 
-- DataRow.Cell<T>() 系列方法，增加泛型约定为 实现了 IConvertible 接口的类型 如：Boolean, Byte, Char, DateTime, System.DBNull, Decimal, Double, System.Enum, Int16, Int32, Int64, SByte, Single, String, UInt16, UInt32, UInt64 等
-- 增加 Object.To<T>() 方法的泛型约束为 实现了 IConvertible 接口的类型 如：Boolean, Byte, Char, DateTime, System.DBNull, Decimal, Double, System.Enum, Int16, Int32, Int64, SByte, Single, String, UInt16, UInt32, UInt64 等
-- 增加 DataTable DataRow 转换实体方法
-- 增加 DataColumnCollectionTest.AddRange 方法
-- 获取 DataColumn 可枚举对象 ColumnsEnumerable()
-- 获取 Column 的数据类型 GetColumnDataType(string columnName)
-- 获取 Column 的数据类型 GetColumnDataType(int index)
+- 增加`string`扩展方法
+- 增加`byte[]`扩展方法
+- 增加`ICollection`扩展方法
+- 增加`bool`扩展方法
+- 增加`int`扩展方法
+- 增加`long`扩展方法
 
-### 0.1.4 (2019-04-14)
+#### Changed / 变更
+
+- 对扩展方法类名进行规范重命名
+
+### 0.1.7 (2019-04-28)
 
 #### Features / 新增功能
 
-- 增加 Object.IsDBNull 方法
+- 增加 `System.String` 拓展方法
 
-#### Refactored / 优化重构
+### 0.1.6 (2019-04-25)
 
-- 调整 Int32.GetEnumDescription()方法位置，使用无感知
+#### Features / 新增功能
+
+- 增加 `System.String` 拓展方法
 
 [more...](https://viacooky.github.io/Lett.Extensions/CHANGELOG.html)
 

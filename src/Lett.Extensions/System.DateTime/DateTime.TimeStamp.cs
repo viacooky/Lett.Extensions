@@ -2,7 +2,10 @@ using System;
 
 namespace Lett.Extensions
 {
-    public static partial class Extensions
+    /// <summary>
+    ///     DateTime 扩展方法 - 时间戳
+    /// </summary>
+    public static partial class DateTimeExtensions
     {
         private static readonly DateTime OriginDateTime = new DateTime(1970, 1, 1, 0, 0, 0);
 

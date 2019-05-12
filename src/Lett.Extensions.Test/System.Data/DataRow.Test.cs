@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Data;
+﻿using System.Data;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -54,13 +53,7 @@ namespace Lett.Extensions.Test
         {
             public string PublicField1;
 
-            private string _field1;
-
-            public string Property1
-            {
-                get { return _field1; }
-                set { _field1 = value; }
-            }
+            public string Property1 { get; set; }
 
             public string AutoProperty1 { get; set; }
         }

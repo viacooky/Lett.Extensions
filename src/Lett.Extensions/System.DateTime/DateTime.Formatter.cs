@@ -2,7 +2,10 @@ using System;
 
 namespace Lett.Extensions
 {
-    public static partial class Extensions
+    /// <summary>
+    ///     DateTime 扩展方法 - 格式化
+    /// </summary>
+    public static partial class DateTimeExtensions
     {
         /// <summary>
         ///     格式化为 yyyy

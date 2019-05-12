@@ -3,7 +3,10 @@ using System.Text;
 
 namespace Lett.Extensions
 {
-    public static partial class Extensions
+    /// <summary>
+    ///     string 扩展方法 - 加密
+    /// </summary>
+    public static partial class StringExtensions
     {
         /// <summary>
         ///     BASE64编码
@@ -19,10 +22,7 @@ namespace Lett.Extensions
                 var bytes    = encoding.GetBytes(@this);
                 return Convert.ToBase64String(bytes);
             }
-            catch
-            {
-                return null;
-            }
+            catch { return null; }
         }
 
         /// <summary>
@@ -39,10 +39,7 @@ namespace Lett.Extensions
                 var bytes    = Convert.FromBase64String(@this);
                 return encoding.GetString(bytes);
             }
-            catch
-            {
-                return null;
-            }
+            catch { return null; }
         }
     }
 }

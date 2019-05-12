@@ -3,9 +3,9 @@ using System;
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     对象比较相关拓展方法
+    ///     object 扩展方法 - 比较
     /// </summary>
-    public static partial class Extensions
+    public static partial class ObjectExtensions
     {
         /// <summary>
         ///     是否DBNull
