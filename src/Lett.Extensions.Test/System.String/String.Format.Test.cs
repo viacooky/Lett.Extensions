@@ -11,6 +11,8 @@ namespace Lett.Extensions.Test
         {
             var a = "abc {0}".Format("dddd");
             Assert.AreEqual(a, "abc dddd");
+            var tmp = "{0}-{1}";
+            Assert.AreEqual(tmp.Format("aaa", "bbb"), "aaa-bbb");
         }
 
         [TestMethod]

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Lett.Extensions
@@ -99,6 +100,30 @@ namespace Lett.Extensions
         public static bool ContainsAny(this string @this, IEnumerable<string> values, StringComparison comparisonType = StringComparison.CurrentCultureIgnoreCase)
         {
             return values.Any(s => @this.IndexOf(s, comparisonType) >= 0);
+        }
+
+        /// <summary>
+        ///     *通配符比较是否相似 (特殊字符 用 \ 转义)
+        /// </summary>
+        /// <param name="this">源字符串，为 null 时返回 false</param>
+        /// <param name="pattern">通配符表达式，为 null 时返回 false</param>
+        /// <returns></returns>
+        public static bool IsLike(this string @this, string pattern)
+        {
+            if (@this == null) return false;
+            if (pattern == null) return false;
+            if (@this == pattern) return true;
+            if (!pattern.Contains('*')) return false;
+
+            var newPattern = new StringBuilder();
+            for (var i = 0; i < pattern.Length; i++)
+                if (i != 0 && pattern[i] == '*' && pattern[i - 1] != '\\')
+                    newPattern.Append(".*");
+                else
+                    newPattern.Append(pattern[i]);
+
+            var regexPattern = @"^{0}$".Format(newPattern.ToString());
+            return @this.RegexIsMatch(regexPattern, RegexOptions.Singleline);
         }
     }
 }

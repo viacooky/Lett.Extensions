@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml;
+﻿using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
@@ -14,8 +10,8 @@ namespace Lett.Extensions.Test
         public void ToXmlDocument_Test()
         {
             var source = "<item><name>wrench</name></item>";
-            var rs = source.ToXmlDocument();
-            Assert.AreEqual(rs.InnerText,"wrench");
+            var rs     = source.ToXmlDocument();
+            Assert.AreEqual(rs.InnerText, "wrench");
         }
 
 
@@ -23,13 +19,11 @@ namespace Lett.Extensions.Test
         public void ToBytes_Test()
         {
             var source = "abcd";
-            var rs = source.ToBytes();
-            Assert.AreEqual(rs.ToString(Encoding.UTF8),source);
+            var rs     = source.ToBytes();
+            Assert.AreEqual(rs.ToString(Encoding.UTF8), source);
             var rs2 = source.ToBytes(Encoding.Unicode);
-            Assert.AreEqual(rs2.ToString(Encoding.Unicode),source);
-            Assert.AreNotEqual(rs2.ToString(Encoding.UTF8),source);
-            
+            Assert.AreEqual(rs2.ToString(Encoding.Unicode), source);
+            Assert.AreNotEqual(rs2.ToString(Encoding.UTF8), source);
         }
-
     }
 }

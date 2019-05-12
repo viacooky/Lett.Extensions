@@ -11,6 +11,12 @@
         /// <param name="this"></param>
         /// <param name="args"></param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        /// var tmp = "{0}-{1}";
+        /// tmp.Format(new[]{"aaa","bbb"}); // "aaa-bbb" 
+        /// </code>
+        /// </example>
         public static string Format(this string @this, params object[] args)
         {
             return string.Format(@this, args);
