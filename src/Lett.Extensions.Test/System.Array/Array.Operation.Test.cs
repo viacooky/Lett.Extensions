@@ -136,27 +136,6 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs2, 1);
         }
 
-        [TestMethod]
-        public void FindIndex_Test()
-        {
-            var s = new[] {"aa", "aaa", "bb", "bb","bbb","ccc"};
-            var rs = s.FindIndex(s1 => s1.Length == 2);
-            Assert.AreEqual(rs,0);
-            var rs2 = s.FindIndex(1, s1 => s1.Length == 2);
-            Assert.AreEqual(rs2, 2);
-            var rs3 = s.FindIndex(1, 3, s1 => s1.Length == 2);
-            Assert.AreEqual(rs3, 2);
-        }
-        
-        [TestMethod]
-        public void FindLastIndex_Test()
-        {
-            var s  = new[] {"aa", "aaa", "bb", "bb","bbb","ccc"};
-            var rs = s.FindLastIndex(s1 => s1.StartsWith("b"));
-            Assert.AreEqual(rs,4);
-            var rs2 = s.FindLastIndex(1, s1 => s1.StartsWith("a"));
-            Assert.AreEqual(rs2,1);
-        }
         
     }
 }

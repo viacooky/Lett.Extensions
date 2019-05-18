@@ -126,9 +126,5 @@ namespace Lett.Extensions
         {
             return Array.FindLastIndex(@this, startIndex, count, match);
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 2019-05-18
     }
 }
