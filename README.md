@@ -32,16 +32,17 @@ Project Site https://viacooky.github.io/Lett.Extensions/
 
 ## Documents
 
-- [System.Byte](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Byte/index.md)
-- [System.Collections.Generic](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Collections.Generic/index.md)
-- [System.Data](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Data/index.md)
-- [System.DateTime](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.DateTime/index.md)
-- [System.Enum](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Enum/index.md)
-- [System.Int32](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Int32/index.md)
-- [System.Int32](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Int64/index.md)
-- [System.Object](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Object/index.md)
-- [System.String](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.String/index.md)
-- [System.Type](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Type/index.md)
+- [System.Array](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Array/)
+- [System.Byte](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Byte/)
+- [System.Collections.Generic](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Collections.Generic/)
+- [System.Data](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Data/)
+- [System.DateTime](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.DateTime/)
+- [System.Enum](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Enum/)
+- [System.Int32](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Int32/)
+- [System.Int32](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Int64/)
+- [System.Object](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Object/)
+- [System.String](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.String/)
+- [System.Type](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Type/)
 
 [more...](https://viacooky.github.io/Lett.Extensions/)
 
