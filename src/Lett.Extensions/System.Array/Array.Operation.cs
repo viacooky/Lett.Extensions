@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 
 namespace Lett.Extensions
 {
@@ -11,7 +10,7 @@ namespace Lett.Extensions
         #region ClearAll
 
         /// <summary>
-        /// 全部清除
+        ///     全部清除
         /// </summary>
         /// <param name="this">当前 Array</param>
         public static void ClearAll(this Array @this)
@@ -30,6 +29,5 @@ namespace Lett.Extensions
         }
 
         #endregion
-
     }
 }

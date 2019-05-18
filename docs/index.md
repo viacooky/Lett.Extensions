@@ -57,6 +57,8 @@ GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacoo
   - `Find()` 返回数组中的第一个匹配元素
   - `FindLast()` 返回数组中的最后一个匹配元素
   - `FindAll()` 返回数组中所有匹配的元素
+  - `FindIndex()` 返回数组中的第一个匹配元素的索引
+  - `FindLastIndex()` 返回数组中的最后一个匹配元素的索引
 
 ### 0.1.8 (2019-05-13)
 
