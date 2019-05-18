@@ -54,6 +54,9 @@ GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacoo
   - `ContainsIndex(int index)` 是否包含索引
   - `Sort()` 排序
   - `Reverse()` 反转
+  - `Find()` 返回数组中的第一个匹配元素
+  - `FindLast()` 返回数组中的最后一个匹配元素
+  - `FindAll()` 返回数组中所有匹配的元素
 
 ### 0.1.8 (2019-05-13)
 

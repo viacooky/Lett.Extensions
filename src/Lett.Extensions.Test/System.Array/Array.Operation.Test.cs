@@ -84,6 +84,36 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(s[3],"b");
             Assert.AreEqual(s[4],"B");
         }
+
+
+        [TestMethod]
+        public void Find_Test()
+        {
+            var s = new[] {"aa", "aaaa", "bb", "bbbb"};
+            var rs= s.Find(s1 => s1.Length == 2);
+            Assert.AreEqual(rs,"aa");
+            var rs2 = s.Find(s1 => s1.Length == 3);
+            Assert.AreEqual(rs2, null);
+        }
         
+        [TestMethod]
+        public void FindLast_Test()
+        {
+            var s  = new[] {"aa", "aaaa", "bb", "bbbb"};
+            var rs = s.FindLast(s1 => s1.Length == 2);
+            Assert.AreEqual(rs,"bb");
+            var rs2 = s.FindLast(s1 => s1.Length == 3);
+            Assert.AreEqual(rs2, null);
+        }
+        
+        [TestMethod]
+        public void FindAll_Test()
+        {
+            var s  = new[] {"aa", "aaaa", "bb", "bbbb"};
+            var rs = s.FindAll(s1 => s1.Length == 2);
+            Assert.AreEqual(rs.Length,2);
+            var rs2 = s.FindAll(s1 => s1.Length == 3);
+            Assert.AreEqual(rs2.Length , 0);
+        }
     }
 }
