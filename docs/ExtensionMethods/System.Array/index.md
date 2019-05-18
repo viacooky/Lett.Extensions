@@ -12,3 +12,5 @@
 | `Sort(IComparer comparer)`                        | 排序         |
 | `Sort(int index, int length)`                     | 排序         |
 | `Sort(int index, int length, IComparer comparer)` | 排序         |
+| `Reverse()`                                       | 反转         |
+| `Reverse(int index, int length)`                  | 反转         |

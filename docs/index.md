@@ -53,6 +53,7 @@ GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacoo
   - `ClearAll()` 全部清除
   - `ContainsIndex(int index)` 是否包含索引
   - `Sort()` 排序
+  - `Reverse()` 反转
 
 ### 0.1.8 (2019-05-13)
 
