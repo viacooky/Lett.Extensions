@@ -29,6 +29,7 @@ GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacoo
 
 ## Extension Methods
 
+- [System.Array](./ExtensionMethods/System.Array/index.md)
 - [System.Byte](./ExtensionMethods/System.Byte/index.md)
 - [System.Collections.Generic](./ExtensionMethods/System.Collections.Generic/index.md)
 - [System.Data](./ExtensionMethods/System.Data/index.md)
@@ -42,7 +43,34 @@ GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacoo
 
 ## Change Logs
 
+### 0.1.9 (2019-05-18)
+
+#### Features / 新增功能
+
+- 增加`DateTime`扩展方法:
+  - `RemoveTimePart()` 移除时间部分
+- 增加`Array`扩展方法
+  - `ClearAll()` 全部清除
+  - `ContainsIndex(int index)` 是否包含索引
+  - `Sort()` 排序
+  - `Reverse()` 反转
+  - `Find()` 返回数组中的第一个匹配元素
+  - `FindLast()` 返回数组中的最后一个匹配元素
+  - `FindAll()` 返回数组中所有匹配的元素
+  - `FindIndex()` 返回数组中的第一个匹配元素的索引
+  - `FindLastIndex()` 返回数组中的最后一个匹配元素的索引
+  - `ForEach()` 对指定数组的每个元素执行指定操作
+
 ### 0.1.8 (2019-05-13)
+
+#### Features / 新增功能
+
+- 增加`string`扩展方法
+- 增加`byte[]`扩展方法
+- 增加`ICollection`扩展方法
+- 增加`bool`扩展方法
+- 增加`int`扩展方法
+- 增加`long`扩展方法
 
 #### Features / 新增功能
 

@@ -20,6 +20,7 @@
 | `GetTotalMinutes()`      | 获取时间戳的分钟表示                 |
 | `GetTotalSeconds()`      | 获取时间戳的秒表示                   |
 | `GetTotalMilliseconds()` | 获取时间戳的毫秒表示                 |
+| `RemoveTimePart()`       | 移除时间部分                         |
 
 ### Examples
 
