@@ -121,6 +121,7 @@ namespace Lett.Extensions.Test
             string test6 = null;
             Assert.IsFalse(test6.IsLike(null));
             Assert.IsTrue(test5.IsLike("*"));
+
         }
     }
 }

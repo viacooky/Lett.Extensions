@@ -1,5 +1,16 @@
 # Change log / 更新日志
 
+### 0.1.9 (2019-05-18)
+
+#### Features / 新增功能
+
+- 增加`DateTime`扩展方法:
+  - `RemoveTimePart()` 移除时间部分
+- 增加`Array`扩展方法
+  - `ClearAll()` 全部清除
+  - `ContainsIndex(int index)` 是否包含索引
+  - `Sort()` 排序
+
 ### 0.1.8 (2019-05-13)
 
 #### Features / 新增功能
