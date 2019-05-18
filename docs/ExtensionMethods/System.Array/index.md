@@ -19,3 +19,5 @@
 | `FindAll(Predicate<T> match)`                     | 返回数组中所有匹配的元素           |
 | `FindIndex(Predicate<T> match)`                   | 返回数组中的第一个匹配元素的索引   |
 | `FindLastIndex(Predicate<T> match)`               | 返回数组中的最后一个匹配元素的索引 |
+| `ForEach(Action<T> action)`                       | 对指定数组的每个元素执行指定操作   |
+| `ForEach(Action<int, T> action)`                  | 对指定数组的每个元素执行指定操作   |

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
@@ -136,6 +137,18 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs2, 1);
         }
 
-        
+        [TestMethod]
+        public void ForEach_Test()
+        {
+            var s  = new[] {"aa", "aaa", "bb", "bb", "bbb", "ccc"};
+            var rs = new List<string>();
+            s.ForEach(s1 => rs.Add(s1));
+            Assert.AreEqual(rs.Count, 6);
+
+            var rs2 = new List<string>();
+            s.ForEach((i, s1) => rs2.Add($"{s1}-{i}"));
+            Assert.AreEqual(rs2.Count, 6);
+            Assert.AreEqual(rs2[0], "aa-0");
+        }
     }
 }
