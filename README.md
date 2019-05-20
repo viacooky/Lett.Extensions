@@ -33,6 +33,7 @@ Project Site https://viacooky.github.io/Lett.Extensions/
 ## Documents
 
 - [System.Array](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Array/)
+- [System.Boolean](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Boolean/)
 - [System.Byte](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Byte/)
 - [System.Collections.Generic](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Collections.Generic/)
 - [System.Data](https://viacooky.github.io/Lett.Extensions/ExtensionMethods/System.Data/)
@@ -48,6 +49,24 @@ Project Site https://viacooky.github.io/Lett.Extensions/
 
 ## Change log
 
+### 0.1.9 (2019-05-18)
+
+#### Features / 新增功能
+
+- 增加`DateTime`扩展方法:
+  - `RemoveTimePart()` 移除时间部分
+- 增加`Array`扩展方法
+  - `ClearAll()` 全部清除
+  - `ContainsIndex(int index)` 是否包含索引
+  - `Sort()` 排序
+  - `Reverse()` 反转
+  - `Find()` 返回数组中的第一个匹配元素
+  - `FindLast()` 返回数组中的最后一个匹配元素
+  - `FindAll()` 返回数组中所有匹配的元素
+  - `FindIndex()` 返回数组中的第一个匹配元素的索引
+  - `FindLastIndex()` 返回数组中的最后一个匹配元素的索引
+  - `ForEach()` 对指定数组的每个元素执行指定操作
+
 ### 0.1.8 (2019-05-13)
 
 #### Features / 新增功能
@@ -62,18 +81,6 @@ Project Site https://viacooky.github.io/Lett.Extensions/
 #### Changed / 变更
 
 - 对扩展方法类名进行规范重命名
-
-### 0.1.7 (2019-04-28)
-
-#### Features / 新增功能
-
-- 增加 `System.String` 拓展方法
-
-### 0.1.6 (2019-04-25)
-
-#### Features / 新增功能
-
-- 增加 `System.String` 拓展方法
 
 [more...](https://viacooky.github.io/Lett.Extensions/CHANGELOG.html)
 

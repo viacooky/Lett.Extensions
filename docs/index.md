@@ -30,6 +30,7 @@ GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacoo
 ## Extension Methods
 
 - [System.Array](./ExtensionMethods/System.Array/index.md)
+- [System.Boolean](./ExtensionMethods/System.Boolean/index.md)
 - [System.Byte](./ExtensionMethods/System.Byte/index.md)
 - [System.Collections.Generic](./ExtensionMethods/System.Collections.Generic/index.md)
 - [System.Data](./ExtensionMethods/System.Data/index.md)
@@ -42,6 +43,14 @@ GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacoo
 - [System.Type](./ExtensionMethods/System.Type/index.md)
 
 ## Change Logs
+
+### 0.2.0 (//TODO )
+
+#### Features / 新增功能
+
+- 增加`IEnumerable<T>`扩展方法：
+  - `ContainsAny(IEnumerable<T> items)` 是否包含任一元素
+  - `ContainsAll(IEnumerable<T> items)` 是否包含全部元素
 
 ### 0.1.9 (2019-05-18)
 
@@ -84,17 +93,5 @@ GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacoo
 #### Changed / 变更
 
 - 对扩展方法类名进行规范重命名
-
-### 0.1.7 (2019-04-28)
-
-#### Features / 新增功能
-
-- 增加 `System.String` 拓展方法
-
-### 0.1.6 (2019-04-25)
-
-#### Features / 新增功能
-
-- 增加 `System.String` 拓展方法
 
 [more...](./CHANGELOG.md)

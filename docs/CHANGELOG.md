@@ -1,5 +1,13 @@
 # Change log / 更新日志
 
+### 0.2.0 (//TODO )
+
+#### Features / 新增功能
+
+- 增加`IEnumerable<T>`扩展方法：
+  - `ContainsAny(IEnumerable<T> items)` 是否包含任一元素
+  - `ContainsAll(IEnumerable<T> items)` 是否包含全部元素
+
 ### 0.1.9 (2019-05-18)
 
 #### Features / 新增功能

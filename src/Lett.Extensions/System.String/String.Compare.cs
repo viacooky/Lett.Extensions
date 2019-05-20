@@ -38,9 +38,9 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     是否大写
+        ///     是否全部大写
         /// </summary>
-        /// <param name="this"></param>
+        /// <param name="this">源字符串</param>
         /// <returns></returns>
         public static bool IsUpper(this string @this)
         {
@@ -48,9 +48,9 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     是否小写
+        ///     是否全部小写
         /// </summary>
-        /// <param name="this"></param>
+        /// <param name="this">源字符串</param>
         /// <returns></returns>
         public static bool IsLower(this string @this)
         {
@@ -60,8 +60,8 @@ namespace Lett.Extensions
         /// <summary>
         ///     忽略大小写比较
         /// </summary>
-        /// <param name="this"></param>
-        /// <param name="value"></param>
+        /// <param name="this">源字符串</param>
+        /// <param name="value">需要进行比较的字符串</param>
         /// <returns></returns>
         public static bool IgnoreCaseEquals(this string @this, string value)
         {
@@ -71,7 +71,7 @@ namespace Lett.Extensions
         /// <summary>
         ///     是否null或空白
         /// </summary>
-        /// <param name="this"></param>
+        /// <param name="this">源字符串</param>
         /// <returns></returns>
         public static bool IsNullOrWhiteSpace(this string @this)
         {
@@ -81,9 +81,9 @@ namespace Lett.Extensions
         /// <summary>
         ///     是否全部包含，默认不区分大小写
         /// </summary>
-        /// <param name="this"></param>
-        /// <param name="values"></param>
-        /// <param name="comparisonType"></param>
+        /// <param name="this">源字符串</param>
+        /// <param name="values">需要进行判断的字符串集合</param>
+        /// <param name="comparisonType">字符串比较规则</param>
         /// <returns></returns>
         public static bool ContainsAll(this string @this, IEnumerable<string> values, StringComparison comparisonType = StringComparison.CurrentCultureIgnoreCase)
         {
@@ -93,9 +93,9 @@ namespace Lett.Extensions
         /// <summary>
         ///     是否包含任意一个，默认不区分大小写
         /// </summary>
-        /// <param name="this"></param>
-        /// <param name="values"></param>
-        /// <param name="comparisonType"></param>
+        /// <param name="this">源字符串</param>
+        /// <param name="values">需要进行判断的字符串集合</param>
+        /// <param name="comparisonType">字符串比较规则</param>
         /// <returns></returns>
         public static bool ContainsAny(this string @this, IEnumerable<string> values, StringComparison comparisonType = StringComparison.CurrentCultureIgnoreCase)
         {
