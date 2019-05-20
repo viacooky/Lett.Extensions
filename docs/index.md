@@ -30,6 +30,7 @@ GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacoo
 ## Extension Methods
 
 - [System.Array](./ExtensionMethods/System.Array/index.md)
+- [System.Boolean](./ExtensionMethods/System.Boolean/index.md)
 - [System.Byte](./ExtensionMethods/System.Byte/index.md)
 - [System.Collections.Generic](./ExtensionMethods/System.Collections.Generic/index.md)
 - [System.Data](./ExtensionMethods/System.Data/index.md)
@@ -42,6 +43,25 @@ GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacoo
 - [System.Type](./ExtensionMethods/System.Type/index.md)
 
 ## Change Logs
+
+### 0.2.0 (2019-05-21)
+
+#### Features / 新增功能
+
+- 增加`IEnumerable<T>`扩展方法：
+  - `ContainsAny(IEnumerable<T> items)` 是否包含任一元素
+  - `ContainsAll(IEnumerable<T> items)` 是否包含全部元素
+- 增加`DateTime`扩展方法:
+  - `SetTime(int hour, int minute, int second, int millisecond = 0)` 设置 DateTime 的 time 部分
+  - `StartOfDay()` 获取 DateTime 的开始 (year-month-day 00:00:00.000)
+  - `EndOfDay()` 获取 DateTime 的结束 (year-month-day 23:59:59.999)
+  - `StartOfWeek()` 获取本周开始的 DateTime (year-month-day 00:00:00.000)
+  - `EndOfWeek()` 获取本周结束的 DateTime (year-month-day 23:59:59.999)
+
+#### Changed / 变更
+
+- 移除`DateTime`扩展方法:
+  - `RemoveTimePart()` 移除时间部分
 
 ### 0.1.9 (2019-05-18)
 
@@ -84,17 +104,5 @@ GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacoo
 #### Changed / 变更
 
 - 对扩展方法类名进行规范重命名
-
-### 0.1.7 (2019-04-28)
-
-#### Features / 新增功能
-
-- 增加 `System.String` 拓展方法
-
-### 0.1.6 (2019-04-25)
-
-#### Features / 新增功能
-
-- 增加 `System.String` 拓展方法
 
 [more...](./CHANGELOG.md)
