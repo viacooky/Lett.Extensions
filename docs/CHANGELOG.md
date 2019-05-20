@@ -7,6 +7,17 @@
 - 增加`IEnumerable<T>`扩展方法：
   - `ContainsAny(IEnumerable<T> items)` 是否包含任一元素
   - `ContainsAll(IEnumerable<T> items)` 是否包含全部元素
+- 增加`DateTime`扩展方法:
+  - `SetTime(int hour, int minute, int second, int millisecond = 0)` 设置 DateTime 的 time 部分
+  - `StartOfDay()` 获取 DateTime 的开始 (year-month-day 00:00:00.000)
+  - `EndOfDay()` 获取 DateTime 的结束 (year-month-day 23:59:59.999)
+  - `StartOfWeek()` 获取本周开始的 DateTime (year-month-day 00:00:00.000)
+  - `EndOfWeek()` 获取本周结束的 DateTime (year-month-day 23:59:59.999)
+
+#### Changed / 变更
+
+- 移除`DateTime`扩展方法:
+  - `RemoveTimePart()` 移除时间部分
 
 ### 0.1.9 (2019-05-18)
 
