@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>IEnumerableExtensions 类
+    <title>LongExtensions 类
    | Lett.Extensions website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="IEnumerableExtensions 类
+    <meta name="title" content="LongExtensions 类
    | Lett.Extensions website ">
     <meta name="generator" content="docfx 2.42.1.0">
     
@@ -16,13 +16,13 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     <meta property="docfx:newtab" content="true">
-  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -78,18 +78,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Lett.Extensions.IEnumerableExtensions">
+            <article class="content wrap" id="_content" data-uid="Lett.Extensions.LongExtensions">
   
   
-  <h1 id="Lett_Extensions_IEnumerableExtensions" data-uid="Lett.Extensions.IEnumerableExtensions" class="text-break">IEnumerableExtensions 类
+  <h1 id="Lett_Extensions_LongExtensions" data-uid="Lett.Extensions.LongExtensions" class="text-break">LongExtensions 类
   </h1>
-  <div class="markdown level0 summary"><p>IEnumerable 扩展方法 - 比较</p>
+  <div class="markdown level0 summary"><p>long 扩展方法 - 比较</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>&#32487;&#25215;</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">IEnumerableExtensions</span></div>
+    <div class="level1"><span class="xref">LongExtensions</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
@@ -117,20 +117,20 @@
   </div>
   <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="Lett.Extensions.html">Lett.Extensions</a></h6>
   <h6><strong>&#31243;&#24207;&#38598;</strong>: Lett.Extensions.dll</h6>
-  <h5 id="Lett_Extensions_IEnumerableExtensions_syntax">&#35821;&#27861;</h5>
+  <h5 id="Lett_Extensions_LongExtensions_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class IEnumerableExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public static class LongExtensions</code></pre>
   </div>
   <h3 id="methods">&#26041;&#27861;
   </h3>
-  <a id="Lett_Extensions_IEnumerableExtensions_ContainsAll_" data-uid="Lett.Extensions.IEnumerableExtensions.ContainsAll*"></a>
-  <h4 id="Lett_Extensions_IEnumerableExtensions_ContainsAll__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__" data-uid="Lett.Extensions.IEnumerableExtensions.ContainsAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">ContainsAll&lt;T&gt;(IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>是否包含全部元素</p>
+  <a id="Lett_Extensions_LongExtensions_IsEven_" data-uid="Lett.Extensions.LongExtensions.IsEven*"></a>
+  <h4 id="Lett_Extensions_LongExtensions_IsEven_System_Int64_" data-uid="Lett.Extensions.LongExtensions.IsEven(System.Int64)">IsEven(Int64)</h4>
+  <div class="markdown level1 summary"><p>是否偶数</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ContainsAll&lt;T&gt;(this IEnumerable&lt;T&gt; this, IEnumerable&lt;T&gt; items)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool IsEven(this long this)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -143,14 +143,61 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_LongExtensions_IsInRange_" data-uid="Lett.Extensions.LongExtensions.IsInRange*"></a>
+  <h4 id="Lett_Extensions_LongExtensions_IsInRange_System_Int64_System_Int64_System_Int64_" data-uid="Lett.Extensions.LongExtensions.IsInRange(System.Int64,System.Int64,System.Int64)">IsInRange(Int64, Int64, Int64)</h4>
+  <div class="markdown level1 summary"><p>是否在指定范围内</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsInRange(this long this, long min, long max)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">this</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
-        <td><span class="parametername">items</span></td>
-        <td><p>需要进行判断的元素集合</p>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">min</span></td>
+        <td><p>最小值</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">max</span></td>
+        <td><p>最大值</p>
 </td>
       </tr>
     </tbody>
@@ -170,29 +217,14 @@
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Lett_Extensions_IEnumerableExtensions_ContainsAny_" data-uid="Lett.Extensions.IEnumerableExtensions.ContainsAny*"></a>
-  <h4 id="Lett_Extensions_IEnumerableExtensions_ContainsAny__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__" data-uid="Lett.Extensions.IEnumerableExtensions.ContainsAny``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">ContainsAny&lt;T&gt;(IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>是否包含任一元素</p>
+  <a id="Lett_Extensions_LongExtensions_IsOdd_" data-uid="Lett.Extensions.LongExtensions.IsOdd*"></a>
+  <h4 id="Lett_Extensions_LongExtensions_IsOdd_System_Int64_" data-uid="Lett.Extensions.LongExtensions.IsOdd(System.Int64)">IsOdd(Int64)</h4>
+  <div class="markdown level1 summary"><p>是否奇数</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ContainsAny&lt;T&gt;(this IEnumerable&lt;T&gt; this, IEnumerable&lt;T&gt; items)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool IsOdd(this long this)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,56 +237,68 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">this</span></td>
         <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
-        <td><span class="parametername">items</span></td>
-        <td><p>需要进行判断的元素集合</p>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_LongExtensions_Times_" data-uid="Lett.Extensions.LongExtensions.Times*"></a>
+  <h4 id="Lett_Extensions_LongExtensions_Times_System_Int64_System_Action_" data-uid="Lett.Extensions.LongExtensions.Times(System.Int64,System.Action)">Times(Int64, Action)</h4>
+  <div class="markdown level1 summary"><p>执行次数操作，次数基于原 long 值</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Times(this long this, Action action)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">this</span></td>
+        <td><p>次数</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>执行的操作</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Lett_Extensions_IEnumerableExtensions_IsNullOrEmpty_" data-uid="Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty*"></a>
-  <h4 id="Lett_Extensions_IEnumerableExtensions_IsNullOrEmpty__1_System_Collections_Generic_IEnumerable___0__" data-uid="Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0})">IsNullOrEmpty&lt;T&gt;(IEnumerable&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>是否空或空集合</p>
+  <a id="Lett_Extensions_LongExtensions_Times_" data-uid="Lett.Extensions.LongExtensions.Times*"></a>
+  <h4 id="Lett_Extensions_LongExtensions_Times_System_Int64_System_Action_System_Int64__" data-uid="Lett.Extensions.LongExtensions.Times(System.Int64,System.Action{System.Int64})">Times(Int64, Action&lt;Int64&gt;)</h4>
+  <div class="markdown level1 summary"><p>执行次数操作，次数基于原 long 值</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool IsNullOrEmpty&lt;T&gt;(this IEnumerable&lt;T&gt; this)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Times(this long this, Action&lt;long&gt; action)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -267,39 +311,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">this</span></td>
-        <td></td>
+        <td><p>次数</p>
+</td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td><p>执行的操作(参数是从0开始的 index)</p>
+</td>
       </tr>
     </tbody>
   </table>

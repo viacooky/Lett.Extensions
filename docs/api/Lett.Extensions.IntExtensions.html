@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>BooleanExtensions 类
+    <title>IntExtensions 类
    | Lett.Extensions website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="BooleanExtensions 类
+    <meta name="title" content="IntExtensions 类
    | Lett.Extensions website ">
     <meta name="generator" content="docfx 2.42.1.0">
     
@@ -16,13 +16,13 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     <meta property="docfx:newtab" content="true">
-  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -78,18 +78,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Lett.Extensions.BooleanExtensions">
+            <article class="content wrap" id="_content" data-uid="Lett.Extensions.IntExtensions">
   
   
-  <h1 id="Lett_Extensions_BooleanExtensions" data-uid="Lett.Extensions.BooleanExtensions" class="text-break">BooleanExtensions 类
+  <h1 id="Lett_Extensions_IntExtensions" data-uid="Lett.Extensions.IntExtensions" class="text-break">IntExtensions 类
   </h1>
-  <div class="markdown level0 summary"><p>bool 扩展方法</p>
+  <div class="markdown level0 summary"><p>int 扩展方法 - 比较</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>&#32487;&#25215;</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">BooleanExtensions</span></div>
+    <div class="level1"><span class="xref">IntExtensions</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
@@ -117,20 +117,21 @@
   </div>
   <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="Lett.Extensions.html">Lett.Extensions</a></h6>
   <h6><strong>&#31243;&#24207;&#38598;</strong>: Lett.Extensions.dll</h6>
-  <h5 id="Lett_Extensions_BooleanExtensions_syntax">&#35821;&#27861;</h5>
+  <h5 id="Lett_Extensions_IntExtensions_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class BooleanExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public static class IntExtensions</code></pre>
   </div>
   <h3 id="methods">&#26041;&#27861;
   </h3>
-  <a id="Lett_Extensions_BooleanExtensions_IfFalse_" data-uid="Lett.Extensions.BooleanExtensions.IfFalse*"></a>
-  <h4 id="Lett_Extensions_BooleanExtensions_IfFalse_System_Boolean_System_Action_" data-uid="Lett.Extensions.BooleanExtensions.IfFalse(System.Boolean,System.Action)">IfFalse(Boolean, Action)</h4>
-  <div class="markdown level1 summary"><p>结果为 False 时，执行方法</p>
+  <a id="Lett_Extensions_IntExtensions_GetEnumDescription_" data-uid="Lett.Extensions.IntExtensions.GetEnumDescription*"></a>
+  <h4 id="Lett_Extensions_IntExtensions_GetEnumDescription_System_Int32_System_Type_" data-uid="Lett.Extensions.IntExtensions.GetEnumDescription(System.Int32,System.Type)">GetEnumDescription(Int32, Type)</h4>
+  <div class="markdown level1 summary"><p>获取对应枚举的描述
+异常时 返回null</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void IfFalse(this bool this, Action action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string GetEnumDescription(this int this, Type enumType)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -143,48 +144,14 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">this</span></td>
-        <td><p>结果</p>
-</td>
+        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td><span class="parametername">action</span></td>
-        <td><p>执行的方法</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Lett_Extensions_BooleanExtensions_IfFalse_" data-uid="Lett.Extensions.BooleanExtensions.IfFalse*"></a>
-  <h4 id="Lett_Extensions_BooleanExtensions_IfFalse__1_System_Boolean___0_" data-uid="Lett.Extensions.BooleanExtensions.IfFalse``1(System.Boolean,``0)">IfFalse&lt;T&gt;(Boolean, T)</h4>
-  <div class="markdown level1 summary"><p>结果为 False 时，返回参数 (结果为 True 时，返回参数类型默认值)</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T IfFalse&lt;T&gt;(this bool this, T result)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">this</span></td>
-        <td><p>结果</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">result</span></td>
-        <td><p>参数</p>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">enumType</span></td>
+        <td><p>枚举类型，枚举类型不存在时，返回空字符串</p>
 </td>
       </tr>
     </tbody>
@@ -199,35 +166,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>参数类型</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Lett_Extensions_BooleanExtensions_IfTrue_" data-uid="Lett.Extensions.BooleanExtensions.IfTrue*"></a>
-  <h4 id="Lett_Extensions_BooleanExtensions_IfTrue_System_Boolean_System_Action_" data-uid="Lett.Extensions.BooleanExtensions.IfTrue(System.Boolean,System.Action)">IfTrue(Boolean, Action)</h4>
-  <div class="markdown level1 summary"><p>结果为 True 时，执行方法</p>
+  <a id="Lett_Extensions_IntExtensions_IsEven_" data-uid="Lett.Extensions.IntExtensions.IsEven*"></a>
+  <h4 id="Lett_Extensions_IntExtensions_IsEven_System_Int32_" data-uid="Lett.Extensions.IntExtensions.IsEven(System.Int32)">IsEven(Int32)</h4>
+  <div class="markdown level1 summary"><p>是否偶数</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void IfTrue(this bool this, Action action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool IsEven(this int this)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -240,27 +191,35 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">this</span></td>
-        <td><p>结果</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td><span class="parametername">action</span></td>
-        <td><p>执行的方法</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="Lett_Extensions_BooleanExtensions_IfTrue_" data-uid="Lett.Extensions.BooleanExtensions.IfTrue*"></a>
-  <h4 id="Lett_Extensions_BooleanExtensions_IfTrue__1_System_Boolean___0_" data-uid="Lett.Extensions.BooleanExtensions.IfTrue``1(System.Boolean,``0)">IfTrue&lt;T&gt;(Boolean, T)</h4>
-  <div class="markdown level1 summary"><p>结果为 True 时，返回参数 (结果为 False 时，返回参数类型默认值)</p>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_IntExtensions_IsInRange_" data-uid="Lett.Extensions.IntExtensions.IsInRange*"></a>
+  <h4 id="Lett_Extensions_IntExtensions_IsInRange_System_Int32_System_Int32_System_Int32_" data-uid="Lett.Extensions.IntExtensions.IsInRange(System.Int32,System.Int32,System.Int32)">IsInRange(Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>是否在指定范围内</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T IfTrue&lt;T&gt;(this bool this, T result)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool IsInRange(this int this, int min, int max)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -273,15 +232,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">this</span></td>
-        <td><p>结果</p>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">min</span></td>
+        <td><p>最小值</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">result</span></td>
-        <td><p>参数</p>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">max</span></td>
+        <td><p>最大值</p>
 </td>
       </tr>
     </tbody>
@@ -296,23 +260,114 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
+  <a id="Lett_Extensions_IntExtensions_IsOdd_" data-uid="Lett.Extensions.IntExtensions.IsOdd*"></a>
+  <h4 id="Lett_Extensions_IntExtensions_IsOdd_System_Int32_" data-uid="Lett.Extensions.IntExtensions.IsOdd(System.Int32)">IsOdd(Int32)</h4>
+  <div class="markdown level1 summary"><p>是否奇数</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsOdd(this int this)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
+        <th>&#31867;&#22411;</th>
         <th>&#21517;&#31216;</th>
         <th>&#25551;&#36848;</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>参数类型</p>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_IntExtensions_Times_" data-uid="Lett.Extensions.IntExtensions.Times*"></a>
+  <h4 id="Lett_Extensions_IntExtensions_Times_System_Int32_System_Action_" data-uid="Lett.Extensions.IntExtensions.Times(System.Int32,System.Action)">Times(Int32, Action)</h4>
+  <div class="markdown level1 summary"><p>执行次数操作，次数基于原 int 值</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Times(this int this, Action action)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">this</span></td>
+        <td><p>次数</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>执行的操作</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_IntExtensions_Times_" data-uid="Lett.Extensions.IntExtensions.Times*"></a>
+  <h4 id="Lett_Extensions_IntExtensions_Times_System_Int32_System_Action_System_Int32__" data-uid="Lett.Extensions.IntExtensions.Times(System.Int32,System.Action{System.Int32})">Times(Int32, Action&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>执行次数操作，次数基于原 int 值</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Times(this int this, Action&lt;int&gt; action)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">this</span></td>
+        <td><p>次数</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td><p>执行的操作(参数是从0开始的 index)</p>
 </td>
       </tr>
     </tbody>

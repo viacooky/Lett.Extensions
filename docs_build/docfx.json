@@ -40,7 +40,7 @@
       "_disableContribution": true,
       "_enableNewTab": true
     },
-    "dest": "_site",
+    "dest": "../docs",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": ["default", "default(zh-cn)", "material/material"],

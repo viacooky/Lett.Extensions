@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>DataRowExtensions 类
+    <title>BooleanExtensions 类
    | Lett.Extensions website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="DataRowExtensions 类
+    <meta name="title" content="BooleanExtensions 类
    | Lett.Extensions website ">
     <meta name="generator" content="docfx 2.42.1.0">
     
@@ -16,13 +16,13 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
     <meta property="docfx:newtab" content="true">
-  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -78,18 +78,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Lett.Extensions.DataRowExtensions">
+            <article class="content wrap" id="_content" data-uid="Lett.Extensions.BooleanExtensions">
   
   
-  <h1 id="Lett_Extensions_DataRowExtensions" data-uid="Lett.Extensions.DataRowExtensions" class="text-break">DataRowExtensions 类
+  <h1 id="Lett_Extensions_BooleanExtensions" data-uid="Lett.Extensions.BooleanExtensions" class="text-break">BooleanExtensions 类
   </h1>
-  <div class="markdown level0 summary"><p>DataRow 扩展方法</p>
+  <div class="markdown level0 summary"><p>bool 扩展方法</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>&#32487;&#25215;</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DataRowExtensions</span></div>
+    <div class="level1"><span class="xref">BooleanExtensions</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
@@ -117,22 +117,20 @@
   </div>
   <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="Lett.Extensions.html">Lett.Extensions</a></h6>
   <h6><strong>&#31243;&#24207;&#38598;</strong>: Lett.Extensions.dll</h6>
-  <h5 id="Lett_Extensions_DataRowExtensions_syntax">&#35821;&#27861;</h5>
+  <h5 id="Lett_Extensions_BooleanExtensions_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class DataRowExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public static class BooleanExtensions</code></pre>
   </div>
   <h3 id="methods">&#26041;&#27861;
   </h3>
-  <a id="Lett_Extensions_DataRowExtensions_Cell_" data-uid="Lett.Extensions.DataRowExtensions.Cell*"></a>
-  <h4 id="Lett_Extensions_DataRowExtensions_Cell__1_System_Data_DataRow_System_String_" data-uid="Lett.Extensions.DataRowExtensions.Cell``1(System.Data.DataRow,System.String)">Cell&lt;T&gt;(DataRow, String)</h4>
-  <div class="markdown level1 summary"><p>获取当前行中某个列的值</p>
+  <a id="Lett_Extensions_BooleanExtensions_IfFalse_" data-uid="Lett.Extensions.BooleanExtensions.IfFalse*"></a>
+  <h4 id="Lett_Extensions_BooleanExtensions_IfFalse_System_Boolean_System_Action_" data-uid="Lett.Extensions.BooleanExtensions.IfFalse(System.Boolean,System.Action)">IfFalse(Boolean, Action)</h4>
+  <div class="markdown level1 summary"><p>结果为 False 时，执行方法</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T Cell&lt;T&gt;(this DataRow this, string columnName)
-
-    where T : IConvertible</code></pre>
+    <pre><code class="lang-csharp hljs">public static void IfFalse(this bool this, Action action)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -145,14 +143,48 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Data.DataRow</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">this</span></td>
-        <td></td>
+        <td><p>结果</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">columnName</span></td>
-        <td><p>列名</p>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>执行的方法</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_BooleanExtensions_IfFalse_" data-uid="Lett.Extensions.BooleanExtensions.IfFalse*"></a>
+  <h4 id="Lett_Extensions_BooleanExtensions_IfFalse__1_System_Boolean___0_" data-uid="Lett.Extensions.BooleanExtensions.IfFalse``1(System.Boolean,``0)">IfFalse&lt;T&gt;(Boolean, T)</h4>
+  <div class="markdown level1 summary"><p>结果为 False 时，返回参数 (结果为 True 时，返回参数类型默认值)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T IfFalse&lt;T&gt;(this bool this, T result)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">this</span></td>
+        <td><p>结果</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>参数</p>
 </td>
       </tr>
     </tbody>
@@ -183,20 +215,19 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>参数类型</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <a id="Lett_Extensions_DataRowExtensions_Cell_" data-uid="Lett.Extensions.DataRowExtensions.Cell*"></a>
-  <h4 id="Lett_Extensions_DataRowExtensions_Cell__1_System_Data_DataRow_System_String___0_" data-uid="Lett.Extensions.DataRowExtensions.Cell``1(System.Data.DataRow,System.String,``0)">Cell&lt;T&gt;(DataRow, String, T)</h4>
-  <div class="markdown level1 summary"><p>获取当前行中某个列的值</p>
+  <a id="Lett_Extensions_BooleanExtensions_IfTrue_" data-uid="Lett.Extensions.BooleanExtensions.IfTrue*"></a>
+  <h4 id="Lett_Extensions_BooleanExtensions_IfTrue_System_Boolean_System_Action_" data-uid="Lett.Extensions.BooleanExtensions.IfTrue(System.Boolean,System.Action)">IfTrue(Boolean, Action)</h4>
+  <div class="markdown level1 summary"><p>结果为 True 时，执行方法</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T Cell&lt;T&gt;(this DataRow this, string columnName, T defaultValue)
-
-    where T : IConvertible</code></pre>
+    <pre><code class="lang-csharp hljs">public static void IfTrue(this bool this, Action action)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,20 +240,48 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Data.DataRow</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">this</span></td>
-        <td></td>
+        <td><p>结果</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">columnName</span></td>
-        <td><p>列名</p>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>执行的方法</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_BooleanExtensions_IfTrue_" data-uid="Lett.Extensions.BooleanExtensions.IfTrue*"></a>
+  <h4 id="Lett_Extensions_BooleanExtensions_IfTrue__1_System_Boolean___0_" data-uid="Lett.Extensions.BooleanExtensions.IfTrue``1(System.Boolean,``0)">IfTrue&lt;T&gt;(Boolean, T)</h4>
+  <div class="markdown level1 summary"><p>结果为 True 时，返回参数 (结果为 False 时，返回参数类型默认值)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T IfTrue&lt;T&gt;(this bool this, T result)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">this</span></td>
+        <td><p>结果</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><span class="parametername">defaultValue</span></td>
-        <td><p>默认值</p>
+        <td><span class="parametername">result</span></td>
+        <td><p>参数</p>
 </td>
       </tr>
     </tbody>
@@ -253,134 +312,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Lett_Extensions_DataRowExtensions_Cell_" data-uid="Lett.Extensions.DataRowExtensions.Cell*"></a>
-  <h4 id="Lett_Extensions_DataRowExtensions_Cell__1_System_Data_DataRow_System_String_System_Func___0__" data-uid="Lett.Extensions.DataRowExtensions.Cell``1(System.Data.DataRow,System.String,System.Func{``0})">Cell&lt;T&gt;(DataRow, String, Func&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>获取当前行中某个列的值</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T Cell&lt;T&gt;(this DataRow this, string columnName, Func&lt;T&gt; func)
-
-    where T : IConvertible</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Data.DataRow</span></td>
-        <td><span class="parametername">this</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">columnName</span></td>
-        <td><p>列名</p>
+        <td><p>参数类型</p>
 </td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func</span>&lt;T&gt;</td>
-        <td><span class="parametername">func</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Lett_Extensions_DataRowExtensions_ToEntity_" data-uid="Lett.Extensions.DataRowExtensions.ToEntity*"></a>
-  <h4 id="Lett_Extensions_DataRowExtensions_ToEntity__1_System_Data_DataRow_" data-uid="Lett.Extensions.DataRowExtensions.ToEntity``1(System.Data.DataRow)">ToEntity&lt;T&gt;(DataRow)</h4>
-  <div class="markdown level1 summary"><p>转换为实体</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ToEntity&lt;T&gt;(this DataRow this)
-
-    where T : class, new()</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Data.DataRow</span></td>
-        <td><span class="parametername">this</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
