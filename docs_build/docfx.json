@@ -16,6 +16,9 @@
   "build": {
     "content": [
       {
+        "files": ["*.md", "toc.yml"]
+      },
+      {
         "files": ["api/**.yml", "api/index.md"]
       },
       {
@@ -29,14 +32,13 @@
     ],
     "overwrite": [
       {
-        "files": ["apidoc/**.md"],
-        "exclude": ["obj/**", "_site/**"]
+        "files": []
       }
     ],
     "globalMetadata": {
-      "_appTitle": "Lett.Extensions website",
+      "_appTitle": "Lett.Extensions",
       "_enableSearch": true,
-      "_appFooter": "Copyright (c) - Lett.Extensions 2013 - 2016. All rights reserved.",
+      "_appFooter": "Copyright (c) 2019 viacooky. All rights reserved.",
       "_disableContribution": true,
       "_enableNewTab": true
     },
@@ -49,6 +51,7 @@
     "noLangKeyword": true,
     "keepFileLink": true,
     "cleanupCacheHistory": true,
-    "disableGitFeatures": true
+    "disableGitFeatures": true,
+    "xrefService": ["https://xref.docs.microsoft.com/query?uid={uid}"]
   }
 }

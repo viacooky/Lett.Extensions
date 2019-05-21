@@ -443,3 +443,13 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 # End of https://www.gitignore.io/api/rider,macos,csharp
+
+
+# Created by https://www.gitignore.io/api/docfx
+# Edit at https://www.gitignore.io/?templates=docfx
+
+### DocFx ###
+.cache
+/**/_site/
+
+# End of https://www.gitignore.io/api/docfx

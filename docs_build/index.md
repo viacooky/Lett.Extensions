@@ -1,4 +1,4 @@
-![](img/logo.png)
+![](./images/logo.png)
 
 ![Build Status](https://dev.azure.com/viacooky/Lett.Extensions/_apis/build/status/Lett.Extensions%20Push%20NuGet?branchName=master)
 [![Nuget](https://img.shields.io/nuget/v/Lett.Extensions.svg)](https://www.nuget.org/packages/Lett.Extensions/)
@@ -26,21 +26,6 @@ GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacoo
 - .Net cli
 
   `dotnet add package Lett.Extensions`
-
-## Extension Methods
-
-- [System.Array](./ExtensionMethods/System.Array/index.md)
-- [System.Boolean](./ExtensionMethods/System.Boolean/index.md)
-- [System.Byte](./ExtensionMethods/System.Byte/index.md)
-- [System.Collections.Generic](./ExtensionMethods/System.Collections.Generic/index.md)
-- [System.Data](./ExtensionMethods/System.Data/index.md)
-- [System.DateTime](./ExtensionMethods/System.DateTime/index.md)
-- [System.Enum](./ExtensionMethods/System.Enum/index.md)
-- [System.Int32](./ExtensionMethods/System.Int32/index.md)
-- [System.Int32](./ExtensionMethods/System.Int64/index.md)
-- [System.Object](./ExtensionMethods/System.Object/index.md)
-- [System.String](./ExtensionMethods/System.String/index.md)
-- [System.Type](./ExtensionMethods/System.Type/index.md)
 
 ## Change Logs
 
@@ -104,5 +89,3 @@ GitHub: [https://github.com/viacooky/Lett.Extensions/](https://github.com/viacoo
 #### Changed / 变更
 
 - 对扩展方法类名进行规范重命名
-
-[more...](./CHANGELOG.md)
