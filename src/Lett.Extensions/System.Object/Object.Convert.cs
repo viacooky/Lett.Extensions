@@ -3,51 +3,78 @@
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     object 扩展方法 - 对象转换
+    ///     Object 扩展方法
     /// </summary>
     public static partial class ObjectExtensions
     {
         #region 对象转换
 
         /// <summary>
-        ///     对象转换,失败则返回 func (泛型约束为实现了IConvertible的类型)
+        ///     <para>对象转换</para>
         /// </summary>
-        /// <typeparam name="T">
-        ///     泛型约束为实现了IConvertible的类型(Boolean,Byte,Char,DateTime,System.DBNull,Decimal,Double,System.Enum,Int16,Int32,Int64,SByte,Single,String,UInt16,UInt32,UInt64
-        ///     等)
-        /// </typeparam>
         /// <param name="this"></param>
-        /// <returns></returns>
+        /// <typeparam name="T">
+        ///     泛型约束 <see cref="IConvertible" />
+        /// </typeparam>
+        /// <returns>转换失败则返回 default(<typeparamref name="T" />)</returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var intVar = 11;
+        /// intVar.To<string>(); // "11"
+        /// 
+        /// var dateTimeStr = "2018-01-01 23:59:59";
+        /// var rs = dateTimeStr.To<DateTime>(); // rs = new DateTime(2018,1, 1, 23, 59, 59) 
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static T To<T>(this object @this) where T : IConvertible
         {
             return @this.To(default(T));
         }
 
         /// <summary>
-        ///     对象转换,失败则返回 func (泛型约束为实现了IConvertible的类型)
+        ///     对象转换
         /// </summary>
-        /// <typeparam name="T">
-        ///     泛型约束为实现了IConvertible的类型(Boolean,Byte,Char,DateTime,System.DBNull,Decimal,Double,System.Enum,Int16,Int32,Int64,SByte,Single,String,UInt16,UInt32,UInt64
-        ///     等)
-        /// </typeparam>
         /// <param name="this"></param>
         /// <param name="func"></param>
-        /// <returns></returns>
+        /// <typeparam name="T">
+        ///     泛型约束 <see cref="IConvertible" />
+        /// </typeparam>
+        /// <returns>转换失败则返回 <paramref name="func"/></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dateTimeStr = "2018-01-01 23:59:59xxxxxxxx"; // will be fail
+        /// var rs = dateTimeStr.To<DateTime>(() => new DateTime(2019,4,1)); // rs == new DateTime(2019, 4, 1)
+        /// 
+        /// var dateTimeStr = "2018-01-01 23:59:59"; // will be success
+        /// var rs = dateTimeStr.To<DateTime>(() => new DateTime(2019,4,1)); // rs == new DateTime(2018, 1, 1, 23, 59, 59)
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static T To<T>(this object @this, Func<T> func) where T : IConvertible
         {
             return @this.To(func.Invoke());
         }
 
         /// <summary>
-        ///     对象转换,失败则返回 defaultValue (泛型约束为实现了IConvertible的类型)
+        ///     对象转换
         /// </summary>
-        /// <typeparam name="T">
-        ///     泛型约束为实现了IConvertible的类型(Boolean,Byte,Char,DateTime,System.DBNull,Decimal,Double,System.Enum,Int16,Int32,Int64,SByte,Single,String,UInt16,UInt32,UInt64
-        ///     等)
-        /// </typeparam>
         /// <param name="this"></param>
         /// <param name="defaultValue"></param>
-        /// <returns></returns>
+        /// <typeparam name="T">
+        ///     泛型约束 <see cref="IConvertible" />
+        /// </typeparam>
+        /// <returns>失败则返回 <paramref name="defaultValue"/></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dateTimeStr = "2018-01-01 23:59:59xxxxxxxx"; // will be fail
+        /// var rs = dateTimeStr.To<DateTime>(new DateTime(2019, 4, 1)); // rs == new DateTime(2019, 4, 1)
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static T To<T>(this object @this, T defaultValue) where T : IConvertible
         {
             if (@this == null || @this == DBNull.Value) return defaultValue;
@@ -63,36 +90,23 @@ namespace Lett.Extensions
 
         #endregion
 
+
         #region 对象强转换
-
-        /// <summary>
-        ///     查询 object 的 IsAssignableFrom
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="this"></param>
-        /// <returns></returns>
-        public static bool IsAssignableFrom<T>(this object @this)
-        {
-            return @this.IsAssignableFrom(typeof(T));
-        }
-
-        /// <summary>
-        ///     查询 object 的 IsAssignableFrom
-        /// </summary>
-        /// <param name="this"></param>
-        /// <param name="targetType"></param>
-        /// <returns></returns>
-        public static bool IsAssignableFrom(this object @this, Type targetType)
-        {
-            return @this.GetType().IsAssignableFrom(targetType);
-        }
 
         /// <summary>
         ///     对象强转换
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <param name="this"></param>
-        /// <returns></returns>
+        /// <typeparam name="T">目标类型</typeparam>
+        /// <returns>转换失败返回 default(<typeparamref name="T"/>)</returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var s = new ClassA();
+        /// var rs = s.As<BaseClass>(); // if failed, rs == default(BaseClass) 
+        ///         ]]>
+        ///     </code>
+        /// </example>/// 
         public static T As<T>(this object @this)
         {
             return @this.As(default(T));
@@ -101,10 +115,18 @@ namespace Lett.Extensions
         /// <summary>
         ///     对象强转换
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <param name="this"></param>
         /// <param name="func"></param>
-        /// <returns></returns>
+        /// <typeparam name="T">目标类型</typeparam>
+        /// <returns>转换失败返回 <paramref name="func"/></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var s = new ClassA();
+        /// s.As<BaseClass>(() => new BaseClass());
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static T As<T>(this object @this, Func<T> func)
         {
             return @this.As(func.Invoke());
@@ -113,10 +135,18 @@ namespace Lett.Extensions
         /// <summary>
         ///     对象强转换
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <param name="this"></param>
         /// <param name="defaultValue"></param>
-        /// <returns></returns>
+        /// <typeparam name="T">目标类型</typeparam>
+        /// <returns>转换失败返回 <paramref name="defaultValue"/></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var s = new ClassA();
+        /// s.As<BaseClass>();
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static T As<T>(this object @this, T defaultValue)
         {
             try { return (T) @this; }

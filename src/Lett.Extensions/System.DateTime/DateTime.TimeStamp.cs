@@ -3,7 +3,7 @@ using System;
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     DateTime 扩展方法 - 时间戳
+    ///     DateTime 扩展方法
     /// </summary>
     public static partial class DateTimeExtensions
     {
@@ -14,6 +14,14 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt = new DateTime(2019, 4, 1, 11, 11, 11);
+        /// dt.GetTotalDays(); // 17987.466099537036
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static double GetTotalDays(this DateTime @this)
         {
             return (@this - OriginDateTime).TotalDays;
@@ -24,6 +32,14 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt = new DateTime(2019, 4, 1, 11, 11, 11);
+        /// dt.GetTotalHours(); // 431699.18638888886
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static double GetTotalHours(this DateTime @this)
         {
             return (@this - OriginDateTime).TotalHours;
@@ -34,6 +50,14 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt = new DateTime(2019, 4, 1, 11, 11, 11);
+        /// dt.GetTotalMinutes(); // 25901951.183333334
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static double GetTotalMinutes(this DateTime @this)
         {
             return (@this - OriginDateTime).TotalMinutes;
@@ -44,6 +68,14 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt = new DateTime(2019, 4, 1, 11, 11, 11);
+        /// dt.GetTotalSeconds(); // 1554117071
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static double GetTotalSeconds(this DateTime @this)
         {
             return (@this - OriginDateTime).TotalSeconds;
@@ -54,6 +86,14 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt = new DateTime(2019, 4, 1, 11, 11, 11);
+        /// dt.GetTotalMilliseconds(); // 1554117071000
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static double GetTotalMilliseconds(this DateTime @this)
         {
             return (@this - OriginDateTime).TotalMilliseconds;

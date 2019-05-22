@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="LongExtensions 类
    | Lett.Extensions ">
-    <meta name="generator" content="docfx 2.42.3.0">
+    <meta name="generator" content="docfx 2.42.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,7 +83,7 @@
   
   <h1 id="Lett_Extensions_LongExtensions" data-uid="Lett.Extensions.LongExtensions" class="text-break">LongExtensions 类
   </h1>
-  <div class="markdown level0 summary"><p>long 扩展方法 - 比较</p>
+  <div class="markdown level0 summary"><p>Long 扩展方法</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -164,6 +164,9 @@
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_LongExtensions_IsEven_System_Int64__examples">&#31034;&#20363;</h5>
+  <pre><code>0L.IsEven(); // true</code></pre>
+
   <a id="Lett_Extensions_LongExtensions_IsInRange_" data-uid="Lett.Extensions.LongExtensions.IsInRange*"></a>
   <h4 id="Lett_Extensions_LongExtensions_IsInRange_System_Int64_System_Int64_System_Int64_" data-uid="Lett.Extensions.LongExtensions.IsInRange(System.Int64,System.Int64,System.Int64)">IsInRange(Int64, Int64, Int64)</h4>
   <div class="markdown level1 summary"><p>是否在指定范围内</p>
@@ -217,6 +220,10 @@
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_LongExtensions_IsInRange_System_Int64_System_Int64_System_Int64__examples">&#31034;&#20363;</h5>
+  <pre><code>(-1L).IsInRange(0, 10); // false
+10L.IsInRange(0, 10);   // true</code></pre>
+
   <a id="Lett_Extensions_LongExtensions_IsOdd_" data-uid="Lett.Extensions.LongExtensions.IsOdd*"></a>
   <h4 id="Lett_Extensions_LongExtensions_IsOdd_System_Int64_" data-uid="Lett.Extensions.LongExtensions.IsOdd(System.Int64)">IsOdd(Int64)</h4>
   <div class="markdown level1 summary"><p>是否奇数</p>
@@ -258,9 +265,12 @@
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_LongExtensions_IsOdd_System_Int64__examples">&#31034;&#20363;</h5>
+  <pre><code>(-1L).IsOdd(); // true</code></pre>
+
   <a id="Lett_Extensions_LongExtensions_Times_" data-uid="Lett.Extensions.LongExtensions.Times*"></a>
   <h4 id="Lett_Extensions_LongExtensions_Times_System_Int64_System_Action_" data-uid="Lett.Extensions.LongExtensions.Times(System.Int64,System.Action)">Times(Int64, Action)</h4>
-  <div class="markdown level1 summary"><p>执行次数操作，次数基于原 long 值</p>
+  <div class="markdown level1 summary"><p>执行次数操作，次数基于 <code data-dev-comment-type="paramref" class="paramref">this</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -280,8 +290,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>次数</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
@@ -291,9 +300,29 @@
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_LongExtensions_Times_System_Int64_System_Action__examples">&#31034;&#20363;</h5>
+  <pre><code>var rs = 0;
+10L.Times(() => rs += 1); // rs == 10</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p>执行次数 <code data-dev-comment-type="paramref" class="paramref">this</code> 小于0</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Lett_Extensions_LongExtensions_Times_" data-uid="Lett.Extensions.LongExtensions.Times*"></a>
   <h4 id="Lett_Extensions_LongExtensions_Times_System_Int64_System_Action_System_Int64__" data-uid="Lett.Extensions.LongExtensions.Times(System.Int64,System.Action{System.Int64})">Times(Int64, Action&lt;Int64&gt;)</h4>
-  <div class="markdown level1 summary"><p>执行次数操作，次数基于原 long 值</p>
+  <div class="markdown level1 summary"><p>执行次数操作，次数基于 <code data-dev-comment-type="paramref" class="paramref">this</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -313,13 +342,32 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>次数</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
         <td><span class="parametername">action</span></td>
         <td><p>执行的操作(参数是从0开始的 index)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_LongExtensions_Times_System_Int64_System_Action_System_Int64___examples">&#31034;&#20363;</h5>
+  <pre><code>var rs2 = 0;
+10L.Times(i => rs2 += i); // rs2 == 45</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p>执行次数 <code data-dev-comment-type="paramref" class="paramref">this</code> 小于0</p>
 </td>
       </tr>
     </tbody>

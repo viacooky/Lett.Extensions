@@ -11,6 +11,9 @@ namespace Lett.Extensions.Test
         {
             Assert.IsFalse("ddd".IsDBNull());
             Assert.IsTrue(DBNull.Value.IsDBNull());
+
+            var value = DBNull.Value;
+            Assert.IsTrue(value.IsDBNull());
         }
     }
 }

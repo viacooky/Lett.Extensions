@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
@@ -10,25 +11,25 @@ namespace Lett.Extensions.Test
         [TestMethod]
         public void AddIfNotContains_Test1()
         {
-            var testList = new[] {"aa", "bb"}.ToList();
-            testList.AddIfNotContains("cc");
-            testList.AddIfNotContains("aa");
-            Assert.AreEqual(testList.Count, 3);
-            Assert.AreEqual(testList[0], "aa");
-            Assert.AreEqual(testList[1], "bb");
-            Assert.AreEqual(testList[2], "cc");
+            var list = new List<string> {"aa", "bb"};
+            list.AddIfNotContains("cc");
+            list.AddIfNotContains("aa");
+            Assert.AreEqual(list.Count, 3);
+            Assert.AreEqual(list[0], "aa");
+            Assert.AreEqual(list[1], "bb");
+            Assert.AreEqual(list[2], "cc");
         }
 
         [TestMethod]
         public void AddIfNotContains_Test2()
         {
-            var testList = new[] {"aa", "bb"}.ToList();
-            var appList  = new[] {"cc", "aa"};
-            testList.AddIfNotContains(appList);
-            Assert.AreEqual(testList.Count, 3);
-            Assert.AreEqual(testList[0], "aa");
-            Assert.AreEqual(testList[1], "bb");
-            Assert.AreEqual(testList[2], "cc");
+            var list = new List<string> {"aa", "bb"};
+            var appendList  = new[] {"cc", "aa"};
+            list.AddIfNotContains(appendList);
+            Assert.AreEqual(list.Count, 3);
+            Assert.AreEqual(list[0], "aa");
+            Assert.AreEqual(list[1], "bb");
+            Assert.AreEqual(list[2], "cc");
         }
     }
 }

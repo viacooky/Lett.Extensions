@@ -1,12 +1,12 @@
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     int 扩展方法
+    ///     Int 扩展方法
     /// </summary>
     public static partial class IntExtensions
     {
         /// <summary>
-        ///     私有方法，转换为 long
+        ///     私有方法 int 转换为 long
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>

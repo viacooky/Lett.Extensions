@@ -26,10 +26,12 @@ namespace Lett.Extensions.Test
         [TestMethod]
         public void Sort_Test1()
         {
-            var s = new[] {"aaa", "bbb", "dddd", "ccc"};
+            var s = new[] {"a", "b", "d", "c"};
             s.Sort();
-            Assert.AreEqual(s[0], "aaa");
-            Assert.AreEqual(s[2], "ccc");
+            Assert.AreEqual(s[0], "a");
+            Assert.AreEqual(s[1], "b");
+            Assert.AreEqual(s[2], "c");
+            Assert.AreEqual(s[3], "d");
         }
 
         [TestMethod]

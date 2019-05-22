@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
 
 namespace Lett.Extensions
 {
@@ -11,8 +12,19 @@ namespace Lett.Extensions
         ///     批量增加 DataColumn
         /// </summary>
         /// <param name="this"></param>
-        /// <param name="columnNames">列名数组</param>
-        public static void AddRange(this DataColumnCollection @this, string[] columnNames)
+        /// <param name="columnNames">列名集合</param>
+        /// <exception cref="DuplicateNameException"><paramref name="columnNames" />有特殊列名</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt       = new DataTable();
+        /// var colNames = new[] {"Field1", "Field2", "Field3"};
+        /// dt.Columns.AddRange(colNames);
+        /// // dt.Columns == {"Field1", "Field2", "Field3"}
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static void AddRange(this DataColumnCollection @this, IEnumerable<string> columnNames)
         {
             foreach (var columnName in columnNames) @this.Add(columnName);
         }

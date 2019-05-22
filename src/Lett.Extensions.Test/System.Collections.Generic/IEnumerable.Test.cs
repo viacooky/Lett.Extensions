@@ -9,24 +9,24 @@ namespace Lett.Extensions.Test
         [TestMethod]
         public void IsNullOrEmpty_Test()
         {
-            var testArr = new[] {"aa", "bb"};
-            Assert.IsFalse(testArr.IsNullOrEmpty());
-            var testArr2 = new string[] { };
-            Assert.IsTrue(testArr2.IsNullOrEmpty());
-            testArr2 = null;
-            Assert.IsTrue(testArr2.IsNullOrEmpty());
+            var arr = new[] {"aa", "bb"};
+            Assert.IsFalse(arr.IsNullOrEmpty());
+            var arr2 = new string[] { };
+            Assert.IsTrue(arr2.IsNullOrEmpty());
+            arr2 = null;
+            Assert.IsTrue(arr2.IsNullOrEmpty());
         }
 
         [TestMethod]
         public void ContainsAny_Test()
         {
-            var testArr = new[] {"aa", "bb"};
+            var arr = new[] {"aa", "bb"};
             var match = new[] {"aa"};
             var match2 = new[] {"aa", "bb"};
-            Assert.IsTrue(testArr.ContainsAny(match));
-            Assert.IsFalse(testArr.ContainsAll(match));
-            Assert.IsTrue(testArr.ContainsAny(match2));
-            Assert.IsTrue(testArr.ContainsAll(match2));
+            Assert.IsTrue(arr.ContainsAny(match));
+            Assert.IsFalse(arr.ContainsAll(match));
+            Assert.IsTrue(arr.ContainsAny(match2));
+            Assert.IsTrue(arr.ContainsAll(match2));
         }
     }
 }

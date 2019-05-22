@@ -1,7 +1,7 @@
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     long 扩展方法 - 比较
+    ///     Long 扩展方法
     /// </summary>
     public static partial class LongExtensions
     {
@@ -10,6 +10,13 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// 0L.IsEven(); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool IsEven(this long @this)
         {
             return @this % 2 == 0;
@@ -20,6 +27,13 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// (-1L).IsOdd(); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool IsOdd(this long @this)
         {
             return @this % 2 != 0;
@@ -32,6 +46,14 @@ namespace Lett.Extensions
         /// <param name="min">最小值</param>
         /// <param name="max">最大值</param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// (-1L).IsInRange(0, 10); // false
+        /// 10L.IsInRange(0, 10);   // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool IsInRange(this long @this, long min, long max)
         {
             return min <= @this && @this <= max;

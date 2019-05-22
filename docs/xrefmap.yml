@@ -380,15 +380,15 @@ references:
   commentId: T:Lett.Extensions.DataColumnCollectionExtensions
   fullName: Lett.Extensions.DataColumnCollectionExtensions
   nameWithType: DataColumnCollectionExtensions
-- uid: Lett.Extensions.DataColumnCollectionExtensions.AddRange(System.Data.DataColumnCollection,System.String[])
-  name: AddRange(DataColumnCollection, String[])
-  href: api/Lett.Extensions.DataColumnCollectionExtensions.html#Lett_Extensions_DataColumnCollectionExtensions_AddRange_System_Data_DataColumnCollection_System_String___
-  commentId: M:Lett.Extensions.DataColumnCollectionExtensions.AddRange(System.Data.DataColumnCollection,System.String[])
-  name.vb: AddRange(DataColumnCollection, String())
-  fullName: Lett.Extensions.DataColumnCollectionExtensions.AddRange(System.Data.DataColumnCollection, System.String[])
-  fullName.vb: Lett.Extensions.DataColumnCollectionExtensions.AddRange(System.Data.DataColumnCollection, System.String())
-  nameWithType: DataColumnCollectionExtensions.AddRange(DataColumnCollection, String[])
-  nameWithType.vb: DataColumnCollectionExtensions.AddRange(DataColumnCollection, String())
+- uid: Lett.Extensions.DataColumnCollectionExtensions.AddRange(System.Data.DataColumnCollection,System.Collections.Generic.IEnumerable{System.String})
+  name: AddRange(DataColumnCollection, IEnumerable<String>)
+  href: api/Lett.Extensions.DataColumnCollectionExtensions.html#Lett_Extensions_DataColumnCollectionExtensions_AddRange_System_Data_DataColumnCollection_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Lett.Extensions.DataColumnCollectionExtensions.AddRange(System.Data.DataColumnCollection,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: AddRange(DataColumnCollection, IEnumerable(Of String))
+  fullName: Lett.Extensions.DataColumnCollectionExtensions.AddRange(System.Data.DataColumnCollection, System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Lett.Extensions.DataColumnCollectionExtensions.AddRange(System.Data.DataColumnCollection, System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: DataColumnCollectionExtensions.AddRange(DataColumnCollection, IEnumerable<String>)
+  nameWithType.vb: DataColumnCollectionExtensions.AddRange(DataColumnCollection, IEnumerable(Of String))
 - uid: Lett.Extensions.DataColumnCollectionExtensions.AddRange*
   name: AddRange
   href: api/Lett.Extensions.DataColumnCollectionExtensions.html#Lett_Extensions_DataColumnCollectionExtensions_AddRange_
@@ -1169,15 +1169,6 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.ObjectExtensions.IsAssignableFrom
   nameWithType: ObjectExtensions.IsAssignableFrom
-- uid: Lett.Extensions.ObjectExtensions.IsAssignableFrom``1(System.Object)
-  name: IsAssignableFrom<T>(Object)
-  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsAssignableFrom__1_System_Object_
-  commentId: M:Lett.Extensions.ObjectExtensions.IsAssignableFrom``1(System.Object)
-  name.vb: IsAssignableFrom(Of T)(Object)
-  fullName: Lett.Extensions.ObjectExtensions.IsAssignableFrom<T>(System.Object)
-  fullName.vb: Lett.Extensions.ObjectExtensions.IsAssignableFrom(Of T)(System.Object)
-  nameWithType: ObjectExtensions.IsAssignableFrom<T>(Object)
-  nameWithType.vb: ObjectExtensions.IsAssignableFrom(Of T)(Object)
 - uid: Lett.Extensions.ObjectExtensions.IsDBNull(System.Object)
   name: IsDBNull(Object)
   href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsDBNull_System_Object_

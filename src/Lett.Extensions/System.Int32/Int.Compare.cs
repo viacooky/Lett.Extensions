@@ -1,7 +1,7 @@
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     int 扩展方法 - 比较
+    ///     Int 扩展方法
     /// </summary>
     public static partial class IntExtensions
     {
@@ -10,6 +10,13 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// 0.IsEven(); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool IsEven(this int @this)
         {
             return @this.ToLong().IsEven();
@@ -20,6 +27,13 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// (-1).IsOdd(); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool IsOdd(this int @this)
         {
             return @this.ToLong().IsOdd();
@@ -32,6 +46,14 @@ namespace Lett.Extensions
         /// <param name="min">最小值</param>
         /// <param name="max">最大值</param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// (-1).IsInRange(0, 10); // false
+        /// 10.IsInRange(0, 10);   // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool IsInRange(this int @this, int min, int max)
         {
             return min <= @this && @this <= max;
