@@ -12,9 +12,9 @@ namespace Lett.Extensions
         /// <summary>
         ///     获取当前行中某个列的值
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <param name="this"></param>
         /// <param name="columnName">列名</param>
+        /// <typeparam name="T"></typeparam>
         /// <returns></returns>
         public static T Cell<T>(this DataRow @this, string columnName) where T : IConvertible
         {
@@ -24,11 +24,11 @@ namespace Lett.Extensions
         /// <summary>
         ///     获取当前行中某个列的值
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <param name="this"></param>
         /// <param name="columnName">列名</param>
         /// <param name="func"></param>
-        /// <returns></returns>
+        /// <typeparam name="T">泛型约束 <see cref="IConvertible" /></typeparam>
+        /// <returns>转换失败返回 <paramref name="func"/></returns>
         public static T Cell<T>(this DataRow @this, string columnName, Func<T> func) where T : IConvertible
         {
             return @this.Cell(columnName, func.Invoke());
@@ -37,11 +37,20 @@ namespace Lett.Extensions
         /// <summary>
         ///     获取当前行中某个列的值
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <param name="this"></param>
         /// <param name="columnName">列名</param>
         /// <param name="defaultValue">默认值</param>
-        /// <returns></returns>
+        /// <typeparam name="T">
+        ///     泛型约束 <see cref="IConvertible" />
+        /// </typeparam>
+        /// <returns>转换失败返回<paramref name="defaultValue" /></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var rs = dataRow.Cell("columnName", "abc"); 
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static T Cell<T>(this DataRow @this, string columnName, T defaultValue) where T : IConvertible
         {
             return @this.Table.Columns.Contains(columnName)

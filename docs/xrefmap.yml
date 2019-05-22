@@ -1169,15 +1169,6 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.ObjectExtensions.IsAssignableFrom
   nameWithType: ObjectExtensions.IsAssignableFrom
-- uid: Lett.Extensions.ObjectExtensions.IsAssignableFrom``1(System.Object)
-  name: IsAssignableFrom<T>(Object)
-  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsAssignableFrom__1_System_Object_
-  commentId: M:Lett.Extensions.ObjectExtensions.IsAssignableFrom``1(System.Object)
-  name.vb: IsAssignableFrom(Of T)(Object)
-  fullName: Lett.Extensions.ObjectExtensions.IsAssignableFrom<T>(System.Object)
-  fullName.vb: Lett.Extensions.ObjectExtensions.IsAssignableFrom(Of T)(System.Object)
-  nameWithType: ObjectExtensions.IsAssignableFrom<T>(Object)
-  nameWithType.vb: ObjectExtensions.IsAssignableFrom(Of T)(Object)
 - uid: Lett.Extensions.ObjectExtensions.IsDBNull(System.Object)
   name: IsDBNull(Object)
   href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsDBNull_System_Object_
