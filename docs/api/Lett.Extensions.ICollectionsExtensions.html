@@ -145,13 +145,12 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;T&gt;</td>
         <td><span class="parametername">this</span></td>
-        <td><p>集合</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">item</span></td>
-        <td><p>项</p>
+        <td><p>匹配项</p>
 </td>
       </tr>
     </tbody>
@@ -167,7 +166,29 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>类型</p>
+        <td><p>集合元素的类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ICollectionsExtensions_AddIfNotContains__1_System_Collections_Generic_ICollection___0____0__examples">&#31034;&#20363;</h5>
+  <pre><code>var list = new List&lt;string> {&quot;aa&quot;, &quot;bb&quot;};
+list.AddIfNotContains(&quot;cc&quot;);
+list.AddIfNotContains(&quot;aa&quot;);
+// {&quot;aa&quot;, &quot;bb&quot;, &quot;cc&quot;}</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
 </td>
       </tr>
     </tbody>
@@ -194,13 +215,12 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;T&gt;</td>
         <td><span class="parametername">this</span></td>
-        <td><p>集合</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;T&gt;</td>
         <td><span class="parametername">items</span></td>
-        <td><p>项集合</p>
+        <td><p>匹配项集合</p>
 </td>
       </tr>
     </tbody>
@@ -216,7 +236,29 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>类型</p>
+        <td><p>集合元素的类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ICollectionsExtensions_AddIfNotContains__1_System_Collections_Generic_ICollection___0__System_Collections_Generic_ICollection___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var list = new List&lt;string> {&quot;aa&quot;, &quot;bb&quot;};
+var appendList = new[] {&quot;cc&quot;, &quot;aa&quot;};
+list.AddIfNotContains(appendList);
+// {&quot;aa&quot;, &quot;bb&quot;, &quot;cc&quot;}</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
 </td>
       </tr>
     </tbody>
