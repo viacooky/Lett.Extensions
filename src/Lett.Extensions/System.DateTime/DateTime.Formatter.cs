@@ -3,7 +3,7 @@ using System;
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     DateTime 扩展方法 - 格式化
+    ///     DateTime 扩展方法
     /// </summary>
     public static partial class DateTimeExtensions
     {
