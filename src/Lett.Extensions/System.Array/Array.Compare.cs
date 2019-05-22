@@ -3,16 +3,27 @@ using System;
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     array 扩展方法 - 比较
+    ///     Array 扩展方法
     /// </summary>
     public static partial class ArrayExtensions
     {
         /// <summary>
         ///     是否包含索引
         /// </summary>
-        /// <param name="this">当前 Array 泛型接口</param>
+        /// <typeparam name="T">数组的元素类型</typeparam>
+        /// <param name="this"></param>
         /// <param name="index">索引</param>
-        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException">数组为空</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var s = new[] {"aaa", "bbb"};
+        /// s.ContainsIndex(0);  // true
+        /// s.ContainsIndex(2);  // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool ContainsIndex<T>(this T[] @this, int index)
         {
             return 0 <= index && index < @this.Length;
@@ -21,9 +32,19 @@ namespace Lett.Extensions
         /// <summary>
         ///     是否包含索引
         /// </summary>
-        /// <param name="this">当前Array</param>
-        /// <param name="index"></param>
+        /// <param name="this"></param>
+        /// <param name="index">索引</param>
         /// <returns></returns>
+        /// <exception cref="ArgumentNullException">数组为空</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var s = new[] {"aaa", "bbb"};
+        /// s.ContainsIndex(0);  // true
+        /// s.ContainsIndex(2);  // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool ContainsIndex(this Array @this, int index)
         {
             return 0 <= index && index < @this.Length;

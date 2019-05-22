@@ -15,6 +15,12 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(s.Length, 2);
             Assert.AreEqual(s[0], null);
             Assert.AreEqual(s[1], null);
+
+            var s2 = new [] {11, 22};
+            s2.ClearAll();
+            Assert.AreEqual(s2.Length, 2);
+            Assert.AreEqual(s2[0],0);
+            Assert.AreEqual(s2[1],0);
         }
 
         [TestMethod]
@@ -125,6 +131,20 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs2, 2);
             var rs3 = s.FindIndex(1, 3, s1 => s1.Length == 2);
             Assert.AreEqual(rs3, 2);
+
+            var rs4 = new[] {"a", "aa", "bb", "aaa"}.FindIndex(ss => ss.Length == 2);
+            Assert.AreEqual(rs4,1);
+
+            var rs5 = new[] {"a", "aa", "bb", "aaa"}.FindIndex(2,ss => ss.Length == 2);
+            Assert.AreEqual(rs5,2);
+
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => new[] {"a", "aa", "bb", "aaa"}.FindIndex(99, ss => ss.Length == 2));
+
+            var rs6 = new[] {"a", "aa", "bb", "aaa"}.FindIndex(1,2,ss => ss.Length == 2);
+            Assert.AreEqual(rs6,1);
+
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => new[] {"a", "aa", "bb", "aaa"}.FindIndex(0, 99, ss => ss.Length == 2));
+
         }
 
         [TestMethod]
@@ -135,6 +155,9 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs, 4);
             var rs2 = s.FindLastIndex(1, s1 => s1.StartsWith("a"));
             Assert.AreEqual(rs2, 1);
+
+            var rs1 = new[] {"a", "aa", "b", "bb", "bbb", "c"}.FindLastIndex(4, 3, s1 => s1.StartsWith("b")); 
+            Assert.AreEqual(rs1,4);
         }
 
         [TestMethod]
