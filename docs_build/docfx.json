@@ -37,8 +37,9 @@
     ],
     "globalMetadata": {
       "_appTitle": "Lett.Extensions",
-      "_enableSearch": true,
       "_appFooter": "Copyright (c) 2019 viacooky. All rights reserved.",
+      "_appLogoPath": "",
+      "_enableSearch": true,
       "_disableContribution": true,
       "_enableNewTab": true
     },
@@ -50,7 +51,7 @@
     "markdownEngineName": "markdig",
     "noLangKeyword": true,
     "keepFileLink": true,
-    "cleanupCacheHistory": true,
+    "cleanupCacheHistory": false,
     "disableGitFeatures": true,
     "xrefService": ["https://xref.docs.microsoft.com/query?uid={uid}"]
   }
