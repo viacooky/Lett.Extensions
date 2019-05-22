@@ -14,7 +14,7 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <param name="item">匹配项</param>
-        /// <typeparam name="T">集合元素的类型</typeparam>
+        /// <typeparam name="T">集合中元素的类型</typeparam>
         /// <exception cref="NotSupportedException">
         ///     <paramref name="this" />
         /// </exception>
@@ -38,7 +38,7 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <param name="items">匹配项集合</param>
-        /// <typeparam name="T">集合元素的类型</typeparam>
+        /// <typeparam name="T">集合中元素的类型</typeparam>
         /// <exception cref="NotSupportedException">
         ///     <paramref name="this" />
         /// </exception>

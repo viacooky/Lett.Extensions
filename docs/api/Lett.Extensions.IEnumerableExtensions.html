@@ -83,7 +83,7 @@
   
   <h1 id="Lett_Extensions_IEnumerableExtensions" data-uid="Lett.Extensions.IEnumerableExtensions" class="text-break">IEnumerableExtensions 类
   </h1>
-  <div class="markdown level0 summary"><p>IEnumerable 扩展方法 - 比较</p>
+  <div class="markdown level0 summary"><p>IEnumerable 扩展方法</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -166,7 +166,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 或 <code data-dev-comment-type="paramref" class="paramref">items</code> 为空，返回 false</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -181,10 +182,18 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>集合中元素的类型</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_IEnumerableExtensions_ContainsAll__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var arr = new[] {&quot;aa&quot;, &quot;bb&quot;};
+var match = new[] {&quot;aa&quot;};
+var match2 = new[] {&quot;aa&quot;, &quot;bb&quot;};
+var rs = arr.ContainsAll(match); // false;
+var rs2 = arr.ContainsAll(match2); // true;</code></pre>
+
   <a id="Lett_Extensions_IEnumerableExtensions_ContainsAny_" data-uid="Lett.Extensions.IEnumerableExtensions.ContainsAny*"></a>
   <h4 id="Lett_Extensions_IEnumerableExtensions_ContainsAny__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__" data-uid="Lett.Extensions.IEnumerableExtensions.ContainsAny``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">ContainsAny&lt;T&gt;(IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;)</h4>
   <div class="markdown level1 summary"><p>是否包含任一元素</p>
@@ -228,7 +237,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 或 <code data-dev-comment-type="paramref" class="paramref">items</code> 为空，返回 false</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -243,10 +253,16 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>集合中元素的类型</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_IEnumerableExtensions_ContainsAny__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var arr = new[] {&quot;aa&quot;, &quot;bb&quot;};
+var match = new[] {&quot;aa&quot;};
+var rs = arr.ContainsAny(match); // true</code></pre>
+
   <a id="Lett_Extensions_IEnumerableExtensions_IsNullOrEmpty_" data-uid="Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty*"></a>
   <h4 id="Lett_Extensions_IEnumerableExtensions_IsNullOrEmpty__1_System_Collections_Generic_IEnumerable___0__" data-uid="Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0})">IsNullOrEmpty&lt;T&gt;(IEnumerable&lt;T&gt;)</h4>
   <div class="markdown level1 summary"><p>是否空或空集合</p>
@@ -299,10 +315,18 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>集合中元素的类型</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_IEnumerableExtensions_IsNullOrEmpty__1_System_Collections_Generic_IEnumerable___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var arr = new[] {&quot;aa&quot;, &quot;bb&quot;};
+var rs = arr.IsNullOrEmpty(); // false
+
+var arr2 = new string[] { };
+var rs2 = arr.IsNullOrEmpty(); // true</code></pre>
+
 </article>
           </div>
           
