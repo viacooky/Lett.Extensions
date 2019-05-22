@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="ArrayExtensions 类
    | Lett.Extensions ">
-    <meta name="generator" content="docfx 2.42.3.0">
+    <meta name="generator" content="docfx 2.42.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -1569,6 +1569,34 @@ s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;,
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_Sort_System_Array__examples">&#31034;&#20363;</h5>
+  <pre><code>var s = new[] {&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;};
+s.Sort(); // {&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;}</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.rankexception">RankException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Lett_Extensions_ArrayExtensions_Sort_" data-uid="Lett.Extensions.ArrayExtensions.Sort*"></a>
   <h4 id="Lett_Extensions_ArrayExtensions_Sort_System_Array_System_Collections_IComparer_" data-uid="Lett.Extensions.ArrayExtensions.Sort(System.Array,System.Collections.IComparer)">Sort(Array, IComparer)</h4>
   <div class="markdown level1 summary"><p>排序</p>
@@ -1591,14 +1619,46 @@ s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;,
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.array">Array</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前 Array</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.icomparer">IComparer</a></td>
         <td><span class="parametername">comparer</span></td>
-        <td><p>比较元素时使用的 IComparer&lt;T&gt; 泛型接口实现；如果为 null，则使用每个元素的 IComparable&lt;T&gt; 泛型接口实现</p>
+        <td><p>比较元素时使用的 IComparer&lt;T> 泛型接口实现</p>
+<p>如果为 null，则使用每个元素的 IComparable&lt;T> 泛型接口实现</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_Sort_System_Array_System_Collections_IComparer__examples">&#31034;&#20363;</h5>
+  <pre><code>var s = new[] {&quot;aa&quot;, &quot;AA&quot;, &quot;A&quot;};
+s.Sort(StringComparer.Ordinal); // {&quot;A&quot;, &quot;AA&quot;, &quot;a&quot;}</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.rankexception">RankException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1624,8 +1684,7 @@ s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;,
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.array">Array</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前 Array</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
@@ -1638,6 +1697,40 @@ s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;,
         <td><span class="parametername">length</span></td>
         <td><p>排序范围内的元素数</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_Sort_System_Array_System_Int32_System_Int32__examples">&#31034;&#20363;</h5>
+  <pre><code>var s = new[] {&quot;aa&quot;, &quot;AA&quot;, &quot;A&quot;};
+s.Sort(StringComparer.CurrentCulture); // {&quot;A&quot;, &quot;aa&quot;, &quot;AA&quot;}</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">index</code><code data-dev-comment-type="paramref" class="paramref">length</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">index</code><code data-dev-comment-type="paramref" class="paramref">length</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1663,8 +1756,7 @@ s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;,
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.array">Array</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前 Array</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
@@ -1681,8 +1773,48 @@ s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;,
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.icomparer">IComparer</a></td>
         <td><span class="parametername">comparer</span></td>
-        <td><p>比较元素时使用的 IComparer&lt;T&gt; 泛型接口实现；如果为 null，则使用每个元素的 IComparable&lt;T&gt; 泛型接口实现</p>
+        <td><p>比较元素时使用的 IComparer&lt;T> 泛型接口实现</p>
+<p>如果为 null，则使用每个元素的 IComparable&lt;T> 泛型接口实现</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_Sort_System_Array_System_Int32_System_Int32_System_Collections_IComparer__examples">&#31034;&#20363;</h5>
+  <pre><code>var s = new[] {&quot;BB&quot;, &quot;aa&quot;, &quot;CCC&quot;, &quot;ccc&quot;, &quot;00&quot;};
+s.Sort(2, 3, StringComparer.CurrentCulture); // {&quot;BB&quot;, &quot;aa&quot;, &quot;00&quot;, &quot;ccc&quot;, &quot;CCC&quot;}</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.rankexception">RankException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">index</code><code data-dev-comment-type="paramref" class="paramref">length</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">index</code><code data-dev-comment-type="paramref" class="paramref">length</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1708,8 +1840,7 @@ s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;,
       <tr>
         <td>T[]</td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前 Array 泛型接口</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1724,6 +1855,35 @@ s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;,
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td><p>数组的元素类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_Sort__1___0____examples">&#31034;&#20363;</h5>
+  <pre><code>var s = new[] {&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;};
+s.Sort(); // {&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;}</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.rankexception">RankException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1750,13 +1910,13 @@ s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;,
       <tr>
         <td>T[]</td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前 Array 泛型接口</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.icomparer">IComparer</a></td>
         <td><span class="parametername">comparer</span></td>
-        <td><p>比较元素时使用的 IComparer&lt;T&gt; 泛型接口实现；如果为 null，则使用每个元素的 IComparable&lt;T&gt; 泛型接口实现</p>
+        <td><p>比较元素时使用的 IComparer&lt;T> 泛型接口实现</p>
+<p>如果为 null，则使用每个元素的 IComparable&lt;T> 泛型接口实现</p>
 </td>
       </tr>
     </tbody>
@@ -1772,6 +1932,39 @@ s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;,
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td><p>数组的元素类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_Sort__1___0___System_Collections_IComparer__examples">&#31034;&#20363;</h5>
+  <pre><code>var s = new[] {&quot;aa&quot;, &quot;AA&quot;, &quot;A&quot;};
+s.Sort(StringComparer.Ordinal); // {&quot;A&quot;, &quot;AA&quot;, &quot;a&quot;}</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.rankexception">RankException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1798,8 +1991,7 @@ s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;,
       <tr>
         <td>T[]</td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前 Array 泛型接口</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
@@ -1826,6 +2018,41 @@ s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;,
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td><p>数组的元素类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_Sort__1___0___System_Int32_System_Int32__examples">&#31034;&#20363;</h5>
+  <pre><code>var s = new[] {&quot;aa&quot;, &quot;AA&quot;, &quot;A&quot;};
+s.Sort(StringComparer.CurrentCulture); // {&quot;A&quot;, &quot;aa&quot;, &quot;AA&quot;}</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">index</code><code data-dev-comment-type="paramref" class="paramref">length</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">index</code><code data-dev-comment-type="paramref" class="paramref">length</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1852,8 +2079,7 @@ s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;,
       <tr>
         <td>T[]</td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前 Array 泛型接口</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
@@ -1886,6 +2112,46 @@ s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;,
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td><p>数组的元素类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_Sort__1___0___System_Int32_System_Int32_System_Collections_IComparer__examples">&#31034;&#20363;</h5>
+  <pre><code>var s = new[] {&quot;BB&quot;, &quot;aa&quot;, &quot;CCC&quot;, &quot;ccc&quot;, &quot;00&quot;};
+s.Sort(2, 3, StringComparer.CurrentCulture); // {&quot;BB&quot;, &quot;aa&quot;, &quot;00&quot;, &quot;ccc&quot;, &quot;CCC&quot;}</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.rankexception">RankException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">index</code><code data-dev-comment-type="paramref" class="paramref">length</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">index</code><code data-dev-comment-type="paramref" class="paramref">length</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
         <td></td>
       </tr>
     </tbody>
