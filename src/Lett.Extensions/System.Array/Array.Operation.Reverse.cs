@@ -3,7 +3,7 @@ using System;
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     array 扩展方法 - 操作 - 反转
+    ///     Array 扩展方法
     /// </summary>
     public static partial class ArrayExtensions
     {

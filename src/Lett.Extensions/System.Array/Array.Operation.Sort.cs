@@ -4,7 +4,7 @@ using System.Collections;
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     array 扩展方法 - 操作 - 排序
+    ///     Array 扩展方法
     /// </summary>
     public static partial class ArrayExtensions
     {
@@ -12,6 +12,19 @@ namespace Lett.Extensions
         ///     排序
         /// </summary>
         /// <param name="this">当前 Array</param>
+        /// <exception cref="ArgumentNullException">
+        ///     <paramref name="this" />
+        /// </exception>
+        /// <exception cref="RankException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var s = new[] {"a", "b", "c", "d"};
+        /// s.Sort(); // {"a", "b", "c", "d"}
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static void Sort(this Array @this)
         {
             Array.Sort(@this);
@@ -20,8 +33,21 @@ namespace Lett.Extensions
         /// <summary>
         ///     排序
         /// </summary>
-        /// <param name="this">当前 Array 泛型接口</param>
-        /// <typeparam name="T"></typeparam>
+        /// <param name="this"></param>
+        /// <typeparam name="T">数组的元素类型</typeparam>
+        /// <exception cref="ArgumentNullException">
+        ///     <paramref name="this" />
+        /// </exception>
+        /// <exception cref="RankException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var s = new[] {"a", "b", "c", "d"};
+        /// s.Sort(); // {"a", "b", "c", "d"}
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static void Sort<T>(this T[] @this)
         {
             Array.Sort(@this);
@@ -32,7 +58,10 @@ namespace Lett.Extensions
         ///     排序
         /// </summary>
         /// <param name="this">当前 Array</param>
-        /// <param name="comparer">比较元素时使用的 IComparer&lt;T&gt; 泛型接口实现；如果为 null，则使用每个元素的 IComparable&lt;T&gt; 泛型接口实现</param>
+        /// <param name="comparer">
+        ///     <para>比较元素时使用的 IComparer&lt;T&gt; 泛型接口实现</para>
+        ///     <para>如果为 null，则使用每个元素的 IComparable&lt;T&gt; 泛型接口实现</para>
+        /// </param>
         public static void Sort(this Array @this, IComparer comparer)
         {
             Array.Sort(@this, comparer);
@@ -42,8 +71,11 @@ namespace Lett.Extensions
         ///     排序
         /// </summary>
         /// <param name="this">当前 Array 泛型接口</param>
-        /// <param name="comparer">比较元素时使用的 IComparer&lt;T&gt; 泛型接口实现；如果为 null，则使用每个元素的 IComparable&lt;T&gt; 泛型接口实现</param>
-        /// <typeparam name="T"></typeparam>
+        /// <param name="comparer">
+        ///     <para>比较元素时使用的 IComparer&lt;T&gt; 泛型接口实现</para>
+        ///     <para>如果为 null，则使用每个元素的 IComparable&lt;T&gt; 泛型接口实现</para>
+        /// </param>
+        /// <typeparam name="T">数组的元素类型</typeparam>
         public static void Sort<T>(this T[] @this, IComparer comparer)
         {
             Array.Sort(@this, comparer);
