@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="ArrayExtensions 类
    | Lett.Extensions ">
-    <meta name="generator" content="docfx 2.42.1.0">
+    <meta name="generator" content="docfx 2.42.3.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,7 +83,7 @@
   
   <h1 id="Lett_Extensions_ArrayExtensions" data-uid="Lett.Extensions.ArrayExtensions" class="text-break">ArrayExtensions 类
   </h1>
-  <div class="markdown level0 summary"><p>array 扩展方法 - 比较</p>
+  <div class="markdown level0 summary"><p>Array 扩展方法</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -125,7 +125,7 @@
   </h3>
   <a id="Lett_Extensions_ArrayExtensions_ClearAll_" data-uid="Lett.Extensions.ArrayExtensions.ClearAll*"></a>
   <h4 id="Lett_Extensions_ArrayExtensions_ClearAll_System_Array_" data-uid="Lett.Extensions.ArrayExtensions.ClearAll(System.Array)">ClearAll(Array)</h4>
-  <div class="markdown level1 summary"><p>全部清除</p>
+  <div class="markdown level1 summary"><p>将所有元素设置为元素类型的默认值</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -145,14 +145,25 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.array">Array</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前 Array</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_ClearAll_System_Array__examples">&#31034;&#20363;</h5>
+  <pre><code>var s = new[] {&quot;aaa&quot;, &quot;bbb&quot;};
+s.ClearAll();
+// s.Length == 2;
+// s[0] == null;
+
+var s = new[] {11, 22};
+s.ClaerAll();
+// s.Length == 2;
+// s[0] == 0;
+// s[1] == 1;</code></pre>
+
   <a id="Lett_Extensions_ArrayExtensions_ClearAll_" data-uid="Lett.Extensions.ArrayExtensions.ClearAll*"></a>
   <h4 id="Lett_Extensions_ArrayExtensions_ClearAll__1___0___" data-uid="Lett.Extensions.ArrayExtensions.ClearAll``1(``0[])">ClearAll&lt;T&gt;(T[])</h4>
-  <div class="markdown level1 summary"><p>全部清除</p>
+  <div class="markdown level1 summary"><p>将所有元素设置为元素类型的默认值</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -172,8 +183,7 @@
       <tr>
         <td>T[]</td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前 Array 泛型接口</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -188,10 +198,23 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>数组的元素类型</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_ClearAll__1___0____examples">&#31034;&#20363;</h5>
+  <pre><code>var s = new[] {&quot;aaa&quot;, &quot;bbb&quot;};
+s.ClearAll();
+// s.Length == 2;
+// s[0] == null;
+
+var s = new[] {11, 22};
+s.ClaerAll();
+// s.Length == 2;
+// s[0] == 0;
+// s[1] == 1;</code></pre>
+
   <a id="Lett_Extensions_ArrayExtensions_ContainsIndex_" data-uid="Lett.Extensions.ArrayExtensions.ContainsIndex*"></a>
   <h4 id="Lett_Extensions_ArrayExtensions_ContainsIndex_System_Array_System_Int32_" data-uid="Lett.Extensions.ArrayExtensions.ContainsIndex(System.Array,System.Int32)">ContainsIndex(Array, Int32)</h4>
   <div class="markdown level1 summary"><p>是否包含索引</p>
@@ -214,13 +237,13 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.array">Array</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前Array</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">index</span></td>
-        <td></td>
+        <td><p>索引</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -236,6 +259,27 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_ContainsIndex_System_Array_System_Int32__examples">&#31034;&#20363;</h5>
+  <pre><code>var s = new[] {&quot;aaa&quot;, &quot;bbb&quot;};
+s.ContainsIndex(0);  // true
+s.ContainsIndex(2);  // false</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>数组为空</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -261,8 +305,7 @@
       <tr>
         <td>T[]</td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前 Array 泛型接口</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
@@ -298,7 +341,29 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>数组的元素类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_ContainsIndex__1___0___System_Int32__examples">&#31034;&#20363;</h5>
+  <pre><code>var s = new[] {&quot;aaa&quot;, &quot;bbb&quot;};
+s.ContainsIndex(0);  // true
+s.ContainsIndex(2);  // false</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>数组为空</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -360,10 +425,14 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>数组的元素类型</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_Find__1___0___System_Predicate___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var rs = new[] {&quot;a&quot;, &quot;aa&quot;, &quot;bb&quot;, &quot;aaa&quot;}.Find(s => s.Length == 2); // &quot;aa&quot;</code></pre>
+
   <h5 class="exceptions">&#24322;&#24120;</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -438,10 +507,14 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>数组的元素类型</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_FindAll__1___0___System_Predicate___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var rs = new[] {&quot;a&quot;, &quot;aa&quot;, &quot;bb&quot;, &quot;aaa&quot;}.FindAll(s => s.Length == 2); // [&quot;aa&quot;,&quot;bb&quot;]</code></pre>
+
   <h5 class="exceptions">&#24322;&#24120;</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -528,6 +601,30 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td><p>数组的元素类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_FindIndex__1___0___System_Int32_System_Int32_System_Predicate___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var rs = new[] {&quot;a&quot;, &quot;aa&quot;, &quot;bb&quot;, &quot;aaa&quot;}.FindIndex(1, 2, ss => ss.Length == 2); // 1</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 或 <code data-dev-comment-type="paramref" class="paramref">match</code> 为空.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -596,6 +693,30 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td><p>数组的元素类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_FindIndex__1___0___System_Int32_System_Predicate___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var rs = new[] {&quot;a&quot;, &quot;aa&quot;, &quot;bb&quot;, &quot;aaa&quot;}.FindIndex(2, ss => ss.Length == 2); // 2</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 或 <code data-dev-comment-type="paramref" class="paramref">match</code> 为空.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -658,10 +779,14 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>数组的元素类型</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_FindIndex__1___0___System_Predicate___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var rs = new[] {&quot;a&quot;, &quot;aa&quot;, &quot;bb&quot;, &quot;aaa&quot;}.FindIndex(s => s.Length == 2); // 1</code></pre>
+
   <h5 class="exceptions">&#24322;&#24120;</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -673,7 +798,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p><code data-dev-comment-type="paramref" class="paramref">match</code> is null.</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 或 <code data-dev-comment-type="paramref" class="paramref">match</code> 为空.</p>
 </td>
       </tr>
     </tbody>
@@ -736,10 +861,14 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>数组的元素类型</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_FindLast__1___0___System_Predicate___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var rs = new[] {&quot;a&quot;, &quot;aa&quot;, &quot;bb&quot;, &quot;aaa&quot;}.FindLast(s => s.Length == 2); // &quot;bb&quot;</code></pre>
+
   <h5 class="exceptions">&#24322;&#24120;</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -826,6 +955,30 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td><p>数组的元素类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_FindLastIndex__1___0___System_Int32_System_Int32_System_Predicate___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var rs = new[] {&quot;a&quot;, &quot;aa&quot;, &quot;b&quot;, &quot;bb&quot;, &quot;bbb&quot;, &quot;c&quot;}.FindLastIndex(4,3, s1 => s1.StartsWith(&quot;b&quot;)); // 4</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 或 <code data-dev-comment-type="paramref" class="paramref">match</code> 为空.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -894,6 +1047,30 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td><p>数组的元素类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_FindLastIndex__1___0___System_Int32_System_Predicate___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var rs = new[] {&quot;aa&quot;, &quot;aaa&quot;, &quot;bb&quot;, &quot;bb&quot;, &quot;bbb&quot;, &quot;ccc&quot;}.FindLastIndex(1, s1 => s1.StartsWith(&quot;a&quot;)); // 1</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 或 <code data-dev-comment-type="paramref" class="paramref">match</code> 为空.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -956,13 +1133,33 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>数组的元素类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_FindLastIndex__1___0___System_Predicate___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var rs = new[] {&quot;aa&quot;, &quot;aaa&quot;, &quot;bb&quot;, &quot;bb&quot;, &quot;bbb&quot;, &quot;ccc&quot;}.FindLastIndex(s1 => s1.StartsWith(&quot;b&quot;)); // 4</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 或 <code data-dev-comment-type="paramref" class="paramref">match</code> 为空</p>
+</td>
       </tr>
     </tbody>
   </table>
   <a id="Lett_Extensions_ArrayExtensions_ForEach_" data-uid="Lett.Extensions.ArrayExtensions.ForEach*"></a>
   <h4 id="Lett_Extensions_ArrayExtensions_ForEach__1___0___System_Action___0__" data-uid="Lett.Extensions.ArrayExtensions.ForEach``1(``0[],System.Action{``0})">ForEach&lt;T&gt;(T[], Action&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>对指定数组的每个元素执行指定操作</p>
+  <div class="markdown level1 summary"><p>对每个元素执行指定操作</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -982,8 +1179,7 @@
       <tr>
         <td>T[]</td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前 Array 泛型接口</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</td>
@@ -1005,13 +1201,21 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>数组的元素类型</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_ForEach__1___0___System_Action___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var s  = new[] {&quot;aa&quot;, &quot;aaa&quot;, &quot;bb&quot;, &quot;bb&quot;, &quot;bbb&quot;, &quot;ccc&quot;};
+var rs = new List&lt;string>();
+s.ForEach(e => rs.Add(e));
+// rs.Count == 6;
+// rs[0] == &quot;aa&quot;;</code></pre>
+
   <a id="Lett_Extensions_ArrayExtensions_ForEach_" data-uid="Lett.Extensions.ArrayExtensions.ForEach*"></a>
   <h4 id="Lett_Extensions_ArrayExtensions_ForEach__1___0___System_Action_System_Int32___0__" data-uid="Lett.Extensions.ArrayExtensions.ForEach``1(``0[],System.Action{System.Int32,``0})">ForEach&lt;T&gt;(T[], Action&lt;Int32, T&gt;)</h4>
-  <div class="markdown level1 summary"><p>对指定数组的每个元素执行指定操作</p>
+  <div class="markdown level1 summary"><p>对每个元素执行指定操作</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -1031,8 +1235,7 @@
       <tr>
         <td>T[]</td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前 Array 泛型接口</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, T&gt;</td>
@@ -1055,10 +1258,18 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>数组的元素类型</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_ForEach__1___0___System_Action_System_Int32___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var s  = new[] {&quot;aa&quot;, &quot;aaa&quot;, &quot;bb&quot;, &quot;bb&quot;, &quot;bbb&quot;, &quot;ccc&quot;};
+var rs = new List&lt;string>();
+s.ForEach((index, e) => rs2.Add($&quot;{index}-{e}&quot;));
+// rs.Count == 6;
+// rs[0] == &quot;0-aa&quot;;</code></pre>
+
   <a id="Lett_Extensions_ArrayExtensions_Reverse_" data-uid="Lett.Extensions.ArrayExtensions.Reverse*"></a>
   <h4 id="Lett_Extensions_ArrayExtensions_Reverse_System_Array_" data-uid="Lett.Extensions.ArrayExtensions.Reverse(System.Array)">Reverse(Array)</h4>
   <div class="markdown level1 summary"><p>反转数组中元素的顺序</p>
@@ -1081,8 +1292,31 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.array">Array</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前 Array</p>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_Reverse_System_Array__examples">&#31034;&#20363;</h5>
+  <pre><code>var s = new[] {&quot;a&quot;, &quot;A&quot;, &quot;B&quot;, &quot;b&quot;, &quot;0&quot;};
+s.Reverse(); // {&quot;0&quot;, &quot;b&quot;, &quot;B&quot;, &quot;A&quot;, &quot;a&quot;}</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
 </td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.rankexception">RankException</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1108,8 +1342,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.array">Array</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前 Array</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
@@ -1122,6 +1355,38 @@
         <td><span class="parametername">length</span></td>
         <td><p>要反转的部分中的元素数</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_Reverse_System_Array_System_Int32_System_Int32__examples">&#31034;&#20363;</h5>
+  <pre><code>var s =  new[] {&quot;a&quot;, &quot;A&quot;, &quot;B&quot;, &quot;b&quot;, &quot;0&quot;};
+s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;, &quot;B&quot;}</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.rankexception">RankException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1147,8 +1412,7 @@
       <tr>
         <td>T[]</td>
         <td><span class="parametername">this</span></td>
-        <td><p>当前 Array 泛型接口</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1163,6 +1427,31 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td><p>数组的元素类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_Reverse__1___0____examples">&#31034;&#20363;</h5>
+  <pre><code>var s = new[] {&quot;a&quot;, &quot;A&quot;, &quot;B&quot;, &quot;b&quot;, &quot;0&quot;};
+s.Reverse(); // {&quot;0&quot;, &quot;b&quot;, &quot;B&quot;, &quot;A&quot;, &quot;a&quot;}</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.rankexception">RankException</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1217,6 +1506,38 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ArrayExtensions_Reverse__1___0___System_Int32_System_Int32__examples">&#31034;&#20363;</h5>
+  <pre><code>var s =  new[] {&quot;a&quot;, &quot;A&quot;, &quot;B&quot;, &quot;b&quot;, &quot;0&quot;};
+s.Reverse(2, 3); // {&quot;a&quot;, &quot;A&quot;, &quot;0&quot;, &quot;b&quot;, &quot;B&quot;}</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.rankexception">RankException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
         <td></td>
       </tr>
     </tbody>
