@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     string 扩展方法 - 比较
+    ///     string 扩展方法
     /// </summary>
     public static partial class StringExtensions
     {
@@ -16,8 +16,21 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
+        /// <exception cref="ArgumentNullException"><permission cref="@this"></permission> 字符串为空 </exception>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="RegexMatchTimeoutException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// "abc@qqq.com".IsEmail();  // true
+        /// "abc@qqq#.com".IsEmail(); // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool IsEmail(this string @this)
         {
+            if (@this == null) throw new ArgumentNullException(nameof(@this), "字符串为空");
             var match = Regex.Match(@this, @"^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$");
             return match.Success;
         }
@@ -27,6 +40,15 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// "http://sdf.com".IsUrl(); // true
+        /// "http://sdf.c.dddd.cccc.saaa.com".IsUrl(); // true
+        /// "www.sdf.com".IsUrl(); // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool IsUrl(this string @this)
         {
             try
@@ -34,14 +56,25 @@ namespace Lett.Extensions
                 var uri = new Uri(@this);
                 return true;
             }
-            catch { return false; }
+            catch
+            {
+                return false;
+            }
         }
 
         /// <summary>
         ///     是否全部大写
         /// </summary>
-        /// <param name="this">源字符串</param>
+        /// <param name="this"></param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// "ABC".IsUpper(); // true
+        /// "ABd".IsUpper(); // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool IsUpper(this string @this)
         {
             return @this.All(char.IsUpper);
@@ -50,64 +83,155 @@ namespace Lett.Extensions
         /// <summary>
         ///     是否全部小写
         /// </summary>
-        /// <param name="this">源字符串</param>
+        /// <param name="this"></param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// "abcddd".IsLower(); // true;
+        /// "abDD".IsLower();   // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool IsLower(this string @this)
         {
             return @this.All(char.IsLower);
         }
 
         /// <summary>
-        ///     忽略大小写比较
+        ///     <para>忽略大小写比较</para>
+        ///     <para>使用 <see cref="StringComparison.CurrentCultureIgnoreCase" /></para>
         /// </summary>
-        /// <param name="this">源字符串</param>
+        /// <param name="this"></param>
         /// <param name="value">需要进行比较的字符串</param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// "aaa".IgnoreCaseEquals("AaA"); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool IgnoreCaseEquals(this string @this, string value)
         {
             return @this.Equals(value, StringComparison.CurrentCultureIgnoreCase);
         }
 
+
+        /// <summary>
+        ///     是否 null 或 string.Empty
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// " ".IsNullOrEmpty(); // false
+        /// "".IsNullOrEmpty();  // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static bool IsNullOrEmpty(this string @this)
+        {
+            return string.IsNullOrEmpty(@this);
+        }
+
         /// <summary>
         ///     是否null或空白
         /// </summary>
-        /// <param name="this">源字符串</param>
+        /// <param name="this"></param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// "   ".IsNullOrWhiteSpace(); // true
+        /// "\r".IsNullOrWhiteSpace();  // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool IsNullOrWhiteSpace(this string @this)
         {
             return string.IsNullOrWhiteSpace(@this);
         }
 
         /// <summary>
-        ///     是否全部包含，默认不区分大小写
+        ///     是否全部包含
         /// </summary>
-        /// <param name="this">源字符串</param>
+        /// <param name="this"></param>
         /// <param name="values">需要进行判断的字符串集合</param>
-        /// <param name="comparisonType">字符串比较规则</param>
+        /// <param name="comparisonType">
+        ///     <para>字符串比较规则</para>
+        ///     <para>默认值: <see cref="StringComparison.CurrentCultureIgnoreCase" /></para>
+        /// </param>
         /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var a = "aaabbbccc";
+        /// var b = new[] {"aaa", "bbb"};
+        /// a.ContainsAll(b);  // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool ContainsAll(this string @this, IEnumerable<string> values, StringComparison comparisonType = StringComparison.CurrentCultureIgnoreCase)
         {
             return values.All(s => @this.IndexOf(s, comparisonType) >= 0);
         }
 
         /// <summary>
-        ///     是否包含任意一个，默认不区分大小写
+        ///     是否包含任意一个
         /// </summary>
-        /// <param name="this">源字符串</param>
+        /// <param name="this"></param>
         /// <param name="values">需要进行判断的字符串集合</param>
-        /// <param name="comparisonType">字符串比较规则</param>
+        /// <param name="comparisonType">
+        ///     <para>字符串比较规则</para>
+        ///     <para>默认值: <see cref="StringComparison.CurrentCultureIgnoreCase" /></para>
+        /// </param>
         /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var a = "aaabbbccc";
+        /// var b = new[] {"a", "dd", "eee"};
+        /// a.ContainsAny(b); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool ContainsAny(this string @this, IEnumerable<string> values, StringComparison comparisonType = StringComparison.CurrentCultureIgnoreCase)
         {
             return values.Any(s => @this.IndexOf(s, comparisonType) >= 0);
         }
 
         /// <summary>
-        ///     *通配符比较是否相似 (特殊字符 用 \ 转义)
+        ///     <para>使用通配符比较字符串是否相似</para>
+        ///     <para>通配符 <c>*</c></para>
+        ///     <para>特殊字符 用 \ 转义</para>
+        ///     <para>正则匹配时，使用 <see cref="RegexOptions.Singleline" /> </para>
         /// </summary>
-        /// <param name="this">源字符串，为 null 时返回 false</param>
+        /// <param name="this"></param>
         /// <param name="pattern">通配符表达式，为 null 时返回 false</param>
-        /// <returns></returns>
+        /// <returns>
+        ///     <para><paramref name="this" />为 null 时 返回 false</para>
+        ///     <para><paramref name="pattern" />为 null 时 返回 false</para>
+        /// </returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="FormatException"></exception>
+        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="RegexMatchTimeoutException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var test1 = "abcdefg\r\nabcdefghijk";
+        /// test1.IsLike("abc*");     // true
+        /// test1.IsLike("a*");       // true
+        /// test1.IsLike("*ijk");     // true
+        /// test1.IsLike("abc*fg*");  // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static bool IsLike(this string @this, string pattern)
         {
             if (@this == null) return false;

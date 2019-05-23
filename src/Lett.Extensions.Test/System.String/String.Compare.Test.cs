@@ -63,6 +63,13 @@ namespace Lett.Extensions.Test
         }
 
         [TestMethod]
+        public void IsNullOrEmpty_Test()
+        {
+            Assert.IsTrue(string.Empty.IsNullOrEmpty());
+            Assert.IsFalse(" ".IsNullOrEmpty());
+        }
+
+        [TestMethod]
         public void ContainsAll_Test()
         {
             var a = "aaabbbccc";

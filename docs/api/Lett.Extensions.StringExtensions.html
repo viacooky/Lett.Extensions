@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="StringExtensions 类
    | Lett.Extensions ">
-    <meta name="generator" content="docfx 2.42.1.0">
+    <meta name="generator" content="docfx 2.42.3.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,7 +83,7 @@
   
   <h1 id="Lett_Extensions_StringExtensions" data-uid="Lett.Extensions.StringExtensions" class="text-break">StringExtensions 类
   </h1>
-  <div class="markdown level0 summary"><p>string 扩展方法 - 比较</p>
+  <div class="markdown level0 summary"><p>string 扩展方法</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -125,8 +125,8 @@
   </h3>
   <a id="Lett_Extensions_StringExtensions_Base64Decode_" data-uid="Lett.Extensions.StringExtensions.Base64Decode*"></a>
   <h4 id="Lett_Extensions_StringExtensions_Base64Decode_System_String_" data-uid="Lett.Extensions.StringExtensions.Base64Decode(System.String)">Base64Decode(String)</h4>
-  <div class="markdown level1 summary"><p>BASE64解码
-ps: 转换失败返回NULL</p>
+  <div class="markdown level1 summary"><p>进行 BASE6 4解码</p>
+<p>使用 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.encoding.utf8#System_Text_Encoding_UTF8">UTF8</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -161,14 +161,19 @@ ps: 转换失败返回NULL</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td><p>转换失败返回 <code>null</code></p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_StringExtensions_Base64Decode_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>var base64 = &quot;QUJDRA==&quot;;
+base64.Base64Decode(); // &quot;ABCD&quot;</code></pre>
+
   <a id="Lett_Extensions_StringExtensions_Base64Encode_" data-uid="Lett.Extensions.StringExtensions.Base64Encode*"></a>
   <h4 id="Lett_Extensions_StringExtensions_Base64Encode_System_String_" data-uid="Lett.Extensions.StringExtensions.Base64Encode(System.String)">Base64Encode(String)</h4>
-  <div class="markdown level1 summary"><p>BASE64编码
-ps: 转换失败返回NULL</p>
+  <div class="markdown level1 summary"><p>进行 BASE64 编码</p>
+<p>使用 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.encoding.utf8#System_Text_Encoding_UTF8">UTF8</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -203,13 +208,18 @@ ps: 转换失败返回NULL</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td><p>转换失败返回 <code>null</code></p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_StringExtensions_Base64Encode_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>var str1   = &quot;ABCD&quot;;
+str1.Base64Encode(); // &quot;QUJDRA==&quot;</code></pre>
+
   <a id="Lett_Extensions_StringExtensions_ContainsAll_" data-uid="Lett.Extensions.StringExtensions.ContainsAll*"></a>
   <h4 id="Lett_Extensions_StringExtensions_ContainsAll_System_String_System_Collections_Generic_IEnumerable_System_String__System_StringComparison_" data-uid="Lett.Extensions.StringExtensions.ContainsAll(System.String,System.Collections.Generic.IEnumerable{System.String},System.StringComparison)">ContainsAll(String, IEnumerable&lt;String&gt;, StringComparison)</h4>
-  <div class="markdown level1 summary"><p>是否全部包含，默认不区分大小写</p>
+  <div class="markdown level1 summary"><p>是否全部包含</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -229,8 +239,7 @@ ps: 转换失败返回NULL</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>源字符串</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
@@ -242,6 +251,7 @@ ps: 转换失败返回NULL</p>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></td>
         <td><span class="parametername">comparisonType</span></td>
         <td><p>字符串比较规则</p>
+<p>默认值: <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison#System_StringComparison_CurrentCultureIgnoreCase">CurrentCultureIgnoreCase</a></p>
 </td>
       </tr>
     </tbody>
@@ -261,9 +271,33 @@ ps: 转换失败返回NULL</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_StringExtensions_ContainsAll_System_String_System_Collections_Generic_IEnumerable_System_String__System_StringComparison__examples">&#31034;&#20363;</h5>
+  <pre><code>var a = &quot;aaabbbccc&quot;;
+var b = new[] {&quot;aaa&quot;, &quot;bbb&quot;};
+a.ContainsAll(b);  // true</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Lett_Extensions_StringExtensions_ContainsAny_" data-uid="Lett.Extensions.StringExtensions.ContainsAny*"></a>
   <h4 id="Lett_Extensions_StringExtensions_ContainsAny_System_String_System_Collections_Generic_IEnumerable_System_String__System_StringComparison_" data-uid="Lett.Extensions.StringExtensions.ContainsAny(System.String,System.Collections.Generic.IEnumerable{System.String},System.StringComparison)">ContainsAny(String, IEnumerable&lt;String&gt;, StringComparison)</h4>
-  <div class="markdown level1 summary"><p>是否包含任意一个，默认不区分大小写</p>
+  <div class="markdown level1 summary"><p>是否包含任意一个</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -283,8 +317,7 @@ ps: 转换失败返回NULL</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>源字符串</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
@@ -296,6 +329,7 @@ ps: 转换失败返回NULL</p>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></td>
         <td><span class="parametername">comparisonType</span></td>
         <td><p>字符串比较规则</p>
+<p>默认值: <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison#System_StringComparison_CurrentCultureIgnoreCase">CurrentCultureIgnoreCase</a></p>
 </td>
       </tr>
     </tbody>
@@ -315,6 +349,11 @@ ps: 转换失败返回NULL</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_StringExtensions_ContainsAny_System_String_System_Collections_Generic_IEnumerable_System_String__System_StringComparison__examples">&#31034;&#20363;</h5>
+  <pre><code>var a = &quot;aaabbbccc&quot;;
+var b = new[] {&quot;a&quot;, &quot;dd&quot;, &quot;eee&quot;};
+a.ContainsAny(b); // true</code></pre>
+
   <a id="Lett_Extensions_StringExtensions_Format_" data-uid="Lett.Extensions.StringExtensions.Format*"></a>
   <h4 id="Lett_Extensions_StringExtensions_Format_System_String_System_Object___" data-uid="Lett.Extensions.StringExtensions.Format(System.String,System.Object[])">Format(String, Object[])</h4>
   <div class="markdown level1 summary"><p>格式化</p>
@@ -365,9 +404,29 @@ ps: 转换失败返回NULL</p>
   <pre><code>var tmp = &quot;{0}-{1}&quot;;
 tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </code></pre>
 
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Lett_Extensions_StringExtensions_IgnoreCaseEquals_" data-uid="Lett.Extensions.StringExtensions.IgnoreCaseEquals*"></a>
   <h4 id="Lett_Extensions_StringExtensions_IgnoreCaseEquals_System_String_System_String_" data-uid="Lett.Extensions.StringExtensions.IgnoreCaseEquals(System.String,System.String)">IgnoreCaseEquals(String, String)</h4>
   <div class="markdown level1 summary"><p>忽略大小写比较</p>
+<p>使用 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison#System_StringComparison_CurrentCultureIgnoreCase">CurrentCultureIgnoreCase</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -387,8 +446,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>源字符串</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
@@ -413,6 +471,9 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_StringExtensions_IgnoreCaseEquals_System_String_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>&quot;aaa&quot;.IgnoreCaseEquals(&quot;AaA&quot;); // true</code></pre>
+
   <a id="Lett_Extensions_StringExtensions_IsEmail_" data-uid="Lett.Extensions.StringExtensions.IsEmail*"></a>
   <h4 id="Lett_Extensions_StringExtensions_IsEmail_System_String_" data-uid="Lett.Extensions.StringExtensions.IsEmail(System.String)">IsEmail(String)</h4>
   <div class="markdown level1 summary"><p>是否Email</p>
@@ -454,9 +515,44 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_StringExtensions_IsEmail_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>&quot;abc@qqq.com&quot;.IsEmail();  // true
+&quot;abc@qqq#.com&quot;.IsEmail(); // false</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><permission cref="!:@this"></permission> 字符串为空</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception">RegexMatchTimeoutException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Lett_Extensions_StringExtensions_IsLike_" data-uid="Lett.Extensions.StringExtensions.IsLike*"></a>
   <h4 id="Lett_Extensions_StringExtensions_IsLike_System_String_System_String_" data-uid="Lett.Extensions.StringExtensions.IsLike(System.String,System.String)">IsLike(String, String)</h4>
-  <div class="markdown level1 summary"><p>*通配符比较是否相似 (特殊字符 用 \ 转义)</p>
+  <div class="markdown level1 summary"><p>使用通配符比较字符串是否相似</p>
+<p>通配符 <code>*</code></p>
+<p>特殊字符 用 \ 转义</p>
+<p>正则匹配时，使用 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_Singleline">Singleline</a> </p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -476,8 +572,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>源字符串，为 null 时返回 false</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
@@ -498,6 +593,46 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code>为 null 时 返回 false</p>
+<p><code data-dev-comment-type="paramref" class="paramref">pattern</code>为 null 时 返回 false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_IsLike_System_String_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>var test1 = &quot;abcdefg\r\nabcdefghijk&quot;;
+test1.IsLike(&quot;abc*&quot;);     // true
+test1.IsLike(&quot;a*&quot;);       // true
+test1.IsLike(&quot;*ijk&quot;);     // true
+test1.IsLike(&quot;abc*fg*&quot;);  // true</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception">RegexMatchTimeoutException</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -524,8 +659,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>源字符串</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -544,6 +678,55 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_StringExtensions_IsLower_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>&quot;abcddd&quot;.IsLower(); // true;
+&quot;abDD&quot;.IsLower();   // false</code></pre>
+
+  <a id="Lett_Extensions_StringExtensions_IsNullOrEmpty_" data-uid="Lett.Extensions.StringExtensions.IsNullOrEmpty*"></a>
+  <h4 id="Lett_Extensions_StringExtensions_IsNullOrEmpty_System_String_" data-uid="Lett.Extensions.StringExtensions.IsNullOrEmpty(System.String)">IsNullOrEmpty(String)</h4>
+  <div class="markdown level1 summary"><p>是否 null 或 string.Empty</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsNullOrEmpty(this string this)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_IsNullOrEmpty_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>&quot; &quot;.IsNullOrEmpty(); // false
+&quot;&quot;.IsNullOrEmpty();  // true</code></pre>
+
   <a id="Lett_Extensions_StringExtensions_IsNullOrWhiteSpace_" data-uid="Lett.Extensions.StringExtensions.IsNullOrWhiteSpace*"></a>
   <h4 id="Lett_Extensions_StringExtensions_IsNullOrWhiteSpace_System_String_" data-uid="Lett.Extensions.StringExtensions.IsNullOrWhiteSpace(System.String)">IsNullOrWhiteSpace(String)</h4>
   <div class="markdown level1 summary"><p>是否null或空白</p>
@@ -566,8 +749,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>源字符串</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -586,6 +768,10 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_StringExtensions_IsNullOrWhiteSpace_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>&quot;   &quot;.IsNullOrWhiteSpace(); // true
+&quot;\r&quot;.IsNullOrWhiteSpace();  // true</code></pre>
+
   <a id="Lett_Extensions_StringExtensions_IsUpper_" data-uid="Lett.Extensions.StringExtensions.IsUpper*"></a>
   <h4 id="Lett_Extensions_StringExtensions_IsUpper_System_String_" data-uid="Lett.Extensions.StringExtensions.IsUpper(System.String)">IsUpper(String)</h4>
   <div class="markdown level1 summary"><p>是否全部大写</p>
@@ -608,8 +794,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>源字符串</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -628,6 +813,10 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_StringExtensions_IsUpper_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>&quot;ABC&quot;.IsUpper(); // true
+&quot;ABd&quot;.IsUpper(); // false</code></pre>
+
   <a id="Lett_Extensions_StringExtensions_IsUrl_" data-uid="Lett.Extensions.StringExtensions.IsUrl*"></a>
   <h4 id="Lett_Extensions_StringExtensions_IsUrl_System_String_" data-uid="Lett.Extensions.StringExtensions.IsUrl(System.String)">IsUrl(String)</h4>
   <div class="markdown level1 summary"><p>是否URL</p>
@@ -669,6 +858,11 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_StringExtensions_IsUrl_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>&quot;http://sdf.com&quot;.IsUrl(); // true
+&quot;http://sdf.c.dddd.cccc.saaa.com&quot;.IsUrl(); // true
+&quot;www.sdf.com&quot;.IsUrl(); // false</code></pre>
+
   <a id="Lett_Extensions_StringExtensions_Left_" data-uid="Lett.Extensions.StringExtensions.Left*"></a>
   <h4 id="Lett_Extensions_StringExtensions_Left_System_String_System_Int32_" data-uid="Lett.Extensions.StringExtensions.Left(System.String,System.Int32)">Left(String, Int32)</h4>
   <div class="markdown level1 summary"><p>从左侧返回指定长度的字符串</p>
@@ -696,7 +890,8 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">length</span></td>
-        <td></td>
+        <td><p>指定长度 不能小于 0</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -715,6 +910,9 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_StringExtensions_Left_System_String_System_Int32__examples">&#31034;&#20363;</h5>
+  <pre><code>&quot;1234567890&quot;.Left(3); // &quot;123&quot;</code></pre>
+
   <h5 class="exceptions">&#24322;&#24120;</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -726,7 +924,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
-        <td><p>length 参数不允许小于0</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">length</code> 不能小于 0</p>
 </td>
       </tr>
     </tbody>
@@ -753,8 +951,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>源字符串</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
@@ -765,7 +962,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a></td>
         <td><span class="parametername">regexOption</span></td>
-        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.matchevaluator">MatchEvaluator</a>正则表达式选项，默认值：RegexOptions.None</p>
+        <td><p>正则表达式选项，默认值：<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_None">None</a></p>
 </td>
       </tr>
     </tbody>
@@ -781,6 +978,37 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_RegexIsMatch_System_String_System_String_System_Text_RegularExpressions_RegexOptions__examples">&#31034;&#20363;</h5>
+  <pre><code>var source = &quot;abcdefg\r\nabcdefghijk&quot;;
+source.RegexIsMatch(@&quot;^abc.*\r$&quot;, RegexOptions.Multiline); // true</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception">RegexMatchTimeoutException</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -807,8 +1035,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>源字符串</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
@@ -819,7 +1046,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a></td>
         <td><span class="parametername">regexOption</span></td>
-        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a>正则表达式选项，默认值：RegexOptions.None</p>
+        <td><p>正则表达式选项，默认值：<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_None">None</a></p>
 </td>
       </tr>
     </tbody>
@@ -837,6 +1064,37 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.match">Match</a></td>
         <td><p>单个匹配对象</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_RegexMatch_System_String_System_String_System_Text_RegularExpressions_RegexOptions__examples">&#31034;&#20363;</h5>
+  <pre><code>var str = &quot;aaaabaaaabaaaa&quot;;
+var match = str.RegexMatch(&quot;b&quot;); // match.Success == true;</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception">RegexMatchTimeoutException</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -874,7 +1132,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a></td>
         <td><span class="parametername">regexOption</span></td>
-        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a>正则表达式选项，默认值：RegexOptions.None</p>
+        <td><p>正则表达式选项，默认值：<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_None">None</a></p>
 </td>
       </tr>
     </tbody>
@@ -892,6 +1150,33 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.matchcollection">MatchCollection</a></td>
         <td><p>所有匹配对象</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_RegexMatches_System_String_System_String_System_Text_RegularExpressions_RegexOptions__examples">&#31034;&#20363;</h5>
+  <pre><code>var str   = &quot;aaaabaaaabaaaa&quot;;
+var matches = str.RegexMatches(@&quot;aaaab&quot;);  // matches.Count == 2</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -935,7 +1220,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a></td>
         <td><span class="parametername">regexOption</span></td>
-        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a>正则表达式选项，默认值：RegexOptions.None<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a></p>
+        <td><p>正则表达式选项，默认值：<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_None">None</a></p>
 </td>
       </tr>
     </tbody>
@@ -989,7 +1274,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.matchevaluator">MatchEvaluator</a></td>
         <td><span class="parametername">evaluator</span></td>
-        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.matchevaluator">MatchEvaluator</a>委托表示的方法返回的字符串</p>
+        <td><p>委托表示的方法返回的字符串</p>
 </td>
       </tr>
     </tbody>
@@ -1005,6 +1290,32 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_RegexReplace_System_String_System_String_System_Text_RegularExpressions_MatchEvaluator__examples">&#31034;&#20363;</h5>
+  <pre><code>var rs2 = test1.RegexReplace(@&quot;\.&quot;, match => match.Value + &quot;@&quot;);  // &quot;aaaa.@bbbb.@cccc&quot;</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception">RegexMatchTimeoutException</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1043,7 +1354,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a></td>
         <td><span class="parametername">regexOption</span></td>
-        <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a>正则表达式选项，默认值：RegexOptions.None</p>
+        <td><p>正则表达式选项，默认值：<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_None">None</a></p>
 </td>
       </tr>
     </tbody>
@@ -1059,6 +1370,37 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_RegexSplit_System_String_System_String_System_Text_RegularExpressions_RegexOptions__examples">&#31034;&#20363;</h5>
+  <pre><code>var str = &quot;aaaa.bbbb.cccc&quot;;
+var rs = str.RegexSplit(@&quot;\.&quot;); // rs.Count == 3</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception">RegexMatchTimeoutException</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1090,7 +1432,8 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">length</span></td>
-        <td></td>
+        <td><p>指定长度 不能小于 0</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1109,6 +1452,9 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       </tr>
     </tbody>
   </table>
+  <h5 id="Lett_Extensions_StringExtensions_Right_System_String_System_Int32__examples">&#31034;&#20363;</h5>
+  <pre><code>&quot;1234567890&quot;.Right(3); // &quot;890&quot;</code></pre>
+
   <h5 class="exceptions">&#24322;&#24120;</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -1120,7 +1466,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
-        <td><p>length 参数不允许小于0</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">length</code> 不能小于 0</p>
 </td>
       </tr>
     </tbody>
@@ -1147,13 +1493,12 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>源字符串</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></td>
         <td><span class="parametername">encoding</span></td>
-        <td><p>编码格式 默认 UTF8</p>
+        <td><p>编码格式 默认为 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.encoding.utf8#System_Text_Encoding_UTF8">UTF8</a></p>
 </td>
       </tr>
     </tbody>
@@ -1169,6 +1514,30 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_ToBytes_System_String_System_Text_Encoding__examples">&#31034;&#20363;</h5>
+  <pre><code>var source = &quot;abcd&quot;;
+var rs = source.ToBytes(Encoding.Unicode);
+var rs2 = source.ToBytes();    // use Encoding.UTF8</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.encoderfallbackexception">EncoderFallbackException</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1195,8 +1564,7 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>源字符串</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1211,6 +1579,25 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.xmldocument">XmlDocument</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_ToXmlDocument_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>var source = &quot;&lt;item>&lt;name>wrench&lt;/name>&lt;/item>&quot;;
+var rs     = source.ToXmlDocument();</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.xmlexception">XmlException</a></td>
         <td></td>
       </tr>
     </tbody>

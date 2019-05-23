@@ -1348,6 +1348,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.StringExtensions.IsLower
   nameWithType: StringExtensions.IsLower
+- uid: Lett.Extensions.StringExtensions.IsNullOrEmpty(System.String)
+  name: IsNullOrEmpty(String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsNullOrEmpty_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.IsNullOrEmpty(System.String)
+  fullName: Lett.Extensions.StringExtensions.IsNullOrEmpty(System.String)
+  nameWithType: StringExtensions.IsNullOrEmpty(String)
+- uid: Lett.Extensions.StringExtensions.IsNullOrEmpty*
+  name: IsNullOrEmpty
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsNullOrEmpty_
+  commentId: Overload:Lett.Extensions.StringExtensions.IsNullOrEmpty
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.IsNullOrEmpty
+  nameWithType: StringExtensions.IsNullOrEmpty
 - uid: Lett.Extensions.StringExtensions.IsNullOrWhiteSpace(System.String)
   name: IsNullOrWhiteSpace(String)
   href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsNullOrWhiteSpace_System_String_
