@@ -1,8 +1,7 @@
-- name: Home
-  href: /
-  homepage: index.md
+- name: Get Started
+  href: get_started.md
 - name: Api Documentation
   href: api/
   homepage: api/index.md
-- name: Change Log
-  href: changelog/index.md
+- name: Version Notes
+  href: version_notes.md

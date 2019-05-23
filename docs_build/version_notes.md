@@ -1,4 +1,4 @@
-# Change log / 更新日志
+# Version Notes / 版本信息
 
 ### 0.2.0 (2019-05-21)
 

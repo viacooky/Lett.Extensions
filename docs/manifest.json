@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "D:/Code/github.com/Lett.Extensions/docs_build",
+  "source_base_path": "/Users/viacooky/Code/github.com/Lett.Extensions/docs_build",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.ArrayExtensions.html",
-          "hash": "0QbvGDPAQg76c6qla+4vBw=="
+          "hash": "/s1wqz8ap3ZP1nPDluGVDA=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.BooleanExtensions.html",
-          "hash": "8eJ4KMwsyn4QaGNDk8CyqQ=="
+          "hash": "VHojEyPNiDHiuBfYchUb0A=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.ByteExtensions.html",
-          "hash": "/yJ8DaxoJbJkTEx1XbM5Hw=="
+          "hash": "f7NywYEhKagVF4JtHgrLtg=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.DataColumnCollectionExtensions.html",
-          "hash": "U1XlUIYwnsReLWmKqR2YpA=="
+          "hash": "ueieqLw9Y+8bJ+0gkFEJbQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.DataRowExtensions.html",
-          "hash": "TzuAuNTBmUNXlvcYBNPpwQ=="
+          "hash": "9oLSn3wPCuzMFmYbiB57sQ=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.DataTableExtensions.html",
-          "hash": "K7pYJ0HnviYDfoRVTtR/TQ=="
+          "hash": "47MzDzDB4yHzra37ONfSnQ=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.DateTimeExtensions.html",
-          "hash": "9uqRa0E19HOajrzDObERPg=="
+          "hash": "hk/oDkmLJ8lgoSZUACTHww=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.EnumExtensions.html",
-          "hash": "7ZNPI2o73sZ7jpXfe3gZZQ=="
+          "hash": "/75PzS5dv8v3fH7I2bOTUw=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.Exceptions.DataTableException.html",
-          "hash": "h/7KbJJiTeBCGSLcq5254w=="
+          "hash": "sL+7WrJctpb1xKVFndd2hg=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.Exceptions.html",
-          "hash": "+6J3DgfIFDGBX0A4rmboDg=="
+          "hash": "WHgaAHaUl7gv60orkqztEg=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.ICollectionsExtensions.html",
-          "hash": "jON288jIUZ35bRPQoREV+Q=="
+          "hash": "6YhQIUqR6tYcWlqll9yKvQ=="
         }
       },
       "is_incremental": false,
@@ -150,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.IEnumerableExtensions.html",
-          "hash": "UOpy4mmv7jhO+qWEdxDC7w=="
+          "hash": "H755lq2fUml4UcRtQKbZHg=="
         }
       },
       "is_incremental": false,
@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.IntExtensions.html",
-          "hash": "u6uY3ROJzJq0CzaNYfv4SQ=="
+          "hash": "JGBTNFzLEBpyCJfosPrl6g=="
         }
       },
       "is_incremental": false,
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.LongExtensions.html",
-          "hash": "AlPfb9pZVUcgj8YTHsOEVA=="
+          "hash": "1SHv41NzeZR6jHXJqTO05w=="
         }
       },
       "is_incremental": false,
@@ -186,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.ObjectExtensions.html",
-          "hash": "45hf9S+JpU4Mv1AIxiadTw=="
+          "hash": "rfPssyv3F7BZjrjEI9rrSQ=="
         }
       },
       "is_incremental": false,
@@ -198,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.StringExtensions.html",
-          "hash": "7YkwmBPrOuYU8qWlFigO1A=="
+          "hash": "1ee+CHu6j1mCgUE1xRKWsA=="
         }
       },
       "is_incremental": false,
@@ -210,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.TypeExtensions.html",
-          "hash": "rL6G0khSKrSILEJT+jEp7A=="
+          "hash": "2FnE7m+ZFEo48KpoqS2jJA=="
         }
       },
       "is_incremental": false,
@@ -222,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.html",
-          "hash": "oxZaS8jtAXd4+g8Pn3NNLQ=="
+          "hash": "H8q+x1K+NHT7XY/AtLNmCg=="
         }
       },
       "is_incremental": false,
@@ -234,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "528ofxY+mq66Yfux92g2RQ=="
+          "hash": "qBxmeLKkJvHWZUuvuNp90A=="
         }
       },
       "is_incremental": false,
@@ -254,11 +254,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "changelog/index.md",
+      "source_relative_path": "get_started.md",
       "output": {
         ".html": {
-          "relative_path": "changelog/index.html",
-          "hash": "Qn6E4CEHnswh4omhF5UWdQ=="
+          "relative_path": "get_started.html",
+          "hash": "gXMLzfaj5sUdM2Hp4B6/zA=="
         }
       },
       "is_incremental": false,
@@ -270,7 +270,7 @@
       "output": {
         "resource": {
           "relative_path": "images/logo.png",
-          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/logo.png"
+          "link_to_path": "/Users/viacooky/Code/github.com/Lett.Extensions/docs_build/images/logo.png"
         }
       },
       "is_incremental": false,
@@ -282,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "WTJSjgFF8AJZrJfswY42yg=="
+          "hash": "Zb9LEEIZM/P59uk+lfInqQ=="
         }
       },
       "is_incremental": false,
@@ -294,7 +294,19 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "JtCk19GjU6aaWLmQt2CFMQ=="
+          "hash": "rUw5HWm0LTpqak/jGhrfLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "version_notes.md",
+      "output": {
+        ".html": {
+          "relative_path": "version_notes.html",
+          "hash": "pq/ilnKpCeOZcKqWbbzcnw=="
         }
       },
       "is_incremental": false,
@@ -320,14 +332,14 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 3,
+          "total_file_count": 4,
           "skipped_file_count": 3
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 18,
-          "skipped_file_count": 3
+          "skipped_file_count": 18
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

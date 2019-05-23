@@ -22,7 +22,7 @@
         "files": ["api/**.yml", "api/index.md"]
       },
       {
-        "files": ["changelog/**.md", "changelog/**/toc.yml", "toc.yml", "*.md"]
+        "files": ["version_notes/**.md", "toc.yml", "*.md"]
       }
     ],
     "resource": [
@@ -32,7 +32,7 @@
     ],
     "overwrite": [
       {
-        "files": []
+        "files": ["index.html"]
       }
     ],
     "globalMetadata": {
