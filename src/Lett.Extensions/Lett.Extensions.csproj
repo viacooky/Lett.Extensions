@@ -10,13 +10,16 @@
     <Version>0.0.1</Version>
     <LangVersion>latest</LangVersion>
     <Title>Lett.Extensions</Title>
-    <Description>Common C# extensions methods collection
-Docs: https://viacooky.github.io/Lett.Extensions/
-ChangeLog: https://viacooky.github.io/Lett.Extensions/CHANGELOG.html</Description>
-    <PackageTags>Extension;C#</PackageTags>
-    <PackageIconUrl></PackageIconUrl>
+    <Description>Popular .Net Core / .Net Framework extension methods
+
+Project Site: https://viacooky.github.io/Lett.Extensions/
+
+Version Notes: https://viacooky.github.io/Lett.Extensions/version_notes.html</Description>
+    <PackageTags>.Net;.Net Standard;.Net Core;Core;.Net Framework;Extension;Extension Method;</PackageTags>
+    <PackageIconUrl>https://raw.githubusercontent.com/viacooky/Lett.Extensions/master/docs_build/images/logo.simple.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/viacooky/Lett.Extensions</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright (c) 2019, viacooky. All rights reserved.</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
