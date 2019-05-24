@@ -655,6 +655,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DateTimeExtensions.GetTotalSeconds
   nameWithType: DateTimeExtensions.GetTotalSeconds
+- uid: Lett.Extensions.DateTimeExtensions.IsBetween(System.DateTime,System.DateTime,System.DateTime)
+  name: IsBetween(DateTime, DateTime, DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsBetween_System_DateTime_System_DateTime_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.IsBetween(System.DateTime,System.DateTime,System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.IsBetween(System.DateTime, System.DateTime, System.DateTime)
+  nameWithType: DateTimeExtensions.IsBetween(DateTime, DateTime, DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.IsBetween*
+  name: IsBetween
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsBetween_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.IsBetween
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.IsBetween
+  nameWithType: DateTimeExtensions.IsBetween
 - uid: Lett.Extensions.DateTimeExtensions.SetTime(System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32)
   name: SetTime(DateTime, Int32, Int32, Int32, Int32)
   href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_SetTime_System_DateTime_System_Int32_System_Int32_System_Int32_System_Int32_
