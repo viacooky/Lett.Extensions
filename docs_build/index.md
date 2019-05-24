@@ -21,9 +21,26 @@
 
 <br/>
 
-## dependency
+## Support Platform
 
-## Install
+> [!TIP]
+> Lett.Extensions Library is build at `.Net Standard 2.0`
+>
+> You can find more information about .Net Standard from [**[here]**](https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support)
+
+| Platform                   | Support platform minimum version |
+| -------------------------- | -------------------------------- |
+| .NET Standard              | 2.0                              |
+| .NET Core                  | 2.0                              |
+| .NET Framework             | 4.6.1                            |
+| Mono                       | 5.4                              |
+| Xamarin.iOS                | 10.14                            |
+| Xamarin.Mac                | 3.8                              |
+| Xamarin.Android            | 8.0                              |
+| Universal Windows Platform | 10.0.16299                       |
+| Unity                      | 2018.1                           |
+
+## Installation
 
 <br/>
 
@@ -41,13 +58,18 @@
 
 ---
 
-## Usage
+## Ducuments
 
-you can see [Api Document](api/index.md)
+- [ArrayExtensions](api/Lett.Extensions.ArrayExtensions.yml)
+- [BooleanExtensions](api/Lett.Extensions.BooleanExtensions.yml)
+- [ByteExtensions](api/Lett.Extensions.BooleanExtensions.yml)
+- [ByteExtensions](api/Lett.Extensions.BooleanExtensions.yml)
+- [DataRowExtensions](api/Lett.Extensions.DataRowExtensions.yml)
+- [DataTableExtensions](api/Lett.Extensions.DataTableExtensions.yml)
+- [More ...](api/index.md)
 
 ---
 
 ## Lisence
 
-Copyright (c) 2019 viacooky
-Licensed under the MIT license.
+[MIT](https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/LICENSE.txt) © viacooky

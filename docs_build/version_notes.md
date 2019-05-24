@@ -1,4 +1,4 @@
-# Version Notes / 版本信息
+# Version Notes
 
 ### 0.2.0 (2019-05-21)
 

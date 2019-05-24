@@ -1,7 +1,6 @@
-- name: Get Started
-  href: get_started.md
+- name: Lett.Extensions
+  href: index.md
 - name: Api Documentation
   href: api/
-  homepage: api/index.md
 - name: Version Notes
   href: version_notes.md

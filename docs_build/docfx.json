@@ -9,7 +9,7 @@
         }
       ],
       "dest": "api",
-      "disableGitFeatures": true,
+      "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
   ],
@@ -38,7 +38,8 @@
     "globalMetadata": {
       "_appTitle": "Lett.Extensions",
       "_appFooter": "Copyright (c) 2019 viacooky. All rights reserved.",
-      "_appLogoPath": "",
+      "_appFaviconPath": "images/icon/icon_128.ico",
+      "_appLogoPath": "images/logo_229_50.png",
       "_enableSearch": true,
       "_disableContribution": true,
       "_enableNewTab": true
@@ -52,7 +53,7 @@
     "noLangKeyword": true,
     "keepFileLink": true,
     "cleanupCacheHistory": false,
-    "disableGitFeatures": true,
+    "disableGitFeatures": false,
     "xrefService": ["https://xref.docs.microsoft.com/query?uid={uid}"]
   }
 }
