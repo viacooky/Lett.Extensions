@@ -1,6 +1,7 @@
 ![](docs/images/logo.png)
 
 ![Build Status](https://dev.azure.com/viacooky/Lett.Extensions/_apis/build/status/Lett.Extensions%20Push%20NuGet?branchName=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0c3a58dff536419e8b23f2abc8e880e3)](https://app.codacy.com/app/viacooky/Lett.Extensions?utm_source=github.com&utm_medium=referral&utm_content=viacooky/Lett.Extensions&utm_campaign=Badge_Grade_Dashboard)
 [![Nuget](https://img.shields.io/nuget/v/Lett.Extensions.svg)](https://www.nuget.org/packages/Lett.Extensions/)
 ![Nuget](https://img.shields.io/nuget/dt/Lett.Extensions.svg)
 ![Azure DevOps tests (compact)](https://img.shields.io/azure-devops/tests/viacooky/Lett.Extensions/9.svg)
