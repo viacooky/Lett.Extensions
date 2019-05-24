@@ -577,6 +577,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DateTimeExtensions.EndOfDay
   nameWithType: DateTimeExtensions.EndOfDay
+- uid: Lett.Extensions.DateTimeExtensions.EndOfMonth(System.DateTime)
+  name: EndOfMonth(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfMonth_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.EndOfMonth(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.EndOfMonth(System.DateTime)
+  nameWithType: DateTimeExtensions.EndOfMonth(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.EndOfMonth*
+  name: EndOfMonth
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfMonth_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.EndOfMonth
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.EndOfMonth
+  nameWithType: DateTimeExtensions.EndOfMonth
 - uid: Lett.Extensions.DateTimeExtensions.EndOfWeek(System.DateTime,System.DayOfWeek)
   name: EndOfWeek(DateTime, DayOfWeek)
   href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfWeek_System_DateTime_System_DayOfWeek_
@@ -590,6 +603,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DateTimeExtensions.EndOfWeek
   nameWithType: DateTimeExtensions.EndOfWeek
+- uid: Lett.Extensions.DateTimeExtensions.EndOfYear(System.DateTime)
+  name: EndOfYear(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfYear_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.EndOfYear(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.EndOfYear(System.DateTime)
+  nameWithType: DateTimeExtensions.EndOfYear(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.EndOfYear*
+  name: EndOfYear
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfYear_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.EndOfYear
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.EndOfYear
+  nameWithType: DateTimeExtensions.EndOfYear
 - uid: Lett.Extensions.DateTimeExtensions.GetTotalDays(System.DateTime)
   name: GetTotalDays(DateTime)
   href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_GetTotalDays_System_DateTime_
@@ -655,6 +681,45 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DateTimeExtensions.GetTotalSeconds
   nameWithType: DateTimeExtensions.GetTotalSeconds
+- uid: Lett.Extensions.DateTimeExtensions.IsBetween(System.DateTime,System.DateTime,System.DateTime)
+  name: IsBetween(DateTime, DateTime, DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsBetween_System_DateTime_System_DateTime_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.IsBetween(System.DateTime,System.DateTime,System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.IsBetween(System.DateTime, System.DateTime, System.DateTime)
+  nameWithType: DateTimeExtensions.IsBetween(DateTime, DateTime, DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.IsBetween*
+  name: IsBetween
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsBetween_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.IsBetween
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.IsBetween
+  nameWithType: DateTimeExtensions.IsBetween
+- uid: Lett.Extensions.DateTimeExtensions.IsToday(System.DateTime)
+  name: IsToday(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsToday_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.IsToday(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.IsToday(System.DateTime)
+  nameWithType: DateTimeExtensions.IsToday(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.IsToday*
+  name: IsToday
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsToday_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.IsToday
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.IsToday
+  nameWithType: DateTimeExtensions.IsToday
+- uid: Lett.Extensions.DateTimeExtensions.IsWeekDay(System.DateTime)
+  name: IsWeekDay(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsWeekDay_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.IsWeekDay(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.IsWeekDay(System.DateTime)
+  nameWithType: DateTimeExtensions.IsWeekDay(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.IsWeekDay*
+  name: IsWeekDay
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsWeekDay_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.IsWeekDay
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.IsWeekDay
+  nameWithType: DateTimeExtensions.IsWeekDay
 - uid: Lett.Extensions.DateTimeExtensions.SetTime(System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32)
   name: SetTime(DateTime, Int32, Int32, Int32, Int32)
   href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_SetTime_System_DateTime_System_Int32_System_Int32_System_Int32_System_Int32_
@@ -681,6 +746,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DateTimeExtensions.StartOfDay
   nameWithType: DateTimeExtensions.StartOfDay
+- uid: Lett.Extensions.DateTimeExtensions.StartOfMonth(System.DateTime)
+  name: StartOfMonth(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfMonth_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.StartOfMonth(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.StartOfMonth(System.DateTime)
+  nameWithType: DateTimeExtensions.StartOfMonth(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.StartOfMonth*
+  name: StartOfMonth
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfMonth_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.StartOfMonth
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.StartOfMonth
+  nameWithType: DateTimeExtensions.StartOfMonth
 - uid: Lett.Extensions.DateTimeExtensions.StartOfWeek(System.DateTime,System.DayOfWeek)
   name: StartOfWeek(DateTime, DayOfWeek)
   href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfWeek_System_DateTime_System_DayOfWeek_
@@ -694,6 +772,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DateTimeExtensions.StartOfWeek
   nameWithType: DateTimeExtensions.StartOfWeek
+- uid: Lett.Extensions.DateTimeExtensions.StartOfYear(System.DateTime)
+  name: StartOfYear(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfYear_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.StartOfYear(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.StartOfYear(System.DateTime)
+  nameWithType: DateTimeExtensions.StartOfYear(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.StartOfYear*
+  name: StartOfYear
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfYear_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.StartOfYear
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.StartOfYear
+  nameWithType: DateTimeExtensions.StartOfYear
 - uid: Lett.Extensions.DateTimeExtensions.ToString_Base(System.DateTime)
   name: ToString_Base(DateTime)
   href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_Base_System_DateTime_
@@ -1156,6 +1247,31 @@ references:
   fullName.vb: Lett.Extensions.ObjectExtensions.DeepClone(Of T)(T)
   nameWithType: ObjectExtensions.DeepClone<T>(T)
   nameWithType.vb: ObjectExtensions.DeepClone(Of T)(T)
+- uid: Lett.Extensions.ObjectExtensions.In*
+  name: In
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_In_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.In
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.In
+  nameWithType: ObjectExtensions.In
+- uid: Lett.Extensions.ObjectExtensions.In``1(``0,System.Collections.Generic.IEnumerable{``0})
+  name: In<T>(T, IEnumerable<T>)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_In__1___0_System_Collections_Generic_IEnumerable___0__
+  commentId: M:Lett.Extensions.ObjectExtensions.In``1(``0,System.Collections.Generic.IEnumerable{``0})
+  name.vb: In(Of T)(T, IEnumerable(Of T))
+  fullName: Lett.Extensions.ObjectExtensions.In<T>(T, System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Lett.Extensions.ObjectExtensions.In(Of T)(T, System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: ObjectExtensions.In<T>(T, IEnumerable<T>)
+  nameWithType.vb: ObjectExtensions.In(Of T)(T, IEnumerable(Of T))
+- uid: Lett.Extensions.ObjectExtensions.In``1(``0,System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})
+  name: In<T>(T, IEnumerable<T>, IEqualityComparer<T>)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_In__1___0_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__
+  commentId: M:Lett.Extensions.ObjectExtensions.In``1(``0,System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})
+  name.vb: In(Of T)(T, IEnumerable(Of T), IEqualityComparer(Of T))
+  fullName: Lett.Extensions.ObjectExtensions.In<T>(T, System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEqualityComparer<T>)
+  fullName.vb: Lett.Extensions.ObjectExtensions.In(Of T)(T, System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEqualityComparer(Of T))
+  nameWithType: ObjectExtensions.In<T>(T, IEnumerable<T>, IEqualityComparer<T>)
+  nameWithType.vb: ObjectExtensions.In(Of T)(T, IEnumerable(Of T), IEqualityComparer(Of T))
 - uid: Lett.Extensions.ObjectExtensions.IsAssignableFrom(System.Object,System.Type)
   name: IsAssignableFrom(Object, Type)
   href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsAssignableFrom_System_Object_System_Type_
