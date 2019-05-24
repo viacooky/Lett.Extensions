@@ -41,7 +41,7 @@ namespace Lett.Extensions
         /// <typeparam name="T">
         ///     泛型约束 <see cref="IConvertible" />
         /// </typeparam>
-        /// <returns>转换失败则返回 <paramref name="func"/></returns>
+        /// <returns>转换失败则返回 <paramref name="func" /></returns>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -66,7 +66,7 @@ namespace Lett.Extensions
         /// <typeparam name="T">
         ///     泛型约束 <see cref="IConvertible" />
         /// </typeparam>
-        /// <returns>失败则返回 <paramref name="defaultValue"/></returns>
+        /// <returns>失败则返回 <paramref name="defaultValue" /></returns>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -98,7 +98,7 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <typeparam name="T">目标类型</typeparam>
-        /// <returns>转换失败返回 default(<typeparamref name="T"/>)</returns>
+        /// <returns>转换失败返回 default(<typeparamref name="T" />)</returns>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -106,7 +106,8 @@ namespace Lett.Extensions
         /// var rs = s.As<BaseClass>(); // if failed, rs == default(BaseClass) 
         ///         ]]>
         ///     </code>
-        /// </example>/// 
+        /// </example>
+        /// ///
         public static T As<T>(this object @this)
         {
             return @this.As(default(T));
@@ -118,7 +119,7 @@ namespace Lett.Extensions
         /// <param name="this"></param>
         /// <param name="func"></param>
         /// <typeparam name="T">目标类型</typeparam>
-        /// <returns>转换失败返回 <paramref name="func"/></returns>
+        /// <returns>转换失败返回 <paramref name="func" /></returns>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -138,7 +139,7 @@ namespace Lett.Extensions
         /// <param name="this"></param>
         /// <param name="defaultValue"></param>
         /// <typeparam name="T">目标类型</typeparam>
-        /// <returns>转换失败返回 <paramref name="defaultValue"/></returns>
+        /// <returns>转换失败返回 <paramref name="defaultValue" /></returns>
         /// <example>
         ///     <code>
         ///         <![CDATA[

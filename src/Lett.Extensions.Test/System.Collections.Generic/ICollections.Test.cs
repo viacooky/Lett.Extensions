@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
@@ -23,8 +22,8 @@ namespace Lett.Extensions.Test
         [TestMethod]
         public void AddIfNotContains_Test2()
         {
-            var list = new List<string> {"aa", "bb"};
-            var appendList  = new[] {"cc", "aa"};
+            var list       = new List<string> {"aa", "bb"};
+            var appendList = new[] {"cc", "aa"};
             list.AddIfNotContains(appendList);
             Assert.AreEqual(list.Count, 3);
             Assert.AreEqual(list[0], "aa");

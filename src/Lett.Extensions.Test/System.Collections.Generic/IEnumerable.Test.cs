@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
 {
@@ -20,8 +19,8 @@ namespace Lett.Extensions.Test
         [TestMethod]
         public void ContainsAny_Test()
         {
-            var arr = new[] {"aa", "bb"};
-            var match = new[] {"aa"};
+            var arr    = new[] {"aa", "bb"};
+            var match  = new[] {"aa"};
             var match2 = new[] {"aa", "bb"};
             Assert.IsTrue(arr.ContainsAny(match));
             Assert.IsFalse(arr.ContainsAll(match));

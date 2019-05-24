@@ -12,7 +12,7 @@ namespace Lett.Extensions
         /// <summary>
         ///     <para>获取枚举描述</para>
         ///     <para>需要在枚举中加入 Description 属性</para>
-        ///         <code>
+        ///     <code>
         /// 示例
         ///         <![CDATA[
         /// private enum MyEnum

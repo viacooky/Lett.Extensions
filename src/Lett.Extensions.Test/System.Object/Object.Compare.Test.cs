@@ -20,12 +20,7 @@ namespace Lett.Extensions.Test
         [TestMethod]
         public void In_Test()
         {
-            var dtItems = new[]
-            {
-                new DateTime(2018, 1, 1),
-                new DateTime(2019, 1, 1, 9, 10, 1),
-                DateTime.Today
-            };
+            var dtItems = new[] {new DateTime(2018, 1, 1), new DateTime(2019, 1, 1, 9, 10, 1), DateTime.Today};
 
             var dt = new DateTime(2019, 5, 25, 1, 1, 1);
             Assert.IsFalse(dt.In(dtItems));
@@ -62,12 +57,7 @@ namespace Lett.Extensions.Test
             Assert.IsTrue(s.In(strItems, StringComparer.CurrentCultureIgnoreCase));
             Assert.IsFalse(s.In(strItems, StringComparer.CurrentCulture));
 
-            var dtItems = new[]
-            {
-                new DateTime(2018, 1, 1),
-                new DateTime(2019, 1, 1, 9, 10, 1),
-                DateTime.Today
-            };
+            var dtItems = new[] {new DateTime(2018, 1, 1), new DateTime(2019, 1, 1, 9, 10, 1), DateTime.Today};
 
             var dt = new DateTime(2019, 5, 25, 1, 1, 1);
             Assert.IsTrue(dt.In(dtItems, new MyComparer()));

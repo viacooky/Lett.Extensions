@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="StringExtensions 类
    | Lett.Extensions ">
-    <meta name="generator" content="docfx 2.42.3.0">
+    <meta name="generator" content="docfx 2.42.1.0">
     
     <link rel="shortcut icon" href="../images/icon_128.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -218,13 +218,86 @@ base64.Base64Decode(); // &quot;ABCD&quot;</code></pre>
 str1.Base64Encode(); // &quot;QUJDRA==&quot;</code></pre>
 
   <a id="Lett_Extensions_StringExtensions_ContainsAll_" data-uid="Lett.Extensions.StringExtensions.ContainsAll*"></a>
+  <h4 id="Lett_Extensions_StringExtensions_ContainsAll_System_String_System_Collections_Generic_IEnumerable_System_String__" data-uid="Lett.Extensions.StringExtensions.ContainsAll(System.String,System.Collections.Generic.IEnumerable{System.String})">ContainsAll(String, IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>是否全部包含</p>
+<p>使用 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison#System_StringComparison_CurrentCultureIgnoreCase">CurrentCultureIgnoreCase</a> 比较</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsAll(this string this, IEnumerable&lt;string&gt; values)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">values</span></td>
+        <td><p>需要进行判断的字符串集合</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_ContainsAll_System_String_System_Collections_Generic_IEnumerable_System_String___examples">&#31034;&#20363;</h5>
+  <pre><code>var a = &quot;aaabbbccc&quot;;
+var b = new[] {&quot;aaa&quot;, &quot;bbb&quot;};
+a.ContainsAll(b);  // true</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">values</code> is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_StringExtensions_ContainsAll_" data-uid="Lett.Extensions.StringExtensions.ContainsAll*"></a>
   <h4 id="Lett_Extensions_StringExtensions_ContainsAll_System_String_System_Collections_Generic_IEnumerable_System_String__System_StringComparison_" data-uid="Lett.Extensions.StringExtensions.ContainsAll(System.String,System.Collections.Generic.IEnumerable{System.String},System.StringComparison)">ContainsAll(String, IEnumerable&lt;String&gt;, StringComparison)</h4>
   <div class="markdown level1 summary"><p>是否全部包含</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ContainsAll(this string this, IEnumerable&lt;string&gt; values, StringComparison comparisonType = StringComparison.CurrentCultureIgnoreCase)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool ContainsAll(this string this, IEnumerable&lt;string&gt; values, StringComparison comparisonType)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -251,7 +324,6 @@ str1.Base64Encode(); // &quot;QUJDRA==&quot;</code></pre>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></td>
         <td><span class="parametername">comparisonType</span></td>
         <td><p>字符串比较规则</p>
-<p>默认值: <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison#System_StringComparison_CurrentCultureIgnoreCase">CurrentCultureIgnoreCase</a></p>
 </td>
       </tr>
     </tbody>
@@ -287,7 +359,8 @@ a.ContainsAll(b);  // true</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">values</code> is null</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
@@ -296,13 +369,66 @@ a.ContainsAll(b);  // true</code></pre>
     </tbody>
   </table>
   <a id="Lett_Extensions_StringExtensions_ContainsAny_" data-uid="Lett.Extensions.StringExtensions.ContainsAny*"></a>
+  <h4 id="Lett_Extensions_StringExtensions_ContainsAny_System_String_System_Collections_Generic_IEnumerable_System_String__" data-uid="Lett.Extensions.StringExtensions.ContainsAny(System.String,System.Collections.Generic.IEnumerable{System.String})">ContainsAny(String, IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>是否包含任意一个</p>
+<p>使用 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison#System_StringComparison_CurrentCultureIgnoreCase">CurrentCultureIgnoreCase</a> 判断</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsAny(this string this, IEnumerable&lt;string&gt; values)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">values</span></td>
+        <td><p>需要进行判断的字符串集合</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_ContainsAny_System_String_System_Collections_Generic_IEnumerable_System_String___examples">&#31034;&#20363;</h5>
+  <pre><code>var a = &quot;aaabbbccc&quot;;
+var b = new[] {&quot;a&quot;, &quot;dd&quot;, &quot;eee&quot;};
+a.ContainsAny(b); // true</code></pre>
+
+  <a id="Lett_Extensions_StringExtensions_ContainsAny_" data-uid="Lett.Extensions.StringExtensions.ContainsAny*"></a>
   <h4 id="Lett_Extensions_StringExtensions_ContainsAny_System_String_System_Collections_Generic_IEnumerable_System_String__System_StringComparison_" data-uid="Lett.Extensions.StringExtensions.ContainsAny(System.String,System.Collections.Generic.IEnumerable{System.String},System.StringComparison)">ContainsAny(String, IEnumerable&lt;String&gt;, StringComparison)</h4>
   <div class="markdown level1 summary"><p>是否包含任意一个</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ContainsAny(this string this, IEnumerable&lt;string&gt; values, StringComparison comparisonType = StringComparison.CurrentCultureIgnoreCase)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool ContainsAny(this string this, IEnumerable&lt;string&gt; values, StringComparison comparisonType)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -329,7 +455,6 @@ a.ContainsAll(b);  // true</code></pre>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></td>
         <td><span class="parametername">comparisonType</span></td>
         <td><p>字符串比较规则</p>
-<p>默认值: <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison#System_StringComparison_CurrentCultureIgnoreCase">CurrentCultureIgnoreCase</a></p>
 </td>
       </tr>
     </tbody>
@@ -930,13 +1055,92 @@ test1.IsLike(&quot;abc*fg*&quot;);  // true</code></pre>
     </tbody>
   </table>
   <a id="Lett_Extensions_StringExtensions_RegexIsMatch_" data-uid="Lett.Extensions.StringExtensions.RegexIsMatch*"></a>
+  <h4 id="Lett_Extensions_StringExtensions_RegexIsMatch_System_String_System_String_" data-uid="Lett.Extensions.StringExtensions.RegexIsMatch(System.String,System.String)">RegexIsMatch(String, String)</h4>
+  <div class="markdown level1 summary"><p>正则表达式 - 是否匹配</p>
+<p>使用<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_None">None</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool RegexIsMatch(this string this, string pattern)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">pattern</span></td>
+        <td><p>正则表达式</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_RegexIsMatch_System_String_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>var source = &quot;abcdefg\r\nabcdefghijk&quot;;
+source.RegexIsMatch(@&quot;^abc.*\r$&quot;, RegexOptions.Multiline); // true</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception">RegexMatchTimeoutException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_StringExtensions_RegexIsMatch_" data-uid="Lett.Extensions.StringExtensions.RegexIsMatch*"></a>
   <h4 id="Lett_Extensions_StringExtensions_RegexIsMatch_System_String_System_String_System_Text_RegularExpressions_RegexOptions_" data-uid="Lett.Extensions.StringExtensions.RegexIsMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">RegexIsMatch(String, String, RegexOptions)</h4>
   <div class="markdown level1 summary"><p>正则表达式 - 是否匹配</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool RegexIsMatch(this string this, string pattern, RegexOptions regexOption = RegexOptions.None)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool RegexIsMatch(this string this, string pattern, RegexOptions regexOption)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -962,7 +1166,7 @@ test1.IsLike(&quot;abc*fg*&quot;);  // true</code></pre>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a></td>
         <td><span class="parametername">regexOption</span></td>
-        <td><p>正则表达式选项，默认值：<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_None">None</a></p>
+        <td><p>正则表达式选项</p>
 </td>
       </tr>
     </tbody>
@@ -1014,13 +1218,93 @@ source.RegexIsMatch(@&quot;^abc.*\r$&quot;, RegexOptions.Multiline); // true</co
     </tbody>
   </table>
   <a id="Lett_Extensions_StringExtensions_RegexMatch_" data-uid="Lett.Extensions.StringExtensions.RegexMatch*"></a>
+  <h4 id="Lett_Extensions_StringExtensions_RegexMatch_System_String_System_String_" data-uid="Lett.Extensions.StringExtensions.RegexMatch(System.String,System.String)">RegexMatch(String, String)</h4>
+  <div class="markdown level1 summary"><p>正则表达式 - 单个匹配对象</p>
+<p>使用 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_None">None</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Match RegexMatch(this string this, string pattern)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">pattern</span></td>
+        <td><p>正则表达式</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.match">Match</a></td>
+        <td><p>单个匹配对象</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_RegexMatch_System_String_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>var str = &quot;aaaabaaaabaaaa&quot;;
+var match = str.RegexMatch(&quot;b&quot;); // match.Success == true;</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception">RegexMatchTimeoutException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_StringExtensions_RegexMatch_" data-uid="Lett.Extensions.StringExtensions.RegexMatch*"></a>
   <h4 id="Lett_Extensions_StringExtensions_RegexMatch_System_String_System_String_System_Text_RegularExpressions_RegexOptions_" data-uid="Lett.Extensions.StringExtensions.RegexMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">RegexMatch(String, String, RegexOptions)</h4>
   <div class="markdown level1 summary"><p>正则表达式 - 单个匹配对象</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Match RegexMatch(this string this, string pattern, RegexOptions regexOption = RegexOptions.None)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Match RegexMatch(this string this, string pattern, RegexOptions regexOption)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1046,7 +1330,7 @@ source.RegexIsMatch(@&quot;^abc.*\r$&quot;, RegexOptions.Multiline); // true</co
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a></td>
         <td><span class="parametername">regexOption</span></td>
-        <td><p>正则表达式选项，默认值：<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_None">None</a></p>
+        <td><p>正则表达式选项</p>
 </td>
       </tr>
     </tbody>
@@ -1099,13 +1383,14 @@ var match = str.RegexMatch(&quot;b&quot;); // match.Success == true;</code></pre
     </tbody>
   </table>
   <a id="Lett_Extensions_StringExtensions_RegexMatches_" data-uid="Lett.Extensions.StringExtensions.RegexMatches*"></a>
-  <h4 id="Lett_Extensions_StringExtensions_RegexMatches_System_String_System_String_System_Text_RegularExpressions_RegexOptions_" data-uid="Lett.Extensions.StringExtensions.RegexMatches(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">RegexMatches(String, String, RegexOptions)</h4>
+  <h4 id="Lett_Extensions_StringExtensions_RegexMatches_System_String_System_String_" data-uid="Lett.Extensions.StringExtensions.RegexMatches(System.String,System.String)">RegexMatches(String, String)</h4>
   <div class="markdown level1 summary"><p>正则表达式 - 所有匹配对象</p>
+<p>使用 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_None">None</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static MatchCollection RegexMatches(this string this, string pattern, RegexOptions regexOption = RegexOptions.None)</code></pre>
+    <pre><code class="lang-csharp hljs">public static MatchCollection RegexMatches(this string this, string pattern)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1120,8 +1405,82 @@ var match = str.RegexMatch(&quot;b&quot;); // match.Success == true;</code></pre
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>源字符串</p>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">pattern</span></td>
+        <td><p>正则表达式</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.matchcollection">MatchCollection</a></td>
+        <td><p>所有匹配对象</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_RegexMatches_System_String_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>var str   = &quot;aaaabaaaabaaaa&quot;;
+var matches = str.RegexMatches(@&quot;aaaab&quot;);  // matches.Count == 2</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_StringExtensions_RegexMatches_" data-uid="Lett.Extensions.StringExtensions.RegexMatches*"></a>
+  <h4 id="Lett_Extensions_StringExtensions_RegexMatches_System_String_System_String_System_Text_RegularExpressions_RegexOptions_" data-uid="Lett.Extensions.StringExtensions.RegexMatches(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">RegexMatches(String, String, RegexOptions)</h4>
+  <div class="markdown level1 summary"><p>正则表达式 - 所有匹配对象</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MatchCollection RegexMatches(this string this, string pattern, RegexOptions regexOption)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
@@ -1132,7 +1491,7 @@ var match = str.RegexMatch(&quot;b&quot;); // match.Success == true;</code></pre
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a></td>
         <td><span class="parametername">regexOption</span></td>
-        <td><p>正则表达式选项，默认值：<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_None">None</a></p>
+        <td><p>正则表达式选项</p>
 </td>
       </tr>
     </tbody>
@@ -1181,13 +1540,14 @@ var matches = str.RegexMatches(@&quot;aaaab&quot;);  // matches.Count == 2</code
     </tbody>
   </table>
   <a id="Lett_Extensions_StringExtensions_RegexReplace_" data-uid="Lett.Extensions.StringExtensions.RegexReplace*"></a>
-  <h4 id="Lett_Extensions_StringExtensions_RegexReplace_System_String_System_String_System_String_System_Text_RegularExpressions_RegexOptions_" data-uid="Lett.Extensions.StringExtensions.RegexReplace(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">RegexReplace(String, String, String, RegexOptions)</h4>
+  <h4 id="Lett_Extensions_StringExtensions_RegexReplace_System_String_System_String_System_String_" data-uid="Lett.Extensions.StringExtensions.RegexReplace(System.String,System.String,System.String)">RegexReplace(String, String, String)</h4>
   <div class="markdown level1 summary"><p>正则表达式 - 替换字符串</p>
+<p>使用 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_None">None</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string RegexReplace(this string this, string pattern, string replacement, RegexOptions regexOption = RegexOptions.None)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string RegexReplace(this string this, string pattern, string replacement)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1202,8 +1562,60 @@ var matches = str.RegexMatches(@&quot;aaaab&quot;);  // matches.Count == 2</code
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>源字符串</p>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">pattern</span></td>
+        <td><p>正则表达式</p>
 </td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">replacement</span></td>
+        <td><p>替换字符串</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_StringExtensions_RegexReplace_" data-uid="Lett.Extensions.StringExtensions.RegexReplace*"></a>
+  <h4 id="Lett_Extensions_StringExtensions_RegexReplace_System_String_System_String_System_String_System_Text_RegularExpressions_RegexOptions_" data-uid="Lett.Extensions.StringExtensions.RegexReplace(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)">RegexReplace(String, String, String, RegexOptions)</h4>
+  <div class="markdown level1 summary"><p>正则表达式 - 替换字符串</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string RegexReplace(this string this, string pattern, string replacement, RegexOptions regexOption)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
@@ -1220,7 +1632,7 @@ var matches = str.RegexMatches(@&quot;aaaab&quot;);  // matches.Count == 2</code
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a></td>
         <td><span class="parametername">regexOption</span></td>
-        <td><p>正则表达式选项，默认值：<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_None">None</a></p>
+        <td><p>正则表达式选项</p>
 </td>
       </tr>
     </tbody>
@@ -1321,13 +1733,14 @@ var matches = str.RegexMatches(@&quot;aaaab&quot;);  // matches.Count == 2</code
     </tbody>
   </table>
   <a id="Lett_Extensions_StringExtensions_RegexSplit_" data-uid="Lett.Extensions.StringExtensions.RegexSplit*"></a>
-  <h4 id="Lett_Extensions_StringExtensions_RegexSplit_System_String_System_String_System_Text_RegularExpressions_RegexOptions_" data-uid="Lett.Extensions.StringExtensions.RegexSplit(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">RegexSplit(String, String, RegexOptions)</h4>
+  <h4 id="Lett_Extensions_StringExtensions_RegexSplit_System_String_System_String_" data-uid="Lett.Extensions.StringExtensions.RegexSplit(System.String,System.String)">RegexSplit(String, String)</h4>
   <div class="markdown level1 summary"><p>正则表达式 - 拆分字符串</p>
+<p>使用 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_None">None</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string[] RegexSplit(this string this, string pattern, RegexOptions regexOption = RegexOptions.None)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string[] RegexSplit(this string this, string pattern)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1342,8 +1755,85 @@ var matches = str.RegexMatches(@&quot;aaaab&quot;);  // matches.Count == 2</code
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">this</span></td>
-        <td><p>源字符串</p>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">pattern</span></td>
+        <td><p>正则表达式</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_RegexSplit_System_String_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>var str = &quot;aaaa.bbbb.cccc&quot;;
+var rs = str.RegexSplit(@&quot;\.&quot;); // rs.Count == 3</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception">RegexMatchTimeoutException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_StringExtensions_RegexSplit_" data-uid="Lett.Extensions.StringExtensions.RegexSplit*"></a>
+  <h4 id="Lett_Extensions_StringExtensions_RegexSplit_System_String_System_String_System_Text_RegularExpressions_RegexOptions_" data-uid="Lett.Extensions.StringExtensions.RegexSplit(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">RegexSplit(String, String, RegexOptions)</h4>
+  <div class="markdown level1 summary"><p>正则表达式 - 拆分字符串</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string[] RegexSplit(this string this, string pattern, RegexOptions regexOption)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
@@ -1354,7 +1844,7 @@ var matches = str.RegexMatches(@&quot;aaaab&quot;);  // matches.Count == 2</code
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a></td>
         <td><span class="parametername">regexOption</span></td>
-        <td><p>正则表达式选项，默认值：<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions#System_Text_RegularExpressions_RegexOptions_None">None</a></p>
+        <td><p>正则表达式选项</p>
 </td>
       </tr>
     </tbody>
@@ -1472,13 +1962,80 @@ var rs = str.RegexSplit(@&quot;\.&quot;); // rs.Count == 3</code></pre>
     </tbody>
   </table>
   <a id="Lett_Extensions_StringExtensions_ToBytes_" data-uid="Lett.Extensions.StringExtensions.ToBytes*"></a>
+  <h4 id="Lett_Extensions_StringExtensions_ToBytes_System_String_" data-uid="Lett.Extensions.StringExtensions.ToBytes(System.String)">ToBytes(String)</h4>
+  <div class="markdown level1 summary"><p>转换为 byte 数组</p>
+<p>编码格式 默认为 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.encoding.utf8#System_Text_Encoding_UTF8">UTF8</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] ToBytes(this string this)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_ToBytes_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>var source = &quot;abcd&quot;;
+var rs = source.ToBytes(Encoding.Unicode);
+var rs2 = source.ToBytes();    // use Encoding.UTF8</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.encoderfallbackexception">EncoderFallbackException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_StringExtensions_ToBytes_" data-uid="Lett.Extensions.StringExtensions.ToBytes*"></a>
   <h4 id="Lett_Extensions_StringExtensions_ToBytes_System_String_System_Text_Encoding_" data-uid="Lett.Extensions.StringExtensions.ToBytes(System.String,System.Text.Encoding)">ToBytes(String, Encoding)</h4>
   <div class="markdown level1 summary"><p>转换为 byte 数组</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static byte[] ToBytes(this string this, Encoding encoding = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static byte[] ToBytes(this string this, Encoding encoding)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1498,7 +2055,7 @@ var rs = str.RegexSplit(@&quot;\.&quot;); // rs.Count == 3</code></pre>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></td>
         <td><span class="parametername">encoding</span></td>
-        <td><p>编码格式 默认为 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.encoding.utf8#System_Text_Encoding_UTF8">UTF8</a></p>
+        <td><p>编码格式</p>
 </td>
       </tr>
     </tbody>
@@ -1534,7 +2091,13 @@ var rs2 = source.ToBytes();    // use Encoding.UTF8</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">encoding</code> is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> is null</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.encoderfallbackexception">EncoderFallbackException</a></td>

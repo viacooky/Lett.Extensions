@@ -33,7 +33,7 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <param name="length">指定长度 不能小于 0</param>
-        /// <exception cref="System.ArgumentOutOfRangeException"><paramref name="length"/> 不能小于 0 </exception>
+        /// <exception cref="System.ArgumentOutOfRangeException"><paramref name="length" /> 不能小于 0 </exception>
         /// <returns></returns>
         /// <example>
         ///     <code>
@@ -52,7 +52,7 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <param name="length">指定长度 不能小于 0</param>
-        /// <exception cref="System.ArgumentOutOfRangeException"><paramref name="length"/> 不能小于 0 </exception>
+        /// <exception cref="System.ArgumentOutOfRangeException"><paramref name="length" /> 不能小于 0 </exception>
         /// <returns></returns>
         /// <example>
         ///     <code>
