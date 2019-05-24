@@ -120,10 +120,10 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs.Year, 2019);
             Assert.AreEqual(rs.Month, 4);
             Assert.AreEqual(rs.Day, 1);
-            Assert.AreEqual(rs.Hour,0);
-            Assert.AreEqual(rs.Minute,0);
-            Assert.AreEqual(rs.Second,0);
-            Assert.AreEqual(rs.Millisecond,0);
+            Assert.AreEqual(rs.Hour, 0);
+            Assert.AreEqual(rs.Minute, 0);
+            Assert.AreEqual(rs.Second, 0);
+            Assert.AreEqual(rs.Millisecond, 0);
         }
 
         [TestMethod]
@@ -134,10 +134,10 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs.Year, 2019);
             Assert.AreEqual(rs.Month, 4);
             Assert.AreEqual(rs.Day, 30);
-            Assert.AreEqual(rs.Hour,23);
-            Assert.AreEqual(rs.Minute,59);
-            Assert.AreEqual(rs.Second,59);
-            Assert.AreEqual(rs.Millisecond,999);
+            Assert.AreEqual(rs.Hour, 23);
+            Assert.AreEqual(rs.Minute, 59);
+            Assert.AreEqual(rs.Second, 59);
+            Assert.AreEqual(rs.Millisecond, 999);
         }
 
         [TestMethod]
@@ -148,10 +148,10 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs.Year, 2019);
             Assert.AreEqual(rs.Month, 1);
             Assert.AreEqual(rs.Day, 1);
-            Assert.AreEqual(rs.Hour,0);
-            Assert.AreEqual(rs.Minute,0);
-            Assert.AreEqual(rs.Second,0);
-            Assert.AreEqual(rs.Millisecond,000);
+            Assert.AreEqual(rs.Hour, 0);
+            Assert.AreEqual(rs.Minute, 0);
+            Assert.AreEqual(rs.Second, 0);
+            Assert.AreEqual(rs.Millisecond, 000);
         }
 
         [TestMethod]
@@ -162,10 +162,10 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs.Year, 2019);
             Assert.AreEqual(rs.Month, 12);
             Assert.AreEqual(rs.Day, 31);
-            Assert.AreEqual(rs.Hour,23);
-            Assert.AreEqual(rs.Minute,59);
-            Assert.AreEqual(rs.Second,59);
-            Assert.AreEqual(rs.Millisecond,999);
+            Assert.AreEqual(rs.Hour, 23);
+            Assert.AreEqual(rs.Minute, 59);
+            Assert.AreEqual(rs.Second, 59);
+            Assert.AreEqual(rs.Millisecond, 999);
         }
     }
 }
