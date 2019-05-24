@@ -150,5 +150,45 @@ namespace Lett.Extensions
         {
             return @this.StartOfMonth().AddMonths(1).Subtract(new TimeSpan(0, 0, 0, 0, 1));
         }
+
+
+        /// <summary>
+        ///     获取年的开始 DateTime (year-month-day 00:00:00.000)
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt = new DateTime(2019, 4, 12, 1, 2, 3);
+        /// var rs = dt.StartOfYear(); // 2019-01-01 00:00:00.000
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static DateTime StartOfYear(this DateTime @this)
+        {
+            return new DateTime(@this.Year, 1, 1);
+        }
+
+
+        /// <summary>
+        ///     获取年的结束 DateTime (year-month-day 23:59:59.999)
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt = new DateTime(2019, 4, 12, 1, 2, 3);
+        /// var rs = dt.EndOfYear(); // 2019-12-31 23.59.59.999
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static DateTime EndOfYear(this DateTime @this)
+        {
+            return @this.StartOfYear().AddYears(1).Subtract(new TimeSpan(0, 0, 0, 0, 1));
+        }
     }
 }

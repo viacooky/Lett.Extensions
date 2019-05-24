@@ -8,6 +8,13 @@
   - `IsBetween(DateTime startDateTime, DateTime endDateTime)` 是否在指定日期之间
   - `StartOfMonth(DateTime)` 获取月的开始 DateTime (year-month-day 00:00:00.000)
   - `EndOfMonth(DateTime)` 获取月的结束 DateTime (year-month-day 23:59:59.999)
+  - `StartOfYear(DateTime)` 获取年的开始 DateTime (year-month-day 00:00:00.000)
+  - `EndOfYear(DateTime)` 获取年的结束 DateTime (year-month-day 23:59:59.999)
+  - `IsToday(DateTime)` 是否当天
+  - `IsWeekDay(DateTime)` 是否工作日 (周一至周五)
+- 增加`Object`扩展方法:
+  - `In<T>(T, IEnumerable<T>)` 当前对象是否存在于 items 集合内
+  - `In<T>(T, IEnumerable<T>, IEqualityComparer<T>)` 当前对象是否存在于 items 集合内
 
 ### 0.2.0 (2019-05-21)
 
