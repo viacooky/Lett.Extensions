@@ -5,6 +5,8 @@
 ![Nuget](https://img.shields.io/nuget/dt/Lett.Extensions.svg)
 ![Azure DevOps tests (compact)](https://img.shields.io/azure-devops/tests/viacooky/Lett.Extensions/9.svg)
 ![Azure DevOps coverage (branch)](https://img.shields.io/azure-devops/coverage/viacooky/Lett.Extensions/9/master.svg?color=9cf)
+[![BCH compliance](https://bettercodehub.com/edge/badge/viacooky/Lett.Extensions?branch=master)](https://bettercodehub.com/)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ef28989ffe5848a5877b1e1ef8c6162e)](https://www.codacy.com/app/viacooky/Lett.Extensions?utm_source=github.com&utm_medium=referral&utm_content=viacooky/Lett.Extensions&utm_campaign=Badge_Grade)
 ![GitHub](https://img.shields.io/github/license/viacooky/Lett.Extensions.svg)
 
 ---
