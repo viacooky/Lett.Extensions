@@ -4,16 +4,24 @@ using System.Text;
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     string 扩展方法 - 加密
+    ///     string 扩展方法
     /// </summary>
     public static partial class StringExtensions
     {
         /// <summary>
-        ///     BASE64编码
-        ///     ps: 转换失败返回NULL
+        ///     <para>进行 BASE64 编码</para>
+        ///     <para>使用 <see cref="Encoding.UTF8" /></para>
         /// </summary>
         /// <param name="this"></param>
-        /// <returns></returns>
+        /// <returns>转换失败返回 <c>null</c></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var str1   = "ABCD";
+        /// str1.Base64Encode(); // "QUJDRA=="
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static string Base64Encode(this string @this)
         {
             try
@@ -22,15 +30,26 @@ namespace Lett.Extensions
                 var bytes    = encoding.GetBytes(@this);
                 return Convert.ToBase64String(bytes);
             }
-            catch { return null; }
+            catch
+            {
+                return null;
+            }
         }
 
         /// <summary>
-        ///     BASE64解码
-        ///     ps: 转换失败返回NULL
+        ///     <para>进行 BASE6 4解码</para>
+        ///     <para>使用 <see cref="Encoding.UTF8" /></para>
         /// </summary>
         /// <param name="this"></param>
-        /// <returns></returns>
+        /// <returns>转换失败返回 <c>null</c></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var base64 = "QUJDRA==";
+        /// base64.Base64Decode(); // "ABCD"
+        ///         ]]>
+        ///     </code>
+        /// </example>
         public static string Base64Decode(this string @this)
         {
             try
@@ -39,7 +58,10 @@ namespace Lett.Extensions
                 var bytes    = Convert.FromBase64String(@this);
                 return encoding.GetString(bytes);
             }
-            catch { return null; }
+            catch
+            {
+                return null;
+            }
         }
     }
 }

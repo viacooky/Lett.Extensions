@@ -5,12 +5,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to use | Lett.Extensions </title>
+    <title>Popular .Net Core / .Net Framework extension methods | Lett.Extensions </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to use | Lett.Extensions ">
-    <meta name="generator" content="docfx 2.42.1.0">
+    <meta name="title" content="Popular .Net Core / .Net Framework extension methods | Lett.Extensions ">
+    <meta name="generator" content="docfx 2.42.3.0">
     
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="images/icon/icon_128.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
     <link rel="stylesheet" href="styles/docfx.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -35,7 +35,7 @@
               </button>
               
               <a class="navbar-brand" href="index.html">
-                <img id="logo" class="svg" src="logo.svg" alt="">
+                <img id="logo" class="svg" src="images/logo_229_50.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -71,102 +71,115 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
 
-<p><img src="images/logo.png" alt=""></p>
+<div>
+<center><img src="images/logo.png" width="500" height="109">
+<br>
+<br>
 <p><img src="https://dev.azure.com/viacooky/Lett.Extensions/_apis/build/status/Lett.Extensions%20Push%20NuGet?branchName=master" alt="Build Status">
 <a href="https://www.nuget.org/packages/Lett.Extensions/"><img src="https://img.shields.io/nuget/v/Lett.Extensions.svg" alt="Nuget"></a>
+<img src="https://img.shields.io/nuget/dt/Lett.Extensions.svg" alt="Nuget">
 <img src="https://img.shields.io/azure-devops/tests/viacooky/Lett.Extensions/9.svg" alt="Azure DevOps tests (compact)">
 <img src="https://img.shields.io/azure-devops/coverage/viacooky/Lett.Extensions/9/master.svg?color=9cf" alt="Azure DevOps coverage (branch)">
-<img src="https://img.shields.io/github/license/viacooky/Lett.Extensions.svg" alt="GitHub">
-<a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu"></a></p>
-<p>Common C# extension methods collection</p>
-<p>NuGet: <a href="https://www.nuget.org/packages/Lett.Extensions/">https://www.nuget.org/packages/Lett.Extensions/</a></p>
-<p>GitHub: <a href="https://github.com/viacooky/Lett.Extensions/">https://github.com/viacooky/Lett.Extensions/</a></p>
-<h2 id="how-to-use">How to use</h2>
-<ul>
-<li><p>Package Manager</p>
-<p><code>Install-Package Lett.Extensions</code></p>
+<img src="https://img.shields.io/github/license/viacooky/Lett.Extensions.svg" alt="GitHub"></p>
+<br>
+<h3>Popular .Net Core / .Net Framework extension methods</h3>
+<br>
+<b><a href="version_notes.html">Version Notes</a></b> | <b><a href="https://github.com/viacooky/Lett.Extensions/">View in Github</a></b> | <b><a href="https://www.nuget.org/packages/Lett.Extensions/">View in Nuget</a></b></center>
+</div>
+<hr>
+<br>
+<h2 id="support-platform">Support Platform</h2>
+<div class="TIP">
+<h5>提示</h5>
+<p>Lett.Extensions Library is build at <code>.Net Standard 2.0</code></p>
+<p>You can find more information about .Net Standard from <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support"><strong>[here]</strong></a></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Support platform minimum version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.NET Standard</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>.NET Core</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>.NET Framework</td>
+<td>4.6.1</td>
+</tr>
+<tr>
+<td>Mono</td>
+<td>5.4</td>
+</tr>
+<tr>
+<td>Xamarin.iOS</td>
+<td>10.14</td>
+</tr>
+<tr>
+<td>Xamarin.Mac</td>
+<td>3.8</td>
+</tr>
+<tr>
+<td>Xamarin.Android</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Universal Windows Platform</td>
+<td>10.0.16299</td>
+</tr>
+<tr>
+<td>Unity</td>
+<td>2018.1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="installation">Installation</h2>
+<br>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true"><strong>Package Manager</strong></a>
 </li>
-<li><p>Nuget cli</p>
-<p><code>nuget install Lett.Extensions</code></p>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-b" data-tab="tabid-b" tabindex="-1"><strong>Nuget cli</strong></a>
 </li>
-<li><p>.Net cli</p>
-<p><code>dotnet add package Lett.Extensions</code></p>
-</li>
-</ul>
-<h2 id="change-logs">Change Logs</h2>
-<h3 id="020-2019-05-21">0.2.0 (2019-05-21)</h3>
-<h4 id="features--新增功能">Features / 新增功能</h4>
-<ul>
-<li>增加<code>IEnumerable&lt;T&gt;</code>扩展方法：
-<ul>
-<li><code>ContainsAny(IEnumerable&lt;T&gt; items)</code> 是否包含任一元素</li>
-<li><code>ContainsAll(IEnumerable&lt;T&gt; items)</code> 是否包含全部元素</li>
-</ul>
-</li>
-<li>增加<code>DateTime</code>扩展方法:
-<ul>
-<li><code>SetTime(int hour, int minute, int second, int millisecond = 0)</code> 设置 DateTime 的 time 部分</li>
-<li><code>StartOfDay()</code> 获取 DateTime 的开始 (year-month-day 00:00:00.000)</li>
-<li><code>EndOfDay()</code> 获取 DateTime 的结束 (year-month-day 23:59:59.999)</li>
-<li><code>StartOfWeek()</code> 获取本周开始的 DateTime (year-month-day 00:00:00.000)</li>
-<li><code>EndOfWeek()</code> 获取本周结束的 DateTime (year-month-day 23:59:59.999)</li>
-</ul>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-c" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-c" data-tab="tabid-c" tabindex="-1"><strong>.Net cli</strong></a>
 </li>
 </ul>
-<h4 id="changed--变更">Changed / 变更</h4>
+<section id="tabpanel_CeZOj-G++Q_tabid-a" role="tabpanel" data-tab="tabid-a">
+
+<p><strong>PM&gt; Install-Package Lett.Extensions</strong></p>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
+
+<p><strong>&gt; nuget install Lett.Extensions</strong></p>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-c" role="tabpanel" data-tab="tabid-c" aria-hidden="true" hidden="hidden">
+
+<p><strong>&gt; dotnet add package Lett.Extensions</strong></p>
+</section>
+</div>
+<h2 id="ducuments">Ducuments</h2>
 <ul>
-<li>移除<code>DateTime</code>扩展方法:
-<ul>
-<li><code>RemoveTimePart()</code> 移除时间部分</li>
+<li><a href="api/Lett.Extensions.ArrayExtensions.html">ArrayExtensions</a></li>
+<li><a href="api/Lett.Extensions.BooleanExtensions.html">BooleanExtensions</a></li>
+<li><a href="api/Lett.Extensions.BooleanExtensions.html">ByteExtensions</a></li>
+<li><a href="api/Lett.Extensions.BooleanExtensions.html">ByteExtensions</a></li>
+<li><a href="api/Lett.Extensions.DataRowExtensions.html">DataRowExtensions</a></li>
+<li><a href="api/Lett.Extensions.DataTableExtensions.html">DataTableExtensions</a></li>
+<li><a href="api/index.html">More ...</a></li>
 </ul>
-</li>
-</ul>
-<h3 id="019-2019-05-18">0.1.9 (2019-05-18)</h3>
-<h4 id="features--新增功能-1">Features / 新增功能</h4>
-<ul>
-<li>增加<code>DateTime</code>扩展方法:
-<ul>
-<li><code>RemoveTimePart()</code> 移除时间部分</li>
-</ul>
-</li>
-<li>增加<code>Array</code>扩展方法
-<ul>
-<li><code>ClearAll()</code> 全部清除</li>
-<li><code>ContainsIndex(int index)</code> 是否包含索引</li>
-<li><code>Sort()</code> 排序</li>
-<li><code>Reverse()</code> 反转</li>
-<li><code>Find()</code> 返回数组中的第一个匹配元素</li>
-<li><code>FindLast()</code> 返回数组中的最后一个匹配元素</li>
-<li><code>FindAll()</code> 返回数组中所有匹配的元素</li>
-<li><code>FindIndex()</code> 返回数组中的第一个匹配元素的索引</li>
-<li><code>FindLastIndex()</code> 返回数组中的最后一个匹配元素的索引</li>
-<li><code>ForEach()</code> 对指定数组的每个元素执行指定操作</li>
-</ul>
-</li>
-</ul>
-<h3 id="018-2019-05-13">0.1.8 (2019-05-13)</h3>
-<h4 id="features--新增功能-2">Features / 新增功能</h4>
-<ul>
-<li>增加<code>string</code>扩展方法</li>
-<li>增加<code>byte[]</code>扩展方法</li>
-<li>增加<code>ICollection</code>扩展方法</li>
-<li>增加<code>bool</code>扩展方法</li>
-<li>增加<code>int</code>扩展方法</li>
-<li>增加<code>long</code>扩展方法</li>
-</ul>
-<h4 id="features--新增功能-3">Features / 新增功能</h4>
-<ul>
-<li>增加<code>string</code>扩展方法</li>
-<li>增加<code>byte[]</code>扩展方法</li>
-<li>增加<code>ICollection</code>扩展方法</li>
-<li>增加<code>bool</code>扩展方法</li>
-<li>增加<code>int</code>扩展方法</li>
-<li>增加<code>long</code>扩展方法</li>
-</ul>
-<h4 id="changed--变更-1">Changed / 变更</h4>
-<ul>
-<li>对扩展方法类名进行规范重命名</li>
-</ul>
+<hr>
+<h2 id="lisence">Lisence</h2>
+<p><a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/LICENSE.txt">MIT</a> © viacooky</p>
 </article>
           </div>
           
