@@ -14,11 +14,35 @@ namespace Lett.Extensions
         /// <param name="hour">小时 (0-23) </param>
         /// <param name="minute">分钟 (0-59) </param>
         /// <param name="second">秒 (0-59) </param>
-        /// <param name="millisecond">毫秒 (0-999) 默认0</param>
         /// <returns>返回一个新的<see cref="DateTime" /></returns>
         /// <exception cref="ArgumentOutOfRangeException">
         ///     <paramref name="hour" />、<paramref name="minute" /> 和
         ///     <paramref name="second" /> 参数描述了一个无法表示的日期时间
+        /// </exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt2 = new DateTime(2019, 4, 1, 1, 2, 3);
+        /// var rs2 = dt2.SetTime(23, 11, 11, 999);
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static DateTime SetTime(this DateTime @this, int hour, int minute, int second)
+        {
+            return @this.SetTime(hour, minute, second, 0);
+        }
+
+        /// <summary>
+        ///     设置DateTime的time部分
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="hour">小时 (0-23) </param>
+        /// <param name="minute">分钟 (0-59) </param>
+        /// <param name="second">秒 (0-59) </param>
+        /// <param name="millisecond">毫秒 (0-999) 默认0</param>
+        /// <returns>返回一个新的<see cref="DateTime" /></returns>
+        /// <exception cref="ArgumentOutOfRangeException">
+        ///     <paramref name="hour" />、<paramref name="minute" />、<paramref name="second" />、<paramref name="millisecond" /> 参数描述了一个无法表示的日期时间
         /// </exception>
         /// <exception cref="ArgumentOutOfRangeException"><paramref name="millisecond" /> 的有效值不在0和999之间</exception>
         /// <example>
@@ -29,7 +53,7 @@ namespace Lett.Extensions
         ///         ]]>
         ///     </code>
         /// </example>
-        public static DateTime SetTime(this DateTime @this, int hour, int minute, int second, int millisecond = 0)
+        public static DateTime SetTime(this DateTime @this, int hour, int minute, int second, int millisecond)
         {
             return new DateTime(@this.Year, @this.Month, @this.Day, hour, minute, second, millisecond);
         }
@@ -151,7 +175,6 @@ namespace Lett.Extensions
             return @this.StartOfMonth().AddMonths(1).Subtract(new TimeSpan(0, 0, 0, 0, 1));
         }
 
-
         /// <summary>
         ///     获取年的开始 DateTime (year-month-day 00:00:00.000)
         /// </summary>
@@ -170,7 +193,6 @@ namespace Lett.Extensions
         {
             return new DateTime(@this.Year, 1, 1);
         }
-
 
         /// <summary>
         ///     获取年的结束 DateTime (year-month-day 23:59:59.999)

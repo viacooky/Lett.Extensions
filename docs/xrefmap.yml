@@ -720,6 +720,12 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DateTimeExtensions.IsWeekDay
   nameWithType: DateTimeExtensions.IsWeekDay
+- uid: Lett.Extensions.DateTimeExtensions.SetTime(System.DateTime,System.Int32,System.Int32,System.Int32)
+  name: SetTime(DateTime, Int32, Int32, Int32)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_SetTime_System_DateTime_System_Int32_System_Int32_System_Int32_
+  commentId: M:Lett.Extensions.DateTimeExtensions.SetTime(System.DateTime,System.Int32,System.Int32,System.Int32)
+  fullName: Lett.Extensions.DateTimeExtensions.SetTime(System.DateTime, System.Int32, System.Int32, System.Int32)
+  nameWithType: DateTimeExtensions.SetTime(DateTime, Int32, Int32, Int32)
 - uid: Lett.Extensions.DateTimeExtensions.SetTime(System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32)
   name: SetTime(DateTime, Int32, Int32, Int32, Int32)
   href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_SetTime_System_DateTime_System_Int32_System_Int32_System_Int32_System_Int32_
@@ -1364,6 +1370,15 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.StringExtensions.Base64Encode
   nameWithType: StringExtensions.Base64Encode
+- uid: Lett.Extensions.StringExtensions.ContainsAll(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name: ContainsAll(String, IEnumerable<String>)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ContainsAll_System_String_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Lett.Extensions.StringExtensions.ContainsAll(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: ContainsAll(String, IEnumerable(Of String))
+  fullName: Lett.Extensions.StringExtensions.ContainsAll(System.String, System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Lett.Extensions.StringExtensions.ContainsAll(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: StringExtensions.ContainsAll(String, IEnumerable<String>)
+  nameWithType.vb: StringExtensions.ContainsAll(String, IEnumerable(Of String))
 - uid: Lett.Extensions.StringExtensions.ContainsAll(System.String,System.Collections.Generic.IEnumerable{System.String},System.StringComparison)
   name: ContainsAll(String, IEnumerable<String>, StringComparison)
   href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ContainsAll_System_String_System_Collections_Generic_IEnumerable_System_String__System_StringComparison_
@@ -1380,6 +1395,15 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.StringExtensions.ContainsAll
   nameWithType: StringExtensions.ContainsAll
+- uid: Lett.Extensions.StringExtensions.ContainsAny(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name: ContainsAny(String, IEnumerable<String>)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ContainsAny_System_String_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Lett.Extensions.StringExtensions.ContainsAny(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: ContainsAny(String, IEnumerable(Of String))
+  fullName: Lett.Extensions.StringExtensions.ContainsAny(System.String, System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Lett.Extensions.StringExtensions.ContainsAny(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: StringExtensions.ContainsAny(String, IEnumerable<String>)
+  nameWithType.vb: StringExtensions.ContainsAny(String, IEnumerable(Of String))
 - uid: Lett.Extensions.StringExtensions.ContainsAny(System.String,System.Collections.Generic.IEnumerable{System.String},System.StringComparison)
   name: ContainsAny(String, IEnumerable<String>, StringComparison)
   href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ContainsAny_System_String_System_Collections_Generic_IEnumerable_System_String__System_StringComparison_
@@ -1529,6 +1553,12 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.StringExtensions.Left
   nameWithType: StringExtensions.Left
+- uid: Lett.Extensions.StringExtensions.RegexIsMatch(System.String,System.String)
+  name: RegexIsMatch(String, String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexIsMatch_System_String_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.RegexIsMatch(System.String,System.String)
+  fullName: Lett.Extensions.StringExtensions.RegexIsMatch(System.String, System.String)
+  nameWithType: StringExtensions.RegexIsMatch(String, String)
 - uid: Lett.Extensions.StringExtensions.RegexIsMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)
   name: RegexIsMatch(String, String, RegexOptions)
   href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexIsMatch_System_String_System_String_System_Text_RegularExpressions_RegexOptions_
@@ -1542,6 +1572,12 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.StringExtensions.RegexIsMatch
   nameWithType: StringExtensions.RegexIsMatch
+- uid: Lett.Extensions.StringExtensions.RegexMatch(System.String,System.String)
+  name: RegexMatch(String, String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexMatch_System_String_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.RegexMatch(System.String,System.String)
+  fullName: Lett.Extensions.StringExtensions.RegexMatch(System.String, System.String)
+  nameWithType: StringExtensions.RegexMatch(String, String)
 - uid: Lett.Extensions.StringExtensions.RegexMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)
   name: RegexMatch(String, String, RegexOptions)
   href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexMatch_System_String_System_String_System_Text_RegularExpressions_RegexOptions_
@@ -1555,6 +1591,12 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.StringExtensions.RegexMatch
   nameWithType: StringExtensions.RegexMatch
+- uid: Lett.Extensions.StringExtensions.RegexMatches(System.String,System.String)
+  name: RegexMatches(String, String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexMatches_System_String_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.RegexMatches(System.String,System.String)
+  fullName: Lett.Extensions.StringExtensions.RegexMatches(System.String, System.String)
+  nameWithType: StringExtensions.RegexMatches(String, String)
 - uid: Lett.Extensions.StringExtensions.RegexMatches(System.String,System.String,System.Text.RegularExpressions.RegexOptions)
   name: RegexMatches(String, String, RegexOptions)
   href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexMatches_System_String_System_String_System_Text_RegularExpressions_RegexOptions_
@@ -1568,6 +1610,12 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.StringExtensions.RegexMatches
   nameWithType: StringExtensions.RegexMatches
+- uid: Lett.Extensions.StringExtensions.RegexReplace(System.String,System.String,System.String)
+  name: RegexReplace(String, String, String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexReplace_System_String_System_String_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.RegexReplace(System.String,System.String,System.String)
+  fullName: Lett.Extensions.StringExtensions.RegexReplace(System.String, System.String, System.String)
+  nameWithType: StringExtensions.RegexReplace(String, String, String)
 - uid: Lett.Extensions.StringExtensions.RegexReplace(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)
   name: RegexReplace(String, String, String, RegexOptions)
   href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexReplace_System_String_System_String_System_String_System_Text_RegularExpressions_RegexOptions_
@@ -1587,6 +1635,12 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.StringExtensions.RegexReplace
   nameWithType: StringExtensions.RegexReplace
+- uid: Lett.Extensions.StringExtensions.RegexSplit(System.String,System.String)
+  name: RegexSplit(String, String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexSplit_System_String_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.RegexSplit(System.String,System.String)
+  fullName: Lett.Extensions.StringExtensions.RegexSplit(System.String, System.String)
+  nameWithType: StringExtensions.RegexSplit(String, String)
 - uid: Lett.Extensions.StringExtensions.RegexSplit(System.String,System.String,System.Text.RegularExpressions.RegexOptions)
   name: RegexSplit(String, String, RegexOptions)
   href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexSplit_System_String_System_String_System_Text_RegularExpressions_RegexOptions_
@@ -1613,6 +1667,12 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.StringExtensions.Right
   nameWithType: StringExtensions.Right
+- uid: Lett.Extensions.StringExtensions.ToBytes(System.String)
+  name: ToBytes(String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ToBytes_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.ToBytes(System.String)
+  fullName: Lett.Extensions.StringExtensions.ToBytes(System.String)
+  nameWithType: StringExtensions.ToBytes(String)
 - uid: Lett.Extensions.StringExtensions.ToBytes(System.String,System.Text.Encoding)
   name: ToBytes(String, Encoding)
   href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ToBytes_System_String_System_Text_Encoding_

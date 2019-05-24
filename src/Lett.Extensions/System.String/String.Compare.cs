@@ -56,10 +56,7 @@ namespace Lett.Extensions
                 var uri = new Uri(@this);
                 return true;
             }
-            catch
-            {
-                return false;
-            }
+            catch { return false; }
         }
 
         /// <summary>
@@ -117,7 +114,6 @@ namespace Lett.Extensions
             return @this.Equals(value, StringComparison.CurrentCultureIgnoreCase);
         }
 
-
         /// <summary>
         ///     是否 null 或 string.Empty
         /// </summary>
@@ -155,16 +151,13 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     是否全部包含
+        ///     <para>是否全部包含</para>
+        ///     <para>使用 <see cref="StringComparison.CurrentCultureIgnoreCase" /> 比较</para>
         /// </summary>
         /// <param name="this"></param>
         /// <param name="values">需要进行判断的字符串集合</param>
-        /// <param name="comparisonType">
-        ///     <para>字符串比较规则</para>
-        ///     <para>默认值: <see cref="StringComparison.CurrentCultureIgnoreCase" /></para>
-        /// </param>
         /// <returns></returns>
-        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentNullException"><paramref name="values" /> is null </exception>
         /// <exception cref="ArgumentException"></exception>
         /// <example>
         ///     <code>
@@ -175,7 +168,30 @@ namespace Lett.Extensions
         ///         ]]>
         ///     </code>
         /// </example>
-        public static bool ContainsAll(this string @this, IEnumerable<string> values, StringComparison comparisonType = StringComparison.CurrentCultureIgnoreCase)
+        public static bool ContainsAll(this string @this, IEnumerable<string> values)
+        {
+            return @this.ContainsAll(values, StringComparison.CurrentCultureIgnoreCase);
+        }
+
+        /// <summary>
+        ///     是否全部包含
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="values">需要进行判断的字符串集合</param>
+        /// <param name="comparisonType">字符串比较规则</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="values" /> is null </exception>
+        /// <exception cref="ArgumentException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var a = "aaabbbccc";
+        /// var b = new[] {"aaa", "bbb"};
+        /// a.ContainsAll(b);  // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static bool ContainsAll(this string @this, IEnumerable<string> values, StringComparison comparisonType)
         {
             return values.All(s => @this.IndexOf(s, comparisonType) >= 0);
         }
@@ -185,10 +201,7 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <param name="values">需要进行判断的字符串集合</param>
-        /// <param name="comparisonType">
-        ///     <para>字符串比较规则</para>
-        ///     <para>默认值: <see cref="StringComparison.CurrentCultureIgnoreCase" /></para>
-        /// </param>
+        /// <param name="comparisonType">字符串比较规则</param>
         /// <returns></returns>
         /// <example>
         ///     <code>
@@ -199,9 +212,30 @@ namespace Lett.Extensions
         ///         ]]>
         ///     </code>
         /// </example>
-        public static bool ContainsAny(this string @this, IEnumerable<string> values, StringComparison comparisonType = StringComparison.CurrentCultureIgnoreCase)
+        public static bool ContainsAny(this string @this, IEnumerable<string> values, StringComparison comparisonType)
         {
             return values.Any(s => @this.IndexOf(s, comparisonType) >= 0);
+        }
+
+        /// <summary>
+        ///     <para>是否包含任意一个</para>
+        ///     <para>使用 <see cref="StringComparison.CurrentCultureIgnoreCase" /> 判断</para>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="values">需要进行判断的字符串集合</param>
+        /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var a = "aaabbbccc";
+        /// var b = new[] {"a", "dd", "eee"};
+        /// a.ContainsAny(b); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static bool ContainsAny(this string @this, IEnumerable<string> values)
+        {
+            return @this.ContainsAny(values, StringComparison.CurrentCultureIgnoreCase);
         }
 
         /// <summary>

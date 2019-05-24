@@ -96,7 +96,7 @@ namespace Lett.Extensions
         /// <typeparam name="T">数组的元素类型</typeparam>
         /// <returns></returns>
         /// <exception cref="T:System.ArgumentNullException"><paramref name="this" /> 或 <paramref name="match" /> 为空.</exception>
-        /// <exception cref="ArgumentOutOfRangeException"/>
+        /// <exception cref="ArgumentOutOfRangeException" />
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -119,7 +119,7 @@ namespace Lett.Extensions
         /// <typeparam name="T">数组的元素类型</typeparam>
         /// <returns></returns>
         /// <exception cref="T:System.ArgumentNullException"><paramref name="this" /> 或 <paramref name="match" /> 为空.</exception>
-        /// <exception cref="ArgumentOutOfRangeException"/>
+        /// <exception cref="ArgumentOutOfRangeException" />
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -162,7 +162,7 @@ namespace Lett.Extensions
         /// <typeparam name="T">数组的元素类型</typeparam>
         /// <returns></returns>
         /// <exception cref="T:System.ArgumentNullException"><paramref name="this" /> 或 <paramref name="match" /> 为空.</exception>
-        /// <exception cref="ArgumentOutOfRangeException"/>
+        /// <exception cref="ArgumentOutOfRangeException" />
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -185,7 +185,7 @@ namespace Lett.Extensions
         /// <typeparam name="T">数组的元素类型</typeparam>
         /// <returns></returns>
         /// <exception cref="T:System.ArgumentNullException"><paramref name="this" /> 或 <paramref name="match" /> 为空.</exception>
-        /// <exception cref="ArgumentOutOfRangeException"/>
+        /// <exception cref="ArgumentOutOfRangeException" />
         /// <example>
         ///     <code>
         ///         <![CDATA[

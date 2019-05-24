@@ -30,10 +30,7 @@ namespace Lett.Extensions
                 var bytes    = encoding.GetBytes(@this);
                 return Convert.ToBase64String(bytes);
             }
-            catch
-            {
-                return null;
-            }
+            catch { return null; }
         }
 
         /// <summary>
@@ -58,10 +55,7 @@ namespace Lett.Extensions
                 var bytes    = Convert.FromBase64String(@this);
                 return encoding.GetString(bytes);
             }
-            catch
-            {
-                return null;
-            }
+            catch { return null; }
         }
     }
 }

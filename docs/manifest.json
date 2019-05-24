@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "D:/Code/github.com/Lett.Extensions/docs_build",
+  "source_base_path": "/Users/viacooky/Code/github.com/Lett.Extensions/docs_build",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.ArrayExtensions.html",
-          "hash": "ZUnzwkQgqPN/xK/CRYLAiQ=="
+          "hash": "78qkqKpGNaeIrYz2M/tFmA=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.BooleanExtensions.html",
-          "hash": "5Na1xBdex1l7opK+AioW+Q=="
+          "hash": "VpqdUAGNm9WK914v69iBiQ=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.ByteExtensions.html",
-          "hash": "rGF9Lhty5pEn/xzY8ejYIA=="
+          "hash": "yIrE5Zr8/iKFWQTceXVy3Q=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.DataColumnCollectionExtensions.html",
-          "hash": "3dywAJCzjpLqSIpGLRgGGA=="
+          "hash": "5AicWLshyOWa8BOcHEjCQw=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.DataRowExtensions.html",
-          "hash": "gD/gtk15Xyk5sMIaj1Fg0A=="
+          "hash": "o/sJWZaiossQmWRNE28vZQ=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.DataTableExtensions.html",
-          "hash": "Q2HIrekCACKrVuNEZuFeRw=="
+          "hash": "nVZ1rDCMFcrL9EvHL+K+lg=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.DateTimeExtensions.html",
-          "hash": "9jrPBGVSGLyq8sDp1n2I+g=="
+          "hash": "GUu47G0TG0kue+onqBMpkQ=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.EnumExtensions.html",
-          "hash": "sqSwkm9MNp8GEND8B0rcaQ=="
+          "hash": "zprxAd/meQUZBOQRqQCDLQ=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.Exceptions.DataTableException.html",
-          "hash": "kVRdtmcLNDMJQsh8PpPEcQ=="
+          "hash": "1VJTAKKHnY7eWlRvNATSOw=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.Exceptions.html",
-          "hash": "tS2OQPgPGSQ6MHhBdYEXCA=="
+          "hash": "sZ4di2VOeWqTfqQ0F75I8Q=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.ICollectionsExtensions.html",
-          "hash": "qcZ51CdZkHgUbKkl5Z2VLg=="
+          "hash": "9clmnABmVgUA7fc/ewRDHg=="
         }
       },
       "is_incremental": false,
@@ -150,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.IEnumerableExtensions.html",
-          "hash": "FBr2aVai0rgtUt3y4b2OZQ=="
+          "hash": "M3qK67cbQnvd7LUnEBJKRA=="
         }
       },
       "is_incremental": false,
@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.IntExtensions.html",
-          "hash": "bQ430q83n2nvhxNolpS+nw=="
+          "hash": "rDgQSxNEGIeN5ZoOmR26ag=="
         }
       },
       "is_incremental": false,
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.LongExtensions.html",
-          "hash": "0Zb6gzBTCb3i9grYNyqs5g=="
+          "hash": "ct5Ac8kb4WUl5Hg5he/r5A=="
         }
       },
       "is_incremental": false,
@@ -186,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.ObjectExtensions.html",
-          "hash": "3i7BIVrAJHKu8TMpekyp1Q=="
+          "hash": "QP34OmOrhGx/wF1cROYArw=="
         }
       },
       "is_incremental": false,
@@ -198,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.StringExtensions.html",
-          "hash": "GmNTOIo6NL1szxFTUNA1Hw=="
+          "hash": "wHiQXG+IheDRPOhdTwHEPg=="
         }
       },
       "is_incremental": false,
@@ -210,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.TypeExtensions.html",
-          "hash": "QlPEo0rT1GgGEombWHlekQ=="
+          "hash": "fcSo5IEN0IAmd21ciZ+2QA=="
         }
       },
       "is_incremental": false,
@@ -222,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.html",
-          "hash": "a/WWnWjDPDQ0hy/fZnZbFA=="
+          "hash": "nmTN5LYBlAKAedE7s6AYng=="
         }
       },
       "is_incremental": false,
@@ -234,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "twIiMsRt1UYH17X+6N41TQ=="
+          "hash": "/OPCfbtSJMCZkb50FDQdoA=="
         }
       },
       "is_incremental": false,
@@ -254,83 +254,11 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/icon/icon_128.ico",
-      "output": {
-        "resource": {
-          "relative_path": "images/icon/icon_128.ico",
-          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/icon/icon_128.ico"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/icon/icon_16.ico",
-      "output": {
-        "resource": {
-          "relative_path": "images/icon/icon_16.ico",
-          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/icon/icon_16.ico"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/icon/icon_24.ico",
-      "output": {
-        "resource": {
-          "relative_path": "images/icon/icon_24.ico",
-          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/icon/icon_24.ico"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/icon/icon_32.ico",
-      "output": {
-        "resource": {
-          "relative_path": "images/icon/icon_32.ico",
-          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/icon/icon_32.ico"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/icon/icon_48.ico",
-      "output": {
-        "resource": {
-          "relative_path": "images/icon/icon_48.ico",
-          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/icon/icon_48.ico"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/icon/icon_64.ico",
-      "output": {
-        "resource": {
-          "relative_path": "images/icon/icon_64.ico",
-          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/icon/icon_64.ico"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "images/icon_128.ico",
       "output": {
         "resource": {
           "relative_path": "images/icon_128.ico",
-          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/icon_128.ico"
+          "link_to_path": "/Users/viacooky/Code/github.com/Lett.Extensions/docs_build/images/icon_128.ico"
         }
       },
       "is_incremental": false,
@@ -342,7 +270,7 @@
       "output": {
         "resource": {
           "relative_path": "images/logo.png",
-          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/logo.png"
+          "link_to_path": "/Users/viacooky/Code/github.com/Lett.Extensions/docs_build/images/logo.png"
         }
       },
       "is_incremental": false,
@@ -354,7 +282,7 @@
       "output": {
         "resource": {
           "relative_path": "images/logo.simple.png",
-          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/logo.simple.png"
+          "link_to_path": "/Users/viacooky/Code/github.com/Lett.Extensions/docs_build/images/logo.simple.png"
         }
       },
       "is_incremental": false,
@@ -366,7 +294,7 @@
       "output": {
         "resource": {
           "relative_path": "images/logo_174_38.png",
-          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/logo_174_38.png"
+          "link_to_path": "/Users/viacooky/Code/github.com/Lett.Extensions/docs_build/images/logo_174_38.png"
         }
       },
       "is_incremental": false,
@@ -378,7 +306,7 @@
       "output": {
         "resource": {
           "relative_path": "images/logo_229_50.png",
-          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/logo_229_50.png"
+          "link_to_path": "/Users/viacooky/Code/github.com/Lett.Extensions/docs_build/images/logo_229_50.png"
         }
       },
       "is_incremental": false,
@@ -390,7 +318,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "e/omVKUgvazTVWf11HV0Vw=="
+          "hash": "s0DtL80OtIfB5nYyZ3iE9A=="
         }
       },
       "is_incremental": false,
@@ -414,7 +342,7 @@
       "output": {
         ".html": {
           "relative_path": "version_notes.html",
-          "hash": "4biVRR/q26c8h86UIVz/mQ=="
+          "hash": "l1ufFbxrOx32qpT1fEzdjA=="
         }
       },
       "is_incremental": false,
@@ -424,34 +352,36 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because config changed.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ConfigChanged"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 3
-        },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 18,
-          "skipped_file_count": 18
+          "skipped_file_count": 0
         },
-        "ResourceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
