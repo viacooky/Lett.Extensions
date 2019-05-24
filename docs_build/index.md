@@ -42,8 +42,6 @@
 
 ## Installation
 
-<br/>
-
 # [**Package Manager**](#tab/tabid-a)
 
 **PM> Install-Package Lett.Extensions**
@@ -70,6 +68,10 @@
 
 ---
 
+## Version Notes
+
+see also from [**[here]**](version_notes.md)
+
 ## Lisence
 
-[MIT](https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/LICENSE.txt) © viacooky
+[![GitHub](https://img.shields.io/github/license/viacooky/Lett.Extensions.svg)](https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/LICENSE.txt)
