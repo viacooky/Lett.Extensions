@@ -16,7 +16,10 @@ namespace Lett.Extensions
         /// <param name="second">秒 (0-59) </param>
         /// <param name="millisecond">毫秒 (0-999) 默认0</param>
         /// <returns>返回一个新的<see cref="DateTime" /></returns>
-        /// <exception cref="ArgumentOutOfRangeException"><paramref name="hour" />、<paramref name="minute" /> 和 <paramref name="second" /> 参数描述了一个无法表示的日期时间</exception>
+        /// <exception cref="ArgumentOutOfRangeException">
+        ///     <paramref name="hour" />、<paramref name="minute" /> 和
+        ///     <paramref name="second" /> 参数描述了一个无法表示的日期时间
+        /// </exception>
         /// <exception cref="ArgumentOutOfRangeException"><paramref name="millisecond" /> 的有效值不在0和999之间</exception>
         /// <example>
         ///     <code>
@@ -69,7 +72,6 @@ namespace Lett.Extensions
             return @this.SetTime(23, 59, 59, 999);
         }
 
-
         /// <summary>
         ///     获取本周开始 DateTime (year-month-day 00:00:00.000)
         /// </summary>
@@ -109,6 +111,84 @@ namespace Lett.Extensions
         public static DateTime EndOfWeek(this DateTime @this, DayOfWeek startOfWeek)
         {
             return @this.StartOfWeek(startOfWeek).AddDays(6).EndOfDay();
+        }
+
+        /// <summary>
+        ///     获取月的开始 DateTime (year-month-day 00:00:00.000)
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt = new DateTime(2019, 4, 12, 1, 2, 3);
+        /// var rs = dt.StartOfMonth(); // 2019-04-01 00:00:00.000
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static DateTime StartOfMonth(this DateTime @this)
+        {
+            return new DateTime(@this.Year, @this.Month, 1);
+        }
+
+        /// <summary>
+        ///     获取月的结束 DateTime (year-month-day 23:59:59.999)
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt = new DateTime(2019, 4, 12, 1, 2, 3);
+        /// var rs = dt.EndOfMonth(); // 2019-04-30 23:59:59.999
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static DateTime EndOfMonth(this DateTime @this)
+        {
+            return @this.StartOfMonth().AddMonths(1).Subtract(new TimeSpan(0, 0, 0, 0, 1));
+        }
+
+
+        /// <summary>
+        ///     获取年的开始 DateTime (year-month-day 00:00:00.000)
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt = new DateTime(2019, 4, 12, 1, 2, 3);
+        /// var rs = dt.StartOfYear(); // 2019-01-01 00:00:00.000
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static DateTime StartOfYear(this DateTime @this)
+        {
+            return new DateTime(@this.Year, 1, 1);
+        }
+
+
+        /// <summary>
+        ///     获取年的结束 DateTime (year-month-day 23:59:59.999)
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt = new DateTime(2019, 4, 12, 1, 2, 3);
+        /// var rs = dt.EndOfYear(); // 2019-12-31 23.59.59.999
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static DateTime EndOfYear(this DateTime @this)
+        {
+            return @this.StartOfYear().AddYears(1).Subtract(new TimeSpan(0, 0, 0, 0, 1));
         }
     }
 }
