@@ -13,7 +13,6 @@ namespace Lett.Extensions.Test
             var startDateTime =new DateTime(2019,4,1,1,1,1);
             var endDateTime =new DateTime(2019,4,1);
             Assert.IsFalse(dt.IsBetween(startDateTime, endDateTime));
-
         }
 
     }

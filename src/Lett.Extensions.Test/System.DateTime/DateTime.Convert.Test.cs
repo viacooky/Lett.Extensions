@@ -111,5 +111,33 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs2.Second, 59);
             Assert.AreEqual(rs2.Millisecond, 999);
         }
+
+        [TestMethod]
+        public void StartOfMonth_Test()
+        {
+            var dt = new DateTime(2019, 4, 12, 1, 2, 3);
+            var rs = dt.StartOfMonth();
+            Assert.AreEqual(rs.Year, 2019);
+            Assert.AreEqual(rs.Month, 4);
+            Assert.AreEqual(rs.Day, 1);
+            Assert.AreEqual(rs.Hour,0);
+            Assert.AreEqual(rs.Minute,0);
+            Assert.AreEqual(rs.Second,0);
+            Assert.AreEqual(rs.Millisecond,0);
+        }
+
+        [TestMethod]
+        public void EndOfMonth_Test()
+        {
+            var dt = new DateTime(2019, 4, 12, 1, 2, 3);
+            var rs = dt.EndOfMonth();
+            Assert.AreEqual(rs.Year, 2019);
+            Assert.AreEqual(rs.Month, 4);
+            Assert.AreEqual(rs.Day, 30);
+            Assert.AreEqual(rs.Hour,23);
+            Assert.AreEqual(rs.Minute,59);
+            Assert.AreEqual(rs.Second,59);
+            Assert.AreEqual(rs.Millisecond,999);
+        }
     }
 }

@@ -577,6 +577,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DateTimeExtensions.EndOfDay
   nameWithType: DateTimeExtensions.EndOfDay
+- uid: Lett.Extensions.DateTimeExtensions.EndOfMonth(System.DateTime)
+  name: EndOfMonth(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfMonth_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.EndOfMonth(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.EndOfMonth(System.DateTime)
+  nameWithType: DateTimeExtensions.EndOfMonth(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.EndOfMonth*
+  name: EndOfMonth
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfMonth_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.EndOfMonth
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.EndOfMonth
+  nameWithType: DateTimeExtensions.EndOfMonth
 - uid: Lett.Extensions.DateTimeExtensions.EndOfWeek(System.DateTime,System.DayOfWeek)
   name: EndOfWeek(DateTime, DayOfWeek)
   href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfWeek_System_DateTime_System_DayOfWeek_
@@ -694,6 +707,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DateTimeExtensions.StartOfDay
   nameWithType: DateTimeExtensions.StartOfDay
+- uid: Lett.Extensions.DateTimeExtensions.StartOfMonth(System.DateTime)
+  name: StartOfMonth(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfMonth_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.StartOfMonth(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.StartOfMonth(System.DateTime)
+  nameWithType: DateTimeExtensions.StartOfMonth(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.StartOfMonth*
+  name: StartOfMonth
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfMonth_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.StartOfMonth
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.StartOfMonth
+  nameWithType: DateTimeExtensions.StartOfMonth
 - uid: Lett.Extensions.DateTimeExtensions.StartOfWeek(System.DateTime,System.DayOfWeek)
   name: StartOfWeek(DateTime, DayOfWeek)
   href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfWeek_System_DateTime_System_DayOfWeek_

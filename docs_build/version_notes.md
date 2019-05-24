@@ -1,5 +1,14 @@
 # Version Notes
 
+### 0.2.1 (2019-05-24)
+
+#### Features / 新增功能
+
+- 增加`DateTime`扩展方法:
+  - `IsBetween(DateTime startDateTime, DateTime endDateTime)` 是否在指定日期之间
+  - `StartOfMonth(DateTime)` 获取月的开始 DateTime (year-month-day 00:00:00.000)
+  - `EndOfMonth(DateTime)` 获取月的结束 DateTime (year-month-day 23:59:59.999)
+
 ### 0.2.0 (2019-05-21)
 
 #### Features / 新增功能
