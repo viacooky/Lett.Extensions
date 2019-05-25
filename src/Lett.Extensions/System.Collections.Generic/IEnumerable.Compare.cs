@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Lett.Extensions
@@ -37,7 +38,9 @@ namespace Lett.Extensions
         /// <param name="this"></param>
         /// <param name="items">需要进行判断的元素集合</param>
         /// <typeparam name="T">集合中元素的类型</typeparam>
-        /// <returns><paramref name="this" /> 或 <paramref name="items" /> 为空，返回 false</returns>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="this" /> is null </exception>
+        /// <exception cref="ArgumentNullException"><paramref name="items" /> is null </exception>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -49,7 +52,9 @@ namespace Lett.Extensions
         /// </example>
         public static bool ContainsAny<T>(this IEnumerable<T> @this, IEnumerable<T> items)
         {
-            return @this != null && items != null && @this.Any(items.Contains);
+            if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
+            if (items == null) throw new ArgumentNullException(nameof(items), $"{nameof(items)} is null");
+            return @this.Any(items.Contains);
         }
 
         /// <summary>
@@ -58,7 +63,9 @@ namespace Lett.Extensions
         /// <param name="this"></param>
         /// <param name="items">需要进行判断的元素集合</param>
         /// <typeparam name="T">集合中元素的类型</typeparam>
-        /// <returns><paramref name="this" /> 或 <paramref name="items" /> 为空，返回 false</returns>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="this" /> is null </exception>
+        /// <exception cref="ArgumentNullException"><paramref name="items" /> is null </exception>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -72,6 +79,8 @@ namespace Lett.Extensions
         /// </example>
         public static bool ContainsAll<T>(this IEnumerable<T> @this, IEnumerable<T> items)
         {
+            if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
+            if (items == null) throw new ArgumentNullException(nameof(items), $"{nameof(items)} is null");
             return @this.All(items.Contains);
         }
     }

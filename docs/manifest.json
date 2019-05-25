@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.DateTimeExtensions.html",
-          "hash": "GUu47G0TG0kue+onqBMpkQ=="
+          "hash": "j6m7SyUhapgJ60MRiZ9ufQ=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.Exceptions.DataTableException.html",
-          "hash": "1VJTAKKHnY7eWlRvNATSOw=="
+          "hash": "zP7nTGWqa18/VxnoqPDfuQ=="
         }
       },
       "is_incremental": false,
@@ -146,11 +146,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.IDictionaryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.IDictionaryExtensions.html",
+          "hash": "XHw6xge5Z2Blau663nYfEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Lett.Extensions.IEnumerableExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.IEnumerableExtensions.html",
-          "hash": "M3qK67cbQnvd7LUnEBJKRA=="
+          "hash": "IITMltQVmbI8uEq82Z6g5A=="
         }
       },
       "is_incremental": false,
@@ -186,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.ObjectExtensions.html",
-          "hash": "QP34OmOrhGx/wF1cROYArw=="
+          "hash": "vwaSEA8yNVsfpBbM9aXxfA=="
         }
       },
       "is_incremental": false,
@@ -222,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.html",
-          "hash": "nmTN5LYBlAKAedE7s6AYng=="
+          "hash": "PTOWirG0EtmZwEhrnkcdLw=="
         }
       },
       "is_incremental": false,
@@ -246,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "UZKyyYJL0JWwdfTh96IbVA=="
+          "hash": "RWtpVlD2SNzDI1nCMY+NYw=="
         }
       },
       "is_incremental": false,
@@ -318,7 +330,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "s0DtL80OtIfB5nYyZ3iE9A=="
+          "hash": "nykBlFK4WIpLVahU4t5N8A=="
         }
       },
       "is_incremental": false,
@@ -342,7 +354,7 @@
       "output": {
         ".html": {
           "relative_path": "version_notes.html",
-          "hash": "l1ufFbxrOx32qpT1fEzdjA=="
+          "hash": "sLjGgQPaYfqauedy+9HsXA=="
         }
       },
       "is_incremental": false,
@@ -358,6 +370,18 @@
         "skipped_file_count": 0
       },
       "processors": {
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 19,
+          "skipped_file_count": 19
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 2
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -371,18 +395,6 @@
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 18,
-          "skipped_file_count": 2
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 3
         }
       }
     },

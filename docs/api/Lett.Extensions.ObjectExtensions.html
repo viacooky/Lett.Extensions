@@ -403,6 +403,73 @@ var rs = obj.DeepClone();
       </tr>
     </tbody>
   </table>
+  <a id="Lett_Extensions_ObjectExtensions_GetTypeName_" data-uid="Lett.Extensions.ObjectExtensions.GetTypeName*"></a>
+  <h4 id="Lett_Extensions_ObjectExtensions_GetTypeName_System_Object_" data-uid="Lett.Extensions.ObjectExtensions.GetTypeName(System.Object)">GetTypeName(Object)</h4>
+  <div class="markdown level1 summary"><p>获取当前对象类型名称</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetTypeName(this object this)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 为空 返回 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string.empty">Empty</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ObjectExtensions_GetTypeName_System_Object__examples">&#31034;&#20363;</h5>
+  <pre><code>var obj1 = new MyClass();
+obj1.GetTypeName(); // &quot;MyClass&quot;</code></pre>
+
+  <pre><code>var obj2 = &quot;&quot;;
+obj2.GetTypeName(); // &quot;String&quot;</code></pre>
+
+  <pre><code>object obj4 = null;
+obj4.GetTypeName(); // string.Empty</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Lett_Extensions_ObjectExtensions_In_" data-uid="Lett.Extensions.ObjectExtensions.In*"></a>
   <h4 id="Lett_Extensions_ObjectExtensions_In__1___0_System_Collections_Generic_IEnumerable___0__" data-uid="Lett.Extensions.ObjectExtensions.In``1(``0,System.Collections.Generic.IEnumerable{``0})">In&lt;T&gt;(T, IEnumerable&lt;T&gt;)</h4>
   <div class="markdown level1 summary"><p>当前对象是否存在于<code data-dev-comment-type="paramref" class="paramref">items</code>集合内</p>
@@ -600,6 +667,76 @@ var s        = &quot;B&quot;;
 s.In(strItems, StringComparer.CurrentCultureIgnoreCase); // true
 s.In(strItems, StringComparer.CurrentCulture);  // false</code></pre>
 
+  <a id="Lett_Extensions_ObjectExtensions_IsArray_" data-uid="Lett.Extensions.ObjectExtensions.IsArray*"></a>
+  <h4 id="Lett_Extensions_ObjectExtensions_IsArray_System_Object_" data-uid="Lett.Extensions.ObjectExtensions.IsArray(System.Object)">IsArray(Object)</h4>
+  <div class="markdown level1 summary"><p>当前对象类型是否 Array</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsArray(this object this)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 为 null ，返回 false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ObjectExtensions_IsArray_System_Object__examples">&#31034;&#20363;</h5>
+  <pre><code>var obj1 = new[] {&quot;1&quot;, &quot;2&quot;};
+obj1.IsArray(); // true</code></pre>
+
+  <pre><code>var obj2 = new List&lt;string> {&quot;1&quot;, &quot;2&quot;};
+obj2.IsArray(); // false</code></pre>
+
+  <pre><code>object obj3 = null;
+obj3.IsArray(); // false</code></pre>
+
+  <pre><code>var obj4 = new MyClass();
+obj4.IsArray(); // false</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Lett_Extensions_ObjectExtensions_IsAssignableFrom_" data-uid="Lett.Extensions.ObjectExtensions.IsAssignableFrom*"></a>
   <h4 id="Lett_Extensions_ObjectExtensions_IsAssignableFrom_System_Object_System_Type_" data-uid="Lett.Extensions.ObjectExtensions.IsAssignableFrom(System.Object,System.Type)">IsAssignableFrom(Object, Type)</h4>
   <div class="markdown level1 summary"><p>指定类型的实例是否能分配给当前类型实例</p>
@@ -643,6 +780,73 @@ s.In(strItems, StringComparer.CurrentCulture);  // false</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_ObjectExtensions_IsClass_" data-uid="Lett.Extensions.ObjectExtensions.IsClass*"></a>
+  <h4 id="Lett_Extensions_ObjectExtensions_IsClass_System_Object_" data-uid="Lett.Extensions.ObjectExtensions.IsClass(System.Object)">IsClass(Object)</h4>
+  <div class="markdown level1 summary"><p>当前对象类型是否 Class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsClass(this object this)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 为 null ，返回 false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ObjectExtensions_IsClass_System_Object__examples">&#31034;&#20363;</h5>
+  <pre><code>var obj1 = new MyClass();
+obj1.IsClass(); // true</code></pre>
+
+  <pre><code>var obj2 = 12;
+obj2.IsClass(); // false</code></pre>
+
+  <pre><code>object obj3 = null;
+obj3.IsClass(); // false</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -692,6 +896,222 @@ s.In(strItems, StringComparer.CurrentCulture);  // false</code></pre>
   <pre><code>var value = DBNull.Value;
 value.IsDBNull(); // true</code></pre>
 
+  <a id="Lett_Extensions_ObjectExtensions_IsEnum_" data-uid="Lett.Extensions.ObjectExtensions.IsEnum*"></a>
+  <h4 id="Lett_Extensions_ObjectExtensions_IsEnum_System_Object_" data-uid="Lett.Extensions.ObjectExtensions.IsEnum(System.Object)">IsEnum(Object)</h4>
+  <div class="markdown level1 summary"><p>当前对象类型是否枚举</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsEnum(this object this)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 为 null ，返回 false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ObjectExtensions_IsEnum_System_Object__examples">&#31034;&#20363;</h5>
+  <pre><code>private enum MyEnum
+{
+None
+}
+
+var obj1 = MyEnum.None;
+obj1.IsEnum(); // true</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_ObjectExtensions_IsSerializable_" data-uid="Lett.Extensions.ObjectExtensions.IsSerializable*"></a>
+  <h4 id="Lett_Extensions_ObjectExtensions_IsSerializable_System_Object_" data-uid="Lett.Extensions.ObjectExtensions.IsSerializable(System.Object)">IsSerializable(Object)</h4>
+  <div class="markdown level1 summary"><p>当前对象类型是否可序列化的</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsSerializable(this object this)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ObjectExtensions_IsSerializable_System_Object__examples">&#31034;&#20363;</h5>
+  <pre><code>var obj1 = new[] {&quot;1&quot;, &quot;2&quot;};
+obj1.IsSerializable(); // true</code></pre>
+
+  <pre><code>object obj3 = null;
+obj3.IsSerializable(); // false</code></pre>
+
+  <pre><code>private class MyClass
+{
+public string Name { get; set; }
+}
+
+var obj4 = new MyClass();
+obj4.IsSerializable(); // false</code></pre>
+
+  <pre><code>[Serializable]
+private class MySerializableClass
+{
+public string Name { get; set; }
+}
+
+var obj5 = new MySerializableClass();
+obj5.IsSerializable(); // true</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_ObjectExtensions_IsValueType_" data-uid="Lett.Extensions.ObjectExtensions.IsValueType*"></a>
+  <h4 id="Lett_Extensions_ObjectExtensions_IsValueType_System_Object_" data-uid="Lett.Extensions.ObjectExtensions.IsValueType(System.Object)">IsValueType(Object)</h4>
+  <div class="markdown level1 summary"><p>当前对象类型是否值类型</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsValueType(this object this)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 为 null ，返回 false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ObjectExtensions_IsValueType_System_Object__examples">&#31034;&#20363;</h5>
+  <pre><code>var obj1 = 12;
+obj1.IsValueType(); // true</code></pre>
+
+  <pre><code>var obj2 = &quot;&quot;;
+obj2.IsValueType(); // false</code></pre>
+
+  <pre><code>var obj4 = new MyStruct();
+obj4.IsValueType(); // true</code></pre>
+
+  <pre><code>var obj5 = new DateTime();
+obj5.IsValueType(); // true</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Lett_Extensions_ObjectExtensions_To_" data-uid="Lett.Extensions.ObjectExtensions.To*"></a>
   <h4 id="Lett_Extensions_ObjectExtensions_To__1_System_Object_" data-uid="Lett.Extensions.ObjectExtensions.To``1(System.Object)">To&lt;T&gt;(Object)</h4>
   <div class="markdown level1 summary"><p>对象转换</p>

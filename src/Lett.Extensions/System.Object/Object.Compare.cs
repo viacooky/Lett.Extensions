@@ -125,5 +125,205 @@ namespace Lett.Extensions
         {
             return items != null && items.Contains(@this, comparer);
         }
+
+        /// <summary>
+        ///     当前对象类型是否 Class
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns><paramref name="this" /> 为 null ，返回 false</returns>
+        /// <exception cref="NullReferenceException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var obj1 = new MyClass();
+        /// obj1.IsClass(); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var obj2 = 12;
+        /// obj2.IsClass(); // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// object obj3 = null;
+        /// obj3.IsClass(); // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static bool IsClass(this object @this)
+        {
+            return @this != null && @this.GetType().IsClass;
+        }
+
+        /// <summary>
+        ///     当前对象类型是否 Array
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns><paramref name="this" /> 为 null ，返回 false</returns>
+        /// <exception cref="NullReferenceException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var obj1 = new[] {"1", "2"};
+        /// obj1.IsArray(); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var obj2 = new List<string> {"1", "2"};
+        /// obj2.IsArray(); // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// object obj3 = null;
+        /// obj3.IsArray(); // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var obj4 = new MyClass();
+        /// obj4.IsArray(); // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static bool IsArray(this object @this)
+        {
+            return @this != null && @this.GetType().IsArray;
+        }
+
+        /// <summary>
+        ///     当前对象类型是否可序列化的
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        /// <returns><paramref name="this" /> 为 null ，返回 false</returns>
+        /// <exception cref="NullReferenceException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var obj1 = new[] {"1", "2"};
+        /// obj1.IsSerializable(); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// object obj3 = null;
+        /// obj3.IsSerializable(); // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// private class MyClass
+        /// {
+        ///     public string Name { get; set; }
+        /// }
+        /// 
+        /// var obj4 = new MyClass();
+        /// obj4.IsSerializable(); // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// [Serializable]
+        /// private class MySerializableClass
+        /// {
+        ///    public string Name { get; set; }
+        /// }
+        /// 
+        /// var obj5 = new MySerializableClass();
+        /// obj5.IsSerializable(); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static bool IsSerializable(this object @this)
+        {
+            return @this != null && @this.GetType().IsSerializable;
+        }
+
+        /// <summary>
+        ///     当前对象类型是否枚举
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns><paramref name="this" /> 为 null ，返回 false</returns>
+        /// <exception cref="NullReferenceException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// private enum MyEnum
+        /// {
+        ///     None
+        /// }
+        /// 
+        /// var obj1 = MyEnum.None;
+        /// obj1.IsEnum(); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static bool IsEnum(this object @this)
+        {
+            return @this != null && @this.GetType().IsEnum;
+        }
+
+        /// <summary>
+        ///     当前对象类型是否值类型
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns><paramref name="this" /> 为 null ，返回 false</returns>
+        /// <exception cref="NullReferenceException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var obj1 = 12;
+        /// obj1.IsValueType(); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var obj2 = "";
+        /// obj2.IsValueType(); // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var obj4 = new MyStruct();
+        /// obj4.IsValueType(); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var obj5 = new DateTime();
+        /// obj5.IsValueType(); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static bool IsValueType(this object @this)
+        {
+            return @this.GetType().IsValueType;
+        }
     }
 }

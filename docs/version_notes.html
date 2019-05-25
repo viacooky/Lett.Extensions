@@ -72,8 +72,34 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="version-notes">Version Notes</h1>
 
-<h3 id="021-2019-05-24">0.2.1 (2019-05-24)</h3>
+<h3 id="022-2019-05-26">0.2.2 (2019-05-26)</h3>
 <h4 id="features--新增功能">Features / 新增功能</h4>
+<ul>
+<li>增加<code>DateTime</code>扩展方法
+<ul>
+<li><code>Tomorrow(DateTime)</code> 获取明天的 DateTime</li>
+<li><code>Yesterday(DateTime)</code> 获取昨天的 DateTime</li>
+</ul>
+</li>
+<li>增加<code>Object</code>扩展方法
+<ul>
+<li><code>IsClass(Object)</code> 当前对象类型是否 Class</li>
+<li><code>IsArray(Object)</code> 当前对象类型是否 Array</li>
+<li><code>IsSerializable(Object)</code> 当前对象类型是否可序列化的</li>
+<li><code>IsValueType(Object)</code> 当前对象类型是否值类型</li>
+<li><code>IsEnum(Object)</code> 当前对象类型是否枚举</li>
+<li><code>GetTypeName(Object)</code> 获取当前对象类型名称</li>
+</ul>
+</li>
+<li>增加<code>IDictionary</code>扩展方法
+<ul>
+<li><code>ContainsKeyAll&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, IEnumerable&lt;TKey&gt;)</code> 是否包含全部 Key</li>
+<li><code>ContainsKeyAny&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, IEnumerable&lt;TKey&gt;)</code> 是否包含任一 Key</li>
+</ul>
+</li>
+</ul>
+<h3 id="021-2019-05-24">0.2.1 (2019-05-24)</h3>
+<h4 id="features--新增功能-1">Features / 新增功能</h4>
 <ul>
 <li>增加<code>DateTime</code>扩展方法:
 <ul>
@@ -94,7 +120,7 @@
 </li>
 </ul>
 <h3 id="020-2019-05-21">0.2.0 (2019-05-21)</h3>
-<h4 id="features--新增功能-1">Features / 新增功能</h4>
+<h4 id="features--新增功能-2">Features / 新增功能</h4>
 <ul>
 <li>增加<code>IEnumerable&lt;T&gt;</code>扩展方法：
 <ul>
@@ -121,7 +147,7 @@
 </li>
 </ul>
 <h3 id="019-2019-05-18">0.1.9 (2019-05-18)</h3>
-<h4 id="features--新增功能-2">Features / 新增功能</h4>
+<h4 id="features--新增功能-3">Features / 新增功能</h4>
 <ul>
 <li>增加<code>DateTime</code>扩展方法:
 <ul>
@@ -144,7 +170,7 @@
 </li>
 </ul>
 <h3 id="018-2019-05-13">0.1.8 (2019-05-13)</h3>
-<h4 id="features--新增功能-3">Features / 新增功能</h4>
+<h4 id="features--新增功能-4">Features / 新增功能</h4>
 <ul>
 <li>增加<code>string</code>扩展方法:
 <ul>
@@ -220,7 +246,7 @@
 </li>
 </ul>
 <h3 id="017-2019-04-28">0.1.7 (2019-04-28)</h3>
-<h4 id="features--新增功能-4">Features / 新增功能</h4>
+<h4 id="features--新增功能-5">Features / 新增功能</h4>
 <ul>
 <li>增加 <code>System.String</code> 拓展方法
 <ul>
@@ -231,14 +257,14 @@
 </li>
 </ul>
 <h3 id="016-2019-04-25">0.1.6 (2019-04-25)</h3>
-<h4 id="features--新增功能-5">Features / 新增功能</h4>
+<h4 id="features--新增功能-6">Features / 新增功能</h4>
 <ul>
 <li>增加 <code>String.IsNullOrWhiteSpace()</code> 是否 null 或空白</li>
 <li>增加 <code>String.ContainsAll()</code> 是否全部包含，默认不区分大小写</li>
 <li>增加 <code>String.ContainsAny()</code> 是否包含任意一个，默认不区分大小写</li>
 </ul>
 <h3 id="015-2019-04-24">0.1.5 (2019-04-24)</h3>
-<h4 id="features--新增功能-6">Features / 新增功能</h4>
+<h4 id="features--新增功能-7">Features / 新增功能</h4>
 <ul>
 <li>增加 DataTable DataRow 转换实体方法</li>
 <li>增加 DataColumnCollectionTest.AddRange 方法</li>
@@ -253,7 +279,7 @@
 <li>实现了 <code>IConvertible</code> 接口的类型 如：Boolean, Byte, Char, DateTime, System.DBNull, Decimal, Double, System.Enum, Int16, Int32, Int64, SByte, Single, String, UInt16, UInt32, UInt64 等</li>
 </ul>
 <h3 id="014-2019-04-14">0.1.4 (2019-04-14)</h3>
-<h4 id="features--新增功能-7">Features / 新增功能</h4>
+<h4 id="features--新增功能-8">Features / 新增功能</h4>
 <ul>
 <li>增加 Object.IsDBNull 方法</li>
 </ul>
@@ -263,7 +289,7 @@
 </ul>
 <hr>
 <h3 id="xxx-2019-04-13">X.X.X (2019-04-13)</h3>
-<h4 id="features--新增功能-8">Features / 新增功能</h4>
+<h4 id="features--新增功能-9">Features / 新增功能</h4>
 <ul>
 <li></li>
 </ul>
