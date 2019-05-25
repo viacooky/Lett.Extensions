@@ -1313,6 +1313,19 @@ references:
   fullName.vb: Lett.Extensions.ObjectExtensions.In(Of T)(T, System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEqualityComparer(Of T))
   nameWithType: ObjectExtensions.In<T>(T, IEnumerable<T>, IEqualityComparer<T>)
   nameWithType.vb: ObjectExtensions.In(Of T)(T, IEnumerable(Of T), IEqualityComparer(Of T))
+- uid: Lett.Extensions.ObjectExtensions.IsArray(System.Object)
+  name: IsArray(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsArray_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.IsArray(System.Object)
+  fullName: Lett.Extensions.ObjectExtensions.IsArray(System.Object)
+  nameWithType: ObjectExtensions.IsArray(Object)
+- uid: Lett.Extensions.ObjectExtensions.IsArray*
+  name: IsArray
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsArray_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.IsArray
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.IsArray
+  nameWithType: ObjectExtensions.IsArray
 - uid: Lett.Extensions.ObjectExtensions.IsAssignableFrom(System.Object,System.Type)
   name: IsAssignableFrom(Object, Type)
   href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsAssignableFrom_System_Object_System_Type_
@@ -1326,6 +1339,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.ObjectExtensions.IsAssignableFrom
   nameWithType: ObjectExtensions.IsAssignableFrom
+- uid: Lett.Extensions.ObjectExtensions.IsClass(System.Object)
+  name: IsClass(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsClass_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.IsClass(System.Object)
+  fullName: Lett.Extensions.ObjectExtensions.IsClass(System.Object)
+  nameWithType: ObjectExtensions.IsClass(Object)
+- uid: Lett.Extensions.ObjectExtensions.IsClass*
+  name: IsClass
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsClass_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.IsClass
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.IsClass
+  nameWithType: ObjectExtensions.IsClass
 - uid: Lett.Extensions.ObjectExtensions.IsDBNull(System.Object)
   name: IsDBNull(Object)
   href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsDBNull_System_Object_
@@ -1339,6 +1365,45 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.ObjectExtensions.IsDBNull
   nameWithType: ObjectExtensions.IsDBNull
+- uid: Lett.Extensions.ObjectExtensions.IsEnum(System.Object)
+  name: IsEnum(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsEnum_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.IsEnum(System.Object)
+  fullName: Lett.Extensions.ObjectExtensions.IsEnum(System.Object)
+  nameWithType: ObjectExtensions.IsEnum(Object)
+- uid: Lett.Extensions.ObjectExtensions.IsEnum*
+  name: IsEnum
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsEnum_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.IsEnum
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.IsEnum
+  nameWithType: ObjectExtensions.IsEnum
+- uid: Lett.Extensions.ObjectExtensions.IsSerializable(System.Object)
+  name: IsSerializable(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsSerializable_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.IsSerializable(System.Object)
+  fullName: Lett.Extensions.ObjectExtensions.IsSerializable(System.Object)
+  nameWithType: ObjectExtensions.IsSerializable(Object)
+- uid: Lett.Extensions.ObjectExtensions.IsSerializable*
+  name: IsSerializable
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsSerializable_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.IsSerializable
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.IsSerializable
+  nameWithType: ObjectExtensions.IsSerializable
+- uid: Lett.Extensions.ObjectExtensions.IsValueType(System.Object)
+  name: IsValueType(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsValueType_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.IsValueType(System.Object)
+  fullName: Lett.Extensions.ObjectExtensions.IsValueType(System.Object)
+  nameWithType: ObjectExtensions.IsValueType(Object)
+- uid: Lett.Extensions.ObjectExtensions.IsValueType*
+  name: IsValueType
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsValueType_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.IsValueType
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.IsValueType
+  nameWithType: ObjectExtensions.IsValueType
 - uid: Lett.Extensions.ObjectExtensions.To*
   name: To
   href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_To_
