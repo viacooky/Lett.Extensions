@@ -20,10 +20,10 @@ namespace Lett.Extensions.Test
         {
             var source = "abcd";
             var rs     = source.ToBytes();
-            Assert.AreEqual(rs.ToString(Encoding.UTF8), source);
+            Assert.AreEqual(rs.EncodeToString(), source);
             var rs2 = source.ToBytes(Encoding.Unicode);
-            Assert.AreEqual(rs2.ToString(Encoding.Unicode), source);
-            Assert.AreNotEqual(rs2.ToString(Encoding.UTF8), source);
+            Assert.AreEqual(rs2.EncodeToString(Encoding.Unicode), source);
+            Assert.AreNotEqual(rs2.EncodeToString(Encoding.UTF8), source);
         }
     }
 }

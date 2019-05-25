@@ -358,22 +358,31 @@ references:
   commentId: T:Lett.Extensions.ByteExtensions
   fullName: Lett.Extensions.ByteExtensions
   nameWithType: ByteExtensions
-- uid: Lett.Extensions.ByteExtensions.ToString(System.Byte[],System.Text.Encoding)
-  name: ToString(Byte[], Encoding)
-  href: api/Lett.Extensions.ByteExtensions.html#Lett_Extensions_ByteExtensions_ToString_System_Byte___System_Text_Encoding_
-  commentId: M:Lett.Extensions.ByteExtensions.ToString(System.Byte[],System.Text.Encoding)
-  name.vb: ToString(Byte(), Encoding)
-  fullName: Lett.Extensions.ByteExtensions.ToString(System.Byte[], System.Text.Encoding)
-  fullName.vb: Lett.Extensions.ByteExtensions.ToString(System.Byte(), System.Text.Encoding)
-  nameWithType: ByteExtensions.ToString(Byte[], Encoding)
-  nameWithType.vb: ByteExtensions.ToString(Byte(), Encoding)
-- uid: Lett.Extensions.ByteExtensions.ToString*
-  name: ToString
-  href: api/Lett.Extensions.ByteExtensions.html#Lett_Extensions_ByteExtensions_ToString_
-  commentId: Overload:Lett.Extensions.ByteExtensions.ToString
+- uid: Lett.Extensions.ByteExtensions.EncodeToString(System.Byte[])
+  name: EncodeToString(Byte[])
+  href: api/Lett.Extensions.ByteExtensions.html#Lett_Extensions_ByteExtensions_EncodeToString_System_Byte___
+  commentId: M:Lett.Extensions.ByteExtensions.EncodeToString(System.Byte[])
+  name.vb: EncodeToString(Byte())
+  fullName: Lett.Extensions.ByteExtensions.EncodeToString(System.Byte[])
+  fullName.vb: Lett.Extensions.ByteExtensions.EncodeToString(System.Byte())
+  nameWithType: ByteExtensions.EncodeToString(Byte[])
+  nameWithType.vb: ByteExtensions.EncodeToString(Byte())
+- uid: Lett.Extensions.ByteExtensions.EncodeToString(System.Byte[],System.Text.Encoding)
+  name: EncodeToString(Byte[], Encoding)
+  href: api/Lett.Extensions.ByteExtensions.html#Lett_Extensions_ByteExtensions_EncodeToString_System_Byte___System_Text_Encoding_
+  commentId: M:Lett.Extensions.ByteExtensions.EncodeToString(System.Byte[],System.Text.Encoding)
+  name.vb: EncodeToString(Byte(), Encoding)
+  fullName: Lett.Extensions.ByteExtensions.EncodeToString(System.Byte[], System.Text.Encoding)
+  fullName.vb: Lett.Extensions.ByteExtensions.EncodeToString(System.Byte(), System.Text.Encoding)
+  nameWithType: ByteExtensions.EncodeToString(Byte[], Encoding)
+  nameWithType.vb: ByteExtensions.EncodeToString(Byte(), Encoding)
+- uid: Lett.Extensions.ByteExtensions.EncodeToString*
+  name: EncodeToString
+  href: api/Lett.Extensions.ByteExtensions.html#Lett_Extensions_ByteExtensions_EncodeToString_
+  commentId: Overload:Lett.Extensions.ByteExtensions.EncodeToString
   isSpec: "True"
-  fullName: Lett.Extensions.ByteExtensions.ToString
-  nameWithType: ByteExtensions.ToString
+  fullName: Lett.Extensions.ByteExtensions.EncodeToString
+  nameWithType: ByteExtensions.EncodeToString
 - uid: Lett.Extensions.DataColumnCollectionExtensions
   name: DataColumnCollectionExtensions
   href: api/Lett.Extensions.DataColumnCollectionExtensions.html

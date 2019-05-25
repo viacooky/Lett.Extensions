@@ -53,7 +53,8 @@ namespace Lett.Extensions
         {
             try
             {
-                var uri = new Uri(@this);
+                // ReSharper disable once ObjectCreationAsStatement
+                new Uri(@this);
                 return true;
             }
             catch { return false; }

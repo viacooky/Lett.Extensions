@@ -75,7 +75,6 @@ namespace Lett.Extensions
             return items != null && items.Contains(@this);
         }
 
-
         /// <summary>
         ///     当前对象是否存在于<paramref name="items" />集合内
         /// </summary>
