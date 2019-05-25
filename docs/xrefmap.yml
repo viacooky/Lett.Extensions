@@ -1288,6 +1288,19 @@ references:
   fullName.vb: Lett.Extensions.ObjectExtensions.DeepClone(Of T)(T)
   nameWithType: ObjectExtensions.DeepClone<T>(T)
   nameWithType.vb: ObjectExtensions.DeepClone(Of T)(T)
+- uid: Lett.Extensions.ObjectExtensions.GetTypeName(System.Object)
+  name: GetTypeName(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_GetTypeName_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.GetTypeName(System.Object)
+  fullName: Lett.Extensions.ObjectExtensions.GetTypeName(System.Object)
+  nameWithType: ObjectExtensions.GetTypeName(Object)
+- uid: Lett.Extensions.ObjectExtensions.GetTypeName*
+  name: GetTypeName
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_GetTypeName_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.GetTypeName
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.GetTypeName
+  nameWithType: ObjectExtensions.GetTypeName
 - uid: Lett.Extensions.ObjectExtensions.In*
   name: In
   href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_In_

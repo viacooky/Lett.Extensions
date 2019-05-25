@@ -13,6 +13,7 @@
   - `IsSerializable(Object)` 当前对象类型是否可序列化的
   - `IsValueType(Object)` 当前对象类型是否值类型
   - `IsEnum(Object)` 当前对象类型是否枚举
+  - `GetTypeName(Object)` 获取当前对象类型名称
 
 ### 0.2.1 (2019-05-24)
 
