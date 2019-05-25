@@ -188,7 +188,6 @@ namespace Lett.Extensions
             return @this.ToString("yyyy-MM-dd HH:mm:ss");
         }
 
-
         /// <summary>
         ///     格式化为 yyyy-MM-dd HH:mm:ss.fffffff
         /// </summary>

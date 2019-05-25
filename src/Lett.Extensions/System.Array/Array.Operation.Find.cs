@@ -132,7 +132,6 @@ namespace Lett.Extensions
             return Array.FindIndex(@this, startIndex, count, match);
         }
 
-
         /// <summary>
         ///     返回数组中的最后一个匹配元素的索引
         /// </summary>
