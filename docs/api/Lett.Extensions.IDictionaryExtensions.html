@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>IEnumerableExtensions 类
+    <title>IDictionaryExtensions 类
    | Lett.Extensions </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="IEnumerableExtensions 类
+    <meta name="title" content="IDictionaryExtensions 类
    | Lett.Extensions ">
     <meta name="generator" content="docfx 2.42.1.0">
     
@@ -78,18 +78,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Lett.Extensions.IEnumerableExtensions">
+            <article class="content wrap" id="_content" data-uid="Lett.Extensions.IDictionaryExtensions">
   
   
-  <h1 id="Lett_Extensions_IEnumerableExtensions" data-uid="Lett.Extensions.IEnumerableExtensions" class="text-break">IEnumerableExtensions 类
+  <h1 id="Lett_Extensions_IDictionaryExtensions" data-uid="Lett.Extensions.IDictionaryExtensions" class="text-break">IDictionaryExtensions 类
   </h1>
-  <div class="markdown level0 summary"><p>IEnumerable 扩展方法</p>
+  <div class="markdown level0 summary"><p>ICollections 扩展方法</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>&#32487;&#25215;</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">IEnumerableExtensions</span></div>
+    <div class="level1"><span class="xref">IDictionaryExtensions</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>&#32487;&#25215;&#25104;&#21592;</h5>
@@ -117,20 +117,20 @@
   </div>
   <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="Lett.Extensions.html">Lett.Extensions</a></h6>
   <h6><strong>&#31243;&#24207;&#38598;</strong>: Lett.Extensions.dll</h6>
-  <h5 id="Lett_Extensions_IEnumerableExtensions_syntax">&#35821;&#27861;</h5>
+  <h5 id="Lett_Extensions_IDictionaryExtensions_syntax">&#35821;&#27861;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class IEnumerableExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public static class IDictionaryExtensions</code></pre>
   </div>
   <h3 id="methods">&#26041;&#27861;
   </h3>
-  <a id="Lett_Extensions_IEnumerableExtensions_ContainsAll_" data-uid="Lett.Extensions.IEnumerableExtensions.ContainsAll*"></a>
-  <h4 id="Lett_Extensions_IEnumerableExtensions_ContainsAll__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__" data-uid="Lett.Extensions.IEnumerableExtensions.ContainsAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">ContainsAll&lt;T&gt;(IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>是否包含全部元素</p>
+  <a id="Lett_Extensions_IDictionaryExtensions_ContainsKeyAll_" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsKeyAll*"></a>
+  <h4 id="Lett_Extensions_IDictionaryExtensions_ContainsKeyAll__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___0__" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsKeyAll``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``0})">ContainsKeyAll&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, IEnumerable&lt;TKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>是否包含全部 Key</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ContainsAll&lt;T&gt;(this IEnumerable&lt;T&gt; this, IEnumerable&lt;T&gt; items)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool ContainsKeyAll&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, IEnumerable&lt;TKey&gt; keys)</code></pre>
   </div>
   <h5 class="parameters">&#21442;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -143,14 +143,14 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</td>
         <td><span class="parametername">this</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
-        <td><span class="parametername">items</span></td>
-        <td><p>需要进行判断的元素集合</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TKey&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>Key 集合</p>
 </td>
       </tr>
     </tbody>
@@ -180,18 +180,156 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>集合中元素的类型</p>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>Key 类型</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Value 类型</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Lett_Extensions_IEnumerableExtensions_ContainsAll__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0___examples">&#31034;&#20363;</h5>
-  <pre><code>var arr = new[] {&quot;aa&quot;, &quot;bb&quot;};
-var match = new[] {&quot;aa&quot;};
-var match2 = new[] {&quot;aa&quot;, &quot;bb&quot;};
-var rs = arr.ContainsAll(match); // false;
-var rs2 = arr.ContainsAll(match2); // true;</code></pre>
+  <h5 id="Lett_Extensions_IDictionaryExtensions_ContainsKeyAll__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var dict = new Dictionary&lt;string, object>
+{
+{&quot;1&quot;, &quot;1&quot;}, {&quot;2&quot;, &quot;2&quot;}, {&quot;3&quot;, &quot;3&quot;}, {&quot;4&quot;, &quot;4&quot;},
+};
+var keys = new[] {&quot;6&quot;};
+var keys2 = new List&lt;string> {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;};
+
+dict.ContainsKeyAll(keys); // false
+dict.ContainsKeyAll(keys2); // true</code></pre>
+
+  <pre><code>var dict = new Dictionary&lt;string, object>
+{
+{&quot;1&quot;, &quot;1&quot;}, {&quot;2&quot;, &quot;2&quot;}, {&quot;3&quot;, &quot;3&quot;}, {&quot;4&quot;, &quot;4&quot;},
+};
+Dictionary&lt;string, object> dict2 = null;
+var keys  = new[] {&quot;6&quot;};
+List&lt;string> keys3 = null;
+
+dict2.ContainsKeyAll(keys); // error -> throw NullReferenceException
+
+dict.ContainsKeyAll(keys3); // error -> throw ArgumentNullException  keys3 is null </code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><exception cref="!:@this"> is null</exception></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this.Keys.Keys</code> is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">keys</code> is null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_IDictionaryExtensions_ContainsKeyAny_" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsKeyAny*"></a>
+  <h4 id="Lett_Extensions_IDictionaryExtensions_ContainsKeyAny__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___0__" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsKeyAny``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``0})">ContainsKeyAny&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, IEnumerable&lt;TKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>是否包含任一 Key</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsKeyAny&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, IEnumerable&lt;TKey&gt; keys)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TKey&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>Key 集合</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>Key 类型</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Value 类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IDictionaryExtensions_ContainsKeyAny__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var dict = new Dictionary&lt;string, object>
+{
+{&quot;1&quot;, &quot;1&quot;}, {&quot;2&quot;, &quot;2&quot;}, {&quot;3&quot;, &quot;3&quot;}, {&quot;4&quot;, &quot;4&quot;},
+};
+var keys  = new[] {&quot;6&quot;};
+var keys2 = new List&lt;string> {&quot;1&quot;};
+
+dict.ContainsKeyAny(keys); // false
+dict.ContainsKeyAny(keys2); // true</code></pre>
+
+  <pre><code>var dict = new Dictionary&lt;string, object>
+{
+{&quot;1&quot;, &quot;1&quot;}, {&quot;2&quot;, &quot;2&quot;}, {&quot;3&quot;, &quot;3&quot;}, {&quot;4&quot;, &quot;4&quot;},
+};
+Dictionary&lt;string, object> dict2 = null;
+var keys  = new[] {&quot;6&quot;};
+List&lt;string> keys3 = null;
+
+dict2.ContainsKeyAny(keys); // error -> throw NullReferenceException
+
+dict.ContainsKeyAny(keys3); // error -> throw ArgumentNullException  keys3 is null </code></pre>
 
   <h5 class="exceptions">&#24322;&#24120;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,164 +347,16 @@ var rs2 = arr.ContainsAll(match2); // true;</code></pre>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p><code data-dev-comment-type="paramref" class="paramref">items</code> is null</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Lett_Extensions_IEnumerableExtensions_ContainsAny_" data-uid="Lett.Extensions.IEnumerableExtensions.ContainsAny*"></a>
-  <h4 id="Lett_Extensions_IEnumerableExtensions_ContainsAny__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__" data-uid="Lett.Extensions.IEnumerableExtensions.ContainsAny``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">ContainsAny&lt;T&gt;(IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>是否包含任一元素</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ContainsAny&lt;T&gt;(this IEnumerable&lt;T&gt; this, IEnumerable&lt;T&gt; items)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
-        <td><span class="parametername">this</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
-        <td><span class="parametername">items</span></td>
-        <td><p>需要进行判断的元素集合</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>集合中元素的类型</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Lett_Extensions_IEnumerableExtensions_ContainsAny__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0___examples">&#31034;&#20363;</h5>
-  <pre><code>var arr = new[] {&quot;aa&quot;, &quot;bb&quot;};
-var match = new[] {&quot;aa&quot;};
-var rs = arr.ContainsAny(match); // true</code></pre>
-
-  <h5 class="exceptions">&#24322;&#24120;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#26465;&#20214;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> is null</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this.Keys.Keys</code> is null</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p><code data-dev-comment-type="paramref" class="paramref">items</code> is null</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">keys</code> is null</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <a id="Lett_Extensions_IEnumerableExtensions_IsNullOrEmpty_" data-uid="Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty*"></a>
-  <h4 id="Lett_Extensions_IEnumerableExtensions_IsNullOrEmpty__1_System_Collections_Generic_IEnumerable___0__" data-uid="Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0})">IsNullOrEmpty&lt;T&gt;(IEnumerable&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>是否空或空集合</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#22768;&#26126;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool IsNullOrEmpty&lt;T&gt;(this IEnumerable&lt;T&gt; this)</code></pre>
-  </div>
-  <h5 class="parameters">&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
-        <td><span class="parametername">this</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">&#36820;&#22238;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#31867;&#22411;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#21517;&#31216;</th>
-        <th>&#25551;&#36848;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>集合中元素的类型</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Lett_Extensions_IEnumerableExtensions_IsNullOrEmpty__1_System_Collections_Generic_IEnumerable___0___examples">&#31034;&#20363;</h5>
-  <pre><code>var arr = new[] {&quot;aa&quot;, &quot;bb&quot;};
-var rs = arr.IsNullOrEmpty(); // false
-
-var arr2 = new string[] { };
-var rs2 = arr.IsNullOrEmpty(); // true</code></pre>
-
 </article>
           </div>
           

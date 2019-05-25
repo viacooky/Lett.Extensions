@@ -1031,6 +1031,44 @@ references:
   fullName.vb: Lett.Extensions.ICollectionsExtensions.AddIfNotContains(Of T)(System.Collections.Generic.ICollection(Of T), System.Collections.Generic.ICollection(Of T))
   nameWithType: ICollectionsExtensions.AddIfNotContains<T>(ICollection<T>, ICollection<T>)
   nameWithType.vb: ICollectionsExtensions.AddIfNotContains(Of T)(ICollection(Of T), ICollection(Of T))
+- uid: Lett.Extensions.IDictionaryExtensions
+  name: IDictionaryExtensions
+  href: api/Lett.Extensions.IDictionaryExtensions.html
+  commentId: T:Lett.Extensions.IDictionaryExtensions
+  fullName: Lett.Extensions.IDictionaryExtensions
+  nameWithType: IDictionaryExtensions
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAll*
+  name: ContainsKeyAll
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAll_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsKeyAll
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAll
+  nameWithType: IDictionaryExtensions.ContainsKeyAll
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAll``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``0})
+  name: ContainsKeyAll<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TKey>)
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAll__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___0__
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsKeyAll``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``0})
+  name.vb: ContainsKeyAll(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TKey))
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAll<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IEnumerable<TKey>)
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsKeyAll(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IEnumerable(Of TKey))
+  nameWithType: IDictionaryExtensions.ContainsKeyAll<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TKey>)
+  nameWithType.vb: IDictionaryExtensions.ContainsKeyAll(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TKey))
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAny*
+  name: ContainsKeyAny
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAny_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsKeyAny
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAny
+  nameWithType: IDictionaryExtensions.ContainsKeyAny
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAny``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``0})
+  name: ContainsKeyAny<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TKey>)
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAny__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___0__
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsKeyAny``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``0})
+  name.vb: ContainsKeyAny(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TKey))
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAny<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IEnumerable<TKey>)
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsKeyAny(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IEnumerable(Of TKey))
+  nameWithType: IDictionaryExtensions.ContainsKeyAny<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TKey>)
+  nameWithType.vb: IDictionaryExtensions.ContainsKeyAny(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TKey))
 - uid: Lett.Extensions.IEnumerableExtensions
   name: IEnumerableExtensions
   href: api/Lett.Extensions.IEnumerableExtensions.html

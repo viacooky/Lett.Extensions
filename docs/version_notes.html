@@ -75,13 +75,13 @@
 <h3 id="022-2019-05-26">0.2.2 (2019-05-26)</h3>
 <h4 id="features--新增功能">Features / 新增功能</h4>
 <ul>
-<li>增加<code>DateTime</code> 扩展方法
+<li>增加<code>DateTime</code>扩展方法
 <ul>
 <li><code>Tomorrow(DateTime)</code> 获取明天的 DateTime</li>
 <li><code>Yesterday(DateTime)</code> 获取昨天的 DateTime</li>
 </ul>
 </li>
-<li>增加<code>Object</code> 扩展方法
+<li>增加<code>Object</code>扩展方法
 <ul>
 <li><code>IsClass(Object)</code> 当前对象类型是否 Class</li>
 <li><code>IsArray(Object)</code> 当前对象类型是否 Array</li>
@@ -89,6 +89,12 @@
 <li><code>IsValueType(Object)</code> 当前对象类型是否值类型</li>
 <li><code>IsEnum(Object)</code> 当前对象类型是否枚举</li>
 <li><code>GetTypeName(Object)</code> 获取当前对象类型名称</li>
+</ul>
+</li>
+<li>增加<code>IDictionary</code>扩展方法
+<ul>
+<li><code>ContainsKeyAll&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, IEnumerable&lt;TKey&gt;)</code> 是否包含全部 Key</li>
+<li><code>ContainsKeyAny&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, IEnumerable&lt;TKey&gt;)</code> 是否包含任一 Key</li>
 </ul>
 </li>
 </ul>

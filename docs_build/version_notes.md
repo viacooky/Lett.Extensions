@@ -4,16 +4,19 @@
 
 #### Features / 新增功能
 
-- 增加`DateTime` 扩展方法
+- 增加`DateTime`扩展方法
   - `Tomorrow(DateTime)` 获取明天的 DateTime
   - `Yesterday(DateTime)` 获取昨天的 DateTime
-- 增加`Object` 扩展方法
+- 增加`Object`扩展方法
   - `IsClass(Object)` 当前对象类型是否 Class
   - `IsArray(Object)` 当前对象类型是否 Array
   - `IsSerializable(Object)` 当前对象类型是否可序列化的
   - `IsValueType(Object)` 当前对象类型是否值类型
   - `IsEnum(Object)` 当前对象类型是否枚举
   - `GetTypeName(Object)` 获取当前对象类型名称
+- 增加`IDictionary`扩展方法
+  - `ContainsKeyAll<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TKey>)` 是否包含全部 Key
+  - `ContainsKeyAny<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TKey>)` 是否包含任一 Key
 
 ### 0.2.1 (2019-05-24)
 
