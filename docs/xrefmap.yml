@@ -800,6 +800,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DateTimeExtensions.StartOfYear
   nameWithType: DateTimeExtensions.StartOfYear
+- uid: Lett.Extensions.DateTimeExtensions.Tomorrow(System.DateTime)
+  name: Tomorrow(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_Tomorrow_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.Tomorrow(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.Tomorrow(System.DateTime)
+  nameWithType: DateTimeExtensions.Tomorrow(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.Tomorrow*
+  name: Tomorrow
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_Tomorrow_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.Tomorrow
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.Tomorrow
+  nameWithType: DateTimeExtensions.Tomorrow
 - uid: Lett.Extensions.DateTimeExtensions.ToString_Base(System.DateTime)
   name: ToString_Base(DateTime)
   href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_Base_System_DateTime_
@@ -930,6 +943,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DateTimeExtensions.ToString_Year
   nameWithType: DateTimeExtensions.ToString_Year
+- uid: Lett.Extensions.DateTimeExtensions.Yesterday(System.DateTime)
+  name: Yesterday(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_Yesterday_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.Yesterday(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.Yesterday(System.DateTime)
+  nameWithType: DateTimeExtensions.Yesterday(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.Yesterday*
+  name: Yesterday
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_Yesterday_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.Yesterday
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.Yesterday
+  nameWithType: DateTimeExtensions.Yesterday
 - uid: Lett.Extensions.EnumExtensions
   name: EnumExtensions
   href: api/Lett.Extensions.EnumExtensions.html

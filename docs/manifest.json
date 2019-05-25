@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.DateTimeExtensions.html",
-          "hash": "GUu47G0TG0kue+onqBMpkQ=="
+          "hash": "j6m7SyUhapgJ60MRiZ9ufQ=="
         }
       },
       "is_incremental": false,
@@ -342,7 +342,7 @@
       "output": {
         ".html": {
           "relative_path": "version_notes.html",
-          "hash": "l1ufFbxrOx32qpT1fEzdjA=="
+          "hash": "kMh8xxb2i7rbLzwPJwLqfA=="
         }
       },
       "is_incremental": false,
@@ -358,13 +358,6 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -382,7 +375,14 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 18,
-          "skipped_file_count": 2
+          "skipped_file_count": 18
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
         }
       }
     },

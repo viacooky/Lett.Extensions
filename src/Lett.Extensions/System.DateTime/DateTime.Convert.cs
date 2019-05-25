@@ -212,5 +212,57 @@ namespace Lett.Extensions
         {
             return @this.StartOfYear().AddYears(1).Subtract(new TimeSpan(0, 0, 0, 0, 1));
         }
+
+        /// <summary>
+        ///     获取明天的 <see cref="DateTime" />
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt = new DateTime(2019, 5, 4);
+        /// var rs = dt.Tomorrow(); // new DateTime(2019, 5, 5);
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt2 = DateTime.MaxValue; // error -> throw ArgumentOutOfRangeException
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static DateTime Tomorrow(this DateTime @this)
+        {
+            return @this.AddDays(1);
+        }
+
+        /// <summary>
+        ///     获取昨天的 <see cref="DateTime" />
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt = new DateTime(2019, 5, 4, 1, 1, 1);
+        /// var rs = dt.Yesterday(); // new DateTime(2019, 5, 3, 1, 1, 1)
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt2 = DateTime.MinValue; // error -> throw ArgumentOutOfRangeException
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static DateTime Yesterday(this DateTime @this)
+        {
+            return @this.AddDays(-1);
+        }
     }
 }

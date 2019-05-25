@@ -1,5 +1,13 @@
 # Version Notes
 
+### 0.2.2 (2019-05-26)
+
+#### Features / 新增功能
+
+- 增加`DateTime` 扩展方法
+  - `Tomorrow()` 获取明天的 DateTime
+  - `Yesterday()` 获取昨天的 DateTime
+
 ### 0.2.1 (2019-05-24)
 
 #### Features / 新增功能
