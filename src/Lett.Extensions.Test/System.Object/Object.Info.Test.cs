@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Lett.Extensions.Test
 {
     [TestClass]
-    public class ObjectTest
+    public class ObjectInfoTest
     {
         [TestMethod]
         public void GetTypeName_Test()

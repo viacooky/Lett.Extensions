@@ -11,6 +11,8 @@
 - 增加`Object`扩展方法
   - `InParams<T>(T, T[])` 当前对象是否存在于 items 数组内
   - `InParams<T>(T, IEqualityComparer<T>, T[])` 当前对象是否存在于 items 数组内
+  - `Pipe<T>(T, Action<T>)` 管道操作 - action
+  - `Pipe<TSource, TResult>(TSource, Func<TSource, TResult>)` 管道操作 - func
 - 增加`DateTime`扩展方法
   - `IsZeroTime(DateTime)` 是否 0 时 0 分 0 秒
 

@@ -1511,6 +1511,31 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.ObjectExtensions.IsValueType
   nameWithType: ObjectExtensions.IsValueType
+- uid: Lett.Extensions.ObjectExtensions.Pipe*
+  name: Pipe
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_Pipe_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.Pipe
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.Pipe
+  nameWithType: ObjectExtensions.Pipe
+- uid: Lett.Extensions.ObjectExtensions.Pipe``1(``0,System.Action{``0})
+  name: Pipe<T>(T, Action<T>)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_Pipe__1___0_System_Action___0__
+  commentId: M:Lett.Extensions.ObjectExtensions.Pipe``1(``0,System.Action{``0})
+  name.vb: Pipe(Of T)(T, Action(Of T))
+  fullName: Lett.Extensions.ObjectExtensions.Pipe<T>(T, System.Action<T>)
+  fullName.vb: Lett.Extensions.ObjectExtensions.Pipe(Of T)(T, System.Action(Of T))
+  nameWithType: ObjectExtensions.Pipe<T>(T, Action<T>)
+  nameWithType.vb: ObjectExtensions.Pipe(Of T)(T, Action(Of T))
+- uid: Lett.Extensions.ObjectExtensions.Pipe``2(``0,System.Func{``0,``1})
+  name: Pipe<TSource, TResult>(TSource, Func<TSource, TResult>)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_Pipe__2___0_System_Func___0___1__
+  commentId: M:Lett.Extensions.ObjectExtensions.Pipe``2(``0,System.Func{``0,``1})
+  name.vb: Pipe(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName: Lett.Extensions.ObjectExtensions.Pipe<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  fullName.vb: Lett.Extensions.ObjectExtensions.Pipe(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  nameWithType: ObjectExtensions.Pipe<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType.vb: ObjectExtensions.Pipe(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
 - uid: Lett.Extensions.ObjectExtensions.To*
   name: To
   href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_To_
