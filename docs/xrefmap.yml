@@ -461,6 +461,15 @@ references:
   fullName.vb: Lett.Extensions.DataRowExtensions.ToEntity(Of T)(System.Data.DataRow)
   nameWithType: DataRowExtensions.ToEntity<T>(DataRow)
   nameWithType.vb: DataRowExtensions.ToEntity(Of T)(DataRow)
+- uid: Lett.Extensions.DataRowExtensions.ToEntity``1(System.Data.DataRow,System.Func{System.Data.DataRow,``0,``0})
+  name: ToEntity<T>(DataRow, Func<DataRow, T, T>)
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_ToEntity__1_System_Data_DataRow_System_Func_System_Data_DataRow___0___0__
+  commentId: M:Lett.Extensions.DataRowExtensions.ToEntity``1(System.Data.DataRow,System.Func{System.Data.DataRow,``0,``0})
+  name.vb: ToEntity(Of T)(DataRow, Func(Of DataRow, T, T))
+  fullName: Lett.Extensions.DataRowExtensions.ToEntity<T>(System.Data.DataRow, System.Func<System.Data.DataRow, T, T>)
+  fullName.vb: Lett.Extensions.DataRowExtensions.ToEntity(Of T)(System.Data.DataRow, System.Func(Of System.Data.DataRow, T, T))
+  nameWithType: DataRowExtensions.ToEntity<T>(DataRow, Func<DataRow, T, T>)
+  nameWithType.vb: DataRowExtensions.ToEntity(Of T)(DataRow, Func(Of DataRow, T, T))
 - uid: Lett.Extensions.DataTableExtensions
   name: DataTableExtensions
   href: api/Lett.Extensions.DataTableExtensions.html
@@ -567,6 +576,15 @@ references:
   fullName.vb: Lett.Extensions.DataTableExtensions.ToEntityList(Of T)(System.Data.DataTable)
   nameWithType: DataTableExtensions.ToEntityList<T>(DataTable)
   nameWithType.vb: DataTableExtensions.ToEntityList(Of T)(DataTable)
+- uid: Lett.Extensions.DataTableExtensions.ToEntityList``1(System.Data.DataTable,System.Func{System.Data.DataRow,``0,``0})
+  name: ToEntityList<T>(DataTable, Func<DataRow, T, T>)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_ToEntityList__1_System_Data_DataTable_System_Func_System_Data_DataRow___0___0__
+  commentId: M:Lett.Extensions.DataTableExtensions.ToEntityList``1(System.Data.DataTable,System.Func{System.Data.DataRow,``0,``0})
+  name.vb: ToEntityList(Of T)(DataTable, Func(Of DataRow, T, T))
+  fullName: Lett.Extensions.DataTableExtensions.ToEntityList<T>(System.Data.DataTable, System.Func<System.Data.DataRow, T, T>)
+  fullName.vb: Lett.Extensions.DataTableExtensions.ToEntityList(Of T)(System.Data.DataTable, System.Func(Of System.Data.DataRow, T, T))
+  nameWithType: DataTableExtensions.ToEntityList<T>(DataTable, Func<DataRow, T, T>)
+  nameWithType.vb: DataTableExtensions.ToEntityList(Of T)(DataTable, Func(Of DataRow, T, T))
 - uid: Lett.Extensions.DateTimeExtensions
   name: DateTimeExtensions
   href: api/Lett.Extensions.DateTimeExtensions.html

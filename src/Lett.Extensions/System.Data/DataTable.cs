@@ -175,5 +175,31 @@ namespace Lett.Extensions
         {
             return @this.RowsEnumerable().Select(s => s.ToEntity<T>()).ToList();
         }
+
+        /// <summary>
+        ///     转换为实体列表
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="converter">
+        ///     <para>参数 <see cref="DataRow" />: 当前行 </para>
+        ///     <para>参数 <typeparamref name="T" />: 目标新实例</para>
+        /// </param>
+        /// <typeparam name="T">目标类型</typeparam>
+        /// <returns>返回 List&lt;<typeparamref name="T" />&gt;</returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var rs = dt.ToEntityList<TestClass1>((row, newObj) =>
+        /// {
+        ///     newObj.PublicField = row.Cell<string>("PublicField");
+        ///     return newObj;
+        /// });
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static List<T> ToEntityList<T>(this DataTable @this, Func<DataRow, T, T> converter) where T : class, new()
+        {
+            return @this.RowsEnumerable().Select(s => s.ToEntity(converter)).ToList();
+        }
     }
 }

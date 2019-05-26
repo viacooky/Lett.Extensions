@@ -114,5 +114,33 @@ namespace Lett.Extensions
 
             return obj;
         }
+
+        /// <summary>
+        ///     转换为实体
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="converter">
+        ///     <para>参数 <see cref="DataRow" />: 当前行 </para>
+        ///     <para>参数 <typeparamref name="T" />: 目标新实例</para>
+        /// </param>
+        /// <typeparam name="T">目标类型</typeparam>
+        /// <returns>目标对象 <typeparamref name="T" /></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var rs = dt.Rows[0].ToEntity<TestClass1>((row, newClass) =>
+        /// {
+        ///     newClass.Property1    = row.Cell<string>("Property1");
+        ///     newClass.PublicField1 = row.Cell<string>("PublicField1");
+        ///     return newClass;
+        /// });
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static T ToEntity<T>(this DataRow @this, Func<DataRow, T, T> converter) where T : class, new()
+        {
+            var newObj = new T();
+            return converter(@this, newObj);
+        }
     }
 }

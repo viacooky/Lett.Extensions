@@ -1,5 +1,14 @@
 # Version Notes
 
+### 0.2.3 (2019-05-26)
+
+#### Features / 新增功能
+
+- 增加`DataRow`扩展方法
+- `ToEntity<T>(DataRow, Func<DataRow, T, T>)` 转换为实体
+- 增加`DataTable`扩展方法
+- `ToEntityList<T>(DataTable, Func<DataRow, T, T>)` 转换为实体列表
+
 ### 0.2.2 (2019-05-26)
 
 #### Features / 新增功能

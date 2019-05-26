@@ -49,6 +49,23 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs.AutoProperty1, "AutoProperty1Value");
         }
 
+        [TestMethod]
+        public void ToEntity_Test2()
+        {
+            var dt = new DataTable();
+            dt.Columns.AddRange(new[] {"PublicField1", "Property1", "AutoProperty1", "notExistField"});
+            dt.Rows.Add("publicFieldValue", "PropertyValue", "AutoProperty1Value", "notExistFieldValue");
+            var rs = dt.Rows[0].ToEntity<TestClass1>((row, newClass) =>
+                                                     {
+                                                         newClass.Property1    = row.Cell<string>("Property1");
+                                                         newClass.PublicField1 = row.Cell<string>("PublicField1");
+                                                         return newClass;
+                                                     });
+            Assert.AreEqual(rs.Property1, "PropertyValue");
+            Assert.AreEqual(rs.PublicField1, "publicFieldValue");
+            Assert.AreEqual(rs.AutoProperty1, null);
+        }
+
         private class TestClass1
         {
             public string PublicField1;
