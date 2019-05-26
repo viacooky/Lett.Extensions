@@ -354,7 +354,7 @@
       "output": {
         ".html": {
           "relative_path": "version_notes.html",
-          "hash": "dEcBkk6fYGqZ5e2078ugNg=="
+          "hash": "5w7TC/YMEJZb03UurfogBw=="
         }
       },
       "is_incremental": false,
@@ -387,7 +387,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 19,
-          "skipped_file_count": 19
+          "skipped_file_count": 2
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
