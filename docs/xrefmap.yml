@@ -1084,6 +1084,22 @@ references:
   fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsKeyAll(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IEnumerable(Of TKey))
   nameWithType: IDictionaryExtensions.ContainsKeyAll<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TKey>)
   nameWithType.vb: IDictionaryExtensions.ContainsKeyAll(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TKey))
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams*
+  name: ContainsKeyAllParams
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAllParams_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams
+  nameWithType: IDictionaryExtensions.ContainsKeyAllParams
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  name: ContainsKeyAllParams<TKey, TValue>(IDictionary<TKey, TValue>, TKey[])
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAllParams__2_System_Collections_Generic_IDictionary___0___1____0___
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  name.vb: ContainsKeyAllParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey())
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey[])
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey())
+  nameWithType: IDictionaryExtensions.ContainsKeyAllParams<TKey, TValue>(IDictionary<TKey, TValue>, TKey[])
+  nameWithType.vb: IDictionaryExtensions.ContainsKeyAllParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey())
 - uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAny*
   name: ContainsKeyAny
   href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAny_
@@ -1100,6 +1116,102 @@ references:
   fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsKeyAny(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IEnumerable(Of TKey))
   nameWithType: IDictionaryExtensions.ContainsKeyAny<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TKey>)
   nameWithType.vb: IDictionaryExtensions.ContainsKeyAny(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TKey))
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams*
+  name: ContainsKeyAnyParams
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAnyParams_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams
+  nameWithType: IDictionaryExtensions.ContainsKeyAnyParams
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  name: ContainsKeyAnyParams<TKey, TValue>(IDictionary<TKey, TValue>, TKey[])
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAnyParams__2_System_Collections_Generic_IDictionary___0___1____0___
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  name.vb: ContainsKeyAnyParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey())
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey[])
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey())
+  nameWithType: IDictionaryExtensions.ContainsKeyAnyParams<TKey, TValue>(IDictionary<TKey, TValue>, TKey[])
+  nameWithType.vb: IDictionaryExtensions.ContainsKeyAnyParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey())
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValue*
+  name: ContainsValue
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValue_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsValue
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValue
+  nameWithType: IDictionaryExtensions.ContainsValue
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValue``2(System.Collections.Generic.IDictionary{``0,``1},``1)
+  name: ContainsValue<TKey, TValue>(IDictionary<TKey, TValue>, TValue)
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValue__2_System_Collections_Generic_IDictionary___0___1____1_
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsValue``2(System.Collections.Generic.IDictionary{``0,``1},``1)
+  name.vb: ContainsValue(Of TKey, TValue)(IDictionary(Of TKey, TValue), TValue)
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValue<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TValue)
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsValue(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TValue)
+  nameWithType: IDictionaryExtensions.ContainsValue<TKey, TValue>(IDictionary<TKey, TValue>, TValue)
+  nameWithType.vb: IDictionaryExtensions.ContainsValue(Of TKey, TValue)(IDictionary(Of TKey, TValue), TValue)
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAll*
+  name: ContainsValueAll
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAll_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsValueAll
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAll
+  nameWithType: IDictionaryExtensions.ContainsValueAll
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAll``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``1})
+  name: ContainsValueAll<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TValue>)
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAll__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___1__
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsValueAll``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``1})
+  name.vb: ContainsValueAll(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TValue))
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAll<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IEnumerable<TValue>)
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsValueAll(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IEnumerable(Of TValue))
+  nameWithType: IDictionaryExtensions.ContainsValueAll<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TValue>)
+  nameWithType.vb: IDictionaryExtensions.ContainsValueAll(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TValue))
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams*
+  name: ContainsValueAllParams
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAllParams_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams
+  nameWithType: IDictionaryExtensions.ContainsValueAllParams
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams``2(System.Collections.Generic.IDictionary{``0,``1},``1[])
+  name: ContainsValueAllParams<TKey, TValue>(IDictionary<TKey, TValue>, TValue[])
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAllParams__2_System_Collections_Generic_IDictionary___0___1____1___
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams``2(System.Collections.Generic.IDictionary{``0,``1},``1[])
+  name.vb: ContainsValueAllParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TValue())
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TValue[])
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TValue())
+  nameWithType: IDictionaryExtensions.ContainsValueAllParams<TKey, TValue>(IDictionary<TKey, TValue>, TValue[])
+  nameWithType.vb: IDictionaryExtensions.ContainsValueAllParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TValue())
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAny*
+  name: ContainsValueAny
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAny_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsValueAny
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAny
+  nameWithType: IDictionaryExtensions.ContainsValueAny
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAny``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``1})
+  name: ContainsValueAny<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TValue>)
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAny__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___1__
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsValueAny``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``1})
+  name.vb: ContainsValueAny(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TValue))
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAny<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IEnumerable<TValue>)
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsValueAny(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IEnumerable(Of TValue))
+  nameWithType: IDictionaryExtensions.ContainsValueAny<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TValue>)
+  nameWithType.vb: IDictionaryExtensions.ContainsValueAny(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TValue))
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams*
+  name: ContainsValueAnyParams
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAnyParams_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams
+  nameWithType: IDictionaryExtensions.ContainsValueAnyParams
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams``2(System.Collections.Generic.IDictionary{``0,``1},``1[])
+  name: ContainsValueAnyParams<TKey, TValue>(IDictionary<TKey, TValue>, TValue[])
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAnyParams__2_System_Collections_Generic_IDictionary___0___1____1___
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams``2(System.Collections.Generic.IDictionary{``0,``1},``1[])
+  name.vb: ContainsValueAnyParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TValue())
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TValue[])
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TValue())
+  nameWithType: IDictionaryExtensions.ContainsValueAnyParams<TKey, TValue>(IDictionary<TKey, TValue>, TValue[])
+  nameWithType.vb: IDictionaryExtensions.ContainsValueAnyParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TValue())
 - uid: Lett.Extensions.IEnumerableExtensions
   name: IEnumerableExtensions
   href: api/Lett.Extensions.IEnumerableExtensions.html

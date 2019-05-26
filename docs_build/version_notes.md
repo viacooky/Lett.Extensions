@@ -4,6 +4,21 @@
 
 #### Features / 新增功能
 
+- `IDictionary` 扩展方法
+  - `ContainsKeyAll<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TKey>)` 是否包含全部 Key
+  - `ContainsKeyAllParams<TKey, TValue>(IDictionary<TKey, TValue>, TKey[])` 是否包含全部 Key
+  - `ContainsKeyAny<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TKey>)` 是否包含任一 Key
+  - `ContainsKeyAnyParams<TKey, TValue>(IDictionary<TKey, TValue>, TKey[])` 是否包含任一 Key
+  - `ContainsValue<TKey, TValue>(IDictionary<TKey, TValue>, TValue)` 是否包含 value
+  - `ContainsValueAll<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TValue>)` 是否包含全部 Value
+  - `ContainsValueAllParams<TKey, TValue>(IDictionary<TKey, TValue>, TValue[])` 是否包含全部 Value
+  - `ContainsValueAny<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TValue>)` 是否包含任一 value
+  - `ContainsValueAnyParams<TKey, TValue>(IDictionary<TKey, TValue>, TValue[])` 是否包含任一 value
+
+### 0.2.3 (2019-05-26)
+
+#### Features / 新增功能
+
 - 增加`DataRow`扩展方法
   - `ToEntity<T>(DataRow, Func<DataRow, T, T>)` 转换为实体
 - 增加`DataTable`扩展方法
