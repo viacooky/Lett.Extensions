@@ -11,6 +11,8 @@
 - 增加`Object`扩展方法
   - `InParams<T>(T, T[])` 当前对象是否存在于 items 数组内
   - `InParams<T>(T, IEqualityComparer<T>, T[])` 当前对象是否存在于 items 数组内
+- 增加`DateTime`扩展方法
+  - `IsZeroTime(DateTime)` 是否 0 时 0 分 0 秒
 
 ### 0.2.2 (2019-05-26)
 

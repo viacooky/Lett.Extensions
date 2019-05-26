@@ -747,6 +747,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DateTimeExtensions.IsWeekDay
   nameWithType: DateTimeExtensions.IsWeekDay
+- uid: Lett.Extensions.DateTimeExtensions.IsZeroTime(System.DateTime)
+  name: IsZeroTime(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsZeroTime_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.IsZeroTime(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.IsZeroTime(System.DateTime)
+  nameWithType: DateTimeExtensions.IsZeroTime(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.IsZeroTime*
+  name: IsZeroTime
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsZeroTime_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.IsZeroTime
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.IsZeroTime
+  nameWithType: DateTimeExtensions.IsZeroTime
 - uid: Lett.Extensions.DateTimeExtensions.SetTime(System.DateTime,System.Int32,System.Int32,System.Int32)
   name: SetTime(DateTime, Int32, Int32, Int32)
   href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_SetTime_System_DateTime_System_Int32_System_Int32_System_Int32_
