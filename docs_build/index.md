@@ -4,13 +4,17 @@
 <br/>
 
 [![Nuget](https://img.shields.io/nuget/v/Lett.Extensions.svg)](https://www.nuget.org/packages/Lett.Extensions/)
+[![MyGet](https://img.shields.io/myget/lett/v/Lett.Extensions.svg?label=MyGet)](https://www.myget.org/feed/lett/package/nuget/Lett.Extensions)
 ![Nuget](https://img.shields.io/nuget/dt/Lett.Extensions.svg)
+
 ![Build Status](https://dev.azure.com/viacooky/Lett.Extensions/_apis/build/status/Lett.Extensions%20Push%20NuGet?branchName=master)
 ![Azure DevOps tests (compact)](https://img.shields.io/azure-devops/tests/viacooky/Lett.Extensions/9.svg)
 ![Azure DevOps coverage (branch)](https://img.shields.io/azure-devops/coverage/viacooky/Lett.Extensions/9/master.svg?color=9cf)
+
 [![BCH compliance](https://bettercodehub.com/edge/badge/viacooky/Lett.Extensions?branch=master)](https://bettercodehub.com/)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ef28989ffe5848a5877b1e1ef8c6162e)](https://www.codacy.com/app/viacooky/Lett.Extensions?utm_source=github.com&utm_medium=referral&utm_content=viacooky/Lett.Extensions&utm_campaign=Badge_Grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/viacooky/lett.extensions/badge/master)](https://www.codefactor.io/repository/github/viacooky/lett.extensions/overview/master)
+
 ![GitHub](https://img.shields.io/github/license/viacooky/Lett.Extensions.svg)
 
 <br/>

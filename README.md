@@ -1,6 +1,7 @@
 ![](docs/images/logo.png)
 
 [![Nuget](https://img.shields.io/nuget/v/Lett.Extensions.svg)](https://www.nuget.org/packages/Lett.Extensions/)
+[![MyGet](https://img.shields.io/myget/lett/v/Lett.Extensions.svg?label=MyGet)](https://www.myget.org/feed/lett/package/nuget/Lett.Extensions)
 ![Nuget](https://img.shields.io/nuget/dt/Lett.Extensions.svg)
 
 ![Build Status](https://dev.azure.com/viacooky/Lett.Extensions/_apis/build/status/Lett.Extensions%20Push%20NuGet?branchName=master)
@@ -18,6 +19,8 @@
 Popular .Net Core / .Net Framework extension methods
 
 NuGet: https://www.nuget.org/packages/Lett.Extensions/
+
+MyGet: https://www.myget.org/feed/lett/package/nuget/Lett.Extensions
 
 Project Site: https://viacooky.github.io/Lett.Extensions/
 

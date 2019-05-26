@@ -15,11 +15,13 @@
 Project Site: https://viacooky.github.io/Lett.Extensions/
 
 Version Notes: https://viacooky.github.io/Lett.Extensions/version_notes.html</Description>
-    <PackageTags>.Net;.Net Standard;.Net Core;Core;.Net Framework;Extension;Extension Method;</PackageTags>
+    <PackageTags>.Net;.NetStandard;.NetCore;Core;.NetFramework;Extension;ExtensionMethod;</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/viacooky/Lett.Extensions/master/docs_build/images/logo.simple.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/viacooky/Lett.Extensions</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Copyright>Copyright (c) 2019, viacooky. All rights reserved.</Copyright>
+    <PackageReleaseNotes>Version Notes: 
+https://viacooky.github.io/Lett.Extensions/version_notes.html</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
