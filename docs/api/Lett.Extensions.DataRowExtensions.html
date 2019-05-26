@@ -433,6 +433,80 @@
       </tr>
     </tbody>
   </table>
+  <a id="Lett_Extensions_DataRowExtensions_ToEntity_" data-uid="Lett.Extensions.DataRowExtensions.ToEntity*"></a>
+  <h4 id="Lett_Extensions_DataRowExtensions_ToEntity__1_System_Data_DataRow_System_Func_System_Data_DataRow___0___0__" data-uid="Lett.Extensions.DataRowExtensions.ToEntity``1(System.Data.DataRow,System.Func{System.Data.DataRow,``0,``0})">ToEntity&lt;T&gt;(DataRow, Func&lt;DataRow, T, T&gt;)</h4>
+  <div class="markdown level1 summary"><p>转换为实体</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ToEntity&lt;T&gt;(this DataRow this, Func&lt;DataRow, T, T&gt; converter)
+    where T : class, new()</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.datarow">DataRow</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.datarow">DataRow</a>, T, T&gt;</td>
+        <td><span class="parametername">converter</span></td>
+        <td><p>参数 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.datarow">DataRow</a>: 当前行 </p>
+<p>参数 <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>: 目标新实例</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>目标对象 <code data-dev-comment-type="typeparamref" class="typeparamref">T</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>目标类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_DataRowExtensions_ToEntity__1_System_Data_DataRow_System_Func_System_Data_DataRow___0___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var rs = dt.Rows[0].ToEntity&lt;TestClass1>((row, newClass) =>
+{
+newClass.Property1    = row.Cell&lt;string>(&quot;Property1&quot;);
+newClass.PublicField1 = row.Cell&lt;string>(&quot;PublicField1&quot;);
+return newClass;
+});</code></pre>
+
 </article>
           </div>
           

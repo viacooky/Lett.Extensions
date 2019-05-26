@@ -34,23 +34,13 @@ namespace Lett.Extensions.Test
         }
 
         [TestMethod]
-        public void Tomorrow_Test()
-        {
-            var dt = new DateTime(2019, 5, 4);
-            var rs = dt.Tomorrow();
-            Assert.AreEqual(new DateTime(2019, 5, 5), rs);
-            var dt2 = DateTime.MaxValue;
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => dt2.Tomorrow());
-        }
-
-        [TestMethod]
-        public void Yesterday_Test()
+        public void IsZeroTime_Test()
         {
             var dt = new DateTime(2019, 5, 4, 1, 1, 1);
-            var rs = dt.Yesterday();
-            Assert.AreEqual(new DateTime(2019, 5, 3, 1, 1, 1), rs);
-            var dt2 = DateTime.MinValue;
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => dt2.Yesterday());
+            Assert.IsFalse(dt.IsZeroTime());
+            var dt2 = new DateTime(2019, 5, 4);
+            Assert.IsTrue(dt2.IsZeroTime());
         }
+        
     }
 }

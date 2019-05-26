@@ -461,6 +461,15 @@ references:
   fullName.vb: Lett.Extensions.DataRowExtensions.ToEntity(Of T)(System.Data.DataRow)
   nameWithType: DataRowExtensions.ToEntity<T>(DataRow)
   nameWithType.vb: DataRowExtensions.ToEntity(Of T)(DataRow)
+- uid: Lett.Extensions.DataRowExtensions.ToEntity``1(System.Data.DataRow,System.Func{System.Data.DataRow,``0,``0})
+  name: ToEntity<T>(DataRow, Func<DataRow, T, T>)
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_ToEntity__1_System_Data_DataRow_System_Func_System_Data_DataRow___0___0__
+  commentId: M:Lett.Extensions.DataRowExtensions.ToEntity``1(System.Data.DataRow,System.Func{System.Data.DataRow,``0,``0})
+  name.vb: ToEntity(Of T)(DataRow, Func(Of DataRow, T, T))
+  fullName: Lett.Extensions.DataRowExtensions.ToEntity<T>(System.Data.DataRow, System.Func<System.Data.DataRow, T, T>)
+  fullName.vb: Lett.Extensions.DataRowExtensions.ToEntity(Of T)(System.Data.DataRow, System.Func(Of System.Data.DataRow, T, T))
+  nameWithType: DataRowExtensions.ToEntity<T>(DataRow, Func<DataRow, T, T>)
+  nameWithType.vb: DataRowExtensions.ToEntity(Of T)(DataRow, Func(Of DataRow, T, T))
 - uid: Lett.Extensions.DataTableExtensions
   name: DataTableExtensions
   href: api/Lett.Extensions.DataTableExtensions.html
@@ -567,6 +576,15 @@ references:
   fullName.vb: Lett.Extensions.DataTableExtensions.ToEntityList(Of T)(System.Data.DataTable)
   nameWithType: DataTableExtensions.ToEntityList<T>(DataTable)
   nameWithType.vb: DataTableExtensions.ToEntityList(Of T)(DataTable)
+- uid: Lett.Extensions.DataTableExtensions.ToEntityList``1(System.Data.DataTable,System.Func{System.Data.DataRow,``0,``0})
+  name: ToEntityList<T>(DataTable, Func<DataRow, T, T>)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_ToEntityList__1_System_Data_DataTable_System_Func_System_Data_DataRow___0___0__
+  commentId: M:Lett.Extensions.DataTableExtensions.ToEntityList``1(System.Data.DataTable,System.Func{System.Data.DataRow,``0,``0})
+  name.vb: ToEntityList(Of T)(DataTable, Func(Of DataRow, T, T))
+  fullName: Lett.Extensions.DataTableExtensions.ToEntityList<T>(System.Data.DataTable, System.Func<System.Data.DataRow, T, T>)
+  fullName.vb: Lett.Extensions.DataTableExtensions.ToEntityList(Of T)(System.Data.DataTable, System.Func(Of System.Data.DataRow, T, T))
+  nameWithType: DataTableExtensions.ToEntityList<T>(DataTable, Func<DataRow, T, T>)
+  nameWithType.vb: DataTableExtensions.ToEntityList(Of T)(DataTable, Func(Of DataRow, T, T))
 - uid: Lett.Extensions.DateTimeExtensions
   name: DateTimeExtensions
   href: api/Lett.Extensions.DateTimeExtensions.html
@@ -729,6 +747,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DateTimeExtensions.IsWeekDay
   nameWithType: DateTimeExtensions.IsWeekDay
+- uid: Lett.Extensions.DateTimeExtensions.IsZeroTime(System.DateTime)
+  name: IsZeroTime(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsZeroTime_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.IsZeroTime(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.IsZeroTime(System.DateTime)
+  nameWithType: DateTimeExtensions.IsZeroTime(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.IsZeroTime*
+  name: IsZeroTime
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsZeroTime_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.IsZeroTime
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.IsZeroTime
+  nameWithType: DateTimeExtensions.IsZeroTime
 - uid: Lett.Extensions.DateTimeExtensions.SetTime(System.DateTime,System.Int32,System.Int32,System.Int32)
   name: SetTime(DateTime, Int32, Int32, Int32)
   href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_SetTime_System_DateTime_System_Int32_System_Int32_System_Int32_
@@ -1364,6 +1395,31 @@ references:
   fullName.vb: Lett.Extensions.ObjectExtensions.In(Of T)(T, System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEqualityComparer(Of T))
   nameWithType: ObjectExtensions.In<T>(T, IEnumerable<T>, IEqualityComparer<T>)
   nameWithType.vb: ObjectExtensions.In(Of T)(T, IEnumerable(Of T), IEqualityComparer(Of T))
+- uid: Lett.Extensions.ObjectExtensions.InParams*
+  name: InParams
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_InParams_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.InParams
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.InParams
+  nameWithType: ObjectExtensions.InParams
+- uid: Lett.Extensions.ObjectExtensions.InParams``1(``0,``0[])
+  name: InParams<T>(T, T[])
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_InParams__1___0___0___
+  commentId: M:Lett.Extensions.ObjectExtensions.InParams``1(``0,``0[])
+  name.vb: InParams(Of T)(T, T())
+  fullName: Lett.Extensions.ObjectExtensions.InParams<T>(T, T[])
+  fullName.vb: Lett.Extensions.ObjectExtensions.InParams(Of T)(T, T())
+  nameWithType: ObjectExtensions.InParams<T>(T, T[])
+  nameWithType.vb: ObjectExtensions.InParams(Of T)(T, T())
+- uid: Lett.Extensions.ObjectExtensions.InParams``1(``0,System.Collections.Generic.IEqualityComparer{``0},``0[])
+  name: InParams<T>(T, IEqualityComparer<T>, T[])
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_InParams__1___0_System_Collections_Generic_IEqualityComparer___0____0___
+  commentId: M:Lett.Extensions.ObjectExtensions.InParams``1(``0,System.Collections.Generic.IEqualityComparer{``0},``0[])
+  name.vb: InParams(Of T)(T, IEqualityComparer(Of T), T())
+  fullName: Lett.Extensions.ObjectExtensions.InParams<T>(T, System.Collections.Generic.IEqualityComparer<T>, T[])
+  fullName.vb: Lett.Extensions.ObjectExtensions.InParams(Of T)(T, System.Collections.Generic.IEqualityComparer(Of T), T())
+  nameWithType: ObjectExtensions.InParams<T>(T, IEqualityComparer<T>, T[])
+  nameWithType.vb: ObjectExtensions.InParams(Of T)(T, IEqualityComparer(Of T), T())
 - uid: Lett.Extensions.ObjectExtensions.IsArray(System.Object)
   name: IsArray(Object)
   href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsArray_System_Object_
@@ -1455,6 +1511,31 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.ObjectExtensions.IsValueType
   nameWithType: ObjectExtensions.IsValueType
+- uid: Lett.Extensions.ObjectExtensions.Pipe*
+  name: Pipe
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_Pipe_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.Pipe
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.Pipe
+  nameWithType: ObjectExtensions.Pipe
+- uid: Lett.Extensions.ObjectExtensions.Pipe``1(``0,System.Action{``0})
+  name: Pipe<T>(T, Action<T>)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_Pipe__1___0_System_Action___0__
+  commentId: M:Lett.Extensions.ObjectExtensions.Pipe``1(``0,System.Action{``0})
+  name.vb: Pipe(Of T)(T, Action(Of T))
+  fullName: Lett.Extensions.ObjectExtensions.Pipe<T>(T, System.Action<T>)
+  fullName.vb: Lett.Extensions.ObjectExtensions.Pipe(Of T)(T, System.Action(Of T))
+  nameWithType: ObjectExtensions.Pipe<T>(T, Action<T>)
+  nameWithType.vb: ObjectExtensions.Pipe(Of T)(T, Action(Of T))
+- uid: Lett.Extensions.ObjectExtensions.Pipe``2(``0,System.Func{``0,``1})
+  name: Pipe<TSource, TResult>(TSource, Func<TSource, TResult>)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_Pipe__2___0_System_Func___0___1__
+  commentId: M:Lett.Extensions.ObjectExtensions.Pipe``2(``0,System.Func{``0,``1})
+  name.vb: Pipe(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName: Lett.Extensions.ObjectExtensions.Pipe<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  fullName.vb: Lett.Extensions.ObjectExtensions.Pipe(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  nameWithType: ObjectExtensions.Pipe<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType.vb: ObjectExtensions.Pipe(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
 - uid: Lett.Extensions.ObjectExtensions.To*
   name: To
   href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_To_

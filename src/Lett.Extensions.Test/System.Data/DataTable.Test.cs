@@ -179,6 +179,27 @@ namespace Lett.Extensions.Test
             Console.WriteLine($"100K Rows used time: {usedMilliseconds} ms");
         }
 
+        [TestMethod]
+        public void ToEntityList_Test2()
+        {
+            var dt = new DataTable();
+            dt.Columns.AddRange(new[] {"PublicField", "Property", "AutoProperty", "notExistField"});
+            dt.Rows.Add("publicFieldValue1", "PropertyValue1", "AutoPropertyValue1", "notExistFieldValue1");
+            dt.Rows.Add("publicFieldValue2", "PropertyValue2", "AutoPropertyValue2", "notExistFieldValue2");
+            dt.Rows.Add("publicFieldValue3", "PropertyValue3", "AutoPropertyValue3", "notExistFieldValue3");
+
+            var rs = dt.ToEntityList<TestClass1>((row, newObj) =>
+                                                 {
+                                                     newObj.PublicField = row.Cell<string>("PublicField");
+                                                     return newObj;
+                                                 });
+            Assert.AreEqual(rs.Count, 3);
+            Assert.AreEqual(rs[0].PublicField, "publicFieldValue1");
+            Assert.AreEqual(rs[1].PublicField, "publicFieldValue2");
+            Assert.AreEqual(rs[2].PublicField, "publicFieldValue3");
+            Assert.AreEqual(rs[0].Property, null);
+        }
+
 
         #region 测试类 
 

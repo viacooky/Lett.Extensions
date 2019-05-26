@@ -66,11 +66,10 @@ namespace Lett.Extensions
         /// <typeparam name="TKey">Key 类型</typeparam>
         /// <typeparam name="TValue">Value 类型</typeparam>
         /// <returns></returns>
-        /// <exception cref="ArgumentNullException">
-        ///     <exception cref="@this"> is null</exception>
-        /// </exception>
+        /// <exception cref="ArgumentNullException"><paramref name="this"/>  is null</exception>
         /// <exception cref="ArgumentNullException"><paramref name="this.Keys" /> is null</exception>
         /// <exception cref="ArgumentNullException"><paramref name="keys" /> is null</exception>
+        /// <example></example>
         /// <example>
         ///     <code>
         ///         <![CDATA[

@@ -64,6 +64,27 @@ namespace Lett.Extensions.Test
         }
 
         [TestMethod]
+        public void InParams_Test()
+        {
+            var rs = "a".InParams("A", "a");
+            Assert.IsTrue(rs);
+            string s = null;
+            rs = s.InParams("a");
+            Assert.IsFalse(rs);
+        }
+
+        [TestMethod]
+        public void InParams_Test2()
+        {
+            var rs = "a".InParams(StringComparer.CurrentCultureIgnoreCase, "A", "B");
+            Assert.IsTrue(rs);
+            rs = "a".InParams(StringComparer.Ordinal, "A", "B", null);
+            Assert.IsFalse(rs);
+            rs = "a".InParams(StringComparer.Ordinal, null, null);
+            Assert.IsFalse(rs);
+        }
+
+        [TestMethod]
         public void IsClass_Test()
         {
             var obj1 = new MyClass();
