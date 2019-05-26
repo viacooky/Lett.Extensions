@@ -5,9 +5,12 @@
 #### Features / 新增功能
 
 - 增加`DataRow`扩展方法
-- `ToEntity<T>(DataRow, Func<DataRow, T, T>)` 转换为实体
+  - `ToEntity<T>(DataRow, Func<DataRow, T, T>)` 转换为实体
 - 增加`DataTable`扩展方法
-- `ToEntityList<T>(DataTable, Func<DataRow, T, T>)` 转换为实体列表
+  - `ToEntityList<T>(DataTable, Func<DataRow, T, T>)` 转换为实体列表
+- 增加`Object`扩展方法
+  - `InParams<T>(T, T[])` 当前对象是否存在于 items 数组内
+  - `InParams<T>(T, IEqualityComparer<T>, T[])` 当前对象是否存在于 items 数组内
 
 ### 0.2.2 (2019-05-26)
 

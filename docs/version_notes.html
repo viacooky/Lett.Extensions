@@ -75,10 +75,22 @@
 <h3 id="023-2019-05-26">0.2.3 (2019-05-26)</h3>
 <h4 id="features--新增功能">Features / 新增功能</h4>
 <ul>
-<li>增加<code>DataRow</code>扩展方法</li>
+<li>增加<code>DataRow</code>扩展方法
+<ul>
 <li><code>ToEntity&lt;T&gt;(DataRow, Func&lt;DataRow, T, T&gt;)</code> 转换为实体</li>
-<li>增加<code>DataTable</code>扩展方法</li>
+</ul>
+</li>
+<li>增加<code>DataTable</code>扩展方法
+<ul>
 <li><code>ToEntityList&lt;T&gt;(DataTable, Func&lt;DataRow, T, T&gt;)</code> 转换为实体列表</li>
+</ul>
+</li>
+<li>增加<code>Object</code>扩展方法
+<ul>
+<li><code>InParams&lt;T&gt;(T, T[])</code> 当前对象是否存在于 items 数组内</li>
+<li><code>InParams&lt;T&gt;(T, IEqualityComparer&lt;T&gt;, T[])</code> 当前对象是否存在于 items 数组内</li>
+</ul>
+</li>
 </ul>
 <h3 id="022-2019-05-26">0.2.2 (2019-05-26)</h3>
 <h4 id="features--新增功能-1">Features / 新增功能</h4>

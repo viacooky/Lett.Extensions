@@ -82,7 +82,7 @@ namespace Lett.Extensions
         /// <param name="items">进行比较的集合</param>
         /// <param name="comparer">比较器</param>
         /// <typeparam name="T">对象类型</typeparam>
-        /// <returns></returns>
+        /// <returns><paramref name="items" /> 为空  返回 false </returns>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -125,6 +125,56 @@ namespace Lett.Extensions
         {
             return items != null && items.Contains(@this, comparer);
         }
+
+        /// <summary>
+        ///     当前对象是否存在于 <paramref name="items" /> 数组内
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="items">params <typeparamref name="T" />[]</param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns><paramref name="items" /> 为空 返回 false</returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// "a".InParams("A", "a"); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// string s = null;
+        /// s.InParams("a"); // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static bool InParams<T>(this T @this, params T[] items)
+        {
+            return items != null && @this.In(items);
+        }
+
+        /// <summary>
+        ///     当前对象是否存在于 <paramref name="items" /> 数组内
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="comparer">比较器</param>
+        /// <param name="items">params <typeparamref name="T" />[]</param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns><paramref name="items" /> 为空 返回 false</returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// "a".InParams(StringComparer.CurrentCultureIgnoreCase, "A", "B"); // true
+        /// "a".InParams(StringComparer.Ordinal, "A", "B");                  // false
+        /// "a".InParams(StringComparer.Ordinal, null);                      // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static bool InParams<T>(this T @this, IEqualityComparer<T> comparer, params T[] items)
+        {
+            return items != null && @this.In(items, comparer);
+        }
+
 
         /// <summary>
         ///     当前对象类型是否 Class

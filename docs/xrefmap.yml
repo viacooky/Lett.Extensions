@@ -1382,6 +1382,31 @@ references:
   fullName.vb: Lett.Extensions.ObjectExtensions.In(Of T)(T, System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEqualityComparer(Of T))
   nameWithType: ObjectExtensions.In<T>(T, IEnumerable<T>, IEqualityComparer<T>)
   nameWithType.vb: ObjectExtensions.In(Of T)(T, IEnumerable(Of T), IEqualityComparer(Of T))
+- uid: Lett.Extensions.ObjectExtensions.InParams*
+  name: InParams
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_InParams_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.InParams
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.InParams
+  nameWithType: ObjectExtensions.InParams
+- uid: Lett.Extensions.ObjectExtensions.InParams``1(``0,``0[])
+  name: InParams<T>(T, T[])
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_InParams__1___0___0___
+  commentId: M:Lett.Extensions.ObjectExtensions.InParams``1(``0,``0[])
+  name.vb: InParams(Of T)(T, T())
+  fullName: Lett.Extensions.ObjectExtensions.InParams<T>(T, T[])
+  fullName.vb: Lett.Extensions.ObjectExtensions.InParams(Of T)(T, T())
+  nameWithType: ObjectExtensions.InParams<T>(T, T[])
+  nameWithType.vb: ObjectExtensions.InParams(Of T)(T, T())
+- uid: Lett.Extensions.ObjectExtensions.InParams``1(``0,System.Collections.Generic.IEqualityComparer{``0},``0[])
+  name: InParams<T>(T, IEqualityComparer<T>, T[])
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_InParams__1___0_System_Collections_Generic_IEqualityComparer___0____0___
+  commentId: M:Lett.Extensions.ObjectExtensions.InParams``1(``0,System.Collections.Generic.IEqualityComparer{``0},``0[])
+  name.vb: InParams(Of T)(T, IEqualityComparer(Of T), T())
+  fullName: Lett.Extensions.ObjectExtensions.InParams<T>(T, System.Collections.Generic.IEqualityComparer<T>, T[])
+  fullName.vb: Lett.Extensions.ObjectExtensions.InParams(Of T)(T, System.Collections.Generic.IEqualityComparer(Of T), T())
+  nameWithType: ObjectExtensions.InParams<T>(T, IEqualityComparer<T>, T[])
+  nameWithType.vb: ObjectExtensions.InParams(Of T)(T, IEqualityComparer(Of T), T())
 - uid: Lett.Extensions.ObjectExtensions.IsArray(System.Object)
   name: IsArray(Object)
   href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsArray_System_Object_
