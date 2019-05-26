@@ -210,7 +210,7 @@ Dictionary&lt;string, object> dict2 = null;
 var keys  = new[] {&quot;6&quot;};
 List&lt;string> keys3 = null;
 
-dict2.ContainsKeyAll(keys); // error -> throw NullReferenceException
+dict2.ContainsKeyAll(keys); // error -> throw ArgumentNullException dict2 is null
 
 dict.ContainsKeyAll(keys3); // error -> throw ArgumentNullException  keys3 is null </code></pre>
 
@@ -230,7 +230,99 @@ dict.ContainsKeyAll(keys3); // error -> throw ArgumentNullException  keys3 is nu
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p><code data-dev-comment-type="paramref" class="paramref">this.Keys.Keys</code> is null</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">keys</code> is null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_IDictionaryExtensions_ContainsKeyAllParams_" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams*"></a>
+  <h4 id="Lett_Extensions_IDictionaryExtensions_ContainsKeyAllParams__2_System_Collections_Generic_IDictionary___0___1____0___" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams``2(System.Collections.Generic.IDictionary{``0,``1},``0[])">ContainsKeyAllParams&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, TKey[])</h4>
+  <div class="markdown level1 summary"><p>是否包含全部 Key</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsKeyAllParams&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, params TKey[] keys)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>TKey[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>params <code data-dev-comment-type="typeparamref" class="typeparamref">TKey</code>[]</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>Key 类型</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Value 类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IDictionaryExtensions_ContainsKeyAllParams__2_System_Collections_Generic_IDictionary___0___1____0____examples">&#31034;&#20363;</h5>
+  <pre><code>var dict = new Dictionary&lt;string, object>
+{
+{&quot;1&quot;, &quot;1&quot;}, {&quot;2&quot;, &quot;2&quot;}, {&quot;3&quot;, &quot;3&quot;}, {&quot;4&quot;, &quot;4&quot;},
+};
+
+dict.ContainsKeyAll(keys3); // error -> throw ArgumentNullException  keys3 is null </code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code>  is null</p>
 </td>
       </tr>
       <tr>
@@ -327,7 +419,7 @@ Dictionary&lt;string, object> dict2 = null;
 var keys  = new[] {&quot;6&quot;};
 List&lt;string> keys3 = null;
 
-dict2.ContainsKeyAny(keys); // error -> throw NullReferenceException
+dict2.ContainsKeyAny(keys); // error -> throw ArgumentNullException  dict2 is null
 
 dict.ContainsKeyAny(keys3); // error -> throw ArgumentNullException  keys3 is null </code></pre>
 
@@ -347,12 +439,615 @@ dict.ContainsKeyAny(keys3); // error -> throw ArgumentNullException  keys3 is nu
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p><code data-dev-comment-type="paramref" class="paramref">this.Keys.Keys</code> is null</p>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">keys</code> is null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_IDictionaryExtensions_ContainsKeyAnyParams_" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams*"></a>
+  <h4 id="Lett_Extensions_IDictionaryExtensions_ContainsKeyAnyParams__2_System_Collections_Generic_IDictionary___0___1____0___" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams``2(System.Collections.Generic.IDictionary{``0,``1},``0[])">ContainsKeyAnyParams&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, TKey[])</h4>
+  <div class="markdown level1 summary"><p>是否包含任一 Key</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsKeyAnyParams&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, params TKey[] keys)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>TKey[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>params <code data-dev-comment-type="typeparamref" class="typeparamref">TKey</code>[]</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>Key 类型</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Value 类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IDictionaryExtensions_ContainsKeyAnyParams__2_System_Collections_Generic_IDictionary___0___1____0____examples">&#31034;&#20363;</h5>
+  <pre><code>var dict = new Dictionary&lt;string, object>
+{
+{&quot;1&quot;, &quot;1&quot;}, {&quot;2&quot;, &quot;2&quot;}, {&quot;3&quot;, &quot;3&quot;}, {&quot;4&quot;, &quot;4&quot;},
+};
+
+dict2.ContainsKeyAny(&quot;1&quot;, &quot;2&quot;); // true</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> is null</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
         <td><p><code data-dev-comment-type="paramref" class="paramref">keys</code> is null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_IDictionaryExtensions_ContainsValue_" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsValue*"></a>
+  <h4 id="Lett_Extensions_IDictionaryExtensions_ContainsValue__2_System_Collections_Generic_IDictionary___0___1____1_" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsValue``2(System.Collections.Generic.IDictionary{``0,``1},``1)">ContainsValue&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, TValue)</h4>
+  <div class="markdown level1 summary"><p>是否包含 <code data-dev-comment-type="paramref" class="paramref">value</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsValue&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">value</code> is null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_IDictionaryExtensions_ContainsValueAll_" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsValueAll*"></a>
+  <h4 id="Lett_Extensions_IDictionaryExtensions_ContainsValueAll__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___1__" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsValueAll``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``1})">ContainsValueAll&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, IEnumerable&lt;TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>是否包含全部 Value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsValueAll&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, IEnumerable&lt;TValue&gt; values)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TValue&gt;</td>
+        <td><span class="parametername">values</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>Key 类型</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Value 类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IDictionaryExtensions_ContainsValueAll__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___1___examples">&#31034;&#20363;</h5>
+  <pre><code>var dict = new Dictionary&lt;string, object>
+{
+{&quot;Key1&quot;, &quot;1Value&quot;}, {&quot;Key2&quot;, &quot;2Value&quot;}, {&quot;Key3&quot;, &quot;3Value&quot;}, {&quot;Key4&quot;, &quot;4Value&quot;},
+};
+var values  = new List&lt;string> {&quot;1Value&quot;, &quot;2Value&quot;, &quot;3Value&quot;, &quot;4Value&quot;};
+var values2 = new List&lt;string> {&quot;1Value&quot;, &quot;2Value&quot;, &quot;3Value&quot;, &quot;4Value&quot;, &quot;6666Value&quot;};
+
+Dictionary&lt;string, object> dict2 = null;
+
+dict.ContainsValueAll(values); // true
+dict.ContainsValueAll(values2); // false
+dict.ContainsValueAllParams(&quot;1Value&quot;, &quot;2Value&quot;, &quot;3Value&quot;, &quot;4Value&quot;); // true
+dict.ContainsValueAllParams(&quot;1Value&quot;, &quot;2Value&quot;, &quot;3Value&quot;, &quot;4Value&quot;,&quot;6666Value&quot;); // false
+
+dict2.ContainsValueAll(values); // throw ArgumentNullException this is null
+dict.ContainsValueAllParams(null); // throw ArgumentNullException values is null</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">values</code> is null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_IDictionaryExtensions_ContainsValueAllParams_" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams*"></a>
+  <h4 id="Lett_Extensions_IDictionaryExtensions_ContainsValueAllParams__2_System_Collections_Generic_IDictionary___0___1____1___" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams``2(System.Collections.Generic.IDictionary{``0,``1},``1[])">ContainsValueAllParams&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, TValue[])</h4>
+  <div class="markdown level1 summary"><p>是否包含全部 Value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsValueAllParams&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, params TValue[] values)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>TValue[]</td>
+        <td><span class="parametername">values</span></td>
+        <td><p>params <code data-dev-comment-type="typeparamref" class="typeparamref">TValue</code>[]</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>Key 类型</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Value 类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IDictionaryExtensions_ContainsValueAllParams__2_System_Collections_Generic_IDictionary___0___1____1____examples">&#31034;&#20363;</h5>
+  <pre><code>var dict = new Dictionary&lt;string, object>
+{
+{&quot;Key1&quot;, &quot;1Value&quot;}, {&quot;Key2&quot;, &quot;2Value&quot;}, {&quot;Key3&quot;, &quot;3Value&quot;}, {&quot;Key4&quot;, &quot;4Value&quot;},
+};
+var values  = new List&lt;string> {&quot;1Value&quot;, &quot;2Value&quot;, &quot;3Value&quot;, &quot;4Value&quot;};
+var values2 = new List&lt;string> {&quot;1Value&quot;, &quot;2Value&quot;, &quot;3Value&quot;, &quot;4Value&quot;, &quot;6666Value&quot;};
+
+Dictionary&lt;string, object> dict2 = null;
+
+dict.ContainsValueAll(values); // true
+dict.ContainsValueAll(values2); // false
+dict.ContainsValueAllParams(&quot;1Value&quot;, &quot;2Value&quot;, &quot;3Value&quot;, &quot;4Value&quot;); // true
+dict.ContainsValueAllParams(&quot;1Value&quot;, &quot;2Value&quot;, &quot;3Value&quot;, &quot;4Value&quot;,&quot;6666Value&quot;); // false
+
+dict2.ContainsValueAll(values); // throw ArgumentNullException this is null
+dict.ContainsValueAllParams(null); // throw ArgumentNullException values is null</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">values</code> is null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_IDictionaryExtensions_ContainsValueAny_" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsValueAny*"></a>
+  <h4 id="Lett_Extensions_IDictionaryExtensions_ContainsValueAny__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___1__" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsValueAny``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``1})">ContainsValueAny&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, IEnumerable&lt;TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>是否包含任一 value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsValueAny&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, IEnumerable&lt;TValue&gt; values)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TValue&gt;</td>
+        <td><span class="parametername">values</span></td>
+        <td><p>value 集合</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>Key 类型</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Value 类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IDictionaryExtensions_ContainsValueAny__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___1___examples">&#31034;&#20363;</h5>
+  <pre><code>var dict = new Dictionary&lt;string,object>
+{
+{&quot;Key1&quot;, &quot;1Value&quot;}, {&quot;Key2&quot;, &quot;2Value&quot;}, {&quot;Key3&quot;, &quot;3Value&quot;}, {&quot;Key4&quot;, &quot;4Value&quot;},
+};
+var values = new List&lt;string> {&quot;1Value&quot;};
+var values2 = new List&lt;string> {&quot;6666Value&quot;};
+Dictionary&lt;string, object> dict2 = null;
+
+
+dict.ContainsValueAny(values); // true
+dict.ContainsValueAny(values2); // false
+dict.ContainsValueAnyParams(&quot;1Value&quot;); // true
+
+dict2.ContainsKeyAll(values); // throw ArgumentNullException this is null
+dict.ContainsKeyAllParams(null); // throw ArgumentNullException values is null</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">values</code> is null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_IDictionaryExtensions_ContainsValueAnyParams_" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams*"></a>
+  <h4 id="Lett_Extensions_IDictionaryExtensions_ContainsValueAnyParams__2_System_Collections_Generic_IDictionary___0___1____1___" data-uid="Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams``2(System.Collections.Generic.IDictionary{``0,``1},``1[])">ContainsValueAnyParams&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, TValue[])</h4>
+  <div class="markdown level1 summary"><p>是否包含任一 value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsValueAnyParams&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, params TValue[] values)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>TValue[]</td>
+        <td><span class="parametername">values</span></td>
+        <td><p>params <code data-dev-comment-type="typeparamref" class="typeparamref">TValue</code>[]</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>Key 类型</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Value 类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IDictionaryExtensions_ContainsValueAnyParams__2_System_Collections_Generic_IDictionary___0___1____1____examples">&#31034;&#20363;</h5>
+  <pre><code>var dict = new Dictionary&lt;string,object>
+{
+{&quot;Key1&quot;, &quot;1Value&quot;}, {&quot;Key2&quot;, &quot;2Value&quot;}, {&quot;Key3&quot;, &quot;3Value&quot;}, {&quot;Key4&quot;, &quot;4Value&quot;},
+};
+var values = new List&lt;string> {&quot;1Value&quot;};
+var values2 = new List&lt;string> {&quot;6666Value&quot;};
+Dictionary&lt;string, object> dict2 = null;
+
+
+dict.ContainsValueAny(values); // true
+dict.ContainsValueAny(values2); // false
+dict.ContainsValueAnyParams(&quot;1Value&quot;); // true
+
+dict2.ContainsKeyAll(values); // throw ArgumentNullException this is null
+dict.ContainsKeyAllParams(null); // throw ArgumentNullException values is null</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">values</code> is null</p>
 </td>
       </tr>
     </tbody>
