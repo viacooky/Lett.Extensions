@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Change log / &#26356;&#26032;&#26085;&#24535; | Lett.Extensions </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Change log / &#26356;&#26032;&#26085;&#24535; | Lett.Extensions ">
+    <meta name="generator" content="docfx 2.42.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="change-log--更新日志">Change log / 更新日志</h1>
+
+<h3 id="020-2019-05-21">0.2.0 (2019-05-21)</h3>
+<h4 id="features--新增功能">Features / 新增功能</h4>
+<ul>
+<li>增加<code>IEnumerable&lt;T&gt;</code>扩展方法：
+<ul>
+<li><code>ContainsAny(IEnumerable&lt;T&gt; items)</code> 是否包含任一元素</li>
+<li><code>ContainsAll(IEnumerable&lt;T&gt; items)</code> 是否包含全部元素</li>
+</ul>
+</li>
+<li>增加<code>DateTime</code>扩展方法:
+<ul>
+<li><code>SetTime(int hour, int minute, int second, int millisecond = 0)</code> 设置 DateTime 的 time 部分</li>
+<li><code>StartOfDay()</code> 获取 DateTime 的开始 (year-month-day 00:00:00.000)</li>
+<li><code>EndOfDay()</code> 获取 DateTime 的结束 (year-month-day 23:59:59.999)</li>
+<li><code>StartOfWeek()</code> 获取本周开始的 DateTime (year-month-day 00:00:00.000)</li>
+<li><code>EndOfWeek()</code> 获取本周结束的 DateTime (year-month-day 23:59:59.999)</li>
+</ul>
+</li>
+</ul>
+<h4 id="changed--变更">Changed / 变更</h4>
+<ul>
+<li>移除<code>DateTime</code>扩展方法:
+<ul>
+<li><code>RemoveTimePart()</code> 移除时间部分</li>
+</ul>
+</li>
+</ul>
+<h3 id="019-2019-05-18">0.1.9 (2019-05-18)</h3>
+<h4 id="features--新增功能-1">Features / 新增功能</h4>
+<ul>
+<li>增加<code>DateTime</code>扩展方法:
+<ul>
+<li><code>RemoveTimePart()</code> 移除时间部分</li>
+</ul>
+</li>
+<li>增加<code>Array</code>扩展方法
+<ul>
+<li><code>ClearAll()</code> 全部清除</li>
+<li><code>ContainsIndex(int index)</code> 是否包含索引</li>
+<li><code>Sort()</code> 排序</li>
+<li><code>Reverse()</code> 反转</li>
+<li><code>Find()</code> 返回数组中的第一个匹配元素</li>
+<li><code>FindLast()</code> 返回数组中的最后一个匹配元素</li>
+<li><code>FindAll()</code> 返回数组中所有匹配的元素</li>
+<li><code>FindIndex()</code> 返回数组中的第一个匹配元素的索引</li>
+<li><code>FindLastIndex()</code> 返回数组中的最后一个匹配元素的索引</li>
+<li><code>ForEach()</code> 对指定数组的每个元素执行指定操作</li>
+</ul>
+</li>
+</ul>
+<h3 id="018-2019-05-13">0.1.8 (2019-05-13)</h3>
+<h4 id="features--新增功能-2">Features / 新增功能</h4>
+<ul>
+<li>增加<code>string</code>扩展方法:
+<ul>
+<li><code>ToBytes(Encoding encoding = null)</code> 转换为 byte 数组</li>
+<li><code>IsLike(string pattern)</code> *通配符比较是否相似 (特殊字符 用 \ 转义)</li>
+<li><code>RegexIsMatch(string pattern)</code> 正则表达式 - 是否匹配</li>
+<li><code>RegexMatches(string pattern)</code> 正则表达式匹配 - 所有匹配对象</li>
+<li><code>RegexMatch(string pattern)</code> 正则表达式匹配 - 单个匹配对象</li>
+<li><code>RegexSplit(string pattern)</code> 正则表达式拆分字符串</li>
+<li><code>RegexReplace(string pattern, string replacement)</code> 正则表达式替换字符串</li>
+<li><code>RegexReplace(string pattern, MatchEvaluator evaluator)</code> 正则表达式替换字符串</li>
+</ul>
+</li>
+<li>增加<code>byte[]</code>扩展方法:
+<ul>
+<li><code>ToString(Encoding encoding)</code> 转换为字符串</li>
+</ul>
+</li>
+<li>增加<code>ICollection</code>扩展方法:
+<ul>
+<li><code>AddIfNotContains&lt;T&gt;(@this, T item)</code> 如果不包含，则添加</li>
+<li><code>AddIfNotContains&lt;T&gt;(ICollection&lt;T&gt; items)</code> 如果不包含，则添加</li>
+</ul>
+</li>
+<li>增加<code>bool</code>扩展方法:
+<ul>
+<li><code>IfTrue(Action action)</code> 结果为 True 时，执行方法</li>
+<li><code>IfTrue(T result)</code> 结果为 True 时，返回参数 (结果为 False 时，返回参数类型默认值)</li>
+<li><code>IfFalse(Action action)</code> 结果为 False 时，执行方法</li>
+<li><code>IfTrue(T result)</code> 结果为 False 时，返回参数 (结果为 True 时，返回参数类型默认值)</li>
+</ul>
+</li>
+<li>增加<code>int</code>扩展方法:
+<ul>
+<li><code>IsEven()</code> 是否偶数</li>
+<li><code>IsOdd()</code> 是否奇数</li>
+<li><code>Times(Action action)</code> 执行次数操作，次数基于原 int 值</li>
+<li><code>Times(Action&lt;int&gt; action)</code> 执行次数操作，次数基于原 int 值</li>
+<li><code>IsInRange(int min, int max)</code> 是否在指定范围内</li>
+</ul>
+</li>
+<li>增加<code>long</code>扩展方法:
+<ul>
+<li><code>IsEven()</code> 是否偶数</li>
+<li><code>IsOdd()</code> 是否奇数</li>
+<li><code>Times(Action action)</code> 执行次数操作，次数基于原 int 值</li>
+<li><code>Times(Action&lt;long&gt; action)</code> 执行次数操作，次数基于原 int 值</li>
+<li><code>IsInRange(long min, long max)</code> 是否在指定范围内</li>
+</ul>
+</li>
+</ul>
+<h4 id="changed--变更-1">Changed / 变更</h4>
+<ul>
+<li>对扩展方法类名进行规范重命名
+<ul>
+<li>统一命名空间 <code>Lett.Extensions.Exceptions</code></li>
+<li><code>IEnumerableExtensions</code> IEnumerable 扩展方法</li>
+<li><code>DataColumnCollectionExtensions</code> DataColumnCollection 扩展方法</li>
+<li><code>DataRowExtensions</code> DataRow 扩展方法</li>
+<li><code>DataTableExtensions</code> DataTable 扩展方法</li>
+<li><code>DateTimeExtensions</code> DateTime 扩展方法</li>
+<li><code>EnumExtensions</code> Enum 扩展方法</li>
+<li><code>IntExtensions</code> int 扩展方法</li>
+<li><code>ObjectExtensions</code> object 扩展方法</li>
+<li><code>StringExtensions</code> string 扩展方法</li>
+<li><code>TypeExtensions</code> type 扩展方法</li>
+</ul>
+</li>
+<li>类名变更：
+<ul>
+<li><code>LettExtensionsDataTableException</code> -&gt; <code>DataTableException</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="017-2019-04-28">0.1.7 (2019-04-28)</h3>
+<h4 id="features--新增功能-3">Features / 新增功能</h4>
+<ul>
+<li>增加 <code>System.String</code> 拓展方法
+<ul>
+<li><code>Format(object[] args)</code> 格式化</li>
+<li><code>Left(int length)</code> 从左侧返回指定长度的字符串</li>
+<li><code>Right(int length)</code> 从右侧返回指定长度的字符串</li>
+</ul>
+</li>
+</ul>
+<h3 id="016-2019-04-25">0.1.6 (2019-04-25)</h3>
+<h4 id="features--新增功能-4">Features / 新增功能</h4>
+<ul>
+<li>增加 <code>String.IsNullOrWhiteSpace()</code> 是否 null 或空白</li>
+<li>增加 <code>String.ContainsAll()</code> 是否全部包含，默认不区分大小写</li>
+<li>增加 <code>String.ContainsAny()</code> 是否包含任意一个，默认不区分大小写</li>
+</ul>
+<h3 id="015-2019-04-24">0.1.5 (2019-04-24)</h3>
+<h4 id="features--新增功能-5">Features / 新增功能</h4>
+<ul>
+<li>增加 DataTable DataRow 转换实体方法</li>
+<li>增加 DataColumnCollectionTest.AddRange 方法</li>
+<li>获取 DataColumn 可枚举对象 <code>ColumnsEnumerable()</code></li>
+<li>获取 Column 的数据类型 <code>GetColumnDataType(string columnName)</code></li>
+<li>获取 Column 的数据类型 <code>GetColumnDataType(int index)</code></li>
+</ul>
+<h4 id="changed--变更-2">Changed / 变更</h4>
+<ul>
+<li><code>DataRow.Cell&lt;T&gt;()</code> 系列方法，泛型约定调整为 实现了 <code>IConvertible</code> 接口的类型</li>
+<li><code>Object.To&lt;T&gt;()</code> 方法的泛型约定调整为 实现了 <code>IConvertible</code> 接口的类型</li>
+<li>实现了 <code>IConvertible</code> 接口的类型 如：Boolean, Byte, Char, DateTime, System.DBNull, Decimal, Double, System.Enum, Int16, Int32, Int64, SByte, Single, String, UInt16, UInt32, UInt64 等</li>
+</ul>
+<h3 id="014-2019-04-14">0.1.4 (2019-04-14)</h3>
+<h4 id="features--新增功能-6">Features / 新增功能</h4>
+<ul>
+<li>增加 Object.IsDBNull 方法</li>
+</ul>
+<h4 id="refactored--优化重构">Refactored / 优化重构</h4>
+<ul>
+<li>调整 Int32.GetEnumDescription()方法位置，使用无感知</li>
+</ul>
+<hr>
+<h3 id="xxx-2019-04-13">X.X.X (2019-04-13)</h3>
+<h4 id="features--新增功能-7">Features / 新增功能</h4>
+<ul>
+<li></li>
+</ul>
+<h4 id="changed--变更-3">Changed / 变更</h4>
+<ul>
+<li></li>
+</ul>
+<h4 id="fixed--修复">Fixed / 修复</h4>
+<ul>
+<li></li>
+</ul>
+<h4 id="removed--删除">Removed / 删除</h4>
+<ul>
+<li></li>
+</ul>
+<h4 id="deprecated--即将删除">Deprecated / 即将删除</h4>
+<ul>
+<li></li>
+</ul>
+<h4 id="refactored--优化重构-1">Refactored / 优化重构</h4>
+<ul>
+<li></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright (c) 2019 viacooky. All rights reserved.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

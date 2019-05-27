@@ -1,0 +1,478 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Code/github.com/Lett.Extensions/docs_build",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.ArrayExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.ArrayExtensions.html",
+          "hash": "CBlykjsKGzXxc3XYSJuymw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.BooleanExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.BooleanExtensions.html",
+          "hash": "zRRkV7BW7d1mBrxU2nQ9Dw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.ByteExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.ByteExtensions.html",
+          "hash": "1Gyx/rnzXPEjNutdB1X6iA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.DataColumnCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.DataColumnCollectionExtensions.html",
+          "hash": "NLsrZvdrNWbbOJm3GJJQ/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.DataRowExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.DataRowExtensions.html",
+          "hash": "sBWe3rq3jGgfdsuwBvU8mQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.DataTableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.DataTableExtensions.html",
+          "hash": "ILNpAqBi5rjyzD6wKS3j7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.DateTimeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.DateTimeExtensions.html",
+          "hash": "iD87vaaSRW6FD8NUOR0NHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.EnumExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.EnumExtensions.html",
+          "hash": "dfEfAJuMKd2sY8lHyhv5SA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.Exceptions.DataTableException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.Exceptions.DataTableException.html",
+          "hash": "t7RxGu9qm1d5KW+yhzMlkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.Exceptions.html",
+          "hash": "ELh16IetwRxuzGRs35Az9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.ICollectionsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.ICollectionsExtensions.html",
+          "hash": "0If0NnZJWkdiuedY5Aa0iw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.IEnumerableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.IEnumerableExtensions.html",
+          "hash": "exKAAHy1uqmyhYJgW4vG2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.IntExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.IntExtensions.html",
+          "hash": "TTbkzqa7u1PfT3QDeBra8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.LongExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.LongExtensions.html",
+          "hash": "k5EY7AktNYk8AZ5Jfw4HPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.ObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.ObjectExtensions.html",
+          "hash": "/HsZb3Ugz84f/yJkUwtjTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.StringExtensions.html",
+          "hash": "NBEVMMV+wJIU9U97wpen1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.TypeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.TypeExtensions.html",
+          "hash": "QvrezAhf/0rECxrobzwl/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.html",
+          "hash": "Gdm9hrRTX08H2gQD4n1lHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "Vdnhw6YoN7vZ77eMxTZk0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "UZKyyYJL0JWwdfTh96IbVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/icon/icon_128.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/icon/icon_128.ico",
+          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/icon/icon_128.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/icon/icon_16.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/icon/icon_16.ico",
+          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/icon/icon_16.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/icon/icon_24.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/icon/icon_24.ico",
+          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/icon/icon_24.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/icon/icon_32.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/icon/icon_32.ico",
+          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/icon/icon_32.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/icon/icon_48.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/icon/icon_48.ico",
+          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/icon/icon_48.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/icon/icon_64.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/icon/icon_64.ico",
+          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/icon/icon_64.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/icon_128.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/icon_128.ico",
+          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/icon_128.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.png",
+          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.simple.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.simple.png",
+          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/logo.simple.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo_174_38.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo_174_38.png",
+          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/logo_174_38.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo_229_50.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo_229_50.png",
+          "link_to_path": "D:\\Code\\github.com\\Lett.Extensions\\docs_build/images/logo_229_50.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "Y34WT7DOs6j7yFlt8WZGhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "fWynXCEUuc2NiDEg1VQBug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "version_notes.md",
+      "output": {
+        ".html": {
+          "relative_path": "version_notes.html",
+          "hash": "UNlVNtvyLYW099imaU2bdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 18,
+          "skipped_file_count": 18
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
