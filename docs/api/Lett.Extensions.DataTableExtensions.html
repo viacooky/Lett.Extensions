@@ -555,6 +555,67 @@
       </tr>
     </tbody>
   </table>
+  <a id="Lett_Extensions_DataTableExtensions_ToDynamicObjects_" data-uid="Lett.Extensions.DataTableExtensions.ToDynamicObjects*"></a>
+  <h4 id="Lett_Extensions_DataTableExtensions_ToDynamicObjects_System_Data_DataTable_" data-uid="Lett.Extensions.DataTableExtensions.ToDynamicObjects(System.Data.DataTable)">ToDynamicObjects(DataTable)</h4>
+  <div class="markdown level1 summary"><p>转换为动态对象</p>
+<p>值为 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dbnull.value">Value</a> 转换为 Null </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;dynamic&gt; ToDynamicObjects(this DataTable this)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_DataTableExtensions_ToDynamicObjects_System_Data_DataTable__examples">&#31034;&#20363;</h5>
+  <pre><code>var dt = new DataTable();
+dt.Columns.AddRange(new[] {&quot;Name&quot;, &quot;Number&quot;});
+dt.Columns.Add(new DataColumn(&quot;Age&quot;, typeof(int)));
+dt.Columns.Add(new DataColumn(&quot;CreateTime&quot;, typeof(DateTime)));
+dt.Rows.Add(&quot;Name_1&quot;, &quot;Number_1&quot;, 10, DateTime.Now);
+dt.Rows.Add(&quot;Name_2&quot;, &quot;Number_2&quot;, 10, DateTime.Now);
+dt.Rows.Add(&quot;Name_3&quot;, &quot;Number_3&quot;, 10, DateTime.Now);
+dt.Rows.Add(&quot;Name_4&quot;, DBNull.Value, 10, DateTime.Now);
+
+var rs = dt.ToDynamicObjects().ToList();
+
+// rs[0].Name == &quot;Name_1&quot;
+// rs[0].Number == &quot;Number_1&quot;
+// rs[0].Age == 10
+// rs[0].CreateTime.GetType() == typeof(DateTime)
+
+// rs[3].Number is null</code></pre>
+
   <a id="Lett_Extensions_DataTableExtensions_ToEntityList_" data-uid="Lett.Extensions.DataTableExtensions.ToEntityList*"></a>
   <h4 id="Lett_Extensions_DataTableExtensions_ToEntityList__1_System_Data_DataTable_" data-uid="Lett.Extensions.DataTableExtensions.ToEntityList``1(System.Data.DataTable)">ToEntityList&lt;T&gt;(DataTable)</h4>
   <div class="markdown level1 summary"><p>转换为实体列表</p>

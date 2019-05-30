@@ -1,5 +1,12 @@
 # Version Notes
 
+### 0.2.5 (2019-05-30)
+
+#### Features / 新增功能
+
+- `DataTable` 扩展方法
+  - `ToDynamicObjects` 转换为动态对象
+
 ### 0.2.4 (2019-05-26)
 
 #### Features / 新增功能

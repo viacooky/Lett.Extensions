@@ -405,6 +405,22 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DataColumnCollectionExtensions.AddRange
   nameWithType: DataColumnCollectionExtensions.AddRange
+- uid: Lett.Extensions.DataColumnCollectionExtensions.AddRangeParams(System.Data.DataColumnCollection,System.String[])
+  name: AddRangeParams(DataColumnCollection, String[])
+  href: api/Lett.Extensions.DataColumnCollectionExtensions.html#Lett_Extensions_DataColumnCollectionExtensions_AddRangeParams_System_Data_DataColumnCollection_System_String___
+  commentId: M:Lett.Extensions.DataColumnCollectionExtensions.AddRangeParams(System.Data.DataColumnCollection,System.String[])
+  name.vb: AddRangeParams(DataColumnCollection, String())
+  fullName: Lett.Extensions.DataColumnCollectionExtensions.AddRangeParams(System.Data.DataColumnCollection, System.String[])
+  fullName.vb: Lett.Extensions.DataColumnCollectionExtensions.AddRangeParams(System.Data.DataColumnCollection, System.String())
+  nameWithType: DataColumnCollectionExtensions.AddRangeParams(DataColumnCollection, String[])
+  nameWithType.vb: DataColumnCollectionExtensions.AddRangeParams(DataColumnCollection, String())
+- uid: Lett.Extensions.DataColumnCollectionExtensions.AddRangeParams*
+  name: AddRangeParams
+  href: api/Lett.Extensions.DataColumnCollectionExtensions.html#Lett_Extensions_DataColumnCollectionExtensions_AddRangeParams_
+  commentId: Overload:Lett.Extensions.DataColumnCollectionExtensions.AddRangeParams
+  isSpec: "True"
+  fullName: Lett.Extensions.DataColumnCollectionExtensions.AddRangeParams
+  nameWithType: DataColumnCollectionExtensions.AddRangeParams
 - uid: Lett.Extensions.DataRowExtensions
   name: DataRowExtensions
   href: api/Lett.Extensions.DataRowExtensions.html
@@ -560,6 +576,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DataTableExtensions.RowsEnumerable
   nameWithType: DataTableExtensions.RowsEnumerable
+- uid: Lett.Extensions.DataTableExtensions.ToDynamicObjects(System.Data.DataTable)
+  name: ToDynamicObjects(DataTable)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_ToDynamicObjects_System_Data_DataTable_
+  commentId: M:Lett.Extensions.DataTableExtensions.ToDynamicObjects(System.Data.DataTable)
+  fullName: Lett.Extensions.DataTableExtensions.ToDynamicObjects(System.Data.DataTable)
+  nameWithType: DataTableExtensions.ToDynamicObjects(DataTable)
+- uid: Lett.Extensions.DataTableExtensions.ToDynamicObjects*
+  name: ToDynamicObjects
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_ToDynamicObjects_
+  commentId: Overload:Lett.Extensions.DataTableExtensions.ToDynamicObjects
+  isSpec: "True"
+  fullName: Lett.Extensions.DataTableExtensions.ToDynamicObjects
+  nameWithType: DataTableExtensions.ToDynamicObjects
 - uid: Lett.Extensions.DataTableExtensions.ToEntityList*
   name: ToEntityList
   href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_ToEntityList_
