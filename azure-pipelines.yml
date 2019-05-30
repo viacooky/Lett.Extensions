@@ -11,7 +11,7 @@ trigger:
       - docs/*.md
 
 variables:
-  dotnetVersion: 2.2
+  dotnetVersion: 2.2.300
 
 
 jobs:
