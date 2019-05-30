@@ -82,7 +82,7 @@ jobs:
   - Linux_ubuntu_1604
   - Windows_2019
   - Hosted_Windows_2019
-  condition: and(succeeded('macOS_1014', 'Linux_ubuntu_1604', 'Windows_2019', 'Hosted_Windows_2019'), eq(isPushNuget, 'true'))
+  condition: and(eq($(isPushNuget), 'true'), succeeded('macOS_1014', 'Linux_ubuntu_1604', 'Windows_2019', 'Hosted_Windows_2019'), )
   pool:
     vmImage: 'ubuntu-16.04'
   steps:
