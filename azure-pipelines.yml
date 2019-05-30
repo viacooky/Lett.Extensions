@@ -84,17 +84,17 @@ jobs:
   - Hosted_Windows_2019
   condition: and(succeeded('macOS_1014', 'Linux_ubuntu_1604', 'Windows_2019', 'Hosted_Windows_2019'), eq(variables['isPushNuget'], 'true'))
   pool:
-    vmImage: 'ubuntu-16.04'
+    name: Hosted Windows 2019 with VS2019
   steps:
-    - task: DotNetCoreCLI@2
-      displayName: '打包'
+    - task: UseDotNet@2
+      displayName: '安装 .NET Core sdk'
       inputs:
-        command: pack
-        projects: '$(BaseProject)'
-        arguments: '--configuration $(BuildConfiguration)'
-        versioningScheme: byEnvVar
-        versionEnvVar: packVersion
-
+        packageType: sdk
+        version: $(dotnetVersion)
+        installationPath: $(Agent.ToolsDirectory)/dotnet
+    - powershell: ./build.ps1 --target=Publish --packVer=$(packVersion)
+      condition: eq( variables['Agent.OS'], 'Windows_NT' )
+      displayName: Windows (Windows 2019 with VS2019) 平台 执行 cake pack
     - task: NuGetCommand@2
       displayName: 'NuGet 发布'
       inputs:
