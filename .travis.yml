@@ -1,0 +1,13 @@
+language: csharp
+
+os:
+  - windows
+  - linux
+  - osx
+
+script:
+  - if [ "$TRAVIS_OS_NAME" = "windows" ]; ./build.ps1                   ; fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then chmod +x ./build.sh        ; fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then ./build.sh                 ; fi
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then chmod +x ./build.sh          ; fi
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then ./build.sh                   ; fi
