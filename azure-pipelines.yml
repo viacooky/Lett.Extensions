@@ -26,9 +26,9 @@ pool:
 #   vmImage: $(imageName)
 
 steps:
-  - task: Bash@3
-    inputs:
-      script: chmod +x ./build.sh && ./build.sh
+- bash: |
+    chmod +x ./build.sh
+    ./build.sh
 
 # variables:
 #   BuildConfiguration: 'Release'
