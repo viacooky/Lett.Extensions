@@ -13,79 +13,78 @@ trigger:
 variables:
   dotnetVersion: 2.2.203
 
-stages:
-- stage: multiple_platform_build_and_test
-  jobs:
-  # Linux (Docker - ubuntu-16.04)
-  - job: Linux_ubuntu_1604
-    pool:
-      vmImage: 'ubuntu-16.04'
-    steps:
-    - task: UseDotNet@2
-      displayName: '安装 .NET Core sdk'
-      inputs:
-        packageType: sdk
-        version: $(dotnetVersion)
-        installationPath: $(Agent.ToolsDirectory)/dotnet
-    - bash: |
-        chmod +x ./build.sh
-        ./build.sh
-      displayName: Linux (Docker - ubuntu-16.04) 平台 执行 cake
-  # MacOS (Docker - macOS-10.14)
-  - job: macOS_1014
-    pool:
-      vmImage: 'macOS-10.14'
-    steps:
-    - task: UseDotNet@2
-      displayName: '安装 .NET Core sdk'
-      inputs:
-        packageType: sdk
-        version: $(dotnetVersion)
-        installationPath: $(Agent.ToolsDirectory)/dotnet
-    - bash: |
-        chmod +x ./build.sh
-        ./build.sh
-      displayName: MacOS (Docker - macOS-10.14) 平台 执行 cake
-  # Windows (Docker - windows-2019)
-  - job: Windows_2019
-    pool:
-      vmImage: 'windows-2019'
-    steps:
-    - task: UseDotNet@2
-      displayName: '安装 .NET Core sdk'
-      inputs:
-        packageType: sdk
-        version: $(dotnetVersion)
-        installationPath: $(Agent.ToolsDirectory)/dotnet
-    - powershell: |
-        ./build.ps1
-      condition: eq( variables['Agent.OS'], 'Windows_NT' )
-      displayName: Windows (Docker - windows-2019) 平台 执行 cake
-  # Windows (Windows 2019 with VS2019)
-  - job: Hosted_Windows_2019
-    pool:
-      name: Hosted Windows 2019 with VS2019
-    steps:
-    - task: UseDotNet@2
-      displayName: '安装 .NET Core sdk'
-      inputs:
-        packageType: sdk
-        version: $(dotnetVersion)
-        installationPath: $(Agent.ToolsDirectory)/dotnet
-    - powershell: |
-        ./build.ps1
-      condition: eq( variables['Agent.OS'], 'Windows_NT' )
-      displayName: Windows (Windows 2019 with VS2019) 平台 执行 cake
-- stage: push_nuget_package
-  jobs:
-    - job: Build_NuGet_Package
-      dependsOn: 
-      - macOS_1014
-      - Linux_ubuntu_1604
-      - Windows_2019
-      - Hosted_Windows_2019
-      condition: succeeded('macOS_1014', 'Linux_ubuntu_1604', 'Windows_2019', 'Hosted_Windows_2019')
-      pool:
-        vmImage: 'ubuntu-16.04'
-      steps:
-        - bash: echo start build nuget package
+
+jobs:
+# Linux (Docker - ubuntu-16.04)
+- job: Linux_ubuntu_1604
+  pool:
+    vmImage: 'ubuntu-16.04'
+  steps:
+  - task: UseDotNet@2
+    displayName: '安装 .NET Core sdk'
+    inputs:
+      packageType: sdk
+      version: $(dotnetVersion)
+      installationPath: $(Agent.ToolsDirectory)/dotnet
+  - bash: |
+      chmod +x ./build.sh
+      ./build.sh
+    displayName: Linux (Docker - ubuntu-16.04) 平台 执行 cake
+# MacOS (Docker - macOS-10.14)
+- job: macOS_1014
+  pool:
+    vmImage: 'macOS-10.14'
+  steps:
+  - task: UseDotNet@2
+    displayName: '安装 .NET Core sdk'
+    inputs:
+      packageType: sdk
+      version: $(dotnetVersion)
+      installationPath: $(Agent.ToolsDirectory)/dotnet
+  - bash: |
+      chmod +x ./build.sh
+      ./build.sh
+    displayName: MacOS (Docker - macOS-10.14) 平台 执行 cake
+# Windows (Docker - windows-2019)
+- job: Windows_2019
+  pool:
+    vmImage: 'windows-2019'
+  steps:
+  - task: UseDotNet@2
+    displayName: '安装 .NET Core sdk'
+    inputs:
+      packageType: sdk
+      version: $(dotnetVersion)
+      installationPath: $(Agent.ToolsDirectory)/dotnet
+  - powershell: |
+      ./build.ps1
+    condition: eq( variables['Agent.OS'], 'Windows_NT' )
+    displayName: Windows (Docker - windows-2019) 平台 执行 cake
+# Windows (Windows 2019 with VS2019)
+- job: Hosted_Windows_2019
+  pool:
+    name: Hosted Windows 2019 with VS2019
+  steps:
+  - task: UseDotNet@2
+    displayName: '安装 .NET Core sdk'
+    inputs:
+      packageType: sdk
+      version: $(dotnetVersion)
+      installationPath: $(Agent.ToolsDirectory)/dotnet
+  - powershell: |
+      ./build.ps1
+    condition: eq( variables['Agent.OS'], 'Windows_NT' )
+    displayName: Windows (Windows 2019 with VS2019) 平台 执行 cake
+
+- job: Build_NuGet_Package
+  dependsOn: 
+  - macOS_1014
+  - Linux_ubuntu_1604
+  - Windows_2019
+  - Hosted_Windows_2019
+  condition: succeeded('macOS_1014', 'Linux_ubuntu_1604', 'Windows_2019', 'Hosted_Windows_2019')
+  pool:
+    vmImage: 'ubuntu-16.04'
+  steps:
+    - bash: echo start build nuget package
+    
