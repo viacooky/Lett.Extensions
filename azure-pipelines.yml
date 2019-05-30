@@ -14,7 +14,7 @@ variables:
   dotnetVersion: 2.2.203
 
 stages:
-- stage: multiple platform build and test
+- stage: multiple_platform_build_and_test
   jobs:
   # Linux (Docker - ubuntu-16.04)
   - job: Linux_ubuntu_1604
@@ -76,7 +76,7 @@ stages:
         ./build.ps1
       condition: eq( variables['Agent.OS'], 'Windows_NT' )
       displayName: Windows (Windows 2019 with VS2019) 平台 执行 cake
-- stage: push nuget package
+- stage: push_nuget_package
   jobs:
     - job: Build_NuGet_Package
       dependsOn: 
