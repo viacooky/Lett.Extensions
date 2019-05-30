@@ -31,6 +31,7 @@ steps:
       script: 'build.cake'
       target: 'Default'
       verbosity: 'Verbose'
+      useBuildAgentNuGetExe: true
 
 # variables:
 #   BuildConfiguration: 'Release'
