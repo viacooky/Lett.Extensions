@@ -1,4 +1,9 @@
 language: csharp
+sudo: required
+mono:
+  - latest
+  - 5.10.0
+dotnet:  latest
 
 os:
   - windows
