@@ -53,7 +53,7 @@ Task("Testing")
     // });
     DotNetCoreTest(testProj, new DotNetCoreTestSettings {
       Configuration = configuration,
-        NoBuild = true,
+        NoBuild = false,
         ArgumentCustomization = args => args
         .Append("/p:CollectCoverage=true")
         .Append($"/p:CoverletOutputFormat=opencover")
