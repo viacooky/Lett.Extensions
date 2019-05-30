@@ -10,31 +10,50 @@ trigger:
       - docs/*
       - docs/*.md
 
-pool:
-  name: Hosted Windows 2019 with VS2019
+# pool:
+#   name: Hosted Windows 2019 with VS2019
 
-variables:
-  BuildConfiguration: 'Release'
-  BuildPlatform: 'any cpu'
-  BaseProject: '**/Lett.Extensions.csproj'
-  TestProject: '**/Lett.Extensions.Test.csproj'
+strategy:
+  matrix:
+    linux:
+      imageName: 'ubuntu-16.04'
+    mac:
+      imageName: 'macos-10.13'
+    windows:
+      imageName: 'vs2017-win2016'
+
+pool:
+  vmImage: $(imageName)
 
 steps:
-  - task: DotNetCoreCLI@2
-    displayName: '还原NuGet包'
+  - task: Cake@0
     inputs:
-      command: restore
-      projects: '**/*.csproj'
+      script: 'build.cake'
+      target: 'Default'
+      verbosity: 'Verbose'
 
-  - task: DotNetCoreCLI@2
-    displayName: '编译'
-    inputs:
-      projects: '$(BaseProject)'
-      arguments: '--configuration $(BuildConfiguration)'
+# variables:
+#   BuildConfiguration: 'Release'
+#   BuildPlatform: 'any cpu'
+#   BaseProject: '**/Lett.Extensions.csproj'
+#   TestProject: '**/Lett.Extensions.Test.csproj'
 
-  - task: DotNetCoreCLI@2
-    displayName: '测试'
-    inputs:
-      command: test
-      projects: '$(TestProject)'
-      arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
+# steps:
+#   - task: DotNetCoreCLI@2
+#     displayName: '还原NuGet包'
+#     inputs:
+#       command: restore
+#       projects: '**/*.csproj'
+
+#   - task: DotNetCoreCLI@2
+#     displayName: '编译'
+#     inputs:
+#       projects: '$(BaseProject)'
+#       arguments: '--configuration $(BuildConfiguration)'
+
+#   - task: DotNetCoreCLI@2
+#     displayName: '测试'
+#     inputs:
+#       command: test
+#       projects: '$(TestProject)'
+#       arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
