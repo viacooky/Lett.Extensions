@@ -26,12 +26,9 @@ pool:
 #   vmImage: $(imageName)
 
 steps:
-  - task: Cake@0
+  - task: Bash@3
     inputs:
-      script: 'build.cake'
-      target: 'Default'
-      verbosity: 'Verbose'
-      useBuildAgentNuGetExe: true
+      script: chmod +x ./build.sh && ./build.sh
 
 # variables:
 #   BuildConfiguration: 'Release'
