@@ -34,11 +34,11 @@ steps:
     chmod +x ./build.sh
     ./build.sh
   condition: in( variables['Agent.OS'], 'Linux', 'Darwin' )
-  displayName: Linux 或 MacOS 平台 执行 cake
+  displayName: $(variables['Agent.OS']) 平台 执行 cake
 - powershell: |
     ./build.ps1
   condition: eq( variables['Agent.OS'], 'Windows_NT' )
-  displayName: Windows 执行 cake
+  displayName: $(variables['Agent.OS']) 平台 执行 cake
 
 # variables:
 #   BuildConfiguration: 'Release'
