@@ -453,3 +453,13 @@ fabric.properties
 /**/_site/
 
 # End of https://www.gitignore.io/api/docfx
+
+
+# Created by https://www.gitignore.io/api/cake
+# Edit at https://www.gitignore.io/?templates=cake
+
+### Cake ###
+tools/*
+!tools/packages.config
+
+# End of https://www.gitignore.io/api/cake
