@@ -8,10 +8,10 @@ trigger:
     exclude:
       - README.md
       - docs/*
-      - docs/*.md
+      - docs/*.md 
 
 pool:
-  name: Hosted Windows 2019 with VS2019
+  vmImage: 'ubuntu-16.04'
 
 # strategy:
 #   matrix:
