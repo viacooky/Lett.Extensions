@@ -1,6 +1,4 @@
-#addin Cake.Coveralls
-#tool coveralls.io
-
+#tool Cake.CoreCLR
 // ------------------------------------------------------------------
 // 参数定义
 // ------------------------------------------------------------------
@@ -11,7 +9,7 @@ var buildProj = "./src/Lett.Extensions/Lett.Extensions.csproj"; // project 文�
 var testProj = "./src/Lett.Extensions.Test/Lett.Extensions.Test.csproj"; // test project 文件
 var releasePath = Directory("./src/Lett.Extensions/bin") + Directory(configuration); // 编译目录
 var nugetPackBuilPath = Directory("./nugetPacks"); // nuget包编译目录
-var testResultPath = "../../TestResults/"; // 测试结果目录
+var testResultPath = "../../TestResults/coverage.xml"; // 测试结果目录
 
 // ------------------------------------------------------------------
 // 子任务
@@ -65,9 +63,7 @@ Task("Testing")
 
 Task("Upload-Coverage-Report")
     .Does(() => {
-    CoverallsIo($"{Directory(testResultPath)}/coverage.xml" , new CoverallsIoSettings(){
-      RepoToken = "8DSD2t8peNCMUv1djfjmZPATH6YKjzV0q"
-    });
+    // Codecov("./TestResults/coverage.xml","8446c608-924a-43e3-b49c-fe6a44607e40");
   });
 Task("PackNuGet")
   .Does(() => {
@@ -91,7 +87,6 @@ Task("Default")
   .IsDependentOn("Restore")
   .IsDependentOn("Build")
   .IsDependentOn("Testing")
-  // .IsDependentOn("Upload-Coverage")
   .Does(() => {
     Information("默认构建完成");
   });
@@ -101,16 +96,15 @@ Task("Publish")
   .IsDependentOn("Restore")
   .IsDependentOn("Build")
   .IsDependentOn("Testing")
-  .IsDependentOn("Upload-Coverage-Report")
   .IsDependentOn("PackNuGet")
   .Does(() => {
     Information("发布完成");
   });
 
 Task("tt")
-  .IsDependentOn("Clean")
-  .IsDependentOn("Restore")
-  .IsDependentOn("Build")
+  // .IsDependentOn("Clean")
+  // .IsDependentOn("Restore")
+  // .IsDependentOn("Build")
   .IsDependentOn("Testing")
   .IsDependentOn("Upload-Coverage-Report")
   .Does(() => {
