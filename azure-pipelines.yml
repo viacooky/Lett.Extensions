@@ -12,6 +12,7 @@ trigger:
 variables:
   dotnetVersion: 2.2.300
   nugetPackPath: './nugetPacks'
+  TestProject: '**/Lett.Extensions.Test.csproj'
 
 jobs:
   # Linux (Docker - ubuntu-16.04)
