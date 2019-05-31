@@ -154,18 +154,21 @@ jobs:
           command: test
           projects: '$(TestProject)'
           arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
+      - task: DownloadSecureFile@1
+        inputs:
+          secureFile: 'Lett_Extensions_deploy_rsa'
+        displayName: '获取部署Key'
       - bash: |
-          mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa 
-          chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-          git config --local user.name "Azure Pipelines Auto Deploy"
-          git config --local user.email "auto_deploy@viacooky.com"
           git clone -b gh-pages https://github.com/viacooky/Lett.Extensions.git tmp
           rm -rf tmp/*
           cp -r docfx/_site/* tmp
           cd tmp
+          git config --local user.name "Azure Pipelines Auto Deploy"
+          git config --local user.email "AzurePipelines@viacooky.com"
           git add --all
           git commit -m "Azure Pipelines 部署 GitHub Pages  ***NO_CI***"
+          mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa 
+          chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
           git remote set-url --push origin git@github.com:viacooky/Lett.Extensions.git
           git push origin HEAD:gh-pages
         displayName: 上传文档
@@ -175,16 +178,13 @@ jobs:
           command: push
           nuGetFeedType: external
           publishFeedCredentials: nuget.org
-          packagesToPush: '$(nugetPackPath)/**/*.nupkg;$(nugetPackPath)/**/*.symbols.nupkg'
+          packagesToPush: '$(nugetPackPath)/**/*.nupkg;!$(nugetPackPath)/**/*.symbols.nupkg'
       - task: NuGetCommand@2
         displayName: 'MyGet 发布'
         inputs:
           command: push
           nuGetFeedType: external
           publishFeedCredentials: myget.org
-          packagesToPush: '$(nugetPackPath)/**/*.nupkg;$(nugetPackPath)/**/*.symbols.nupkg'
-      - task: DownloadSecureFile@1
-        inputs:
-          secureFile: 'Lett_Extensions_deploy_rsa'
-        displayName: '获取部署Key'
+          packagesToPush: '$(nugetPackPath)/**/*.nupkg;!$(nugetPackPath)/**/*.symbols.nupkg'
+      
       
