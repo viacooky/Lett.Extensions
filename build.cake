@@ -131,6 +131,7 @@ Task("azure")
   .IsDependentOn("Clean")
   .IsDependentOn("Build")
   .IsDependentOn("PackNuGet") 
+  .IsDependentOn("Docfx")
   .Does(() =>
 {
   // test 和 Code Coverage 使用 Azure Pipelines 的 Task 完成
