@@ -1,4 +1,6 @@
 #tool Cake.CoreCLR
+#addin "Cake.DocFx"
+#tool "docfx.console"
 // ------------------------------------------------------------------
 // 参数定义
 // ------------------------------------------------------------------
@@ -85,6 +87,16 @@ Task("Upload-Coverage")
 });
 
 // ------------------------------------------------------------------
+// DocFx
+// ------------------------------------------------------------------
+
+Task("Docfx")
+  .Does(() =>
+{
+  DocFxBuild("./docfx/docfx.json");
+});
+
+// ------------------------------------------------------------------
 // publish
 // ------------------------------------------------------------------
 
@@ -126,15 +138,16 @@ Task("azure")
   Information("Azure任务完成");
 });
 
-Task("All")
-  .IsDependentOn("Clean")
-  .IsDependentOn("Restore")
-  .IsDependentOn("Build")
-  .IsDependentOn("Testing-vstest")
-  .IsDependentOn("CodeCoverage-openconver")
-  .IsDependentOn("PackNuGet")
+Task("Test")
+  // .IsDependentOn("Clean")
+  // .IsDependentOn("Restore")
+  // .IsDependentOn("Build")
+  // .IsDependentOn("Testing-vstest")
+  // .IsDependentOn("CodeCoverage-openconver")
+  // .IsDependentOn("PackNuGet")
+  .IsDependentOn("Docfx")
   .Does(() => {
-    Information("发布完成");
+    Information("Test");
   });
 
 RunTarget(target);
