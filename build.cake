@@ -9,7 +9,10 @@ var buildProj = "./src/Lett.Extensions/Lett.Extensions.csproj"; // project 文�
 var testProj = "./src/Lett.Extensions.Test/Lett.Extensions.Test.csproj"; // test project 文件
 var releasePath = Directory("./src/Lett.Extensions/bin") + Directory(configuration); // 编译目录
 var nugetPackBuilPath = Directory("./nugetPacks"); // nuget包编译目录
-var testResultPath = "../../TestResults/coverage.xml"; // 测试结果目录
+// 测试结果目录
+var testResultPath = "./TestResults";
+var coverageResultPath = $"{testResultPath}/coverage.xml"; // 覆盖率
+var vSTestReportPath = $"{testResultPath}/vstest.xml"; // 测试结果
 
 // ------------------------------------------------------------------
 // 子任务
@@ -54,10 +57,11 @@ Task("Testing")
     DotNetCoreTest(testProj, new DotNetCoreTestSettings {
       Configuration = configuration,
         NoBuild = false,
+        VSTestReportPath = vSTestReportPath,
         ArgumentCustomization = args => args
-        //.Append("/p:CollectCoverage=true")
-        //.Append($"/p:CoverletOutputFormat=opencover")
-        .Append($"/p:CoverletOutput={testResultPath}")
+        .Append("/p:CollectCoverage=true")
+        .Append($"/p:CoverletOutputFormat=opencover")
+        .Append($"/p:CoverletOutput=../../{coverageResultPath}")
     });
   });
 
