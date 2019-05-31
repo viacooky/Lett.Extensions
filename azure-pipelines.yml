@@ -11,6 +11,7 @@ trigger:
 
 variables:
   dotnetVersion: 2.2.300
+  nugetPackPath: './nugetPacks'
 
 jobs:
   # Linux (Docker - ubuntu-16.04)
@@ -33,8 +34,7 @@ jobs:
       - task: PublishTestResults@2
         inputs:
           testResultsFormat: 'VSTest'
-          testResultsFiles: 'TestResults/*.xml'
-
+          testResultsFiles: 'TestResults/vstest.xml'
   # MacOS (Docker - macOS-10.14)
   - job: Docker_MacOS_1014
     pool:
@@ -55,92 +55,102 @@ jobs:
       - task: PublishTestResults@2
         inputs:
           testResultsFormat: 'VSTest'
-          testResultsFiles: './TestResults/**.xml'
-# # Windows (Docker - windows-2019)
-# - job: Docker_Windows_2019
-#   pool:
-#     vmImage: 'windows-2019'
-#   steps:
-#   - task: UseDotNet@2
-#     displayName: '安装 .NET Core sdk'
-#     inputs:
-#       packageType: sdk
-#       version: $(dotnetVersion)
-#       installationPath: $(Agent.ToolsDirectory)/dotnet
-#   - powershell: ./build.ps1
-#     env:
-#       DOTNET_CLI_TELEMETRY_OPTOUT: 1
-#     condition: eq( variables['Agent.OS'], 'Windows_NT' )
-#     displayName: 执行 cake - Windows (Docker - windows-2019)
+          testResultsFiles: 'TestResults/vstest.xml'
+  # Windows (Docker - windows-2019)
+  - job: Docker_Windows_2019
+    pool:
+      vmImage: 'windows-2019'
+    steps:
+    - task: UseDotNet@2
+      displayName: '安装 .NET Core sdk'
+      inputs:
+        packageType: sdk
+        version: $(dotnetVersion)
+        installationPath: $(Agent.ToolsDirectory)/dotnet
+    - powershell: ./build.ps1
+      env:
+        DOTNET_CLI_TELEMETRY_OPTOUT: 1
+      condition: eq( variables['Agent.OS'], 'Windows_NT' )
+      displayName: 执行 cake - Windows (Docker - windows-2019)
+    - task: PublishTestResults@2
+        inputs:
+          testResultsFormat: 'VSTest'
+          testResultsFiles: 'TestResults/vstest.xml'
+  # Windows (Windows 2019 with VS2019)
+  - job: Hosted_Windows_2019
+    pool:
+      name: Hosted Windows 2019 with VS2019
+    steps:
+    - task: UseDotNet@2
+      displayName: '安装 .NET Core sdk'
+      inputs:
+        packageType: sdk
+        version: $(dotnetVersion)
+        installationPath: $(Agent.ToolsDirectory)/dotnet
+    - powershell: ./build.ps1
+      env:
+          DOTNET_CLI_TELEMETRY_OPTOUT: 1
+      condition: eq( variables['Agent.OS'], 'Windows_NT' )
+      displayName: 执行 cake - Hosted (Windows 2019 with VS2019)
+    - task: PublishTestResults@2
+        inputs:
+          testResultsFormat: 'VSTest'
+          testResultsFiles: 'TestResults/vstest.xml'
+  # Windows (Windows 2019 with VS2019)
+  - job: Hosted_VS2017
+    pool:
+      name: Hosted Windows 2019 with VS2019
+    steps:
+    - task: UseDotNet@2
+      displayName: '安装 .NET Core sdk'
+      inputs:
+        packageType: sdk
+        version: $(dotnetVersion)
+        installationPath: $(Agent.ToolsDirectory)/dotnet
+    - powershell: ./build.ps1
+      env:
+          DOTNET_CLI_TELEMETRY_OPTOUT: 1
+      condition: eq( variables['Agent.OS'], 'Windows_NT' )
+      displayName: 执行 cake - Hosted (Hosted_VS2017)
+    - task: PublishTestResults@2
+          inputs:
+            testResultsFormat: 'VSTest'
+            testResultsFiles: 'TestResults/vstest.xml'
+  # Build Nuget Package
+  - job: Build_NuGet_Package
+    dependsOn:
+    - Docker_ubuntu_1604
+    - Docker_MacOS_1014
+    - Docker_Windows_2019
+    - Hosted_Windows_2019
+    - Hosted_VS2017
+    condition: |
+      and(succeeded('Docker_ubuntu_1604', 'Docker_MacOS_1014', 'Docker_Windows_2019', 'Hosted_Windows_2019', 'Hosted_VS2017'),
+      eq(variables['isPushNuget'], 'true'))
+    pool:
+      name: Hosted Windows 2019 with VS2019
+    steps:
+      - task: UseDotNet@2
+        displayName: '安装 .NET Core sdk'
+        inputs:
+          packageType: sdk
+          version: $(dotnetVersion)
+          installationPath: $(Agent.ToolsDirectory)/dotnet
+      - powershell: ./build.ps1 --target=Publish --packVer=$(packVersion)
+        condition: eq( variables['Agent.OS'], 'Windows_NT' )
+        displayName: Windows (Windows 2019 with VS2019) 平台 执行 cake pack
+      - task: NuGetCommand@2
+        displayName: 'NuGet 发布'
+        inputs:
+          command: push
+          nuGetFeedType: external
+          publishFeedCredentials: nuget.org
+          packagesToPush: '$(nugetPackPath)/**/*.nupkg;$(nugetPackPath)/**/*.symbols.nupkg'
 
-# # Windows (Windows 2019 with VS2019)
-# - job: Hosted_Windows_2019
-#   pool:
-#     name: Hosted Windows 2019 with VS2019
-#   steps:
-#   - task: UseDotNet@2
-#     displayName: '安装 .NET Core sdk'
-#     inputs:
-#       packageType: sdk
-#       version: $(dotnetVersion)
-#       installationPath: $(Agent.ToolsDirectory)/dotnet
-#   - powershell: ./build.ps1
-#     env:
-#         DOTNET_CLI_TELEMETRY_OPTOUT: 1
-#     condition: eq( variables['Agent.OS'], 'Windows_NT' )
-#     displayName: 执行 cake - Hosted (Windows 2019 with VS2019)
-
-# # Windows (Windows 2019 with VS2019)
-# - job: Hosted_VS2017
-#   pool:
-#     name: Hosted Windows 2019 with VS2019
-#   steps:
-#   - task: UseDotNet@2
-#     displayName: '安装 .NET Core sdk'
-#     inputs:
-#       packageType: sdk
-#       version: $(dotnetVersion)
-#       installationPath: $(Agent.ToolsDirectory)/dotnet
-#   - powershell: ./build.ps1
-#     env:
-#         DOTNET_CLI_TELEMETRY_OPTOUT: 1
-#     condition: eq( variables['Agent.OS'], 'Windows_NT' )
-#     displayName: 执行 cake - Hosted (Hosted_VS2017)
-
-# - job: Build_NuGet_Package
-#   dependsOn:
-#   - Docker_ubuntu_1604
-#   - Docker_MacOS_1014
-#   - Docker_Windows_2019
-#   - Hosted_Windows_2019
-#   - Hosted_VS2017
-#   condition: |
-#     and(succeeded('Docker_ubuntu_1604', 'Docker_MacOS_1014', 'Docker_Windows_2019', 'Hosted_Windows_2019', 'Hosted_VS2017'),
-#     eq(variables['isPushNuget'], 'true'))
-#   pool:
-#     name: Hosted Windows 2019 with VS2019
-#   steps:
-#     - task: UseDotNet@2
-#       displayName: '安装 .NET Core sdk'
-#       inputs:
-#         packageType: sdk
-#         version: $(dotnetVersion)
-#         installationPath: $(Agent.ToolsDirectory)/dotnet
-#     - powershell: ./build.ps1 --target=Publish --packVer=$(packVersion)
-#       condition: eq( variables['Agent.OS'], 'Windows_NT' )
-#       displayName: Windows (Windows 2019 with VS2019) 平台 执行 cake pack
-#     - task: NuGetCommand@2
-#       displayName: 'NuGet 发布'
-#       inputs:
-#         command: push
-#         nuGetFeedType: external
-#         publishFeedCredentials: nuget.org
-#         packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
-
-#     - task: NuGetCommand@2
-#       displayName: 'MyGet 发布'
-#       inputs:
-#         command: push
-#         nuGetFeedType: external
-#         publishFeedCredentials: myget.org
-#         packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+      - task: NuGetCommand@2
+        displayName: 'MyGet 发布'
+        inputs:
+          command: push
+          nuGetFeedType: external
+          publishFeedCredentials: myget.org
+          packagesToPush: '$(nugetPackPath)/**/*.nupkg;$(nugetPackPath)/**/*.symbols.nupkg'
