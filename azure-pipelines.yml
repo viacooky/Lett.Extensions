@@ -154,6 +154,19 @@ jobs:
           command: test
           projects: '$(TestProject)'
           arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
+      - bash: |
+          mkdir ~/.ssh && mv DOWNLOADSECUREFILE1_SECUREFILEPATH ~/.ssh/id_rsa 
+          chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
+          git config --local user.name "Azure Pipelines Auto Deploy"
+          git config --local user.email "auto_deploy@viacooky.com"
+          git clone -b gh-pages https://github.com/viacooky/Lett.Extensions.git tmp
+          rm -rf tmp/*
+          cp -r docfx/_site/* tmp
+          cd tmp
+          git add --all
+          git remote set-url --push origin git@github.com:viacooky/Lett.Extensions.git
+          git push origin HEAD:gh-pages
+        displayName: 上传文档
       - task: NuGetCommand@2
         displayName: 'NuGet 发布'
         inputs:
@@ -172,15 +185,4 @@ jobs:
         inputs:
           secureFile: 'Lett_Extensions_deploy_rsa'
         displayName: '获取部署Key'
-      - bash: |
-          mkdir ~/.ssh && mv DOWNLOADSECUREFILE1_SECUREFILEPATH ~/.ssh/id_rsa 
-          chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
-          git config --local user.name "Azure Pipelines Auto Deploy"
-          git config --local user.email "auto_deploy@viacooky.com"
-          git clone -b gh-pages https://github.com/viacooky/Lett.Extensions.git tmp
-          rm -rf tmp/*
-          cp -r docfx/_site/* tmp
-          cd tmp
-          git add --all
-          git remote set-url --push origin git@github.com:viacooky/Lett.Extensions.git
-          git push origin HEAD:gh-pages
+      
