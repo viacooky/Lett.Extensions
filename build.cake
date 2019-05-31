@@ -106,7 +106,7 @@ Task("PackNuGet")
     DotNetCorePack(buildProj, new DotNetCorePackSettings {
       Configuration = configuration,
         OutputDirectory = nugetPackBuilPath,
-        IncludeSymbols = true,
+        IncludeSymbols = false,
         ArgumentCustomization = args => args
         .Append($"/p:Version={nugetVersion}")
         .Append($"/p:AssemblyVersion={assemblyVerion}")

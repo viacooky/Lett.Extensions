@@ -169,6 +169,7 @@ jobs:
           git commit -m "Azure Pipelines 部署 GitHub Pages  ***NO_CI***"
           mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa 
           chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
           git remote set-url --push origin git@github.com:viacooky/Lett.Extensions.git
           git push origin HEAD:gh-pages
         displayName: 上传文档
