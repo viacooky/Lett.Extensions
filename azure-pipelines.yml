@@ -55,7 +55,7 @@ jobs:
   - task: PublishTestResults@2
     inputs:
       testResultsFormat: 'VSTest'
-      testResultsFiles: 'TestResults/coverage.xml'
+      testResultsFiles: './TestResults/coverage.xml'
 
 # # Windows (Docker - windows-2019)
 # - job: Docker_Windows_2019
