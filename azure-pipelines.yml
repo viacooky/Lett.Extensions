@@ -27,6 +27,8 @@ jobs:
   - bash: |
       chmod +x ./build.sh
       ./build.sh
+    env: 
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
     displayName: 执行 cake - Linux (Docker - ubuntu-16.04) 
 
 # MacOS (Docker - macOS-10.14)
@@ -43,6 +45,8 @@ jobs:
   - bash: |
       chmod +x ./build.sh
       ./build.sh
+    env: 
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
     displayName: 执行 cake - MacOS (Docker - macOS-10.14)
 
 # Windows (Docker - windows-2019)
@@ -58,7 +62,7 @@ jobs:
       installationPath: $(Agent.ToolsDirectory)/dotnet
   - powershell: ./build.ps1
     env: 
-      DOTNET_CLI_TELEMETRY_OPTOUT: true
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
     condition: eq( variables['Agent.OS'], 'Windows_NT' )
     displayName: 执行 cake - Windows (Docker - windows-2019)
 
@@ -75,9 +79,26 @@ jobs:
       installationPath: $(Agent.ToolsDirectory)/dotnet
   - powershell: ./build.ps1
     env: 
-        DOTNET_CLI_TELEMETRY_OPTOUT: true
+        DOTNET_CLI_TELEMETRY_OPTOUT: 1
     condition: eq( variables['Agent.OS'], 'Windows_NT' )
     displayName: 执行 cake - Hosted (Windows 2019 with VS2019)
+
+# Windows (Windows 2019 with VS2019)
+- job: Hosted_VS2017
+  pool:
+    name: Hosted Windows 2019 with VS2019
+  steps:
+  - task: UseDotNet@2
+    displayName: '安装 .NET Core sdk'
+    inputs:
+      packageType: sdk
+      version: $(dotnetVersion)
+      installationPath: $(Agent.ToolsDirectory)/dotnet
+  - powershell: ./build.ps1
+    env: 
+        DOTNET_CLI_TELEMETRY_OPTOUT: 1
+    condition: eq( variables['Agent.OS'], 'Windows_NT' )
+    displayName: 执行 cake - Hosted (Hosted_VS2017)
 
 - job: Build_NuGet_Package
   dependsOn: 
@@ -85,8 +106,9 @@ jobs:
   - Docker_MacOS_1014
   - Docker_Windows_2019
   - Hosted_Windows_2019
+  - Hosted_VS2017
   condition: |
-    and(succeeded('Docker_ubuntu_1604', 'Docker_MacOS_1014', 'Docker_Windows_2019', 'Hosted_Windows_2019'), 
+    and(succeeded('Docker_ubuntu_1604', 'Docker_MacOS_1014', 'Docker_Windows_2019', 'Hosted_Windows_2019', 'Hosted_VS2017'), 
     eq(variables['isPushNuget'], 'true'))
   pool:
     name: Hosted Windows 2019 with VS2019
