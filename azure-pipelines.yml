@@ -136,7 +136,7 @@ jobs:
   - job: Build_NuGet_Package
     condition: eq(variables['isPushNuget'], 'true')
     pool:
-      name: Hosted Windows 2019 with VS2019
+      vmImage: 'ubuntu-16.04'
     steps:
       - task: UseDotNet@2
         displayName: '安装 .NET Core sdk'
