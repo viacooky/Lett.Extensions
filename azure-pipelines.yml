@@ -136,7 +136,7 @@ jobs:
   - job: Build_NuGet_Package
     condition: eq(variables['isPushNuget'], 'true')
     pool:
-      vmImage: 'ubuntu-16.04'
+      name: Hosted Windows 2019 with VS2019
     steps:
       - task: UseDotNet@2
         displayName: '安装 .NET Core sdk'
@@ -144,7 +144,8 @@ jobs:
           packageType: sdk
           version: $(dotnetVersion)
           installationPath: $(Agent.ToolsDirectory)/dotnet
-      - powershell: ./build.ps1 --target=azure --packVer='$(packVersion)'
+      - powershell: echo ./build.ps1 --target=azure --packVer=$packVersion
+      - powershell: ./build.ps1 --target=azure --packVer=$packVersion
         condition: eq( variables['Agent.OS'], 'Windows_NT' )
         displayName: Windows (Windows 2019 with VS2019) 平台 执行 cake pack
       - task: DotNetCoreCLI@2
