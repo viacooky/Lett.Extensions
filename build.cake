@@ -55,7 +55,7 @@ Task("Testing")
       Configuration = configuration,
         NoBuild = false,
         ArgumentCustomization = args => args
-        .Append("/p:CollectCoverage=true")
+        //.Append("/p:CollectCoverage=true")
         //.Append($"/p:CoverletOutputFormat=opencover")
         .Append($"/p:CoverletOutput={testResultPath}")
     });
