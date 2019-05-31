@@ -11,11 +11,11 @@ var releasePath = Directory("./src/Lett.Extensions/bin") + Directory(configurati
 var nugetPackBuilPath = Directory("./nugetPacks"); // nuget包编译目录
 // 测试结果目录
 var testResultPath = "./TestResults";
-var coverageResultPath = $"{testResultPath}/coverage.xml"; // 覆盖率
-var vSTestReportPath = $"{testResultPath}/vstest.xml"; // 测试结果
+var opencoverReportFile = $"{testResultPath}/converage/opencover.xml"; // 覆盖率
+var vSTestReportFile = $"{testResultPath}/vstest.xml"; // 测试结果
 
 // ------------------------------------------------------------------
-// 子任务
+// 编译
 // ------------------------------------------------------------------
 
 Task("Clean")
@@ -46,31 +46,48 @@ Task("Build")
     });
   });
 
-Task("Testing")
+// ------------------------------------------------------------------
+// Code quality
+// ------------------------------------------------------------------
+
+Task("Testing-vstest")
   .Does(() => {
     Information($"测试:{testProj}");
-    // XUnit2("./src/Lett.Extensions.Test/bin/Release/**/*.Test.dll", new XUnit2Settings{
-    //   //Parallelism = ParallelismOption.,
-    //       XmlReport = true,
-    //       OutputDirectory = "./testReport",
-    // });
+    // VSTEST
     DotNetCoreTest(testProj, new DotNetCoreTestSettings {
-      Configuration = configuration,
+        Configuration = configuration,
         NoBuild = false,
-        VSTestReportPath = vSTestReportPath,
-        ArgumentCustomization = args => args
-        .Append("--collect \"Code coverage\"")
-        .Append($"--results-directory {vSTestReportPath}")
-        .Append("/p:CollectCoverage=true")
-        .Append($"/p:CoverletOutputFormat=opencover")
-        .Append($"/p:CoverletOutput=../../{coverageResultPath}")
+        VSTestReportPath = vSTestReportFile,
     });
   });
 
-Task("Upload-Coverage-Report")
-    .Does(() => {
-    // Codecov("./TestResults/coverage.xml","8446c608-924a-43e3-b49c-fe6a44607e40");
-  });
+Task("CodeCoverage-openconver")
+  .Does(() =>
+{
+    // code converage - open conver
+    DotNetCoreTest(testProj, new DotNetCoreTestSettings{
+          Configuration = configuration,
+          NoBuild = false,
+          ArgumentCustomization = args => args
+            .Append("/p:CollectCoverage=true")
+            .Append($"/p:CoverletOutputFormat=opencover")
+            .Append($"/p:CoverletOutput=../../{opencoverReportFile}")
+    });
+});
+
+Task("Upload-Coverage")
+    .Does(() =>
+{
+    // Upload coverage reports.
+    // Information($"upload {opencoverReportFile}");
+    // var output = StartProcess("bash", "./upload.sh");
+    // Information($"上传成功: {output}");
+});
+
+// ------------------------------------------------------------------
+// publish
+// ------------------------------------------------------------------
+
 Task("PackNuGet")
   .Does(() => {
     Information($"打包NuGet:{buildProj}");
@@ -84,38 +101,40 @@ Task("PackNuGet")
     });
   });
 
-
 // ------------------------------------------------------------------
-// 启动任务
+// 任务集
 // ------------------------------------------------------------------
 Task("Default")
   .IsDependentOn("Clean")
   .IsDependentOn("Restore")
   .IsDependentOn("Build")
-  .IsDependentOn("Testing")
+  .IsDependentOn("Testing-vstest")
+  .IsDependentOn("CodeCoverage-openconver")
+  .IsDependentOn("Upload-Coverage")
   .Does(() => {
     Information("默认构建完成");
   });
 
-Task("Publish")
+Task("azure")
+  .IsDependentOn("Clean")
+  .IsDependentOn("Build")
+  .IsDependentOn("PackNuGet") 
+  .Does(() =>
+{
+  // test 和 Code Coverage 使用 Azure Pipelines 的 Task 完成
+  // 每次都打NuGet包，使用 Azure Pipelines 手工发布
+  Information("Azure任务完成");
+});
+
+Task("All")
   .IsDependentOn("Clean")
   .IsDependentOn("Restore")
   .IsDependentOn("Build")
-  .IsDependentOn("Testing")
+  .IsDependentOn("Testing-vstest")
+  .IsDependentOn("CodeCoverage-openconver")
   .IsDependentOn("PackNuGet")
   .Does(() => {
     Information("发布完成");
-  });
-
-Task("tt")
-  // .IsDependentOn("Clean")
-  // .IsDependentOn("Restore")
-  // .IsDependentOn("Build")
-  .IsDependentOn("Testing")
-  .IsDependentOn("Upload-Coverage-Report")
-  .Does(() => {
-    Information("脚本测试");
-
   });
 
 RunTarget(target);

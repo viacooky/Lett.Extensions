@@ -16,6 +16,7 @@ variables:
 jobs:
   # Linux (Docker - ubuntu-16.04)
   - job: Docker_ubuntu_1604
+    condition: eq(variables['isPushNuget'], 'false')
     pool:
       vmImage: 'ubuntu-16.04'
     steps:
@@ -27,17 +28,19 @@ jobs:
           installationPath: $(Agent.ToolsDirectory)/dotnet
       - bash: |
           chmod +x ./build.sh
-          ./build.sh
+          ./build.sh --target=azure
         env:
           DOTNET_CLI_TELEMETRY_OPTOUT: 1
         displayName: 执行 cake - Linux (Docker - ubuntu-16.04)
-      - task: PublishTestResults@2
+      - task: DotNetCoreCLI@2
+        displayName: '测试'
         inputs:
-          testResultsFormat: 'VSTest'
-          testResultsFiles: 'TestResults/vstest.xml'
-          mergeTestResults: true
+          command: test
+          projects: '$(TestProject)'
+          arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
   # MacOS (Docker - macOS-10.14)
   - job: Docker_MacOS_1014
+    condition: eq(variables['isPushNuget'], 'false')
     pool:
       vmImage: 'macOS-10.14'
     steps:
@@ -49,17 +52,19 @@ jobs:
           installationPath: $(Agent.ToolsDirectory)/dotnet
       - bash: |
           chmod +x ./build.sh
-          ./build.sh
+          ./build.sh --target=azure
         env:
           DOTNET_CLI_TELEMETRY_OPTOUT: 1
         displayName: 执行 cake - MacOS (Docker - macOS-10.14)
-      - task: PublishTestResults@2
+      - task: DotNetCoreCLI@2
+        displayName: '测试'
         inputs:
-          testResultsFormat: 'VSTest'
-          testResultsFiles: 'TestResults/vstest.xml'
-          mergeTestResults: true
+          command: test
+          projects: '$(TestProject)'
+          arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
   # Windows (Docker - windows-2019)
   - job: Docker_Windows_2019
+    condition: eq(variables['isPushNuget'], 'false')
     pool:
       vmImage: 'windows-2019'
     steps:
@@ -69,69 +74,20 @@ jobs:
           packageType: sdk
           version: $(dotnetVersion)
           installationPath: $(Agent.ToolsDirectory)/dotnet
-      - powershell: ./build.ps1
+      - powershell: ./build.ps1 --target=azure
         env:
           DOTNET_CLI_TELEMETRY_OPTOUT: 1
         condition: eq( variables['Agent.OS'], 'Windows_NT' )
         displayName: 执行 cake - Windows (Docker - windows-2019)
-      - task: PublishTestResults@2
+      - task: DotNetCoreCLI@2
+        displayName: '测试'
         inputs:
-          testResultsFormat: 'VSTest'
-          testResultsFiles: 'TestResults/vstest.xml'
-          mergeTestResults: true
+          command: test
+          projects: '$(TestProject)'
+          arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
   # Windows (Windows 2019 with VS2019)
   - job: Hosted_Windows_2019
-    pool:
-      name: Hosted Windows 2019 with VS2019
-    steps:
-    - task: UseDotNet@2
-      displayName: '安装 .NET Core sdk'
-      inputs:
-        packageType: sdk
-        version: $(dotnetVersion)
-        installationPath: $(Agent.ToolsDirectory)/dotnet
-    - powershell: ./build.ps1
-      env:
-          DOTNET_CLI_TELEMETRY_OPTOUT: 1
-      condition: eq( variables['Agent.OS'], 'Windows_NT' )
-      displayName: 执行 cake - Hosted (Windows 2019 with VS2019)
-    - task: PublishTestResults@2
-      inputs:
-        testResultsFormat: 'VSTest'
-        testResultsFiles: 'TestResults/vstest.xml'
-        mergeTestResults: true
-  # Windows (Windows 2019 with VS2019)
-  - job: Hosted_VS2017
-    pool:
-      name: Hosted Windows 2019 with VS2019
-    steps:
-    - task: UseDotNet@2
-      displayName: '安装 .NET Core sdk'
-      inputs:
-        packageType: sdk
-        version: $(dotnetVersion)
-        installationPath: $(Agent.ToolsDirectory)/dotnet
-    - powershell: ./build.ps1
-      env:
-          DOTNET_CLI_TELEMETRY_OPTOUT: 1
-      condition: eq( variables['Agent.OS'], 'Windows_NT' )
-      displayName: 执行 cake - Hosted (Hosted_VS2017)
-    - task: PublishTestResults@2
-      inputs:
-        testResultsFormat: 'VSTest'
-        testResultsFiles: 'TestResults/vstest.xml'
-        mergeTestResults: true
-  # Build Nuget Package
-  - job: Build_NuGet_Package
-    dependsOn:
-    - Docker_ubuntu_1604
-    - Docker_MacOS_1014
-    - Docker_Windows_2019
-    - Hosted_Windows_2019
-    - Hosted_VS2017
-    condition: |
-      and(succeeded('Docker_ubuntu_1604', 'Docker_MacOS_1014', 'Docker_Windows_2019', 'Hosted_Windows_2019', 'Hosted_VS2017'),
-      eq(variables['isPushNuget'], 'true'))
+    condition: eq(variables['isPushNuget'], 'false')
     pool:
       name: Hosted Windows 2019 with VS2019
     steps:
@@ -141,9 +97,61 @@ jobs:
           packageType: sdk
           version: $(dotnetVersion)
           installationPath: $(Agent.ToolsDirectory)/dotnet
-      - powershell: ./build.ps1 --target=Publish --packVer=$(packVersion)
+      - powershell: ./build.ps1 --target=azure
+        env:
+          DOTNET_CLI_TELEMETRY_OPTOUT: 1
+        condition: eq( variables['Agent.OS'], 'Windows_NT' )
+        displayName: 执行 cake - Hosted (Windows 2019 with VS2019)
+      - task: DotNetCoreCLI@2
+        displayName: '测试'
+        inputs:
+          command: test
+          projects: '$(TestProject)'
+          arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
+  # Windows (Windows 2019 with VS2019)
+  - job: Hosted_VS2017
+    condition: eq(variables['isPushNuget'], 'false')
+    pool:
+      name: Hosted Windows 2019 with VS2019
+    steps:
+      - task: UseDotNet@2
+        displayName: '安装 .NET Core sdk'
+        inputs:
+          packageType: sdk
+          version: $(dotnetVersion)
+          installationPath: $(Agent.ToolsDirectory)/dotnet
+      - powershell: ./build.ps1 --target=azure
+        env:
+          DOTNET_CLI_TELEMETRY_OPTOUT: 1
+        condition: eq( variables['Agent.OS'], 'Windows_NT' )
+        displayName: 执行 cake - Hosted (Hosted_VS2017)
+      - task: DotNetCoreCLI@2
+        displayName: '测试'
+        inputs:
+          command: test
+          projects: '$(TestProject)'
+          arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
+  # Build Nuget Package
+  - job: Build_NuGet_Package
+    condition: eq(variables['isPushNuget'], 'true')
+    pool:
+      name: Hosted Windows 2019 with VS2019
+    steps:
+      - task: UseDotNet@2
+        displayName: '安装 .NET Core sdk'
+        inputs:
+          packageType: sdk
+          version: $(dotnetVersion)
+          installationPath: $(Agent.ToolsDirectory)/dotnet
+      - powershell: ./build.ps1 --target=azure --packVer=$(packVersion)
         condition: eq( variables['Agent.OS'], 'Windows_NT' )
         displayName: Windows (Windows 2019 with VS2019) 平台 执行 cake pack
+      - task: DotNetCoreCLI@2
+        displayName: '测试'
+        inputs:
+          command: test
+          projects: '$(TestProject)'
+          arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
       - task: NuGetCommand@2
         displayName: 'NuGet 发布'
         inputs:
@@ -151,7 +159,6 @@ jobs:
           nuGetFeedType: external
           publishFeedCredentials: nuget.org
           packagesToPush: '$(nugetPackPath)/**/*.nupkg;$(nugetPackPath)/**/*.symbols.nupkg'
-
       - task: NuGetCommand@2
         displayName: 'MyGet 发布'
         inputs:
