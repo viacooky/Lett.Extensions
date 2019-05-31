@@ -11,7 +11,7 @@ var releasePath = Directory("./src/Lett.Extensions/bin") + Directory(configurati
 var nugetPackBuilPath = Directory("./nugetPacks"); // nuget包编译目录
 // 测试结果目录
 var testResultPath = "./TestResults";
-var coverageResultPath = $"{testResultPath}/coverage.xml"; // 覆盖率
+var coverageResultPath = $"{testResultPath}/coverage"; // 覆盖率
 var vSTestReportPath = $"{testResultPath}/vstest.xml"; // 测试结果
 
 // ------------------------------------------------------------------
@@ -58,12 +58,12 @@ Task("Testing")
       Configuration = configuration,
         NoBuild = false,
         VSTestReportPath = vSTestReportPath,
+        ResultsDirectory = testResultPath,
         ArgumentCustomization = args => args
         .Append("--collect \"Code coverage\"")
-        .Append($"--results-directory {vSTestReportPath}")
-        .Append("/p:CollectCoverage=true")
-        .Append($"/p:CoverletOutputFormat=opencover")
-        .Append($"/p:CoverletOutput=../../{coverageResultPath}")
+        // .Append("/p:CollectCoverage=true")
+        // .Append($"/p:CoverletOutputFormat=opencover")
+        // .Append($"/p:CoverletOutput=../../{coverageResultPath}")
     });
   });
 
