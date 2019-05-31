@@ -155,7 +155,7 @@ jobs:
           projects: '$(TestProject)'
           arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
       - bash: |
-          mkdir ~/.ssh && mv $DOWNLOADSECUREFILE1_SECUREFILEPATH ~/.ssh/id_rsa 
+          mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa 
           chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
           git config --local user.name "Azure Pipelines Auto Deploy"
           git config --local user.email "auto_deploy@viacooky.com"
