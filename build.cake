@@ -60,6 +60,7 @@ Task("Testing")
         VSTestReportPath = vSTestReportPath,
         ArgumentCustomization = args => args
         .Append("--collect \"Code coverage\"")
+        .Append($"--results-directory {vSTestReportPath}")
         .Append("/p:CollectCoverage=true")
         .Append($"/p:CoverletOutputFormat=opencover")
         .Append($"/p:CoverletOutput=../../{coverageResultPath}")

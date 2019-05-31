@@ -35,6 +35,7 @@ jobs:
         inputs:
           testResultsFormat: 'VSTest'
           testResultsFiles: 'TestResults/vstest.xml'
+          mergeTestResults: true
   # MacOS (Docker - macOS-10.14)
   - job: Docker_MacOS_1014
     pool:
@@ -56,6 +57,7 @@ jobs:
         inputs:
           testResultsFormat: 'VSTest'
           testResultsFiles: 'TestResults/vstest.xml'
+          mergeTestResults: true
   # Windows (Docker - windows-2019)
   - job: Docker_Windows_2019
     pool:
@@ -76,6 +78,7 @@ jobs:
         inputs:
           testResultsFormat: 'VSTest'
           testResultsFiles: 'TestResults/vstest.xml'
+          mergeTestResults: true
   # Windows (Windows 2019 with VS2019)
   - job: Hosted_Windows_2019
     pool:
@@ -96,6 +99,7 @@ jobs:
       inputs:
         testResultsFormat: 'VSTest'
         testResultsFiles: 'TestResults/vstest.xml'
+        mergeTestResults: true
   # Windows (Windows 2019 with VS2019)
   - job: Hosted_VS2017
     pool:
@@ -116,6 +120,7 @@ jobs:
       inputs:
         testResultsFormat: 'VSTest'
         testResultsFiles: 'TestResults/vstest.xml'
+        mergeTestResults: true
   # Build Nuget Package
   - job: Build_NuGet_Package
     dependsOn:
