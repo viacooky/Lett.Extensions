@@ -4,20 +4,20 @@
 // ------------------------------------------------------------------
 // 参数定义
 // ------------------------------------------------------------------
-var target = Argument("target", "Default"); // 任务命名
+var target = Argument("target", "Default"); // 
 var configuration = Argument("configuration", "Release"); // 编译配置
-var packVer = Argument("packVer", "0.0.1"); // NuGet 版本
+var nugetVersion = Argument("nugetVersion", "0.0.1"); // NuGet 版本
+var assemblyVerion = Argument("assemblyVerion", "0.0.0"); // assemblyVersion
 var buildProj = "./src/Lett.Extensions/Lett.Extensions.csproj"; // project 文件
 var testProj = "./src/Lett.Extensions.Test/Lett.Extensions.Test.csproj"; // test project 文件
 var releasePath = Directory("./src/Lett.Extensions/bin") + Directory(configuration); // 编译目录
 var nugetPackBuilPath = Directory("./nugetPacks"); // nuget包编译目录
-// 测试结果目录
-var testResultPath = "./TestResults";
+var testResultPath = "./TestResults"; // 测试结果目录
 var opencoverReportFile = $"{testResultPath}/converage/opencover.xml"; // 覆盖率
 var vSTestReportFile = $"{testResultPath}/vstest.xml"; // 测试结果
 
 // ------------------------------------------------------------------
-// 编译
+// 子任务
 // ------------------------------------------------------------------
 
 Task("Clean")
@@ -43,8 +43,8 @@ Task("Build")
     DotNetCoreBuild(buildProj, new DotNetCoreBuildSettings {
       Configuration = configuration,
         ArgumentCustomization = args => args
-        .Append($"/p:Version={packVer}")
-        .Append($"/p:AssemblyVersion={packVer}")
+        .Append($"/p:Version={nugetVersion}")
+        .Append($"/p:AssemblyVersion={assemblyVerion}")
     });
   });
 
@@ -108,8 +108,8 @@ Task("PackNuGet")
         OutputDirectory = nugetPackBuilPath,
         IncludeSymbols = true,
         ArgumentCustomization = args => args
-        .Append($"/p:Version={packVer}")
-        .Append($"/p:AssemblyVersion={packVer}")
+        .Append($"/p:Version={nugetVersion}")
+        .Append($"/p:AssemblyVersion={assemblyVerion}")
     });
   });
 
