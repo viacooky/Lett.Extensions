@@ -1,0 +1,2093 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Lett.Extensions
+  name: Lett.Extensions
+  href: api/Lett.Extensions.html
+  commentId: N:Lett.Extensions
+  fullName: Lett.Extensions
+  nameWithType: Lett.Extensions
+- uid: Lett.Extensions.ArrayExtensions
+  name: ArrayExtensions
+  href: api/Lett.Extensions.ArrayExtensions.html
+  commentId: T:Lett.Extensions.ArrayExtensions
+  fullName: Lett.Extensions.ArrayExtensions
+  nameWithType: ArrayExtensions
+- uid: Lett.Extensions.ArrayExtensions.ClearAll(System.Array)
+  name: ClearAll(Array)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_ClearAll_System_Array_
+  commentId: M:Lett.Extensions.ArrayExtensions.ClearAll(System.Array)
+  fullName: Lett.Extensions.ArrayExtensions.ClearAll(System.Array)
+  nameWithType: ArrayExtensions.ClearAll(Array)
+- uid: Lett.Extensions.ArrayExtensions.ClearAll*
+  name: ClearAll
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_ClearAll_
+  commentId: Overload:Lett.Extensions.ArrayExtensions.ClearAll
+  isSpec: "True"
+  fullName: Lett.Extensions.ArrayExtensions.ClearAll
+  nameWithType: ArrayExtensions.ClearAll
+- uid: Lett.Extensions.ArrayExtensions.ClearAll``1(``0[])
+  name: ClearAll<T>(T[])
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_ClearAll__1___0___
+  commentId: M:Lett.Extensions.ArrayExtensions.ClearAll``1(``0[])
+  name.vb: ClearAll(Of T)(T())
+  fullName: Lett.Extensions.ArrayExtensions.ClearAll<T>(T[])
+  fullName.vb: Lett.Extensions.ArrayExtensions.ClearAll(Of T)(T())
+  nameWithType: ArrayExtensions.ClearAll<T>(T[])
+  nameWithType.vb: ArrayExtensions.ClearAll(Of T)(T())
+- uid: Lett.Extensions.ArrayExtensions.ContainsIndex(System.Array,System.Int32)
+  name: ContainsIndex(Array, Int32)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_ContainsIndex_System_Array_System_Int32_
+  commentId: M:Lett.Extensions.ArrayExtensions.ContainsIndex(System.Array,System.Int32)
+  fullName: Lett.Extensions.ArrayExtensions.ContainsIndex(System.Array, System.Int32)
+  nameWithType: ArrayExtensions.ContainsIndex(Array, Int32)
+- uid: Lett.Extensions.ArrayExtensions.ContainsIndex*
+  name: ContainsIndex
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_ContainsIndex_
+  commentId: Overload:Lett.Extensions.ArrayExtensions.ContainsIndex
+  isSpec: "True"
+  fullName: Lett.Extensions.ArrayExtensions.ContainsIndex
+  nameWithType: ArrayExtensions.ContainsIndex
+- uid: Lett.Extensions.ArrayExtensions.ContainsIndex``1(``0[],System.Int32)
+  name: ContainsIndex<T>(T[], Int32)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_ContainsIndex__1___0___System_Int32_
+  commentId: M:Lett.Extensions.ArrayExtensions.ContainsIndex``1(``0[],System.Int32)
+  name.vb: ContainsIndex(Of T)(T(), Int32)
+  fullName: Lett.Extensions.ArrayExtensions.ContainsIndex<T>(T[], System.Int32)
+  fullName.vb: Lett.Extensions.ArrayExtensions.ContainsIndex(Of T)(T(), System.Int32)
+  nameWithType: ArrayExtensions.ContainsIndex<T>(T[], Int32)
+  nameWithType.vb: ArrayExtensions.ContainsIndex(Of T)(T(), Int32)
+- uid: Lett.Extensions.ArrayExtensions.Find*
+  name: Find
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Find_
+  commentId: Overload:Lett.Extensions.ArrayExtensions.Find
+  isSpec: "True"
+  fullName: Lett.Extensions.ArrayExtensions.Find
+  nameWithType: ArrayExtensions.Find
+- uid: Lett.Extensions.ArrayExtensions.Find``1(``0[],System.Predicate{``0})
+  name: Find<T>(T[], Predicate<T>)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Find__1___0___System_Predicate___0__
+  commentId: M:Lett.Extensions.ArrayExtensions.Find``1(``0[],System.Predicate{``0})
+  name.vb: Find(Of T)(T(), Predicate(Of T))
+  fullName: Lett.Extensions.ArrayExtensions.Find<T>(T[], System.Predicate<T>)
+  fullName.vb: Lett.Extensions.ArrayExtensions.Find(Of T)(T(), System.Predicate(Of T))
+  nameWithType: ArrayExtensions.Find<T>(T[], Predicate<T>)
+  nameWithType.vb: ArrayExtensions.Find(Of T)(T(), Predicate(Of T))
+- uid: Lett.Extensions.ArrayExtensions.FindAll*
+  name: FindAll
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_FindAll_
+  commentId: Overload:Lett.Extensions.ArrayExtensions.FindAll
+  isSpec: "True"
+  fullName: Lett.Extensions.ArrayExtensions.FindAll
+  nameWithType: ArrayExtensions.FindAll
+- uid: Lett.Extensions.ArrayExtensions.FindAll``1(``0[],System.Predicate{``0})
+  name: FindAll<T>(T[], Predicate<T>)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_FindAll__1___0___System_Predicate___0__
+  commentId: M:Lett.Extensions.ArrayExtensions.FindAll``1(``0[],System.Predicate{``0})
+  name.vb: FindAll(Of T)(T(), Predicate(Of T))
+  fullName: Lett.Extensions.ArrayExtensions.FindAll<T>(T[], System.Predicate<T>)
+  fullName.vb: Lett.Extensions.ArrayExtensions.FindAll(Of T)(T(), System.Predicate(Of T))
+  nameWithType: ArrayExtensions.FindAll<T>(T[], Predicate<T>)
+  nameWithType.vb: ArrayExtensions.FindAll(Of T)(T(), Predicate(Of T))
+- uid: Lett.Extensions.ArrayExtensions.FindIndex*
+  name: FindIndex
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_FindIndex_
+  commentId: Overload:Lett.Extensions.ArrayExtensions.FindIndex
+  isSpec: "True"
+  fullName: Lett.Extensions.ArrayExtensions.FindIndex
+  nameWithType: ArrayExtensions.FindIndex
+- uid: Lett.Extensions.ArrayExtensions.FindIndex``1(``0[],System.Int32,System.Int32,System.Predicate{``0})
+  name: FindIndex<T>(T[], Int32, Int32, Predicate<T>)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_FindIndex__1___0___System_Int32_System_Int32_System_Predicate___0__
+  commentId: M:Lett.Extensions.ArrayExtensions.FindIndex``1(``0[],System.Int32,System.Int32,System.Predicate{``0})
+  name.vb: FindIndex(Of T)(T(), Int32, Int32, Predicate(Of T))
+  fullName: Lett.Extensions.ArrayExtensions.FindIndex<T>(T[], System.Int32, System.Int32, System.Predicate<T>)
+  fullName.vb: Lett.Extensions.ArrayExtensions.FindIndex(Of T)(T(), System.Int32, System.Int32, System.Predicate(Of T))
+  nameWithType: ArrayExtensions.FindIndex<T>(T[], Int32, Int32, Predicate<T>)
+  nameWithType.vb: ArrayExtensions.FindIndex(Of T)(T(), Int32, Int32, Predicate(Of T))
+- uid: Lett.Extensions.ArrayExtensions.FindIndex``1(``0[],System.Int32,System.Predicate{``0})
+  name: FindIndex<T>(T[], Int32, Predicate<T>)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_FindIndex__1___0___System_Int32_System_Predicate___0__
+  commentId: M:Lett.Extensions.ArrayExtensions.FindIndex``1(``0[],System.Int32,System.Predicate{``0})
+  name.vb: FindIndex(Of T)(T(), Int32, Predicate(Of T))
+  fullName: Lett.Extensions.ArrayExtensions.FindIndex<T>(T[], System.Int32, System.Predicate<T>)
+  fullName.vb: Lett.Extensions.ArrayExtensions.FindIndex(Of T)(T(), System.Int32, System.Predicate(Of T))
+  nameWithType: ArrayExtensions.FindIndex<T>(T[], Int32, Predicate<T>)
+  nameWithType.vb: ArrayExtensions.FindIndex(Of T)(T(), Int32, Predicate(Of T))
+- uid: Lett.Extensions.ArrayExtensions.FindIndex``1(``0[],System.Predicate{``0})
+  name: FindIndex<T>(T[], Predicate<T>)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_FindIndex__1___0___System_Predicate___0__
+  commentId: M:Lett.Extensions.ArrayExtensions.FindIndex``1(``0[],System.Predicate{``0})
+  name.vb: FindIndex(Of T)(T(), Predicate(Of T))
+  fullName: Lett.Extensions.ArrayExtensions.FindIndex<T>(T[], System.Predicate<T>)
+  fullName.vb: Lett.Extensions.ArrayExtensions.FindIndex(Of T)(T(), System.Predicate(Of T))
+  nameWithType: ArrayExtensions.FindIndex<T>(T[], Predicate<T>)
+  nameWithType.vb: ArrayExtensions.FindIndex(Of T)(T(), Predicate(Of T))
+- uid: Lett.Extensions.ArrayExtensions.FindLast*
+  name: FindLast
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_FindLast_
+  commentId: Overload:Lett.Extensions.ArrayExtensions.FindLast
+  isSpec: "True"
+  fullName: Lett.Extensions.ArrayExtensions.FindLast
+  nameWithType: ArrayExtensions.FindLast
+- uid: Lett.Extensions.ArrayExtensions.FindLast``1(``0[],System.Predicate{``0})
+  name: FindLast<T>(T[], Predicate<T>)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_FindLast__1___0___System_Predicate___0__
+  commentId: M:Lett.Extensions.ArrayExtensions.FindLast``1(``0[],System.Predicate{``0})
+  name.vb: FindLast(Of T)(T(), Predicate(Of T))
+  fullName: Lett.Extensions.ArrayExtensions.FindLast<T>(T[], System.Predicate<T>)
+  fullName.vb: Lett.Extensions.ArrayExtensions.FindLast(Of T)(T(), System.Predicate(Of T))
+  nameWithType: ArrayExtensions.FindLast<T>(T[], Predicate<T>)
+  nameWithType.vb: ArrayExtensions.FindLast(Of T)(T(), Predicate(Of T))
+- uid: Lett.Extensions.ArrayExtensions.FindLastIndex*
+  name: FindLastIndex
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_FindLastIndex_
+  commentId: Overload:Lett.Extensions.ArrayExtensions.FindLastIndex
+  isSpec: "True"
+  fullName: Lett.Extensions.ArrayExtensions.FindLastIndex
+  nameWithType: ArrayExtensions.FindLastIndex
+- uid: Lett.Extensions.ArrayExtensions.FindLastIndex``1(``0[],System.Int32,System.Int32,System.Predicate{``0})
+  name: FindLastIndex<T>(T[], Int32, Int32, Predicate<T>)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_FindLastIndex__1___0___System_Int32_System_Int32_System_Predicate___0__
+  commentId: M:Lett.Extensions.ArrayExtensions.FindLastIndex``1(``0[],System.Int32,System.Int32,System.Predicate{``0})
+  name.vb: FindLastIndex(Of T)(T(), Int32, Int32, Predicate(Of T))
+  fullName: Lett.Extensions.ArrayExtensions.FindLastIndex<T>(T[], System.Int32, System.Int32, System.Predicate<T>)
+  fullName.vb: Lett.Extensions.ArrayExtensions.FindLastIndex(Of T)(T(), System.Int32, System.Int32, System.Predicate(Of T))
+  nameWithType: ArrayExtensions.FindLastIndex<T>(T[], Int32, Int32, Predicate<T>)
+  nameWithType.vb: ArrayExtensions.FindLastIndex(Of T)(T(), Int32, Int32, Predicate(Of T))
+- uid: Lett.Extensions.ArrayExtensions.FindLastIndex``1(``0[],System.Int32,System.Predicate{``0})
+  name: FindLastIndex<T>(T[], Int32, Predicate<T>)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_FindLastIndex__1___0___System_Int32_System_Predicate___0__
+  commentId: M:Lett.Extensions.ArrayExtensions.FindLastIndex``1(``0[],System.Int32,System.Predicate{``0})
+  name.vb: FindLastIndex(Of T)(T(), Int32, Predicate(Of T))
+  fullName: Lett.Extensions.ArrayExtensions.FindLastIndex<T>(T[], System.Int32, System.Predicate<T>)
+  fullName.vb: Lett.Extensions.ArrayExtensions.FindLastIndex(Of T)(T(), System.Int32, System.Predicate(Of T))
+  nameWithType: ArrayExtensions.FindLastIndex<T>(T[], Int32, Predicate<T>)
+  nameWithType.vb: ArrayExtensions.FindLastIndex(Of T)(T(), Int32, Predicate(Of T))
+- uid: Lett.Extensions.ArrayExtensions.FindLastIndex``1(``0[],System.Predicate{``0})
+  name: FindLastIndex<T>(T[], Predicate<T>)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_FindLastIndex__1___0___System_Predicate___0__
+  commentId: M:Lett.Extensions.ArrayExtensions.FindLastIndex``1(``0[],System.Predicate{``0})
+  name.vb: FindLastIndex(Of T)(T(), Predicate(Of T))
+  fullName: Lett.Extensions.ArrayExtensions.FindLastIndex<T>(T[], System.Predicate<T>)
+  fullName.vb: Lett.Extensions.ArrayExtensions.FindLastIndex(Of T)(T(), System.Predicate(Of T))
+  nameWithType: ArrayExtensions.FindLastIndex<T>(T[], Predicate<T>)
+  nameWithType.vb: ArrayExtensions.FindLastIndex(Of T)(T(), Predicate(Of T))
+- uid: Lett.Extensions.ArrayExtensions.ForEach*
+  name: ForEach
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_ForEach_
+  commentId: Overload:Lett.Extensions.ArrayExtensions.ForEach
+  isSpec: "True"
+  fullName: Lett.Extensions.ArrayExtensions.ForEach
+  nameWithType: ArrayExtensions.ForEach
+- uid: Lett.Extensions.ArrayExtensions.ForEach``1(``0[],System.Action{``0})
+  name: ForEach<T>(T[], Action<T>)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_ForEach__1___0___System_Action___0__
+  commentId: M:Lett.Extensions.ArrayExtensions.ForEach``1(``0[],System.Action{``0})
+  name.vb: ForEach(Of T)(T(), Action(Of T))
+  fullName: Lett.Extensions.ArrayExtensions.ForEach<T>(T[], System.Action<T>)
+  fullName.vb: Lett.Extensions.ArrayExtensions.ForEach(Of T)(T(), System.Action(Of T))
+  nameWithType: ArrayExtensions.ForEach<T>(T[], Action<T>)
+  nameWithType.vb: ArrayExtensions.ForEach(Of T)(T(), Action(Of T))
+- uid: Lett.Extensions.ArrayExtensions.ForEach``1(``0[],System.Action{System.Int32,``0})
+  name: ForEach<T>(T[], Action<Int32, T>)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_ForEach__1___0___System_Action_System_Int32___0__
+  commentId: M:Lett.Extensions.ArrayExtensions.ForEach``1(``0[],System.Action{System.Int32,``0})
+  name.vb: ForEach(Of T)(T(), Action(Of Int32, T))
+  fullName: Lett.Extensions.ArrayExtensions.ForEach<T>(T[], System.Action<System.Int32, T>)
+  fullName.vb: Lett.Extensions.ArrayExtensions.ForEach(Of T)(T(), System.Action(Of System.Int32, T))
+  nameWithType: ArrayExtensions.ForEach<T>(T[], Action<Int32, T>)
+  nameWithType.vb: ArrayExtensions.ForEach(Of T)(T(), Action(Of Int32, T))
+- uid: Lett.Extensions.ArrayExtensions.Reverse(System.Array)
+  name: Reverse(Array)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Reverse_System_Array_
+  commentId: M:Lett.Extensions.ArrayExtensions.Reverse(System.Array)
+  fullName: Lett.Extensions.ArrayExtensions.Reverse(System.Array)
+  nameWithType: ArrayExtensions.Reverse(Array)
+- uid: Lett.Extensions.ArrayExtensions.Reverse(System.Array,System.Int32,System.Int32)
+  name: Reverse(Array, Int32, Int32)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Reverse_System_Array_System_Int32_System_Int32_
+  commentId: M:Lett.Extensions.ArrayExtensions.Reverse(System.Array,System.Int32,System.Int32)
+  fullName: Lett.Extensions.ArrayExtensions.Reverse(System.Array, System.Int32, System.Int32)
+  nameWithType: ArrayExtensions.Reverse(Array, Int32, Int32)
+- uid: Lett.Extensions.ArrayExtensions.Reverse*
+  name: Reverse
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Reverse_
+  commentId: Overload:Lett.Extensions.ArrayExtensions.Reverse
+  isSpec: "True"
+  fullName: Lett.Extensions.ArrayExtensions.Reverse
+  nameWithType: ArrayExtensions.Reverse
+- uid: Lett.Extensions.ArrayExtensions.Reverse``1(``0[])
+  name: Reverse<T>(T[])
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Reverse__1___0___
+  commentId: M:Lett.Extensions.ArrayExtensions.Reverse``1(``0[])
+  name.vb: Reverse(Of T)(T())
+  fullName: Lett.Extensions.ArrayExtensions.Reverse<T>(T[])
+  fullName.vb: Lett.Extensions.ArrayExtensions.Reverse(Of T)(T())
+  nameWithType: ArrayExtensions.Reverse<T>(T[])
+  nameWithType.vb: ArrayExtensions.Reverse(Of T)(T())
+- uid: Lett.Extensions.ArrayExtensions.Reverse``1(``0[],System.Int32,System.Int32)
+  name: Reverse<T>(T[], Int32, Int32)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Reverse__1___0___System_Int32_System_Int32_
+  commentId: M:Lett.Extensions.ArrayExtensions.Reverse``1(``0[],System.Int32,System.Int32)
+  name.vb: Reverse(Of T)(T(), Int32, Int32)
+  fullName: Lett.Extensions.ArrayExtensions.Reverse<T>(T[], System.Int32, System.Int32)
+  fullName.vb: Lett.Extensions.ArrayExtensions.Reverse(Of T)(T(), System.Int32, System.Int32)
+  nameWithType: ArrayExtensions.Reverse<T>(T[], Int32, Int32)
+  nameWithType.vb: ArrayExtensions.Reverse(Of T)(T(), Int32, Int32)
+- uid: Lett.Extensions.ArrayExtensions.Sort(System.Array)
+  name: Sort(Array)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Sort_System_Array_
+  commentId: M:Lett.Extensions.ArrayExtensions.Sort(System.Array)
+  fullName: Lett.Extensions.ArrayExtensions.Sort(System.Array)
+  nameWithType: ArrayExtensions.Sort(Array)
+- uid: Lett.Extensions.ArrayExtensions.Sort(System.Array,System.Collections.IComparer)
+  name: Sort(Array, IComparer)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Sort_System_Array_System_Collections_IComparer_
+  commentId: M:Lett.Extensions.ArrayExtensions.Sort(System.Array,System.Collections.IComparer)
+  fullName: Lett.Extensions.ArrayExtensions.Sort(System.Array, System.Collections.IComparer)
+  nameWithType: ArrayExtensions.Sort(Array, IComparer)
+- uid: Lett.Extensions.ArrayExtensions.Sort(System.Array,System.Int32,System.Int32)
+  name: Sort(Array, Int32, Int32)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Sort_System_Array_System_Int32_System_Int32_
+  commentId: M:Lett.Extensions.ArrayExtensions.Sort(System.Array,System.Int32,System.Int32)
+  fullName: Lett.Extensions.ArrayExtensions.Sort(System.Array, System.Int32, System.Int32)
+  nameWithType: ArrayExtensions.Sort(Array, Int32, Int32)
+- uid: Lett.Extensions.ArrayExtensions.Sort(System.Array,System.Int32,System.Int32,System.Collections.IComparer)
+  name: Sort(Array, Int32, Int32, IComparer)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Sort_System_Array_System_Int32_System_Int32_System_Collections_IComparer_
+  commentId: M:Lett.Extensions.ArrayExtensions.Sort(System.Array,System.Int32,System.Int32,System.Collections.IComparer)
+  fullName: Lett.Extensions.ArrayExtensions.Sort(System.Array, System.Int32, System.Int32, System.Collections.IComparer)
+  nameWithType: ArrayExtensions.Sort(Array, Int32, Int32, IComparer)
+- uid: Lett.Extensions.ArrayExtensions.Sort*
+  name: Sort
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Sort_
+  commentId: Overload:Lett.Extensions.ArrayExtensions.Sort
+  isSpec: "True"
+  fullName: Lett.Extensions.ArrayExtensions.Sort
+  nameWithType: ArrayExtensions.Sort
+- uid: Lett.Extensions.ArrayExtensions.Sort``1(``0[])
+  name: Sort<T>(T[])
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Sort__1___0___
+  commentId: M:Lett.Extensions.ArrayExtensions.Sort``1(``0[])
+  name.vb: Sort(Of T)(T())
+  fullName: Lett.Extensions.ArrayExtensions.Sort<T>(T[])
+  fullName.vb: Lett.Extensions.ArrayExtensions.Sort(Of T)(T())
+  nameWithType: ArrayExtensions.Sort<T>(T[])
+  nameWithType.vb: ArrayExtensions.Sort(Of T)(T())
+- uid: Lett.Extensions.ArrayExtensions.Sort``1(``0[],System.Collections.IComparer)
+  name: Sort<T>(T[], IComparer)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Sort__1___0___System_Collections_IComparer_
+  commentId: M:Lett.Extensions.ArrayExtensions.Sort``1(``0[],System.Collections.IComparer)
+  name.vb: Sort(Of T)(T(), IComparer)
+  fullName: Lett.Extensions.ArrayExtensions.Sort<T>(T[], System.Collections.IComparer)
+  fullName.vb: Lett.Extensions.ArrayExtensions.Sort(Of T)(T(), System.Collections.IComparer)
+  nameWithType: ArrayExtensions.Sort<T>(T[], IComparer)
+  nameWithType.vb: ArrayExtensions.Sort(Of T)(T(), IComparer)
+- uid: Lett.Extensions.ArrayExtensions.Sort``1(``0[],System.Int32,System.Int32)
+  name: Sort<T>(T[], Int32, Int32)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Sort__1___0___System_Int32_System_Int32_
+  commentId: M:Lett.Extensions.ArrayExtensions.Sort``1(``0[],System.Int32,System.Int32)
+  name.vb: Sort(Of T)(T(), Int32, Int32)
+  fullName: Lett.Extensions.ArrayExtensions.Sort<T>(T[], System.Int32, System.Int32)
+  fullName.vb: Lett.Extensions.ArrayExtensions.Sort(Of T)(T(), System.Int32, System.Int32)
+  nameWithType: ArrayExtensions.Sort<T>(T[], Int32, Int32)
+  nameWithType.vb: ArrayExtensions.Sort(Of T)(T(), Int32, Int32)
+- uid: Lett.Extensions.ArrayExtensions.Sort``1(``0[],System.Int32,System.Int32,System.Collections.IComparer)
+  name: Sort<T>(T[], Int32, Int32, IComparer)
+  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Sort__1___0___System_Int32_System_Int32_System_Collections_IComparer_
+  commentId: M:Lett.Extensions.ArrayExtensions.Sort``1(``0[],System.Int32,System.Int32,System.Collections.IComparer)
+  name.vb: Sort(Of T)(T(), Int32, Int32, IComparer)
+  fullName: Lett.Extensions.ArrayExtensions.Sort<T>(T[], System.Int32, System.Int32, System.Collections.IComparer)
+  fullName.vb: Lett.Extensions.ArrayExtensions.Sort(Of T)(T(), System.Int32, System.Int32, System.Collections.IComparer)
+  nameWithType: ArrayExtensions.Sort<T>(T[], Int32, Int32, IComparer)
+  nameWithType.vb: ArrayExtensions.Sort(Of T)(T(), Int32, Int32, IComparer)
+- uid: Lett.Extensions.BooleanExtensions
+  name: BooleanExtensions
+  href: api/Lett.Extensions.BooleanExtensions.html
+  commentId: T:Lett.Extensions.BooleanExtensions
+  fullName: Lett.Extensions.BooleanExtensions
+  nameWithType: BooleanExtensions
+- uid: Lett.Extensions.BooleanExtensions.IfFalse(System.Boolean,System.Action)
+  name: IfFalse(Boolean, Action)
+  href: api/Lett.Extensions.BooleanExtensions.html#Lett_Extensions_BooleanExtensions_IfFalse_System_Boolean_System_Action_
+  commentId: M:Lett.Extensions.BooleanExtensions.IfFalse(System.Boolean,System.Action)
+  fullName: Lett.Extensions.BooleanExtensions.IfFalse(System.Boolean, System.Action)
+  nameWithType: BooleanExtensions.IfFalse(Boolean, Action)
+- uid: Lett.Extensions.BooleanExtensions.IfFalse*
+  name: IfFalse
+  href: api/Lett.Extensions.BooleanExtensions.html#Lett_Extensions_BooleanExtensions_IfFalse_
+  commentId: Overload:Lett.Extensions.BooleanExtensions.IfFalse
+  isSpec: "True"
+  fullName: Lett.Extensions.BooleanExtensions.IfFalse
+  nameWithType: BooleanExtensions.IfFalse
+- uid: Lett.Extensions.BooleanExtensions.IfFalse``1(System.Boolean,``0)
+  name: IfFalse<T>(Boolean, T)
+  href: api/Lett.Extensions.BooleanExtensions.html#Lett_Extensions_BooleanExtensions_IfFalse__1_System_Boolean___0_
+  commentId: M:Lett.Extensions.BooleanExtensions.IfFalse``1(System.Boolean,``0)
+  name.vb: IfFalse(Of T)(Boolean, T)
+  fullName: Lett.Extensions.BooleanExtensions.IfFalse<T>(System.Boolean, T)
+  fullName.vb: Lett.Extensions.BooleanExtensions.IfFalse(Of T)(System.Boolean, T)
+  nameWithType: BooleanExtensions.IfFalse<T>(Boolean, T)
+  nameWithType.vb: BooleanExtensions.IfFalse(Of T)(Boolean, T)
+- uid: Lett.Extensions.BooleanExtensions.IfTrue(System.Boolean,System.Action)
+  name: IfTrue(Boolean, Action)
+  href: api/Lett.Extensions.BooleanExtensions.html#Lett_Extensions_BooleanExtensions_IfTrue_System_Boolean_System_Action_
+  commentId: M:Lett.Extensions.BooleanExtensions.IfTrue(System.Boolean,System.Action)
+  fullName: Lett.Extensions.BooleanExtensions.IfTrue(System.Boolean, System.Action)
+  nameWithType: BooleanExtensions.IfTrue(Boolean, Action)
+- uid: Lett.Extensions.BooleanExtensions.IfTrue*
+  name: IfTrue
+  href: api/Lett.Extensions.BooleanExtensions.html#Lett_Extensions_BooleanExtensions_IfTrue_
+  commentId: Overload:Lett.Extensions.BooleanExtensions.IfTrue
+  isSpec: "True"
+  fullName: Lett.Extensions.BooleanExtensions.IfTrue
+  nameWithType: BooleanExtensions.IfTrue
+- uid: Lett.Extensions.BooleanExtensions.IfTrue``1(System.Boolean,``0)
+  name: IfTrue<T>(Boolean, T)
+  href: api/Lett.Extensions.BooleanExtensions.html#Lett_Extensions_BooleanExtensions_IfTrue__1_System_Boolean___0_
+  commentId: M:Lett.Extensions.BooleanExtensions.IfTrue``1(System.Boolean,``0)
+  name.vb: IfTrue(Of T)(Boolean, T)
+  fullName: Lett.Extensions.BooleanExtensions.IfTrue<T>(System.Boolean, T)
+  fullName.vb: Lett.Extensions.BooleanExtensions.IfTrue(Of T)(System.Boolean, T)
+  nameWithType: BooleanExtensions.IfTrue<T>(Boolean, T)
+  nameWithType.vb: BooleanExtensions.IfTrue(Of T)(Boolean, T)
+- uid: Lett.Extensions.ByteExtensions
+  name: ByteExtensions
+  href: api/Lett.Extensions.ByteExtensions.html
+  commentId: T:Lett.Extensions.ByteExtensions
+  fullName: Lett.Extensions.ByteExtensions
+  nameWithType: ByteExtensions
+- uid: Lett.Extensions.ByteExtensions.EncodeToString(System.Byte[])
+  name: EncodeToString(Byte[])
+  href: api/Lett.Extensions.ByteExtensions.html#Lett_Extensions_ByteExtensions_EncodeToString_System_Byte___
+  commentId: M:Lett.Extensions.ByteExtensions.EncodeToString(System.Byte[])
+  name.vb: EncodeToString(Byte())
+  fullName: Lett.Extensions.ByteExtensions.EncodeToString(System.Byte[])
+  fullName.vb: Lett.Extensions.ByteExtensions.EncodeToString(System.Byte())
+  nameWithType: ByteExtensions.EncodeToString(Byte[])
+  nameWithType.vb: ByteExtensions.EncodeToString(Byte())
+- uid: Lett.Extensions.ByteExtensions.EncodeToString(System.Byte[],System.Text.Encoding)
+  name: EncodeToString(Byte[], Encoding)
+  href: api/Lett.Extensions.ByteExtensions.html#Lett_Extensions_ByteExtensions_EncodeToString_System_Byte___System_Text_Encoding_
+  commentId: M:Lett.Extensions.ByteExtensions.EncodeToString(System.Byte[],System.Text.Encoding)
+  name.vb: EncodeToString(Byte(), Encoding)
+  fullName: Lett.Extensions.ByteExtensions.EncodeToString(System.Byte[], System.Text.Encoding)
+  fullName.vb: Lett.Extensions.ByteExtensions.EncodeToString(System.Byte(), System.Text.Encoding)
+  nameWithType: ByteExtensions.EncodeToString(Byte[], Encoding)
+  nameWithType.vb: ByteExtensions.EncodeToString(Byte(), Encoding)
+- uid: Lett.Extensions.ByteExtensions.EncodeToString*
+  name: EncodeToString
+  href: api/Lett.Extensions.ByteExtensions.html#Lett_Extensions_ByteExtensions_EncodeToString_
+  commentId: Overload:Lett.Extensions.ByteExtensions.EncodeToString
+  isSpec: "True"
+  fullName: Lett.Extensions.ByteExtensions.EncodeToString
+  nameWithType: ByteExtensions.EncodeToString
+- uid: Lett.Extensions.DataColumnCollectionExtensions
+  name: DataColumnCollectionExtensions
+  href: api/Lett.Extensions.DataColumnCollectionExtensions.html
+  commentId: T:Lett.Extensions.DataColumnCollectionExtensions
+  fullName: Lett.Extensions.DataColumnCollectionExtensions
+  nameWithType: DataColumnCollectionExtensions
+- uid: Lett.Extensions.DataColumnCollectionExtensions.AddRange(System.Data.DataColumnCollection,System.Collections.Generic.IEnumerable{System.String})
+  name: AddRange(DataColumnCollection, IEnumerable<String>)
+  href: api/Lett.Extensions.DataColumnCollectionExtensions.html#Lett_Extensions_DataColumnCollectionExtensions_AddRange_System_Data_DataColumnCollection_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Lett.Extensions.DataColumnCollectionExtensions.AddRange(System.Data.DataColumnCollection,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: AddRange(DataColumnCollection, IEnumerable(Of String))
+  fullName: Lett.Extensions.DataColumnCollectionExtensions.AddRange(System.Data.DataColumnCollection, System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Lett.Extensions.DataColumnCollectionExtensions.AddRange(System.Data.DataColumnCollection, System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: DataColumnCollectionExtensions.AddRange(DataColumnCollection, IEnumerable<String>)
+  nameWithType.vb: DataColumnCollectionExtensions.AddRange(DataColumnCollection, IEnumerable(Of String))
+- uid: Lett.Extensions.DataColumnCollectionExtensions.AddRange*
+  name: AddRange
+  href: api/Lett.Extensions.DataColumnCollectionExtensions.html#Lett_Extensions_DataColumnCollectionExtensions_AddRange_
+  commentId: Overload:Lett.Extensions.DataColumnCollectionExtensions.AddRange
+  isSpec: "True"
+  fullName: Lett.Extensions.DataColumnCollectionExtensions.AddRange
+  nameWithType: DataColumnCollectionExtensions.AddRange
+- uid: Lett.Extensions.DataColumnCollectionExtensions.AddRangeParams(System.Data.DataColumnCollection,System.String[])
+  name: AddRangeParams(DataColumnCollection, String[])
+  href: api/Lett.Extensions.DataColumnCollectionExtensions.html#Lett_Extensions_DataColumnCollectionExtensions_AddRangeParams_System_Data_DataColumnCollection_System_String___
+  commentId: M:Lett.Extensions.DataColumnCollectionExtensions.AddRangeParams(System.Data.DataColumnCollection,System.String[])
+  name.vb: AddRangeParams(DataColumnCollection, String())
+  fullName: Lett.Extensions.DataColumnCollectionExtensions.AddRangeParams(System.Data.DataColumnCollection, System.String[])
+  fullName.vb: Lett.Extensions.DataColumnCollectionExtensions.AddRangeParams(System.Data.DataColumnCollection, System.String())
+  nameWithType: DataColumnCollectionExtensions.AddRangeParams(DataColumnCollection, String[])
+  nameWithType.vb: DataColumnCollectionExtensions.AddRangeParams(DataColumnCollection, String())
+- uid: Lett.Extensions.DataColumnCollectionExtensions.AddRangeParams*
+  name: AddRangeParams
+  href: api/Lett.Extensions.DataColumnCollectionExtensions.html#Lett_Extensions_DataColumnCollectionExtensions_AddRangeParams_
+  commentId: Overload:Lett.Extensions.DataColumnCollectionExtensions.AddRangeParams
+  isSpec: "True"
+  fullName: Lett.Extensions.DataColumnCollectionExtensions.AddRangeParams
+  nameWithType: DataColumnCollectionExtensions.AddRangeParams
+- uid: Lett.Extensions.DataRowExtensions
+  name: DataRowExtensions
+  href: api/Lett.Extensions.DataRowExtensions.html
+  commentId: T:Lett.Extensions.DataRowExtensions
+  fullName: Lett.Extensions.DataRowExtensions
+  nameWithType: DataRowExtensions
+- uid: Lett.Extensions.DataRowExtensions.Cell*
+  name: Cell
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_Cell_
+  commentId: Overload:Lett.Extensions.DataRowExtensions.Cell
+  isSpec: "True"
+  fullName: Lett.Extensions.DataRowExtensions.Cell
+  nameWithType: DataRowExtensions.Cell
+- uid: Lett.Extensions.DataRowExtensions.Cell``1(System.Data.DataRow,System.String)
+  name: Cell<T>(DataRow, String)
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_Cell__1_System_Data_DataRow_System_String_
+  commentId: M:Lett.Extensions.DataRowExtensions.Cell``1(System.Data.DataRow,System.String)
+  name.vb: Cell(Of T)(DataRow, String)
+  fullName: Lett.Extensions.DataRowExtensions.Cell<T>(System.Data.DataRow, System.String)
+  fullName.vb: Lett.Extensions.DataRowExtensions.Cell(Of T)(System.Data.DataRow, System.String)
+  nameWithType: DataRowExtensions.Cell<T>(DataRow, String)
+  nameWithType.vb: DataRowExtensions.Cell(Of T)(DataRow, String)
+- uid: Lett.Extensions.DataRowExtensions.Cell``1(System.Data.DataRow,System.String,``0)
+  name: Cell<T>(DataRow, String, T)
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_Cell__1_System_Data_DataRow_System_String___0_
+  commentId: M:Lett.Extensions.DataRowExtensions.Cell``1(System.Data.DataRow,System.String,``0)
+  name.vb: Cell(Of T)(DataRow, String, T)
+  fullName: Lett.Extensions.DataRowExtensions.Cell<T>(System.Data.DataRow, System.String, T)
+  fullName.vb: Lett.Extensions.DataRowExtensions.Cell(Of T)(System.Data.DataRow, System.String, T)
+  nameWithType: DataRowExtensions.Cell<T>(DataRow, String, T)
+  nameWithType.vb: DataRowExtensions.Cell(Of T)(DataRow, String, T)
+- uid: Lett.Extensions.DataRowExtensions.Cell``1(System.Data.DataRow,System.String,System.Func{``0})
+  name: Cell<T>(DataRow, String, Func<T>)
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_Cell__1_System_Data_DataRow_System_String_System_Func___0__
+  commentId: M:Lett.Extensions.DataRowExtensions.Cell``1(System.Data.DataRow,System.String,System.Func{``0})
+  name.vb: Cell(Of T)(DataRow, String, Func(Of T))
+  fullName: Lett.Extensions.DataRowExtensions.Cell<T>(System.Data.DataRow, System.String, System.Func<T>)
+  fullName.vb: Lett.Extensions.DataRowExtensions.Cell(Of T)(System.Data.DataRow, System.String, System.Func(Of T))
+  nameWithType: DataRowExtensions.Cell<T>(DataRow, String, Func<T>)
+  nameWithType.vb: DataRowExtensions.Cell(Of T)(DataRow, String, Func(Of T))
+- uid: Lett.Extensions.DataRowExtensions.ToEntity*
+  name: ToEntity
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_ToEntity_
+  commentId: Overload:Lett.Extensions.DataRowExtensions.ToEntity
+  isSpec: "True"
+  fullName: Lett.Extensions.DataRowExtensions.ToEntity
+  nameWithType: DataRowExtensions.ToEntity
+- uid: Lett.Extensions.DataRowExtensions.ToEntity``1(System.Data.DataRow)
+  name: ToEntity<T>(DataRow)
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_ToEntity__1_System_Data_DataRow_
+  commentId: M:Lett.Extensions.DataRowExtensions.ToEntity``1(System.Data.DataRow)
+  name.vb: ToEntity(Of T)(DataRow)
+  fullName: Lett.Extensions.DataRowExtensions.ToEntity<T>(System.Data.DataRow)
+  fullName.vb: Lett.Extensions.DataRowExtensions.ToEntity(Of T)(System.Data.DataRow)
+  nameWithType: DataRowExtensions.ToEntity<T>(DataRow)
+  nameWithType.vb: DataRowExtensions.ToEntity(Of T)(DataRow)
+- uid: Lett.Extensions.DataRowExtensions.ToEntity``1(System.Data.DataRow,System.Func{System.Data.DataRow,``0,``0})
+  name: ToEntity<T>(DataRow, Func<DataRow, T, T>)
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_ToEntity__1_System_Data_DataRow_System_Func_System_Data_DataRow___0___0__
+  commentId: M:Lett.Extensions.DataRowExtensions.ToEntity``1(System.Data.DataRow,System.Func{System.Data.DataRow,``0,``0})
+  name.vb: ToEntity(Of T)(DataRow, Func(Of DataRow, T, T))
+  fullName: Lett.Extensions.DataRowExtensions.ToEntity<T>(System.Data.DataRow, System.Func<System.Data.DataRow, T, T>)
+  fullName.vb: Lett.Extensions.DataRowExtensions.ToEntity(Of T)(System.Data.DataRow, System.Func(Of System.Data.DataRow, T, T))
+  nameWithType: DataRowExtensions.ToEntity<T>(DataRow, Func<DataRow, T, T>)
+  nameWithType.vb: DataRowExtensions.ToEntity(Of T)(DataRow, Func(Of DataRow, T, T))
+- uid: Lett.Extensions.DataTableExtensions
+  name: DataTableExtensions
+  href: api/Lett.Extensions.DataTableExtensions.html
+  commentId: T:Lett.Extensions.DataTableExtensions
+  fullName: Lett.Extensions.DataTableExtensions
+  nameWithType: DataTableExtensions
+- uid: Lett.Extensions.DataTableExtensions.ColumnsEnumerable(System.Data.DataTable)
+  name: ColumnsEnumerable(DataTable)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_ColumnsEnumerable_System_Data_DataTable_
+  commentId: M:Lett.Extensions.DataTableExtensions.ColumnsEnumerable(System.Data.DataTable)
+  fullName: Lett.Extensions.DataTableExtensions.ColumnsEnumerable(System.Data.DataTable)
+  nameWithType: DataTableExtensions.ColumnsEnumerable(DataTable)
+- uid: Lett.Extensions.DataTableExtensions.ColumnsEnumerable*
+  name: ColumnsEnumerable
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_ColumnsEnumerable_
+  commentId: Overload:Lett.Extensions.DataTableExtensions.ColumnsEnumerable
+  isSpec: "True"
+  fullName: Lett.Extensions.DataTableExtensions.ColumnsEnumerable
+  nameWithType: DataTableExtensions.ColumnsEnumerable
+- uid: Lett.Extensions.DataTableExtensions.FirstRow(System.Data.DataTable)
+  name: FirstRow(DataTable)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_FirstRow_System_Data_DataTable_
+  commentId: M:Lett.Extensions.DataTableExtensions.FirstRow(System.Data.DataTable)
+  fullName: Lett.Extensions.DataTableExtensions.FirstRow(System.Data.DataTable)
+  nameWithType: DataTableExtensions.FirstRow(DataTable)
+- uid: Lett.Extensions.DataTableExtensions.FirstRow*
+  name: FirstRow
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_FirstRow_
+  commentId: Overload:Lett.Extensions.DataTableExtensions.FirstRow
+  isSpec: "True"
+  fullName: Lett.Extensions.DataTableExtensions.FirstRow
+  nameWithType: DataTableExtensions.FirstRow
+- uid: Lett.Extensions.DataTableExtensions.GetColumnDataType(System.Data.DataTable,System.Int32)
+  name: GetColumnDataType(DataTable, Int32)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_GetColumnDataType_System_Data_DataTable_System_Int32_
+  commentId: M:Lett.Extensions.DataTableExtensions.GetColumnDataType(System.Data.DataTable,System.Int32)
+  fullName: Lett.Extensions.DataTableExtensions.GetColumnDataType(System.Data.DataTable, System.Int32)
+  nameWithType: DataTableExtensions.GetColumnDataType(DataTable, Int32)
+- uid: Lett.Extensions.DataTableExtensions.GetColumnDataType(System.Data.DataTable,System.String)
+  name: GetColumnDataType(DataTable, String)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_GetColumnDataType_System_Data_DataTable_System_String_
+  commentId: M:Lett.Extensions.DataTableExtensions.GetColumnDataType(System.Data.DataTable,System.String)
+  fullName: Lett.Extensions.DataTableExtensions.GetColumnDataType(System.Data.DataTable, System.String)
+  nameWithType: DataTableExtensions.GetColumnDataType(DataTable, String)
+- uid: Lett.Extensions.DataTableExtensions.GetColumnDataType*
+  name: GetColumnDataType
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_GetColumnDataType_
+  commentId: Overload:Lett.Extensions.DataTableExtensions.GetColumnDataType
+  isSpec: "True"
+  fullName: Lett.Extensions.DataTableExtensions.GetColumnDataType
+  nameWithType: DataTableExtensions.GetColumnDataType
+- uid: Lett.Extensions.DataTableExtensions.HasRows(System.Data.DataTable)
+  name: HasRows(DataTable)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_HasRows_System_Data_DataTable_
+  commentId: M:Lett.Extensions.DataTableExtensions.HasRows(System.Data.DataTable)
+  fullName: Lett.Extensions.DataTableExtensions.HasRows(System.Data.DataTable)
+  nameWithType: DataTableExtensions.HasRows(DataTable)
+- uid: Lett.Extensions.DataTableExtensions.HasRows*
+  name: HasRows
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_HasRows_
+  commentId: Overload:Lett.Extensions.DataTableExtensions.HasRows
+  isSpec: "True"
+  fullName: Lett.Extensions.DataTableExtensions.HasRows
+  nameWithType: DataTableExtensions.HasRows
+- uid: Lett.Extensions.DataTableExtensions.LastRow(System.Data.DataTable)
+  name: LastRow(DataTable)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_LastRow_System_Data_DataTable_
+  commentId: M:Lett.Extensions.DataTableExtensions.LastRow(System.Data.DataTable)
+  fullName: Lett.Extensions.DataTableExtensions.LastRow(System.Data.DataTable)
+  nameWithType: DataTableExtensions.LastRow(DataTable)
+- uid: Lett.Extensions.DataTableExtensions.LastRow*
+  name: LastRow
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_LastRow_
+  commentId: Overload:Lett.Extensions.DataTableExtensions.LastRow
+  isSpec: "True"
+  fullName: Lett.Extensions.DataTableExtensions.LastRow
+  nameWithType: DataTableExtensions.LastRow
+- uid: Lett.Extensions.DataTableExtensions.RowsEnumerable(System.Data.DataTable)
+  name: RowsEnumerable(DataTable)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_RowsEnumerable_System_Data_DataTable_
+  commentId: M:Lett.Extensions.DataTableExtensions.RowsEnumerable(System.Data.DataTable)
+  fullName: Lett.Extensions.DataTableExtensions.RowsEnumerable(System.Data.DataTable)
+  nameWithType: DataTableExtensions.RowsEnumerable(DataTable)
+- uid: Lett.Extensions.DataTableExtensions.RowsEnumerable*
+  name: RowsEnumerable
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_RowsEnumerable_
+  commentId: Overload:Lett.Extensions.DataTableExtensions.RowsEnumerable
+  isSpec: "True"
+  fullName: Lett.Extensions.DataTableExtensions.RowsEnumerable
+  nameWithType: DataTableExtensions.RowsEnumerable
+- uid: Lett.Extensions.DataTableExtensions.ToDynamicObjects(System.Data.DataTable)
+  name: ToDynamicObjects(DataTable)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_ToDynamicObjects_System_Data_DataTable_
+  commentId: M:Lett.Extensions.DataTableExtensions.ToDynamicObjects(System.Data.DataTable)
+  fullName: Lett.Extensions.DataTableExtensions.ToDynamicObjects(System.Data.DataTable)
+  nameWithType: DataTableExtensions.ToDynamicObjects(DataTable)
+- uid: Lett.Extensions.DataTableExtensions.ToDynamicObjects*
+  name: ToDynamicObjects
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_ToDynamicObjects_
+  commentId: Overload:Lett.Extensions.DataTableExtensions.ToDynamicObjects
+  isSpec: "True"
+  fullName: Lett.Extensions.DataTableExtensions.ToDynamicObjects
+  nameWithType: DataTableExtensions.ToDynamicObjects
+- uid: Lett.Extensions.DataTableExtensions.ToEntityList*
+  name: ToEntityList
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_ToEntityList_
+  commentId: Overload:Lett.Extensions.DataTableExtensions.ToEntityList
+  isSpec: "True"
+  fullName: Lett.Extensions.DataTableExtensions.ToEntityList
+  nameWithType: DataTableExtensions.ToEntityList
+- uid: Lett.Extensions.DataTableExtensions.ToEntityList``1(System.Data.DataTable)
+  name: ToEntityList<T>(DataTable)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_ToEntityList__1_System_Data_DataTable_
+  commentId: M:Lett.Extensions.DataTableExtensions.ToEntityList``1(System.Data.DataTable)
+  name.vb: ToEntityList(Of T)(DataTable)
+  fullName: Lett.Extensions.DataTableExtensions.ToEntityList<T>(System.Data.DataTable)
+  fullName.vb: Lett.Extensions.DataTableExtensions.ToEntityList(Of T)(System.Data.DataTable)
+  nameWithType: DataTableExtensions.ToEntityList<T>(DataTable)
+  nameWithType.vb: DataTableExtensions.ToEntityList(Of T)(DataTable)
+- uid: Lett.Extensions.DataTableExtensions.ToEntityList``1(System.Data.DataTable,System.Func{System.Data.DataRow,``0,``0})
+  name: ToEntityList<T>(DataTable, Func<DataRow, T, T>)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_ToEntityList__1_System_Data_DataTable_System_Func_System_Data_DataRow___0___0__
+  commentId: M:Lett.Extensions.DataTableExtensions.ToEntityList``1(System.Data.DataTable,System.Func{System.Data.DataRow,``0,``0})
+  name.vb: ToEntityList(Of T)(DataTable, Func(Of DataRow, T, T))
+  fullName: Lett.Extensions.DataTableExtensions.ToEntityList<T>(System.Data.DataTable, System.Func<System.Data.DataRow, T, T>)
+  fullName.vb: Lett.Extensions.DataTableExtensions.ToEntityList(Of T)(System.Data.DataTable, System.Func(Of System.Data.DataRow, T, T))
+  nameWithType: DataTableExtensions.ToEntityList<T>(DataTable, Func<DataRow, T, T>)
+  nameWithType.vb: DataTableExtensions.ToEntityList(Of T)(DataTable, Func(Of DataRow, T, T))
+- uid: Lett.Extensions.DateTimeExtensions
+  name: DateTimeExtensions
+  href: api/Lett.Extensions.DateTimeExtensions.html
+  commentId: T:Lett.Extensions.DateTimeExtensions
+  fullName: Lett.Extensions.DateTimeExtensions
+  nameWithType: DateTimeExtensions
+- uid: Lett.Extensions.DateTimeExtensions.EndOfDay(System.DateTime)
+  name: EndOfDay(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfDay_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.EndOfDay(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.EndOfDay(System.DateTime)
+  nameWithType: DateTimeExtensions.EndOfDay(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.EndOfDay*
+  name: EndOfDay
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfDay_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.EndOfDay
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.EndOfDay
+  nameWithType: DateTimeExtensions.EndOfDay
+- uid: Lett.Extensions.DateTimeExtensions.EndOfMonth(System.DateTime)
+  name: EndOfMonth(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfMonth_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.EndOfMonth(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.EndOfMonth(System.DateTime)
+  nameWithType: DateTimeExtensions.EndOfMonth(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.EndOfMonth*
+  name: EndOfMonth
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfMonth_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.EndOfMonth
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.EndOfMonth
+  nameWithType: DateTimeExtensions.EndOfMonth
+- uid: Lett.Extensions.DateTimeExtensions.EndOfWeek(System.DateTime,System.DayOfWeek)
+  name: EndOfWeek(DateTime, DayOfWeek)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfWeek_System_DateTime_System_DayOfWeek_
+  commentId: M:Lett.Extensions.DateTimeExtensions.EndOfWeek(System.DateTime,System.DayOfWeek)
+  fullName: Lett.Extensions.DateTimeExtensions.EndOfWeek(System.DateTime, System.DayOfWeek)
+  nameWithType: DateTimeExtensions.EndOfWeek(DateTime, DayOfWeek)
+- uid: Lett.Extensions.DateTimeExtensions.EndOfWeek*
+  name: EndOfWeek
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfWeek_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.EndOfWeek
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.EndOfWeek
+  nameWithType: DateTimeExtensions.EndOfWeek
+- uid: Lett.Extensions.DateTimeExtensions.EndOfYear(System.DateTime)
+  name: EndOfYear(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfYear_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.EndOfYear(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.EndOfYear(System.DateTime)
+  nameWithType: DateTimeExtensions.EndOfYear(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.EndOfYear*
+  name: EndOfYear
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_EndOfYear_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.EndOfYear
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.EndOfYear
+  nameWithType: DateTimeExtensions.EndOfYear
+- uid: Lett.Extensions.DateTimeExtensions.GetTotalDays(System.DateTime)
+  name: GetTotalDays(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_GetTotalDays_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.GetTotalDays(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.GetTotalDays(System.DateTime)
+  nameWithType: DateTimeExtensions.GetTotalDays(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.GetTotalDays*
+  name: GetTotalDays
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_GetTotalDays_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.GetTotalDays
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.GetTotalDays
+  nameWithType: DateTimeExtensions.GetTotalDays
+- uid: Lett.Extensions.DateTimeExtensions.GetTotalHours(System.DateTime)
+  name: GetTotalHours(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_GetTotalHours_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.GetTotalHours(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.GetTotalHours(System.DateTime)
+  nameWithType: DateTimeExtensions.GetTotalHours(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.GetTotalHours*
+  name: GetTotalHours
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_GetTotalHours_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.GetTotalHours
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.GetTotalHours
+  nameWithType: DateTimeExtensions.GetTotalHours
+- uid: Lett.Extensions.DateTimeExtensions.GetTotalMilliseconds(System.DateTime)
+  name: GetTotalMilliseconds(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_GetTotalMilliseconds_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.GetTotalMilliseconds(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.GetTotalMilliseconds(System.DateTime)
+  nameWithType: DateTimeExtensions.GetTotalMilliseconds(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.GetTotalMilliseconds*
+  name: GetTotalMilliseconds
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_GetTotalMilliseconds_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.GetTotalMilliseconds
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.GetTotalMilliseconds
+  nameWithType: DateTimeExtensions.GetTotalMilliseconds
+- uid: Lett.Extensions.DateTimeExtensions.GetTotalMinutes(System.DateTime)
+  name: GetTotalMinutes(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_GetTotalMinutes_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.GetTotalMinutes(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.GetTotalMinutes(System.DateTime)
+  nameWithType: DateTimeExtensions.GetTotalMinutes(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.GetTotalMinutes*
+  name: GetTotalMinutes
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_GetTotalMinutes_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.GetTotalMinutes
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.GetTotalMinutes
+  nameWithType: DateTimeExtensions.GetTotalMinutes
+- uid: Lett.Extensions.DateTimeExtensions.GetTotalSeconds(System.DateTime)
+  name: GetTotalSeconds(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_GetTotalSeconds_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.GetTotalSeconds(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.GetTotalSeconds(System.DateTime)
+  nameWithType: DateTimeExtensions.GetTotalSeconds(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.GetTotalSeconds*
+  name: GetTotalSeconds
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_GetTotalSeconds_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.GetTotalSeconds
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.GetTotalSeconds
+  nameWithType: DateTimeExtensions.GetTotalSeconds
+- uid: Lett.Extensions.DateTimeExtensions.IsBetween(System.DateTime,System.DateTime,System.DateTime)
+  name: IsBetween(DateTime, DateTime, DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsBetween_System_DateTime_System_DateTime_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.IsBetween(System.DateTime,System.DateTime,System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.IsBetween(System.DateTime, System.DateTime, System.DateTime)
+  nameWithType: DateTimeExtensions.IsBetween(DateTime, DateTime, DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.IsBetween*
+  name: IsBetween
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsBetween_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.IsBetween
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.IsBetween
+  nameWithType: DateTimeExtensions.IsBetween
+- uid: Lett.Extensions.DateTimeExtensions.IsToday(System.DateTime)
+  name: IsToday(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsToday_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.IsToday(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.IsToday(System.DateTime)
+  nameWithType: DateTimeExtensions.IsToday(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.IsToday*
+  name: IsToday
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsToday_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.IsToday
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.IsToday
+  nameWithType: DateTimeExtensions.IsToday
+- uid: Lett.Extensions.DateTimeExtensions.IsWeekDay(System.DateTime)
+  name: IsWeekDay(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsWeekDay_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.IsWeekDay(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.IsWeekDay(System.DateTime)
+  nameWithType: DateTimeExtensions.IsWeekDay(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.IsWeekDay*
+  name: IsWeekDay
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsWeekDay_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.IsWeekDay
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.IsWeekDay
+  nameWithType: DateTimeExtensions.IsWeekDay
+- uid: Lett.Extensions.DateTimeExtensions.IsZeroTime(System.DateTime)
+  name: IsZeroTime(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsZeroTime_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.IsZeroTime(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.IsZeroTime(System.DateTime)
+  nameWithType: DateTimeExtensions.IsZeroTime(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.IsZeroTime*
+  name: IsZeroTime
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_IsZeroTime_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.IsZeroTime
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.IsZeroTime
+  nameWithType: DateTimeExtensions.IsZeroTime
+- uid: Lett.Extensions.DateTimeExtensions.SetTime(System.DateTime,System.Int32,System.Int32,System.Int32)
+  name: SetTime(DateTime, Int32, Int32, Int32)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_SetTime_System_DateTime_System_Int32_System_Int32_System_Int32_
+  commentId: M:Lett.Extensions.DateTimeExtensions.SetTime(System.DateTime,System.Int32,System.Int32,System.Int32)
+  fullName: Lett.Extensions.DateTimeExtensions.SetTime(System.DateTime, System.Int32, System.Int32, System.Int32)
+  nameWithType: DateTimeExtensions.SetTime(DateTime, Int32, Int32, Int32)
+- uid: Lett.Extensions.DateTimeExtensions.SetTime(System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: SetTime(DateTime, Int32, Int32, Int32, Int32)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_SetTime_System_DateTime_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:Lett.Extensions.DateTimeExtensions.SetTime(System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: Lett.Extensions.DateTimeExtensions.SetTime(System.DateTime, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: DateTimeExtensions.SetTime(DateTime, Int32, Int32, Int32, Int32)
+- uid: Lett.Extensions.DateTimeExtensions.SetTime*
+  name: SetTime
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_SetTime_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.SetTime
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.SetTime
+  nameWithType: DateTimeExtensions.SetTime
+- uid: Lett.Extensions.DateTimeExtensions.StartOfDay(System.DateTime)
+  name: StartOfDay(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfDay_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.StartOfDay(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.StartOfDay(System.DateTime)
+  nameWithType: DateTimeExtensions.StartOfDay(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.StartOfDay*
+  name: StartOfDay
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfDay_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.StartOfDay
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.StartOfDay
+  nameWithType: DateTimeExtensions.StartOfDay
+- uid: Lett.Extensions.DateTimeExtensions.StartOfMonth(System.DateTime)
+  name: StartOfMonth(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfMonth_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.StartOfMonth(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.StartOfMonth(System.DateTime)
+  nameWithType: DateTimeExtensions.StartOfMonth(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.StartOfMonth*
+  name: StartOfMonth
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfMonth_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.StartOfMonth
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.StartOfMonth
+  nameWithType: DateTimeExtensions.StartOfMonth
+- uid: Lett.Extensions.DateTimeExtensions.StartOfWeek(System.DateTime,System.DayOfWeek)
+  name: StartOfWeek(DateTime, DayOfWeek)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfWeek_System_DateTime_System_DayOfWeek_
+  commentId: M:Lett.Extensions.DateTimeExtensions.StartOfWeek(System.DateTime,System.DayOfWeek)
+  fullName: Lett.Extensions.DateTimeExtensions.StartOfWeek(System.DateTime, System.DayOfWeek)
+  nameWithType: DateTimeExtensions.StartOfWeek(DateTime, DayOfWeek)
+- uid: Lett.Extensions.DateTimeExtensions.StartOfWeek*
+  name: StartOfWeek
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfWeek_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.StartOfWeek
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.StartOfWeek
+  nameWithType: DateTimeExtensions.StartOfWeek
+- uid: Lett.Extensions.DateTimeExtensions.StartOfYear(System.DateTime)
+  name: StartOfYear(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfYear_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.StartOfYear(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.StartOfYear(System.DateTime)
+  nameWithType: DateTimeExtensions.StartOfYear(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.StartOfYear*
+  name: StartOfYear
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_StartOfYear_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.StartOfYear
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.StartOfYear
+  nameWithType: DateTimeExtensions.StartOfYear
+- uid: Lett.Extensions.DateTimeExtensions.Tomorrow(System.DateTime)
+  name: Tomorrow(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_Tomorrow_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.Tomorrow(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.Tomorrow(System.DateTime)
+  nameWithType: DateTimeExtensions.Tomorrow(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.Tomorrow*
+  name: Tomorrow
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_Tomorrow_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.Tomorrow
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.Tomorrow
+  nameWithType: DateTimeExtensions.Tomorrow
+- uid: Lett.Extensions.DateTimeExtensions.ToString_Base(System.DateTime)
+  name: ToString_Base(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_Base_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.ToString_Base(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_Base(System.DateTime)
+  nameWithType: DateTimeExtensions.ToString_Base(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.ToString_Base*
+  name: ToString_Base
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_Base_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.ToString_Base
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_Base
+  nameWithType: DateTimeExtensions.ToString_Base
+- uid: Lett.Extensions.DateTimeExtensions.ToString_Day(System.DateTime)
+  name: ToString_Day(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_Day_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.ToString_Day(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_Day(System.DateTime)
+  nameWithType: DateTimeExtensions.ToString_Day(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.ToString_Day*
+  name: ToString_Day
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_Day_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.ToString_Day
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_Day
+  nameWithType: DateTimeExtensions.ToString_Day
+- uid: Lett.Extensions.DateTimeExtensions.ToString_Full(System.DateTime)
+  name: ToString_Full(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_Full_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.ToString_Full(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_Full(System.DateTime)
+  nameWithType: DateTimeExtensions.ToString_Full(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.ToString_Full*
+  name: ToString_Full
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_Full_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.ToString_Full
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_Full
+  nameWithType: DateTimeExtensions.ToString_Full
+- uid: Lett.Extensions.DateTimeExtensions.ToString_Month(System.DateTime)
+  name: ToString_Month(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_Month_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.ToString_Month(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_Month(System.DateTime)
+  nameWithType: DateTimeExtensions.ToString_Month(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.ToString_Month*
+  name: ToString_Month
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_Month_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.ToString_Month
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_Month
+  nameWithType: DateTimeExtensions.ToString_Month
+- uid: Lett.Extensions.DateTimeExtensions.ToString_ShortDay(System.DateTime)
+  name: ToString_ShortDay(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_ShortDay_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.ToString_ShortDay(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_ShortDay(System.DateTime)
+  nameWithType: DateTimeExtensions.ToString_ShortDay(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.ToString_ShortDay*
+  name: ToString_ShortDay
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_ShortDay_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.ToString_ShortDay
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_ShortDay
+  nameWithType: DateTimeExtensions.ToString_ShortDay
+- uid: Lett.Extensions.DateTimeExtensions.ToString_ShortMonth(System.DateTime)
+  name: ToString_ShortMonth(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_ShortMonth_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.ToString_ShortMonth(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_ShortMonth(System.DateTime)
+  nameWithType: DateTimeExtensions.ToString_ShortMonth(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.ToString_ShortMonth*
+  name: ToString_ShortMonth
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_ShortMonth_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.ToString_ShortMonth
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_ShortMonth
+  nameWithType: DateTimeExtensions.ToString_ShortMonth
+- uid: Lett.Extensions.DateTimeExtensions.ToString_ShortTime(System.DateTime)
+  name: ToString_ShortTime(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_ShortTime_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.ToString_ShortTime(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_ShortTime(System.DateTime)
+  nameWithType: DateTimeExtensions.ToString_ShortTime(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.ToString_ShortTime*
+  name: ToString_ShortTime
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_ShortTime_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.ToString_ShortTime
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_ShortTime
+  nameWithType: DateTimeExtensions.ToString_ShortTime
+- uid: Lett.Extensions.DateTimeExtensions.ToString_ShortYear(System.DateTime)
+  name: ToString_ShortYear(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_ShortYear_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.ToString_ShortYear(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_ShortYear(System.DateTime)
+  nameWithType: DateTimeExtensions.ToString_ShortYear(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.ToString_ShortYear*
+  name: ToString_ShortYear
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_ShortYear_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.ToString_ShortYear
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_ShortYear
+  nameWithType: DateTimeExtensions.ToString_ShortYear
+- uid: Lett.Extensions.DateTimeExtensions.ToString_Time(System.DateTime)
+  name: ToString_Time(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_Time_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.ToString_Time(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_Time(System.DateTime)
+  nameWithType: DateTimeExtensions.ToString_Time(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.ToString_Time*
+  name: ToString_Time
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_Time_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.ToString_Time
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_Time
+  nameWithType: DateTimeExtensions.ToString_Time
+- uid: Lett.Extensions.DateTimeExtensions.ToString_Year(System.DateTime)
+  name: ToString_Year(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_Year_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.ToString_Year(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_Year(System.DateTime)
+  nameWithType: DateTimeExtensions.ToString_Year(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.ToString_Year*
+  name: ToString_Year
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_ToString_Year_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.ToString_Year
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.ToString_Year
+  nameWithType: DateTimeExtensions.ToString_Year
+- uid: Lett.Extensions.DateTimeExtensions.Yesterday(System.DateTime)
+  name: Yesterday(DateTime)
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_Yesterday_System_DateTime_
+  commentId: M:Lett.Extensions.DateTimeExtensions.Yesterday(System.DateTime)
+  fullName: Lett.Extensions.DateTimeExtensions.Yesterday(System.DateTime)
+  nameWithType: DateTimeExtensions.Yesterday(DateTime)
+- uid: Lett.Extensions.DateTimeExtensions.Yesterday*
+  name: Yesterday
+  href: api/Lett.Extensions.DateTimeExtensions.html#Lett_Extensions_DateTimeExtensions_Yesterday_
+  commentId: Overload:Lett.Extensions.DateTimeExtensions.Yesterday
+  isSpec: "True"
+  fullName: Lett.Extensions.DateTimeExtensions.Yesterday
+  nameWithType: DateTimeExtensions.Yesterday
+- uid: Lett.Extensions.EnumExtensions
+  name: EnumExtensions
+  href: api/Lett.Extensions.EnumExtensions.html
+  commentId: T:Lett.Extensions.EnumExtensions
+  fullName: Lett.Extensions.EnumExtensions
+  nameWithType: EnumExtensions
+- uid: Lett.Extensions.EnumExtensions.GetDescription(System.Enum)
+  name: GetDescription(Enum)
+  href: api/Lett.Extensions.EnumExtensions.html#Lett_Extensions_EnumExtensions_GetDescription_System_Enum_
+  commentId: M:Lett.Extensions.EnumExtensions.GetDescription(System.Enum)
+  fullName: Lett.Extensions.EnumExtensions.GetDescription(System.Enum)
+  nameWithType: EnumExtensions.GetDescription(Enum)
+- uid: Lett.Extensions.EnumExtensions.GetDescription*
+  name: GetDescription
+  href: api/Lett.Extensions.EnumExtensions.html#Lett_Extensions_EnumExtensions_GetDescription_
+  commentId: Overload:Lett.Extensions.EnumExtensions.GetDescription
+  isSpec: "True"
+  fullName: Lett.Extensions.EnumExtensions.GetDescription
+  nameWithType: EnumExtensions.GetDescription
+- uid: Lett.Extensions.Exceptions
+  name: Lett.Extensions.Exceptions
+  href: api/Lett.Extensions.Exceptions.html
+  commentId: N:Lett.Extensions.Exceptions
+  fullName: Lett.Extensions.Exceptions
+  nameWithType: Lett.Extensions.Exceptions
+- uid: Lett.Extensions.Exceptions.DataTableException
+  name: DataTableException
+  href: api/Lett.Extensions.Exceptions.DataTableException.html
+  commentId: T:Lett.Extensions.Exceptions.DataTableException
+  fullName: Lett.Extensions.Exceptions.DataTableException
+  nameWithType: DataTableException
+- uid: Lett.Extensions.Exceptions.DataTableException.#ctor(System.String)
+  name: DataTableException(String)
+  href: api/Lett.Extensions.Exceptions.DataTableException.html#Lett_Extensions_Exceptions_DataTableException__ctor_System_String_
+  commentId: M:Lett.Extensions.Exceptions.DataTableException.#ctor(System.String)
+  fullName: Lett.Extensions.Exceptions.DataTableException.DataTableException(System.String)
+  nameWithType: DataTableException.DataTableException(String)
+- uid: Lett.Extensions.Exceptions.DataTableException.#ctor*
+  name: DataTableException
+  href: api/Lett.Extensions.Exceptions.DataTableException.html#Lett_Extensions_Exceptions_DataTableException__ctor_
+  commentId: Overload:Lett.Extensions.Exceptions.DataTableException.#ctor
+  isSpec: "True"
+  fullName: Lett.Extensions.Exceptions.DataTableException.DataTableException
+  nameWithType: DataTableException.DataTableException
+- uid: Lett.Extensions.ICollectionsExtensions
+  name: ICollectionsExtensions
+  href: api/Lett.Extensions.ICollectionsExtensions.html
+  commentId: T:Lett.Extensions.ICollectionsExtensions
+  fullName: Lett.Extensions.ICollectionsExtensions
+  nameWithType: ICollectionsExtensions
+- uid: Lett.Extensions.ICollectionsExtensions.AddIfNotContains*
+  name: AddIfNotContains
+  href: api/Lett.Extensions.ICollectionsExtensions.html#Lett_Extensions_ICollectionsExtensions_AddIfNotContains_
+  commentId: Overload:Lett.Extensions.ICollectionsExtensions.AddIfNotContains
+  isSpec: "True"
+  fullName: Lett.Extensions.ICollectionsExtensions.AddIfNotContains
+  nameWithType: ICollectionsExtensions.AddIfNotContains
+- uid: Lett.Extensions.ICollectionsExtensions.AddIfNotContains``1(System.Collections.Generic.ICollection{``0},``0)
+  name: AddIfNotContains<T>(ICollection<T>, T)
+  href: api/Lett.Extensions.ICollectionsExtensions.html#Lett_Extensions_ICollectionsExtensions_AddIfNotContains__1_System_Collections_Generic_ICollection___0____0_
+  commentId: M:Lett.Extensions.ICollectionsExtensions.AddIfNotContains``1(System.Collections.Generic.ICollection{``0},``0)
+  name.vb: AddIfNotContains(Of T)(ICollection(Of T), T)
+  fullName: Lett.Extensions.ICollectionsExtensions.AddIfNotContains<T>(System.Collections.Generic.ICollection<T>, T)
+  fullName.vb: Lett.Extensions.ICollectionsExtensions.AddIfNotContains(Of T)(System.Collections.Generic.ICollection(Of T), T)
+  nameWithType: ICollectionsExtensions.AddIfNotContains<T>(ICollection<T>, T)
+  nameWithType.vb: ICollectionsExtensions.AddIfNotContains(Of T)(ICollection(Of T), T)
+- uid: Lett.Extensions.ICollectionsExtensions.AddIfNotContains``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.ICollection{``0})
+  name: AddIfNotContains<T>(ICollection<T>, ICollection<T>)
+  href: api/Lett.Extensions.ICollectionsExtensions.html#Lett_Extensions_ICollectionsExtensions_AddIfNotContains__1_System_Collections_Generic_ICollection___0__System_Collections_Generic_ICollection___0__
+  commentId: M:Lett.Extensions.ICollectionsExtensions.AddIfNotContains``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.ICollection{``0})
+  name.vb: AddIfNotContains(Of T)(ICollection(Of T), ICollection(Of T))
+  fullName: Lett.Extensions.ICollectionsExtensions.AddIfNotContains<T>(System.Collections.Generic.ICollection<T>, System.Collections.Generic.ICollection<T>)
+  fullName.vb: Lett.Extensions.ICollectionsExtensions.AddIfNotContains(Of T)(System.Collections.Generic.ICollection(Of T), System.Collections.Generic.ICollection(Of T))
+  nameWithType: ICollectionsExtensions.AddIfNotContains<T>(ICollection<T>, ICollection<T>)
+  nameWithType.vb: ICollectionsExtensions.AddIfNotContains(Of T)(ICollection(Of T), ICollection(Of T))
+- uid: Lett.Extensions.IDictionaryExtensions
+  name: IDictionaryExtensions
+  href: api/Lett.Extensions.IDictionaryExtensions.html
+  commentId: T:Lett.Extensions.IDictionaryExtensions
+  fullName: Lett.Extensions.IDictionaryExtensions
+  nameWithType: IDictionaryExtensions
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAll*
+  name: ContainsKeyAll
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAll_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsKeyAll
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAll
+  nameWithType: IDictionaryExtensions.ContainsKeyAll
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAll``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``0})
+  name: ContainsKeyAll<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TKey>)
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAll__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___0__
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsKeyAll``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``0})
+  name.vb: ContainsKeyAll(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TKey))
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAll<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IEnumerable<TKey>)
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsKeyAll(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IEnumerable(Of TKey))
+  nameWithType: IDictionaryExtensions.ContainsKeyAll<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TKey>)
+  nameWithType.vb: IDictionaryExtensions.ContainsKeyAll(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TKey))
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams*
+  name: ContainsKeyAllParams
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAllParams_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams
+  nameWithType: IDictionaryExtensions.ContainsKeyAllParams
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  name: ContainsKeyAllParams<TKey, TValue>(IDictionary<TKey, TValue>, TKey[])
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAllParams__2_System_Collections_Generic_IDictionary___0___1____0___
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  name.vb: ContainsKeyAllParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey())
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey[])
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsKeyAllParams(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey())
+  nameWithType: IDictionaryExtensions.ContainsKeyAllParams<TKey, TValue>(IDictionary<TKey, TValue>, TKey[])
+  nameWithType.vb: IDictionaryExtensions.ContainsKeyAllParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey())
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAny*
+  name: ContainsKeyAny
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAny_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsKeyAny
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAny
+  nameWithType: IDictionaryExtensions.ContainsKeyAny
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAny``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``0})
+  name: ContainsKeyAny<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TKey>)
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAny__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___0__
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsKeyAny``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``0})
+  name.vb: ContainsKeyAny(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TKey))
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAny<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IEnumerable<TKey>)
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsKeyAny(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IEnumerable(Of TKey))
+  nameWithType: IDictionaryExtensions.ContainsKeyAny<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TKey>)
+  nameWithType.vb: IDictionaryExtensions.ContainsKeyAny(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TKey))
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams*
+  name: ContainsKeyAnyParams
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAnyParams_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams
+  nameWithType: IDictionaryExtensions.ContainsKeyAnyParams
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  name: ContainsKeyAnyParams<TKey, TValue>(IDictionary<TKey, TValue>, TKey[])
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAnyParams__2_System_Collections_Generic_IDictionary___0___1____0___
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams``2(System.Collections.Generic.IDictionary{``0,``1},``0[])
+  name.vb: ContainsKeyAnyParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey())
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey[])
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsKeyAnyParams(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey())
+  nameWithType: IDictionaryExtensions.ContainsKeyAnyParams<TKey, TValue>(IDictionary<TKey, TValue>, TKey[])
+  nameWithType.vb: IDictionaryExtensions.ContainsKeyAnyParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey())
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValue*
+  name: ContainsValue
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValue_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsValue
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValue
+  nameWithType: IDictionaryExtensions.ContainsValue
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValue``2(System.Collections.Generic.IDictionary{``0,``1},``1)
+  name: ContainsValue<TKey, TValue>(IDictionary<TKey, TValue>, TValue)
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValue__2_System_Collections_Generic_IDictionary___0___1____1_
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsValue``2(System.Collections.Generic.IDictionary{``0,``1},``1)
+  name.vb: ContainsValue(Of TKey, TValue)(IDictionary(Of TKey, TValue), TValue)
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValue<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TValue)
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsValue(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TValue)
+  nameWithType: IDictionaryExtensions.ContainsValue<TKey, TValue>(IDictionary<TKey, TValue>, TValue)
+  nameWithType.vb: IDictionaryExtensions.ContainsValue(Of TKey, TValue)(IDictionary(Of TKey, TValue), TValue)
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAll*
+  name: ContainsValueAll
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAll_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsValueAll
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAll
+  nameWithType: IDictionaryExtensions.ContainsValueAll
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAll``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``1})
+  name: ContainsValueAll<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TValue>)
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAll__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___1__
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsValueAll``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``1})
+  name.vb: ContainsValueAll(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TValue))
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAll<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IEnumerable<TValue>)
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsValueAll(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IEnumerable(Of TValue))
+  nameWithType: IDictionaryExtensions.ContainsValueAll<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TValue>)
+  nameWithType.vb: IDictionaryExtensions.ContainsValueAll(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TValue))
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams*
+  name: ContainsValueAllParams
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAllParams_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams
+  nameWithType: IDictionaryExtensions.ContainsValueAllParams
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams``2(System.Collections.Generic.IDictionary{``0,``1},``1[])
+  name: ContainsValueAllParams<TKey, TValue>(IDictionary<TKey, TValue>, TValue[])
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAllParams__2_System_Collections_Generic_IDictionary___0___1____1___
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams``2(System.Collections.Generic.IDictionary{``0,``1},``1[])
+  name.vb: ContainsValueAllParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TValue())
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TValue[])
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsValueAllParams(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TValue())
+  nameWithType: IDictionaryExtensions.ContainsValueAllParams<TKey, TValue>(IDictionary<TKey, TValue>, TValue[])
+  nameWithType.vb: IDictionaryExtensions.ContainsValueAllParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TValue())
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAny*
+  name: ContainsValueAny
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAny_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsValueAny
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAny
+  nameWithType: IDictionaryExtensions.ContainsValueAny
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAny``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``1})
+  name: ContainsValueAny<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TValue>)
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAny__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___1__
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsValueAny``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{``1})
+  name.vb: ContainsValueAny(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TValue))
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAny<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IEnumerable<TValue>)
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsValueAny(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IEnumerable(Of TValue))
+  nameWithType: IDictionaryExtensions.ContainsValueAny<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<TValue>)
+  nameWithType.vb: IDictionaryExtensions.ContainsValueAny(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of TValue))
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams*
+  name: ContainsValueAnyParams
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAnyParams_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams
+  nameWithType: IDictionaryExtensions.ContainsValueAnyParams
+- uid: Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams``2(System.Collections.Generic.IDictionary{``0,``1},``1[])
+  name: ContainsValueAnyParams<TKey, TValue>(IDictionary<TKey, TValue>, TValue[])
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsValueAnyParams__2_System_Collections_Generic_IDictionary___0___1____1___
+  commentId: M:Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams``2(System.Collections.Generic.IDictionary{``0,``1},``1[])
+  name.vb: ContainsValueAnyParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TValue())
+  fullName: Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TValue[])
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TValue())
+  nameWithType: IDictionaryExtensions.ContainsValueAnyParams<TKey, TValue>(IDictionary<TKey, TValue>, TValue[])
+  nameWithType.vb: IDictionaryExtensions.ContainsValueAnyParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TValue())
+- uid: Lett.Extensions.IEnumerableExtensions
+  name: IEnumerableExtensions
+  href: api/Lett.Extensions.IEnumerableExtensions.html
+  commentId: T:Lett.Extensions.IEnumerableExtensions
+  fullName: Lett.Extensions.IEnumerableExtensions
+  nameWithType: IEnumerableExtensions
+- uid: Lett.Extensions.IEnumerableExtensions.ContainsAll*
+  name: ContainsAll
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_ContainsAll_
+  commentId: Overload:Lett.Extensions.IEnumerableExtensions.ContainsAll
+  isSpec: "True"
+  fullName: Lett.Extensions.IEnumerableExtensions.ContainsAll
+  nameWithType: IEnumerableExtensions.ContainsAll
+- uid: Lett.Extensions.IEnumerableExtensions.ContainsAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  name: ContainsAll<T>(IEnumerable<T>, IEnumerable<T>)
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_ContainsAll__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__
+  commentId: M:Lett.Extensions.IEnumerableExtensions.ContainsAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  name.vb: ContainsAll(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+  fullName: Lett.Extensions.IEnumerableExtensions.ContainsAll<T>(System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Lett.Extensions.IEnumerableExtensions.ContainsAll(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: IEnumerableExtensions.ContainsAll<T>(IEnumerable<T>, IEnumerable<T>)
+  nameWithType.vb: IEnumerableExtensions.ContainsAll(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+- uid: Lett.Extensions.IEnumerableExtensions.ContainsAny*
+  name: ContainsAny
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_ContainsAny_
+  commentId: Overload:Lett.Extensions.IEnumerableExtensions.ContainsAny
+  isSpec: "True"
+  fullName: Lett.Extensions.IEnumerableExtensions.ContainsAny
+  nameWithType: IEnumerableExtensions.ContainsAny
+- uid: Lett.Extensions.IEnumerableExtensions.ContainsAny``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  name: ContainsAny<T>(IEnumerable<T>, IEnumerable<T>)
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_ContainsAny__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__
+  commentId: M:Lett.Extensions.IEnumerableExtensions.ContainsAny``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  name.vb: ContainsAny(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+  fullName: Lett.Extensions.IEnumerableExtensions.ContainsAny<T>(System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Lett.Extensions.IEnumerableExtensions.ContainsAny(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: IEnumerableExtensions.ContainsAny<T>(IEnumerable<T>, IEnumerable<T>)
+  nameWithType.vb: IEnumerableExtensions.ContainsAny(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+- uid: Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty*
+  name: IsNullOrEmpty
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_IsNullOrEmpty_
+  commentId: Overload:Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty
+  isSpec: "True"
+  fullName: Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty
+  nameWithType: IEnumerableExtensions.IsNullOrEmpty
+- uid: Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  name: IsNullOrEmpty<T>(IEnumerable<T>)
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_IsNullOrEmpty__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: IsNullOrEmpty(Of T)(IEnumerable(Of T))
+  fullName: Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: IEnumerableExtensions.IsNullOrEmpty<T>(IEnumerable<T>)
+  nameWithType.vb: IEnumerableExtensions.IsNullOrEmpty(Of T)(IEnumerable(Of T))
+- uid: Lett.Extensions.IntExtensions
+  name: IntExtensions
+  href: api/Lett.Extensions.IntExtensions.html
+  commentId: T:Lett.Extensions.IntExtensions
+  fullName: Lett.Extensions.IntExtensions
+  nameWithType: IntExtensions
+- uid: Lett.Extensions.IntExtensions.GetEnumDescription(System.Int32,System.Type)
+  name: GetEnumDescription(Int32, Type)
+  href: api/Lett.Extensions.IntExtensions.html#Lett_Extensions_IntExtensions_GetEnumDescription_System_Int32_System_Type_
+  commentId: M:Lett.Extensions.IntExtensions.GetEnumDescription(System.Int32,System.Type)
+  fullName: Lett.Extensions.IntExtensions.GetEnumDescription(System.Int32, System.Type)
+  nameWithType: IntExtensions.GetEnumDescription(Int32, Type)
+- uid: Lett.Extensions.IntExtensions.GetEnumDescription*
+  name: GetEnumDescription
+  href: api/Lett.Extensions.IntExtensions.html#Lett_Extensions_IntExtensions_GetEnumDescription_
+  commentId: Overload:Lett.Extensions.IntExtensions.GetEnumDescription
+  isSpec: "True"
+  fullName: Lett.Extensions.IntExtensions.GetEnumDescription
+  nameWithType: IntExtensions.GetEnumDescription
+- uid: Lett.Extensions.IntExtensions.IsEven(System.Int32)
+  name: IsEven(Int32)
+  href: api/Lett.Extensions.IntExtensions.html#Lett_Extensions_IntExtensions_IsEven_System_Int32_
+  commentId: M:Lett.Extensions.IntExtensions.IsEven(System.Int32)
+  fullName: Lett.Extensions.IntExtensions.IsEven(System.Int32)
+  nameWithType: IntExtensions.IsEven(Int32)
+- uid: Lett.Extensions.IntExtensions.IsEven*
+  name: IsEven
+  href: api/Lett.Extensions.IntExtensions.html#Lett_Extensions_IntExtensions_IsEven_
+  commentId: Overload:Lett.Extensions.IntExtensions.IsEven
+  isSpec: "True"
+  fullName: Lett.Extensions.IntExtensions.IsEven
+  nameWithType: IntExtensions.IsEven
+- uid: Lett.Extensions.IntExtensions.IsInRange(System.Int32,System.Int32,System.Int32)
+  name: IsInRange(Int32, Int32, Int32)
+  href: api/Lett.Extensions.IntExtensions.html#Lett_Extensions_IntExtensions_IsInRange_System_Int32_System_Int32_System_Int32_
+  commentId: M:Lett.Extensions.IntExtensions.IsInRange(System.Int32,System.Int32,System.Int32)
+  fullName: Lett.Extensions.IntExtensions.IsInRange(System.Int32, System.Int32, System.Int32)
+  nameWithType: IntExtensions.IsInRange(Int32, Int32, Int32)
+- uid: Lett.Extensions.IntExtensions.IsInRange*
+  name: IsInRange
+  href: api/Lett.Extensions.IntExtensions.html#Lett_Extensions_IntExtensions_IsInRange_
+  commentId: Overload:Lett.Extensions.IntExtensions.IsInRange
+  isSpec: "True"
+  fullName: Lett.Extensions.IntExtensions.IsInRange
+  nameWithType: IntExtensions.IsInRange
+- uid: Lett.Extensions.IntExtensions.IsOdd(System.Int32)
+  name: IsOdd(Int32)
+  href: api/Lett.Extensions.IntExtensions.html#Lett_Extensions_IntExtensions_IsOdd_System_Int32_
+  commentId: M:Lett.Extensions.IntExtensions.IsOdd(System.Int32)
+  fullName: Lett.Extensions.IntExtensions.IsOdd(System.Int32)
+  nameWithType: IntExtensions.IsOdd(Int32)
+- uid: Lett.Extensions.IntExtensions.IsOdd*
+  name: IsOdd
+  href: api/Lett.Extensions.IntExtensions.html#Lett_Extensions_IntExtensions_IsOdd_
+  commentId: Overload:Lett.Extensions.IntExtensions.IsOdd
+  isSpec: "True"
+  fullName: Lett.Extensions.IntExtensions.IsOdd
+  nameWithType: IntExtensions.IsOdd
+- uid: Lett.Extensions.IntExtensions.Times(System.Int32,System.Action)
+  name: Times(Int32, Action)
+  href: api/Lett.Extensions.IntExtensions.html#Lett_Extensions_IntExtensions_Times_System_Int32_System_Action_
+  commentId: M:Lett.Extensions.IntExtensions.Times(System.Int32,System.Action)
+  fullName: Lett.Extensions.IntExtensions.Times(System.Int32, System.Action)
+  nameWithType: IntExtensions.Times(Int32, Action)
+- uid: Lett.Extensions.IntExtensions.Times(System.Int32,System.Action{System.Int32})
+  name: Times(Int32, Action<Int32>)
+  href: api/Lett.Extensions.IntExtensions.html#Lett_Extensions_IntExtensions_Times_System_Int32_System_Action_System_Int32__
+  commentId: M:Lett.Extensions.IntExtensions.Times(System.Int32,System.Action{System.Int32})
+  name.vb: Times(Int32, Action(Of Int32))
+  fullName: Lett.Extensions.IntExtensions.Times(System.Int32, System.Action<System.Int32>)
+  fullName.vb: Lett.Extensions.IntExtensions.Times(System.Int32, System.Action(Of System.Int32))
+  nameWithType: IntExtensions.Times(Int32, Action<Int32>)
+  nameWithType.vb: IntExtensions.Times(Int32, Action(Of Int32))
+- uid: Lett.Extensions.IntExtensions.Times*
+  name: Times
+  href: api/Lett.Extensions.IntExtensions.html#Lett_Extensions_IntExtensions_Times_
+  commentId: Overload:Lett.Extensions.IntExtensions.Times
+  isSpec: "True"
+  fullName: Lett.Extensions.IntExtensions.Times
+  nameWithType: IntExtensions.Times
+- uid: Lett.Extensions.LongExtensions
+  name: LongExtensions
+  href: api/Lett.Extensions.LongExtensions.html
+  commentId: T:Lett.Extensions.LongExtensions
+  fullName: Lett.Extensions.LongExtensions
+  nameWithType: LongExtensions
+- uid: Lett.Extensions.LongExtensions.IsEven(System.Int64)
+  name: IsEven(Int64)
+  href: api/Lett.Extensions.LongExtensions.html#Lett_Extensions_LongExtensions_IsEven_System_Int64_
+  commentId: M:Lett.Extensions.LongExtensions.IsEven(System.Int64)
+  fullName: Lett.Extensions.LongExtensions.IsEven(System.Int64)
+  nameWithType: LongExtensions.IsEven(Int64)
+- uid: Lett.Extensions.LongExtensions.IsEven*
+  name: IsEven
+  href: api/Lett.Extensions.LongExtensions.html#Lett_Extensions_LongExtensions_IsEven_
+  commentId: Overload:Lett.Extensions.LongExtensions.IsEven
+  isSpec: "True"
+  fullName: Lett.Extensions.LongExtensions.IsEven
+  nameWithType: LongExtensions.IsEven
+- uid: Lett.Extensions.LongExtensions.IsInRange(System.Int64,System.Int64,System.Int64)
+  name: IsInRange(Int64, Int64, Int64)
+  href: api/Lett.Extensions.LongExtensions.html#Lett_Extensions_LongExtensions_IsInRange_System_Int64_System_Int64_System_Int64_
+  commentId: M:Lett.Extensions.LongExtensions.IsInRange(System.Int64,System.Int64,System.Int64)
+  fullName: Lett.Extensions.LongExtensions.IsInRange(System.Int64, System.Int64, System.Int64)
+  nameWithType: LongExtensions.IsInRange(Int64, Int64, Int64)
+- uid: Lett.Extensions.LongExtensions.IsInRange*
+  name: IsInRange
+  href: api/Lett.Extensions.LongExtensions.html#Lett_Extensions_LongExtensions_IsInRange_
+  commentId: Overload:Lett.Extensions.LongExtensions.IsInRange
+  isSpec: "True"
+  fullName: Lett.Extensions.LongExtensions.IsInRange
+  nameWithType: LongExtensions.IsInRange
+- uid: Lett.Extensions.LongExtensions.IsOdd(System.Int64)
+  name: IsOdd(Int64)
+  href: api/Lett.Extensions.LongExtensions.html#Lett_Extensions_LongExtensions_IsOdd_System_Int64_
+  commentId: M:Lett.Extensions.LongExtensions.IsOdd(System.Int64)
+  fullName: Lett.Extensions.LongExtensions.IsOdd(System.Int64)
+  nameWithType: LongExtensions.IsOdd(Int64)
+- uid: Lett.Extensions.LongExtensions.IsOdd*
+  name: IsOdd
+  href: api/Lett.Extensions.LongExtensions.html#Lett_Extensions_LongExtensions_IsOdd_
+  commentId: Overload:Lett.Extensions.LongExtensions.IsOdd
+  isSpec: "True"
+  fullName: Lett.Extensions.LongExtensions.IsOdd
+  nameWithType: LongExtensions.IsOdd
+- uid: Lett.Extensions.LongExtensions.Times(System.Int64,System.Action)
+  name: Times(Int64, Action)
+  href: api/Lett.Extensions.LongExtensions.html#Lett_Extensions_LongExtensions_Times_System_Int64_System_Action_
+  commentId: M:Lett.Extensions.LongExtensions.Times(System.Int64,System.Action)
+  fullName: Lett.Extensions.LongExtensions.Times(System.Int64, System.Action)
+  nameWithType: LongExtensions.Times(Int64, Action)
+- uid: Lett.Extensions.LongExtensions.Times(System.Int64,System.Action{System.Int64})
+  name: Times(Int64, Action<Int64>)
+  href: api/Lett.Extensions.LongExtensions.html#Lett_Extensions_LongExtensions_Times_System_Int64_System_Action_System_Int64__
+  commentId: M:Lett.Extensions.LongExtensions.Times(System.Int64,System.Action{System.Int64})
+  name.vb: Times(Int64, Action(Of Int64))
+  fullName: Lett.Extensions.LongExtensions.Times(System.Int64, System.Action<System.Int64>)
+  fullName.vb: Lett.Extensions.LongExtensions.Times(System.Int64, System.Action(Of System.Int64))
+  nameWithType: LongExtensions.Times(Int64, Action<Int64>)
+  nameWithType.vb: LongExtensions.Times(Int64, Action(Of Int64))
+- uid: Lett.Extensions.LongExtensions.Times*
+  name: Times
+  href: api/Lett.Extensions.LongExtensions.html#Lett_Extensions_LongExtensions_Times_
+  commentId: Overload:Lett.Extensions.LongExtensions.Times
+  isSpec: "True"
+  fullName: Lett.Extensions.LongExtensions.Times
+  nameWithType: LongExtensions.Times
+- uid: Lett.Extensions.ObjectExtensions
+  name: ObjectExtensions
+  href: api/Lett.Extensions.ObjectExtensions.html
+  commentId: T:Lett.Extensions.ObjectExtensions
+  fullName: Lett.Extensions.ObjectExtensions
+  nameWithType: ObjectExtensions
+- uid: Lett.Extensions.ObjectExtensions.As*
+  name: As
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_As_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.As
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.As
+  nameWithType: ObjectExtensions.As
+- uid: Lett.Extensions.ObjectExtensions.As``1(System.Object)
+  name: As<T>(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_As__1_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.As``1(System.Object)
+  name.vb: As(Of T)(Object)
+  fullName: Lett.Extensions.ObjectExtensions.As<T>(System.Object)
+  fullName.vb: Lett.Extensions.ObjectExtensions.As(Of T)(System.Object)
+  nameWithType: ObjectExtensions.As<T>(Object)
+  nameWithType.vb: ObjectExtensions.As(Of T)(Object)
+- uid: Lett.Extensions.ObjectExtensions.As``1(System.Object,``0)
+  name: As<T>(Object, T)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_As__1_System_Object___0_
+  commentId: M:Lett.Extensions.ObjectExtensions.As``1(System.Object,``0)
+  name.vb: As(Of T)(Object, T)
+  fullName: Lett.Extensions.ObjectExtensions.As<T>(System.Object, T)
+  fullName.vb: Lett.Extensions.ObjectExtensions.As(Of T)(System.Object, T)
+  nameWithType: ObjectExtensions.As<T>(Object, T)
+  nameWithType.vb: ObjectExtensions.As(Of T)(Object, T)
+- uid: Lett.Extensions.ObjectExtensions.As``1(System.Object,System.Func{``0})
+  name: As<T>(Object, Func<T>)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_As__1_System_Object_System_Func___0__
+  commentId: M:Lett.Extensions.ObjectExtensions.As``1(System.Object,System.Func{``0})
+  name.vb: As(Of T)(Object, Func(Of T))
+  fullName: Lett.Extensions.ObjectExtensions.As<T>(System.Object, System.Func<T>)
+  fullName.vb: Lett.Extensions.ObjectExtensions.As(Of T)(System.Object, System.Func(Of T))
+  nameWithType: ObjectExtensions.As<T>(Object, Func<T>)
+  nameWithType.vb: ObjectExtensions.As(Of T)(Object, Func(Of T))
+- uid: Lett.Extensions.ObjectExtensions.DeepClone*
+  name: DeepClone
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_DeepClone_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.DeepClone
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.DeepClone
+  nameWithType: ObjectExtensions.DeepClone
+- uid: Lett.Extensions.ObjectExtensions.DeepClone``1(``0)
+  name: DeepClone<T>(T)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_DeepClone__1___0_
+  commentId: M:Lett.Extensions.ObjectExtensions.DeepClone``1(``0)
+  name.vb: DeepClone(Of T)(T)
+  fullName: Lett.Extensions.ObjectExtensions.DeepClone<T>(T)
+  fullName.vb: Lett.Extensions.ObjectExtensions.DeepClone(Of T)(T)
+  nameWithType: ObjectExtensions.DeepClone<T>(T)
+  nameWithType.vb: ObjectExtensions.DeepClone(Of T)(T)
+- uid: Lett.Extensions.ObjectExtensions.GetTypeName(System.Object)
+  name: GetTypeName(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_GetTypeName_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.GetTypeName(System.Object)
+  fullName: Lett.Extensions.ObjectExtensions.GetTypeName(System.Object)
+  nameWithType: ObjectExtensions.GetTypeName(Object)
+- uid: Lett.Extensions.ObjectExtensions.GetTypeName*
+  name: GetTypeName
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_GetTypeName_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.GetTypeName
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.GetTypeName
+  nameWithType: ObjectExtensions.GetTypeName
+- uid: Lett.Extensions.ObjectExtensions.In*
+  name: In
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_In_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.In
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.In
+  nameWithType: ObjectExtensions.In
+- uid: Lett.Extensions.ObjectExtensions.In``1(``0,System.Collections.Generic.IEnumerable{``0})
+  name: In<T>(T, IEnumerable<T>)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_In__1___0_System_Collections_Generic_IEnumerable___0__
+  commentId: M:Lett.Extensions.ObjectExtensions.In``1(``0,System.Collections.Generic.IEnumerable{``0})
+  name.vb: In(Of T)(T, IEnumerable(Of T))
+  fullName: Lett.Extensions.ObjectExtensions.In<T>(T, System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Lett.Extensions.ObjectExtensions.In(Of T)(T, System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: ObjectExtensions.In<T>(T, IEnumerable<T>)
+  nameWithType.vb: ObjectExtensions.In(Of T)(T, IEnumerable(Of T))
+- uid: Lett.Extensions.ObjectExtensions.In``1(``0,System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})
+  name: In<T>(T, IEnumerable<T>, IEqualityComparer<T>)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_In__1___0_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__
+  commentId: M:Lett.Extensions.ObjectExtensions.In``1(``0,System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})
+  name.vb: In(Of T)(T, IEnumerable(Of T), IEqualityComparer(Of T))
+  fullName: Lett.Extensions.ObjectExtensions.In<T>(T, System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEqualityComparer<T>)
+  fullName.vb: Lett.Extensions.ObjectExtensions.In(Of T)(T, System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEqualityComparer(Of T))
+  nameWithType: ObjectExtensions.In<T>(T, IEnumerable<T>, IEqualityComparer<T>)
+  nameWithType.vb: ObjectExtensions.In(Of T)(T, IEnumerable(Of T), IEqualityComparer(Of T))
+- uid: Lett.Extensions.ObjectExtensions.InParams*
+  name: InParams
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_InParams_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.InParams
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.InParams
+  nameWithType: ObjectExtensions.InParams
+- uid: Lett.Extensions.ObjectExtensions.InParams``1(``0,``0[])
+  name: InParams<T>(T, T[])
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_InParams__1___0___0___
+  commentId: M:Lett.Extensions.ObjectExtensions.InParams``1(``0,``0[])
+  name.vb: InParams(Of T)(T, T())
+  fullName: Lett.Extensions.ObjectExtensions.InParams<T>(T, T[])
+  fullName.vb: Lett.Extensions.ObjectExtensions.InParams(Of T)(T, T())
+  nameWithType: ObjectExtensions.InParams<T>(T, T[])
+  nameWithType.vb: ObjectExtensions.InParams(Of T)(T, T())
+- uid: Lett.Extensions.ObjectExtensions.InParams``1(``0,System.Collections.Generic.IEqualityComparer{``0},``0[])
+  name: InParams<T>(T, IEqualityComparer<T>, T[])
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_InParams__1___0_System_Collections_Generic_IEqualityComparer___0____0___
+  commentId: M:Lett.Extensions.ObjectExtensions.InParams``1(``0,System.Collections.Generic.IEqualityComparer{``0},``0[])
+  name.vb: InParams(Of T)(T, IEqualityComparer(Of T), T())
+  fullName: Lett.Extensions.ObjectExtensions.InParams<T>(T, System.Collections.Generic.IEqualityComparer<T>, T[])
+  fullName.vb: Lett.Extensions.ObjectExtensions.InParams(Of T)(T, System.Collections.Generic.IEqualityComparer(Of T), T())
+  nameWithType: ObjectExtensions.InParams<T>(T, IEqualityComparer<T>, T[])
+  nameWithType.vb: ObjectExtensions.InParams(Of T)(T, IEqualityComparer(Of T), T())
+- uid: Lett.Extensions.ObjectExtensions.IsArray(System.Object)
+  name: IsArray(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsArray_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.IsArray(System.Object)
+  fullName: Lett.Extensions.ObjectExtensions.IsArray(System.Object)
+  nameWithType: ObjectExtensions.IsArray(Object)
+- uid: Lett.Extensions.ObjectExtensions.IsArray*
+  name: IsArray
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsArray_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.IsArray
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.IsArray
+  nameWithType: ObjectExtensions.IsArray
+- uid: Lett.Extensions.ObjectExtensions.IsAssignableFrom(System.Object,System.Type)
+  name: IsAssignableFrom(Object, Type)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsAssignableFrom_System_Object_System_Type_
+  commentId: M:Lett.Extensions.ObjectExtensions.IsAssignableFrom(System.Object,System.Type)
+  fullName: Lett.Extensions.ObjectExtensions.IsAssignableFrom(System.Object, System.Type)
+  nameWithType: ObjectExtensions.IsAssignableFrom(Object, Type)
+- uid: Lett.Extensions.ObjectExtensions.IsAssignableFrom*
+  name: IsAssignableFrom
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsAssignableFrom_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.IsAssignableFrom
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.IsAssignableFrom
+  nameWithType: ObjectExtensions.IsAssignableFrom
+- uid: Lett.Extensions.ObjectExtensions.IsClass(System.Object)
+  name: IsClass(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsClass_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.IsClass(System.Object)
+  fullName: Lett.Extensions.ObjectExtensions.IsClass(System.Object)
+  nameWithType: ObjectExtensions.IsClass(Object)
+- uid: Lett.Extensions.ObjectExtensions.IsClass*
+  name: IsClass
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsClass_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.IsClass
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.IsClass
+  nameWithType: ObjectExtensions.IsClass
+- uid: Lett.Extensions.ObjectExtensions.IsDBNull(System.Object)
+  name: IsDBNull(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsDBNull_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.IsDBNull(System.Object)
+  fullName: Lett.Extensions.ObjectExtensions.IsDBNull(System.Object)
+  nameWithType: ObjectExtensions.IsDBNull(Object)
+- uid: Lett.Extensions.ObjectExtensions.IsDBNull*
+  name: IsDBNull
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsDBNull_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.IsDBNull
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.IsDBNull
+  nameWithType: ObjectExtensions.IsDBNull
+- uid: Lett.Extensions.ObjectExtensions.IsEnum(System.Object)
+  name: IsEnum(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsEnum_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.IsEnum(System.Object)
+  fullName: Lett.Extensions.ObjectExtensions.IsEnum(System.Object)
+  nameWithType: ObjectExtensions.IsEnum(Object)
+- uid: Lett.Extensions.ObjectExtensions.IsEnum*
+  name: IsEnum
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsEnum_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.IsEnum
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.IsEnum
+  nameWithType: ObjectExtensions.IsEnum
+- uid: Lett.Extensions.ObjectExtensions.IsSerializable(System.Object)
+  name: IsSerializable(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsSerializable_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.IsSerializable(System.Object)
+  fullName: Lett.Extensions.ObjectExtensions.IsSerializable(System.Object)
+  nameWithType: ObjectExtensions.IsSerializable(Object)
+- uid: Lett.Extensions.ObjectExtensions.IsSerializable*
+  name: IsSerializable
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsSerializable_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.IsSerializable
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.IsSerializable
+  nameWithType: ObjectExtensions.IsSerializable
+- uid: Lett.Extensions.ObjectExtensions.IsValueType(System.Object)
+  name: IsValueType(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsValueType_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.IsValueType(System.Object)
+  fullName: Lett.Extensions.ObjectExtensions.IsValueType(System.Object)
+  nameWithType: ObjectExtensions.IsValueType(Object)
+- uid: Lett.Extensions.ObjectExtensions.IsValueType*
+  name: IsValueType
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsValueType_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.IsValueType
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.IsValueType
+  nameWithType: ObjectExtensions.IsValueType
+- uid: Lett.Extensions.ObjectExtensions.Pipe*
+  name: Pipe
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_Pipe_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.Pipe
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.Pipe
+  nameWithType: ObjectExtensions.Pipe
+- uid: Lett.Extensions.ObjectExtensions.Pipe``1(``0,System.Action{``0})
+  name: Pipe<T>(T, Action<T>)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_Pipe__1___0_System_Action___0__
+  commentId: M:Lett.Extensions.ObjectExtensions.Pipe``1(``0,System.Action{``0})
+  name.vb: Pipe(Of T)(T, Action(Of T))
+  fullName: Lett.Extensions.ObjectExtensions.Pipe<T>(T, System.Action<T>)
+  fullName.vb: Lett.Extensions.ObjectExtensions.Pipe(Of T)(T, System.Action(Of T))
+  nameWithType: ObjectExtensions.Pipe<T>(T, Action<T>)
+  nameWithType.vb: ObjectExtensions.Pipe(Of T)(T, Action(Of T))
+- uid: Lett.Extensions.ObjectExtensions.Pipe``2(``0,System.Func{``0,``1})
+  name: Pipe<TSource, TResult>(TSource, Func<TSource, TResult>)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_Pipe__2___0_System_Func___0___1__
+  commentId: M:Lett.Extensions.ObjectExtensions.Pipe``2(``0,System.Func{``0,``1})
+  name.vb: Pipe(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+  fullName: Lett.Extensions.ObjectExtensions.Pipe<TSource, TResult>(TSource, System.Func<TSource, TResult>)
+  fullName.vb: Lett.Extensions.ObjectExtensions.Pipe(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
+  nameWithType: ObjectExtensions.Pipe<TSource, TResult>(TSource, Func<TSource, TResult>)
+  nameWithType.vb: ObjectExtensions.Pipe(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+- uid: Lett.Extensions.ObjectExtensions.To*
+  name: To
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_To_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.To
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.To
+  nameWithType: ObjectExtensions.To
+- uid: Lett.Extensions.ObjectExtensions.To``1(System.Object)
+  name: To<T>(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_To__1_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.To``1(System.Object)
+  name.vb: To(Of T)(Object)
+  fullName: Lett.Extensions.ObjectExtensions.To<T>(System.Object)
+  fullName.vb: Lett.Extensions.ObjectExtensions.To(Of T)(System.Object)
+  nameWithType: ObjectExtensions.To<T>(Object)
+  nameWithType.vb: ObjectExtensions.To(Of T)(Object)
+- uid: Lett.Extensions.ObjectExtensions.To``1(System.Object,``0)
+  name: To<T>(Object, T)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_To__1_System_Object___0_
+  commentId: M:Lett.Extensions.ObjectExtensions.To``1(System.Object,``0)
+  name.vb: To(Of T)(Object, T)
+  fullName: Lett.Extensions.ObjectExtensions.To<T>(System.Object, T)
+  fullName.vb: Lett.Extensions.ObjectExtensions.To(Of T)(System.Object, T)
+  nameWithType: ObjectExtensions.To<T>(Object, T)
+  nameWithType.vb: ObjectExtensions.To(Of T)(Object, T)
+- uid: Lett.Extensions.ObjectExtensions.To``1(System.Object,System.Func{``0})
+  name: To<T>(Object, Func<T>)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_To__1_System_Object_System_Func___0__
+  commentId: M:Lett.Extensions.ObjectExtensions.To``1(System.Object,System.Func{``0})
+  name.vb: To(Of T)(Object, Func(Of T))
+  fullName: Lett.Extensions.ObjectExtensions.To<T>(System.Object, System.Func<T>)
+  fullName.vb: Lett.Extensions.ObjectExtensions.To(Of T)(System.Object, System.Func(Of T))
+  nameWithType: ObjectExtensions.To<T>(Object, Func<T>)
+  nameWithType.vb: ObjectExtensions.To(Of T)(Object, Func(Of T))
+- uid: Lett.Extensions.StringExtensions
+  name: StringExtensions
+  href: api/Lett.Extensions.StringExtensions.html
+  commentId: T:Lett.Extensions.StringExtensions
+  fullName: Lett.Extensions.StringExtensions
+  nameWithType: StringExtensions
+- uid: Lett.Extensions.StringExtensions.Base64Decode(System.String)
+  name: Base64Decode(String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_Base64Decode_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.Base64Decode(System.String)
+  fullName: Lett.Extensions.StringExtensions.Base64Decode(System.String)
+  nameWithType: StringExtensions.Base64Decode(String)
+- uid: Lett.Extensions.StringExtensions.Base64Decode*
+  name: Base64Decode
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_Base64Decode_
+  commentId: Overload:Lett.Extensions.StringExtensions.Base64Decode
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.Base64Decode
+  nameWithType: StringExtensions.Base64Decode
+- uid: Lett.Extensions.StringExtensions.Base64Encode(System.String)
+  name: Base64Encode(String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_Base64Encode_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.Base64Encode(System.String)
+  fullName: Lett.Extensions.StringExtensions.Base64Encode(System.String)
+  nameWithType: StringExtensions.Base64Encode(String)
+- uid: Lett.Extensions.StringExtensions.Base64Encode*
+  name: Base64Encode
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_Base64Encode_
+  commentId: Overload:Lett.Extensions.StringExtensions.Base64Encode
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.Base64Encode
+  nameWithType: StringExtensions.Base64Encode
+- uid: Lett.Extensions.StringExtensions.ContainsAll(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name: ContainsAll(String, IEnumerable<String>)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ContainsAll_System_String_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Lett.Extensions.StringExtensions.ContainsAll(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: ContainsAll(String, IEnumerable(Of String))
+  fullName: Lett.Extensions.StringExtensions.ContainsAll(System.String, System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Lett.Extensions.StringExtensions.ContainsAll(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: StringExtensions.ContainsAll(String, IEnumerable<String>)
+  nameWithType.vb: StringExtensions.ContainsAll(String, IEnumerable(Of String))
+- uid: Lett.Extensions.StringExtensions.ContainsAll(System.String,System.Collections.Generic.IEnumerable{System.String},System.StringComparison)
+  name: ContainsAll(String, IEnumerable<String>, StringComparison)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ContainsAll_System_String_System_Collections_Generic_IEnumerable_System_String__System_StringComparison_
+  commentId: M:Lett.Extensions.StringExtensions.ContainsAll(System.String,System.Collections.Generic.IEnumerable{System.String},System.StringComparison)
+  name.vb: ContainsAll(String, IEnumerable(Of String), StringComparison)
+  fullName: Lett.Extensions.StringExtensions.ContainsAll(System.String, System.Collections.Generic.IEnumerable<System.String>, System.StringComparison)
+  fullName.vb: Lett.Extensions.StringExtensions.ContainsAll(System.String, System.Collections.Generic.IEnumerable(Of System.String), System.StringComparison)
+  nameWithType: StringExtensions.ContainsAll(String, IEnumerable<String>, StringComparison)
+  nameWithType.vb: StringExtensions.ContainsAll(String, IEnumerable(Of String), StringComparison)
+- uid: Lett.Extensions.StringExtensions.ContainsAll*
+  name: ContainsAll
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ContainsAll_
+  commentId: Overload:Lett.Extensions.StringExtensions.ContainsAll
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.ContainsAll
+  nameWithType: StringExtensions.ContainsAll
+- uid: Lett.Extensions.StringExtensions.ContainsAny(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name: ContainsAny(String, IEnumerable<String>)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ContainsAny_System_String_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Lett.Extensions.StringExtensions.ContainsAny(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: ContainsAny(String, IEnumerable(Of String))
+  fullName: Lett.Extensions.StringExtensions.ContainsAny(System.String, System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Lett.Extensions.StringExtensions.ContainsAny(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: StringExtensions.ContainsAny(String, IEnumerable<String>)
+  nameWithType.vb: StringExtensions.ContainsAny(String, IEnumerable(Of String))
+- uid: Lett.Extensions.StringExtensions.ContainsAny(System.String,System.Collections.Generic.IEnumerable{System.String},System.StringComparison)
+  name: ContainsAny(String, IEnumerable<String>, StringComparison)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ContainsAny_System_String_System_Collections_Generic_IEnumerable_System_String__System_StringComparison_
+  commentId: M:Lett.Extensions.StringExtensions.ContainsAny(System.String,System.Collections.Generic.IEnumerable{System.String},System.StringComparison)
+  name.vb: ContainsAny(String, IEnumerable(Of String), StringComparison)
+  fullName: Lett.Extensions.StringExtensions.ContainsAny(System.String, System.Collections.Generic.IEnumerable<System.String>, System.StringComparison)
+  fullName.vb: Lett.Extensions.StringExtensions.ContainsAny(System.String, System.Collections.Generic.IEnumerable(Of System.String), System.StringComparison)
+  nameWithType: StringExtensions.ContainsAny(String, IEnumerable<String>, StringComparison)
+  nameWithType.vb: StringExtensions.ContainsAny(String, IEnumerable(Of String), StringComparison)
+- uid: Lett.Extensions.StringExtensions.ContainsAny*
+  name: ContainsAny
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ContainsAny_
+  commentId: Overload:Lett.Extensions.StringExtensions.ContainsAny
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.ContainsAny
+  nameWithType: StringExtensions.ContainsAny
+- uid: Lett.Extensions.StringExtensions.Format(System.String,System.Object[])
+  name: Format(String, Object[])
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_Format_System_String_System_Object___
+  commentId: M:Lett.Extensions.StringExtensions.Format(System.String,System.Object[])
+  name.vb: Format(String, Object())
+  fullName: Lett.Extensions.StringExtensions.Format(System.String, System.Object[])
+  fullName.vb: Lett.Extensions.StringExtensions.Format(System.String, System.Object())
+  nameWithType: StringExtensions.Format(String, Object[])
+  nameWithType.vb: StringExtensions.Format(String, Object())
+- uid: Lett.Extensions.StringExtensions.Format*
+  name: Format
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_Format_
+  commentId: Overload:Lett.Extensions.StringExtensions.Format
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.Format
+  nameWithType: StringExtensions.Format
+- uid: Lett.Extensions.StringExtensions.IgnoreCaseEquals(System.String,System.String)
+  name: IgnoreCaseEquals(String, String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IgnoreCaseEquals_System_String_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.IgnoreCaseEquals(System.String,System.String)
+  fullName: Lett.Extensions.StringExtensions.IgnoreCaseEquals(System.String, System.String)
+  nameWithType: StringExtensions.IgnoreCaseEquals(String, String)
+- uid: Lett.Extensions.StringExtensions.IgnoreCaseEquals*
+  name: IgnoreCaseEquals
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IgnoreCaseEquals_
+  commentId: Overload:Lett.Extensions.StringExtensions.IgnoreCaseEquals
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.IgnoreCaseEquals
+  nameWithType: StringExtensions.IgnoreCaseEquals
+- uid: Lett.Extensions.StringExtensions.IsEmail(System.String)
+  name: IsEmail(String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsEmail_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.IsEmail(System.String)
+  fullName: Lett.Extensions.StringExtensions.IsEmail(System.String)
+  nameWithType: StringExtensions.IsEmail(String)
+- uid: Lett.Extensions.StringExtensions.IsEmail*
+  name: IsEmail
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsEmail_
+  commentId: Overload:Lett.Extensions.StringExtensions.IsEmail
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.IsEmail
+  nameWithType: StringExtensions.IsEmail
+- uid: Lett.Extensions.StringExtensions.IsLike(System.String,System.String)
+  name: IsLike(String, String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsLike_System_String_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.IsLike(System.String,System.String)
+  fullName: Lett.Extensions.StringExtensions.IsLike(System.String, System.String)
+  nameWithType: StringExtensions.IsLike(String, String)
+- uid: Lett.Extensions.StringExtensions.IsLike*
+  name: IsLike
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsLike_
+  commentId: Overload:Lett.Extensions.StringExtensions.IsLike
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.IsLike
+  nameWithType: StringExtensions.IsLike
+- uid: Lett.Extensions.StringExtensions.IsLower(System.String)
+  name: IsLower(String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsLower_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.IsLower(System.String)
+  fullName: Lett.Extensions.StringExtensions.IsLower(System.String)
+  nameWithType: StringExtensions.IsLower(String)
+- uid: Lett.Extensions.StringExtensions.IsLower*
+  name: IsLower
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsLower_
+  commentId: Overload:Lett.Extensions.StringExtensions.IsLower
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.IsLower
+  nameWithType: StringExtensions.IsLower
+- uid: Lett.Extensions.StringExtensions.IsNullOrEmpty(System.String)
+  name: IsNullOrEmpty(String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsNullOrEmpty_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.IsNullOrEmpty(System.String)
+  fullName: Lett.Extensions.StringExtensions.IsNullOrEmpty(System.String)
+  nameWithType: StringExtensions.IsNullOrEmpty(String)
+- uid: Lett.Extensions.StringExtensions.IsNullOrEmpty*
+  name: IsNullOrEmpty
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsNullOrEmpty_
+  commentId: Overload:Lett.Extensions.StringExtensions.IsNullOrEmpty
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.IsNullOrEmpty
+  nameWithType: StringExtensions.IsNullOrEmpty
+- uid: Lett.Extensions.StringExtensions.IsNullOrWhiteSpace(System.String)
+  name: IsNullOrWhiteSpace(String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsNullOrWhiteSpace_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.IsNullOrWhiteSpace(System.String)
+  fullName: Lett.Extensions.StringExtensions.IsNullOrWhiteSpace(System.String)
+  nameWithType: StringExtensions.IsNullOrWhiteSpace(String)
+- uid: Lett.Extensions.StringExtensions.IsNullOrWhiteSpace*
+  name: IsNullOrWhiteSpace
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsNullOrWhiteSpace_
+  commentId: Overload:Lett.Extensions.StringExtensions.IsNullOrWhiteSpace
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.IsNullOrWhiteSpace
+  nameWithType: StringExtensions.IsNullOrWhiteSpace
+- uid: Lett.Extensions.StringExtensions.IsUpper(System.String)
+  name: IsUpper(String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsUpper_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.IsUpper(System.String)
+  fullName: Lett.Extensions.StringExtensions.IsUpper(System.String)
+  nameWithType: StringExtensions.IsUpper(String)
+- uid: Lett.Extensions.StringExtensions.IsUpper*
+  name: IsUpper
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsUpper_
+  commentId: Overload:Lett.Extensions.StringExtensions.IsUpper
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.IsUpper
+  nameWithType: StringExtensions.IsUpper
+- uid: Lett.Extensions.StringExtensions.IsUrl(System.String)
+  name: IsUrl(String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsUrl_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.IsUrl(System.String)
+  fullName: Lett.Extensions.StringExtensions.IsUrl(System.String)
+  nameWithType: StringExtensions.IsUrl(String)
+- uid: Lett.Extensions.StringExtensions.IsUrl*
+  name: IsUrl
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsUrl_
+  commentId: Overload:Lett.Extensions.StringExtensions.IsUrl
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.IsUrl
+  nameWithType: StringExtensions.IsUrl
+- uid: Lett.Extensions.StringExtensions.Left(System.String,System.Int32)
+  name: Left(String, Int32)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_Left_System_String_System_Int32_
+  commentId: M:Lett.Extensions.StringExtensions.Left(System.String,System.Int32)
+  fullName: Lett.Extensions.StringExtensions.Left(System.String, System.Int32)
+  nameWithType: StringExtensions.Left(String, Int32)
+- uid: Lett.Extensions.StringExtensions.Left*
+  name: Left
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_Left_
+  commentId: Overload:Lett.Extensions.StringExtensions.Left
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.Left
+  nameWithType: StringExtensions.Left
+- uid: Lett.Extensions.StringExtensions.RegexIsMatch(System.String,System.String)
+  name: RegexIsMatch(String, String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexIsMatch_System_String_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.RegexIsMatch(System.String,System.String)
+  fullName: Lett.Extensions.StringExtensions.RegexIsMatch(System.String, System.String)
+  nameWithType: StringExtensions.RegexIsMatch(String, String)
+- uid: Lett.Extensions.StringExtensions.RegexIsMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)
+  name: RegexIsMatch(String, String, RegexOptions)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexIsMatch_System_String_System_String_System_Text_RegularExpressions_RegexOptions_
+  commentId: M:Lett.Extensions.StringExtensions.RegexIsMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)
+  fullName: Lett.Extensions.StringExtensions.RegexIsMatch(System.String, System.String, System.Text.RegularExpressions.RegexOptions)
+  nameWithType: StringExtensions.RegexIsMatch(String, String, RegexOptions)
+- uid: Lett.Extensions.StringExtensions.RegexIsMatch*
+  name: RegexIsMatch
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexIsMatch_
+  commentId: Overload:Lett.Extensions.StringExtensions.RegexIsMatch
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.RegexIsMatch
+  nameWithType: StringExtensions.RegexIsMatch
+- uid: Lett.Extensions.StringExtensions.RegexMatch(System.String,System.String)
+  name: RegexMatch(String, String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexMatch_System_String_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.RegexMatch(System.String,System.String)
+  fullName: Lett.Extensions.StringExtensions.RegexMatch(System.String, System.String)
+  nameWithType: StringExtensions.RegexMatch(String, String)
+- uid: Lett.Extensions.StringExtensions.RegexMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)
+  name: RegexMatch(String, String, RegexOptions)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexMatch_System_String_System_String_System_Text_RegularExpressions_RegexOptions_
+  commentId: M:Lett.Extensions.StringExtensions.RegexMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)
+  fullName: Lett.Extensions.StringExtensions.RegexMatch(System.String, System.String, System.Text.RegularExpressions.RegexOptions)
+  nameWithType: StringExtensions.RegexMatch(String, String, RegexOptions)
+- uid: Lett.Extensions.StringExtensions.RegexMatch*
+  name: RegexMatch
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexMatch_
+  commentId: Overload:Lett.Extensions.StringExtensions.RegexMatch
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.RegexMatch
+  nameWithType: StringExtensions.RegexMatch
+- uid: Lett.Extensions.StringExtensions.RegexMatches(System.String,System.String)
+  name: RegexMatches(String, String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexMatches_System_String_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.RegexMatches(System.String,System.String)
+  fullName: Lett.Extensions.StringExtensions.RegexMatches(System.String, System.String)
+  nameWithType: StringExtensions.RegexMatches(String, String)
+- uid: Lett.Extensions.StringExtensions.RegexMatches(System.String,System.String,System.Text.RegularExpressions.RegexOptions)
+  name: RegexMatches(String, String, RegexOptions)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexMatches_System_String_System_String_System_Text_RegularExpressions_RegexOptions_
+  commentId: M:Lett.Extensions.StringExtensions.RegexMatches(System.String,System.String,System.Text.RegularExpressions.RegexOptions)
+  fullName: Lett.Extensions.StringExtensions.RegexMatches(System.String, System.String, System.Text.RegularExpressions.RegexOptions)
+  nameWithType: StringExtensions.RegexMatches(String, String, RegexOptions)
+- uid: Lett.Extensions.StringExtensions.RegexMatches*
+  name: RegexMatches
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexMatches_
+  commentId: Overload:Lett.Extensions.StringExtensions.RegexMatches
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.RegexMatches
+  nameWithType: StringExtensions.RegexMatches
+- uid: Lett.Extensions.StringExtensions.RegexReplace(System.String,System.String,System.String)
+  name: RegexReplace(String, String, String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexReplace_System_String_System_String_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.RegexReplace(System.String,System.String,System.String)
+  fullName: Lett.Extensions.StringExtensions.RegexReplace(System.String, System.String, System.String)
+  nameWithType: StringExtensions.RegexReplace(String, String, String)
+- uid: Lett.Extensions.StringExtensions.RegexReplace(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)
+  name: RegexReplace(String, String, String, RegexOptions)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexReplace_System_String_System_String_System_String_System_Text_RegularExpressions_RegexOptions_
+  commentId: M:Lett.Extensions.StringExtensions.RegexReplace(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)
+  fullName: Lett.Extensions.StringExtensions.RegexReplace(System.String, System.String, System.String, System.Text.RegularExpressions.RegexOptions)
+  nameWithType: StringExtensions.RegexReplace(String, String, String, RegexOptions)
+- uid: Lett.Extensions.StringExtensions.RegexReplace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator)
+  name: RegexReplace(String, String, MatchEvaluator)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexReplace_System_String_System_String_System_Text_RegularExpressions_MatchEvaluator_
+  commentId: M:Lett.Extensions.StringExtensions.RegexReplace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator)
+  fullName: Lett.Extensions.StringExtensions.RegexReplace(System.String, System.String, System.Text.RegularExpressions.MatchEvaluator)
+  nameWithType: StringExtensions.RegexReplace(String, String, MatchEvaluator)
+- uid: Lett.Extensions.StringExtensions.RegexReplace*
+  name: RegexReplace
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexReplace_
+  commentId: Overload:Lett.Extensions.StringExtensions.RegexReplace
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.RegexReplace
+  nameWithType: StringExtensions.RegexReplace
+- uid: Lett.Extensions.StringExtensions.RegexSplit(System.String,System.String)
+  name: RegexSplit(String, String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexSplit_System_String_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.RegexSplit(System.String,System.String)
+  fullName: Lett.Extensions.StringExtensions.RegexSplit(System.String, System.String)
+  nameWithType: StringExtensions.RegexSplit(String, String)
+- uid: Lett.Extensions.StringExtensions.RegexSplit(System.String,System.String,System.Text.RegularExpressions.RegexOptions)
+  name: RegexSplit(String, String, RegexOptions)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexSplit_System_String_System_String_System_Text_RegularExpressions_RegexOptions_
+  commentId: M:Lett.Extensions.StringExtensions.RegexSplit(System.String,System.String,System.Text.RegularExpressions.RegexOptions)
+  fullName: Lett.Extensions.StringExtensions.RegexSplit(System.String, System.String, System.Text.RegularExpressions.RegexOptions)
+  nameWithType: StringExtensions.RegexSplit(String, String, RegexOptions)
+- uid: Lett.Extensions.StringExtensions.RegexSplit*
+  name: RegexSplit
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RegexSplit_
+  commentId: Overload:Lett.Extensions.StringExtensions.RegexSplit
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.RegexSplit
+  nameWithType: StringExtensions.RegexSplit
+- uid: Lett.Extensions.StringExtensions.Right(System.String,System.Int32)
+  name: Right(String, Int32)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_Right_System_String_System_Int32_
+  commentId: M:Lett.Extensions.StringExtensions.Right(System.String,System.Int32)
+  fullName: Lett.Extensions.StringExtensions.Right(System.String, System.Int32)
+  nameWithType: StringExtensions.Right(String, Int32)
+- uid: Lett.Extensions.StringExtensions.Right*
+  name: Right
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_Right_
+  commentId: Overload:Lett.Extensions.StringExtensions.Right
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.Right
+  nameWithType: StringExtensions.Right
+- uid: Lett.Extensions.StringExtensions.ToBytes(System.String)
+  name: ToBytes(String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ToBytes_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.ToBytes(System.String)
+  fullName: Lett.Extensions.StringExtensions.ToBytes(System.String)
+  nameWithType: StringExtensions.ToBytes(String)
+- uid: Lett.Extensions.StringExtensions.ToBytes(System.String,System.Text.Encoding)
+  name: ToBytes(String, Encoding)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ToBytes_System_String_System_Text_Encoding_
+  commentId: M:Lett.Extensions.StringExtensions.ToBytes(System.String,System.Text.Encoding)
+  fullName: Lett.Extensions.StringExtensions.ToBytes(System.String, System.Text.Encoding)
+  nameWithType: StringExtensions.ToBytes(String, Encoding)
+- uid: Lett.Extensions.StringExtensions.ToBytes*
+  name: ToBytes
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ToBytes_
+  commentId: Overload:Lett.Extensions.StringExtensions.ToBytes
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.ToBytes
+  nameWithType: StringExtensions.ToBytes
+- uid: Lett.Extensions.StringExtensions.ToXmlDocument(System.String)
+  name: ToXmlDocument(String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ToXmlDocument_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.ToXmlDocument(System.String)
+  fullName: Lett.Extensions.StringExtensions.ToXmlDocument(System.String)
+  nameWithType: StringExtensions.ToXmlDocument(String)
+- uid: Lett.Extensions.StringExtensions.ToXmlDocument*
+  name: ToXmlDocument
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_ToXmlDocument_
+  commentId: Overload:Lett.Extensions.StringExtensions.ToXmlDocument
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.ToXmlDocument
+  nameWithType: StringExtensions.ToXmlDocument
+- uid: Lett.Extensions.TypeExtensions
+  name: TypeExtensions
+  href: api/Lett.Extensions.TypeExtensions.html
+  commentId: T:Lett.Extensions.TypeExtensions
+  fullName: Lett.Extensions.TypeExtensions
+  nameWithType: TypeExtensions
+- uid: Lett.Extensions.TypeExtensions.HasProperty(System.Type,System.String)
+  name: HasProperty(Type, String)
+  href: api/Lett.Extensions.TypeExtensions.html#Lett_Extensions_TypeExtensions_HasProperty_System_Type_System_String_
+  commentId: M:Lett.Extensions.TypeExtensions.HasProperty(System.Type,System.String)
+  fullName: Lett.Extensions.TypeExtensions.HasProperty(System.Type, System.String)
+  nameWithType: TypeExtensions.HasProperty(Type, String)
+- uid: Lett.Extensions.TypeExtensions.HasProperty*
+  name: HasProperty
+  href: api/Lett.Extensions.TypeExtensions.html#Lett_Extensions_TypeExtensions_HasProperty_
+  commentId: Overload:Lett.Extensions.TypeExtensions.HasProperty
+  isSpec: "True"
+  fullName: Lett.Extensions.TypeExtensions.HasProperty
+  nameWithType: TypeExtensions.HasProperty

@@ -161,6 +161,7 @@ jobs:
       - bash: |
           git clone -b gh-pages https://github.com/viacooky/Lett.Extensions.git tmp
           rm -rf tmp/*
+          cp -r docfx/images tmp/images
           cp -r docfx/_site/* tmp
           cd tmp
           git config --local user.name "Azure Pipelines Auto Deploy"
@@ -187,5 +188,3 @@ jobs:
           nuGetFeedType: external
           publishFeedCredentials: myget.org
           packagesToPush: '$(nugetPackPath)/**/*.nupkg;!$(nugetPackPath)/**/*.symbols.nupkg'
-      
-      

@@ -454,7 +454,10 @@ fabric.properties
 
 # End of https://www.gitignore.io/api/docfx
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
 # Created by https://www.gitignore.io/api/cake
 # Edit at https://www.gitignore.io/?templates=cake
 

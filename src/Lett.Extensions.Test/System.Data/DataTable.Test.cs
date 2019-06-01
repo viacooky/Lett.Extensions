@@ -201,6 +201,28 @@ namespace Lett.Extensions.Test
         }
 
 
+        [TestMethod]
+        public void ToDynamicObjects_Test()
+        {
+            var dt = new DataTable();
+            dt.Columns.AddRange(new[] {"Name", "Number"});
+            dt.Columns.Add(new DataColumn("Age", typeof(int)));
+            dt.Columns.Add(new DataColumn("CreateTime", typeof(DateTime)));
+            dt.Rows.Add("Name_1", "Number_1", 10, DateTime.Now);
+            dt.Rows.Add("Name_2", "Number_2", 10, DateTime.Now);
+            dt.Rows.Add("Name_3", "Number_3", 10, DateTime.Now);
+            dt.Rows.Add("Name_4", DBNull.Value, 10, DateTime.Now);
+
+            var rs = dt.ToDynamicObjects().ToList();
+            Assert.AreEqual(rs[0].Name, "Name_1");
+            Assert.AreEqual(rs[0].Number, "Number_1");
+            Assert.AreEqual(rs[0].Age, 10);
+            Assert.AreEqual(rs[0].CreateTime.GetType(), typeof(DateTime));
+
+            Assert.IsNull(rs[3].Number);
+        }
+
+
         #region 测试类 
 
 #pragma warning disable 649
