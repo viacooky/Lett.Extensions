@@ -26,7 +26,7 @@ jobs:
         version: $(dotnetVersion)
         installationPath: $(Agent.ToolsDirectory)/dotnet
     - powershell: echo ./build.ps1 --target=azure --nugetVersion=$(nugetVersion) --assemblyVersion=$(assemblyVersion)
-    - powershell: ./build.ps1 --target=azure --nugetVersion=$(nugetVersion) --assemblyVersion=$(assemblyVersion)
+    - powershell: ./build.ps1 --target=test
       condition: eq( variables['Agent.OS'], 'Windows_NT' )
       displayName: Windows (Windows 2019 with VS2019) 平台 执行 cake pack
     - task: DownloadSecureFile@1
