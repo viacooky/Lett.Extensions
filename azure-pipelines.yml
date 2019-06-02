@@ -16,7 +16,6 @@ variables:
 
 jobs:
 - job: Build_NuGet_Package
-  condition: eq(variables['isPushNuget'], 'true')
   pool:
     name: Hosted Windows 2019 with VS2019
   steps:
