@@ -15,177 +15,214 @@ variables:
   TestProject: '**/Lett.Extensions.Test.csproj'
 
 jobs:
-  # Linux (Docker - ubuntu-16.04)
-  - job: Docker_ubuntu_1604
-    condition: eq(variables['isPushNuget'], 'false')
-    pool:
-      vmImage: 'ubuntu-16.04'
-    steps:
-      - task: UseDotNet@2
-        displayName: '安装 .NET Core sdk'
-        inputs:
-          packageType: sdk
-          version: $(dotnetVersion)
-          installationPath: $(Agent.ToolsDirectory)/dotnet
-      - bash: |
-          chmod +x ./build.sh
-          ./build.sh --target=azure
-        env:
-          DOTNET_CLI_TELEMETRY_OPTOUT: 1
-        displayName: 执行 cake - Linux (Docker - ubuntu-16.04)
-      - task: DotNetCoreCLI@2
-        displayName: '测试'
-        inputs:
-          command: test
-          projects: '$(TestProject)'
-          arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
-  # MacOS (Docker - macOS-10.14)
-  - job: Docker_MacOS_1014
-    condition: eq(variables['isPushNuget'], 'false')
-    pool:
-      vmImage: 'macOS-10.14'
-    steps:
-      - task: UseDotNet@2
-        displayName: '安装 .NET Core sdk'
-        inputs:
-          packageType: sdk
-          version: $(dotnetVersion)
-          installationPath: $(Agent.ToolsDirectory)/dotnet
-      - bash: |
-          chmod +x ./build.sh
-          ./build.sh --target=azure
-        env:
-          DOTNET_CLI_TELEMETRY_OPTOUT: 1
-        displayName: 执行 cake - MacOS (Docker - macOS-10.14)
-      - task: DotNetCoreCLI@2
-        displayName: '测试'
-        inputs:
-          command: test
-          projects: '$(TestProject)'
-          arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
-  # Windows (Docker - windows-2019)
-  - job: Docker_Windows_2019
-    condition: eq(variables['isPushNuget'], 'false')
-    pool:
-      vmImage: 'windows-2019'
-    steps:
-      - task: UseDotNet@2
-        displayName: '安装 .NET Core sdk'
-        inputs:
-          packageType: sdk
-          version: $(dotnetVersion)
-          installationPath: $(Agent.ToolsDirectory)/dotnet
-      - powershell: ./build.ps1 --target=azure
-        env:
-          DOTNET_CLI_TELEMETRY_OPTOUT: 1
-        condition: eq( variables['Agent.OS'], 'Windows_NT' )
-        displayName: 执行 cake - Windows (Docker - windows-2019)
-      - task: DotNetCoreCLI@2
-        displayName: '测试'
-        inputs:
-          command: test
-          projects: '$(TestProject)'
-          arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
-  # Windows (Windows 2019 with VS2019)
-  - job: Hosted_Windows_2019
-    condition: eq(variables['isPushNuget'], 'false')
-    pool:
-      name: Hosted Windows 2019 with VS2019
-    steps:
-      - task: UseDotNet@2
-        displayName: '安装 .NET Core sdk'
-        inputs:
-          packageType: sdk
-          version: $(dotnetVersion)
-          installationPath: $(Agent.ToolsDirectory)/dotnet
-      - powershell: ./build.ps1 --target=azure
-        env:
-          DOTNET_CLI_TELEMETRY_OPTOUT: 1
-        condition: eq( variables['Agent.OS'], 'Windows_NT' )
-        displayName: 执行 cake - Hosted (Windows 2019 with VS2019)
-      - task: DotNetCoreCLI@2
-        displayName: '测试'
-        inputs:
-          command: test
-          projects: '$(TestProject)'
-          arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
-  # Windows (Windows 2019 with VS2019)
-  - job: Hosted_VS2017
-    condition: eq(variables['isPushNuget'], 'false')
-    pool:
-      name: Hosted Windows 2019 with VS2019
-    steps:
-      - task: UseDotNet@2
-        displayName: '安装 .NET Core sdk'
-        inputs:
-          packageType: sdk
-          version: $(dotnetVersion)
-          installationPath: $(Agent.ToolsDirectory)/dotnet
-      - powershell: ./build.ps1 --target=azure
-        env:
-          DOTNET_CLI_TELEMETRY_OPTOUT: 1
-        condition: eq( variables['Agent.OS'], 'Windows_NT' )
-        displayName: 执行 cake - Hosted (Hosted_VS2017)
-      - task: DotNetCoreCLI@2
-        displayName: '测试'
-        inputs:
-          command: test
-          projects: '$(TestProject)'
-          arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
-  # Build Nuget Package
-  - job: Build_NuGet_Package
-    condition: eq(variables['isPushNuget'], 'true')
-    pool:
-      name: Hosted Windows 2019 with VS2019
-    steps:
-      - task: UseDotNet@2
-        displayName: '安装 .NET Core sdk'
-        inputs:
-          packageType: sdk
-          version: $(dotnetVersion)
-          installationPath: $(Agent.ToolsDirectory)/dotnet
-      - powershell: echo ./build.ps1 --target=azure --nugetVersion=$(nugetVersion) --assemblyVersion=$(assemblyVersion)
-      - powershell: ./build.ps1 --target=azure --nugetVersion=$(nugetVersion) --assemblyVersion=$(assemblyVersion)
-        condition: eq( variables['Agent.OS'], 'Windows_NT' )
-        displayName: Windows (Windows 2019 with VS2019) 平台 执行 cake pack
-      - task: DotNetCoreCLI@2
-        displayName: '测试'
-        inputs:
-          command: test
-          projects: '$(TestProject)'
-          arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
-      - task: DownloadSecureFile@1
-        inputs:
-          secureFile: 'Lett_Extensions_deploy_rsa'
-        displayName: '获取部署Key'
-      - bash: |
-          git clone -b gh-pages https://github.com/viacooky/Lett.Extensions.git tmp
-          rm -rf tmp/*
-          cp -r docfx/images tmp/images
-          cp -r docfx/_site/* tmp
-          cd tmp
-          ls -a
-          git config --local user.name "Azure Pipelines Auto Deploy"
-          git config --local user.email "AzurePipelines@viacooky.com"
-          git add --all
-          git commit -m "Azure Pipelines 部署 GitHub Pages  ***NO_CI***"
-          mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa 
-          chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-          git remote set-url --push origin git@github.com:viacooky/Lett.Extensions.git
-          git push origin HEAD:gh-pages
-        displayName: 上传文档
-      - task: NuGetCommand@2
-        displayName: 'NuGet 发布'
-        inputs:
-          command: push
-          nuGetFeedType: external
-          publishFeedCredentials: nuget.org
-          packagesToPush: '$(nugetPackPath)/**/*.nupkg;!$(nugetPackPath)/**/*.symbols.nupkg'
-      - task: NuGetCommand@2
-        displayName: 'MyGet 发布'
-        inputs:
-          command: push
-          nuGetFeedType: external
-          publishFeedCredentials: myget.org
-          packagesToPush: '$(nugetPackPath)/**/*.nupkg;!$(nugetPackPath)/**/*.symbols.nupkg'
+- job: Build_NuGet_Package
+  condition: eq(variables['isPushNuget'], 'true')
+  pool:
+    name: Hosted Windows 2019 with VS2019
+  steps:
+    - task: UseDotNet@2
+      displayName: '安装 .NET Core sdk'
+      inputs:
+        packageType: sdk
+        version: $(dotnetVersion)
+        installationPath: $(Agent.ToolsDirectory)/dotnet
+    - powershell: echo ./build.ps1 --target=azure --nugetVersion=$(nugetVersion) --assemblyVersion=$(assemblyVersion)
+    - powershell: ./build.ps1 --target=azure --nugetVersion=$(nugetVersion) --assemblyVersion=$(assemblyVersion)
+      condition: eq( variables['Agent.OS'], 'Windows_NT' )
+      displayName: Windows (Windows 2019 with VS2019) 平台 执行 cake pack
+    - task: DownloadSecureFile@1
+      inputs:
+        secureFile: 'Lett_Extensions_deploy_rsa'
+      displayName: '获取部署Key'
+    - bash: |
+        ls docfx/_site
+        git clone -b gh-pages https://github.com/viacooky/Lett.Extensions.git tmp
+        rm -rf tmp/*
+        cp -r docfx/images tmp/images
+        cp -r docfx/_site/* tmp
+        cd tmp
+        git config --local user.name "Azure Pipelines Auto Deploy"
+        git config --local user.email "AzurePipelines@viacooky.com"
+        git add --all
+        git status
+        git commit -m "Azure Pipelines 部署 GitHub Pages  ***NO_CI***"
+        mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa 
+        chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+        git remote set-url --push origin git@github.com:viacooky/Lett.Extensions.git
+        git push origin HEAD:gh-pages
+      displayName: 上传文档
+  # # Linux (Docker - ubuntu-16.04)
+  # - job: Docker_ubuntu_1604
+  #   condition: eq(variables['isPushNuget'], 'false')
+  #   pool:
+  #     vmImage: 'ubuntu-16.04'
+  #   steps:
+  #     - task: UseDotNet@2
+  #       displayName: '安装 .NET Core sdk'
+  #       inputs:
+  #         packageType: sdk
+  #         version: $(dotnetVersion)
+  #         installationPath: $(Agent.ToolsDirectory)/dotnet
+  #     - bash: |
+  #         chmod +x ./build.sh
+  #         ./build.sh --target=azure
+  #       env:
+  #         DOTNET_CLI_TELEMETRY_OPTOUT: 1
+  #       displayName: 执行 cake - Linux (Docker - ubuntu-16.04)
+  #     - task: DotNetCoreCLI@2
+  #       displayName: '测试'
+  #       inputs:
+  #         command: test
+  #         projects: '$(TestProject)'
+  #         arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
+  # # MacOS (Docker - macOS-10.14)
+  # - job: Docker_MacOS_1014
+  #   condition: eq(variables['isPushNuget'], 'false')
+  #   pool:
+  #     vmImage: 'macOS-10.14'
+  #   steps:
+  #     - task: UseDotNet@2
+  #       displayName: '安装 .NET Core sdk'
+  #       inputs:
+  #         packageType: sdk
+  #         version: $(dotnetVersion)
+  #         installationPath: $(Agent.ToolsDirectory)/dotnet
+  #     - bash: |
+  #         chmod +x ./build.sh
+  #         ./build.sh --target=azure
+  #       env:
+  #         DOTNET_CLI_TELEMETRY_OPTOUT: 1
+  #       displayName: 执行 cake - MacOS (Docker - macOS-10.14)
+  #     - task: DotNetCoreCLI@2
+  #       displayName: '测试'
+  #       inputs:
+  #         command: test
+  #         projects: '$(TestProject)'
+  #         arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
+  # # Windows (Docker - windows-2019)
+  # - job: Docker_Windows_2019
+  #   condition: eq(variables['isPushNuget'], 'false')
+  #   pool:
+  #     vmImage: 'windows-2019'
+  #   steps:
+  #     - task: UseDotNet@2
+  #       displayName: '安装 .NET Core sdk'
+  #       inputs:
+  #         packageType: sdk
+  #         version: $(dotnetVersion)
+  #         installationPath: $(Agent.ToolsDirectory)/dotnet
+  #     - powershell: ./build.ps1 --target=azure
+  #       env:
+  #         DOTNET_CLI_TELEMETRY_OPTOUT: 1
+  #       condition: eq( variables['Agent.OS'], 'Windows_NT' )
+  #       displayName: 执行 cake - Windows (Docker - windows-2019)
+  #     - task: DotNetCoreCLI@2
+  #       displayName: '测试'
+  #       inputs:
+  #         command: test
+  #         projects: '$(TestProject)'
+  #         arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
+  # # Windows (Windows 2019 with VS2019)
+  # - job: Hosted_Windows_2019
+  #   condition: eq(variables['isPushNuget'], 'false')
+  #   pool:
+  #     name: Hosted Windows 2019 with VS2019
+  #   steps:
+  #     - task: UseDotNet@2
+  #       displayName: '安装 .NET Core sdk'
+  #       inputs:
+  #         packageType: sdk
+  #         version: $(dotnetVersion)
+  #         installationPath: $(Agent.ToolsDirectory)/dotnet
+  #     - powershell: ./build.ps1 --target=azure
+  #       env:
+  #         DOTNET_CLI_TELEMETRY_OPTOUT: 1
+  #       condition: eq( variables['Agent.OS'], 'Windows_NT' )
+  #       displayName: 执行 cake - Hosted (Windows 2019 with VS2019)
+  #     - task: DotNetCoreCLI@2
+  #       displayName: '测试'
+  #       inputs:
+  #         command: test
+  #         projects: '$(TestProject)'
+  #         arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
+  # # Windows (Windows 2019 with VS2019)
+  # - job: Hosted_VS2017
+  #   condition: eq(variables['isPushNuget'], 'false')
+  #   pool:
+  #     name: Hosted Windows 2019 with VS2019
+  #   steps:
+  #     - task: UseDotNet@2
+  #       displayName: '安装 .NET Core sdk'
+  #       inputs:
+  #         packageType: sdk
+  #         version: $(dotnetVersion)
+  #         installationPath: $(Agent.ToolsDirectory)/dotnet
+  #     - powershell: ./build.ps1 --target=azure
+  #       env:
+  #         DOTNET_CLI_TELEMETRY_OPTOUT: 1
+  #       condition: eq( variables['Agent.OS'], 'Windows_NT' )
+  #       displayName: 执行 cake - Hosted (Hosted_VS2017)
+  #     - task: DotNetCoreCLI@2
+  #       displayName: '测试'
+  #       inputs:
+  #         command: test
+  #         projects: '$(TestProject)'
+  #         arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
+  # # Build Nuget Package
+  # - job: Build_NuGet_Package
+  #   condition: eq(variables['isPushNuget'], 'true')
+  #   pool:
+  #     name: Hosted Windows 2019 with VS2019
+  #   steps:
+  #     - task: UseDotNet@2
+  #       displayName: '安装 .NET Core sdk'
+  #       inputs:
+  #         packageType: sdk
+  #         version: $(dotnetVersion)
+  #         installationPath: $(Agent.ToolsDirectory)/dotnet
+  #     - powershell: echo ./build.ps1 --target=azure --nugetVersion=$(nugetVersion) --assemblyVersion=$(assemblyVersion)
+  #     - powershell: ./build.ps1 --target=azure --nugetVersion=$(nugetVersion) --assemblyVersion=$(assemblyVersion)
+  #       condition: eq( variables['Agent.OS'], 'Windows_NT' )
+  #       displayName: Windows (Windows 2019 with VS2019) 平台 执行 cake pack
+  #     - task: DotNetCoreCLI@2
+  #       displayName: '测试'
+  #       inputs:
+  #         command: test
+  #         projects: '$(TestProject)'
+  #         arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
+  #     - task: DownloadSecureFile@1
+  #       inputs:
+  #         secureFile: 'Lett_Extensions_deploy_rsa'
+  #       displayName: '获取部署Key'
+  #     - bash: |
+  #         git clone -b gh-pages https://github.com/viacooky/Lett.Extensions.git tmp
+  #         rm -rf tmp/*
+  #         cp -r docfx/images tmp/images
+  #         cp -r docfx/_site/* tmp
+  #         cd tmp
+  #         ls -a
+  #         git config --local user.name "Azure Pipelines Auto Deploy"
+  #         git config --local user.email "AzurePipelines@viacooky.com"
+  #         git add --all
+  #         git commit -m "Azure Pipelines 部署 GitHub Pages  ***NO_CI***"
+  #         mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa 
+  #         chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
+  #         ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+  #         git remote set-url --push origin git@github.com:viacooky/Lett.Extensions.git
+  #         git push origin HEAD:gh-pages
+  #       displayName: 上传文档
+  #     - task: NuGetCommand@2
+  #       displayName: 'NuGet 发布'
+  #       inputs:
+  #         command: push
+  #         nuGetFeedType: external
+  #         publishFeedCredentials: nuget.org
+  #         packagesToPush: '$(nugetPackPath)/**/*.nupkg;!$(nugetPackPath)/**/*.symbols.nupkg'
+  #     - task: NuGetCommand@2
+  #       displayName: 'MyGet 发布'
+  #       inputs:
+  #         command: push
+  #         nuGetFeedType: external
+  #         publishFeedCredentials: myget.org
+  #         packagesToPush: '$(nugetPackPath)/**/*.nupkg;!$(nugetPackPath)/**/*.symbols.nupkg'
