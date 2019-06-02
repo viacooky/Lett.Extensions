@@ -164,6 +164,7 @@ jobs:
           cp -r docfx/images tmp/images
           cp -r docfx/_site/* tmp
           cd tmp
+          ls -a
           git config --local user.name "Azure Pipelines Auto Deploy"
           git config --local user.email "AzurePipelines@viacooky.com"
           git add --all
