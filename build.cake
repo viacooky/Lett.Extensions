@@ -141,9 +141,9 @@ Task("azure")
 });
 
 Task("Test")
-  // .IsDependentOn("Clean")
-  // .IsDependentOn("Restore")
-  // .IsDependentOn("Build")
+  .IsDependentOn("Clean")
+  .IsDependentOn("Restore")
+  .IsDependentOn("Build")
   // .IsDependentOn("Testing-vstest")
   // .IsDependentOn("CodeCoverage-openconver")
   // .IsDependentOn("PackNuGet")
