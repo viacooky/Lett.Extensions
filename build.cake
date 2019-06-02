@@ -93,6 +93,7 @@ Task("Upload-Coverage")
 Task("Docfx")
   .Does(() =>
 {
+  DocFxMetadata("./docfx/docfx.json");
   DocFxBuild("./docfx/docfx.json");
 });
 

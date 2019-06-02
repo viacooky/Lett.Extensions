@@ -450,7 +450,9 @@ fabric.properties
 
 ### DocFx ###
 .cache
-/**/_site/
+docfx/**/_site/
+docfx/.obj/
+docfx/api/
 
 # End of https://www.gitignore.io/api/docfx
 
@@ -462,5 +464,3 @@ tools/*
 !tools/packages.config
 
 # End of https://www.gitignore.io/api/cake
-
-tmp/*
