@@ -93,6 +93,7 @@ Task("Upload-Coverage")
 Task("Docfx")
   .Does(() =>
 {
+  DocFxMetadata("./docfx/docfx.json");
   DocFxBuild("./docfx/docfx.json");
 });
 
@@ -140,9 +141,9 @@ Task("azure")
 });
 
 Task("Test")
-  // .IsDependentOn("Clean")
-  // .IsDependentOn("Restore")
-  // .IsDependentOn("Build")
+  .IsDependentOn("Clean")
+  .IsDependentOn("Restore")
+  .IsDependentOn("Build")
   // .IsDependentOn("Testing-vstest")
   // .IsDependentOn("CodeCoverage-openconver")
   // .IsDependentOn("PackNuGet")

@@ -8,21 +8,18 @@
           "exclude": ["src/**Test.csproj"]
         }
       ],
-      "dest": "api",
-      "disableGitFeatures": false,
-      "disableDefaultFilter": false
+      "dest": "api"
     }
   ],
   "build": {
     "content": [
       {
-        "files": ["*.md", "toc.yml"]
+        "files": ["*.yml", "*.md"],
+        "src": "api",
+        "dest": "api"
       },
       {
-        "files": ["api/**.yml", "api/index.md"]
-      },
-      {
-        "files": ["version_notes/**.md", "toc.yml", "*.md"]
+        "files": ["version_notes.md", "toc.yml", "index.md"]
       }
     ],
     "resource": [
@@ -30,11 +27,7 @@
         "files": ["images/**"]
       }
     ],
-    "overwrite": [
-      {
-        "files": ["index.html"]
-      }
-    ],
+    "overwrite": [{}],
     "globalMetadata": {
       "_appTitle": "Lett.Extensions",
       "_appFooter": "Copyright (c) 2019 viacooky. All rights reserved.",

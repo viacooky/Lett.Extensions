@@ -1,4 +1,4 @@
-![](docs/images/logo.png)
+![](docfx/images/logo.png)
 
 [![Nuget](https://img.shields.io/nuget/v/Lett.Extensions.svg)](https://www.nuget.org/packages/Lett.Extensions/)
 [![MyGet](https://img.shields.io/myget/lett/v/Lett.Extensions.svg?label=MyGet)](https://www.myget.org/feed/lett/package/nuget/Lett.Extensions)

@@ -113,7 +113,7 @@ jobs:
   - job: Hosted_VS2017
     condition: eq(variables['isPushNuget'], 'false')
     pool:
-      name: Hosted Windows 2019 with VS2019
+      name: Hosted VS2017
     steps:
       - task: UseDotNet@2
         displayName: '安装 .NET Core sdk'
@@ -136,7 +136,7 @@ jobs:
   - job: Build_NuGet_Package
     condition: eq(variables['isPushNuget'], 'true')
     pool:
-      name: Hosted Windows 2019 with VS2019
+      name: Hosted VS2017
     steps:
       - task: UseDotNet@2
         displayName: '安装 .NET Core sdk'
@@ -159,6 +159,7 @@ jobs:
           secureFile: 'Lett_Extensions_deploy_rsa'
         displayName: '获取部署Key'
       - bash: |
+          ls docfx/_site
           git clone -b gh-pages https://github.com/viacooky/Lett.Extensions.git tmp
           rm -rf tmp/*
           cp -r docfx/images tmp/images
@@ -167,6 +168,7 @@ jobs:
           git config --local user.name "Azure Pipelines Auto Deploy"
           git config --local user.email "AzurePipelines@viacooky.com"
           git add --all
+          git status
           git commit -m "Azure Pipelines 部署 GitHub Pages  ***NO_CI***"
           mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa 
           chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa

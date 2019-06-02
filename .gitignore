@@ -450,14 +450,12 @@ fabric.properties
 
 ### DocFx ###
 .cache
-/**/_site/
+docfx/**/_site/
+docfx/.obj/
+docfx/api/
 
 # End of https://www.gitignore.io/api/docfx
 
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 # Created by https://www.gitignore.io/api/cake
 # Edit at https://www.gitignore.io/?templates=cake
 

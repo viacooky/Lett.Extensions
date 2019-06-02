@@ -71,7 +71,7 @@
 - [ByteExtensions](api/Lett.Extensions.BooleanExtensions.yml)
 - [DataRowExtensions](api/Lett.Extensions.DataRowExtensions.yml)
 - [DataTableExtensions](api/Lett.Extensions.DataTableExtensions.yml)
-- [More ...](api/index.md)
+- [More ...](api/Lett.Extensions.yml)
 
 ---
 
