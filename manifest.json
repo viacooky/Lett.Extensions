@@ -13,18 +13,6 @@
       "is_incremental": false
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "api/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "api/index.html",
-          "hash": "KZYBK1ZTq5UO6KIeVowjlA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Resource",
       "source_relative_path": "images/icon_128.ico",
       "output": {
@@ -93,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "9hR1qS/8HFAbD5IMv99Daw=="
+          "hash": "bHCosZWgWSmbt6Tw6/HCBw=="
         }
       },
       "is_incremental": false,
@@ -145,7 +133,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 3,
+          "total_file_count": 2,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
