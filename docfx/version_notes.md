@@ -6,6 +6,8 @@
 
 - `DataRow`
   - `ToDynamicObject(this DataRow @this)` 转换为动态对象
+- `XmlDocument`
+  - `SelectNodesEnumerable(this XmlDocument @this, string xpath)` 选择匹配 XPath 表达式的节点集合
 
 #### Changed / 变更
 
