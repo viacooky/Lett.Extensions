@@ -4,6 +4,6 @@ languages:
   production:
       include:
         - /src/Lett\.Extensions/.*\.cs
-    test:
-      include:
-        - /src/Lett\.Extensions\.Test/.*\.cs
+  test:
+    include:
+      - /src/Lett\.Extensions\.Test/.*\.cs
