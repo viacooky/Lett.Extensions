@@ -10,6 +10,8 @@ namespace Lett.Extensions
     // ReSharper disable once InconsistentNaming
     public static class IDictionaryExtensions
     {
+        #region ContainsKey
+
         /// <summary>
         ///     是否包含任一 Key
         /// </summary>
@@ -167,17 +169,21 @@ namespace Lett.Extensions
             return keys.All(@this.ContainsKey);
         }
 
+        #endregion
+
+        #region ContaninsValue
+
         /// <summary>
         ///     是否包含 <paramref name="value" />
         /// </summary>
         /// <param name="this"></param>
         /// <param name="value"></param>
         /// <typeparam name="TKey"></typeparam>
-        /// <typeparam name="TValue"></typeparam>
+        /// <typeparam name="TValue"> 泛型约束: class</typeparam>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"><paramref name="this" /> is null</exception>
         /// <exception cref="ArgumentNullException"><paramref name="value" /> is null</exception>
-        public static bool ContainsValue<TKey, TValue>(this IDictionary<TKey, TValue> @this, TValue value)
+        public static bool ContainsValue<TKey, TValue>(this IDictionary<TKey, TValue> @this, TValue value) where TValue : class
         {
             if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
             if (value == null) throw new ArgumentNullException(nameof(value), $"{nameof(value)} is null");
@@ -190,7 +196,7 @@ namespace Lett.Extensions
         /// <param name="this"></param>
         /// <param name="values">value 集合</param>
         /// <typeparam name="TKey">Key 类型</typeparam>
-        /// <typeparam name="TValue">Value 类型</typeparam>
+        /// <typeparam name="TValue">Value 类型  泛型约束: class</typeparam>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"><paramref name="this" /> is null</exception>
         /// <exception cref="ArgumentNullException"><paramref name="values" /> is null</exception>
@@ -215,7 +221,7 @@ namespace Lett.Extensions
         ///         ]]>
         ///     </code>
         /// </example>
-        public static bool ContainsValueAny<TKey, TValue>(this IDictionary<TKey, TValue> @this, IEnumerable<TValue> values)
+        public static bool ContainsValueAny<TKey, TValue>(this IDictionary<TKey, TValue> @this, IEnumerable<TValue> values) where TValue : class
         {
             if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
             if (values == null) throw new ArgumentNullException(nameof(values), $"{nameof(values)} is null");
@@ -228,7 +234,7 @@ namespace Lett.Extensions
         /// <param name="this"></param>
         /// <param name="values">params <typeparamref name="TValue" />[]</param>
         /// <typeparam name="TKey">Key 类型</typeparam>
-        /// <typeparam name="TValue">Value 类型</typeparam>
+        /// <typeparam name="TValue">Value 类型 泛型约束: class</typeparam>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"><paramref name="this" /> is null</exception>
         /// <exception cref="ArgumentNullException"><paramref name="values" /> is null</exception>
@@ -253,7 +259,7 @@ namespace Lett.Extensions
         ///         ]]>
         ///     </code>
         /// </example>
-        public static bool ContainsValueAnyParams<TKey, TValue>(this IDictionary<TKey, TValue> @this, params TValue[] values)
+        public static bool ContainsValueAnyParams<TKey, TValue>(this IDictionary<TKey, TValue> @this, params TValue[] values) where TValue : class
         {
             if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
             if (values == null) throw new ArgumentNullException(nameof(values), $"{nameof(values)} is null");
@@ -266,7 +272,7 @@ namespace Lett.Extensions
         /// <param name="this"></param>
         /// <param name="values"></param>
         /// <typeparam name="TKey">Key 类型</typeparam>
-        /// <typeparam name="TValue">Value 类型</typeparam>
+        /// <typeparam name="TValue">Value 类型  泛型约束: class</typeparam>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"><paramref name="this" /> is null</exception>
         /// <exception cref="ArgumentNullException"><paramref name="values" /> is null</exception>
@@ -292,7 +298,7 @@ namespace Lett.Extensions
         ///         ]]>
         ///     </code>
         /// </example>
-        public static bool ContainsValueAll<TKey, TValue>(this IDictionary<TKey, TValue> @this, IEnumerable<TValue> values)
+        public static bool ContainsValueAll<TKey, TValue>(this IDictionary<TKey, TValue> @this, IEnumerable<TValue> values) where TValue : class
         {
             if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
             if (values == null) throw new ArgumentNullException(nameof(values), $"{nameof(values)} is null");
@@ -305,7 +311,7 @@ namespace Lett.Extensions
         /// <param name="this"></param>
         /// <param name="values">params <typeparamref name="TValue" />[]</param>
         /// <typeparam name="TKey">Key 类型</typeparam>
-        /// <typeparam name="TValue">Value 类型</typeparam>
+        /// <typeparam name="TValue">Value 类型  泛型约束: class</typeparam>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"><paramref name="this" /> is null</exception>
         /// <exception cref="ArgumentNullException"><paramref name="values" /> is null</exception>
@@ -331,11 +337,13 @@ namespace Lett.Extensions
         ///         ]]>
         ///     </code>
         /// </example>
-        public static bool ContainsValueAllParams<TKey, TValue>(this IDictionary<TKey, TValue> @this, params TValue[] values)
+        public static bool ContainsValueAllParams<TKey, TValue>(this IDictionary<TKey, TValue> @this, params TValue[] values) where TValue : class
         {
             if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
             if (values == null) throw new ArgumentNullException(nameof(values), $"{nameof(values)} is null");
             return values.All(@this.ContainsValue);
         }
+
+        #endregion
     }
 }
