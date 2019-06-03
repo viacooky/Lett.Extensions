@@ -2,7 +2,6 @@
 using System.Data;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Lett.Extensions.Exceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
@@ -27,8 +26,8 @@ namespace Lett.Extensions.Test
             // 空行Datatable情况
             _testTable1.Rows.Clear();
             Assert.IsFalse(_testTable1.HasRows());
-            Assert.ThrowsException<DataTableException>(() => _testTable1.FirstRow());
-            Assert.ThrowsException<DataTableException>(() => _testTable1.LastRow());
+            Assert.ThrowsException<ArgumentException>(() => _testTable1.FirstRow());
+            Assert.ThrowsException<ArgumentException>(() => _testTable1.LastRow());
         }
 
         [TestMethod]
@@ -86,7 +85,7 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(dt.GetColumnDataType("Col_Bool"), typeof(bool));
             Assert.AreEqual(dt.GetColumnDataType("Col_DateTime"), typeof(DateTime));
 
-            Assert.ThrowsException<DataTableException>(() => { dt.GetColumnDataType("not_Exist"); });
+            Assert.ThrowsException<ArgumentException>(() => { dt.GetColumnDataType("not_Exist"); });
         }
 
 
@@ -111,8 +110,8 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(dt.GetColumnDataType(5), typeof(bool));
             Assert.AreEqual(dt.GetColumnDataType(6), typeof(DateTime));
 
-            Assert.ThrowsException<DataTableException>(() => { dt.GetColumnDataType(-1); });
-            Assert.ThrowsException<DataTableException>(() => { dt.GetColumnDataType(7); });
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => { dt.GetColumnDataType(-1); });
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => { dt.GetColumnDataType(7); });
         }
 
 

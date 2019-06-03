@@ -9,6 +9,7 @@
 
 #### Changed / 变更
 
+- 移除 `DataTableException`
 - `DataTable`
   - `ToDynamicObjects(this DataTable @this)` 转换为动态对象集合 调整实现
 - `IDictionary<TKey, TValue>`

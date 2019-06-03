@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Dynamic;
 using System.Linq;
 using System.Reflection;
-using Lett.Extensions.Exceptions;
 
 namespace Lett.Extensions
 {
@@ -35,7 +33,7 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
-        /// <exception cref="DataTableException">当前DataTable没有行</exception>
+        /// <exception cref="ArgumentException">当前DataTable没有行</exception>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -45,7 +43,7 @@ namespace Lett.Extensions
         /// </example>
         public static DataRow FirstRow(this DataTable @this)
         {
-            if (!@this.HasRows()) throw new DataTableException("当前DataTable没有行");
+            if (!@this.HasRows()) throw new ArgumentException("当前DataTable没有行");
             return @this.Rows[0];
         }
 
@@ -54,7 +52,7 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
-        /// <exception cref="DataTableException">当前DataTable没有行</exception>
+        /// <exception cref="ArgumentException">当前DataTable没有行</exception>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -64,7 +62,7 @@ namespace Lett.Extensions
         /// </example>
         public static DataRow LastRow(this DataTable @this)
         {
-            if (!@this.HasRows()) throw new DataTableException("当前DataTable没有行");
+            if (!@this.HasRows()) throw new ArgumentException("当前DataTable没有行");
             return @this.Rows[@this.Rows.Count - 1];
         }
 
@@ -112,8 +110,7 @@ namespace Lett.Extensions
         /// <param name="this"></param>
         /// <param name="columnName">列名</param>
         /// <returns></returns>
-        /// <exception cref="DataTableException">DataTable中不包含<paramref name="columnName" />}</exception>
-        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="ArgumentException">DataTable中不包含<paramref name="columnName" /></exception>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -123,7 +120,7 @@ namespace Lett.Extensions
         /// </example>
         public static Type GetColumnDataType(this DataTable @this, string columnName)
         {
-            if (!@this.Columns.Contains(columnName)) throw new DataTableException(@"DataTable中不包含Column:{columnName}");
+            if (!@this.Columns.Contains(columnName)) throw new ArgumentException($"DataTable中不包含Column:{columnName}");
             return @this.Columns[columnName].DataType;
         }
 
@@ -133,8 +130,7 @@ namespace Lett.Extensions
         /// <param name="this"></param>
         /// <param name="index">索引</param>
         /// <returns></returns>
-        /// <exception cref="DataTableException"><paramref name="index" /> 索引超出了数组范围</exception>
-        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException"><paramref name="index" /> 索引超出了数组范围</exception>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -144,8 +140,8 @@ namespace Lett.Extensions
         /// </example>
         public static Type GetColumnDataType(this DataTable @this, int index)
         {
-            if (index < 0) throw new DataTableException("索引超出了数组范围");
-            if (@this.Columns.Count - 1 < index) throw new DataTableException("索引超出了数组范围");
+            if (index < 0) throw new ArgumentOutOfRangeException(nameof(index), $"{nameof(index)} out of range");
+            if (@this.Columns.Count - 1 < index) throw new ArgumentOutOfRangeException(nameof(index), $"{nameof(index)} out of range");
             return @this.Columns[index].DataType;
         }
 
