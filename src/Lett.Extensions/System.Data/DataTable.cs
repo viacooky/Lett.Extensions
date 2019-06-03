@@ -204,7 +204,7 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     <para>转换为动态对象</para>
+        ///     <para>转换为动态对象集合</para>
         ///     <para>值为 <see cref="DBNull.Value" /> 转换为 Null </para>
         /// </summary>
         /// <param name="this"></param>
@@ -213,47 +213,26 @@ namespace Lett.Extensions
         ///     <code>
         ///         <![CDATA[
         /// var dt = new DataTable();
-        /// dt.Columns.AddRange(new[] {"Name", "Number"});
-        /// dt.Columns.Add(new DataColumn("Age", typeof(int)));
-        /// dt.Columns.Add(new DataColumn("CreateTime", typeof(DateTime)));
-        /// dt.Rows.Add("Name_1", "Number_1", 10, DateTime.Now);
-        /// dt.Rows.Add("Name_2", "Number_2", 10, DateTime.Now);
-        /// dt.Rows.Add("Name_3", "Number_3", 10, DateTime.Now);
-        /// dt.Rows.Add("Name_4", DBNull.Value, 10, DateTime.Now);
-        /// 
+        /// dt.Columns.Add("col1", typeof(string));
+        /// dt.Columns.Add("col2", typeof(DateTime));
+        /// dt.Columns.Add("col3", typeof(decimal));
+        /// dt.Columns.Add("col4", typeof(string));
+        /// dt.Columns.Add("col5", typeof(string));
+        /// dt.Rows.Add("strVal", new DateTime(2019, 4, 1), 100.23m, DBNull.Value, null);
+        /// dt.Rows.Add("strVal2", new DateTime(2019, 4, 2), 122.23m, DBNull.Value, null);
         /// var rs = dt.ToDynamicObjects().ToList();
         /// 
-        /// // rs[0].Name == "Name_1"
-        /// // rs[0].Number == "Number_1"
-        /// // rs[0].Age == 10
-        /// // rs[0].CreateTime.GetType() == typeof(DateTime)
-        /// 
-        /// // rs[3].Number is null
+        /// // rs[0].col1 == "strVal"
+        /// // rs[0].col2 == new DateTime(2019, 4, 1)
+        /// // rs[1].col3 == 122.23m
+        /// // rs[1].col4 is null
+        /// // rs[1].col5 is null
         ///         ]]>
         ///     </code>
         /// </example>
         public static IEnumerable<dynamic> ToDynamicObjects(this DataTable @this)
         {
-            return @this.RowsEnumerable().Select(row => new DynamicRowObject(row));
-        }
-
-        private sealed class DynamicRowObject : DynamicObject
-        {
-            private readonly DataRow _row;
-
-            internal DynamicRowObject(DataRow row)
-            {
-                _row = row;
-            }
-
-            public override bool TryGetMember(GetMemberBinder binder, out object result)
-            {
-                var rs = _row.Table.Columns.Contains(binder.Name);
-                result = rs
-                             ? _row[binder.Name] != DBNull.Value ? _row[binder.Name] : null
-                             : null;
-                return rs;
-            }
+            return @this.RowsEnumerable().Select(row => row.ToDynamicObject());
         }
     }
 }

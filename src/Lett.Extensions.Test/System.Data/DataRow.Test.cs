@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -53,6 +54,7 @@ namespace Lett.Extensions.Test
         public void ToEntity_Test2()
         {
             var dt = new DataTable();
+
             dt.Columns.AddRange(new[] {"PublicField1", "Property1", "AutoProperty1", "notExistField"});
             dt.Rows.Add("publicFieldValue", "PropertyValue", "AutoProperty1Value", "notExistFieldValue");
             var rs = dt.Rows[0].ToEntity<TestClass1>((row, newClass) =>
@@ -64,6 +66,25 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs.Property1, "PropertyValue");
             Assert.AreEqual(rs.PublicField1, "publicFieldValue");
             Assert.AreEqual(rs.AutoProperty1, null);
+        }
+
+        [TestMethod]
+        public void ToDynamicObject_Test()
+        {
+            var dt = new DataTable();
+            dt.Columns.Add("col1", typeof(string));
+            dt.Columns.Add("col2", typeof(DateTime));
+            dt.Columns.Add("col3", typeof(decimal));
+            dt.Columns.Add("col4", typeof(string));
+            dt.Columns.Add("col5", typeof(string));
+            dt.Rows.Add("strVal", new DateTime(2019, 4, 1), 100.23m, DBNull.Value, null);
+
+            var rs = dt.Rows[0].ToDynamicObject();
+            Assert.AreEqual(rs.col1, "strVal");
+            Assert.AreEqual(rs.col2, new DateTime(2019, 4, 1));
+            Assert.AreEqual(rs.col3, 100.23m);
+            Assert.IsNull(rs.col4);
+            Assert.IsNull(rs.col5);
         }
 
         private class TestClass1

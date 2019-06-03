@@ -2,8 +2,15 @@
 
 ### 0.2.6 (2019-06-03)
 
+#### Features / 新增功能
+
+- `DataRow`
+  - `ToDynamicObject(this DataRow @this)` 转换为动态对象
+
 #### Changed / 变更
 
+- `DataTable`
+  - `ToDynamicObjects(this DataTable @this)` 转换为动态对象集合 调整实现
 - `IDictionary<TKey, TValue>`
   - `ContainsValue` 加入泛型约束
   - `ContainsValueAny` 加入泛型约束

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Dynamic;
 using System.Reflection;
 
 namespace Lett.Extensions
@@ -141,6 +143,40 @@ namespace Lett.Extensions
         {
             var newObj = new T();
             return converter(@this, newObj);
+        }
+
+        /// <summary>
+        ///     <para>转换为动态对象集合</para>
+        ///     <para>值为 <see cref="DBNull.Value" /> 转换为 Null </para>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns>如果Cell为 <see cref="DBNull.Value" /> 则动态对象属性的值为 null </returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var dt = new DataTable();
+        /// dt.Columns.Add("col1", typeof(string));
+        /// dt.Columns.Add("col2", typeof(DateTime));
+        /// dt.Columns.Add("col3", typeof(decimal));
+        /// dt.Columns.Add("col4", typeof(string));
+        /// dt.Columns.Add("col5", typeof(string));
+        /// dt.Rows.Add("strVal", new DateTime(2019, 4, 1), 100.23m, DBNull.Value, null);
+        /// var rs = dt.Rows[0].ToDynamicObject();
+        /// 
+        /// // rs.col1 == "strVal"
+        /// // rs.col2 == new DateTime(2019, 4, 1)
+        /// // rs.col3 == 100.23m
+        /// // rs.col4 is null
+        /// // rs.col5 is null
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static dynamic ToDynamicObject(this DataRow @this)
+        {
+            var rs = (IDictionary<string, object>) new ExpandoObject();
+            foreach (DataColumn column in @this.Table.Columns)
+                rs.Add(column.ColumnName, @this[column.ColumnName] == DBNull.Value ? null : @this[column.ColumnName]);
+            return rs;
         }
     }
 }
