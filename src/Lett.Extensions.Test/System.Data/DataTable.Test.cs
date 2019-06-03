@@ -2,7 +2,6 @@
 using System.Data;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Lett.Extensions.Exceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
@@ -27,8 +26,8 @@ namespace Lett.Extensions.Test
             // 空行Datatable情况
             _testTable1.Rows.Clear();
             Assert.IsFalse(_testTable1.HasRows());
-            Assert.ThrowsException<DataTableException>(() => _testTable1.FirstRow());
-            Assert.ThrowsException<DataTableException>(() => _testTable1.LastRow());
+            Assert.ThrowsException<ArgumentException>(() => _testTable1.FirstRow());
+            Assert.ThrowsException<ArgumentException>(() => _testTable1.LastRow());
         }
 
         [TestMethod]
@@ -86,7 +85,7 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(dt.GetColumnDataType("Col_Bool"), typeof(bool));
             Assert.AreEqual(dt.GetColumnDataType("Col_DateTime"), typeof(DateTime));
 
-            Assert.ThrowsException<DataTableException>(() => { dt.GetColumnDataType("not_Exist"); });
+            Assert.ThrowsException<ArgumentException>(() => { dt.GetColumnDataType("not_Exist"); });
         }
 
 
@@ -111,8 +110,8 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(dt.GetColumnDataType(5), typeof(bool));
             Assert.AreEqual(dt.GetColumnDataType(6), typeof(DateTime));
 
-            Assert.ThrowsException<DataTableException>(() => { dt.GetColumnDataType(-1); });
-            Assert.ThrowsException<DataTableException>(() => { dt.GetColumnDataType(7); });
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => { dt.GetColumnDataType(-1); });
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => { dt.GetColumnDataType(7); });
         }
 
 
@@ -205,21 +204,20 @@ namespace Lett.Extensions.Test
         public void ToDynamicObjects_Test()
         {
             var dt = new DataTable();
-            dt.Columns.AddRange(new[] {"Name", "Number"});
-            dt.Columns.Add(new DataColumn("Age", typeof(int)));
-            dt.Columns.Add(new DataColumn("CreateTime", typeof(DateTime)));
-            dt.Rows.Add("Name_1", "Number_1", 10, DateTime.Now);
-            dt.Rows.Add("Name_2", "Number_2", 10, DateTime.Now);
-            dt.Rows.Add("Name_3", "Number_3", 10, DateTime.Now);
-            dt.Rows.Add("Name_4", DBNull.Value, 10, DateTime.Now);
+            dt.Columns.Add("col1", typeof(string));
+            dt.Columns.Add("col2", typeof(DateTime));
+            dt.Columns.Add("col3", typeof(decimal));
+            dt.Columns.Add("col4", typeof(string));
+            dt.Columns.Add("col5", typeof(string));
+            dt.Rows.Add("strVal", new DateTime(2019, 4, 1), 100.23m, DBNull.Value, null);
+            dt.Rows.Add("strVal2", new DateTime(2019, 4, 2), 122.23m, DBNull.Value, null);
 
             var rs = dt.ToDynamicObjects().ToList();
-            Assert.AreEqual(rs[0].Name, "Name_1");
-            Assert.AreEqual(rs[0].Number, "Number_1");
-            Assert.AreEqual(rs[0].Age, 10);
-            Assert.AreEqual(rs[0].CreateTime.GetType(), typeof(DateTime));
-
-            Assert.IsNull(rs[3].Number);
+            Assert.AreEqual(rs[0].col1, "strVal");
+            Assert.AreEqual(rs[0].col2, new DateTime(2019, 4, 1));
+            Assert.AreEqual(rs[1].col3, 122.23m);
+            Assert.IsNull(rs[1].col4);
+            Assert.IsNull(rs[1].col5);
         }
 
 

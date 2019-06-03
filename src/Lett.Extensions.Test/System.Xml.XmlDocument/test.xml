@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<functional key="base_department" zh-CN="部门管理" funcGroupKey="group-systemsetting-basicinfos"
+            clientEntryPoint="Lonntec.UI.OrganizationListViewPageControl, Lonntec.UI.WinForm"
+            iconBrush="Lonntec.Sue.Functionals.SueFuncPlugBrush,Lonntec.Sue.Functionals">
+    <include>
+        <item path="./common.xml" />
+    </include>
+    <configs>
+        <item key="actionScopeType" value="Lonntec.Sue.FuncEngine.DepartmentActionScope, Lonntec.Sue.FuncEngine" />
+        <item key="masterSource" value="dsMaster" />
+        <item key="defaultView" value="defaultView" />
+    </configs>
+    <dataSource>
+        <storeSource name="dsMaster" tableName="t_masterdata_department" aliasName="t1" whereBase="t1.FIsDeleted=0"
+                     orderBy="t1.FNumber">
+            <join>
+                <item relation="left join" tableName="t_masterdata_department" aliasName="t2"
+                      condition="t1.FParentId=t2.FRowId" />
+                <item relation="left join" tableName="t_masterdata_emp" aliasName="t3" condition="t1.FManagerId=t3.FRowId" />
+            </join>
+            <columns>
+                <column name="FRowId" rawName="t1.FRowId" isPrimaryKey="True" defaultValue="{NEWID}" />
+                <column name="FIsEnable" rawName="t1.FIsEnable" dataType="System.Boolean" zh-CN="启用" defaultValue="True" />
+                <column name="FIsDeleted" rawName="t1.FIsDeleted" dataType="System.Boolean" defaultValue="False" />
+
+                <column name="FNumber" rawName="t1.FNumber" zh-CN="部门代码" isUnique="True" />
+                <column name="FName" rawName="t1.FName" maxLength="512" zh-CN="部门名称" isNotNull="True" />
+                <column name="FAccessCode" rawName="t1.FAccessCode" />
+                <column name="FParentId" rawName="t1.FParentId" />
+                <column name="FParentNumber" rawName="t2.FNumber" zh-CN="上级部门代码" ignoreDatabaseCheck="True" />
+                <column name="FParentName" rawName="t2.FName" maxLength="512" zh-CN="上级部门名称" ignoreDatabaseCheck="True" />
+                <column name="FManagerId" rawName="t1.FManagerId" maxLength="255" zh-CN="主管Id" />
+                <column name="FManagerNumber" rawName="t3.FNumber" maxLength="255" zh-CN="主管代码" ignoreDatabaseCheck="True"
+                        isNotNull="True" />
+                <column name="FManagerName" rawName="t3.FName" maxLength="255" zh-CN="主管名称" ignoreDatabaseCheck="True" />
+                <column name="FMemo" rawName="t1.FMemo" maxLength="1024" zh-CN="备注" isFullRow="True" />
+            </columns>
+        </storeSource>
+    </dataSource>
+    <components>
+        <component name="tvBinding" dataSource="dsMaster">
+            <binding>
+                <item dataMember="FNumber" isFilter="True" />
+                <item dataMember="FName" isFilter="True" />
+            </binding>
+        </component>
+        <component name="gvBinding" dataSource="dsMaster">
+            <binding>
+                <item dataMember="FNumber" isFilter="True" />
+                <item dataMember="FName" />
+                <item dataMember="FParentNumber" />
+                <item dataMember="FParentName" />
+                <item dataMember="FMemo" />
+            </binding>
+        </component>
+        <component name="editPage" dataSource="dsMaster">
+            <binding>
+                <item dataMember="FNumber" isNotNull="True" />
+                <item dataMember="FName" isNotNull="True" />
+                <item dataMember="FParentNumber">
+                    <lookup dataSource="lpDepartment">
+                        <mappings>
+                            <item lookupFieldName="FRowId" writebackFieldName="FParentId" />
+                            <item lookupFieldName="FNumber" writebackFieldName="FParentNumber" isFilter="True" />
+                            <item lookupFieldName="FName" writebackFieldName="FParentName" />
+                        </mappings>
+                    </lookup>
+                </item>
+                <item dataMember="FParentName" isReadonly="True" />
+                <item dataMember="FManagerNumber">
+                    <lookup dataSource="lpEmp">
+                        <mappings>
+                            <item lookupFieldName="FRowId" writebackFieldName="FManagerId" />
+                            <item lookupFieldName="FNumber" writebackFieldName="FManagerNumber" isFilter="True" />
+                            <item lookupFieldName="FName" writebackFieldName="FManagerName" isFilter="True" />
+                        </mappings>
+                    </lookup>
+                </item>
+                <item dataMember="FManagerName" />
+                <item dataMember="FMemo" />
+            </binding>
+        </component>
+        <component name="impPage" dataSource="dsMaster">
+            <binding>
+                <item dataMember="FNumber" isNotNull="True" />
+                <item dataMember="FName" isNotNull="True" />
+                <item dataMember="FParentNumber">
+                    <lookup dataSource="lpDepartment">
+                        <mappings>
+                            <item lookupFieldName="FRowId" writebackFieldName="FParentId" />
+                            <item lookupFieldName="FNumber" writebackFieldName="FParentNumber" isFilter="True" />
+                            <item lookupFieldName="FName" writebackFieldName="FParentName" />
+                        </mappings>
+                    </lookup>
+                </item>
+                <item dataMember="FParentName" isReadonly="True" />
+                <item dataMember="FMemo" />
+            </binding>
+        </component>
+    </components>
+    <functionalDefinition>
+        <permissions>
+            <item key="Append" zh-CN="新增" />
+            <item key="Modifly" zh-CN="修改" />
+            <item key="Delete" zh-CN="删除" />
+        </permissions>
+        <views>
+            <view name="defaultView">
+                <detialPageView component="editPage" />
+                <exchangePageView component="impPage" />
+            </view>
+        </views>
+    </functionalDefinition>
+</functional>

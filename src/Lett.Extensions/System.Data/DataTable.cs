@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Dynamic;
 using System.Linq;
 using System.Reflection;
-using Lett.Extensions.Exceptions;
 
 namespace Lett.Extensions
 {
@@ -35,7 +33,7 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
-        /// <exception cref="DataTableException">当前DataTable没有行</exception>
+        /// <exception cref="ArgumentException">当前DataTable没有行</exception>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -45,7 +43,7 @@ namespace Lett.Extensions
         /// </example>
         public static DataRow FirstRow(this DataTable @this)
         {
-            if (!@this.HasRows()) throw new DataTableException("当前DataTable没有行");
+            if (!@this.HasRows()) throw new ArgumentException("当前DataTable没有行");
             return @this.Rows[0];
         }
 
@@ -54,7 +52,7 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <returns></returns>
-        /// <exception cref="DataTableException">当前DataTable没有行</exception>
+        /// <exception cref="ArgumentException">当前DataTable没有行</exception>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -64,7 +62,7 @@ namespace Lett.Extensions
         /// </example>
         public static DataRow LastRow(this DataTable @this)
         {
-            if (!@this.HasRows()) throw new DataTableException("当前DataTable没有行");
+            if (!@this.HasRows()) throw new ArgumentException("当前DataTable没有行");
             return @this.Rows[@this.Rows.Count - 1];
         }
 
@@ -112,8 +110,7 @@ namespace Lett.Extensions
         /// <param name="this"></param>
         /// <param name="columnName">列名</param>
         /// <returns></returns>
-        /// <exception cref="DataTableException">DataTable中不包含<paramref name="columnName" />}</exception>
-        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="ArgumentException">DataTable中不包含<paramref name="columnName" /></exception>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -123,7 +120,7 @@ namespace Lett.Extensions
         /// </example>
         public static Type GetColumnDataType(this DataTable @this, string columnName)
         {
-            if (!@this.Columns.Contains(columnName)) throw new DataTableException(@"DataTable中不包含Column:{columnName}");
+            if (!@this.Columns.Contains(columnName)) throw new ArgumentException($"DataTable中不包含Column:{columnName}");
             return @this.Columns[columnName].DataType;
         }
 
@@ -133,8 +130,7 @@ namespace Lett.Extensions
         /// <param name="this"></param>
         /// <param name="index">索引</param>
         /// <returns></returns>
-        /// <exception cref="DataTableException"><paramref name="index" /> 索引超出了数组范围</exception>
-        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException"><paramref name="index" /> 索引超出了数组范围</exception>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -144,8 +140,8 @@ namespace Lett.Extensions
         /// </example>
         public static Type GetColumnDataType(this DataTable @this, int index)
         {
-            if (index < 0) throw new DataTableException("索引超出了数组范围");
-            if (@this.Columns.Count - 1 < index) throw new DataTableException("索引超出了数组范围");
+            if (index < 0) throw new ArgumentOutOfRangeException(nameof(index), $"{nameof(index)} out of range");
+            if (@this.Columns.Count - 1 < index) throw new ArgumentOutOfRangeException(nameof(index), $"{nameof(index)} out of range");
             return @this.Columns[index].DataType;
         }
 
@@ -204,7 +200,7 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     <para>转换为动态对象</para>
+        ///     <para>转换为动态对象集合</para>
         ///     <para>值为 <see cref="DBNull.Value" /> 转换为 Null </para>
         /// </summary>
         /// <param name="this"></param>
@@ -213,47 +209,26 @@ namespace Lett.Extensions
         ///     <code>
         ///         <![CDATA[
         /// var dt = new DataTable();
-        /// dt.Columns.AddRange(new[] {"Name", "Number"});
-        /// dt.Columns.Add(new DataColumn("Age", typeof(int)));
-        /// dt.Columns.Add(new DataColumn("CreateTime", typeof(DateTime)));
-        /// dt.Rows.Add("Name_1", "Number_1", 10, DateTime.Now);
-        /// dt.Rows.Add("Name_2", "Number_2", 10, DateTime.Now);
-        /// dt.Rows.Add("Name_3", "Number_3", 10, DateTime.Now);
-        /// dt.Rows.Add("Name_4", DBNull.Value, 10, DateTime.Now);
-        /// 
+        /// dt.Columns.Add("col1", typeof(string));
+        /// dt.Columns.Add("col2", typeof(DateTime));
+        /// dt.Columns.Add("col3", typeof(decimal));
+        /// dt.Columns.Add("col4", typeof(string));
+        /// dt.Columns.Add("col5", typeof(string));
+        /// dt.Rows.Add("strVal", new DateTime(2019, 4, 1), 100.23m, DBNull.Value, null);
+        /// dt.Rows.Add("strVal2", new DateTime(2019, 4, 2), 122.23m, DBNull.Value, null);
         /// var rs = dt.ToDynamicObjects().ToList();
         /// 
-        /// // rs[0].Name == "Name_1"
-        /// // rs[0].Number == "Number_1"
-        /// // rs[0].Age == 10
-        /// // rs[0].CreateTime.GetType() == typeof(DateTime)
-        /// 
-        /// // rs[3].Number is null
+        /// // rs[0].col1 == "strVal"
+        /// // rs[0].col2 == new DateTime(2019, 4, 1)
+        /// // rs[1].col3 == 122.23m
+        /// // rs[1].col4 is null
+        /// // rs[1].col5 is null
         ///         ]]>
         ///     </code>
         /// </example>
         public static IEnumerable<dynamic> ToDynamicObjects(this DataTable @this)
         {
-            return @this.RowsEnumerable().Select(row => new DynamicRowObject(row));
-        }
-
-        private sealed class DynamicRowObject : DynamicObject
-        {
-            private readonly DataRow _row;
-
-            internal DynamicRowObject(DataRow row)
-            {
-                _row = row;
-            }
-
-            public override bool TryGetMember(GetMemberBinder binder, out object result)
-            {
-                var rs = _row.Table.Columns.Contains(binder.Name);
-                result = rs
-                             ? _row[binder.Name] != DBNull.Value ? _row[binder.Name] : null
-                             : null;
-                return rs;
-            }
+            return @this.RowsEnumerable().Select(row => row.ToDynamicObject());
         }
     }
 }
