@@ -18,5 +18,16 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(dt.Columns[1].ColumnName, colNames[1]);
             Assert.AreEqual(dt.Columns[2].ColumnName, colNames[2]);
         }
+
+        [TestMethod]
+        public void AddRangeParams_Test()
+        {
+            var dt = new DataTable();
+            dt.Columns.AddRangeParams("Field1", "Field2", "Field3");
+            Assert.AreEqual(dt.Columns.Count, 3);
+            Assert.AreEqual(dt.Columns[0].ColumnName, "Field1");
+            Assert.AreEqual(dt.Columns[1].ColumnName, "Field2");
+            Assert.AreEqual(dt.Columns[2].ColumnName, "Field3");
+        }
     }
 }
