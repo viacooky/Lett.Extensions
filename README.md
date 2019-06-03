@@ -4,7 +4,7 @@
 [![MyGet](https://img.shields.io/myget/lett/v/Lett.Extensions.svg?label=MyGet)](https://www.myget.org/feed/lett/package/nuget/Lett.Extensions)
 ![Nuget](https://img.shields.io/nuget/dt/Lett.Extensions.svg)
 
-![Build Status](https://dev.azure.com/viacooky/Lett.Extensions/_apis/build/status/Lett.Extensions%20Push%20NuGet?branchName=master)
+[![Build Status](https://dev.azure.com/viacooky/Lett.Extensions/_apis/build/status/viacooky.Lett.Extensions?branchName=master)](https://dev.azure.com/viacooky/Lett.Extensions/_build/latest?definitionId=8&branchName=master)
 ![Azure DevOps tests (compact)](https://img.shields.io/azure-devops/tests/viacooky/Lett.Extensions/9.svg)
 ![Azure DevOps coverage (branch)](https://img.shields.io/azure-devops/coverage/viacooky/Lett.Extensions/9/master.svg?color=9cf)
 
