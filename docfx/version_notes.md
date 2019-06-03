@@ -1,5 +1,16 @@
 # Version Notes
 
+### 0.2.6 (2019-06-03)
+
+#### Changed / 变更
+
+- `IDictionary<TKey, TValue>`
+  - `ContainsValue` 加入泛型约束
+  - `ContainsValueAny` 加入泛型约束
+  - `ContainsValueAnyParams` 加入泛型约束
+  - `ContainsValueAll` 加入泛型约束
+  - `ContainsValueAllParams` 加入泛型约束
+
 ### 0.2.5 (2019-05-30)
 
 #### Features / 新增功能
