@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.DataRowExtensions.html",
-          "hash": "yyXr56D3jTG4EaKMFwAX8A=="
+          "hash": "xID7n320hVW/f4lyMM37FQ=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.DataTableExtensions.html",
-          "hash": "e/XNYXvhMGunlhdBophxTA=="
+          "hash": "1Uo7nokGuPBeF4PDyhgAKQ=="
         }
       },
       "is_incremental": false,
@@ -110,30 +110,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Lett.Extensions.Exceptions.DataTableException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Lett.Extensions.Exceptions.DataTableException.html",
-          "hash": "ATwDnrYAwBl37Vd9hWSkoA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Lett.Extensions.Exceptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Lett.Extensions.Exceptions.html",
-          "hash": "ELh16IetwRxuzGRs35Az9g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Lett.Extensions.ICollectionsExtensions.yml",
       "output": {
         ".html": {
@@ -150,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.IDictionaryExtensions.html",
-          "hash": "OLHURDTK4WK/J4hxR62PKg=="
+          "hash": "yd3atdzKS8rZKY2xbkLYRA=="
         }
       },
       "is_incremental": false,
@@ -230,11 +206,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Lett.Extensions.XmlDocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Lett.Extensions.XmlDocumentExtensions.html",
+          "hash": "3XoO8SHlxlmouFTQI3jUqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Lett.Extensions.yml",
       "output": {
         ".html": {
           "relative_path": "api/Lett.Extensions.html",
-          "hash": "PIAgUNOqGKACtytIARv7YQ=="
+          "hash": "V6H5PDTpJYoT2L8EwYFCoQ=="
         }
       },
       "is_incremental": false,
@@ -246,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "RWtpVlD2SNzDI1nCMY+NYw=="
+          "hash": "K/tQ65cqvXpr6n/41gPp2Q=="
         }
       },
       "is_incremental": false,
@@ -318,7 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "XYjN7AP2cELNCoDxDMvdOg=="
+          "hash": "lom4Aytt3n0V7Q4LI/jI7A=="
         }
       },
       "is_incremental": false,
@@ -342,7 +330,7 @@
       "output": {
         ".html": {
           "relative_path": "version_notes.html",
-          "hash": "+U5AhK6hyQj8AX+vJgpOpg=="
+          "hash": "NjaiaAmFhHYcq4lFeQ0quQ=="
         }
       },
       "is_incremental": false,
@@ -360,16 +348,16 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 19,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 18,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

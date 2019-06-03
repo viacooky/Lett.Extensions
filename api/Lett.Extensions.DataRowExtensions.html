@@ -338,6 +338,65 @@
   <h5 id="Lett_Extensions_DataRowExtensions_Cell__1_System_Data_DataRow_System_String_System_Func___0___examples">&#31034;&#20363;</h5>
   <pre><code>var rs = dataRow.Cell&lt;string>(&quot;columnName&quot;, () => &quot;func return value&quot;); </code></pre>
 
+  <a id="Lett_Extensions_DataRowExtensions_ToDynamicObject_" data-uid="Lett.Extensions.DataRowExtensions.ToDynamicObject*"></a>
+  <h4 id="Lett_Extensions_DataRowExtensions_ToDynamicObject_System_Data_DataRow_" data-uid="Lett.Extensions.DataRowExtensions.ToDynamicObject(System.Data.DataRow)">ToDynamicObject(DataRow)</h4>
+  <div class="markdown level1 summary"><p>转换为动态对象集合</p>
+<p>值为 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dbnull.value">Value</a> 转换为 Null </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static dynamic ToDynamicObject(this DataRow this)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.datarow">DataRow</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>如果Cell为 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dbnull.value">Value</a> 则动态对象属性的值为 null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_DataRowExtensions_ToDynamicObject_System_Data_DataRow__examples">&#31034;&#20363;</h5>
+  <pre><code>var dt = new DataTable();
+dt.Columns.Add(&quot;col1&quot;, typeof(string));
+dt.Columns.Add(&quot;col2&quot;, typeof(DateTime));
+dt.Columns.Add(&quot;col3&quot;, typeof(decimal));
+dt.Columns.Add(&quot;col4&quot;, typeof(string));
+dt.Columns.Add(&quot;col5&quot;, typeof(string));
+dt.Rows.Add(&quot;strVal&quot;, new DateTime(2019, 4, 1), 100.23m, DBNull.Value, null);
+var rs = dt.Rows[0].ToDynamicObject();
+
+// rs.col1 == &quot;strVal&quot;
+// rs.col2 == new DateTime(2019, 4, 1)
+// rs.col3 == 100.23m
+// rs.col4 is null
+// rs.col5 is null</code></pre>
+
   <a id="Lett_Extensions_DataRowExtensions_ToEntity_" data-uid="Lett.Extensions.DataRowExtensions.ToEntity*"></a>
   <h4 id="Lett_Extensions_DataRowExtensions_ToEntity__1_System_Data_DataRow_" data-uid="Lett.Extensions.DataRowExtensions.ToEntity``1(System.Data.DataRow)">ToEntity&lt;T&gt;(DataRow)</h4>
   <div class="markdown level1 summary"><p>转换为实体</p>

@@ -241,7 +241,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Lett.Extensions.Exceptions.DataTableException.html">DataTableException</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
         <td><p>当前DataTable没有行</p>
 </td>
       </tr>
@@ -307,13 +307,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Lett.Extensions.Exceptions.DataTableException.html">DataTableException</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
         <td><p><code data-dev-comment-type="paramref" class="paramref">index</code> 索引超出了数组范围</p>
 </td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -377,13 +373,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Lett.Extensions.Exceptions.DataTableException.html">DataTableException</a></td>
-        <td><p>DataTable中不包含<code data-dev-comment-type="paramref" class="paramref">columnName</code>}</p>
-</td>
-      </tr>
-      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
-        <td></td>
+        <td><p>DataTable中不包含<code data-dev-comment-type="paramref" class="paramref">columnName</code></p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -485,7 +477,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Lett.Extensions.Exceptions.DataTableException.html">DataTableException</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
         <td><p>当前DataTable没有行</p>
 </td>
       </tr>
@@ -557,7 +549,7 @@
   </table>
   <a id="Lett_Extensions_DataTableExtensions_ToDynamicObjects_" data-uid="Lett.Extensions.DataTableExtensions.ToDynamicObjects*"></a>
   <h4 id="Lett_Extensions_DataTableExtensions_ToDynamicObjects_System_Data_DataTable_" data-uid="Lett.Extensions.DataTableExtensions.ToDynamicObjects(System.Data.DataTable)">ToDynamicObjects(DataTable)</h4>
-  <div class="markdown level1 summary"><p>转换为动态对象</p>
+  <div class="markdown level1 summary"><p>转换为动态对象集合</p>
 <p>值为 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dbnull.value">Value</a> 转换为 Null </p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -599,22 +591,20 @@
   </table>
   <h5 id="Lett_Extensions_DataTableExtensions_ToDynamicObjects_System_Data_DataTable__examples">&#31034;&#20363;</h5>
   <pre><code>var dt = new DataTable();
-dt.Columns.AddRange(new[] {&quot;Name&quot;, &quot;Number&quot;});
-dt.Columns.Add(new DataColumn(&quot;Age&quot;, typeof(int)));
-dt.Columns.Add(new DataColumn(&quot;CreateTime&quot;, typeof(DateTime)));
-dt.Rows.Add(&quot;Name_1&quot;, &quot;Number_1&quot;, 10, DateTime.Now);
-dt.Rows.Add(&quot;Name_2&quot;, &quot;Number_2&quot;, 10, DateTime.Now);
-dt.Rows.Add(&quot;Name_3&quot;, &quot;Number_3&quot;, 10, DateTime.Now);
-dt.Rows.Add(&quot;Name_4&quot;, DBNull.Value, 10, DateTime.Now);
-
+dt.Columns.Add(&quot;col1&quot;, typeof(string));
+dt.Columns.Add(&quot;col2&quot;, typeof(DateTime));
+dt.Columns.Add(&quot;col3&quot;, typeof(decimal));
+dt.Columns.Add(&quot;col4&quot;, typeof(string));
+dt.Columns.Add(&quot;col5&quot;, typeof(string));
+dt.Rows.Add(&quot;strVal&quot;, new DateTime(2019, 4, 1), 100.23m, DBNull.Value, null);
+dt.Rows.Add(&quot;strVal2&quot;, new DateTime(2019, 4, 2), 122.23m, DBNull.Value, null);
 var rs = dt.ToDynamicObjects().ToList();
 
-// rs[0].Name == &quot;Name_1&quot;
-// rs[0].Number == &quot;Number_1&quot;
-// rs[0].Age == 10
-// rs[0].CreateTime.GetType() == typeof(DateTime)
-
-// rs[3].Number is null</code></pre>
+// rs[0].col1 == &quot;strVal&quot;
+// rs[0].col2 == new DateTime(2019, 4, 1)
+// rs[1].col3 == 122.23m
+// rs[1].col4 is null
+// rs[1].col5 is null</code></pre>
 
   <a id="Lett_Extensions_DataTableExtensions_ToEntityList_" data-uid="Lett.Extensions.DataTableExtensions.ToEntityList*"></a>
   <h4 id="Lett_Extensions_DataTableExtensions_ToEntityList__1_System_Data_DataTable_" data-uid="Lett.Extensions.DataTableExtensions.ToEntityList``1(System.Data.DataTable)">ToEntityList&lt;T&gt;(DataTable)</h4>

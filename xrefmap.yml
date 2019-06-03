@@ -461,6 +461,19 @@ references:
   fullName.vb: Lett.Extensions.DataRowExtensions.Cell(Of T)(System.Data.DataRow, System.String, System.Func(Of T))
   nameWithType: DataRowExtensions.Cell<T>(DataRow, String, Func<T>)
   nameWithType.vb: DataRowExtensions.Cell(Of T)(DataRow, String, Func(Of T))
+- uid: Lett.Extensions.DataRowExtensions.ToDynamicObject(System.Data.DataRow)
+  name: ToDynamicObject(DataRow)
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_ToDynamicObject_System_Data_DataRow_
+  commentId: M:Lett.Extensions.DataRowExtensions.ToDynamicObject(System.Data.DataRow)
+  fullName: Lett.Extensions.DataRowExtensions.ToDynamicObject(System.Data.DataRow)
+  nameWithType: DataRowExtensions.ToDynamicObject(DataRow)
+- uid: Lett.Extensions.DataRowExtensions.ToDynamicObject*
+  name: ToDynamicObject
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_ToDynamicObject_
+  commentId: Overload:Lett.Extensions.DataRowExtensions.ToDynamicObject
+  isSpec: "True"
+  fullName: Lett.Extensions.DataRowExtensions.ToDynamicObject
+  nameWithType: DataRowExtensions.ToDynamicObject
 - uid: Lett.Extensions.DataRowExtensions.ToEntity*
   name: ToEntity
   href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_ToEntity_
@@ -1035,31 +1048,6 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.EnumExtensions.GetDescription
   nameWithType: EnumExtensions.GetDescription
-- uid: Lett.Extensions.Exceptions
-  name: Lett.Extensions.Exceptions
-  href: api/Lett.Extensions.Exceptions.html
-  commentId: N:Lett.Extensions.Exceptions
-  fullName: Lett.Extensions.Exceptions
-  nameWithType: Lett.Extensions.Exceptions
-- uid: Lett.Extensions.Exceptions.DataTableException
-  name: DataTableException
-  href: api/Lett.Extensions.Exceptions.DataTableException.html
-  commentId: T:Lett.Extensions.Exceptions.DataTableException
-  fullName: Lett.Extensions.Exceptions.DataTableException
-  nameWithType: DataTableException
-- uid: Lett.Extensions.Exceptions.DataTableException.#ctor(System.String)
-  name: DataTableException(String)
-  href: api/Lett.Extensions.Exceptions.DataTableException.html#Lett_Extensions_Exceptions_DataTableException__ctor_System_String_
-  commentId: M:Lett.Extensions.Exceptions.DataTableException.#ctor(System.String)
-  fullName: Lett.Extensions.Exceptions.DataTableException.DataTableException(System.String)
-  nameWithType: DataTableException.DataTableException(String)
-- uid: Lett.Extensions.Exceptions.DataTableException.#ctor*
-  name: DataTableException
-  href: api/Lett.Extensions.Exceptions.DataTableException.html#Lett_Extensions_Exceptions_DataTableException__ctor_
-  commentId: Overload:Lett.Extensions.Exceptions.DataTableException.#ctor
-  isSpec: "True"
-  fullName: Lett.Extensions.Exceptions.DataTableException.DataTableException
-  nameWithType: DataTableException.DataTableException
 - uid: Lett.Extensions.ICollectionsExtensions
   name: ICollectionsExtensions
   href: api/Lett.Extensions.ICollectionsExtensions.html
@@ -2091,3 +2079,22 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.TypeExtensions.HasProperty
   nameWithType: TypeExtensions.HasProperty
+- uid: Lett.Extensions.XmlDocumentExtensions
+  name: XmlDocumentExtensions
+  href: api/Lett.Extensions.XmlDocumentExtensions.html
+  commentId: T:Lett.Extensions.XmlDocumentExtensions
+  fullName: Lett.Extensions.XmlDocumentExtensions
+  nameWithType: XmlDocumentExtensions
+- uid: Lett.Extensions.XmlDocumentExtensions.SelectNodesEnumerable(System.Xml.XmlDocument,System.String)
+  name: SelectNodesEnumerable(XmlDocument, String)
+  href: api/Lett.Extensions.XmlDocumentExtensions.html#Lett_Extensions_XmlDocumentExtensions_SelectNodesEnumerable_System_Xml_XmlDocument_System_String_
+  commentId: M:Lett.Extensions.XmlDocumentExtensions.SelectNodesEnumerable(System.Xml.XmlDocument,System.String)
+  fullName: Lett.Extensions.XmlDocumentExtensions.SelectNodesEnumerable(System.Xml.XmlDocument, System.String)
+  nameWithType: XmlDocumentExtensions.SelectNodesEnumerable(XmlDocument, String)
+- uid: Lett.Extensions.XmlDocumentExtensions.SelectNodesEnumerable*
+  name: SelectNodesEnumerable
+  href: api/Lett.Extensions.XmlDocumentExtensions.html#Lett_Extensions_XmlDocumentExtensions_SelectNodesEnumerable_
+  commentId: Overload:Lett.Extensions.XmlDocumentExtensions.SelectNodesEnumerable
+  isSpec: "True"
+  fullName: Lett.Extensions.XmlDocumentExtensions.SelectNodesEnumerable
+  nameWithType: XmlDocumentExtensions.SelectNodesEnumerable
