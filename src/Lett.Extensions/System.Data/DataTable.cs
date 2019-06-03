@@ -203,7 +203,6 @@ namespace Lett.Extensions
             return @this.RowsEnumerable().Select(s => s.ToEntity(converter)).ToList();
         }
 
-
         /// <summary>
         ///     <para>转换为动态对象</para>
         ///     <para>值为 <see cref="DBNull.Value" /> 转换为 Null </para>

@@ -87,7 +87,7 @@ namespace Lett.Extensions
         {
             if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
             if (keys == null) throw new ArgumentNullException(nameof(keys), $"{nameof(keys)} is null");
-            return keys.Any(@this.ContainsKey);
+            return @this.ContainsKeyAny(keys);
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace Lett.Extensions
         {
             if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
             if (keys == null) throw new ArgumentNullException(nameof(keys), $"{nameof(keys)} is null");
-            return keys.All(@this.ContainsKey);
+            return @this.ContainsKeyAll(keys);
         }
 
         #endregion
@@ -263,7 +263,7 @@ namespace Lett.Extensions
         {
             if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
             if (values == null) throw new ArgumentNullException(nameof(values), $"{nameof(values)} is null");
-            return values.Any(@this.ContainsValue);
+            return @this.ContainsValueAny(values);
         }
 
         /// <summary>
@@ -341,7 +341,7 @@ namespace Lett.Extensions
         {
             if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
             if (values == null) throw new ArgumentNullException(nameof(values), $"{nameof(values)} is null");
-            return values.All(@this.ContainsValue);
+            return @this.ContainsValueAll(values);
         }
 
         #endregion
