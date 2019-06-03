@@ -26,7 +26,7 @@ namespace Lett.Extensions
         /// </example>
         public static bool ContainsIndex<T>(this T[] @this, int index)
         {
-            return 0 <= index && index < @this.Length;
+            return index >= 0 && index < @this.Length;
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace Lett.Extensions
         /// </example>
         public static bool ContainsIndex(this Array @this, int index)
         {
-            return 0 <= index && index < @this.Length;
+            return index >= 0 && index < @this.Length;
         }
     }
 }
