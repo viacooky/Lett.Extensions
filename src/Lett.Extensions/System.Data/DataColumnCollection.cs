@@ -49,7 +49,5 @@ namespace Lett.Extensions
         {
             @this.AddRange(columnNames);
         }
-        
-        
     }
 }
