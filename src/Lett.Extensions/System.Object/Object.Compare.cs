@@ -175,6 +175,7 @@ namespace Lett.Extensions
             return items != null && @this.In(items, comparer);
         }
 
+
         /// <summary>
         ///     当前对象类型是否 Class
         /// </summary>
