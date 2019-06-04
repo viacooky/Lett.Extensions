@@ -129,5 +129,31 @@ namespace Lett.Extensions.Test
             Assert.IsFalse(test6.IsLike(null));
             Assert.IsTrue(test5.IsLike("*"));
         }
+
+        [TestMethod]
+        public void IsEmpty_Test()
+        {
+            var a = "";
+            var b = " ";
+            Assert.IsTrue(a.IsEmpty());
+            Assert.IsFalse(b.IsEmpty());
+        }
+
+        [TestMethod]
+        public void IsWhiteSpace_Test()
+        {
+            var a = "";
+            var b = " ";
+            var c = "\r";
+            var d = "\t";
+            var e = "\n";
+            var f = "\r \t";
+            Assert.IsTrue(a.IsWhiteSpace());
+            Assert.IsTrue(b.IsWhiteSpace());
+            Assert.IsTrue(c.IsWhiteSpace());
+            Assert.IsTrue(d.IsWhiteSpace());
+            Assert.IsTrue(e.IsWhiteSpace());
+            Assert.IsTrue(f.IsWhiteSpace());
+        }
     }
 }

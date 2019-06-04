@@ -284,5 +284,55 @@ namespace Lett.Extensions
             var regexPattern = @"^{0}$".Format(newPattern.ToString());
             return @this.RegexIsMatch(regexPattern, RegexOptions.Singleline);
         }
+
+        /// <summary>
+        ///     是否空字符串
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var a = "";
+        /// var b = " ";
+        ///
+        /// a.IsEmpty(); // true
+        /// b.IsEmpty(); // false
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static bool IsEmpty(this string @this)
+        {
+            return @this.Equals(string.Empty);
+        }
+
+        /// <summary>
+        ///     是否空白字符串
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var a = "";
+        /// var b = " ";
+        /// var c = "\r";
+        /// var d = "\t";
+        /// var e = "\n";
+        /// var f = "\r \t";
+        /// 
+        /// a.IsWhiteSpace(); // true
+        /// b.IsWhiteSpace(); // true
+        /// c.IsWhiteSpace(); // true
+        /// d.IsWhiteSpace(); // true
+        /// e.IsWhiteSpace(); // true
+        /// f.IsWhiteSpace(); // true
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static bool IsWhiteSpace(this string @this)
+        {
+            return @this.All(char.IsWhiteSpace);
+        }
     }
 }
