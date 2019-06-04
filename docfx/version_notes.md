@@ -7,6 +7,9 @@
 - `String`
   - `IsWhiteSpace` 是否空白字符串
   - `IsEmpty` 是否空字符串
+- `Object`
+  - `NotIn` 当前对象是否不存在于集合内
+  - `NotInParams` 当前对象是否不存在于数组内
 
 ### 0.2.6 (2019-06-03)
 
