@@ -1,5 +1,13 @@
 # Version Notes
 
+### 0.2.7 (2019-06-05)
+
+#### Features / 新增功能
+
+- `String`
+  - `IsWhiteSpace` 是否空白字符串
+  - `IsEmpty` 是否空字符串
+
 ### 0.2.6 (2019-06-03)
 
 #### Features / 新增功能
