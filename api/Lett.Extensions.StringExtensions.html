@@ -672,6 +672,54 @@ tmp.Format(new[]{&quot;aaa&quot;,&quot;bbb&quot;}); // &quot;aaa-bbb&quot; </cod
       </tr>
     </tbody>
   </table>
+  <a id="Lett_Extensions_StringExtensions_IsEmpty_" data-uid="Lett.Extensions.StringExtensions.IsEmpty*"></a>
+  <h4 id="Lett_Extensions_StringExtensions_IsEmpty_System_String_" data-uid="Lett.Extensions.StringExtensions.IsEmpty(System.String)">IsEmpty(String)</h4>
+  <div class="markdown level1 summary"><p>是否空字符串</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsEmpty(this string this)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_IsEmpty_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>var a = &quot;&quot;;
+var b = &quot; &quot;;
+
+a.IsEmpty(); // true
+b.IsEmpty(); // false</code></pre>
+
   <a id="Lett_Extensions_StringExtensions_IsLike_" data-uid="Lett.Extensions.StringExtensions.IsLike*"></a>
   <h4 id="Lett_Extensions_StringExtensions_IsLike_System_String_System_String_" data-uid="Lett.Extensions.StringExtensions.IsLike(System.String,System.String)">IsLike(String, String)</h4>
   <div class="markdown level1 summary"><p>使用通配符比较字符串是否相似</p>
@@ -987,6 +1035,62 @@ test1.IsLike(&quot;abc*fg*&quot;);  // true</code></pre>
   <pre><code>&quot;http://sdf.com&quot;.IsUrl(); // true
 &quot;http://sdf.c.dddd.cccc.saaa.com&quot;.IsUrl(); // true
 &quot;www.sdf.com&quot;.IsUrl(); // false</code></pre>
+
+  <a id="Lett_Extensions_StringExtensions_IsWhiteSpace_" data-uid="Lett.Extensions.StringExtensions.IsWhiteSpace*"></a>
+  <h4 id="Lett_Extensions_StringExtensions_IsWhiteSpace_System_String_" data-uid="Lett.Extensions.StringExtensions.IsWhiteSpace(System.String)">IsWhiteSpace(String)</h4>
+  <div class="markdown level1 summary"><p>是否空白字符串</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsWhiteSpace(this string this)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_IsWhiteSpace_System_String__examples">&#31034;&#20363;</h5>
+  <pre><code>var a = &quot;&quot;;
+var b = &quot; &quot;;
+var c = &quot;\r&quot;;
+var d = &quot;\t&quot;;
+var e = &quot;\n&quot;;
+var f = &quot;\r \t&quot;;
+
+a.IsWhiteSpace(); // true
+b.IsWhiteSpace(); // true
+c.IsWhiteSpace(); // true
+d.IsWhiteSpace(); // true
+e.IsWhiteSpace(); // true
+f.IsWhiteSpace(); // true</code></pre>
 
   <a id="Lett_Extensions_StringExtensions_Left_" data-uid="Lett.Extensions.StringExtensions.Left*"></a>
   <h4 id="Lett_Extensions_StringExtensions_Left_System_String_System_Int32_" data-uid="Lett.Extensions.StringExtensions.Left(System.String,System.Int32)">Left(String, Int32)</h4>

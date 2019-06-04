@@ -1640,6 +1640,56 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.ObjectExtensions.IsValueType
   nameWithType: ObjectExtensions.IsValueType
+- uid: Lett.Extensions.ObjectExtensions.NotIn*
+  name: NotIn
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_NotIn_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.NotIn
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.NotIn
+  nameWithType: ObjectExtensions.NotIn
+- uid: Lett.Extensions.ObjectExtensions.NotIn``1(``0,System.Collections.Generic.IEnumerable{``0})
+  name: NotIn<T>(T, IEnumerable<T>)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_NotIn__1___0_System_Collections_Generic_IEnumerable___0__
+  commentId: M:Lett.Extensions.ObjectExtensions.NotIn``1(``0,System.Collections.Generic.IEnumerable{``0})
+  name.vb: NotIn(Of T)(T, IEnumerable(Of T))
+  fullName: Lett.Extensions.ObjectExtensions.NotIn<T>(T, System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Lett.Extensions.ObjectExtensions.NotIn(Of T)(T, System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: ObjectExtensions.NotIn<T>(T, IEnumerable<T>)
+  nameWithType.vb: ObjectExtensions.NotIn(Of T)(T, IEnumerable(Of T))
+- uid: Lett.Extensions.ObjectExtensions.NotIn``1(``0,System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})
+  name: NotIn<T>(T, IEnumerable<T>, IEqualityComparer<T>)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_NotIn__1___0_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__
+  commentId: M:Lett.Extensions.ObjectExtensions.NotIn``1(``0,System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})
+  name.vb: NotIn(Of T)(T, IEnumerable(Of T), IEqualityComparer(Of T))
+  fullName: Lett.Extensions.ObjectExtensions.NotIn<T>(T, System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEqualityComparer<T>)
+  fullName.vb: Lett.Extensions.ObjectExtensions.NotIn(Of T)(T, System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEqualityComparer(Of T))
+  nameWithType: ObjectExtensions.NotIn<T>(T, IEnumerable<T>, IEqualityComparer<T>)
+  nameWithType.vb: ObjectExtensions.NotIn(Of T)(T, IEnumerable(Of T), IEqualityComparer(Of T))
+- uid: Lett.Extensions.ObjectExtensions.NotInParams*
+  name: NotInParams
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_NotInParams_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.NotInParams
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.NotInParams
+  nameWithType: ObjectExtensions.NotInParams
+- uid: Lett.Extensions.ObjectExtensions.NotInParams``1(``0,``0[])
+  name: NotInParams<T>(T, T[])
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_NotInParams__1___0___0___
+  commentId: M:Lett.Extensions.ObjectExtensions.NotInParams``1(``0,``0[])
+  name.vb: NotInParams(Of T)(T, T())
+  fullName: Lett.Extensions.ObjectExtensions.NotInParams<T>(T, T[])
+  fullName.vb: Lett.Extensions.ObjectExtensions.NotInParams(Of T)(T, T())
+  nameWithType: ObjectExtensions.NotInParams<T>(T, T[])
+  nameWithType.vb: ObjectExtensions.NotInParams(Of T)(T, T())
+- uid: Lett.Extensions.ObjectExtensions.NotInParams``1(``0,System.Collections.Generic.IEqualityComparer{``0},``0[])
+  name: NotInParams<T>(T, IEqualityComparer<T>, T[])
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_NotInParams__1___0_System_Collections_Generic_IEqualityComparer___0____0___
+  commentId: M:Lett.Extensions.ObjectExtensions.NotInParams``1(``0,System.Collections.Generic.IEqualityComparer{``0},``0[])
+  name.vb: NotInParams(Of T)(T, IEqualityComparer(Of T), T())
+  fullName: Lett.Extensions.ObjectExtensions.NotInParams<T>(T, System.Collections.Generic.IEqualityComparer<T>, T[])
+  fullName.vb: Lett.Extensions.ObjectExtensions.NotInParams(Of T)(T, System.Collections.Generic.IEqualityComparer(Of T), T())
+  nameWithType: ObjectExtensions.NotInParams<T>(T, IEqualityComparer<T>, T[])
+  nameWithType.vb: ObjectExtensions.NotInParams(Of T)(T, IEqualityComparer(Of T), T())
 - uid: Lett.Extensions.ObjectExtensions.Pipe*
   name: Pipe
   href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_Pipe_
@@ -1823,6 +1873,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.StringExtensions.IsEmail
   nameWithType: StringExtensions.IsEmail
+- uid: Lett.Extensions.StringExtensions.IsEmpty(System.String)
+  name: IsEmpty(String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsEmpty_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.IsEmpty(System.String)
+  fullName: Lett.Extensions.StringExtensions.IsEmpty(System.String)
+  nameWithType: StringExtensions.IsEmpty(String)
+- uid: Lett.Extensions.StringExtensions.IsEmpty*
+  name: IsEmpty
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsEmpty_
+  commentId: Overload:Lett.Extensions.StringExtensions.IsEmpty
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.IsEmpty
+  nameWithType: StringExtensions.IsEmpty
 - uid: Lett.Extensions.StringExtensions.IsLike(System.String,System.String)
   name: IsLike(String, String)
   href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsLike_System_String_System_String_
@@ -1901,6 +1964,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.StringExtensions.IsUrl
   nameWithType: StringExtensions.IsUrl
+- uid: Lett.Extensions.StringExtensions.IsWhiteSpace(System.String)
+  name: IsWhiteSpace(String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsWhiteSpace_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.IsWhiteSpace(System.String)
+  fullName: Lett.Extensions.StringExtensions.IsWhiteSpace(System.String)
+  nameWithType: StringExtensions.IsWhiteSpace(String)
+- uid: Lett.Extensions.StringExtensions.IsWhiteSpace*
+  name: IsWhiteSpace
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_IsWhiteSpace_
+  commentId: Overload:Lett.Extensions.StringExtensions.IsWhiteSpace
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.IsWhiteSpace
+  nameWithType: StringExtensions.IsWhiteSpace
 - uid: Lett.Extensions.StringExtensions.Left(System.String,System.Int32)
   name: Left(String, Int32)
   href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_Left_System_String_System_Int32_
