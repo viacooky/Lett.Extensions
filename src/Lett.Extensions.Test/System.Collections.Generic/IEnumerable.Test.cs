@@ -38,6 +38,13 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs.Count, 2);
             Assert.AreEqual(rs[0], "aa");
             Assert.AreEqual(rs[1], "bb");
+
+            var strList = new List<string> {"aa", "bb"};
+            var rs2     = new Dictionary<int, string>();
+            strList.ForEach((index, str) => rs2.Add(index, str));
+            Assert.AreEqual(rs2.Count, 2);
+            Assert.AreEqual(rs2[0], "aa");
+            Assert.AreEqual(rs2[1], "bb");
         }
     }
 }
