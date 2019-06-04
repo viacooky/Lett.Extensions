@@ -153,6 +153,51 @@ namespace Lett.Extensions.Test
             Assert.IsTrue(obj5.IsValueType());
         }
 
+        [TestMethod]
+        public void NotIn_Test1()
+        {
+            var dtItems = new[] {new DateTime(2018, 1, 1), new DateTime(2019, 1, 1, 9, 10, 1), DateTime.Today};
+            var dt2     = DateTime.Today;
+            Assert.IsFalse(dt2.NotIn(dtItems));
+
+            var    stringItems = new[] {"a", "b", null};
+            var    s           = "a";
+            string s2          = null;
+            Assert.IsFalse(s.NotIn(stringItems));
+            Assert.IsFalse(s.NotIn(stringItems));
+
+            string[] stringItems2 = null;
+            var      s3           = "a";
+            Assert.IsTrue(s3.NotIn(stringItems2));
+        }
+
+        [TestMethod]
+        public void NotIn_Test2()
+        {
+            var dtItems = new[] {new DateTime(2018, 1, 1), new DateTime(2019, 1, 1, 9, 10, 1), DateTime.Today};
+            var dt      = new DateTime(2019, 5, 25, 1, 1, 1);
+
+            Assert.IsFalse(dt.NotIn(dtItems, new MyComparer()));
+        }
+
+        [TestMethod]
+        public void NotInParams_Test1()
+        {
+            var rs = "a".NotInParams("A", "a");
+            Assert.IsFalse(rs);
+        }
+
+        [TestMethod]
+        public void NotInParams_Test2()
+        {
+            var rs1 = "a".NotInParams(StringComparer.CurrentCultureIgnoreCase, "A", "B");
+            var rs2 = "a".NotInParams(StringComparer.Ordinal, "A", "B");
+            var rs3 = "a".NotInParams(StringComparer.Ordinal, null);
+            Assert.IsFalse(rs1);
+            Assert.IsTrue(rs2);
+            Assert.IsTrue(rs3);
+        }
+
         private class MyComparer : IEqualityComparer<DateTime>
         {
             public bool Equals(DateTime x, DateTime y)
