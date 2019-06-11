@@ -190,26 +190,3 @@ jobs:
           nuGetFeedType: external
           publishFeedCredentials: myget.org
           packagesToPush: '$(nugetPackPath)/**/*.nupkg;!$(nugetPackPath)/**/*.symbols.nupkg'
-  # sonarcloud
-  - job: sonarcloud
-    pool:
-        name: Hosted VS2017
-    steps:
-      - task: SonarCloudPrepare@1
-        inputs:
-          SonarCloud: 'https://sonarcloud.io'
-          organization: 'viacooky-github'
-          scannerMode: 'MSBuild'
-          projectKey: '6dba6feabc0b926693556c9f4fb70543e8a1b463'
-          projectName: 'Lett.Extensions'
-      - task: VSBuild@1
-        inputs:
-          solution: 'src/Lett.Extensions.sln'
-          configuration: 'Release'
-          clean: true
-          restoreNugetPackages: true
-          msbuildArchitecture: 'x64'
-      - task: SonarCloudAnalyze@1
-      - task: SonarCloudPublish@1
-        inputs:
-          pollingTimeoutSec: '300'
