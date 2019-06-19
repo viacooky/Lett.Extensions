@@ -8,7 +8,7 @@ namespace Lett.Extensions
     ///     IEnumerable 扩展方法
     /// </summary>
     // ReSharper disable once InconsistentNaming
-    public static class IEnumerableExtensions
+    public static partial class IEnumerableExtensions
     {
         /// <summary>
         ///     是否空或空集合
