@@ -303,6 +303,84 @@ var rs = arr.ContainsAny(match); // true</code></pre>
       </tr>
     </tbody>
   </table>
+  <a id="Lett_Extensions_IEnumerableExtensions_ForEach_" data-uid="Lett.Extensions.IEnumerableExtensions.ForEach*"></a>
+  <h4 id="Lett_Extensions_IEnumerableExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action_System_Int32___0__" data-uid="Lett.Extensions.IEnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{System.Int32,``0})">ForEach&lt;T&gt;(IEnumerable&lt;T&gt;, Action&lt;Int32, T&gt;)</h4>
+  <div class="markdown level1 summary"><p>对指定集合的每个元素执行指定操作。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ForEach&lt;T&gt;(this IEnumerable&lt;T&gt; this, Action&lt;int, T&gt; action)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, T&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td><p>指定操作</p>
+<p>int: 数组元素的索引</p>
+<p>T: 元素</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>元素类型</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IEnumerableExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action_System_Int32___0___examples">&#31034;&#20363;</h5>
+  <pre><code>var arr = new[] {&quot;aa&quot;, &quot;bb&quot;};
+var rs  = new Dictionary&lt;int, string>();
+arr.ForEach((index, str) => rs.Add(index, str));
+// rs[0] = &quot;aa&quot;
+// rs[1] = &quot;bb&quot;</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">action</code> is null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Lett_Extensions_IEnumerableExtensions_IsNullOrEmpty_" data-uid="Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty*"></a>
   <h4 id="Lett_Extensions_IEnumerableExtensions_IsNullOrEmpty__1_System_Collections_Generic_IEnumerable___0__" data-uid="Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0})">IsNullOrEmpty&lt;T&gt;(IEnumerable&lt;T&gt;)</h4>
   <div class="markdown level1 summary"><p>是否空或空集合</p>
@@ -367,6 +445,111 @@ var rs = arr.IsNullOrEmpty(); // false
 var arr2 = new string[] { };
 var rs2 = arr.IsNullOrEmpty(); // true</code></pre>
 
+  <a id="Lett_Extensions_IEnumerableExtensions_ToFormatString_" data-uid="Lett.Extensions.IEnumerableExtensions.ToFormatString*"></a>
+  <h4 id="Lett_Extensions_IEnumerableExtensions_ToFormatString__1_System_Collections_Generic_IEnumerable___0__System_String_System_Func___0_System_Object____" data-uid="Lett.Extensions.IEnumerableExtensions.ToFormatString``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Func{``0,System.Object[]})">ToFormatString&lt;T&gt;(IEnumerable&lt;T&gt;, String, Func&lt;T, Object[]&gt;)</h4>
+  <div class="markdown level1 summary"><p>格式化为字符串</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ToFormatString&lt;T&gt;(this IEnumerable&lt;T&gt; this, string formatStr, Func&lt;T, object[]&gt; formatParams)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">formatStr</span></td>
+        <td><p>格式化字符串，如：&quot;[{0}]&quot;</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]&gt;</td>
+        <td><span class="parametername">formatParams</span></td>
+        <td><p>格式化字符串参数，需要与格式化字符串对应</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">&#31867;&#22411;&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IEnumerableExtensions_ToFormatString__1_System_Collections_Generic_IEnumerable___0__System_String_System_Func___0_System_Object_____examples">&#31034;&#20363;</h5>
+  <pre><code>var input = new List&lt;string> {&quot;aa&quot;, &quot;bb&quot;, &quot;cc&quot;, &quot;dd&quot;};
+var rs = input.FormatString(&quot;[{0}]&quot;, s => new []{s});
+
+// rs = &quot;[aa][bb][cc][dd]&quot;</code></pre>
+
+  <pre><code>var input2 = new Dictionary&lt;string,object>
+{
+{&quot;key1&quot;,1},
+{&quot;key2&quot;,&quot;value2&quot;},
+{&quot;key3&quot;,&quot;value3&quot;}
+};
+
+var rs2 = input2.FormatString(&quot;[{0} - {1}]\r\n&quot;, pair => new[] {pair.Key, pair.Value});
+
+// rs2 = &quot;[key1 - 1]\r\n[key2 - value2]\r\n[key3 - value3]\r\n&quot;</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">formatStr</code> 为空</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

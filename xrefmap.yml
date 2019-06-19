@@ -1267,6 +1267,22 @@ references:
   fullName.vb: Lett.Extensions.IEnumerableExtensions.ContainsAny(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of T))
   nameWithType: IEnumerableExtensions.ContainsAny<T>(IEnumerable<T>, IEnumerable<T>)
   nameWithType.vb: IEnumerableExtensions.ContainsAny(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+- uid: Lett.Extensions.IEnumerableExtensions.ForEach*
+  name: ForEach
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_ForEach_
+  commentId: Overload:Lett.Extensions.IEnumerableExtensions.ForEach
+  isSpec: "True"
+  fullName: Lett.Extensions.IEnumerableExtensions.ForEach
+  nameWithType: IEnumerableExtensions.ForEach
+- uid: Lett.Extensions.IEnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{System.Int32,``0})
+  name: ForEach<T>(IEnumerable<T>, Action<Int32, T>)
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action_System_Int32___0__
+  commentId: M:Lett.Extensions.IEnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{System.Int32,``0})
+  name.vb: ForEach(Of T)(IEnumerable(Of T), Action(Of Int32, T))
+  fullName: Lett.Extensions.IEnumerableExtensions.ForEach<T>(System.Collections.Generic.IEnumerable<T>, System.Action<System.Int32, T>)
+  fullName.vb: Lett.Extensions.IEnumerableExtensions.ForEach(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Action(Of System.Int32, T))
+  nameWithType: IEnumerableExtensions.ForEach<T>(IEnumerable<T>, Action<Int32, T>)
+  nameWithType.vb: IEnumerableExtensions.ForEach(Of T)(IEnumerable(Of T), Action(Of Int32, T))
 - uid: Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty*
   name: IsNullOrEmpty
   href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_IsNullOrEmpty_
@@ -1283,6 +1299,22 @@ references:
   fullName.vb: Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty(Of T)(System.Collections.Generic.IEnumerable(Of T))
   nameWithType: IEnumerableExtensions.IsNullOrEmpty<T>(IEnumerable<T>)
   nameWithType.vb: IEnumerableExtensions.IsNullOrEmpty(Of T)(IEnumerable(Of T))
+- uid: Lett.Extensions.IEnumerableExtensions.ToFormatString*
+  name: ToFormatString
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_ToFormatString_
+  commentId: Overload:Lett.Extensions.IEnumerableExtensions.ToFormatString
+  isSpec: "True"
+  fullName: Lett.Extensions.IEnumerableExtensions.ToFormatString
+  nameWithType: IEnumerableExtensions.ToFormatString
+- uid: Lett.Extensions.IEnumerableExtensions.ToFormatString``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Func{``0,System.Object[]})
+  name: ToFormatString<T>(IEnumerable<T>, String, Func<T, Object[]>)
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_ToFormatString__1_System_Collections_Generic_IEnumerable___0__System_String_System_Func___0_System_Object____
+  commentId: M:Lett.Extensions.IEnumerableExtensions.ToFormatString``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Func{``0,System.Object[]})
+  name.vb: ToFormatString(Of T)(IEnumerable(Of T), String, Func(Of T, Object()))
+  fullName: Lett.Extensions.IEnumerableExtensions.ToFormatString<T>(System.Collections.Generic.IEnumerable<T>, System.String, System.Func<T, System.Object[]>)
+  fullName.vb: Lett.Extensions.IEnumerableExtensions.ToFormatString(Of T)(System.Collections.Generic.IEnumerable(Of T), System.String, System.Func(Of T, System.Object()))
+  nameWithType: IEnumerableExtensions.ToFormatString<T>(IEnumerable<T>, String, Func<T, Object[]>)
+  nameWithType.vb: IEnumerableExtensions.ToFormatString(Of T)(IEnumerable(Of T), String, Func(Of T, Object()))
 - uid: Lett.Extensions.IntExtensions
   name: IntExtensions
   href: api/Lett.Extensions.IntExtensions.html
