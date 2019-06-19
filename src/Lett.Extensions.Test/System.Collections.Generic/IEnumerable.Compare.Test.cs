@@ -1,9 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
 {
     [TestClass]
-    public class EnumerableTest
+    public class EnumerableCompareTest
     {
         [TestMethod]
         public void IsNullOrEmpty_Test()
@@ -26,6 +27,24 @@ namespace Lett.Extensions.Test
             Assert.IsFalse(arr.ContainsAll(match));
             Assert.IsTrue(arr.ContainsAny(match2));
             Assert.IsTrue(arr.ContainsAll(match2));
+        }
+
+        [TestMethod]
+        public void ForEach_Test()
+        {
+            var arr = new[] {"aa", "bb"};
+            var rs  = new Dictionary<int, string>();
+            arr.ForEach((index, str) => rs.Add(index, str));
+            Assert.AreEqual(rs.Count, 2);
+            Assert.AreEqual(rs[0], "aa");
+            Assert.AreEqual(rs[1], "bb");
+
+            var strList = new List<string> {"aa", "bb"};
+            var rs2     = new Dictionary<int, string>();
+            strList.ForEach((index, str) => rs2.Add(index, str));
+            Assert.AreEqual(rs2.Count, 2);
+            Assert.AreEqual(rs2[0], "aa");
+            Assert.AreEqual(rs2[1], "bb");
         }
     }
 }
