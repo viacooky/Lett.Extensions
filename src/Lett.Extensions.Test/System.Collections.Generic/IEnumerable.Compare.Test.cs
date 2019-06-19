@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Lett.Extensions.Test
 {
     [TestClass]
-    public class EnumerableTest
+    public class EnumerableCompareTest
     {
         [TestMethod]
         public void IsNullOrEmpty_Test()

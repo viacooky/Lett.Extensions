@@ -6,6 +6,7 @@
 
 - `IEnumerable<T>`
   - `ForEach<T>(this IEnumerable<T> @this, Action<int, T> action)` 对指定集合的每个元素执行指定操作
+  - `ToFormatString<T>(IEnumerable<T>, String, Func<T, Object[]>)` 格式化为字符串
 
 ### 0.2.7 (2019-06-05)
 
