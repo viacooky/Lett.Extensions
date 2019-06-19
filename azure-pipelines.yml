@@ -10,7 +10,7 @@ trigger:
       - docs/*
 
 variables:
-  dotnetVersion: 2.2.100
+  dotnetVersion: 2.2.300
   nugetPackPath: './nugetPacks'
   TestProject: '**/Lett.Extensions.Test.csproj'
 
