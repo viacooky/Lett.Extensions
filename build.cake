@@ -1,6 +1,6 @@
-#tool Cake.CoreCLR
-#addin "Cake.DocFx"
-#tool "docfx.console"
+#tool nuget:?package=Cake.CoreCLR&version=0.33.0
+#addin nuget:?package=Cake.DocFx&version=0.13.0
+#tool nuget:?package=docfx.console&version=2.42.4
 // ------------------------------------------------------------------
 // 参数定义
 // ------------------------------------------------------------------
