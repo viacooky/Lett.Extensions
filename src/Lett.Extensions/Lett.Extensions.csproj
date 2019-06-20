@@ -24,6 +24,10 @@ Version Notes: https://viacooky.github.io/Lett.Extensions/version_notes.html</De
 https://viacooky.github.io/Lett.Extensions/version_notes.html</PackageReleaseNotes>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DocumentationFile>bin\Release\Lett.Extensions.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Include="LICENSE.txt">
       <Pack>True</Pack>
