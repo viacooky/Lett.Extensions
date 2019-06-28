@@ -5,8 +5,10 @@
 #### Features / 新增功能
 
 - `String`
-  - `AppendPrefixIfNotExist(String, StringComparison)` 如果字符串不包含指定前缀，则添加前缀
-  - `AppendSuffixIfNotExist(String, StringComparison)` 如果字符串不包含指定后缀，则添加后缀
+  - `AppendPrefixIfNotExist` 如果字符串不包含指定前缀，则添加前缀
+  - `AppendSuffixIfNotExist` 如果字符串不包含指定后缀，则添加后缀
+  - `RemovePrefix` 移除前缀，若前缀不符则返回原字符串
+  - `RemoveSuffix` 移除后缀，若后缀不符则返回原字符串
 
 ### 0.2.9 (2019-06-21)
 

@@ -66,7 +66,6 @@ namespace Lett.Extensions
             return @this != null && @this.Length > length ? @this.Substring(@this.Length - length) : @this;
         }
 
-
         /// <summary>
         ///     <para>如果字符串不包含指定前缀，则添加前缀</para>
         ///     <para>默认不区分大小写</para>
@@ -102,8 +101,8 @@ namespace Lett.Extensions
             if (@this == null) throw new ArgumentNullException(nameof(@this), "不允许为空");
             if (prefix == null) throw new ArgumentNullException(nameof(prefix), "不允许为空");
             return @this.StartsWith(prefix, stringComparison)
-                ? @this
-                : $"{prefix}{@this}";
+                       ? @this
+                       : $"{prefix}{@this}";
         }
 
         /// <summary>
@@ -141,8 +140,82 @@ namespace Lett.Extensions
             if (@this == null) throw new ArgumentNullException(nameof(@this), "不允许为空");
             if (suffix == null) throw new ArgumentNullException(nameof(suffix), "不允许为空");
             return @this.EndsWith(suffix, stringComparison)
-                ? @this
-                : $"{@this}{suffix}";
+                       ? @this
+                       : $"{@this}{suffix}";
+        }
+
+        /// <summary>
+        ///     <para>移除前缀，若前缀不符则返回原字符串</para>
+        ///     <para>默认不区分大小写</para>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="prefix">前缀</param>
+        /// <param name="stringComparison"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="this" /> 不允许为空</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="prefix" /> 不允许为空</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// "t_table".RemovePrefix("T_");                                       // "table"
+        /// "t_table".RemovePrefix("T_", StringComparison.Ordinal);             // "t_table"
+        /// "t_table".RemovePrefix("aaaaaaaaaaa", StringComparison.Ordinal);    // "t_table"
+        /// "t_table".RemovePrefix("T_TABLE");                                  // ""
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// "t_table".RemovePrefix(null);           // throw ArgumentNullException 
+        /// default(string).RemovePrefix("ddd");    // throw ArgumentNullException 
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static string RemovePrefix(this string @this, string prefix, StringComparison stringComparison = StringComparison.OrdinalIgnoreCase)
+        {
+            if (@this == null) throw new ArgumentNullException(nameof(@this), "不允许为空");
+            if (prefix == null) throw new ArgumentNullException(nameof(prefix), "不允许为空");
+            return @this.StartsWith(prefix, stringComparison)
+                       ? @this.Substring(prefix.Length, @this.Length - prefix.Length)
+                       : @this;
+        }
+
+        /// <summary>
+        ///     <para>移除后缀，若后缀不符则返回原字符串</para>
+        ///     <para>默认不区分大小写</para>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="suffix">后缀</param>
+        /// <param name="stringComparison"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="this" /> 不允许为空</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="suffix" /> 不允许为空</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// "logo.jpg".RemoveSuffix(".JPg");                            // "logo"
+        /// "logo.jpg".RemoveSuffix(".JPG", StringComparison.Ordinal);  // "logo.jpg"
+        /// "logo.jpg".RemoveSuffix("aaaaaaaa");                        // "logo.jpg"
+        /// "logo.jpg".RemoveSuffix("LoGO.jpG");                        // ""
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// "logo.jpg".RemoveSuffix(null);          // throw ArgumentNullException
+        /// default(string).RemoveSuffix("dddd");   // throw ArgumentNullException
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static string RemoveSuffix(this string @this, string suffix, StringComparison stringComparison = StringComparison.OrdinalIgnoreCase)
+        {
+            if (@this == null) throw new ArgumentNullException(nameof(@this), "不允许为空");
+            if (suffix == null) throw new ArgumentNullException(nameof(suffix), "不允许为空");
+            return @this.EndsWith(suffix, stringComparison)
+                       ? @this.Substring(0, @this.Length - suffix.Length)
+                       : @this;
         }
     }
 }
