@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
@@ -26,6 +28,43 @@ namespace Lett.Extensions.Test
             Assert.AreEqual("1234567890".Right(10000), "1234567890");                       // 超过字符串原有长度
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => { "dd".Left(-1); });  // length 小于0， 抛出异常
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => { "dd".Right(-1); }); // length 小于0， 抛出异常
+        }
+
+
+        [TestMethod]
+        public void AppendPrefixIfNotExist_Test()
+        {
+            var str1 = "aa";
+            var rs1  = str1.AppendPrefixIfNotExist("t_");
+            Assert.AreEqual(rs1, "t_aa");
+            var str2 = "T_bb";
+            var rs2  = str2.AppendPrefixIfNotExist("t_");
+            Assert.AreEqual(rs2, "T_bb");
+            var str3 = "T_bb";
+            var rs3  = str3.AppendPrefixIfNotExist("t_", StringComparison.Ordinal);
+            Assert.AreEqual(rs3, "t_T_bb");
+
+
+            Assert.ThrowsException<ArgumentNullException>((() => "T_cc".AppendPrefixIfNotExist(null)));
+            Assert.ThrowsException<ArgumentNullException>((() => default(string).AppendPrefixIfNotExist("d")));
+        }
+
+        [TestMethod]
+        public void AppendSuffixIfNotExist_Test()
+        {
+            var str1 = "aa";
+            var rs1  = str1.AppendSuffixIfNotExist("_t");
+            Assert.AreEqual(rs1, "aa_t");
+            var str2 = "bb_T";
+            var rs2  = str2.AppendSuffixIfNotExist("_t");
+            Assert.AreEqual(rs2, "bb_T");
+            var str3 = "cc_T";
+            var rs3  = str3.AppendSuffixIfNotExist("_t", StringComparison.Ordinal);
+            Assert.AreEqual(rs3, "cc_T_t");
+
+
+            Assert.ThrowsException<ArgumentNullException>((() => "cc_T".AppendSuffixIfNotExist(null)));
+            Assert.ThrowsException<ArgumentNullException>((() => default(string).AppendSuffixIfNotExist("_t")));
         }
     }
 }

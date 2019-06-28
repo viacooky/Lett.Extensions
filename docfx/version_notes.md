@@ -1,5 +1,13 @@
 # Version Notes
 
+### 0.3.0
+
+#### Features / 新增功能
+
+- `String`
+  - `AppendPrefixIfNotExist(String, StringComparison)` 如果字符串不包含指定前缀，则添加前缀
+  - `AppendSuffixIfNotExist(String, StringComparison)` 如果字符串不包含指定后缀，则添加后缀
+
 ### 0.2.9 (2019-06-21)
 
 #### Fixed / 修复
