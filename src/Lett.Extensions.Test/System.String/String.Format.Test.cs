@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
@@ -45,8 +43,8 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs3, "t_T_bb");
 
 
-            Assert.ThrowsException<ArgumentNullException>((() => "T_cc".AppendPrefixIfNotExist(null)));
-            Assert.ThrowsException<ArgumentNullException>((() => default(string).AppendPrefixIfNotExist("d")));
+            Assert.ThrowsException<ArgumentNullException>(() => "T_cc".AppendPrefixIfNotExist(null));
+            Assert.ThrowsException<ArgumentNullException>(() => default(string).AppendPrefixIfNotExist("d"));
         }
 
         [TestMethod]
@@ -63,8 +61,32 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs3, "cc_T_t");
 
 
-            Assert.ThrowsException<ArgumentNullException>((() => "cc_T".AppendSuffixIfNotExist(null)));
-            Assert.ThrowsException<ArgumentNullException>((() => default(string).AppendSuffixIfNotExist("_t")));
+            Assert.ThrowsException<ArgumentNullException>(() => "cc_T".AppendSuffixIfNotExist(null));
+            Assert.ThrowsException<ArgumentNullException>(() => default(string).AppendSuffixIfNotExist("_t"));
+        }
+
+        [TestMethod]
+        public void RemovePrefix_Test()
+        {
+            Assert.AreEqual("t_table".RemovePrefix("T_"), "table");
+            Assert.AreEqual("t_table".RemovePrefix("T_", StringComparison.Ordinal), "t_table");
+            Assert.AreEqual("t_table".RemovePrefix("aaaaaaaaaaa", StringComparison.Ordinal), "t_table");
+            Assert.AreEqual("t_table".RemovePrefix("T_TABLE"), "");
+
+            Assert.ThrowsException<ArgumentNullException>(() => "t_table".RemovePrefix(null));
+            Assert.ThrowsException<ArgumentNullException>(() => default(string).RemovePrefix("ddd"));
+        }
+
+        [TestMethod]
+        public void RemoveSuffix_Test()
+        {
+            Assert.AreEqual("logo.jpg".RemoveSuffix(".JPg"), "logo");
+            Assert.AreEqual("logo.jpg".RemoveSuffix(".JPG", StringComparison.Ordinal), "logo.jpg");
+            Assert.AreEqual("logo.jpg".RemoveSuffix("aaaaaaaa"), "logo.jpg");
+            Assert.AreEqual("logo.jpg".RemoveSuffix("LoGO.jpG"), "");
+
+            Assert.ThrowsException<ArgumentNullException>(() => "logo.jpg".RemoveSuffix(null));
+            Assert.ThrowsException<ArgumentNullException>(() => default(string).RemoveSuffix("dddd"));
         }
     }
 }
