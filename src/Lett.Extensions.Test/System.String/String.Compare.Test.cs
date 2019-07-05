@@ -67,6 +67,9 @@ namespace Lett.Extensions.Test
         {
             Assert.IsTrue(string.Empty.IsNullOrEmpty());
             Assert.IsFalse(" ".IsNullOrEmpty());
+            Assert.IsTrue(default(string).IsNullOrEmpty());
+            string aa = null;
+            Assert.IsTrue(aa.IsNullOrEmpty());
         }
 
         [TestMethod]
