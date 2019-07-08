@@ -18,6 +18,14 @@ namespace Lett.Extensions.Test
         }
 
         [TestMethod]
+        public void IsNullOrDBNull_Test()
+        {
+            Assert.IsFalse("".IsNullOrDbNull());
+            Assert.IsTrue(DBNull.Value.IsNullOrDbNull());
+            Assert.IsTrue(default(string).IsNullOrDbNull());
+        }
+
+        [TestMethod]
         public void In_Test()
         {
             var dtItems = new[] {new DateTime(2018, 1, 1), new DateTime(2019, 1, 1, 9, 10, 1), DateTime.Today};
