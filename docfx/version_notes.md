@@ -4,6 +4,8 @@
 
 #### Features / 新增功能
 
+- `Object`
+  - `IsNullOrDbNull` 是否 `Null` 或 `DBNull`
 - `String`
   - `AppendPrefixIfNotExist` 如果字符串不包含指定前缀，则添加前缀
   - `AppendSuffixIfNotExist` 如果字符串不包含指定后缀，则添加后缀
