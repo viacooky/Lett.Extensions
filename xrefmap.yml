@@ -1646,6 +1646,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.ObjectExtensions.IsEnum
   nameWithType: ObjectExtensions.IsEnum
+- uid: Lett.Extensions.ObjectExtensions.IsNullOrDbNull(System.Object)
+  name: IsNullOrDbNull(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsNullOrDbNull_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.IsNullOrDbNull(System.Object)
+  fullName: Lett.Extensions.ObjectExtensions.IsNullOrDbNull(System.Object)
+  nameWithType: ObjectExtensions.IsNullOrDbNull(Object)
+- uid: Lett.Extensions.ObjectExtensions.IsNullOrDbNull*
+  name: IsNullOrDbNull
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsNullOrDbNull_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.IsNullOrDbNull
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.IsNullOrDbNull
+  nameWithType: ObjectExtensions.IsNullOrDbNull
 - uid: Lett.Extensions.ObjectExtensions.IsSerializable(System.Object)
   name: IsSerializable(Object)
   href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsSerializable_System_Object_
@@ -1787,6 +1800,32 @@ references:
   commentId: T:Lett.Extensions.StringExtensions
   fullName: Lett.Extensions.StringExtensions
   nameWithType: StringExtensions
+- uid: Lett.Extensions.StringExtensions.AppendPrefixIfNotExist(System.String,System.String,System.StringComparison)
+  name: AppendPrefixIfNotExist(String, String, StringComparison)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_AppendPrefixIfNotExist_System_String_System_String_System_StringComparison_
+  commentId: M:Lett.Extensions.StringExtensions.AppendPrefixIfNotExist(System.String,System.String,System.StringComparison)
+  fullName: Lett.Extensions.StringExtensions.AppendPrefixIfNotExist(System.String, System.String, System.StringComparison)
+  nameWithType: StringExtensions.AppendPrefixIfNotExist(String, String, StringComparison)
+- uid: Lett.Extensions.StringExtensions.AppendPrefixIfNotExist*
+  name: AppendPrefixIfNotExist
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_AppendPrefixIfNotExist_
+  commentId: Overload:Lett.Extensions.StringExtensions.AppendPrefixIfNotExist
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.AppendPrefixIfNotExist
+  nameWithType: StringExtensions.AppendPrefixIfNotExist
+- uid: Lett.Extensions.StringExtensions.AppendSuffixIfNotExist(System.String,System.String,System.StringComparison)
+  name: AppendSuffixIfNotExist(String, String, StringComparison)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_AppendSuffixIfNotExist_System_String_System_String_System_StringComparison_
+  commentId: M:Lett.Extensions.StringExtensions.AppendSuffixIfNotExist(System.String,System.String,System.StringComparison)
+  fullName: Lett.Extensions.StringExtensions.AppendSuffixIfNotExist(System.String, System.String, System.StringComparison)
+  nameWithType: StringExtensions.AppendSuffixIfNotExist(String, String, StringComparison)
+- uid: Lett.Extensions.StringExtensions.AppendSuffixIfNotExist*
+  name: AppendSuffixIfNotExist
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_AppendSuffixIfNotExist_
+  commentId: Overload:Lett.Extensions.StringExtensions.AppendSuffixIfNotExist
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.AppendSuffixIfNotExist
+  nameWithType: StringExtensions.AppendSuffixIfNotExist
 - uid: Lett.Extensions.StringExtensions.Base64Decode(System.String)
   name: Base64Decode(String)
   href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_Base64Decode_System_String_
@@ -2123,6 +2162,32 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.StringExtensions.RegexSplit
   nameWithType: StringExtensions.RegexSplit
+- uid: Lett.Extensions.StringExtensions.RemovePrefix(System.String,System.String,System.StringComparison)
+  name: RemovePrefix(String, String, StringComparison)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RemovePrefix_System_String_System_String_System_StringComparison_
+  commentId: M:Lett.Extensions.StringExtensions.RemovePrefix(System.String,System.String,System.StringComparison)
+  fullName: Lett.Extensions.StringExtensions.RemovePrefix(System.String, System.String, System.StringComparison)
+  nameWithType: StringExtensions.RemovePrefix(String, String, StringComparison)
+- uid: Lett.Extensions.StringExtensions.RemovePrefix*
+  name: RemovePrefix
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RemovePrefix_
+  commentId: Overload:Lett.Extensions.StringExtensions.RemovePrefix
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.RemovePrefix
+  nameWithType: StringExtensions.RemovePrefix
+- uid: Lett.Extensions.StringExtensions.RemoveSuffix(System.String,System.String,System.StringComparison)
+  name: RemoveSuffix(String, String, StringComparison)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RemoveSuffix_System_String_System_String_System_StringComparison_
+  commentId: M:Lett.Extensions.StringExtensions.RemoveSuffix(System.String,System.String,System.StringComparison)
+  fullName: Lett.Extensions.StringExtensions.RemoveSuffix(System.String, System.String, System.StringComparison)
+  nameWithType: StringExtensions.RemoveSuffix(String, String, StringComparison)
+- uid: Lett.Extensions.StringExtensions.RemoveSuffix*
+  name: RemoveSuffix
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_RemoveSuffix_
+  commentId: Overload:Lett.Extensions.StringExtensions.RemoveSuffix
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.RemoveSuffix
+  nameWithType: StringExtensions.RemoveSuffix
 - uid: Lett.Extensions.StringExtensions.Right(System.String,System.Int32)
   name: Right(String, Int32)
   href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_Right_System_String_System_Int32_

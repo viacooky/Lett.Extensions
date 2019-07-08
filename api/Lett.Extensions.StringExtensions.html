@@ -123,6 +123,178 @@
   </div>
   <h3 id="methods">&#26041;&#27861;
   </h3>
+  <a id="Lett_Extensions_StringExtensions_AppendPrefixIfNotExist_" data-uid="Lett.Extensions.StringExtensions.AppendPrefixIfNotExist*"></a>
+  <h4 id="Lett_Extensions_StringExtensions_AppendPrefixIfNotExist_System_String_System_String_System_StringComparison_" data-uid="Lett.Extensions.StringExtensions.AppendPrefixIfNotExist(System.String,System.String,System.StringComparison)">AppendPrefixIfNotExist(String, String, StringComparison)</h4>
+  <div class="markdown level1 summary"><p>如果字符串不包含指定前缀，则添加前缀</p>
+<p>默认不区分大小写</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string AppendPrefixIfNotExist(this string this, string prefix, StringComparison stringComparison = StringComparison.OrdinalIgnoreCase)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">prefix</span></td>
+        <td><p>前缀</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></td>
+        <td><span class="parametername">stringComparison</span></td>
+        <td><p>字符串比较规则 默认使用 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison#System_StringComparison_OrdinalIgnoreCase">OrdinalIgnoreCase</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_AppendPrefixIfNotExist_System_String_System_String_System_StringComparison__examples">&#31034;&#20363;</h5>
+  <pre><code>var rs1  = &quot;aa&quot;.AppendPrefixIfNotExist(&quot;t_&quot;);                               // t_aa
+
+var rs2  = &quot;T_bb&quot;.AppendPrefixIfNotExist(&quot;t_&quot;);                             // T_bb
+
+var rs3  = &quot;T_cc&quot;.AppendPrefixIfNotExist(&quot;t_&quot;, StringComparison.Ordinal);   // t_T_cc</code></pre>
+
+  <pre><code>&quot;T_cc&quot;.AppendPrefixIfNotExist(null);         // throw ArgumentNullException  prefix is null
+
+default(string).AppendPrefixIfNotExist(&quot;d&quot;); // throw ArgumentNullException  @this is null</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 不允许为空</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">prefix</code> 不允许为空</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_StringExtensions_AppendSuffixIfNotExist_" data-uid="Lett.Extensions.StringExtensions.AppendSuffixIfNotExist*"></a>
+  <h4 id="Lett_Extensions_StringExtensions_AppendSuffixIfNotExist_System_String_System_String_System_StringComparison_" data-uid="Lett.Extensions.StringExtensions.AppendSuffixIfNotExist(System.String,System.String,System.StringComparison)">AppendSuffixIfNotExist(String, String, StringComparison)</h4>
+  <div class="markdown level1 summary"><p>如果字符串不包含指定后缀，则添加后缀</p>
+<p>默认不区分大小写</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string AppendSuffixIfNotExist(this string this, string suffix, StringComparison stringComparison = StringComparison.OrdinalIgnoreCase)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">suffix</span></td>
+        <td><p>后缀</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></td>
+        <td><span class="parametername">stringComparison</span></td>
+        <td><p>字符串比较规则 默认使用 <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison#System_StringComparison_OrdinalIgnoreCase">OrdinalIgnoreCase</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_AppendSuffixIfNotExist_System_String_System_String_System_StringComparison__examples">&#31034;&#20363;</h5>
+  <pre><code>var rs1  = &quot;aa&quot;.AppendSuffixIfNotExist(&quot;_t&quot;);                               // aa_t
+
+var rs2  = &quot;bb_T&quot;.AppendSuffixIfNotExist(&quot;_t&quot;);                             // bb_T
+
+var rs3  = &quot;cc_T&quot;.AppendSuffixIfNotExist(&quot;_t&quot;, StringComparison.Ordinal);   // cc_T_t</code></pre>
+
+  <pre><code>&quot;cc_T&quot;.AppendSuffixIfNotExist(null);            // throw ArgumentNullException suffix is null
+
+default(string).AppendSuffixIfNotExist(&quot;_t&quot;);   // throw ArgumentNullException @this is null</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 不允许为空</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">suffix</code> 不允许为空</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Lett_Extensions_StringExtensions_Base64Decode_" data-uid="Lett.Extensions.StringExtensions.Base64Decode*"></a>
   <h4 id="Lett_Extensions_StringExtensions_Base64Decode_System_String_" data-uid="Lett.Extensions.StringExtensions.Base64Decode(System.String)">Base64Decode(String)</h4>
   <div class="markdown level1 summary"><p>进行 BASE6 4解码</p>
@@ -1996,6 +2168,172 @@ var rs = str.RegexSplit(@&quot;\.&quot;); // rs.Count == 3</code></pre>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexmatchtimeoutexception">RegexMatchTimeoutException</a></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_StringExtensions_RemovePrefix_" data-uid="Lett.Extensions.StringExtensions.RemovePrefix*"></a>
+  <h4 id="Lett_Extensions_StringExtensions_RemovePrefix_System_String_System_String_System_StringComparison_" data-uid="Lett.Extensions.StringExtensions.RemovePrefix(System.String,System.String,System.StringComparison)">RemovePrefix(String, String, StringComparison)</h4>
+  <div class="markdown level1 summary"><p>移除前缀，若前缀不符则返回原字符串</p>
+<p>默认不区分大小写</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string RemovePrefix(this string this, string prefix, StringComparison stringComparison = StringComparison.OrdinalIgnoreCase)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">prefix</span></td>
+        <td><p>前缀</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></td>
+        <td><span class="parametername">stringComparison</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_RemovePrefix_System_String_System_String_System_StringComparison__examples">&#31034;&#20363;</h5>
+  <pre><code>&quot;t_table&quot;.RemovePrefix(&quot;T_&quot;);                                       // &quot;table&quot;
+&quot;t_table&quot;.RemovePrefix(&quot;T_&quot;, StringComparison.Ordinal);             // &quot;t_table&quot;
+&quot;t_table&quot;.RemovePrefix(&quot;aaaaaaaaaaa&quot;, StringComparison.Ordinal);    // &quot;t_table&quot;
+&quot;t_table&quot;.RemovePrefix(&quot;T_TABLE&quot;);                                  // &quot;&quot;</code></pre>
+
+  <pre><code>&quot;t_table&quot;.RemovePrefix(null);           // throw ArgumentNullException 
+default(string).RemovePrefix(&quot;ddd&quot;);    // throw ArgumentNullException </code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 不允许为空</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">prefix</code> 不允许为空</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Lett_Extensions_StringExtensions_RemoveSuffix_" data-uid="Lett.Extensions.StringExtensions.RemoveSuffix*"></a>
+  <h4 id="Lett_Extensions_StringExtensions_RemoveSuffix_System_String_System_String_System_StringComparison_" data-uid="Lett.Extensions.StringExtensions.RemoveSuffix(System.String,System.String,System.StringComparison)">RemoveSuffix(String, String, StringComparison)</h4>
+  <div class="markdown level1 summary"><p>移除后缀，若后缀不符则返回原字符串</p>
+<p>默认不区分大小写</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string RemoveSuffix(this string this, string suffix, StringComparison stringComparison = StringComparison.OrdinalIgnoreCase)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">suffix</span></td>
+        <td><p>后缀</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.stringcomparison">StringComparison</a></td>
+        <td><span class="parametername">stringComparison</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_StringExtensions_RemoveSuffix_System_String_System_String_System_StringComparison__examples">&#31034;&#20363;</h5>
+  <pre><code>&quot;logo.jpg&quot;.RemoveSuffix(&quot;.JPg&quot;);                            // &quot;logo&quot;
+&quot;logo.jpg&quot;.RemoveSuffix(&quot;.JPG&quot;, StringComparison.Ordinal);  // &quot;logo.jpg&quot;
+&quot;logo.jpg&quot;.RemoveSuffix(&quot;aaaaaaaa&quot;);                        // &quot;logo.jpg&quot;
+&quot;logo.jpg&quot;.RemoveSuffix(&quot;LoGO.jpG&quot;);                        // &quot;&quot;</code></pre>
+
+  <pre><code>&quot;logo.jpg&quot;.RemoveSuffix(null);          // throw ArgumentNullException
+default(string).RemoveSuffix(&quot;dddd&quot;);   // throw ArgumentNullException</code></pre>
+
+  <h5 class="exceptions">&#24322;&#24120;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#26465;&#20214;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 不允许为空</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">suffix</code> 不允许为空</p>
+</td>
       </tr>
     </tbody>
   </table>

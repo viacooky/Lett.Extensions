@@ -1106,6 +1106,53 @@ obj1.IsEnum(); // true</code></pre>
       </tr>
     </tbody>
   </table>
+  <a id="Lett_Extensions_ObjectExtensions_IsNullOrDbNull_" data-uid="Lett.Extensions.ObjectExtensions.IsNullOrDbNull*"></a>
+  <h4 id="Lett_Extensions_ObjectExtensions_IsNullOrDbNull_System_Object_" data-uid="Lett.Extensions.ObjectExtensions.IsNullOrDbNull(System.Object)">IsNullOrDbNull(Object)</h4>
+  <div class="markdown level1 summary"><p>是否 <code>Null</code> 或 <code>DBNull</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsNullOrDbNull(this object this)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_ObjectExtensions_IsNullOrDbNull_System_Object__examples">&#31034;&#20363;</h5>
+  <pre><code>var v = DBNull.Value;
+v.IsNullOrDbNull();         // true
+var v2 = default(string);   // null
+v2.IsNullOrDbNull();        // true</code></pre>
+
   <a id="Lett_Extensions_ObjectExtensions_IsSerializable_" data-uid="Lett.Extensions.ObjectExtensions.IsSerializable*"></a>
   <h4 id="Lett_Extensions_ObjectExtensions_IsSerializable_System_Object_" data-uid="Lett.Extensions.ObjectExtensions.IsSerializable(System.Object)">IsSerializable(Object)</h4>
   <div class="markdown level1 summary"><p>当前对象类型是否可序列化的</p>
