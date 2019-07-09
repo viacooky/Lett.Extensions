@@ -72,6 +72,12 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="version-notes">Version Notes</h1>
 
+<h3 id="031">0.3.1</h3>
+<h4 id="changed--变更">Changed / 变更</h4>
+<ul>
+<li><code>IEnumerable.ContainsAny(this IEnumerable&lt;T&gt; @this, IEnumerable&lt;T&gt; items)</code> 实现调整，统一语义为 <strong>this 是否包含 items 中任一元素</strong></li>
+<li><code>IEnumerable.ContainsAll(this IEnumerable&lt;T&gt; @this, IEnumerable&lt;T&gt; items)</code> 实现调整，统一语义为 <strong>this 是否包含 items 中所有元素</strong></li>
+</ul>
 <h3 id="030">0.3.0</h3>
 <h4 id="features--新增功能">Features / 新增功能</h4>
 <ul>
@@ -134,7 +140,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="changed--变更">Changed / 变更</h4>
+<h4 id="changed--变更-1">Changed / 变更</h4>
 <ul>
 <li>移除 <code>DataTableException</code></li>
 <li><code>DataTable</code>
@@ -271,7 +277,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="changed--变更-1">Changed / 变更</h4>
+<h4 id="changed--变更-2">Changed / 变更</h4>
 <ul>
 <li>移除<code>DateTime</code>扩展方法:
 <ul>
@@ -355,7 +361,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="changed--变更-2">Changed / 变更</h4>
+<h4 id="changed--变更-3">Changed / 变更</h4>
 <ul>
 <li>对扩展方法类名进行规范重命名
 <ul>
@@ -405,7 +411,7 @@
 <li>获取 Column 的数据类型 <code>GetColumnDataType(string columnName)</code></li>
 <li>获取 Column 的数据类型 <code>GetColumnDataType(int index)</code></li>
 </ul>
-<h4 id="changed--变更-3">Changed / 变更</h4>
+<h4 id="changed--变更-4">Changed / 变更</h4>
 <ul>
 <li><code>DataRow.Cell&lt;T&gt;()</code> 系列方法，泛型约定调整为 实现了 <code>IConvertible</code> 接口的类型</li>
 <li><code>Object.To&lt;T&gt;()</code> 方法的泛型约定调整为 实现了 <code>IConvertible</code> 接口的类型</li>
@@ -426,7 +432,7 @@
 <ul>
 <li></li>
 </ul>
-<h4 id="changed--变更-4">Changed / 变更</h4>
+<h4 id="changed--变更-5">Changed / 变更</h4>
 <ul>
 <li></li>
 </ul>

@@ -126,6 +126,7 @@
   <a id="Lett_Extensions_IEnumerableExtensions_ContainsAll_" data-uid="Lett.Extensions.IEnumerableExtensions.ContainsAll*"></a>
   <h4 id="Lett_Extensions_IEnumerableExtensions_ContainsAll__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__" data-uid="Lett.Extensions.IEnumerableExtensions.ContainsAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">ContainsAll&lt;T&gt;(IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;)</h4>
   <div class="markdown level1 summary"><p>是否包含全部元素</p>
+<p><code data-dev-comment-type="paramref" class="paramref">this</code> 是否包含 <code data-dev-comment-type="paramref" class="paramref">items</code> 中全部元素</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -187,11 +188,13 @@
     </tbody>
   </table>
   <h5 id="Lett_Extensions_IEnumerableExtensions_ContainsAll__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0___examples">&#31034;&#20363;</h5>
-  <pre><code>var arr = new[] {&quot;aa&quot;, &quot;bb&quot;};
-var match = new[] {&quot;aa&quot;};
+  <pre><code>var arr    = new[] {&quot;aa&quot;, &quot;bb&quot;};
+var match  = new[] {&quot;aa&quot;};
 var match2 = new[] {&quot;aa&quot;, &quot;bb&quot;};
-var rs = arr.ContainsAll(match); // false;
-var rs2 = arr.ContainsAll(match2); // true;</code></pre>
+var match2 = new[] {&quot;aa&quot;, &quot;bb&quot;, &quot;cc&quot;};
+var rs = arr.ContainsAll(match);    // true;
+var rs2 = arr.ContainsAll(match2);  // true;
+var rs3 = arr.ContainsAll(match3);  // false;</code></pre>
 
   <h5 class="exceptions">&#24322;&#24120;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,6 +220,7 @@ var rs2 = arr.ContainsAll(match2); // true;</code></pre>
   <a id="Lett_Extensions_IEnumerableExtensions_ContainsAny_" data-uid="Lett.Extensions.IEnumerableExtensions.ContainsAny*"></a>
   <h4 id="Lett_Extensions_IEnumerableExtensions_ContainsAny__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__" data-uid="Lett.Extensions.IEnumerableExtensions.ContainsAny``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">ContainsAny&lt;T&gt;(IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt;)</h4>
   <div class="markdown level1 summary"><p>是否包含任一元素</p>
+<p> <code data-dev-comment-type="paramref" class="paramref">this</code> 是否包含 <code data-dev-comment-type="paramref" class="paramref">items</code> 中任一元素 </p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#22768;&#26126;</h5>
@@ -278,9 +282,11 @@ var rs2 = arr.ContainsAll(match2); // true;</code></pre>
     </tbody>
   </table>
   <h5 id="Lett_Extensions_IEnumerableExtensions_ContainsAny__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0___examples">&#31034;&#20363;</h5>
-  <pre><code>var arr = new[] {&quot;aa&quot;, &quot;bb&quot;};
-var match = new[] {&quot;aa&quot;};
-var rs = arr.ContainsAny(match); // true</code></pre>
+  <pre><code>var arr    = new[] {&quot;aa&quot;, &quot;bb&quot;};
+var match  = new[] {&quot;aa&quot;, &quot;bb&quot;};
+var match2 = new [] {&quot;aa&quot;, &quot;bb&quot;, &quot;cc&quot;};
+var rs = arr.ContainsAny(match); // true
+var rs2 = arr.ContainsAny(match2); // true</code></pre>
 
   <h5 class="exceptions">&#24322;&#24120;</h5>
   <table class="table table-bordered table-striped table-condensed">
