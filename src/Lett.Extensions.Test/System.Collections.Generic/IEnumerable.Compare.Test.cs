@@ -21,12 +21,23 @@ namespace Lett.Extensions.Test
         public void ContainsAny_Test()
         {
             var arr    = new[] {"aa", "bb"};
+            var match2 = new[] {"aa", "bb"};
+            var match3 = new[] {"aa", "bb", "cc"};
+            Assert.IsTrue(arr.ContainsAny(match2));
+            Assert.IsTrue(arr.ContainsAny(match3));
+
+        }
+
+        [TestMethod]
+        public void ContainsAll_Test()
+        {
+            var arr    = new[] {"aa", "bb"};
             var match  = new[] {"aa"};
             var match2 = new[] {"aa", "bb"};
-            Assert.IsTrue(arr.ContainsAny(match));
-            Assert.IsFalse(arr.ContainsAll(match));
-            Assert.IsTrue(arr.ContainsAny(match2));
+            var match3 = new[] {"c"};
+            Assert.IsTrue(arr.ContainsAll(match));
             Assert.IsTrue(arr.ContainsAll(match2));
+            Assert.IsFalse(arr.ContainsAll(match3));
         }
 
         [TestMethod]
