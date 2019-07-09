@@ -1,5 +1,12 @@
 # Version Notes
 
+### 0.3.1
+
+#### Changed / 变更
+
+- `IEnumerable.ContainsAny(this IEnumerable<T> @this, IEnumerable<T> items)` 实现调整，统一语义为 **this 是否包含 items 中任一元素**
+- `IEnumerable.ContainsAll(this IEnumerable<T> @this, IEnumerable<T> items)` 实现调整，统一语义为 **this 是否包含 items 中所有元素**
+
 ### 0.3.0
 
 #### Features / 新增功能

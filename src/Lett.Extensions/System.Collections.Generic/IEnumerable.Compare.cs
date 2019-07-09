@@ -33,7 +33,8 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     是否包含任一元素
+        ///     <para>是否包含任一元素</para>
+        ///     <para> <paramref name="this" /> 是否包含 <paramref name="items" /> 中任一元素 </para>
         /// </summary>
         /// <param name="this"></param>
         /// <param name="items">需要进行判断的元素集合</param>
@@ -44,9 +45,11 @@ namespace Lett.Extensions
         /// <example>
         ///     <code>
         ///         <![CDATA[
-        /// var arr = new[] {"aa", "bb"};
-        /// var match = new[] {"aa"};
+        /// var arr    = new[] {"aa", "bb"};
+        /// var match  = new[] {"aa", "bb"};
+        /// var match2 = new [] {"aa", "bb", "cc"};
         /// var rs = arr.ContainsAny(match); // true
+        /// var rs2 = arr.ContainsAny(match2); // true
         ///         ]]>
         ///     </code>
         /// </example>
@@ -54,11 +57,12 @@ namespace Lett.Extensions
         {
             if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
             if (items == null) throw new ArgumentNullException(nameof(items), $"{nameof(items)} is null");
-            return @this.Any(items.Contains);
+            return items.Any(@this.Contains);
         }
 
         /// <summary>
-        ///     是否包含全部元素
+        ///     <para>是否包含全部元素</para>
+        ///     <para><paramref name="this" /> 是否包含 <paramref name="items" /> 中全部元素</para>
         /// </summary>
         /// <param name="this"></param>
         /// <param name="items">需要进行判断的元素集合</param>
@@ -69,11 +73,13 @@ namespace Lett.Extensions
         /// <example>
         ///     <code>
         ///         <![CDATA[
-        /// var arr = new[] {"aa", "bb"};
-        /// var match = new[] {"aa"};
+        /// var arr    = new[] {"aa", "bb"};
+        /// var match  = new[] {"aa"};
         /// var match2 = new[] {"aa", "bb"};
-        /// var rs = arr.ContainsAll(match); // false;
-        /// var rs2 = arr.ContainsAll(match2); // true;
+        /// var match2 = new[] {"aa", "bb", "cc"};
+        /// var rs = arr.ContainsAll(match);    // true;
+        /// var rs2 = arr.ContainsAll(match2);  // true;
+        /// var rs3 = arr.ContainsAll(match3);  // false;
         ///         ]]>
         ///     </code>
         /// </example>
@@ -81,7 +87,7 @@ namespace Lett.Extensions
         {
             if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
             if (items == null) throw new ArgumentNullException(nameof(items), $"{nameof(items)} is null");
-            return @this.All(items.Contains);
+            return items.All(@this.Contains);
         }
     }
 }
