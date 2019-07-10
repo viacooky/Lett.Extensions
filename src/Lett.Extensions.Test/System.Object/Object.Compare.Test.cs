@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
@@ -23,6 +24,54 @@ namespace Lett.Extensions.Test
             Assert.IsFalse("".IsNullOrDbNull());
             Assert.IsTrue(DBNull.Value.IsNullOrDbNull());
             Assert.IsTrue(default(string).IsNullOrDbNull());
+            var dt = new DataTable();
+            dt.Columns.Add("row_1", typeof(DateTime));
+            dt.Columns.Add("row_2", typeof(bool));
+            dt.Rows.Add(DBNull.Value, null);
+            dt.Rows.Add(null, DBNull.Value);
+
+            Assert.IsTrue(dt.Rows[0]["row_1"].IsNullOrDbNull());
+            Assert.IsTrue(dt.Rows[0]["row_2"].IsNullOrDbNull());
+            Assert.IsTrue(dt.Rows[1]["row_1"].IsNullOrDbNull());
+            Assert.IsTrue(dt.Rows[1]["row_2"].IsNullOrDbNull());
+
+            var rs = GetTestUnitInfo(true);
+            Assert.IsTrue(rs.IsNullOrDbNull());
+            var rs2 = GetTestUnitInfo(false);
+            Assert.IsFalse(rs2.IsNullOrDbNull());
+            Assert.IsTrue(rs2?.UnitId.IsNullOrDbNull() ?? false);
+            Assert.IsTrue(rs2?.UnitNumber.IsNullOrDbNull() ?? false);
+            Assert.IsFalse(rs2?.UnitName.IsNullOrDbNull() ?? true);
+        }
+
+        private UnitInfo? GetTestUnitInfo(bool isNull = false)
+        {
+            if (isNull) return null;
+            return new UnitInfo
+            {
+                UnitId     = DBNull.Value,
+                UnitName   = DateTime.Now,
+                UnitNumber = null,
+            };
+        }
+
+
+        private struct UnitInfo
+        {
+            /// <summary>
+            /// 单位ID
+            /// </summary>
+            public object UnitId;
+
+            /// <summary>
+            /// 单位代码
+            /// </summary>
+            public object UnitNumber;
+
+            /// <summary>
+            /// 单位名称
+            /// </summary>
+            public object UnitName;
         }
 
         [TestMethod]
