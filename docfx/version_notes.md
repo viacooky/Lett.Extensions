@@ -6,6 +6,8 @@
 
 - `IEnumerable`
   - `Distinct<T, TResult>(IEnumerable<T>, Func<T, TResult>, IEqualityComparer<TResult>)` 返回序列中的非重复元素
+- `Object`
+  - `IsNull()` 是否为空
 
 ### 0.3.1
 

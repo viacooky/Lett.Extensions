@@ -59,17 +59,17 @@ namespace Lett.Extensions.Test
         private struct UnitInfo
         {
             /// <summary>
-            /// 单位ID
+            /// 鍗曚綅ID
             /// </summary>
             public object UnitId;
 
             /// <summary>
-            /// 单位代码
+            /// 鍗曚綅浠ｇ爜
             /// </summary>
             public object UnitNumber;
 
             /// <summary>
-            /// 单位名称
+            /// 鍗曚綅鍚嶇О
             /// </summary>
             public object UnitName;
         }
@@ -287,6 +287,15 @@ namespace Lett.Extensions.Test
         private struct MyStruct
         {
             public string Name { get; set; }
+        }
+
+        [TestMethod]
+        public void IsNull_Test()
+        {
+            string a = null;
+            var b = default(string);
+            Assert.IsTrue(a.IsNull());
+            Assert.IsTrue(b.IsNull());
         }
     }
 }
