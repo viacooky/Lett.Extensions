@@ -1267,6 +1267,22 @@ references:
   fullName.vb: Lett.Extensions.IEnumerableExtensions.ContainsAny(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of T))
   nameWithType: IEnumerableExtensions.ContainsAny<T>(IEnumerable<T>, IEnumerable<T>)
   nameWithType.vb: IEnumerableExtensions.ContainsAny(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+- uid: Lett.Extensions.IEnumerableExtensions.Distinct*
+  name: Distinct
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_Distinct_
+  commentId: Overload:Lett.Extensions.IEnumerableExtensions.Distinct
+  isSpec: "True"
+  fullName: Lett.Extensions.IEnumerableExtensions.Distinct
+  nameWithType: IEnumerableExtensions.Distinct
+- uid: Lett.Extensions.IEnumerableExtensions.Distinct``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})
+  name: Distinct<T, TResult>(IEnumerable<T>, Func<T, TResult>, IEqualityComparer<TResult>)
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_Distinct__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IEqualityComparer___1__
+  commentId: M:Lett.Extensions.IEnumerableExtensions.Distinct``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})
+  name.vb: Distinct(Of T, TResult)(IEnumerable(Of T), Func(Of T, TResult), IEqualityComparer(Of TResult))
+  fullName: Lett.Extensions.IEnumerableExtensions.Distinct<T, TResult>(System.Collections.Generic.IEnumerable<T>, System.Func<T, TResult>, System.Collections.Generic.IEqualityComparer<TResult>)
+  fullName.vb: Lett.Extensions.IEnumerableExtensions.Distinct(Of T, TResult)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, TResult), System.Collections.Generic.IEqualityComparer(Of TResult))
+  nameWithType: IEnumerableExtensions.Distinct<T, TResult>(IEnumerable<T>, Func<T, TResult>, IEqualityComparer<TResult>)
+  nameWithType.vb: IEnumerableExtensions.Distinct(Of T, TResult)(IEnumerable(Of T), Func(Of T, TResult), IEqualityComparer(Of TResult))
 - uid: Lett.Extensions.IEnumerableExtensions.ForEach*
   name: ForEach
   href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_ForEach_
@@ -1646,6 +1662,19 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.ObjectExtensions.IsEnum
   nameWithType: ObjectExtensions.IsEnum
+- uid: Lett.Extensions.ObjectExtensions.IsNull(System.Object)
+  name: IsNull(Object)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsNull_System_Object_
+  commentId: M:Lett.Extensions.ObjectExtensions.IsNull(System.Object)
+  fullName: Lett.Extensions.ObjectExtensions.IsNull(System.Object)
+  nameWithType: ObjectExtensions.IsNull(Object)
+- uid: Lett.Extensions.ObjectExtensions.IsNull*
+  name: IsNull
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsNull_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.IsNull
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.IsNull
+  nameWithType: ObjectExtensions.IsNull
 - uid: Lett.Extensions.ObjectExtensions.IsNullOrDbNull(System.Object)
   name: IsNullOrDbNull(Object)
   href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_IsNullOrDbNull_System_Object_
