@@ -83,5 +83,59 @@ namespace Lett.Extensions
             foreach (var i in @this) rs.Append(formatStr.Format(formatParams(i)));
             return rs.ToString();
         }
+
+        /// <summary>
+        ///     返回序列中的非重复元素
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="selector">选择器，选择用于比较的对象</param>
+        /// <param name="equalityComparer">比较器</param>
+        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TResult"></typeparam>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="this" /> is null</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="selector" /> is null</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="equalityComparer" /> is null</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var input = new List<MyClass> {new MyClass {Age = 2, Name = "a"}, new MyClass {Age = 2, Name = "A"}, new MyClass {Age = 2, Name = "b"}};
+        /// 
+        /// var rs1 = input.Distinct(s => s.Name, StringComparer.OrdinalIgnoreCase)
+        /// .ToList();
+        /// 
+        /// rs1.Count;      // 2
+        /// rs1[0].Name;    // "a"
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var input = new List<MyClass> {new MyClass {Age = 2, Name = "a"}, new MyClass {Age = 2, Name = "A"}, new MyClass {Age = 2, Name = "b"}};
+        /// 
+        /// var rs2 = input.Distinct(s => s.Age, EqualityComparer<int>.Default)
+        /// .ToList();
+        /// 
+        /// rs2.Count;      // 1
+        /// rs2[0];         // "a"
+        ///         ]]>
+        ///     </code>
+        /// </example> 
+        public static IEnumerable<T> Distinct<T, TResult>(this IEnumerable<T> @this, Func<T, TResult> selector, IEqualityComparer<TResult> equalityComparer)
+        {
+            if (@this == null) throw new ArgumentNullException(nameof(@this), "is null");
+            if (selector == null) throw new ArgumentNullException(nameof(selector), "is null");
+            if (equalityComparer == null) throw new ArgumentNullException(nameof(equalityComparer), "is null");
+
+            var rs = new HashSet<TResult>(equalityComparer);
+            foreach (var element in @this)
+            {
+                var setValue = selector(element);
+                if (rs.Contains(setValue)) continue;
+                yield return element;
+                rs.Add(setValue);
+            }
+        }
     }
 }
