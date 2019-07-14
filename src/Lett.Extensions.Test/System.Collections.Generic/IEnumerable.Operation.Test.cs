@@ -57,7 +57,7 @@ namespace Lett.Extensions.Test
             var rs2 = input.Distinct(s => s.Age, EqualityComparer<int>.Default)
                            .ToList();
             Assert.AreEqual(1, rs2.Count);
-            Assert.AreEqual("a", rs2[0]);
+            Assert.AreEqual("a", rs2[0].Name);
         }
 
         private class MyClass
