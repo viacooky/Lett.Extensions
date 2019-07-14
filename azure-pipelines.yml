@@ -31,6 +31,7 @@ jobs:
           chmod +x ./build.sh
           ./build.sh --target=azure
         env:
+          DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
           DOTNET_CLI_TELEMETRY_OPTOUT: 1
         displayName: 执行 cake - Linux (Docker - ubuntu-16.04)
       - task: DotNetCoreCLI@2
@@ -55,6 +56,7 @@ jobs:
           chmod +x ./build.sh
           ./build.sh --target=azure
         env:
+          DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
           DOTNET_CLI_TELEMETRY_OPTOUT: 1
         displayName: 执行 cake - MacOS (Docker - macOS-10.14)
       - task: DotNetCoreCLI@2
@@ -77,6 +79,7 @@ jobs:
           installationPath: $(Agent.ToolsDirectory)/dotnet
       - powershell: ./build.ps1 --target=azure
         env:
+          DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
           DOTNET_CLI_TELEMETRY_OPTOUT: 1
         condition: eq( variables['Agent.OS'], 'Windows_NT' )
         displayName: 执行 cake - Windows (Docker - windows-2019)
@@ -100,6 +103,7 @@ jobs:
           installationPath: $(Agent.ToolsDirectory)/dotnet
       - powershell: ./build.ps1 --target=azure
         env:
+          DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
           DOTNET_CLI_TELEMETRY_OPTOUT: 1
         condition: eq( variables['Agent.OS'], 'Windows_NT' )
         displayName: 执行 cake - Hosted (Windows 2019 with VS2019)
@@ -123,6 +127,7 @@ jobs:
           installationPath: $(Agent.ToolsDirectory)/dotnet
       - powershell: ./build.ps1 --target=azure
         env:
+          DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
           DOTNET_CLI_TELEMETRY_OPTOUT: 1
         condition: eq( variables['Agent.OS'], 'Windows_NT' )
         displayName: 执行 cake - Hosted (Hosted_VS2017)
@@ -146,6 +151,9 @@ jobs:
           installationPath: $(Agent.ToolsDirectory)/dotnet
       - powershell: echo ./build.ps1 --target=azure --nugetVersion=$(nugetVersion) --assemblyVersion=$(assemblyVersion)
       - powershell: ./build.ps1 --target=azure --nugetVersion=$(nugetVersion) --assemblyVersion=$(assemblyVersion)
+        env:
+          DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+          DOTNET_CLI_TELEMETRY_OPTOUT: 1
         condition: eq( variables['Agent.OS'], 'Windows_NT' )
         displayName: Windows (Windows 2019 with VS2019) 平台 执行 cake pack
       - task: DotNetCoreCLI@2
