@@ -5,7 +5,7 @@
 ![Nuget](https://img.shields.io/nuget/dt/Lett.Extensions.svg)
 
 [![Build Status](https://dev.azure.com/viacooky/Lett.Extensions/_apis/build/status/viacooky.Lett.Extensions?branchName=master)](https://dev.azure.com/viacooky/Lett.Extensions/_build/latest?definitionId=8&branchName=master)
-![Azure DevOps tests](https://img.shields.io/azure-devops/tests/viacooky/Lett.Extensions/8/master.svg?compact_message)
+![Azure DevOps tests ](https://img.shields.io/azure-devops/tests/viacooky/Lett.Extensions/8/master.svg?compact_message)
 ![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/viacooky/Lett.Extensions/8/master.svg?color=9cf)
 
 [![BCH compliance](https://bettercodehub.com/edge/badge/viacooky/Lett.Extensions?branch=master)](https://bettercodehub.com/)
