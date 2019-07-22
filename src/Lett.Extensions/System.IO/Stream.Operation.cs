@@ -1,5 +1,7 @@
 using System;
 using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Lett.Extensions
 {
@@ -10,8 +12,7 @@ namespace Lett.Extensions
     {
         /// <summary>
         ///     <para>保存至文件</para>
-        ///     <para><see cref="FileMode" />默认: <see cref="FileMode.Create" /></para>
-        ///     <para>缓冲区大小默认: 81920</para>
+        ///     <para>FileMode.<see cref="FileMode.Create" /> | bufferSize: 81920</para>
         /// </summary>
         /// <param name="this"></param>
         /// <param name="filePath"></param>
@@ -23,14 +24,14 @@ namespace Lett.Extensions
         ///         ]]>
         ///     </code>
         /// </example>
-        public static void SaveToFile(this Stream @this, string filePath)
+        public static void SaveAsFile(this Stream @this, string filePath)
         {
-            @this.SaveToFile(filePath, FileMode.Create);
+            @this.SaveAsFile(filePath, FileMode.Create);
         }
 
         /// <summary>
         ///     <para>保存至文件</para>
-        ///     <para>缓冲区大小默认: 81920</para>
+        ///     <para>bufferSize: 81920</para>
         /// </summary>
         /// <param name="this"></param>
         /// <param name="filePath">文件路径</param>
@@ -46,9 +47,9 @@ namespace Lett.Extensions
         ///         ]]>
         ///     </code>
         /// </example>
-        public static void SaveToFile(this Stream @this, string filePath, FileMode fileMode)
+        public static void SaveAsFile(this Stream @this, string filePath, FileMode fileMode)
         {
-            @this.SaveToFile(filePath, fileMode, 81920);
+            @this.SaveAsFile(filePath, fileMode, 81920);
         }
 
         /// <summary>
@@ -70,7 +71,7 @@ namespace Lett.Extensions
         ///         ]]>
         ///     </code>
         /// </example>
-        public static void SaveToFile(this Stream @this, string filePath, FileMode fileMode, int bufferSize)
+        public static void SaveAsFile(this Stream @this, string filePath, FileMode fileMode, int bufferSize)
         {
             if (@this.IsNull()) throw new ArgumentNullException(nameof(@this), "is null");
             if (filePath.IsNull()) throw new ArgumentNullException(nameof(filePath), "is null");
@@ -78,7 +79,44 @@ namespace Lett.Extensions
             if (bufferSize < 1) throw new ArgumentOutOfRangeException(nameof(bufferSize), $"{nameof(bufferSize)} must greater than zero");
             var dirPath = Path.GetDirectoryName(filePath) ?? throw new ArgumentNullException(nameof(filePath), $"{nameof(filePath)} can not find directory name");
             if (!Directory.Exists(dirPath)) Directory.CreateDirectory(dirPath);
-            using (var fs = new FileStream(filePath, fileMode)) { @this.CopyTo(fs, bufferSize); }
+            using (var fs = filePath.AsFileStream_Write()) { @this.CopyTo(fs, bufferSize); }
+        }
+
+        /// <summary>
+        ///     <para>反序列化</para>
+        ///     <para>formatter: <see cref="BinaryFormatter" /></para>
+        ///     <para>类型转换失败，返回 <c>default(T)</c></para>
+        ///     <para></para>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var fs = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
+        /// var rs = fs.Deserialize<MyClass>();
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static T Deserialize<T>(this Stream @this)
+        {
+            return @this.Deserialize<T>(new BinaryFormatter());
+        }
+
+        /// <summary>
+        ///     <para>反序列化</para>
+        ///     <para>类型转换失败，返回 <c>default(T)</c></para>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="formatter">格式化器</param>
+        /// <typeparam name="T">类型</typeparam>
+        /// <returns></returns>
+        public static T Deserialize<T>(this Stream @this, IFormatter formatter)
+        {
+            if (@this.IsNull()) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
+            if (formatter.IsNull()) throw new ArgumentNullException(nameof(formatter), $"{nameof(formatter)} is null");
+            return formatter.Deserialize(@this).As<T>();
         }
     }
 }

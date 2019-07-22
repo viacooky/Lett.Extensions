@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Text;
 using System.Xml;
 
@@ -74,6 +75,84 @@ namespace Lett.Extensions
         public static byte[] ToBytes(this string @this)
         {
             return @this.ToBytes(Encoding.UTF8);
+        }
+
+        /// <summary>
+        ///     <para>转换为读写的 <see cref="FileStream" /></para>
+        ///     <para>
+        ///         FileMode.<see cref="FileMode.OpenOrCreate" /> | FileAccess.<see cref="FileAccess.ReadWrite" /> | FileShare.<see cref="FileShare.Read" /> | bufferSize: 81920
+        ///     </para>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        public static FileStream AsFileStream_ReadWrite(this string @this)
+        {
+            return @this.AsFileStream(FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.Read, 81920);
+        }
+
+        /// <summary>
+        ///     <para>转换为只写的 <see cref="FileStream" /></para>
+        ///     <para>
+        ///         FileMode.<see cref="FileMode.Create" /> | FileAccess.<see cref="FileAccess.Write" /> | FileShare.<see cref="FileShare.Read" /> | bufferSize: 81920
+        ///     </para>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        public static FileStream AsFileStream_Write(this string @this)
+        {
+            return @this.AsFileStream(FileMode.Create, FileAccess.Write, FileShare.Read, 81920);
+        }
+
+        /// <summary>
+        ///     <para>转换为只读的 <see cref="FileStream" /></para>
+        ///     <para>
+        ///         FileMode.<see cref="FileMode.Open" /> | FileAccess.<see cref="FileAccess.Read" /> | FileShare.<see cref="FileShare.Read" /> | bufferSize: 81920
+        ///     </para>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        public static FileStream AsFileStream_Read(this string @this)
+        {
+            return @this.AsFileStream(FileMode.Open, FileAccess.Read, FileShare.Read, 81920);
+        }
+
+        /// <summary>
+        ///     <para>转换为 <see cref="FileStream" /></para>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="fileMode">文件打开方式</param>
+        /// <param name="fileAccess"></param>
+        /// <param name="fileShare"></param>
+        /// <param name="bufferSize"></param>
+        /// <returns></returns>
+        /// <exception cref="System.ArgumentNullException"><paramref name="@this">path</paramref> is null.</exception>
+        /// <exception cref="System.ArgumentException">
+        ///     <paramref name="@this">path</paramref> is an empty string (""), contains only white space, or contains one or more invalid characters.   -or-
+        ///     <paramref name="this">path</paramref> refers to a non-file device, such as "con:", "com1:", "lpt1:", etc. in an NTFS environment.
+        /// </exception>
+        /// <exception cref="System.NotSupportedException"><paramref name="@this">path</paramref> refers to a non-file device, such as "con:", "com1:", "lpt1:", etc. in a non-NTFS environment.</exception>
+        /// <exception cref="System.IO.FileNotFoundException">
+        ///     The file cannot be found, such as when <paramref name="fileMode">mode</paramref> is FileMode.Truncate or FileMode.Open, and the file specified by
+        ///     <paramref name="this">path</paramref> does not exist. The file must already exist in these modes.
+        /// </exception>
+        /// <exception cref="System.IO.IOException">
+        ///     An I/O error, such as specifying FileMode.CreateNew when the file specified by <paramref name="this">path</paramref> already exists, occurred.   -or-   The
+        ///     system is running Windows 98 or Windows 98 Second Edition and <paramref name="fileShare">share</paramref> is set to FileShare.Delete.   -or-   The stream has been closed.
+        /// </exception>
+        /// <exception cref="System.Security.SecurityException">The caller does not have the required permission.</exception>
+        /// <exception cref="System.IO.DirectoryNotFoundException">The specified path is invalid, such as being on an unmapped drive.</exception>
+        /// <exception cref="System.UnauthorizedAccessException">
+        ///     The <paramref name="fileAccess">access</paramref> requested is not permitted by the operating system for the specified
+        ///     <paramref name="this">path</paramref>, such as when <paramref name="fileAccess">access</paramref> is Write or ReadWrite and the file or directory is set for read-only access.
+        /// </exception>
+        /// <exception cref="System.IO.PathTooLongException">
+        ///     The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248
+        ///     characters, and file names must be less than 260 characters.
+        /// </exception>
+        public static FileStream AsFileStream(this string @this, FileMode fileMode, FileAccess fileAccess, FileShare fileShare, int bufferSize)
+        {
+            if (@this.IsNull()) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} file path is null");
+            return new FileStream(@this, fileMode, fileAccess, fileShare, bufferSize);
         }
     }
 }

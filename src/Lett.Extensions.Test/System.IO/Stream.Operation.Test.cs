@@ -26,19 +26,19 @@ namespace Lett.Extensions.Test
         {
             var source = "abcd";
             var path   = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TestText", "1.txt");
-            using (var ms = new MemoryStream(source.ToBytes())) { ms.SaveToFile(path); }
+            using (var ms = new MemoryStream(source.ToBytes())) { StreamExtensions.SaveAsFile(ms, path); }
 
-            using (var ms = new MemoryStream(source.ToBytes())) { ms.SaveToFile(path); }
+            using (var ms = new MemoryStream(source.ToBytes())) { StreamExtensions.SaveAsFile(ms, path); }
 
             var rs = File.ReadAllText(path);
             Assert.AreEqual(rs, source);
 
-            using (var ms = new MemoryStream(source.ToBytes())) { ms.SaveToFile(path, FileMode.Append); }
+            using (var ms = new MemoryStream(source.ToBytes())) { StreamExtensions.SaveAsFile(ms, path, FileMode.Append); }
 
             var rs2 = File.ReadAllText(path);
             Assert.AreEqual(rs2, $"{source}{source}");
 
-            using (var ms = new MemoryStream(source.ToBytes())) { ms.SaveToFile(path, FileMode.Append, 1); }
+            using (var ms = new MemoryStream(source.ToBytes())) { ms.SaveAsFile(path, FileMode.Append, 1); }
 
             var rs3 = File.ReadAllText(path);
             Assert.AreEqual(rs3, $"{source}{source}{source}");

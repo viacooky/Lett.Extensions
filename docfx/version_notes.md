@@ -4,8 +4,20 @@
 
 #### Features / 新增功能
 
+- `String`
+
+  - `AsFileStream(String, FileMode, FileAccess, FileShare)` 转换为 FileStream
+  - `AsFileStream_Read(String)` 转换为只读的 FileStream (FileMode.Open | FileAccess.Read | FileShare.Read)
+  - `AsFileStream_ReadWrite(String)` 转换为读写的 FileStream (FileMode.OpenOrCreate | FileAccess.ReadWrite | FileShare.ReadWrite)
+  - `AsFileStream_Write(String)` 转换为只写的 FileStream (FileMode.Create | FileAccess.Write | FileShare.Write)
+
+- `Object`
+
+  - `SaveAsFile<T>(T, String)` 保存为文件
+
 - `Stream`
   - `SaveToFile(Stream, String)` 保存至文件
+  - `Deserialize<T>(Stream)` 反序列化
 
 ### 0.3.2
 
