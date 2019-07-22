@@ -1,5 +1,12 @@
 # Version Notes
 
+### 0.3.3
+
+#### Features / 新增功能
+
+- `Stream`
+  - `SaveToFile(Stream, String)` 保存至文件
+
 ### 0.3.2
 
 #### Features / 新增功能
