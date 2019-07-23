@@ -11,7 +11,7 @@ namespace Lett.Extensions
     public static class StreamExtensions
     {
         /// <summary>
-        ///     <para>保存至文件</para>
+        ///     <para>保存为文件</para>
         ///     <para>FileMode.<see cref="FileMode.Create" /> | bufferSize: 81920</para>
         /// </summary>
         /// <param name="this"></param>
@@ -30,7 +30,7 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     <para>保存至文件</para>
+        ///     <para>保存为文件</para>
         ///     <para>bufferSize: 81920</para>
         /// </summary>
         /// <param name="this"></param>
@@ -53,7 +53,7 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     保存至文件
+        ///     保存为文件
         /// </summary>
         /// <param name="this"></param>
         /// <param name="filePath">文件路径</param>
@@ -79,7 +79,7 @@ namespace Lett.Extensions
             if (bufferSize < 1) throw new ArgumentOutOfRangeException(nameof(bufferSize), $"{nameof(bufferSize)} must greater than zero");
             var dirPath = Path.GetDirectoryName(filePath) ?? throw new ArgumentNullException(nameof(filePath), $"{nameof(filePath)} can not find directory name");
             if (!Directory.Exists(dirPath)) Directory.CreateDirectory(dirPath);
-            using (var fs = filePath.AsFileStream_Write()) { @this.CopyTo(fs, bufferSize); }
+            using (var fs = new FileStream(filePath, fileMode)) { @this.CopyTo(fs, bufferSize); }
         }
 
         /// <summary>

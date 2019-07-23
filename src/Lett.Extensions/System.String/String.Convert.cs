@@ -78,7 +78,7 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     <para>转换为读写的 <see cref="FileStream" /></para>
+        ///     <para>转换为读写的 <see cref="FileStream" />  (当前字符串作为 path)</para>
         ///     <para>
         ///         FileMode.<see cref="FileMode.OpenOrCreate" /> | FileAccess.<see cref="FileAccess.ReadWrite" /> | FileShare.<see cref="FileShare.Read" /> | bufferSize: 81920
         ///     </para>
@@ -91,7 +91,7 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     <para>转换为只写的 <see cref="FileStream" /></para>
+        ///     <para>转换为只写的 <see cref="FileStream" />  (当前字符串作为 path)</para>
         ///     <para>
         ///         FileMode.<see cref="FileMode.Create" /> | FileAccess.<see cref="FileAccess.Write" /> | FileShare.<see cref="FileShare.Read" /> | bufferSize: 81920
         ///     </para>
@@ -104,7 +104,7 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     <para>转换为只读的 <see cref="FileStream" /></para>
+        ///     <para>转换为只读的 <see cref="FileStream" />  (当前字符串作为 path)</para>
         ///     <para>
         ///         FileMode.<see cref="FileMode.Open" /> | FileAccess.<see cref="FileAccess.Read" /> | FileShare.<see cref="FileShare.Read" /> | bufferSize: 81920
         ///     </para>
@@ -117,7 +117,7 @@ namespace Lett.Extensions
         }
 
         /// <summary>
-        ///     <para>转换为 <see cref="FileStream" /></para>
+        ///     <para>转换为 <see cref="FileStream" />  (当前字符串作为 path)</para>
         /// </summary>
         /// <param name="this"></param>
         /// <param name="fileMode">文件打开方式</param>
@@ -153,6 +153,18 @@ namespace Lett.Extensions
         {
             if (@this.IsNull()) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} file path is null");
             return new FileStream(@this, fileMode, fileAccess, fileShare, bufferSize);
+        }
+
+        /// <summary>
+        ///     <para>转换为 <see cref="DirectoryInfo" /> (当前字符串作为 path)</para>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        public static DirectoryInfo AsDirectoryInfo(this string @this)
+        {
+            if (@this.IsNullOrEmpty()) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} path is null or empty");
+            return new DirectoryInfo(@this);
         }
     }
 }

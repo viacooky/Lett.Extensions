@@ -22,7 +22,7 @@ namespace Lett.Extensions.Test
         }
 
         [TestMethod]
-        public void SaveToFile_Test()
+        public void SaveAsFile_Test()
         {
             var source = "abcd";
             var path   = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TestText", "1.txt");

@@ -69,8 +69,8 @@ namespace Lett.Extensions.Test
             var path   = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ObjectTest", "2.bin");
             source.SaveAsFile(path, FileMode.Create);
             var fs = path.AsFileStream_Read();
-            var rs = fs.Deserialize<MyClass>();
-            Assert.AreEqual(rs.Name, "abd");
+            var rs = fs.Deserialize<string>();
+            Assert.AreEqual(rs, "abc");
         }
     }
 }
