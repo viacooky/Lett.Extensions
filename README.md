@@ -1,4 +1,4 @@
-![](docfx/images/logo.png)
+![](images/logo.png)
 
 [![Nuget](https://img.shields.io/nuget/v/Lett.Extensions.svg)](https://www.nuget.org/packages/Lett.Extensions/)
 [![MyGet](https://img.shields.io/myget/lett/v/Lett.Extensions.svg?label=MyGet)](https://www.myget.org/feed/lett/package/nuget/Lett.Extensions)
@@ -24,6 +24,12 @@ NuGet: https://www.nuget.org/packages/Lett.Extensions/
 MyGet: https://www.myget.org/feed/lett/package/nuget/Lett.Extensions
 
 Project Site: https://viacooky.github.io/Lett.Extensions/
+
+---
+
+## Support and Sponsorship
+
+[![JetBrains](images/jetbrains-variant-2.svg)](https://www.jetbrains.com/?from=Lett.Extensions)
 
 ---
 
@@ -101,6 +107,12 @@ see also from [**[here]**](https://viacooky.github.io/Lett.Extensions/version_no
 
 ---
 
-## Support and Sponsorship
+## Develop Tools
 
-[![Jetbrains](images/jetbrains.svg)](https://www.jetbrains.com/?from=Lett.Extensions)
+[![](images/visualstudio-win.png)](https://visualstudio.microsoft.com/vs/)
+
+Development tools sponsored by JetBrains
+
+[![](images/ride.svg)](https://www.jetbrains.com/rider/?from=Lett.Extensions)
+
+[![](images/resharper.svg)](https://www.jetbrains.com/resharper/?from=Lett.Extensions)

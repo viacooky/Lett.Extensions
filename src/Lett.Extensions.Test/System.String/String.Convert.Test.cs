@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System;
+using System.IO;
+using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lett.Extensions.Test
@@ -24,6 +26,14 @@ namespace Lett.Extensions.Test
             var rs2 = source.ToBytes(Encoding.Unicode);
             Assert.AreEqual(rs2.EncodeToString(Encoding.Unicode), source);
             Assert.AreNotEqual(rs2.EncodeToString(Encoding.UTF8), source);
+        }
+
+        [TestMethod]
+        public void AsDirectoryInfo_Test()
+        {
+            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"xxxxxx");
+            Assert.IsFalse(path.AsDirectoryInfo().Exists);
+            
         }
     }
 }

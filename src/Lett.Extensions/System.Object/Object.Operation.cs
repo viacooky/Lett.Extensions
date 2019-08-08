@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Lett.Extensions
@@ -102,6 +103,50 @@ namespace Lett.Extensions
         {
             if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
             return func(@this);
+        }
+
+        /// <summary>
+        ///     <para>保存为文件</para>
+        ///     <para>FileMode.<see cref="FileMode.Create" /> | formatter: <see cref="BinaryFormatter" /></para>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="filePath"></param>
+        /// <typeparam name="T"></typeparam>
+        public static void SaveAsFile<T>(this T @this, string filePath)
+        {
+            @this.SaveAsFile(filePath, FileMode.Create);
+        }
+
+        /// <summary>
+        ///     <para>保存为文件</para>
+        ///     <para>formatter: <see cref="BinaryFormatter" /></para>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="filePath">文件路径</param>
+        /// <param name="fileMode">文件打开方式</param>
+        /// <typeparam name="T"></typeparam>
+        public static void SaveAsFile<T>(this T @this, string filePath, FileMode fileMode)
+        {
+            @this.SaveAsFile(filePath, fileMode, new BinaryFormatter());
+        }
+
+        /// <summary>
+        ///     <para>保存为文件</para>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="filePath">文件路径</param>
+        /// <param name="fileMode">文件打开方式</param>
+        /// <param name="formatter">格式化器</param>
+        /// <typeparam name="T">需要 <see cref="ISerializable" /></typeparam>
+        /// <exception cref="SerializationException"><paramref name="this" /> is not marked as serializable</exception>
+        public static void SaveAsFile<T>(this T @this, string filePath, FileMode fileMode, IFormatter formatter)
+        {
+            if (@this.IsNull()) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
+            if (filePath.IsNullOrEmpty()) throw new ArgumentNullException(nameof(filePath), $"{nameof(filePath)} is null or empty");
+            if (formatter.IsNull()) throw new ArgumentNullException(nameof(formatter), $"{nameof(formatter)} is null");
+            var dir = Path.GetDirectoryName(filePath) ?? throw new ArgumentNullException(nameof(filePath), $"{nameof(filePath)} can not find directory name");
+            if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
+            using (var fs = filePath.AsFileStream(FileMode.Create, FileAccess.Write, FileShare.Write)) { formatter.Serialize(fs, @this); }
         }
     }
 }

@@ -34,13 +34,13 @@
       "_appFaviconPath": "images/icon_128.ico",
       "_appLogoPath": "images/logo_229_50.png",
       "_enableSearch": true,
-      "_disableContribution": true,
-      "_enableNewTab": true
+      "_enableNewTab": true,
+      "_disableContribution": false
     },
     "dest": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
-    "template": ["default", "default(zh-cn)", "material/material"],
+    "template": ["default", "material/material"],
     "postProcessors": [],
     "markdownEngineName": "markdig",
     "noLangKeyword": true,
