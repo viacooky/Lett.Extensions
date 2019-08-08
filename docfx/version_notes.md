@@ -6,11 +6,7 @@
 
 - `String`
 
-  - `AsFileStream(String, FileMode, FileAccess, FileShare)` 转换为 FileStream
-  - `AsFileStream_Read(String)` 转换为只读的 FileStream (FileMode.Open | FileAccess.Read | FileShare.Read)
-  - `AsFileStream_ReadWrite(String)` 转换为读写的 FileStream (FileMode.OpenOrCreate | FileAccess.ReadWrite | FileShare.ReadWrite)
-  - `AsFileStream_Write(String)` 转换为只写的 FileStream (FileMode.Create | FileAccess.Write | FileShare.Write)
-  - `AsDirectoryInfo(String)` 转换为 DirectoryInfo
+  - `AsFileStream(String, FileMode, FileAccess, FileShare, Int32)` 转换为 FileStream
 
 - `Object`
 

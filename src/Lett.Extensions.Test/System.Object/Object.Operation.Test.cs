@@ -8,20 +8,12 @@ namespace Lett.Extensions.Test
     [TestClass]
     public class ObjectOperationTest
     {
-        [TestInitialize]
-        public void StartUp()
+        public void Init()
         {
             var dir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ObjectTest");
-            if(!Directory.Exists(dir)) Directory.Delete(dir,true);
+            if(Directory.Exists(dir)) Directory.Delete(dir,true);
+            if(!Directory.Exists(dir)) Directory.CreateDirectory(dir);
         }
-        
-        [TestCleanup]
-        public void Clean()
-        {
-            var dir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ObjectTest");
-            if(!Directory.Exists(dir)) Directory.Delete(dir,true);
-        }
-        
         
         [TestMethod]
         public void Pipe_Test()
@@ -54,23 +46,13 @@ namespace Lett.Extensions.Test
         [TestMethod]
         public void SaveAsFile_Test1()
         {
+            Init();
             var source = new MyClass {Name = "abd"};
             var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ObjectTest", "1.bin");
             source.SaveAsFile(path, FileMode.Create, new BinaryFormatter());
             var fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
             var rs = fs.Deserialize<MyClass>();
             Assert.AreEqual(rs.Name, "abd");
-        }
-        
-        [TestMethod]
-        public void SaveAsFile_Test2()
-        {
-            var source = "abc";
-            var path   = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ObjectTest", "2.bin");
-            source.SaveAsFile(path, FileMode.Create);
-            var fs = path.AsFileStream_Read();
-            var rs = fs.Deserialize<string>();
-            Assert.AreEqual(rs, "abc");
         }
     }
 }

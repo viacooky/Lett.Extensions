@@ -76,46 +76,7 @@ namespace Lett.Extensions
         {
             return @this.ToBytes(Encoding.UTF8);
         }
-
-        /// <summary>
-        ///     <para>转换为读写的 <see cref="FileStream" />  (当前字符串作为 path)</para>
-        ///     <para>
-        ///         FileMode.<see cref="FileMode.OpenOrCreate" /> | FileAccess.<see cref="FileAccess.ReadWrite" /> | FileShare.<see cref="FileShare.Read" /> | bufferSize: 81920
-        ///     </para>
-        /// </summary>
-        /// <param name="this"></param>
-        /// <returns></returns>
-        public static FileStream AsFileStream_ReadWrite(this string @this)
-        {
-            return @this.AsFileStream(FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.Read, 81920);
-        }
-
-        /// <summary>
-        ///     <para>转换为只写的 <see cref="FileStream" />  (当前字符串作为 path)</para>
-        ///     <para>
-        ///         FileMode.<see cref="FileMode.Create" /> | FileAccess.<see cref="FileAccess.Write" /> | FileShare.<see cref="FileShare.Read" /> | bufferSize: 81920
-        ///     </para>
-        /// </summary>
-        /// <param name="this"></param>
-        /// <returns></returns>
-        public static FileStream AsFileStream_Write(this string @this)
-        {
-            return @this.AsFileStream(FileMode.Create, FileAccess.Write, FileShare.Read, 81920);
-        }
-
-        /// <summary>
-        ///     <para>转换为只读的 <see cref="FileStream" />  (当前字符串作为 path)</para>
-        ///     <para>
-        ///         FileMode.<see cref="FileMode.Open" /> | FileAccess.<see cref="FileAccess.Read" /> | FileShare.<see cref="FileShare.Read" /> | bufferSize: 81920
-        ///     </para>
-        /// </summary>
-        /// <param name="this"></param>
-        /// <returns></returns>
-        public static FileStream AsFileStream_Read(this string @this)
-        {
-            return @this.AsFileStream(FileMode.Open, FileAccess.Read, FileShare.Read, 81920);
-        }
-
+        
         /// <summary>
         ///     <para>转换为 <see cref="FileStream" />  (当前字符串作为 path)</para>
         /// </summary>
@@ -123,7 +84,7 @@ namespace Lett.Extensions
         /// <param name="fileMode">文件打开方式</param>
         /// <param name="fileAccess"></param>
         /// <param name="fileShare"></param>
-        /// <param name="bufferSize"></param>
+        /// <param name="bufferSize">缓冲区大小</param>
         /// <returns></returns>
         /// <exception cref="System.ArgumentNullException"><paramref name="@this">path</paramref> is null.</exception>
         /// <exception cref="System.ArgumentException">
@@ -149,7 +110,7 @@ namespace Lett.Extensions
         ///     The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248
         ///     characters, and file names must be less than 260 characters.
         /// </exception>
-        public static FileStream AsFileStream(this string @this, FileMode fileMode, FileAccess fileAccess, FileShare fileShare, int bufferSize)
+        public static FileStream AsFileStream(this string @this, FileMode fileMode, FileAccess fileAccess, FileShare fileShare, int bufferSize = 8192)
         {
             if (@this.IsNull()) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} file path is null");
             return new FileStream(@this, fileMode, fileAccess, fileShare, bufferSize);

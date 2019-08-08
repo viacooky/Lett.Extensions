@@ -146,7 +146,7 @@ namespace Lett.Extensions
             if (formatter.IsNull()) throw new ArgumentNullException(nameof(formatter), $"{nameof(formatter)} is null");
             var dir = Path.GetDirectoryName(filePath) ?? throw new ArgumentNullException(nameof(filePath), $"{nameof(filePath)} can not find directory name");
             if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
-            using (var fs = filePath.AsFileStream_Write()) { formatter.Serialize(fs, @this); }
+            using (var fs = filePath.AsFileStream(FileMode.Create, FileAccess.Write, FileShare.Write)) { formatter.Serialize(fs, @this); }
         }
     }
 }
