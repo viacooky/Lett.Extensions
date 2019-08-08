@@ -27,6 +27,12 @@ Project Site: https://viacooky.github.io/Lett.Extensions/
 
 ---
 
+## Support and Sponsorship
+
+[![JetBrains](images/jetbrains-variant-2.svg)](https://www.jetbrains.com/?from=Lett.Extensions)
+
+---
+
 ## Support Platform
 
 > [!TIP]
@@ -98,9 +104,3 @@ see also from [**[here]**](https://viacooky.github.io/Lett.Extensions/version_no
 ## Lisence
 
 [![GitHub](https://img.shields.io/github/license/viacooky/Lett.Extensions.svg)](src/Lett.Extensions/LICENSE.txt)
-
----
-
-## Support and Sponsorship
-
-[![Jetbrains](images/jetbrains.svg)](https://www.jetbrains.com/?from=Lett.Extensions)
