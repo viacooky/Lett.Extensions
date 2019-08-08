@@ -95,6 +95,12 @@ see also from [**[here]**](https://viacooky.github.io/Lett.Extensions/version_no
 
 ---
 
+## Support and Sponsorship
+
+[![Jetbrains](images/jetbrains.svg)](https://www.jetbrains.com/?from=Lett.Extensions)
+
+---
+
 ## Lisence
 
 [![GitHub](https://img.shields.io/github/license/viacooky/Lett.Extensions.svg)](src/Lett.Extensions/LICENSE.txt)
