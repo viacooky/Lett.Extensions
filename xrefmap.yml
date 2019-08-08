@@ -1789,6 +1789,40 @@ references:
   fullName.vb: Lett.Extensions.ObjectExtensions.Pipe(Of TSource, TResult)(TSource, System.Func(Of TSource, TResult))
   nameWithType: ObjectExtensions.Pipe<TSource, TResult>(TSource, Func<TSource, TResult>)
   nameWithType.vb: ObjectExtensions.Pipe(Of TSource, TResult)(TSource, Func(Of TSource, TResult))
+- uid: Lett.Extensions.ObjectExtensions.SaveAsFile*
+  name: SaveAsFile
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_SaveAsFile_
+  commentId: Overload:Lett.Extensions.ObjectExtensions.SaveAsFile
+  isSpec: "True"
+  fullName: Lett.Extensions.ObjectExtensions.SaveAsFile
+  nameWithType: ObjectExtensions.SaveAsFile
+- uid: Lett.Extensions.ObjectExtensions.SaveAsFile``1(``0,System.String)
+  name: SaveAsFile<T>(T, String)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_SaveAsFile__1___0_System_String_
+  commentId: M:Lett.Extensions.ObjectExtensions.SaveAsFile``1(``0,System.String)
+  name.vb: SaveAsFile(Of T)(T, String)
+  fullName: Lett.Extensions.ObjectExtensions.SaveAsFile<T>(T, System.String)
+  fullName.vb: Lett.Extensions.ObjectExtensions.SaveAsFile(Of T)(T, System.String)
+  nameWithType: ObjectExtensions.SaveAsFile<T>(T, String)
+  nameWithType.vb: ObjectExtensions.SaveAsFile(Of T)(T, String)
+- uid: Lett.Extensions.ObjectExtensions.SaveAsFile``1(``0,System.String,System.IO.FileMode)
+  name: SaveAsFile<T>(T, String, FileMode)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_SaveAsFile__1___0_System_String_System_IO_FileMode_
+  commentId: M:Lett.Extensions.ObjectExtensions.SaveAsFile``1(``0,System.String,System.IO.FileMode)
+  name.vb: SaveAsFile(Of T)(T, String, FileMode)
+  fullName: Lett.Extensions.ObjectExtensions.SaveAsFile<T>(T, System.String, System.IO.FileMode)
+  fullName.vb: Lett.Extensions.ObjectExtensions.SaveAsFile(Of T)(T, System.String, System.IO.FileMode)
+  nameWithType: ObjectExtensions.SaveAsFile<T>(T, String, FileMode)
+  nameWithType.vb: ObjectExtensions.SaveAsFile(Of T)(T, String, FileMode)
+- uid: Lett.Extensions.ObjectExtensions.SaveAsFile``1(``0,System.String,System.IO.FileMode,System.Runtime.Serialization.IFormatter)
+  name: SaveAsFile<T>(T, String, FileMode, IFormatter)
+  href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_SaveAsFile__1___0_System_String_System_IO_FileMode_System_Runtime_Serialization_IFormatter_
+  commentId: M:Lett.Extensions.ObjectExtensions.SaveAsFile``1(``0,System.String,System.IO.FileMode,System.Runtime.Serialization.IFormatter)
+  name.vb: SaveAsFile(Of T)(T, String, FileMode, IFormatter)
+  fullName: Lett.Extensions.ObjectExtensions.SaveAsFile<T>(T, System.String, System.IO.FileMode, System.Runtime.Serialization.IFormatter)
+  fullName.vb: Lett.Extensions.ObjectExtensions.SaveAsFile(Of T)(T, System.String, System.IO.FileMode, System.Runtime.Serialization.IFormatter)
+  nameWithType: ObjectExtensions.SaveAsFile<T>(T, String, FileMode, IFormatter)
+  nameWithType.vb: ObjectExtensions.SaveAsFile(Of T)(T, String, FileMode, IFormatter)
 - uid: Lett.Extensions.ObjectExtensions.To*
   name: To
   href: api/Lett.Extensions.ObjectExtensions.html#Lett_Extensions_ObjectExtensions_To_
@@ -1823,6 +1857,62 @@ references:
   fullName.vb: Lett.Extensions.ObjectExtensions.To(Of T)(System.Object, System.Func(Of T))
   nameWithType: ObjectExtensions.To<T>(Object, Func<T>)
   nameWithType.vb: ObjectExtensions.To(Of T)(Object, Func(Of T))
+- uid: Lett.Extensions.StreamExtensions
+  name: StreamExtensions
+  href: api/Lett.Extensions.StreamExtensions.html
+  commentId: T:Lett.Extensions.StreamExtensions
+  fullName: Lett.Extensions.StreamExtensions
+  nameWithType: StreamExtensions
+- uid: Lett.Extensions.StreamExtensions.Deserialize*
+  name: Deserialize
+  href: api/Lett.Extensions.StreamExtensions.html#Lett_Extensions_StreamExtensions_Deserialize_
+  commentId: Overload:Lett.Extensions.StreamExtensions.Deserialize
+  isSpec: "True"
+  fullName: Lett.Extensions.StreamExtensions.Deserialize
+  nameWithType: StreamExtensions.Deserialize
+- uid: Lett.Extensions.StreamExtensions.Deserialize``1(System.IO.Stream)
+  name: Deserialize<T>(Stream)
+  href: api/Lett.Extensions.StreamExtensions.html#Lett_Extensions_StreamExtensions_Deserialize__1_System_IO_Stream_
+  commentId: M:Lett.Extensions.StreamExtensions.Deserialize``1(System.IO.Stream)
+  name.vb: Deserialize(Of T)(Stream)
+  fullName: Lett.Extensions.StreamExtensions.Deserialize<T>(System.IO.Stream)
+  fullName.vb: Lett.Extensions.StreamExtensions.Deserialize(Of T)(System.IO.Stream)
+  nameWithType: StreamExtensions.Deserialize<T>(Stream)
+  nameWithType.vb: StreamExtensions.Deserialize(Of T)(Stream)
+- uid: Lett.Extensions.StreamExtensions.Deserialize``1(System.IO.Stream,System.Runtime.Serialization.IFormatter)
+  name: Deserialize<T>(Stream, IFormatter)
+  href: api/Lett.Extensions.StreamExtensions.html#Lett_Extensions_StreamExtensions_Deserialize__1_System_IO_Stream_System_Runtime_Serialization_IFormatter_
+  commentId: M:Lett.Extensions.StreamExtensions.Deserialize``1(System.IO.Stream,System.Runtime.Serialization.IFormatter)
+  name.vb: Deserialize(Of T)(Stream, IFormatter)
+  fullName: Lett.Extensions.StreamExtensions.Deserialize<T>(System.IO.Stream, System.Runtime.Serialization.IFormatter)
+  fullName.vb: Lett.Extensions.StreamExtensions.Deserialize(Of T)(System.IO.Stream, System.Runtime.Serialization.IFormatter)
+  nameWithType: StreamExtensions.Deserialize<T>(Stream, IFormatter)
+  nameWithType.vb: StreamExtensions.Deserialize(Of T)(Stream, IFormatter)
+- uid: Lett.Extensions.StreamExtensions.SaveAsFile(System.IO.Stream,System.String)
+  name: SaveAsFile(Stream, String)
+  href: api/Lett.Extensions.StreamExtensions.html#Lett_Extensions_StreamExtensions_SaveAsFile_System_IO_Stream_System_String_
+  commentId: M:Lett.Extensions.StreamExtensions.SaveAsFile(System.IO.Stream,System.String)
+  fullName: Lett.Extensions.StreamExtensions.SaveAsFile(System.IO.Stream, System.String)
+  nameWithType: StreamExtensions.SaveAsFile(Stream, String)
+- uid: Lett.Extensions.StreamExtensions.SaveAsFile(System.IO.Stream,System.String,System.IO.FileMode)
+  name: SaveAsFile(Stream, String, FileMode)
+  href: api/Lett.Extensions.StreamExtensions.html#Lett_Extensions_StreamExtensions_SaveAsFile_System_IO_Stream_System_String_System_IO_FileMode_
+  commentId: M:Lett.Extensions.StreamExtensions.SaveAsFile(System.IO.Stream,System.String,System.IO.FileMode)
+  fullName: Lett.Extensions.StreamExtensions.SaveAsFile(System.IO.Stream, System.String, System.IO.FileMode)
+  nameWithType: StreamExtensions.SaveAsFile(Stream, String, FileMode)
+- uid: Lett.Extensions.StreamExtensions.SaveAsFile(System.IO.Stream,System.String,System.IO.FileMode,System.Int32)
+  name: SaveAsFile(Stream, String, FileMode, Int32)
+  href: api/Lett.Extensions.StreamExtensions.html#Lett_Extensions_StreamExtensions_SaveAsFile_System_IO_Stream_System_String_System_IO_FileMode_System_Int32_
+  commentId: M:Lett.Extensions.StreamExtensions.SaveAsFile(System.IO.Stream,System.String,System.IO.FileMode,System.Int32)
+  fullName: Lett.Extensions.StreamExtensions.SaveAsFile(System.IO.Stream, System.String, System.IO.FileMode, System.Int32)
+  nameWithType: StreamExtensions.SaveAsFile(Stream, String, FileMode, Int32)
+- uid: Lett.Extensions.StreamExtensions.SaveAsFile*
+  name: SaveAsFile
+  href: api/Lett.Extensions.StreamExtensions.html#Lett_Extensions_StreamExtensions_SaveAsFile_
+  commentId: Overload:Lett.Extensions.StreamExtensions.SaveAsFile
+  isSpec: "True"
+  fullName: Lett.Extensions.StreamExtensions.SaveAsFile
+  nameWithType: StreamExtensions.SaveAsFile
 - uid: Lett.Extensions.StringExtensions
   name: StringExtensions
   href: api/Lett.Extensions.StringExtensions.html
@@ -1855,6 +1945,32 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.StringExtensions.AppendSuffixIfNotExist
   nameWithType: StringExtensions.AppendSuffixIfNotExist
+- uid: Lett.Extensions.StringExtensions.AsDirectoryInfo(System.String)
+  name: AsDirectoryInfo(String)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_AsDirectoryInfo_System_String_
+  commentId: M:Lett.Extensions.StringExtensions.AsDirectoryInfo(System.String)
+  fullName: Lett.Extensions.StringExtensions.AsDirectoryInfo(System.String)
+  nameWithType: StringExtensions.AsDirectoryInfo(String)
+- uid: Lett.Extensions.StringExtensions.AsDirectoryInfo*
+  name: AsDirectoryInfo
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_AsDirectoryInfo_
+  commentId: Overload:Lett.Extensions.StringExtensions.AsDirectoryInfo
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.AsDirectoryInfo
+  nameWithType: StringExtensions.AsDirectoryInfo
+- uid: Lett.Extensions.StringExtensions.AsFileStream(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32)
+  name: AsFileStream(String, FileMode, FileAccess, FileShare, Int32)
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_AsFileStream_System_String_System_IO_FileMode_System_IO_FileAccess_System_IO_FileShare_System_Int32_
+  commentId: M:Lett.Extensions.StringExtensions.AsFileStream(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32)
+  fullName: Lett.Extensions.StringExtensions.AsFileStream(System.String, System.IO.FileMode, System.IO.FileAccess, System.IO.FileShare, System.Int32)
+  nameWithType: StringExtensions.AsFileStream(String, FileMode, FileAccess, FileShare, Int32)
+- uid: Lett.Extensions.StringExtensions.AsFileStream*
+  name: AsFileStream
+  href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_AsFileStream_
+  commentId: Overload:Lett.Extensions.StringExtensions.AsFileStream
+  isSpec: "True"
+  fullName: Lett.Extensions.StringExtensions.AsFileStream
+  nameWithType: StringExtensions.AsFileStream
 - uid: Lett.Extensions.StringExtensions.Base64Decode(System.String)
   name: Base64Decode(String)
   href: api/Lett.Extensions.StringExtensions.html#Lett_Extensions_StringExtensions_Base64Decode_System_String_
