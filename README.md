@@ -1,3 +1,4 @@
+[![Board Status](https://dev.azure.com/viacooky/abf81ecf-9e52-4c19-86a2-0fd361d38201/835b4d9b-f013-4a8f-9c55-b5a71e854c58/_apis/work/boardbadge/220bdb7e-a61b-4277-8abb-882e569ed9af)](https://dev.azure.com/viacooky/abf81ecf-9e52-4c19-86a2-0fd361d38201/_boards/board/t/835b4d9b-f013-4a8f-9c55-b5a71e854c58/Microsoft.RequirementCategory)
 ![](images/logo.png)
 
 [![Nuget](https://img.shields.io/nuget/v/Lett.Extensions.svg)](https://www.nuget.org/packages/Lett.Extensions/)
