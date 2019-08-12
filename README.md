@@ -104,15 +104,3 @@ see also from [**[here]**](https://viacooky.github.io/Lett.Extensions/version_no
 ## Lisence
 
 [![GitHub](https://img.shields.io/github/license/viacooky/Lett.Extensions.svg)](src/Lett.Extensions/LICENSE.txt)
-
----
-
-## Develop Tools
-
-[![](images/visualstudio-win.png)](https://visualstudio.microsoft.com/vs/)
-
-Development tools sponsored by JetBrains
-
-[![](images/ride.svg)](https://www.jetbrains.com/rider/?from=Lett.Extensions)
-
-[![](images/resharper.svg)](https://www.jetbrains.com/resharper/?from=Lett.Extensions)
