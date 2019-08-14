@@ -1,17 +1,20 @@
 # Version Notes
 
+### 0.3.4
+
+#### Features / 新增功能
+
+- `IDictionary` 
+    - `AddOrSet<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)` 添加或设置
+
 ### 0.3.3
 
 #### Features / 新增功能
 
 - `String`
-
   - `AsFileStream(String, FileMode, FileAccess, FileShare, Int32)` 转换为 FileStream
-
 - `Object`
-
   - `SaveAsFile<T>(T, String)` 保存为文件
-
 - `Stream`
   - `SaveAsFile(Stream, String)` 保存为文件
   - `Deserialize<T>(Stream)` 反序列化
