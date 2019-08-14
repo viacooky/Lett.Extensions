@@ -31,6 +31,18 @@ namespace Lett.Extensions.Test
         }
 
         [TestMethod]
+        public void AddOrUpdateRange_Test()
+        {
+            var dict1    = new Dictionary<string, int> {{"a", 1}, {"b", 2}};
+            var sameDict = new Dictionary<string, int> {{"a", 3}, {"b", 4}, {"c", 5}};
+            dict1.AddOrUpdateRange(sameDict);
+            Assert.AreEqual(3, dict1.Count);
+            Assert.AreEqual(3, dict1["a"]);
+            Assert.AreEqual(4, dict1["b"]);
+            Assert.AreEqual(5, dict1["c"]);
+        }
+
+        [TestMethod]
         public void GetOrUpdateTest()
         {
             var dict = new Dictionary<string, int> {{"a", 1}, {"b", 2}};
@@ -45,6 +57,36 @@ namespace Lett.Extensions.Test
             var readOnlyDict = new ReadOnlyDictionary<string, int>(new Dictionary<string, int> {{"a", 1}, {"b", 2}});
             Assert.ThrowsException<NotSupportedException>(() => readOnlyDict.GetOrUpdate("c", 3));
             Assert.ThrowsException<ArgumentNullException>(() => readOnlyDict.AddOrUpdate(null, 3));
+        }
+
+        [TestMethod]
+        public void AddRange_Test()
+        {
+            var dict     = new Dictionary<string, int> {{"a", 1}, {"b", 2}};
+            var sameDict = new Dictionary<string, int> {{"a", 1}, {"b", 2}};
+            Assert.ThrowsException<ArgumentException>(() => dict.AddRange(sameDict));
+
+            var appendDict = new Dictionary<string, int> {{"c", 3}, {"d", 4}};
+            dict.AddRange(appendDict);
+            Assert.AreEqual(4, dict.Count);
+            Assert.AreEqual(1, dict["a"]);
+            Assert.AreEqual(2, dict["b"]);
+            Assert.AreEqual(3, dict["c"]);
+            Assert.AreEqual(4, dict["d"]);
+        }
+
+        [TestMethod]
+        public void AddRangeParams_Test()
+        {
+            var dict = new Dictionary<string, int> {{"a", 1}, {"b", 2}};
+            dict.AddRangeParams(new KeyValuePair<string, int>("c", 3), new KeyValuePair<string, int>("d", 4));
+            Assert.AreEqual(4, dict.Count);
+            Assert.AreEqual(1, dict["a"]);
+            Assert.AreEqual(2, dict["b"]);
+            Assert.AreEqual(3, dict["c"]);
+            Assert.AreEqual(4, dict["d"]);
+
+            Assert.ThrowsException<ArgumentException>(() => dict.AddRangeParams(new KeyValuePair<string, int>("c", 3), new KeyValuePair<string, int>("d", 4)));
         }
     }
 }
