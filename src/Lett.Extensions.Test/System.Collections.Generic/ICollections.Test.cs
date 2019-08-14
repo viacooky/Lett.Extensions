@@ -69,14 +69,14 @@ namespace Lett.Extensions.Test
         [TestMethod]
         public void AddRangeParams_Test()
         {
-            var list       = new List<string> {"aa", "bb"};
+            var list = new List<string> {"aa", "bb"};
             list.AddRangeParams("cc", "aa");
             Assert.AreEqual(list.Count, 4);
             Assert.AreEqual(list[0], "aa");
             Assert.AreEqual(list[1], "bb");
             Assert.AreEqual(list[2], "cc");
             Assert.AreEqual(list[3], "aa");
-            
+
             var arr = new[] {"aa", "bb"};
             Assert.ThrowsException<NotSupportedException>(() => arr.AddRangeParams("cc", "aa"));
         }
