@@ -42,6 +42,35 @@ namespace Lett.Extensions
         }
 
         /// <summary>
+        ///     对指定集合的每个元素执行指定操作。
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="action">
+        ///     <para>指定操作</para>
+        ///     <para>T: 元素</para>
+        /// </param>
+        /// <typeparam name="T">元素类型</typeparam>
+        /// <exception cref="ArgumentNullException"> <paramref name="this" /> is null</exception>
+        /// <exception cref="ArgumentNullException"> <paramref name="action" /> is null</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var arr = new[] {"aa", "bb"};
+        /// var rs  = new List<string>();
+        /// arr.ForEach(str => rs.Add(str));
+        /// // rs[0] = "aa"
+        /// // rs[1] = "bb"
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static void ForEach<T>(this IEnumerable<T> @this, Action<T> action)
+        {
+            if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
+            if (action == null) throw new ArgumentNullException(nameof(action), $"{nameof(action)} is null");
+            foreach (var item in @this) action(item);
+        }
+
+        /// <summary>
         ///     格式化为字符串
         /// </summary>
         /// <param name="this"></param>
@@ -121,7 +150,7 @@ namespace Lett.Extensions
         /// rs2[0];         // "a"
         ///         ]]>
         ///     </code>
-        /// </example> 
+        /// </example>
         public static IEnumerable<T> Distinct<T, TResult>(this IEnumerable<T> @this, Func<T, TResult> selector, IEqualityComparer<TResult> equalityComparer)
         {
             if (@this == null) throw new ArgumentNullException(nameof(@this), "is null");

@@ -11,6 +11,8 @@
   - `AddRange<T>(ICollection<T>, IEnumerable<T>)` 批量添加
   - `AddRangeParams<T>(ICollection<T>, T[])` 批量添加
   - `AddIfNotContainsParams<T>(ICollection<T>, T[])` 如果不包含，则添加
+- `IEnumerable`
+  - `ForEach<T>(IEnumerable<T>, Action<T>)` 对指定集合的每个元素执行指定操作。
 
 #### Changed / 变更
 
@@ -19,7 +21,7 @@
   - `AddIfNotContains<T>(ICollection<T>, ICollection<T>)` 修改为 `AddIfNotContains<T>(ICollection<T>, IEnumerable<T>)`
 
 - `Array`
-  - 移除 `ForEach()`
+  - 移除 `ForEach()`，使用 `IEnumerable` 中的 `ForEach<T>(IEnumerable<T>, Action<T>)`
 
 ### 0.3.3
 

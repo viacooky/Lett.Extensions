@@ -24,6 +24,35 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs2.Count, 2);
             Assert.AreEqual(rs2[0], "aa");
             Assert.AreEqual(rs2[1], "bb");
+
+            List<string> strList3 = null;
+            // ReSharper disable once CollectionNeverQueried.Local
+            var rs3 = new Dictionary<int, string>();
+            // ReSharper disable once ExpressionIsAlwaysNull
+            Assert.ThrowsException<ArgumentNullException>(() => { strList3.ForEach((index, str) => rs3.Add(index, str)); });
+
+            var strList4 = new List<string> {"aa", "bb"};
+            Assert.ThrowsException<ArgumentNullException>(() => { strList4.ForEach(null as Action<int, string>); });
+        }
+
+        [TestMethod]
+        public void ForEach_Test2()
+        {
+            var arr = new[] {"aa", "bb"};
+            var rs  = new List<string>();
+            arr.Select(s => s).ForEach(str => rs.Add(str));
+            Assert.AreEqual(2, rs.Count);
+            Assert.AreEqual("aa", rs[0]);
+            Assert.AreEqual("bb", rs[1]);
+
+            string[] arr2 = null;
+            // ReSharper disable once CollectionNeverQueried.Local
+            var rs2 = new List<string>();
+            // ReSharper disable once AssignNullToNotNullAttribute
+            Assert.ThrowsException<ArgumentNullException>(() => arr2.Select(s => s).ForEach(str => rs2.Add(str)));
+
+            var arr3 = new[] {"aa", "bb"};
+            Assert.ThrowsException<ArgumentNullException>(() => { arr3.ForEach(null as Action<string>); });
         }
 
         [TestMethod]
