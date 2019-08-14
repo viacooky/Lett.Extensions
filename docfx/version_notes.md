@@ -4,8 +4,17 @@
 
 #### Features / 新增功能
 
-- `IDictionary` 
-    - `AddOrSet<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)` 添加或设置
+- `IDictionary`
+  - `AddOrUpdate<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)` 添加或更新
+  - `GetOrUpdate<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)` 获取值或更新
+- `ICollection`
+  - `AddRange<T>(ICollection<T>, IEnumerable<T>)` 批量添加
+  - `AddRangeParams<T>(ICollection<T>, T[])` 批量添加
+  - `AddIfNotContainsParams<T>(ICollection<T>, T[])` 如果不包含，则添加
+
+#### Changed / 变更
+
+- `AddIfNotContains<T>(ICollection<T>, ICollection<T>)` 修改为 `AddIfNotContains<T>(ICollection<T>, IEnumerable<T>)`
 
 ### 0.3.3
 
