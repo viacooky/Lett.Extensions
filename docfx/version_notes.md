@@ -14,7 +14,12 @@
 
 #### Changed / 变更
 
-- `AddIfNotContains<T>(ICollection<T>, ICollection<T>)` 修改为 `AddIfNotContains<T>(ICollection<T>, IEnumerable<T>)`
+- `ICollection`
+
+  - `AddIfNotContains<T>(ICollection<T>, ICollection<T>)` 修改为 `AddIfNotContains<T>(ICollection<T>, IEnumerable<T>)`
+
+- `Array`
+  - 移除 `ForEach()`
 
 ### 0.3.3
 
