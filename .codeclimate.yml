@@ -1,0 +1,3 @@
+plugins:
+  watson:
+    enabled: true
