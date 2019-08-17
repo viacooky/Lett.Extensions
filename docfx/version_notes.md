@@ -1,17 +1,43 @@
 # Version Notes
 
+### 0.3.4
+
+#### Features / 新增功能
+
+- `IEnumerable`
+  - `SplitBlock<T>(IEnumerable<T>, Int32)` 分割成指定 size 的块
+
+* `IDictionary`
+  - `AddOrUpdate<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)` 添加或更新
+  - `GetOrUpdate<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)` 获取值或更新
+  - `AddOrUpdateRange<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<KeyValuePair<TKey, TValue>>)` 批量添加或更新
+  - `AddRange<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<KeyValuePair<TKey, TValue>>)` 批量添加
+  - `AddRangeParams<TKey, TValue>(IDictionary<TKey, TValue>, KeyValuePair<TKey, TValue>[])` 批量添加
+
+- `ICollection`
+  - `AddRange<T>(ICollection<T>, IEnumerable<T>)` 批量添加
+  - `AddRangeParams<T>(ICollection<T>, T[])` 批量添加
+  - `AddIfNotContainsParams<T>(ICollection<T>, T[])` 如果不包含，则添加
+- `IEnumerable`
+  - `ForEach<T>(IEnumerable<T>, Action<T>)` 对指定集合的每个元素执行指定操作。
+
+#### Changed / 变更
+
+- `ICollection`
+
+  - `AddIfNotContains<T>(ICollection<T>, ICollection<T>)` 修改为 `AddIfNotContains<T>(ICollection<T>, IEnumerable<T>)`
+
+- `Array`
+  - 移除 `ForEach()`，使用 `IEnumerable` 中的 `ForEach<T>(IEnumerable<T>, Action<T>)`
+
 ### 0.3.3
 
 #### Features / 新增功能
 
 - `String`
-
   - `AsFileStream(String, FileMode, FileAccess, FileShare, Int32)` 转换为 FileStream
-
 - `Object`
-
   - `SaveAsFile<T>(T, String)` 保存为文件
-
 - `Stream`
   - `SaveAsFile(Stream, String)` 保存为文件
   - `Deserialize<T>(Stream)` 反序列化

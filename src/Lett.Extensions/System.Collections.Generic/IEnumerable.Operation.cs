@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Lett.Extensions
@@ -39,6 +40,35 @@ namespace Lett.Extensions
             if (action == null) throw new ArgumentNullException(nameof(action), $"{nameof(action)} is null");
             var i = 0;
             foreach (var item in @this) action(i++, item);
+        }
+
+        /// <summary>
+        ///     对指定集合的每个元素执行指定操作。
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="action">
+        ///     <para>指定操作</para>
+        ///     <para>T: 元素</para>
+        /// </param>
+        /// <typeparam name="T">元素类型</typeparam>
+        /// <exception cref="ArgumentNullException"> <paramref name="this" /> is null</exception>
+        /// <exception cref="ArgumentNullException"> <paramref name="action" /> is null</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var arr = new[] {"aa", "bb"};
+        /// var rs  = new List<string>();
+        /// arr.ForEach(str => rs.Add(str));
+        /// // rs[0] = "aa"
+        /// // rs[1] = "bb"
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static void ForEach<T>(this IEnumerable<T> @this, Action<T> action)
+        {
+            if (@this == null) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
+            if (action == null) throw new ArgumentNullException(nameof(action), $"{nameof(action)} is null");
+            foreach (var item in @this) action(item);
         }
 
         /// <summary>
@@ -121,7 +151,7 @@ namespace Lett.Extensions
         /// rs2[0];         // "a"
         ///         ]]>
         ///     </code>
-        /// </example> 
+        /// </example>
         public static IEnumerable<T> Distinct<T, TResult>(this IEnumerable<T> @this, Func<T, TResult> selector, IEqualityComparer<TResult> equalityComparer)
         {
             if (@this == null) throw new ArgumentNullException(nameof(@this), "is null");
@@ -136,6 +166,42 @@ namespace Lett.Extensions
                 yield return element;
                 rs.Add(setValue);
             }
+        }
+
+        /// <summary>
+        ///     <para>分割成指定size的块</para>
+        ///     <remarks>like this : <br /> new[] {1, 2, 3, 4, 5, 6, 7}.SplitBlock(3); -&gt; {{1, 2, 3}, {4, 5, 6}, {7}}</remarks>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="size">size</param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="this" /> is null</exception>
+        /// <exception cref="ArgumentException"><paramref name="size" /> less than 1</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var s = new[] {1, 2, 3, 4, 5, 6, 7};
+        /// var rs = s.Block(2);  // rs = {{1, 2}, {3, 4}, {5, 6}, {7}}
+        /// var rs2 = s.Block(3); // rs2 = {{1, 2, 3}, {4, 5, 6}, {7}}
+        /// var rs3 = s.Block(4); // rs3 = {{1, 2, 3, 4}, {5, 6, 7}}
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static IEnumerable<IEnumerable<T>> SplitBlock<T>(this IEnumerable<T> @this, int size)
+        {
+            if (@this.IsNull()) throw new ArgumentNullException(nameof(@this), "is null");
+            if (size < 1) throw new ArgumentException($"{nameof(size)} less than 1", nameof(size));
+            var source = @this.ToList();
+            var rs     = new List<IEnumerable<T>>();
+            var index  = 0;
+            while (index < source.Count)
+            {
+                rs.Add(source.Skip(index).Take(size));
+                index += size;
+            }
+
+            return rs;
         }
     }
 }

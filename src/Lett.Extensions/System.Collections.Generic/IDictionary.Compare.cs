@@ -5,10 +5,10 @@ using System.Linq;
 namespace Lett.Extensions
 {
     /// <summary>
-    ///     ICollections 扩展方法
+    ///     IDictionary 扩展方法
     /// </summary>
     // ReSharper disable once InconsistentNaming
-    public static class IDictionaryExtensions
+    public static partial class IDictionaryExtensions
     {
         #region ContainsKey
 
