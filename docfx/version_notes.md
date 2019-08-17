@@ -2,7 +2,7 @@
 
 ### 0.3.4
 
-#### Features / 新增功能
+#### Features / 新增 功能
 
 - `IEnumerable`
   - `SplitBlock<T>(IEnumerable<T>, Int32)` 分割成指定 size 的块
