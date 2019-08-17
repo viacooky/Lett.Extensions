@@ -77,7 +77,9 @@ namespace Lett.Extensions
             if (filePath.IsNull()) throw new ArgumentNullException(nameof(filePath), "is null");
             if (filePath.IsEmpty()) throw new ArgumentException(nameof(filePath), $"{nameof(filePath)} empty string");
             if (bufferSize < 1) throw new ArgumentOutOfRangeException(nameof(bufferSize), $"{nameof(bufferSize)} must greater than zero");
-            var dirPath = Path.GetDirectoryName(filePath) ?? throw new ArgumentNullException(nameof(filePath), $"{nameof(filePath)} can not find directory name");
+            var dirPath = Path.GetDirectoryName(filePath);
+            if (dirPath.IsNullOrEmpty()) throw new ArgumentNullException(nameof(filePath), $"{nameof(filePath)} can not find directory name");
+            // ReSharper disable once AssignNullToNotNullAttribute
             if (!Directory.Exists(dirPath)) Directory.CreateDirectory(dirPath);
             using (var fs = new FileStream(filePath, fileMode)) { @this.CopyTo(fs, bufferSize); }
         }

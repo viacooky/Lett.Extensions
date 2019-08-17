@@ -144,7 +144,9 @@ namespace Lett.Extensions
             if (@this.IsNull()) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
             if (filePath.IsNullOrEmpty()) throw new ArgumentNullException(nameof(filePath), $"{nameof(filePath)} is null or empty");
             if (formatter.IsNull()) throw new ArgumentNullException(nameof(formatter), $"{nameof(formatter)} is null");
-            var dir = Path.GetDirectoryName(filePath) ?? throw new ArgumentNullException(nameof(filePath), $"{nameof(filePath)} can not find directory name");
+            var dir = Path.GetDirectoryName(filePath);
+            if (dir.IsNullOrEmpty()) throw new ArgumentNullException(nameof(filePath), $"{nameof(filePath)} can not find directory name");
+            // ReSharper disable once AssignNullToNotNullAttribute
             if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
             using (var fs = filePath.AsFileStream(FileMode.Create, FileAccess.Write, FileShare.Write)) { formatter.Serialize(fs, @this); }
         }
