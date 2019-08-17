@@ -19,6 +19,7 @@ namespace Lett.Extensions
         /// </typeparam>
         /// <returns></returns>
         /// <exception cref="ArgumentException"><paramref name="this" /> 需要支持序列化 Serializable</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="this"/> is null</exception>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -36,6 +37,7 @@ namespace Lett.Extensions
         /// </example>
         public static T DeepClone<T>(this T @this)
         {
+            if(@this.IsNull()) throw new ArgumentNullException(nameof(@this), $"{nameof(@this)} is null");
             if (!typeof(T).IsSerializable) throw new ArgumentException("类型需要支持序列化", nameof(@this));
 
             using (var stream = new MemoryStream())
