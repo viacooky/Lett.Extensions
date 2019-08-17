@@ -89,6 +89,24 @@ namespace Lett.Extensions.Test
             Assert.AreEqual("a", rs2[0].Name);
         }
 
+        [TestMethod]
+        public void SplitBlock_Test()
+        {
+            var s = new[] {1, 2, 3, 4, 5, 6, 7};
+            Assert.AreEqual(7, s.SplitBlock(1).Count());
+            Assert.AreEqual(4, s.SplitBlock(2).Count());
+            Assert.AreEqual(3, s.SplitBlock(3).Count());
+            Assert.AreEqual(2, s.SplitBlock(4).Count());
+            Assert.AreEqual(1, s.SplitBlock(7).Count());
+            Assert.AreEqual(1, s.SplitBlock(8).Count());
+            Assert.ThrowsException<ArgumentException>(() => s.SplitBlock(-1));
+            Assert.ThrowsException<ArgumentException>(() => s.SplitBlock(0));
+
+            // ReSharper disable once CollectionNeverUpdated.Local
+            var s2 = new List<string>();
+            Assert.AreEqual(0, s2.SplitBlock(3).Count());
+        }
+
         private class MyClass
         {
             public string Name { get; set; }

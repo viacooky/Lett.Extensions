@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Lett.Extensions
@@ -165,6 +166,42 @@ namespace Lett.Extensions
                 yield return element;
                 rs.Add(setValue);
             }
+        }
+
+        /// <summary>
+        ///     <para>分割成指定size的块</para>
+        ///     <remarks>like this : <br /> new[] {1, 2, 3, 4, 5, 6, 7}.SplitBlock(3); -&gt; {{1, 2, 3}, {4, 5, 6}, {7}}</remarks>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="size">size</param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="this" /> is null</exception>
+        /// <exception cref="ArgumentException"><paramref name="size" /> less than 1</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var s = new[] {1, 2, 3, 4, 5, 6, 7};
+        /// var rs = s.Block(2);  // rs = {{1, 2}, {3, 4}, {5, 6}, {7}}
+        /// var rs2 = s.Block(3); // rs2 = {{1, 2, 3}, {4, 5, 6}, {7}}
+        /// var rs3 = s.Block(4); // rs3 = {{1, 2, 3, 4}, {5, 6, 7}}
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static IEnumerable<IEnumerable<T>> SplitBlock<T>(this IEnumerable<T> @this, int size)
+        {
+            if (@this.IsNull()) throw new ArgumentNullException(nameof(@this), "is null");
+            if (size < 1) throw new ArgumentException($"{nameof(size)} less than 1", nameof(size));
+            var source = @this.ToList();
+            var rs     = new List<IEnumerable<T>>();
+            var index  = 0;
+            while (index < source.Count)
+            {
+                rs.Add(source.Skip(index).Take(size));
+                index += size;
+            }
+
+            return rs;
         }
     }
 }
