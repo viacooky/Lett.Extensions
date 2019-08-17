@@ -37,41 +37,20 @@ namespace Lett.Extensions.Test
 
             var rs = GetTestUnitInfo(true);
             Assert.IsTrue(rs.IsNullOrDbNull());
-            var rs2 = GetTestUnitInfo(false);
+            var rs2 = GetTestUnitInfo();
             Assert.IsFalse(rs2.IsNullOrDbNull());
             Assert.IsTrue(rs2?.UnitId.IsNullOrDbNull() ?? false);
-            Assert.IsTrue(rs2?.UnitNumber.IsNullOrDbNull() ?? false);
-            Assert.IsFalse(rs2?.UnitName.IsNullOrDbNull() ?? true);
+            // ReSharper disable once ConstantConditionalAccessQualifier
+            Assert.IsTrue((bool) rs2?.UnitNumber.IsNullOrDbNull());
+            // ReSharper disable once ConstantConditionalAccessQualifier
+            Assert.IsFalse((bool) rs2?.UnitName.IsNullOrDbNull());
         }
+        
 
         private UnitInfo? GetTestUnitInfo(bool isNull = false)
         {
             if (isNull) return null;
-            return new UnitInfo
-            {
-                UnitId     = DBNull.Value,
-                UnitName   = DateTime.Now,
-                UnitNumber = null,
-            };
-        }
-
-
-        private struct UnitInfo
-        {
-            /// <summary>
-            /// 单位ID
-            /// </summary>
-            public object UnitId;
-
-            /// <summary>
-            /// 单位代码
-            /// </summary>
-            public object UnitNumber;
-
-            /// <summary>
-            /// 单位名称
-            /// </summary>
-            public object UnitName;
+            return new UnitInfo {UnitId = DBNull.Value, UnitName = DateTime.Now, UnitNumber = null};
         }
 
         [TestMethod]
@@ -97,6 +76,7 @@ namespace Lett.Extensions.Test
 
             string[] stringItems2 = null;
             var      s3           = "a";
+            // ReSharper disable once ExpressionIsAlwaysNull
             Assert.IsFalse(s3.In(stringItems2));
 
             var typeItems = new[] {typeof(string), typeof(int), typeof(decimal)};
@@ -126,6 +106,7 @@ namespace Lett.Extensions.Test
             var rs = "a".InParams("A", "a");
             Assert.IsTrue(rs);
             string s = null;
+            // ReSharper disable once ExpressionIsAlwaysNull
             rs = s.InParams("a");
             Assert.IsFalse(rs);
         }
@@ -217,14 +198,17 @@ namespace Lett.Extensions.Test
             var dt2     = DateTime.Today;
             Assert.IsFalse(dt2.NotIn(dtItems));
 
-            var    stringItems = new[] {"a", "b", null};
-            var    s           = "a";
-            string s2          = null;
+            var stringItems = new[] {"a", "b", null};
+            var s           = "a";
+#pragma warning disable 219
+            string s2 = null;
+#pragma warning restore 219
             Assert.IsFalse(s.NotIn(stringItems));
             Assert.IsFalse(s.NotIn(stringItems));
 
             string[] stringItems2 = null;
             var      s3           = "a";
+            // ReSharper disable once ExpressionIsAlwaysNull
             Assert.IsTrue(s3.NotIn(stringItems2));
         }
 
@@ -255,6 +239,34 @@ namespace Lett.Extensions.Test
             Assert.IsTrue(rs3);
         }
 
+        [TestMethod]
+        public void IsNull_Test()
+        {
+            string a = null;
+            var    b = default(string);
+            Assert.IsTrue(a.IsNull());
+            Assert.IsTrue(b.IsNull());
+        }
+
+
+        private struct UnitInfo
+        {
+            /// <summary>
+            ///     单位ID
+            /// </summary>
+            public object UnitId;
+
+            /// <summary>
+            ///     单位代码
+            /// </summary>
+            public object UnitNumber;
+
+            /// <summary>
+            ///     单位名称
+            /// </summary>
+            public object UnitName;
+        }
+
         private class MyComparer : IEqualityComparer<DateTime>
         {
             public bool Equals(DateTime x, DateTime y)
@@ -270,12 +282,14 @@ namespace Lett.Extensions.Test
 
         private class MyClass
         {
+            // ReSharper disable once UnusedMember.Local
             public string Name { get; set; }
         }
 
         [Serializable]
         private class MySerializableClass
         {
+            // ReSharper disable once UnusedMember.Local
             public string Name { get; set; }
         }
 
@@ -286,16 +300,8 @@ namespace Lett.Extensions.Test
 
         private struct MyStruct
         {
+            // ReSharper disable once UnusedMember.Local
             public string Name { get; set; }
-        }
-
-        [TestMethod]
-        public void IsNull_Test()
-        {
-            string a = null;
-            var b = default(string);
-            Assert.IsTrue(a.IsNull());
-            Assert.IsTrue(b.IsNull());
         }
     }
 }
