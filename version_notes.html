@@ -72,20 +72,67 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="version-notes">Version Notes</h1>
 
-<h3 id="033">0.3.3</h3>
+<h3 id="034">0.3.4</h3>
 <h4 id="features--新增功能">Features / 新增功能</h4>
 <ul>
-<li><p><code>String</code></p>
+<li><code>IEnumerable</code>
+<ul>
+<li><code>SplitBlock&lt;T&gt;(IEnumerable&lt;T&gt;, Int32)</code> 分割成指定 size 的块</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>IDictionary</code>
+<ul>
+<li><code>AddOrUpdate&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, TKey, TValue)</code> 添加或更新</li>
+<li><code>GetOrUpdate&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, TKey, TValue)</code> 获取值或更新</li>
+<li><code>AddOrUpdateRange&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;)</code> 批量添加或更新</li>
+<li><code>AddRange&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;)</code> 批量添加</li>
+<li><code>AddRangeParams&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, KeyValuePair&lt;TKey, TValue&gt;[])</code> 批量添加</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>ICollection</code>
+<ul>
+<li><code>AddRange&lt;T&gt;(ICollection&lt;T&gt;, IEnumerable&lt;T&gt;)</code> 批量添加</li>
+<li><code>AddRangeParams&lt;T&gt;(ICollection&lt;T&gt;, T[])</code> 批量添加</li>
+<li><code>AddIfNotContainsParams&lt;T&gt;(ICollection&lt;T&gt;, T[])</code> 如果不包含，则添加</li>
+</ul>
+</li>
+<li><code>IEnumerable</code>
+<ul>
+<li><code>ForEach&lt;T&gt;(IEnumerable&lt;T&gt;, Action&lt;T&gt;)</code> 对指定集合的每个元素执行指定操作。</li>
+</ul>
+</li>
+</ul>
+<h4 id="changed--变更">Changed / 变更</h4>
+<ul>
+<li><p><code>ICollection</code></p>
+<ul>
+<li><code>AddIfNotContains&lt;T&gt;(ICollection&lt;T&gt;, ICollection&lt;T&gt;)</code> 修改为 <code>AddIfNotContains&lt;T&gt;(ICollection&lt;T&gt;, IEnumerable&lt;T&gt;)</code></li>
+</ul>
+</li>
+<li><p><code>Array</code></p>
+<ul>
+<li>移除 <code>ForEach()</code>，使用 <code>IEnumerable</code> 中的 <code>ForEach&lt;T&gt;(IEnumerable&lt;T&gt;, Action&lt;T&gt;)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="033">0.3.3</h3>
+<h4 id="features--新增功能-1">Features / 新增功能</h4>
+<ul>
+<li><code>String</code>
 <ul>
 <li><code>AsFileStream(String, FileMode, FileAccess, FileShare, Int32)</code> 转换为 FileStream</li>
 </ul>
 </li>
-<li><p><code>Object</code></p>
+<li><code>Object</code>
 <ul>
 <li><code>SaveAsFile&lt;T&gt;(T, String)</code> 保存为文件</li>
 </ul>
 </li>
-<li><p><code>Stream</code></p>
+<li><code>Stream</code>
 <ul>
 <li><code>SaveAsFile(Stream, String)</code> 保存为文件</li>
 <li><code>Deserialize&lt;T&gt;(Stream)</code> 反序列化</li>
@@ -93,7 +140,7 @@
 </li>
 </ul>
 <h3 id="032">0.3.2</h3>
-<h4 id="features--新增功能-1">Features / 新增功能</h4>
+<h4 id="features--新增功能-2">Features / 新增功能</h4>
 <ul>
 <li><code>IEnumerable</code>
 <ul>
@@ -107,13 +154,13 @@
 </li>
 </ul>
 <h3 id="031">0.3.1</h3>
-<h4 id="changed--变更">Changed / 变更</h4>
+<h4 id="changed--变更-1">Changed / 变更</h4>
 <ul>
 <li><code>IEnumerable.ContainsAny(this IEnumerable&lt;T&gt; @this, IEnumerable&lt;T&gt; items)</code> 实现调整，统一语义为 <strong>this 是否包含 items 中任一元素</strong></li>
 <li><code>IEnumerable.ContainsAll(this IEnumerable&lt;T&gt; @this, IEnumerable&lt;T&gt; items)</code> 实现调整，统一语义为 <strong>this 是否包含 items 中所有元素</strong></li>
 </ul>
 <h3 id="030">0.3.0</h3>
-<h4 id="features--新增功能-2">Features / 新增功能</h4>
+<h4 id="features--新增功能-3">Features / 新增功能</h4>
 <ul>
 <li><code>Object</code>
 <ul>
@@ -135,7 +182,7 @@
 <li>修复 nuget 包安装后注释缺失的问题</li>
 </ul>
 <h3 id="028-2019-06-20">0.2.8 (2019-06-20)</h3>
-<h4 id="features--新增功能-3">Features / 新增功能</h4>
+<h4 id="features--新增功能-4">Features / 新增功能</h4>
 <ul>
 <li><code>IEnumerable&lt;T&gt;</code>
 <ul>
@@ -145,7 +192,7 @@
 </li>
 </ul>
 <h3 id="027-2019-06-05">0.2.7 (2019-06-05)</h3>
-<h4 id="features--新增功能-4">Features / 新增功能</h4>
+<h4 id="features--新增功能-5">Features / 新增功能</h4>
 <ul>
 <li><code>String</code>
 <ul>
@@ -161,7 +208,7 @@
 </li>
 </ul>
 <h3 id="026-2019-06-03">0.2.6 (2019-06-03)</h3>
-<h4 id="features--新增功能-5">Features / 新增功能</h4>
+<h4 id="features--新增功能-6">Features / 新增功能</h4>
 <ul>
 <li><code>DataRow</code>
 <ul>
@@ -174,7 +221,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="changed--变更-1">Changed / 变更</h4>
+<h4 id="changed--变更-2">Changed / 变更</h4>
 <ul>
 <li>移除 <code>DataTableException</code></li>
 <li><code>DataTable</code>
@@ -193,7 +240,7 @@
 </li>
 </ul>
 <h3 id="025-2019-05-30">0.2.5 (2019-05-30)</h3>
-<h4 id="features--新增功能-6">Features / 新增功能</h4>
+<h4 id="features--新增功能-7">Features / 新增功能</h4>
 <ul>
 <li><code>DataTable</code> 扩展方法
 <ul>
@@ -202,7 +249,7 @@
 </li>
 </ul>
 <h3 id="024-2019-05-26">0.2.4 (2019-05-26)</h3>
-<h4 id="features--新增功能-7">Features / 新增功能</h4>
+<h4 id="features--新增功能-8">Features / 新增功能</h4>
 <ul>
 <li><code>IDictionary</code> 扩展方法
 <ul>
@@ -219,7 +266,7 @@
 </li>
 </ul>
 <h3 id="023-2019-05-26">0.2.3 (2019-05-26)</h3>
-<h4 id="features--新增功能-8">Features / 新增功能</h4>
+<h4 id="features--新增功能-9">Features / 新增功能</h4>
 <ul>
 <li>增加<code>DataRow</code>扩展方法
 <ul>
@@ -246,7 +293,7 @@
 </li>
 </ul>
 <h3 id="022-2019-05-26">0.2.2 (2019-05-26)</h3>
-<h4 id="features--新增功能-9">Features / 新增功能</h4>
+<h4 id="features--新增功能-10">Features / 新增功能</h4>
 <ul>
 <li>增加<code>DateTime</code>扩展方法
 <ul>
@@ -272,7 +319,7 @@
 </li>
 </ul>
 <h3 id="021-2019-05-24">0.2.1 (2019-05-24)</h3>
-<h4 id="features--新增功能-10">Features / 新增功能</h4>
+<h4 id="features--新增功能-11">Features / 新增功能</h4>
 <ul>
 <li>增加<code>DateTime</code>扩展方法:
 <ul>
@@ -293,7 +340,7 @@
 </li>
 </ul>
 <h3 id="020-2019-05-21">0.2.0 (2019-05-21)</h3>
-<h4 id="features--新增功能-11">Features / 新增功能</h4>
+<h4 id="features--新增功能-12">Features / 新增功能</h4>
 <ul>
 <li>增加<code>IEnumerable&lt;T&gt;</code>扩展方法：
 <ul>
@@ -311,7 +358,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="changed--变更-2">Changed / 变更</h4>
+<h4 id="changed--变更-3">Changed / 变更</h4>
 <ul>
 <li>移除<code>DateTime</code>扩展方法:
 <ul>
@@ -320,7 +367,7 @@
 </li>
 </ul>
 <h3 id="019-2019-05-18">0.1.9 (2019-05-18)</h3>
-<h4 id="features--新增功能-12">Features / 新增功能</h4>
+<h4 id="features--新增功能-13">Features / 新增功能</h4>
 <ul>
 <li>增加<code>DateTime</code>扩展方法:
 <ul>
@@ -343,7 +390,7 @@
 </li>
 </ul>
 <h3 id="018-2019-05-13">0.1.8 (2019-05-13)</h3>
-<h4 id="features--新增功能-13">Features / 新增功能</h4>
+<h4 id="features--新增功能-14">Features / 新增功能</h4>
 <ul>
 <li>增加<code>string</code>扩展方法:
 <ul>
@@ -395,7 +442,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="changed--变更-3">Changed / 变更</h4>
+<h4 id="changed--变更-4">Changed / 变更</h4>
 <ul>
 <li>对扩展方法类名进行规范重命名
 <ul>
@@ -419,7 +466,7 @@
 </li>
 </ul>
 <h3 id="017-2019-04-28">0.1.7 (2019-04-28)</h3>
-<h4 id="features--新增功能-14">Features / 新增功能</h4>
+<h4 id="features--新增功能-15">Features / 新增功能</h4>
 <ul>
 <li>增加 <code>System.String</code> 拓展方法
 <ul>
@@ -430,14 +477,14 @@
 </li>
 </ul>
 <h3 id="016-2019-04-25">0.1.6 (2019-04-25)</h3>
-<h4 id="features--新增功能-15">Features / 新增功能</h4>
+<h4 id="features--新增功能-16">Features / 新增功能</h4>
 <ul>
 <li>增加 <code>String.IsNullOrWhiteSpace()</code> 是否 null 或空白</li>
 <li>增加 <code>String.ContainsAll()</code> 是否全部包含，默认不区分大小写</li>
 <li>增加 <code>String.ContainsAny()</code> 是否包含任意一个，默认不区分大小写</li>
 </ul>
 <h3 id="015-2019-04-24">0.1.5 (2019-04-24)</h3>
-<h4 id="features--新增功能-16">Features / 新增功能</h4>
+<h4 id="features--新增功能-17">Features / 新增功能</h4>
 <ul>
 <li>增加 DataTable DataRow 转换实体方法</li>
 <li>增加 DataColumnCollectionTest.AddRange 方法</li>
@@ -445,14 +492,14 @@
 <li>获取 Column 的数据类型 <code>GetColumnDataType(string columnName)</code></li>
 <li>获取 Column 的数据类型 <code>GetColumnDataType(int index)</code></li>
 </ul>
-<h4 id="changed--变更-4">Changed / 变更</h4>
+<h4 id="changed--变更-5">Changed / 变更</h4>
 <ul>
 <li><code>DataRow.Cell&lt;T&gt;()</code> 系列方法，泛型约定调整为 实现了 <code>IConvertible</code> 接口的类型</li>
 <li><code>Object.To&lt;T&gt;()</code> 方法的泛型约定调整为 实现了 <code>IConvertible</code> 接口的类型</li>
 <li>实现了 <code>IConvertible</code> 接口的类型 如：Boolean, Byte, Char, DateTime, System.DBNull, Decimal, Double, System.Enum, Int16, Int32, Int64, SByte, Single, String, UInt16, UInt32, UInt64 等</li>
 </ul>
 <h3 id="014-2019-04-14">0.1.4 (2019-04-14)</h3>
-<h4 id="features--新增功能-17">Features / 新增功能</h4>
+<h4 id="features--新增功能-18">Features / 新增功能</h4>
 <ul>
 <li>增加 Object.IsDBNull 方法</li>
 </ul>
@@ -462,11 +509,11 @@
 </ul>
 <hr>
 <h3 id="xxx-2019-04-13">X.X.X (2019-04-13)</h3>
-<h4 id="features--新增功能-18">Features / 新增功能</h4>
+<h4 id="features--新增功能-19">Features / 新增功能</h4>
 <ul>
 <li></li>
 </ul>
-<h4 id="changed--变更-5">Changed / 变更</h4>
+<h4 id="changed--变更-6">Changed / 变更</h4>
 <ul>
 <li></li>
 </ul>

@@ -173,31 +173,6 @@ references:
   fullName.vb: Lett.Extensions.ArrayExtensions.FindLastIndex(Of T)(T(), System.Predicate(Of T))
   nameWithType: ArrayExtensions.FindLastIndex<T>(T[], Predicate<T>)
   nameWithType.vb: ArrayExtensions.FindLastIndex(Of T)(T(), Predicate(Of T))
-- uid: Lett.Extensions.ArrayExtensions.ForEach*
-  name: ForEach
-  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_ForEach_
-  commentId: Overload:Lett.Extensions.ArrayExtensions.ForEach
-  isSpec: "True"
-  fullName: Lett.Extensions.ArrayExtensions.ForEach
-  nameWithType: ArrayExtensions.ForEach
-- uid: Lett.Extensions.ArrayExtensions.ForEach``1(``0[],System.Action{``0})
-  name: ForEach<T>(T[], Action<T>)
-  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_ForEach__1___0___System_Action___0__
-  commentId: M:Lett.Extensions.ArrayExtensions.ForEach``1(``0[],System.Action{``0})
-  name.vb: ForEach(Of T)(T(), Action(Of T))
-  fullName: Lett.Extensions.ArrayExtensions.ForEach<T>(T[], System.Action<T>)
-  fullName.vb: Lett.Extensions.ArrayExtensions.ForEach(Of T)(T(), System.Action(Of T))
-  nameWithType: ArrayExtensions.ForEach<T>(T[], Action<T>)
-  nameWithType.vb: ArrayExtensions.ForEach(Of T)(T(), Action(Of T))
-- uid: Lett.Extensions.ArrayExtensions.ForEach``1(``0[],System.Action{System.Int32,``0})
-  name: ForEach<T>(T[], Action<Int32, T>)
-  href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_ForEach__1___0___System_Action_System_Int32___0__
-  commentId: M:Lett.Extensions.ArrayExtensions.ForEach``1(``0[],System.Action{System.Int32,``0})
-  name.vb: ForEach(Of T)(T(), Action(Of Int32, T))
-  fullName: Lett.Extensions.ArrayExtensions.ForEach<T>(T[], System.Action<System.Int32, T>)
-  fullName.vb: Lett.Extensions.ArrayExtensions.ForEach(Of T)(T(), System.Action(Of System.Int32, T))
-  nameWithType: ArrayExtensions.ForEach<T>(T[], Action<Int32, T>)
-  nameWithType.vb: ArrayExtensions.ForEach(Of T)(T(), Action(Of Int32, T))
 - uid: Lett.Extensions.ArrayExtensions.Reverse(System.Array)
   name: Reverse(Array)
   href: api/Lett.Extensions.ArrayExtensions.html#Lett_Extensions_ArrayExtensions_Reverse_System_Array_
@@ -1070,21 +1045,142 @@ references:
   fullName.vb: Lett.Extensions.ICollectionsExtensions.AddIfNotContains(Of T)(System.Collections.Generic.ICollection(Of T), T)
   nameWithType: ICollectionsExtensions.AddIfNotContains<T>(ICollection<T>, T)
   nameWithType.vb: ICollectionsExtensions.AddIfNotContains(Of T)(ICollection(Of T), T)
-- uid: Lett.Extensions.ICollectionsExtensions.AddIfNotContains``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.ICollection{``0})
-  name: AddIfNotContains<T>(ICollection<T>, ICollection<T>)
-  href: api/Lett.Extensions.ICollectionsExtensions.html#Lett_Extensions_ICollectionsExtensions_AddIfNotContains__1_System_Collections_Generic_ICollection___0__System_Collections_Generic_ICollection___0__
-  commentId: M:Lett.Extensions.ICollectionsExtensions.AddIfNotContains``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.ICollection{``0})
-  name.vb: AddIfNotContains(Of T)(ICollection(Of T), ICollection(Of T))
-  fullName: Lett.Extensions.ICollectionsExtensions.AddIfNotContains<T>(System.Collections.Generic.ICollection<T>, System.Collections.Generic.ICollection<T>)
-  fullName.vb: Lett.Extensions.ICollectionsExtensions.AddIfNotContains(Of T)(System.Collections.Generic.ICollection(Of T), System.Collections.Generic.ICollection(Of T))
-  nameWithType: ICollectionsExtensions.AddIfNotContains<T>(ICollection<T>, ICollection<T>)
-  nameWithType.vb: ICollectionsExtensions.AddIfNotContains(Of T)(ICollection(Of T), ICollection(Of T))
+- uid: Lett.Extensions.ICollectionsExtensions.AddIfNotContains``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})
+  name: AddIfNotContains<T>(ICollection<T>, IEnumerable<T>)
+  href: api/Lett.Extensions.ICollectionsExtensions.html#Lett_Extensions_ICollectionsExtensions_AddIfNotContains__1_System_Collections_Generic_ICollection___0__System_Collections_Generic_IEnumerable___0__
+  commentId: M:Lett.Extensions.ICollectionsExtensions.AddIfNotContains``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})
+  name.vb: AddIfNotContains(Of T)(ICollection(Of T), IEnumerable(Of T))
+  fullName: Lett.Extensions.ICollectionsExtensions.AddIfNotContains<T>(System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Lett.Extensions.ICollectionsExtensions.AddIfNotContains(Of T)(System.Collections.Generic.ICollection(Of T), System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: ICollectionsExtensions.AddIfNotContains<T>(ICollection<T>, IEnumerable<T>)
+  nameWithType.vb: ICollectionsExtensions.AddIfNotContains(Of T)(ICollection(Of T), IEnumerable(Of T))
+- uid: Lett.Extensions.ICollectionsExtensions.AddIfNotContainsParams*
+  name: AddIfNotContainsParams
+  href: api/Lett.Extensions.ICollectionsExtensions.html#Lett_Extensions_ICollectionsExtensions_AddIfNotContainsParams_
+  commentId: Overload:Lett.Extensions.ICollectionsExtensions.AddIfNotContainsParams
+  isSpec: "True"
+  fullName: Lett.Extensions.ICollectionsExtensions.AddIfNotContainsParams
+  nameWithType: ICollectionsExtensions.AddIfNotContainsParams
+- uid: Lett.Extensions.ICollectionsExtensions.AddIfNotContainsParams``1(System.Collections.Generic.ICollection{``0},``0[])
+  name: AddIfNotContainsParams<T>(ICollection<T>, T[])
+  href: api/Lett.Extensions.ICollectionsExtensions.html#Lett_Extensions_ICollectionsExtensions_AddIfNotContainsParams__1_System_Collections_Generic_ICollection___0____0___
+  commentId: M:Lett.Extensions.ICollectionsExtensions.AddIfNotContainsParams``1(System.Collections.Generic.ICollection{``0},``0[])
+  name.vb: AddIfNotContainsParams(Of T)(ICollection(Of T), T())
+  fullName: Lett.Extensions.ICollectionsExtensions.AddIfNotContainsParams<T>(System.Collections.Generic.ICollection<T>, T[])
+  fullName.vb: Lett.Extensions.ICollectionsExtensions.AddIfNotContainsParams(Of T)(System.Collections.Generic.ICollection(Of T), T())
+  nameWithType: ICollectionsExtensions.AddIfNotContainsParams<T>(ICollection<T>, T[])
+  nameWithType.vb: ICollectionsExtensions.AddIfNotContainsParams(Of T)(ICollection(Of T), T())
+- uid: Lett.Extensions.ICollectionsExtensions.AddRange*
+  name: AddRange
+  href: api/Lett.Extensions.ICollectionsExtensions.html#Lett_Extensions_ICollectionsExtensions_AddRange_
+  commentId: Overload:Lett.Extensions.ICollectionsExtensions.AddRange
+  isSpec: "True"
+  fullName: Lett.Extensions.ICollectionsExtensions.AddRange
+  nameWithType: ICollectionsExtensions.AddRange
+- uid: Lett.Extensions.ICollectionsExtensions.AddRange``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})
+  name: AddRange<T>(ICollection<T>, IEnumerable<T>)
+  href: api/Lett.Extensions.ICollectionsExtensions.html#Lett_Extensions_ICollectionsExtensions_AddRange__1_System_Collections_Generic_ICollection___0__System_Collections_Generic_IEnumerable___0__
+  commentId: M:Lett.Extensions.ICollectionsExtensions.AddRange``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})
+  name.vb: AddRange(Of T)(ICollection(Of T), IEnumerable(Of T))
+  fullName: Lett.Extensions.ICollectionsExtensions.AddRange<T>(System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Lett.Extensions.ICollectionsExtensions.AddRange(Of T)(System.Collections.Generic.ICollection(Of T), System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: ICollectionsExtensions.AddRange<T>(ICollection<T>, IEnumerable<T>)
+  nameWithType.vb: ICollectionsExtensions.AddRange(Of T)(ICollection(Of T), IEnumerable(Of T))
+- uid: Lett.Extensions.ICollectionsExtensions.AddRangeParams*
+  name: AddRangeParams
+  href: api/Lett.Extensions.ICollectionsExtensions.html#Lett_Extensions_ICollectionsExtensions_AddRangeParams_
+  commentId: Overload:Lett.Extensions.ICollectionsExtensions.AddRangeParams
+  isSpec: "True"
+  fullName: Lett.Extensions.ICollectionsExtensions.AddRangeParams
+  nameWithType: ICollectionsExtensions.AddRangeParams
+- uid: Lett.Extensions.ICollectionsExtensions.AddRangeParams``1(System.Collections.Generic.ICollection{``0},``0[])
+  name: AddRangeParams<T>(ICollection<T>, T[])
+  href: api/Lett.Extensions.ICollectionsExtensions.html#Lett_Extensions_ICollectionsExtensions_AddRangeParams__1_System_Collections_Generic_ICollection___0____0___
+  commentId: M:Lett.Extensions.ICollectionsExtensions.AddRangeParams``1(System.Collections.Generic.ICollection{``0},``0[])
+  name.vb: AddRangeParams(Of T)(ICollection(Of T), T())
+  fullName: Lett.Extensions.ICollectionsExtensions.AddRangeParams<T>(System.Collections.Generic.ICollection<T>, T[])
+  fullName.vb: Lett.Extensions.ICollectionsExtensions.AddRangeParams(Of T)(System.Collections.Generic.ICollection(Of T), T())
+  nameWithType: ICollectionsExtensions.AddRangeParams<T>(ICollection<T>, T[])
+  nameWithType.vb: ICollectionsExtensions.AddRangeParams(Of T)(ICollection(Of T), T())
 - uid: Lett.Extensions.IDictionaryExtensions
   name: IDictionaryExtensions
   href: api/Lett.Extensions.IDictionaryExtensions.html
   commentId: T:Lett.Extensions.IDictionaryExtensions
   fullName: Lett.Extensions.IDictionaryExtensions
   nameWithType: IDictionaryExtensions
+- uid: Lett.Extensions.IDictionaryExtensions.AddOrUpdate*
+  name: AddOrUpdate
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_AddOrUpdate_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.AddOrUpdate
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.AddOrUpdate
+  nameWithType: IDictionaryExtensions.AddOrUpdate
+- uid: Lett.Extensions.IDictionaryExtensions.AddOrUpdate``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  name: AddOrUpdate<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_AddOrUpdate__2_System_Collections_Generic_IDictionary___0___1____0___1_
+  commentId: M:Lett.Extensions.IDictionaryExtensions.AddOrUpdate``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  name.vb: AddOrUpdate(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
+  fullName: Lett.Extensions.IDictionaryExtensions.AddOrUpdate<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey, TValue)
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.AddOrUpdate(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey, TValue)
+  nameWithType: IDictionaryExtensions.AddOrUpdate<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)
+  nameWithType.vb: IDictionaryExtensions.AddOrUpdate(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
+- uid: Lett.Extensions.IDictionaryExtensions.AddOrUpdate``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})
+  name: AddOrUpdate<TKey, TValue>(IDictionary<TKey, TValue>, KeyValuePair<TKey, TValue>)
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_AddOrUpdate__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_KeyValuePair___0___1__
+  commentId: M:Lett.Extensions.IDictionaryExtensions.AddOrUpdate``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})
+  name.vb: AddOrUpdate(Of TKey, TValue)(IDictionary(Of TKey, TValue), KeyValuePair(Of TKey, TValue))
+  fullName: Lett.Extensions.IDictionaryExtensions.AddOrUpdate<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.KeyValuePair<TKey, TValue>)
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.AddOrUpdate(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  nameWithType: IDictionaryExtensions.AddOrUpdate<TKey, TValue>(IDictionary<TKey, TValue>, KeyValuePair<TKey, TValue>)
+  nameWithType.vb: IDictionaryExtensions.AddOrUpdate(Of TKey, TValue)(IDictionary(Of TKey, TValue), KeyValuePair(Of TKey, TValue))
+- uid: Lett.Extensions.IDictionaryExtensions.AddOrUpdateRange*
+  name: AddOrUpdateRange
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_AddOrUpdateRange_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.AddOrUpdateRange
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.AddOrUpdateRange
+  nameWithType: IDictionaryExtensions.AddOrUpdateRange
+- uid: Lett.Extensions.IDictionaryExtensions.AddOrUpdateRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  name: AddOrUpdateRange<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<KeyValuePair<TKey, TValue>>)
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_AddOrUpdateRange__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1___
+  commentId: M:Lett.Extensions.IDictionaryExtensions.AddOrUpdateRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  name.vb: AddOrUpdateRange(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of KeyValuePair(Of TKey, TValue)))
+  fullName: Lett.Extensions.IDictionaryExtensions.AddOrUpdateRange<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey, TValue>>)
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.AddOrUpdateRange(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue)))
+  nameWithType: IDictionaryExtensions.AddOrUpdateRange<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<KeyValuePair<TKey, TValue>>)
+  nameWithType.vb: IDictionaryExtensions.AddOrUpdateRange(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of KeyValuePair(Of TKey, TValue)))
+- uid: Lett.Extensions.IDictionaryExtensions.AddRange*
+  name: AddRange
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_AddRange_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.AddRange
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.AddRange
+  nameWithType: IDictionaryExtensions.AddRange
+- uid: Lett.Extensions.IDictionaryExtensions.AddRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  name: AddRange<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<KeyValuePair<TKey, TValue>>)
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_AddRange__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1___
+  commentId: M:Lett.Extensions.IDictionaryExtensions.AddRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})
+  name.vb: AddRange(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of KeyValuePair(Of TKey, TValue)))
+  fullName: Lett.Extensions.IDictionaryExtensions.AddRange<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey, TValue>>)
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.AddRange(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue)))
+  nameWithType: IDictionaryExtensions.AddRange<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<KeyValuePair<TKey, TValue>>)
+  nameWithType.vb: IDictionaryExtensions.AddRange(Of TKey, TValue)(IDictionary(Of TKey, TValue), IEnumerable(Of KeyValuePair(Of TKey, TValue)))
+- uid: Lett.Extensions.IDictionaryExtensions.AddRangeParams*
+  name: AddRangeParams
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_AddRangeParams_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.AddRangeParams
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.AddRangeParams
+  nameWithType: IDictionaryExtensions.AddRangeParams
+- uid: Lett.Extensions.IDictionaryExtensions.AddRangeParams``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1}[])
+  name: AddRangeParams<TKey, TValue>(IDictionary<TKey, TValue>, KeyValuePair<TKey, TValue>[])
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_AddRangeParams__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_KeyValuePair___0___1____
+  commentId: M:Lett.Extensions.IDictionaryExtensions.AddRangeParams``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1}[])
+  name.vb: AddRangeParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), KeyValuePair(Of TKey, TValue)())
+  fullName: Lett.Extensions.IDictionaryExtensions.AddRangeParams<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.KeyValuePair<TKey, TValue>[])
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.AddRangeParams(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), System.Collections.Generic.KeyValuePair(Of TKey, TValue)())
+  nameWithType: IDictionaryExtensions.AddRangeParams<TKey, TValue>(IDictionary<TKey, TValue>, KeyValuePair<TKey, TValue>[])
+  nameWithType.vb: IDictionaryExtensions.AddRangeParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), KeyValuePair(Of TKey, TValue)())
 - uid: Lett.Extensions.IDictionaryExtensions.ContainsKeyAll*
   name: ContainsKeyAll
   href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_ContainsKeyAll_
@@ -1229,6 +1325,22 @@ references:
   fullName.vb: Lett.Extensions.IDictionaryExtensions.ContainsValueAnyParams(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TValue())
   nameWithType: IDictionaryExtensions.ContainsValueAnyParams<TKey, TValue>(IDictionary<TKey, TValue>, TValue[])
   nameWithType.vb: IDictionaryExtensions.ContainsValueAnyParams(Of TKey, TValue)(IDictionary(Of TKey, TValue), TValue())
+- uid: Lett.Extensions.IDictionaryExtensions.GetOrUpdate*
+  name: GetOrUpdate
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_GetOrUpdate_
+  commentId: Overload:Lett.Extensions.IDictionaryExtensions.GetOrUpdate
+  isSpec: "True"
+  fullName: Lett.Extensions.IDictionaryExtensions.GetOrUpdate
+  nameWithType: IDictionaryExtensions.GetOrUpdate
+- uid: Lett.Extensions.IDictionaryExtensions.GetOrUpdate``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  name: GetOrUpdate<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)
+  href: api/Lett.Extensions.IDictionaryExtensions.html#Lett_Extensions_IDictionaryExtensions_GetOrUpdate__2_System_Collections_Generic_IDictionary___0___1____0___1_
+  commentId: M:Lett.Extensions.IDictionaryExtensions.GetOrUpdate``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  name.vb: GetOrUpdate(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
+  fullName: Lett.Extensions.IDictionaryExtensions.GetOrUpdate<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey, TValue)
+  fullName.vb: Lett.Extensions.IDictionaryExtensions.GetOrUpdate(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey, TValue)
+  nameWithType: IDictionaryExtensions.GetOrUpdate<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)
+  nameWithType.vb: IDictionaryExtensions.GetOrUpdate(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
 - uid: Lett.Extensions.IEnumerableExtensions
   name: IEnumerableExtensions
   href: api/Lett.Extensions.IEnumerableExtensions.html
@@ -1290,6 +1402,15 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.IEnumerableExtensions.ForEach
   nameWithType: IEnumerableExtensions.ForEach
+- uid: Lett.Extensions.IEnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  name: ForEach<T>(IEnumerable<T>, Action<T>)
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action___0__
+  commentId: M:Lett.Extensions.IEnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  name.vb: ForEach(Of T)(IEnumerable(Of T), Action(Of T))
+  fullName: Lett.Extensions.IEnumerableExtensions.ForEach<T>(System.Collections.Generic.IEnumerable<T>, System.Action<T>)
+  fullName.vb: Lett.Extensions.IEnumerableExtensions.ForEach(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Action(Of T))
+  nameWithType: IEnumerableExtensions.ForEach<T>(IEnumerable<T>, Action<T>)
+  nameWithType.vb: IEnumerableExtensions.ForEach(Of T)(IEnumerable(Of T), Action(Of T))
 - uid: Lett.Extensions.IEnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{System.Int32,``0})
   name: ForEach<T>(IEnumerable<T>, Action<Int32, T>)
   href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action_System_Int32___0__
@@ -1315,6 +1436,22 @@ references:
   fullName.vb: Lett.Extensions.IEnumerableExtensions.IsNullOrEmpty(Of T)(System.Collections.Generic.IEnumerable(Of T))
   nameWithType: IEnumerableExtensions.IsNullOrEmpty<T>(IEnumerable<T>)
   nameWithType.vb: IEnumerableExtensions.IsNullOrEmpty(Of T)(IEnumerable(Of T))
+- uid: Lett.Extensions.IEnumerableExtensions.SplitBlock*
+  name: SplitBlock
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_SplitBlock_
+  commentId: Overload:Lett.Extensions.IEnumerableExtensions.SplitBlock
+  isSpec: "True"
+  fullName: Lett.Extensions.IEnumerableExtensions.SplitBlock
+  nameWithType: IEnumerableExtensions.SplitBlock
+- uid: Lett.Extensions.IEnumerableExtensions.SplitBlock``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name: SplitBlock<T>(IEnumerable<T>, Int32)
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_SplitBlock__1_System_Collections_Generic_IEnumerable___0__System_Int32_
+  commentId: M:Lett.Extensions.IEnumerableExtensions.SplitBlock``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name.vb: SplitBlock(Of T)(IEnumerable(Of T), Int32)
+  fullName: Lett.Extensions.IEnumerableExtensions.SplitBlock<T>(System.Collections.Generic.IEnumerable<T>, System.Int32)
+  fullName.vb: Lett.Extensions.IEnumerableExtensions.SplitBlock(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Int32)
+  nameWithType: IEnumerableExtensions.SplitBlock<T>(IEnumerable<T>, Int32)
+  nameWithType.vb: IEnumerableExtensions.SplitBlock(Of T)(IEnumerable(Of T), Int32)
 - uid: Lett.Extensions.IEnumerableExtensions.ToFormatString*
   name: ToFormatString
   href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_ToFormatString_

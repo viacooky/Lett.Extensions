@@ -83,7 +83,7 @@
   
   <h1 id="Lett_Extensions_IDictionaryExtensions" data-uid="Lett.Extensions.IDictionaryExtensions" class="text-break">Class IDictionaryExtensions
   </h1>
-  <div class="markdown level0 summary"><p>ICollections 扩展方法</p>
+  <div class="markdown level0 summary"><p>IDictionary 扩展方法</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -123,6 +123,427 @@
   </div>
   <h3 id="methods">Methods
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_IDictionaryExtensions_AddOrUpdate__2_System_Collections_Generic_IDictionary___0___1____0___1_.md&amp;value=---%0Auid%3A%20Lett.Extensions.IDictionaryExtensions.AddOrUpdate%60%602(System.Collections.Generic.IDictionary%7B%60%600%2C%60%601%7D%2C%60%600%2C%60%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Collections.Generic/IDictionary.Opertion.cs/#L83">View Source</a>
+  </span>
+  <a id="Lett_Extensions_IDictionaryExtensions_AddOrUpdate_" data-uid="Lett.Extensions.IDictionaryExtensions.AddOrUpdate*"></a>
+  <h4 id="Lett_Extensions_IDictionaryExtensions_AddOrUpdate__2_System_Collections_Generic_IDictionary___0___1____0___1_" data-uid="Lett.Extensions.IDictionaryExtensions.AddOrUpdate``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)">AddOrUpdate&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, TKey, TValue)</h4>
+  <div class="markdown level1 summary"><p>添加或更新</p>
+<p>当 <code data-dev-comment-type="paramref" class="paramref">this</code> 中不存在 <code data-dev-comment-type="paramref" class="paramref">key</code> 时，将 {<code data-dev-comment-type="paramref" class="paramref">key</code>, <code data-dev-comment-type="paramref" class="paramref">value</code>} 添加到 <code data-dev-comment-type="paramref" class="paramref">this</code> 中</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddOrUpdate&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, TKey key, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>键</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>值</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IDictionaryExtensions_AddOrUpdate__2_System_Collections_Generic_IDictionary___0___1____0___1__examples">Examples</h5>
+  <pre><code>var dict2 = new Dictionary&lt;string, int>{{&quot;a&quot;,1},{&quot;b&quot;,2}};
+dict2.AddOrSet(new KeyValuePair&lt;string, int>(&quot;a&quot;,3));
+dict2.AddOrSet(new KeyValuePair&lt;string, int>(&quot;c&quot;,3));
+// dict1 => {{&quot;a&quot;, 3}, {&quot;b&quot;, 2}, {&quot;c&quot;, 3}}</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>key is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> maybe is read-only</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_IDictionaryExtensions_AddOrUpdate__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_KeyValuePair___0___1__.md&amp;value=---%0Auid%3A%20Lett.Extensions.IDictionaryExtensions.AddOrUpdate%60%602(System.Collections.Generic.IDictionary%7B%60%600%2C%60%601%7D%2CSystem.Collections.Generic.KeyValuePair%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Collections.Generic/IDictionary.Opertion.cs/#L57">View Source</a>
+  </span>
+  <a id="Lett_Extensions_IDictionaryExtensions_AddOrUpdate_" data-uid="Lett.Extensions.IDictionaryExtensions.AddOrUpdate*"></a>
+  <h4 id="Lett_Extensions_IDictionaryExtensions_AddOrUpdate__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_KeyValuePair___0___1__" data-uid="Lett.Extensions.IDictionaryExtensions.AddOrUpdate``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1})">AddOrUpdate&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, KeyValuePair&lt;TKey, TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>添加或更新</p>
+<p>当 <code data-dev-comment-type="paramref" class="paramref">this</code> 中不存在 <code data-dev-comment-type="paramref" class="paramref">pair</code> 的 <code>Key</code> 时，将 <code data-dev-comment-type="paramref" class="paramref">pair</code> 的 <code>Value</code> 添加到 <code data-dev-comment-type="paramref" class="paramref">this</code> 中</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddOrUpdate&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, KeyValuePair&lt;TKey, TValue&gt; pair)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">pair</span></td>
+        <td><p>键值对</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IDictionaryExtensions_AddOrUpdate__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_KeyValuePair___0___1___examples">Examples</h5>
+  <pre><code>var dict1 = new Dictionary&lt;string, int> {{&quot;a&quot;, 1}, {&quot;b&quot;, 2}};
+dict1.AddOrSet(&quot;a&quot;, 3);
+dict1.AddOrSet(&quot;c&quot;, 3);
+// dict1 => {{&quot;a&quot;, 3}, {&quot;b&quot;, 2}, {&quot;c&quot;, 3}}</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>key is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> maybe is read-only</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_IDictionaryExtensions_AddOrUpdateRange__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1___.md&amp;value=---%0Auid%3A%20Lett.Extensions.IDictionaryExtensions.AddOrUpdateRange%60%602(System.Collections.Generic.IDictionary%7B%60%600%2C%60%601%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Collections.Generic.KeyValuePair%7B%60%600%2C%60%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Collections.Generic/IDictionary.Opertion.cs/#L32">View Source</a>
+  </span>
+  <a id="Lett_Extensions_IDictionaryExtensions_AddOrUpdateRange_" data-uid="Lett.Extensions.IDictionaryExtensions.AddOrUpdateRange*"></a>
+  <h4 id="Lett_Extensions_IDictionaryExtensions_AddOrUpdateRange__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1___" data-uid="Lett.Extensions.IDictionaryExtensions.AddOrUpdateRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})">AddOrUpdateRange&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>批量添加或更新</p>
+<p>遍历<code data-dev-comment-type="paramref" class="paramref">pairs</code>, 当 <code data-dev-comment-type="paramref" class="paramref">this</code> 中不存在 <code>pair</code> 的 <code>Key</code> 时，将 <code>pair</code> 的 <code>Value</code> 添加到 <code data-dev-comment-type="paramref" class="paramref">this</code> 中</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddOrUpdateRange&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; pairs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;TKey, TValue&gt;&gt;</td>
+        <td><span class="parametername">pairs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IDictionaryExtensions_AddOrUpdateRange__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1____examples">Examples</h5>
+  <pre><code>var dict1 = new Dictionary&lt;string, int> {{&quot;a&quot;, 1}, {&quot;b&quot;, 2}};
+var sameDict = new Dictionary&lt;string, int> {{&quot;a&quot;, 3}, {&quot;b&quot;, 4}, {&quot;c&quot;, 5}};
+dict1.AddOrUpdateRange(sameDict);
+// dict1 => {{&quot;a&quot;, 3}, {&quot;b&quot;, 4}, {&quot;c&quot;, 5}}</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> maybe is read-only</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_IDictionaryExtensions_AddRange__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1___.md&amp;value=---%0Auid%3A%20Lett.Extensions.IDictionaryExtensions.AddRange%60%602(System.Collections.Generic.IDictionary%7B%60%600%2C%60%601%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Collections.Generic.KeyValuePair%7B%60%600%2C%60%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Collections.Generic/IDictionary.Opertion.cs/#L136">View Source</a>
+  </span>
+  <a id="Lett_Extensions_IDictionaryExtensions_AddRange_" data-uid="Lett.Extensions.IDictionaryExtensions.AddRange*"></a>
+  <h4 id="Lett_Extensions_IDictionaryExtensions_AddRange__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1___" data-uid="Lett.Extensions.IDictionaryExtensions.AddRange``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})">AddRange&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>批量添加</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddRange&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; pairs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;TKey, TValue&gt;&gt;</td>
+        <td><span class="parametername">pairs</span></td>
+        <td><p>键值对集合</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IDictionaryExtensions_AddRange__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair___0___1____examples">Examples</h5>
+  <pre><code>var dict = new Dictionary&lt;string, int> {{&quot;a&quot;, 1}, {&quot;b&quot;, 2}};
+var appendDict = new Dictionary&lt;string, int> {{&quot;c&quot;, 3}, {&quot;d&quot;, 4}};
+dict.AddRange(appendDict);
+// dict = {{&quot;a&quot;, 1}, {&quot;b&quot;, 2}, {&quot;c&quot;, 3}, {&quot;d&quot;, 4}};</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">pairs</code> has same key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_IDictionaryExtensions_AddRangeParams__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_KeyValuePair___0___1____.md&amp;value=---%0Auid%3A%20Lett.Extensions.IDictionaryExtensions.AddRangeParams%60%602(System.Collections.Generic.IDictionary%7B%60%600%2C%60%601%7D%2CSystem.Collections.Generic.KeyValuePair%7B%60%600%2C%60%601%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Collections.Generic/IDictionary.Opertion.cs/#L158">View Source</a>
+  </span>
+  <a id="Lett_Extensions_IDictionaryExtensions_AddRangeParams_" data-uid="Lett.Extensions.IDictionaryExtensions.AddRangeParams*"></a>
+  <h4 id="Lett_Extensions_IDictionaryExtensions_AddRangeParams__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_KeyValuePair___0___1____" data-uid="Lett.Extensions.IDictionaryExtensions.AddRangeParams``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.KeyValuePair{``0,``1}[])">AddRangeParams&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, KeyValuePair&lt;TKey, TValue&gt;[])</h4>
+  <div class="markdown level1 summary"><p>批量添加</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddRangeParams&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, params KeyValuePair&lt;TKey, TValue&gt;[] pairs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;TKey, TValue&gt;[]</td>
+        <td><span class="parametername">pairs</span></td>
+        <td><p>键值对数组</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IDictionaryExtensions_AddRangeParams__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_KeyValuePair___0___1_____examples">Examples</h5>
+  <pre><code>var dict = new Dictionary&lt;string, int> {{&quot;a&quot;, 1}, {&quot;b&quot;, 2}};
+dict.AddRangeParams(new KeyValuePair&lt;string, int>(&quot;c&quot;, 3), new KeyValuePair&lt;string, int>(&quot;d&quot;, 4));
+// dict = {{&quot;a&quot;, 1}, {&quot;b&quot;, 2}, {&quot;c&quot;, 3}, {&quot;d&quot;, 4}};</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">pairs</code> has same key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_IDictionaryExtensions_ContainsKeyAll__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IEnumerable___0__.md&amp;value=---%0Auid%3A%20Lett.Extensions.IDictionaryExtensions.ContainsKeyAll%60%602(System.Collections.Generic.IDictionary%7B%60%600%2C%60%601%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -1121,6 +1542,113 @@ dict.ContainsKeyAllParams(null); // throw ArgumentNullException values is null</
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_IDictionaryExtensions_GetOrUpdate__2_System_Collections_Generic_IDictionary___0___1____0___1_.md&amp;value=---%0Auid%3A%20Lett.Extensions.IDictionaryExtensions.GetOrUpdate%60%602(System.Collections.Generic.IDictionary%7B%60%600%2C%60%601%7D%2C%60%600%2C%60%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Collections.Generic/IDictionary.Opertion.cs/#L111">View Source</a>
+  </span>
+  <a id="Lett_Extensions_IDictionaryExtensions_GetOrUpdate_" data-uid="Lett.Extensions.IDictionaryExtensions.GetOrUpdate*"></a>
+  <h4 id="Lett_Extensions_IDictionaryExtensions_GetOrUpdate__2_System_Collections_Generic_IDictionary___0___1____0___1_" data-uid="Lett.Extensions.IDictionaryExtensions.GetOrUpdate``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)">GetOrUpdate&lt;TKey, TValue&gt;(IDictionary&lt;TKey, TValue&gt;, TKey, TValue)</h4>
+  <div class="markdown level1 summary"><p>获取值或更新</p>
+<p>当 <code data-dev-comment-type="paramref" class="paramref">this</code> 中不存在 <code data-dev-comment-type="paramref" class="paramref">key</code> 时，将 {<code data-dev-comment-type="paramref" class="paramref">key</code>, <code data-dev-comment-type="paramref" class="paramref">value</code>} 添加到 <code data-dev-comment-type="paramref" class="paramref">this</code> 中，并返回 <code data-dev-comment-type="paramref" class="paramref">value</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TValue GetOrUpdate&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; this, TKey key, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>键</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>值</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IDictionaryExtensions_GetOrUpdate__2_System_Collections_Generic_IDictionary___0___1____0___1__examples">Examples</h5>
+  <pre><code>var dict = new Dictionary&lt;string, int> {{&quot;a&quot;, 1}, {&quot;b&quot;, 2}};
+var rs = dict.GetOrUpdate(&quot;c&quot;, 3);
+// rs = 3;
+// dict = {{&quot;a&quot;, 1}, {&quot;b&quot;, 2}, {&quot;c&quot;, 3}};</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>key is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code>maybe is read-only</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -1132,7 +1660,7 @@ dict.ContainsKeyAllParams(null); // throw ArgumentNullException values is null</
                     <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_IDictionaryExtensions.md&amp;value=---%0Auid%3A%20Lett.Extensions.IDictionaryExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Collections.Generic/IDictionary.Compare.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Collections.Generic/IDictionary.Opertion.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
