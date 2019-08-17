@@ -114,7 +114,7 @@ namespace Lett.Extensions
         public static DateTime StartOfWeek(this DateTime @this, DayOfWeek startOfWeek)
         {
             var diff = @this.DayOfWeek - startOfWeek;
-            return @this.AddDays(-1 * (diff < 0 ? diff + 7 : diff)).Date.StartOfDay();
+            return @this.AddDays(Convert.ToDouble(-1 * (diff < 0 ? diff + 7 : diff))).Date.StartOfDay();
         }
 
         /// <summary>
