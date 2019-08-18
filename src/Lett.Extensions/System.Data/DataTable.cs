@@ -17,7 +17,7 @@ namespace Lett.Extensions
         ///         参考：<a>https://docs.microsoft.com/zh-cn/dotnet/api/system.data.datacolumn.datatype?view=netcore-2.0</a>
         ///     </remarks>
         /// </summary>
-        public static readonly Type[] SupportedDataTypes =
+        public static readonly IReadOnlyList<Type> SupportedDataTypes = new[]
         {
             typeof(bool),
             typeof(byte),
