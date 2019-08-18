@@ -1,5 +1,12 @@
 # Version Notes
 
+### 0.3.5
+
+#### Features / 新增功能
+
+- `Guid`
+    - `GetNewGuidIfEmpty(Guid)` 当 this 为 Guid.Empty 时，返回新的 Guid
+
 ### 0.3.4
 
 #### Features / 新增功能
