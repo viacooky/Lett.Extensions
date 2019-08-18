@@ -11,14 +11,15 @@ namespace Lett.Extensions
     public static partial class ObjectExtensions
     {
         /// <summary>
-        ///     深复制
+        ///     <para>深复制</para>
+        ///     <remarks><paramref name="this" />为空时， 返回 <c>default&lt;T&gt;</c></remarks>
         /// </summary>
         /// <param name="this"></param>
         /// <typeparam name="T">
         ///     泛型约束 需要支持序列化 Serializable
         /// </typeparam>
         /// <returns></returns>
-        /// <exception cref="ArgumentException"><paramref name="this" /> 需要支持序列化 Serializable</exception>
+        /// <exception cref="ArgumentException">目标类型 <typeparamref name="T"/> 需要支持序列化</exception>
         /// <example>
         ///     <code>
         ///         <![CDATA[
@@ -36,7 +37,9 @@ namespace Lett.Extensions
         /// </example>
         public static T DeepClone<T>(this T @this)
         {
-            if (!typeof(T).IsSerializable) throw new ArgumentException("类型需要支持序列化", nameof(@this));
+            if (!typeof(T).IsSerializable) throw new ArgumentException("目标类型需要支持序列化", nameof(@this));
+
+            if (ReferenceEquals(@this, null)) return default;
 
             using (var stream = new MemoryStream())
             {
