@@ -188,10 +188,10 @@ namespace Lett.Extensions.Test
             dt.Rows.Add("publicFieldValue3", "PropertyValue3", "AutoPropertyValue3", "notExistFieldValue3");
 
             var rs = dt.ToEntityList<TestClass1>((row, newObj) =>
-                                                 {
-                                                     newObj.PublicField = row.Cell<string>("PublicField");
-                                                     return newObj;
-                                                 });
+            {
+                newObj.PublicField = row.Cell<string>("PublicField");
+                return newObj;
+            });
             Assert.AreEqual(rs.Count, 3);
             Assert.AreEqual(rs[0].PublicField, "publicFieldValue1");
             Assert.AreEqual(rs[1].PublicField, "publicFieldValue2");
@@ -218,6 +218,61 @@ namespace Lett.Extensions.Test
             Assert.AreEqual(rs[1].col3, 122.23m);
             Assert.IsNull(rs[1].col4);
             Assert.IsNull(rs[1].col5);
+        }
+
+
+        [TestMethod]
+        public void Update_Test1()
+        {
+            _testTable1.Rows.Clear();
+            10.Times(index => _testTable1.Rows.Add($"RowId_{index}", $"Name_{index}"));
+            _testTable1.Update("FName", "a");
+            Assert.AreEqual("a", _testTable1.Rows[0]["FName"]);
+            Assert.AreEqual("a", _testTable1.Rows[2]["FName"]);
+            Assert.AreEqual("a", _testTable1.Rows[9]["FName"]);
+        }
+
+        [TestMethod]
+        public void Update_Test2()
+        {
+            _testTable1.Rows.Clear();
+            10.Times(index => _testTable1.Rows.Add($"RowId_{index}", $"Name_{index}"));
+            _testTable1.Update("FName", "a");
+            Assert.AreEqual("a", _testTable1.Rows[0]["FName"]);
+            Assert.AreEqual("a", _testTable1.Rows[2]["FName"]);
+            Assert.AreEqual("a", _testTable1.Rows[9]["FName"]);
+
+            _testTable1.Rows.Clear();
+            _testTable1.Columns.Add("FInt_Col", typeof(int));
+            10.Times(index => _testTable1.Rows.Add($"RowId_{index}", $"Name_{index}", index));
+            _testTable1.Update("FInt_Col", "a");
+            Assert.AreEqual(DBNull.Value, _testTable1.Rows[0]["FInt_Col"]);
+            Assert.AreEqual(DBNull.Value, _testTable1.Rows[2]["FInt_Col"]);
+            Assert.AreEqual(DBNull.Value, _testTable1.Rows[9]["FInt_Col"]);
+
+            _testTable1.Update(row => row["FRowId"].ToString().Equals("RowId_3"),
+                               "FInt_Col", "a");
+            Assert.AreEqual(DBNull.Value, _testTable1.Rows[3]["FInt_Col"]);
+
+            Assert.ThrowsException<ArgumentException>(() => _testTable1.Update(row => true, "FInt_Col", "abc", false, false));
+        }
+
+        [TestMethod]
+        public void Update_Test3()
+        {
+            _testTable1.Rows.Clear();
+            10.Times(index => _testTable1.Rows.Add($"RowId_{index}", $"Name_{index}"));
+
+            _testTable1.Update(row => true, "FName",
+                               (i, row) => $"{i}_{row["FRowId"]}", true, false);
+            Assert.AreEqual("3_RowId_3", _testTable1.Rows[3]["FName"].ToString());
+
+            _testTable1.Rows.Clear();
+            10.Times(index => _testTable1.Rows.Add($"RowId_{index}", $"Name_{index}"));
+
+            _testTable1.Update(row => true, "FName",
+                               row => $"{row["FRowId"]}", true, false);
+            Assert.AreEqual("RowId_3", _testTable1.Rows[3]["FName"].ToString());
         }
 
 

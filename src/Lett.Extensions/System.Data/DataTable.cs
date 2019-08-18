@@ -12,6 +12,34 @@ namespace Lett.Extensions
     public static class DataTableExtensions
     {
         /// <summary>
+        ///     <para><see cref="DataTable" /> 支持的数据类型</para>
+        ///     <remarks>
+        ///         参考：<a>https://docs.microsoft.com/zh-cn/dotnet/api/system.data.datacolumn.datatype?view=netcore-2.0</a>
+        ///     </remarks>
+        /// </summary>
+        public static readonly Type[] SupportedDataTypes =
+        {
+            typeof(bool),
+            typeof(byte),
+            typeof(char),
+            typeof(DateTime),
+            typeof(decimal),
+            typeof(double),
+            typeof(Guid),
+            typeof(short),
+            typeof(int),
+            typeof(long),
+            typeof(sbyte),
+            typeof(float),
+            typeof(string),
+            typeof(TimeSpan),
+            typeof(ushort),
+            typeof(uint),
+            typeof(ulong),
+            typeof(byte[])
+        };
+
+        /// <summary>
         ///     是否存在数据行
         /// </summary>
         /// <param name="this"></param>
@@ -229,6 +257,162 @@ namespace Lett.Extensions
         public static IEnumerable<dynamic> ToDynamicObjects(this DataTable @this)
         {
             return @this.RowsEnumerable().Select(row => row.ToDynamicObject());
+        }
+
+        /// <summary>
+        ///     更新
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="columnName">列名</param>
+        /// <param name="value"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <exception cref="ArgumentNullException"><paramref name="columnName" /> is null</exception>
+        /// <exception cref="ArgumentNullException"><typeparamref name="T" /> is null</exception>
+        /// <exception cref="ArgumentException"><paramref name="columnName" /> not exist</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// _testTable1.Update("FName", "a");
+        /// // it like SQL: UPDATE [table] set FName = 'a'
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static void Update<T>(this DataTable @this, string columnName, T value)
+        {
+            @this.Update(row => true, columnName, value);
+        }
+
+        /// <summary>
+        ///     更新
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="selector"><see cref="DataRow" /> 选择器</param>
+        /// <param name="columnName">列名</param>
+        /// <param name="value"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <exception cref="ArgumentNullException"><paramref name="columnName" /> is null</exception>
+        /// <exception cref="ArgumentNullException"><typeparamref name="T" /> is null</exception>
+        /// <exception cref="ArgumentException"><paramref name="columnName" /> not exist</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// _testTable1.Update(row => row["FRowId"].ToString().Equals("RowId_3"), "FInt_Col", "a");
+        /// // it like SQL: UPDATE [table] SET FInt_Col = FRowId WHERE FRowId = 'RowId_3'
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static void Update<T>(this DataTable @this, Func<DataRow, bool> selector, string columnName, T value)
+        {
+            @this.Update(selector, columnName, value, true, false);
+        }
+
+        /// <summary>
+        ///     更新
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="selector"><see cref="DataRow" /> 选择器</param>
+        /// <param name="columnName">列名</param>
+        /// <param name="value"></param>
+        /// <param name="isDefaultDbNull">出现异常时，使用 <c>DBNull.Value</c> 进行填充</param>
+        /// <param name="isAcceptChanges">是否在更新完成后 使用 <c>isAcceptChanges</c></param>
+        /// <typeparam name="T"></typeparam>
+        /// <exception cref="ArgumentNullException"><paramref name="columnName" /> is null</exception>
+        /// <exception cref="ArgumentNullException"><typeparamref name="T" /> is null</exception>
+        /// <exception cref="ArgumentException"><paramref name="columnName" /> not exist</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// dataTable.Update(row=> row["FRowId"].toString().Equals("rowId"), "FName", "this is name", true, false);
+        /// // it like SQL: UPDATE [table] SET FName = 'this is name' WHERE FRowId = 'rowId'
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static void Update<T>(this DataTable @this, Func<DataRow, bool> selector, string columnName, T value, bool isDefaultDbNull, bool isAcceptChanges)
+        {
+            @this.RowsEnumerable()
+                 .Where(selector)
+                 .ForEach(row =>
+                 {
+                     row.BeginEdit();
+                     row.SetValue(columnName, value, isDefaultDbNull);
+                 });
+            if (isAcceptChanges) @this.AcceptChanges();
+        }
+
+        /// <summary>
+        ///     更新
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="selector"><see cref="DataRow" /> 选择器</param>
+        /// <param name="columnName">列名</param>
+        /// <param name="func">
+        ///     <para>委托方法</para>
+        ///     <remarks>
+        ///         DataRow: 当前 <see cref="DataRow" />
+        ///     </remarks>
+        /// </param>
+        /// <param name="isDefaultDbNull">出现异常时，使用 <c>DBNull.Value</c> 进行填充</param>
+        /// <param name="isAcceptChanges">是否在更新完成后 使用 <c>isAcceptChanges</c></param>
+        /// <typeparam name="T"></typeparam>
+        /// <exception cref="ArgumentNullException"><paramref name="columnName" /> is null</exception>
+        /// <exception cref="ArgumentNullException"><typeparamref name="T" /> is null</exception>
+        /// <exception cref="ArgumentException"><paramref name="columnName" /> not exist</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// _testTable1.Update(row => row["FRowId"].toString().Equals("aaa"), "FName", row => $"{row["FRowId"]}", true, false);
+        /// // it like SQL: UPDATE [table] SET FName = FRowId WHERE FRowId = 'aaa'
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static void Update<T>(this DataTable @this, Func<DataRow, bool> selector, string columnName, Func<DataRow, T> func, bool isDefaultDbNull, bool isAcceptChanges)
+        {
+            @this.RowsEnumerable()
+                 .Where(selector)
+                 .ForEach((index, row) =>
+                 {
+                     row.BeginEdit();
+                     row.SetValue(columnName, func(row), isDefaultDbNull);
+                 });
+            if (isAcceptChanges) @this.AcceptChanges();
+        }
+
+        /// <summary>
+        ///     更新
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="selector"><see cref="DataRow" /> 选择器</param>
+        /// <param name="columnName">列名</param>
+        /// <param name="func">
+        ///     <para>委托方法</para>
+        ///     <remarks>
+        ///         int: index  <br />
+        ///         DataRow: 当前 <see cref="DataRow" />
+        ///     </remarks>
+        /// </param>
+        /// <param name="isDefaultDbNull">出现异常时，使用 <c>DBNull.Value</c> 进行填充</param>
+        /// <param name="isAcceptChanges">是否在更新完成后 使用 <c>isAcceptChanges</c></param>
+        /// <typeparam name="T"></typeparam>
+        /// <exception cref="ArgumentNullException"><paramref name="columnName" /> is null</exception>
+        /// <exception cref="ArgumentNullException"><typeparamref name="T" /> is null</exception>
+        /// <exception cref="ArgumentException"><paramref name="columnName" /> not exist</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// _testTable1.Update(row=>true, "FName", (i, row) => $"{i}_{row["FRowId"]}", true, false);
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static void Update<T>(this DataTable @this, Func<DataRow, bool> selector, string columnName, Func<int, DataRow, T> func, bool isDefaultDbNull, bool isAcceptChanges)
+        {
+            @this.RowsEnumerable()
+                 .Where(selector)
+                 .ForEach((index, row) =>
+                 {
+                     row.BeginEdit();
+                     row.SetValue(columnName, func(index, row), isDefaultDbNull);
+                 });
+            if (isAcceptChanges) @this.AcceptChanges();
         }
     }
 }
