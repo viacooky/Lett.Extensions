@@ -119,6 +119,55 @@ namespace Lett.Extensions
         /// </summary>
         /// <param name="this"></param>
         /// <param name="selector">选择器，选择用于比较的对象</param>
+        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TResult"></typeparam>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="this" /> is null</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="selector" /> is null</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var input = new List<MyClass> {new MyClass {Age = 2, Name = "a"}, new MyClass {Age = 2, Name = "A"}, new MyClass {Age = 2, Name = "b"}};
+        /// 
+        /// var rs1 = input.Distinct(s => s.Name).ToList();
+        /// 
+        /// rs1.Count;      // 3
+        /// rs1[0].Name;    // "a"
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var input = new List<MyClass> {new MyClass {Age = 2, Name = "a"}, new MyClass {Age = 2, Name = "A"}, new MyClass {Age = 2, Name = "b"}};
+        /// 
+        /// var rs2 = input.Distinct(s => s.Age).ToList();
+        /// 
+        /// rs2.Count;      // 1
+        /// rs2[0];         // "a"
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static IEnumerable<T> Distinct<T, TResult>(this IEnumerable<T> @this, Func<T, TResult> selector)
+        {
+            if (@this == null) throw new ArgumentNullException(nameof(@this), "is null");
+            if (selector == null) throw new ArgumentNullException(nameof(selector), "is null");
+
+            var rs = new HashSet<TResult>(EqualityComparer<TResult>.Default);
+            foreach (var element in @this)
+            {
+                var setValue = selector(element);
+                if (rs.Contains(setValue)) continue;
+                yield return element;
+                rs.Add(setValue);
+            }
+        }
+
+        /// <summary>
+        ///     返回序列中的非重复元素
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="selector">选择器，选择用于比较的对象</param>
         /// <param name="equalityComparer">比较器</param>
         /// <typeparam name="T"></typeparam>
         /// <typeparam name="TResult"></typeparam>
@@ -202,6 +251,67 @@ namespace Lett.Extensions
             }
 
             return rs;
+        }
+
+        /// <summary>
+        ///     返回序列中重复的元素
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="selector">选择器，选择用于比较的对象</param>
+        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TResult"></typeparam>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="this" /> is null</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="selector" /> is null</exception>
+        public static IEnumerable<TResult> Duplicates<T, TResult>(this IEnumerable<T> @this, Func<T, TResult> selector)
+        {
+            if (@this == null) throw new ArgumentNullException(nameof(@this), "is null");
+            if (selector == null) throw new ArgumentNullException(nameof(selector), "is null");
+
+            return @this.GroupBy(selector, EqualityComparer<TResult>.Default)
+                        .Where(w => w.Count() > 1)
+                        .Select(s => s.Key);
+        }
+
+        /// <summary>
+        ///     返回序列中重复的元素
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="selector">选择器，选择用于比较的对象</param>
+        /// <param name="equalityComparer">比较器</param>
+        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TResult"></typeparam>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="this" /> is null</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="selector" /> is null</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="equalityComparer" /> is null</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var input = new List<MyClass> {new MyClass {Age = 2, Name = "a"}, new MyClass {Age = 2, Name = "A"}, new MyClass {Age = 2, Name = "b"}};
+        /// var rs1   = input.Duplicates(s => s.Name, StringComparer.OrdinalIgnoreCase);
+        /// // rs1 = {"a"}
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// var input = new List<MyClass> {new MyClass {Age = 2, Name = "a"}, new MyClass {Age = 2, Name = "A"}, new MyClass {Age = 2, Name = "b"}};
+        /// var rs1   = input.Duplicates(s => s.Name);
+        /// // rs1 = {}
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static IEnumerable<TResult> Duplicates<T, TResult>(this IEnumerable<T> @this, Func<T, TResult> selector, IEqualityComparer<TResult> equalityComparer)
+        {
+            if (@this == null) throw new ArgumentNullException(nameof(@this), "is null");
+            if (selector == null) throw new ArgumentNullException(nameof(selector), "is null");
+            if (equalityComparer == null) throw new ArgumentNullException(nameof(equalityComparer), "is null");
+
+            return @this.GroupBy(selector, equalityComparer)
+                        .Where(w => w.Count() > 1)
+                        .Select(s => s.Key);
         }
     }
 }
