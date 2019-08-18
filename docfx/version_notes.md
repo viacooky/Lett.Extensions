@@ -8,8 +8,8 @@
     - `GetNewGuidIfEmpty(Guid)` 当 this 为 Guid.Empty 时，返回新的 Guid
 - `IEnumerable`
     - `Distinct<T, TResult>(this IEnumerable<T>, Func<T, TResult>)` 返回序列中的非重复元素
-    - `Duplicates<T, TResult>(this IEnumerable<T>, Func<T, TResult>, IEqualityComparer<TResult>)` 返回序列中的非重复元素
-    - `Duplicates<T, TResult>(this IEnumerable<T>, Func<T, TResult>)` 返回序列中的非重复元素
+    - `Duplicates<T, TResult>(this IEnumerable<T>, Func<T, TResult>, IEqualityComparer<TResult>)` 返回序列中重复的元素
+    - `Duplicates<T, TResult>(this IEnumerable<T>, Func<T, TResult>)` 返回序列中重复的元素
 
 ### 0.3.4
 
