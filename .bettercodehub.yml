@@ -1,9 +1,9 @@
-component_depth: 15
+component_depth: 2
 languages:
-- name: csharp
-  production:
+  - name: csharp
+    production:
       include:
         - /src/Lett\.Extensions/.*\.cs
-  test:
-    include:
-      - /src/Lett\.Extensions\.Test/.*\.cs
+    test:
+      include:
+        - /src/Lett\.Extensions\.Test/.*\.cs
