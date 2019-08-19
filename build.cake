@@ -148,7 +148,7 @@ Task("codecoverage")
   .IsDependentOn("dotNet-Test")
   .IsDependentOn("Code-Converage")
   .Does(() => {
-    Information("默认构建完成");
+    Information("Code Coverage 生成完成");
   });
 
 RunTarget(target);
