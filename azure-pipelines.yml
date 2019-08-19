@@ -37,7 +37,7 @@ jobs:
           ./build.sh --bootstrap
           ./build.sh --target=codecoverage
           echo 'Code Coverage上传开始'
-          bash <(curl -s https://codecov.io/bash) -t $CODECOVKEY -f ./TestResults/coverage/Coverage.opencover.xml
+          bash <(curl -s https://codecov.io/bash) -t ${CODECOVKEY} -f ./TestResults/coverage/Coverage.opencover.xml
           echo 'Code Coverage上传完成'
         env:
           DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
