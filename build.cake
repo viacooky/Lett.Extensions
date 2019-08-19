@@ -79,7 +79,7 @@ Task("Code-Converage")
       EnsureDirectoryExists(converageReportPath);
       var coverletSettings = new CoverletSettings {
           CollectCoverage = true,
-          CoverletOutputFormat = CoverletOutputFormat.opencover | CoverletOutputFormat.cobertura | CoverletOutputFormat.json,
+          CoverletOutputFormat = CoverletOutputFormat.opencover | CoverletOutputFormat.cobertura | CoverletOutputFormat.json | CoverletOutputFormat.lcov,
           CoverletOutputDirectory = converageReportPath,
           CoverletOutputName = "Coverage"
       };
@@ -132,6 +132,7 @@ Task("Default")
 Task("azure")
   .IsDependentOn("Clean")
   .IsDependentOn("Build")
+  .IsDependentOn("dotNet-Test")
   .IsDependentOn("PackNuGet") 
   .IsDependentOn("Docfx")
   .Does(() =>
