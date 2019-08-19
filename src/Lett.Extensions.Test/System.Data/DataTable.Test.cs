@@ -253,8 +253,6 @@ namespace Lett.Extensions.Test
             _testTable1.Update(row => row["FRowId"].ToString().Equals("RowId_3"),
                                "FInt_Col", "a");
             Assert.AreEqual(DBNull.Value, _testTable1.Rows[3]["FInt_Col"]);
-
-            Assert.ThrowsException<ArgumentException>(() => _testTable1.Update(row => true, "FInt_Col", "abc", false, false));
         }
 
         [TestMethod]
@@ -263,15 +261,13 @@ namespace Lett.Extensions.Test
             _testTable1.Rows.Clear();
             10.Times(index => _testTable1.Rows.Add($"RowId_{index}", $"Name_{index}"));
 
-            _testTable1.Update(row => true, "FName",
-                               (i, row) => $"{i}_{row["FRowId"]}", true, false);
+            _testTable1.Update(row => true, "FName", (i, row) => $"{i}_{row["FRowId"]}");
             Assert.AreEqual("3_RowId_3", _testTable1.Rows[3]["FName"].ToString());
 
             _testTable1.Rows.Clear();
             10.Times(index => _testTable1.Rows.Add($"RowId_{index}", $"Name_{index}"));
 
-            _testTable1.Update(row => true, "FName",
-                               row => $"{row["FRowId"]}", true, false);
+            _testTable1.Update(row => true, "FName", (i,row) => $"{row["FRowId"]}");
             Assert.AreEqual("RowId_3", _testTable1.Rows[3]["FName"].ToString());
         }
 
@@ -290,6 +286,7 @@ namespace Lett.Extensions.Test
             public string Property
             {
                 get { return _field; }
+                // ReSharper disable once UnusedMember.Local
                 set { _field = value; }
             }
 
