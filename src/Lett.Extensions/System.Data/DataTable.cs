@@ -303,7 +303,7 @@ namespace Lett.Extensions
         /// </example>
         public static void Update<T>(this DataTable @this, Func<DataRow, bool> selector, string columnName, T value)
         {
-            @this.Update(selector, columnName, value, true);
+            @this.Update(selector, columnName, value, true, false);
         }
 
         /// <summary>
@@ -314,6 +314,7 @@ namespace Lett.Extensions
         /// <param name="columnName">列名</param>
         /// <param name="value"></param>
         /// <param name="isDefaultDbNull">出现异常时，使用 <c>DBNull.Value</c> 进行填充</param>
+        /// <param name="isAcceptChanges">是否在更新完成后 使用 <c>isAcceptChanges</c></param>
         /// <typeparam name="T"></typeparam>
         /// <exception cref="ArgumentNullException"><paramref name="columnName" /> is null</exception>
         /// <exception cref="ArgumentNullException"><typeparamref name="T" /> is null</exception>
@@ -326,7 +327,7 @@ namespace Lett.Extensions
         ///         ]]>
         ///     </code>
         /// </example>
-        public static void Update<T>(this DataTable @this, Func<DataRow, bool> selector, string columnName, T value, bool isDefaultDbNull)
+        public static void Update<T>(this DataTable @this, Func<DataRow, bool> selector, string columnName, T value, bool isDefaultDbNull, bool isAcceptChanges)
         {
             @this.RowsEnumerable()
                  .Where(selector)
@@ -335,6 +336,7 @@ namespace Lett.Extensions
                      row.BeginEdit();
                      row.SetValue(columnName, value, isDefaultDbNull);
                  });
+            if (isAcceptChanges) @this.AcceptChanges();
         }
 
         /// <summary>
@@ -350,6 +352,7 @@ namespace Lett.Extensions
         ///     </remarks>
         /// </param>
         /// <param name="isDefaultDbNull">出现异常时，使用 <c>DBNull.Value</c> 进行填充</param>
+        /// <param name="isAcceptChanges">是否在更新完成后 使用 <c>isAcceptChanges</c></param>
         /// <typeparam name="T"></typeparam>
         /// <exception cref="ArgumentNullException"><paramref name="columnName" /> is null</exception>
         /// <exception cref="ArgumentNullException"><typeparamref name="T" /> is null</exception>
@@ -362,7 +365,7 @@ namespace Lett.Extensions
         ///         ]]>
         ///     </code>
         /// </example>
-        public static void Update<T>(this DataTable @this, Func<DataRow, bool> selector, string columnName, Func<DataRow, T> func, bool isDefaultDbNull)
+        public static void Update<T>(this DataTable @this, Func<DataRow, bool> selector, string columnName, Func<DataRow, T> func, bool isDefaultDbNull, bool isAcceptChanges)
         {
             @this.RowsEnumerable()
                  .Where(selector)
@@ -371,6 +374,7 @@ namespace Lett.Extensions
                      row.BeginEdit();
                      row.SetValue(columnName, func(row), isDefaultDbNull);
                  });
+            if (isAcceptChanges) @this.AcceptChanges();
         }
 
         /// <summary>
@@ -387,6 +391,7 @@ namespace Lett.Extensions
         ///     </remarks>
         /// </param>
         /// <param name="isDefaultDbNull">出现异常时，使用 <c>DBNull.Value</c> 进行填充</param>
+        /// <param name="isAcceptChanges">是否在更新完成后 使用 <c>isAcceptChanges</c></param>
         /// <typeparam name="T"></typeparam>
         /// <exception cref="ArgumentNullException"><paramref name="columnName" /> is null</exception>
         /// <exception cref="ArgumentNullException"><typeparamref name="T" /> is null</exception>
@@ -398,7 +403,7 @@ namespace Lett.Extensions
         ///         ]]>
         ///     </code>
         /// </example>
-        public static void Update<T>(this DataTable @this, Func<DataRow, bool> selector, string columnName, Func<int, DataRow, T> func, bool isDefaultDbNull)
+        public static void Update<T>(this DataTable @this, Func<DataRow, bool> selector, string columnName, Func<int, DataRow, T> func, bool isDefaultDbNull, bool isAcceptChanges)
         {
             @this.RowsEnumerable()
                  .Where(selector)
@@ -407,6 +412,7 @@ namespace Lett.Extensions
                      row.BeginEdit();
                      row.SetValue(columnName, func(index, row), isDefaultDbNull);
                  });
+            if (isAcceptChanges) @this.AcceptChanges();
         }
     }
 }
