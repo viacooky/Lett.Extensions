@@ -87,7 +87,24 @@ namespace Lett.Extensions.Test
                            .ToList();
             Assert.AreEqual(1, rs2.Count);
             Assert.AreEqual("a", rs2[0].Name);
+
+            var rs3 = input.Distinct(s => s.Age)
+                           .ToList();
+            Assert.AreEqual(1, rs3.Count);
+            Assert.AreEqual("a", rs3[0].Name);
         }
+
+        [TestMethod]
+        public void Duplicates_Test()
+        {
+            var input = new List<MyClass> {new MyClass {Age = 2, Name = "a"}, new MyClass {Age = 2, Name = "A"}, new MyClass {Age = 2, Name = "b"}};
+            var rs1   = input.Duplicates(s => s.Name, StringComparer.OrdinalIgnoreCase);
+            Assert.AreEqual(1, rs1.Count());
+
+            var rs2 = input.Duplicates(s => s.Name);
+            Assert.AreEqual(0, rs2.Count());
+        }
+
 
         [TestMethod]
         public void SplitBlock_Test()

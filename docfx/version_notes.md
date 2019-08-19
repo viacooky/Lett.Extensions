@@ -1,5 +1,21 @@
 # Version Notes
 
+### 0.3.5
+
+#### Features / 新增功能
+
+- `Guid`
+  - `GetNewGuidIfEmpty(Guid)` 当 this 为 Guid.Empty 时，返回新的 Guid
+- `IEnumerable`
+  - `Distinct<T, TResult>(this IEnumerable<T>, Func<T, TResult>)` 返回序列中的非重复元素
+  - `Duplicates<T, TResult>(this IEnumerable<T>, Func<T, TResult>, IEqualityComparer<TResult>)` 返回序列中重复的元素
+  - `Duplicates<T, TResult>(this IEnumerable<T>, Func<T, TResult>)` 返回序列中重复的元素
+- `DataRow`
+  - `HasColumn` 列是否存在
+  - `SetValue` 设置值
+- `DataTable`
+  - `Update` 更新
+
 ### 0.3.4
 
 #### Features / 新增功能
@@ -7,7 +23,7 @@
 - `IEnumerable`
   - `SplitBlock<T>(IEnumerable<T>, Int32)` 分割成指定 size 的块
 
-* `IDictionary`
+- `IDictionary`
   - `AddOrUpdate<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)` 添加或更新
   - `GetOrUpdate<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)` 获取值或更新
   - `AddOrUpdateRange<TKey, TValue>(IDictionary<TKey, TValue>, IEnumerable<KeyValuePair<TKey, TValue>>)` 批量添加或更新
@@ -24,7 +40,6 @@
 #### Changed / 变更
 
 - `ICollection`
-
   - `AddIfNotContains<T>(ICollection<T>, ICollection<T>)` 修改为 `AddIfNotContains<T>(ICollection<T>, IEnumerable<T>)`
 
 - `Array`

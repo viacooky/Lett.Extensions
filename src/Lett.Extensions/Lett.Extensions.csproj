@@ -12,9 +12,7 @@
     <Title>Lett.Extensions</Title>
     <Description>Popular .Net Core / .Net Framework extension methods
 
-Project Site: https://viacooky.github.io/Lett.Extensions/
-
-Version Notes: https://viacooky.github.io/Lett.Extensions/version_notes.html</Description>
+Project Site: https://viacooky.github.io/Lett.Extensions/</Description>
     <PackageTags>.Net;.NetStandard;.NetCore;Core;.NetFramework;Extension;ExtensionMethod;</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/viacooky/Lett.Extensions/master/docfx/images/logo.simple.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/viacooky/Lett.Extensions</RepositoryUrl>

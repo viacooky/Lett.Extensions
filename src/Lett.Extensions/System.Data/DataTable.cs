@@ -9,8 +9,36 @@ namespace Lett.Extensions
     /// <summary>
     ///     DataTable 扩展方法
     /// </summary>
-    public static class DataTableExtensions
+    public static partial class DataTableExtensions
     {
+        /// <summary>
+        ///     <para><see cref="DataTable" /> 支持的数据类型</para>
+        ///     <remarks>
+        ///         参考：<a>https://docs.microsoft.com/zh-cn/dotnet/api/system.data.datacolumn.datatype?view=netcore-2.0</a>
+        ///     </remarks>
+        /// </summary>
+        public static readonly IReadOnlyList<Type> SupportedDataTypes = new[]
+        {
+            typeof(bool),
+            typeof(byte),
+            typeof(char),
+            typeof(DateTime),
+            typeof(decimal),
+            typeof(double),
+            typeof(Guid),
+            typeof(short),
+            typeof(int),
+            typeof(long),
+            typeof(sbyte),
+            typeof(float),
+            typeof(string),
+            typeof(TimeSpan),
+            typeof(ushort),
+            typeof(uint),
+            typeof(ulong),
+            typeof(byte[])
+        };
+
         /// <summary>
         ///     是否存在数据行
         /// </summary>

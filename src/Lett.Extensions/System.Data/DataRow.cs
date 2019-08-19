@@ -178,5 +178,82 @@ namespace Lett.Extensions
                 rs.Add(column.ColumnName, @this[column.ColumnName] == DBNull.Value ? null : @this[column.ColumnName]);
             return rs;
         }
+
+        /// <summary>
+        ///     列是否存在
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="columnName">列名</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException">columnName is null or empty</exception>
+        /// <exception cref="ArgumentException"></exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// row.HasColumn("FRowId");
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static bool HasColumn(this DataRow @this, string columnName)
+        {
+            return @this.Table.Columns.Contains(columnName);
+        }
+
+        /// <summary>
+        ///     <para>设置值</para>
+        ///     <para>出现异常时，使用 <c>DBNull.Value</c> 进行填充</para>
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="columnName"></param>
+        /// <param name="value"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <exception cref="ArgumentNullException"><paramref name="columnName" /> is null</exception>
+        /// <exception cref="ArgumentNullException"><typeparamref name="T" /> is null</exception>
+        /// <exception cref="ArgumentException"><paramref name="columnName" /> not exist</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// row.SetValue("FColumnName", "value");
+        /// // if column "FColumnName" type is bool, row["FColumnName"] is DBNull.Value
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static void SetValue<T>(this DataRow @this, string columnName, T value)
+        {
+            @this.SetValue(columnName, value, true);
+        }
+
+        /// <summary>
+        ///     设置值
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="columnName">列名</param>
+        /// <param name="value">值</param>
+        /// <param name="isDefaultDbNull">赋值出现异常时，是否使用 <c>DBNull.Value</c> 进行填充</param>
+        /// <typeparam name="T"></typeparam>
+        /// <exception cref="ArgumentNullException"><paramref name="columnName" /> is null</exception>
+        /// <exception cref="ArgumentNullException"><typeparamref name="T" /> is null</exception>
+        /// <exception cref="ArgumentException"><paramref name="columnName" /> not exist</exception>
+        /// <example>
+        ///     <code>
+        ///         <![CDATA[
+        /// row.SetValue("FColumnName", "value", true);
+        /// // if column "FColumnName" type is bool, row["FColumnName"] is DBNull.Value
+        ///         ]]>
+        ///     </code>
+        /// </example>
+        public static void SetValue<T>(this DataRow @this, string columnName, T value, bool isDefaultDbNull)
+        {
+            if (columnName.IsNullOrEmpty()) throw new ArgumentNullException(nameof(columnName));
+            if (!@this.HasColumn(columnName)) throw new ArgumentException("column not exist", nameof(columnName));
+            if (typeof(T) == null) throw new ArgumentNullException(nameof(T));
+            if (typeof(T).NotIn(DataTableExtensions.SupportedDataTypes)) throw new ArgumentException("type not supported", nameof(T));
+            try { @this[columnName] = value; }
+            catch (Exception)
+            {
+                if (!isDefaultDbNull) throw;
+                @this[columnName] = DBNull.Value;
+            }
+        }
     }
 }
