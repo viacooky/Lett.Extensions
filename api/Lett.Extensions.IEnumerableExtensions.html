@@ -325,10 +325,119 @@ var rs2 = arr.ContainsAny(match2); // true</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_IEnumerableExtensions_Distinct__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__.md&amp;value=---%0Auid%3A%20Lett.Extensions.IEnumerableExtensions.Distinct%60%602(System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Collections.Generic/IEnumerable.Operation.cs/#L151">View Source</a>
+  </span>
+  <a id="Lett_Extensions_IEnumerableExtensions_Distinct_" data-uid="Lett.Extensions.IEnumerableExtensions.Distinct*"></a>
+  <h4 id="Lett_Extensions_IEnumerableExtensions_Distinct__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__" data-uid="Lett.Extensions.IEnumerableExtensions.Distinct``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">Distinct&lt;T, TResult&gt;(IEnumerable&lt;T&gt;, Func&lt;T, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>返回序列中的非重复元素</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; Distinct&lt;T, TResult&gt;(this IEnumerable&lt;T&gt; this, Func&lt;T, TResult&gt; selector)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;</td>
+        <td><span class="parametername">selector</span></td>
+        <td><p>选择器，选择用于比较的对象</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IEnumerableExtensions_Distinct__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1___examples">Examples</h5>
+  <pre><code>var input = new List&lt;MyClass> {new MyClass {Age = 2, Name = &quot;a&quot;}, new MyClass {Age = 2, Name = &quot;A&quot;}, new MyClass {Age = 2, Name = &quot;b&quot;}};
+
+var rs1 = input.Distinct(s => s.Name).ToList();
+
+rs1.Count;      // 3
+rs1[0].Name;    // &quot;a&quot;</code></pre>
+
+  <pre><code>var input = new List&lt;MyClass> {new MyClass {Age = 2, Name = &quot;a&quot;}, new MyClass {Age = 2, Name = &quot;A&quot;}, new MyClass {Age = 2, Name = &quot;b&quot;}};
+
+var rs2 = input.Distinct(s => s.Age).ToList();
+
+rs2.Count;      // 1
+rs2[0];         // &quot;a&quot;</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">selector</code> is null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_IEnumerableExtensions_Distinct__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IEqualityComparer___1__.md&amp;value=---%0Auid%3A%20Lett.Extensions.IEnumerableExtensions.Distinct%60%602(System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%2CSystem.Collections.Generic.IEqualityComparer%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Collections.Generic/IEnumerable.Operation.cs/#L155">View Source</a>
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Collections.Generic/IEnumerable.Operation.cs/#L204">View Source</a>
   </span>
   <a id="Lett_Extensions_IEnumerableExtensions_Distinct_" data-uid="Lett.Extensions.IEnumerableExtensions.Distinct*"></a>
   <h4 id="Lett_Extensions_IEnumerableExtensions_Distinct__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IEqualityComparer___1__" data-uid="Lett.Extensions.IEnumerableExtensions.Distinct``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})">Distinct&lt;T, TResult&gt;(IEnumerable&lt;T&gt;, Func&lt;T, TResult&gt;, IEqualityComparer&lt;TResult&gt;)</h4>
@@ -418,6 +527,214 @@ var rs2 = input.Distinct(s => s.Age, EqualityComparer&lt;int>.Default)
 
 rs2.Count;      // 1
 rs2[0];         // &quot;a&quot;</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">selector</code> is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">equalityComparer</code> is null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_IEnumerableExtensions_Duplicates__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__.md&amp;value=---%0Auid%3A%20Lett.Extensions.IEnumerableExtensions.Duplicates%60%602(System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Collections.Generic/IEnumerable.Operation.cs/#L266">View Source</a>
+  </span>
+  <a id="Lett_Extensions_IEnumerableExtensions_Duplicates_" data-uid="Lett.Extensions.IEnumerableExtensions.Duplicates*"></a>
+  <h4 id="Lett_Extensions_IEnumerableExtensions_Duplicates__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__" data-uid="Lett.Extensions.IEnumerableExtensions.Duplicates``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">Duplicates&lt;T, TResult&gt;(IEnumerable&lt;T&gt;, Func&lt;T, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>返回序列中重复的元素</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TResult&gt; Duplicates&lt;T, TResult&gt;(this IEnumerable&lt;T&gt; this, Func&lt;T, TResult&gt; selector)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;</td>
+        <td><span class="parametername">selector</span></td>
+        <td><p>选择器，选择用于比较的对象</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TResult&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> is null</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">selector</code> is null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_IEnumerableExtensions_Duplicates__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IEqualityComparer___1__.md&amp;value=---%0Auid%3A%20Lett.Extensions.IEnumerableExtensions.Duplicates%60%602(System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%2CSystem.Collections.Generic.IEqualityComparer%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Collections.Generic/IEnumerable.Operation.cs/#L306">View Source</a>
+  </span>
+  <a id="Lett_Extensions_IEnumerableExtensions_Duplicates_" data-uid="Lett.Extensions.IEnumerableExtensions.Duplicates*"></a>
+  <h4 id="Lett_Extensions_IEnumerableExtensions_Duplicates__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IEqualityComparer___1__" data-uid="Lett.Extensions.IEnumerableExtensions.Duplicates``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})">Duplicates&lt;T, TResult&gt;(IEnumerable&lt;T&gt;, Func&lt;T, TResult&gt;, IEqualityComparer&lt;TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>返回序列中重复的元素</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TResult&gt; Duplicates&lt;T, TResult&gt;(this IEnumerable&lt;T&gt; this, Func&lt;T, TResult&gt; selector, IEqualityComparer&lt;TResult&gt; equalityComparer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
+        <td><span class="parametername">this</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;</td>
+        <td><span class="parametername">selector</span></td>
+        <td><p>选择器，选择用于比较的对象</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer</a>&lt;TResult&gt;</td>
+        <td><span class="parametername">equalityComparer</span></td>
+        <td><p>比较器</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TResult&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Lett_Extensions_IEnumerableExtensions_Duplicates__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IEqualityComparer___1___examples">Examples</h5>
+  <pre><code>var input = new List&lt;MyClass> {new MyClass {Age = 2, Name = &quot;a&quot;}, new MyClass {Age = 2, Name = &quot;A&quot;}, new MyClass {Age = 2, Name = &quot;b&quot;}};
+var rs1   = input.Duplicates(s => s.Name, StringComparer.OrdinalIgnoreCase);
+// rs1 = {&quot;a&quot;}</code></pre>
+
+  <pre><code>var input = new List&lt;MyClass> {new MyClass {Age = 2, Name = &quot;a&quot;}, new MyClass {Age = 2, Name = &quot;A&quot;}, new MyClass {Age = 2, Name = &quot;b&quot;}};
+var rs1   = input.Duplicates(s => s.Name);
+// rs1 = {}</code></pre>
 
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -690,7 +1007,7 @@ var rs2 = arr.IsNullOrEmpty(); // true</code></pre>
     <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_IEnumerableExtensions_SplitBlock__1_System_Collections_Generic_IEnumerable___0__System_Int32_.md&amp;value=---%0Auid%3A%20Lett.Extensions.IEnumerableExtensions.SplitBlock%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Collections.Generic/IEnumerable.Operation.cs/#L191">View Source</a>
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Collections.Generic/IEnumerable.Operation.cs/#L240">View Source</a>
   </span>
   <a id="Lett_Extensions_IEnumerableExtensions_SplitBlock_" data-uid="Lett.Extensions.IEnumerableExtensions.SplitBlock*"></a>
   <h4 id="Lett_Extensions_IEnumerableExtensions_SplitBlock__1_System_Collections_Generic_IEnumerable___0__System_Int32_" data-uid="Lett.Extensions.IEnumerableExtensions.SplitBlock``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">SplitBlock&lt;T&gt;(IEnumerable&lt;T&gt;, Int32)</h4>

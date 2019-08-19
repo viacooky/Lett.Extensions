@@ -436,6 +436,44 @@ references:
   fullName.vb: Lett.Extensions.DataRowExtensions.Cell(Of T)(System.Data.DataRow, System.String, System.Func(Of T))
   nameWithType: DataRowExtensions.Cell<T>(DataRow, String, Func<T>)
   nameWithType.vb: DataRowExtensions.Cell(Of T)(DataRow, String, Func(Of T))
+- uid: Lett.Extensions.DataRowExtensions.HasColumn(System.Data.DataRow,System.String)
+  name: HasColumn(DataRow, String)
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_HasColumn_System_Data_DataRow_System_String_
+  commentId: M:Lett.Extensions.DataRowExtensions.HasColumn(System.Data.DataRow,System.String)
+  fullName: Lett.Extensions.DataRowExtensions.HasColumn(System.Data.DataRow, System.String)
+  nameWithType: DataRowExtensions.HasColumn(DataRow, String)
+- uid: Lett.Extensions.DataRowExtensions.HasColumn*
+  name: HasColumn
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_HasColumn_
+  commentId: Overload:Lett.Extensions.DataRowExtensions.HasColumn
+  isSpec: "True"
+  fullName: Lett.Extensions.DataRowExtensions.HasColumn
+  nameWithType: DataRowExtensions.HasColumn
+- uid: Lett.Extensions.DataRowExtensions.SetValue*
+  name: SetValue
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_SetValue_
+  commentId: Overload:Lett.Extensions.DataRowExtensions.SetValue
+  isSpec: "True"
+  fullName: Lett.Extensions.DataRowExtensions.SetValue
+  nameWithType: DataRowExtensions.SetValue
+- uid: Lett.Extensions.DataRowExtensions.SetValue``1(System.Data.DataRow,System.String,``0)
+  name: SetValue<T>(DataRow, String, T)
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_SetValue__1_System_Data_DataRow_System_String___0_
+  commentId: M:Lett.Extensions.DataRowExtensions.SetValue``1(System.Data.DataRow,System.String,``0)
+  name.vb: SetValue(Of T)(DataRow, String, T)
+  fullName: Lett.Extensions.DataRowExtensions.SetValue<T>(System.Data.DataRow, System.String, T)
+  fullName.vb: Lett.Extensions.DataRowExtensions.SetValue(Of T)(System.Data.DataRow, System.String, T)
+  nameWithType: DataRowExtensions.SetValue<T>(DataRow, String, T)
+  nameWithType.vb: DataRowExtensions.SetValue(Of T)(DataRow, String, T)
+- uid: Lett.Extensions.DataRowExtensions.SetValue``1(System.Data.DataRow,System.String,``0,System.Boolean)
+  name: SetValue<T>(DataRow, String, T, Boolean)
+  href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_SetValue__1_System_Data_DataRow_System_String___0_System_Boolean_
+  commentId: M:Lett.Extensions.DataRowExtensions.SetValue``1(System.Data.DataRow,System.String,``0,System.Boolean)
+  name.vb: SetValue(Of T)(DataRow, String, T, Boolean)
+  fullName: Lett.Extensions.DataRowExtensions.SetValue<T>(System.Data.DataRow, System.String, T, System.Boolean)
+  fullName.vb: Lett.Extensions.DataRowExtensions.SetValue(Of T)(System.Data.DataRow, System.String, T, System.Boolean)
+  nameWithType: DataRowExtensions.SetValue<T>(DataRow, String, T, Boolean)
+  nameWithType.vb: DataRowExtensions.SetValue(Of T)(DataRow, String, T, Boolean)
 - uid: Lett.Extensions.DataRowExtensions.ToDynamicObject(System.Data.DataRow)
   name: ToDynamicObject(DataRow)
   href: api/Lett.Extensions.DataRowExtensions.html#Lett_Extensions_DataRowExtensions_ToDynamicObject_System_Data_DataRow_
@@ -564,6 +602,12 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.DataTableExtensions.RowsEnumerable
   nameWithType: DataTableExtensions.RowsEnumerable
+- uid: Lett.Extensions.DataTableExtensions.SupportedDataTypes
+  name: SupportedDataTypes
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_SupportedDataTypes
+  commentId: F:Lett.Extensions.DataTableExtensions.SupportedDataTypes
+  fullName: Lett.Extensions.DataTableExtensions.SupportedDataTypes
+  nameWithType: DataTableExtensions.SupportedDataTypes
 - uid: Lett.Extensions.DataTableExtensions.ToDynamicObjects(System.Data.DataTable)
   name: ToDynamicObjects(DataTable)
   href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_ToDynamicObjects_System_Data_DataTable_
@@ -602,6 +646,40 @@ references:
   fullName.vb: Lett.Extensions.DataTableExtensions.ToEntityList(Of T)(System.Data.DataTable, System.Func(Of System.Data.DataRow, T, T))
   nameWithType: DataTableExtensions.ToEntityList<T>(DataTable, Func<DataRow, T, T>)
   nameWithType.vb: DataTableExtensions.ToEntityList(Of T)(DataTable, Func(Of DataRow, T, T))
+- uid: Lett.Extensions.DataTableExtensions.Update*
+  name: Update
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_Update_
+  commentId: Overload:Lett.Extensions.DataTableExtensions.Update
+  isSpec: "True"
+  fullName: Lett.Extensions.DataTableExtensions.Update
+  nameWithType: DataTableExtensions.Update
+- uid: Lett.Extensions.DataTableExtensions.Update``1(System.Data.DataTable,System.Func{System.Data.DataRow,System.Boolean},System.String,``0)
+  name: Update<T>(DataTable, Func<DataRow, Boolean>, String, T)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_Update__1_System_Data_DataTable_System_Func_System_Data_DataRow_System_Boolean__System_String___0_
+  commentId: M:Lett.Extensions.DataTableExtensions.Update``1(System.Data.DataTable,System.Func{System.Data.DataRow,System.Boolean},System.String,``0)
+  name.vb: Update(Of T)(DataTable, Func(Of DataRow, Boolean), String, T)
+  fullName: Lett.Extensions.DataTableExtensions.Update<T>(System.Data.DataTable, System.Func<System.Data.DataRow, System.Boolean>, System.String, T)
+  fullName.vb: Lett.Extensions.DataTableExtensions.Update(Of T)(System.Data.DataTable, System.Func(Of System.Data.DataRow, System.Boolean), System.String, T)
+  nameWithType: DataTableExtensions.Update<T>(DataTable, Func<DataRow, Boolean>, String, T)
+  nameWithType.vb: DataTableExtensions.Update(Of T)(DataTable, Func(Of DataRow, Boolean), String, T)
+- uid: Lett.Extensions.DataTableExtensions.Update``1(System.Data.DataTable,System.Func{System.Data.DataRow,System.Boolean},System.String,System.Func{System.Int32,System.Data.DataRow,``0})
+  name: Update<T>(DataTable, Func<DataRow, Boolean>, String, Func<Int32, DataRow, T>)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_Update__1_System_Data_DataTable_System_Func_System_Data_DataRow_System_Boolean__System_String_System_Func_System_Int32_System_Data_DataRow___0__
+  commentId: M:Lett.Extensions.DataTableExtensions.Update``1(System.Data.DataTable,System.Func{System.Data.DataRow,System.Boolean},System.String,System.Func{System.Int32,System.Data.DataRow,``0})
+  name.vb: Update(Of T)(DataTable, Func(Of DataRow, Boolean), String, Func(Of Int32, DataRow, T))
+  fullName: Lett.Extensions.DataTableExtensions.Update<T>(System.Data.DataTable, System.Func<System.Data.DataRow, System.Boolean>, System.String, System.Func<System.Int32, System.Data.DataRow, T>)
+  fullName.vb: Lett.Extensions.DataTableExtensions.Update(Of T)(System.Data.DataTable, System.Func(Of System.Data.DataRow, System.Boolean), System.String, System.Func(Of System.Int32, System.Data.DataRow, T))
+  nameWithType: DataTableExtensions.Update<T>(DataTable, Func<DataRow, Boolean>, String, Func<Int32, DataRow, T>)
+  nameWithType.vb: DataTableExtensions.Update(Of T)(DataTable, Func(Of DataRow, Boolean), String, Func(Of Int32, DataRow, T))
+- uid: Lett.Extensions.DataTableExtensions.Update``1(System.Data.DataTable,System.String,``0)
+  name: Update<T>(DataTable, String, T)
+  href: api/Lett.Extensions.DataTableExtensions.html#Lett_Extensions_DataTableExtensions_Update__1_System_Data_DataTable_System_String___0_
+  commentId: M:Lett.Extensions.DataTableExtensions.Update``1(System.Data.DataTable,System.String,``0)
+  name.vb: Update(Of T)(DataTable, String, T)
+  fullName: Lett.Extensions.DataTableExtensions.Update<T>(System.Data.DataTable, System.String, T)
+  fullName.vb: Lett.Extensions.DataTableExtensions.Update(Of T)(System.Data.DataTable, System.String, T)
+  nameWithType: DataTableExtensions.Update<T>(DataTable, String, T)
+  nameWithType.vb: DataTableExtensions.Update(Of T)(DataTable, String, T)
 - uid: Lett.Extensions.DateTimeExtensions
   name: DateTimeExtensions
   href: api/Lett.Extensions.DateTimeExtensions.html
@@ -1023,6 +1101,25 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.EnumExtensions.GetDescription
   nameWithType: EnumExtensions.GetDescription
+- uid: Lett.Extensions.GuidExtensions
+  name: GuidExtensions
+  href: api/Lett.Extensions.GuidExtensions.html
+  commentId: T:Lett.Extensions.GuidExtensions
+  fullName: Lett.Extensions.GuidExtensions
+  nameWithType: GuidExtensions
+- uid: Lett.Extensions.GuidExtensions.GetNewGuidIfEmpty(System.Guid)
+  name: GetNewGuidIfEmpty(Guid)
+  href: api/Lett.Extensions.GuidExtensions.html#Lett_Extensions_GuidExtensions_GetNewGuidIfEmpty_System_Guid_
+  commentId: M:Lett.Extensions.GuidExtensions.GetNewGuidIfEmpty(System.Guid)
+  fullName: Lett.Extensions.GuidExtensions.GetNewGuidIfEmpty(System.Guid)
+  nameWithType: GuidExtensions.GetNewGuidIfEmpty(Guid)
+- uid: Lett.Extensions.GuidExtensions.GetNewGuidIfEmpty*
+  name: GetNewGuidIfEmpty
+  href: api/Lett.Extensions.GuidExtensions.html#Lett_Extensions_GuidExtensions_GetNewGuidIfEmpty_
+  commentId: Overload:Lett.Extensions.GuidExtensions.GetNewGuidIfEmpty
+  isSpec: "True"
+  fullName: Lett.Extensions.GuidExtensions.GetNewGuidIfEmpty
+  nameWithType: GuidExtensions.GetNewGuidIfEmpty
 - uid: Lett.Extensions.ICollectionsExtensions
   name: ICollectionsExtensions
   href: api/Lett.Extensions.ICollectionsExtensions.html
@@ -1386,6 +1483,15 @@ references:
   isSpec: "True"
   fullName: Lett.Extensions.IEnumerableExtensions.Distinct
   nameWithType: IEnumerableExtensions.Distinct
+- uid: Lett.Extensions.IEnumerableExtensions.Distinct``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})
+  name: Distinct<T, TResult>(IEnumerable<T>, Func<T, TResult>)
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_Distinct__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__
+  commentId: M:Lett.Extensions.IEnumerableExtensions.Distinct``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})
+  name.vb: Distinct(Of T, TResult)(IEnumerable(Of T), Func(Of T, TResult))
+  fullName: Lett.Extensions.IEnumerableExtensions.Distinct<T, TResult>(System.Collections.Generic.IEnumerable<T>, System.Func<T, TResult>)
+  fullName.vb: Lett.Extensions.IEnumerableExtensions.Distinct(Of T, TResult)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, TResult))
+  nameWithType: IEnumerableExtensions.Distinct<T, TResult>(IEnumerable<T>, Func<T, TResult>)
+  nameWithType.vb: IEnumerableExtensions.Distinct(Of T, TResult)(IEnumerable(Of T), Func(Of T, TResult))
 - uid: Lett.Extensions.IEnumerableExtensions.Distinct``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})
   name: Distinct<T, TResult>(IEnumerable<T>, Func<T, TResult>, IEqualityComparer<TResult>)
   href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_Distinct__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IEqualityComparer___1__
@@ -1395,6 +1501,31 @@ references:
   fullName.vb: Lett.Extensions.IEnumerableExtensions.Distinct(Of T, TResult)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, TResult), System.Collections.Generic.IEqualityComparer(Of TResult))
   nameWithType: IEnumerableExtensions.Distinct<T, TResult>(IEnumerable<T>, Func<T, TResult>, IEqualityComparer<TResult>)
   nameWithType.vb: IEnumerableExtensions.Distinct(Of T, TResult)(IEnumerable(Of T), Func(Of T, TResult), IEqualityComparer(Of TResult))
+- uid: Lett.Extensions.IEnumerableExtensions.Duplicates*
+  name: Duplicates
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_Duplicates_
+  commentId: Overload:Lett.Extensions.IEnumerableExtensions.Duplicates
+  isSpec: "True"
+  fullName: Lett.Extensions.IEnumerableExtensions.Duplicates
+  nameWithType: IEnumerableExtensions.Duplicates
+- uid: Lett.Extensions.IEnumerableExtensions.Duplicates``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})
+  name: Duplicates<T, TResult>(IEnumerable<T>, Func<T, TResult>)
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_Duplicates__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__
+  commentId: M:Lett.Extensions.IEnumerableExtensions.Duplicates``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})
+  name.vb: Duplicates(Of T, TResult)(IEnumerable(Of T), Func(Of T, TResult))
+  fullName: Lett.Extensions.IEnumerableExtensions.Duplicates<T, TResult>(System.Collections.Generic.IEnumerable<T>, System.Func<T, TResult>)
+  fullName.vb: Lett.Extensions.IEnumerableExtensions.Duplicates(Of T, TResult)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, TResult))
+  nameWithType: IEnumerableExtensions.Duplicates<T, TResult>(IEnumerable<T>, Func<T, TResult>)
+  nameWithType.vb: IEnumerableExtensions.Duplicates(Of T, TResult)(IEnumerable(Of T), Func(Of T, TResult))
+- uid: Lett.Extensions.IEnumerableExtensions.Duplicates``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})
+  name: Duplicates<T, TResult>(IEnumerable<T>, Func<T, TResult>, IEqualityComparer<TResult>)
+  href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_Duplicates__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1__System_Collections_Generic_IEqualityComparer___1__
+  commentId: M:Lett.Extensions.IEnumerableExtensions.Duplicates``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})
+  name.vb: Duplicates(Of T, TResult)(IEnumerable(Of T), Func(Of T, TResult), IEqualityComparer(Of TResult))
+  fullName: Lett.Extensions.IEnumerableExtensions.Duplicates<T, TResult>(System.Collections.Generic.IEnumerable<T>, System.Func<T, TResult>, System.Collections.Generic.IEqualityComparer<TResult>)
+  fullName.vb: Lett.Extensions.IEnumerableExtensions.Duplicates(Of T, TResult)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, TResult), System.Collections.Generic.IEqualityComparer(Of TResult))
+  nameWithType: IEnumerableExtensions.Duplicates<T, TResult>(IEnumerable<T>, Func<T, TResult>, IEqualityComparer<TResult>)
+  nameWithType.vb: IEnumerableExtensions.Duplicates(Of T, TResult)(IEnumerable(Of T), Func(Of T, TResult), IEqualityComparer(Of TResult))
 - uid: Lett.Extensions.IEnumerableExtensions.ForEach*
   name: ForEach
   href: api/Lett.Extensions.IEnumerableExtensions.html#Lett_Extensions_IEnumerableExtensions_ForEach_

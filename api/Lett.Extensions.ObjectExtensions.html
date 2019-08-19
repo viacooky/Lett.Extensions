@@ -345,11 +345,12 @@ s.As&lt;BaseClass>(() => new BaseClass());</code></pre>
     <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_ObjectExtensions_DeepClone__1___0_.md&amp;value=---%0Auid%3A%20Lett.Extensions.ObjectExtensions.DeepClone%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Object/Object.Operation.cs/#L37">View Source</a>
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Object/Object.Operation.cs/#L38">View Source</a>
   </span>
   <a id="Lett_Extensions_ObjectExtensions_DeepClone_" data-uid="Lett.Extensions.ObjectExtensions.DeepClone*"></a>
   <h4 id="Lett_Extensions_ObjectExtensions_DeepClone__1___0_" data-uid="Lett.Extensions.ObjectExtensions.DeepClone``1(``0)">DeepClone&lt;T&gt;(T)</h4>
   <div class="markdown level1 summary"><p>深复制</p>
+<remarks><code data-dev-comment-type="paramref" class="paramref">this</code>为空时， 返回 <code>default&lt;T></code></remarks>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -426,7 +427,7 @@ var rs = obj.DeepClone();
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
-        <td><p><code data-dev-comment-type="paramref" class="paramref">this</code> 需要支持序列化 Serializable</p>
+        <td><p>目标类型 <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> 需要支持序列化</p>
 </td>
       </tr>
     </tbody>
@@ -1825,7 +1826,7 @@ s.InParams(&quot;a&quot;); // false</code></pre>
     <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_ObjectExtensions_Pipe__1___0_System_Action___0__.md&amp;value=---%0Auid%3A%20Lett.Extensions.ObjectExtensions.Pipe%60%601(%60%600%2CSystem.Action%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Object/Object.Operation.cs/#L72">View Source</a>
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Object/Object.Operation.cs/#L75">View Source</a>
   </span>
   <a id="Lett_Extensions_ObjectExtensions_Pipe_" data-uid="Lett.Extensions.ObjectExtensions.Pipe*"></a>
   <h4 id="Lett_Extensions_ObjectExtensions_Pipe__1___0_System_Action___0__" data-uid="Lett.Extensions.ObjectExtensions.Pipe``1(``0,System.Action{``0})">Pipe&lt;T&gt;(T, Action&lt;T&gt;)</h4>
@@ -1919,7 +1920,7 @@ var rs = obj1.Pipe(o => { o.Name += &quot;pipe1&quot;;})
     <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_ObjectExtensions_Pipe__2___0_System_Func___0___1__.md&amp;value=---%0Auid%3A%20Lett.Extensions.ObjectExtensions.Pipe%60%602(%60%600%2CSystem.Func%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Object/Object.Operation.cs/#L102">View Source</a>
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Object/Object.Operation.cs/#L105">View Source</a>
   </span>
   <a id="Lett_Extensions_ObjectExtensions_Pipe_" data-uid="Lett.Extensions.ObjectExtensions.Pipe*"></a>
   <h4 id="Lett_Extensions_ObjectExtensions_Pipe__2___0_System_Func___0___1__" data-uid="Lett.Extensions.ObjectExtensions.Pipe``2(``0,System.Func{``0,``1})">Pipe&lt;TSource, TResult&gt;(TSource, Func&lt;TSource, TResult&gt;)</h4>
@@ -2017,7 +2018,7 @@ Assert.AreEqual(rs2, &quot;1_2_3_4_5&quot;);</code></pre>
     <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_ObjectExtensions_SaveAsFile__1___0_System_String_.md&amp;value=---%0Auid%3A%20Lett.Extensions.ObjectExtensions.SaveAsFile%60%601(%60%600%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Object/Object.Operation.cs/#L115">View Source</a>
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Object/Object.Operation.cs/#L118">View Source</a>
   </span>
   <a id="Lett_Extensions_ObjectExtensions_SaveAsFile_" data-uid="Lett.Extensions.ObjectExtensions.SaveAsFile*"></a>
   <h4 id="Lett_Extensions_ObjectExtensions_SaveAsFile__1___0_System_String_" data-uid="Lett.Extensions.ObjectExtensions.SaveAsFile``1(``0,System.String)">SaveAsFile&lt;T&gt;(T, String)</h4>
@@ -2071,7 +2072,7 @@ Assert.AreEqual(rs2, &quot;1_2_3_4_5&quot;);</code></pre>
     <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_ObjectExtensions_SaveAsFile__1___0_System_String_System_IO_FileMode_.md&amp;value=---%0Auid%3A%20Lett.Extensions.ObjectExtensions.SaveAsFile%60%601(%60%600%2CSystem.String%2CSystem.IO.FileMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Object/Object.Operation.cs/#L128">View Source</a>
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Object/Object.Operation.cs/#L131">View Source</a>
   </span>
   <a id="Lett_Extensions_ObjectExtensions_SaveAsFile_" data-uid="Lett.Extensions.ObjectExtensions.SaveAsFile*"></a>
   <h4 id="Lett_Extensions_ObjectExtensions_SaveAsFile__1___0_System_String_System_IO_FileMode_" data-uid="Lett.Extensions.ObjectExtensions.SaveAsFile``1(``0,System.String,System.IO.FileMode)">SaveAsFile&lt;T&gt;(T, String, FileMode)</h4>
@@ -2132,7 +2133,7 @@ Assert.AreEqual(rs2, &quot;1_2_3_4_5&quot;);</code></pre>
     <a href="https://github.com/viacooky/Lett.Extensions/new/master/apiSpec/new?filename=Lett_Extensions_ObjectExtensions_SaveAsFile__1___0_System_String_System_IO_FileMode_System_Runtime_Serialization_IFormatter_.md&amp;value=---%0Auid%3A%20Lett.Extensions.ObjectExtensions.SaveAsFile%60%601(%60%600%2CSystem.String%2CSystem.IO.FileMode%2CSystem.Runtime.Serialization.IFormatter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Object/Object.Operation.cs/#L142">View Source</a>
+    <a href="https://github.com/viacooky/Lett.Extensions/blob/master/src/Lett.Extensions/System.Object/Object.Operation.cs/#L145">View Source</a>
   </span>
   <a id="Lett_Extensions_ObjectExtensions_SaveAsFile_" data-uid="Lett.Extensions.ObjectExtensions.SaveAsFile*"></a>
   <h4 id="Lett_Extensions_ObjectExtensions_SaveAsFile__1___0_System_String_System_IO_FileMode_System_Runtime_Serialization_IFormatter_" data-uid="Lett.Extensions.ObjectExtensions.SaveAsFile``1(``0,System.String,System.IO.FileMode,System.Runtime.Serialization.IFormatter)">SaveAsFile&lt;T&gt;(T, String, FileMode, IFormatter)</h4>
