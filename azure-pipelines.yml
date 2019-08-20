@@ -40,9 +40,9 @@ jobs:
           echo 'Code Coverage上传完成'
         displayName: '上传 Code Coverage 到 Codecov'
       - task: PublishCodeCoverageResults@1
-          inputs:
-            codeCoverageTool: 'Cobertura'
-            summaryFileLocation: 'TestResults/coverage/Coverage.cobertura.xml'
+        inputs:
+          codeCoverageTool: 'Cobertura'
+          summaryFileLocation: 'TestResults/coverage/Coverage.cobertura.xml'
         displayName: '上传 Code Coverage 到 azure'
   # Linux (Docker - ubuntu-16.04)
   - job: Docker_ubuntu_1604
