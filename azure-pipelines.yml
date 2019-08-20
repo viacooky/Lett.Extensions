@@ -38,12 +38,12 @@ jobs:
           echo 'Code Coverage上传开始'
           bash <(curl -s https://codecov.io/bash) -t ${CODECOVKEY} -f ./TestResults/coverage/Coverage.opencover.xml
           echo 'Code Coverage上传完成'
-      - task: DotNetCoreCLI@2
-        displayName: '测试'
-        inputs:
-          command: test
-          projects: '$(TestProject)'
-          arguments: '--configuration $(BuildConfiguration) --collect "Code coverage"'
+        displayName: '上传 Code Coverage 到 Codecov'
+      - task: PublishCodeCoverageResults@1
+          inputs:
+            codeCoverageTool: 'Cobertura'
+            summaryFileLocation: 'TestResults/coverage/Coverage.cobertura.xml'
+        displayName: '上传 Code Coverage 到 azure'
   # Linux (Docker - ubuntu-16.04)
   - job: Docker_ubuntu_1604
     condition: eq(variables['isPushNuget'], 'false')
