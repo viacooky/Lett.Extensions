@@ -30,15 +30,16 @@ jobs:
           chmod +x ./build.sh
           ./build.sh --bootstrap
           ./build.sh --target=codecoverage
-          echo 'Code Coverage上传开始'
-          bash <(curl -s https://codecov.io/bash) -t ${CODECOVKEY} -f ./TestResults/coverage/Coverage.opencover.xml
-          echo 'Code Coverage上传完成'
         env:
           DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
           DOTNET_CLI_TELEMETRY_OPTOUTl: 1
-        displayName: 'Codecov Code Coverage'
+        displayName: '执行 cake - Codecov Code Coverage'
+      - bash: |
+          echo 'Code Coverage上传开始'
+          bash <(curl -s https://codecov.io/bash) -t ${CODECOVKEY} -f ./TestResults/coverage/Coverage.opencover.xml
+          echo 'Code Coverage上传完成'
       - task: DotNetCoreCLI@2
-        displayName: 'Azure Code Coverage'
+        displayName: '测试'
         inputs:
           command: test
           projects: '$(TestProject)'
