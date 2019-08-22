@@ -1,12 +1,13 @@
-name: CI
+name: MyCI
 
 on: 
-  pull_request:
+  push:
     branches:
     - master
-
-jobs:
-  build:
+    - releases/*
+  pull_request:  # Specify a second event with pattern matching
+    branches:
+    - master
 
     runs-on: ubuntu-latest
     
