@@ -1,4 +1,4 @@
-name: ASP.NET Core CI
+name: my CI
 
 on: [push]
 
@@ -12,7 +12,9 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 2.2.108
-    - name: Build with dotnet
+        dotnet-version: 2.2.300
+    - name: run cake
       run: |
-        dotnet build ${GITHUB_WORKSPACE}/src/Lett.Extensions/Lett.Extensions.csproj --configuration Release
+        chmod +x ./build.sh
+        ./build.sh --bootstrap
+        ./build.sh --target=codecoverage
