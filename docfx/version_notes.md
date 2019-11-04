@@ -1,5 +1,13 @@
 # Version Notes
 
+### 0.3.6
+
+#### Features / 新增功能
+
+* `DirectoryInfo`
+  * `GetFiles(DirectoryInfo, SearchOption, String[])` 返回当前目录的文件列表
+  * `GetFiles(DirectoryInfo, SearchOption, String[], Func<FileInfo, Boolean>)` 返回当前目录的文件列表
+
 ### 0.3.5
 
 #### Features / 新增功能

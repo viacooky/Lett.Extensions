@@ -24,4 +24,22 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="System.IO\TestDirectory\TestSubDirectory\subfile.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="System.IO\TestDirectory\file.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="System.IO\TestDirectory\file.txt.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="System.IO\TestDirectory\file.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="System.IO\TestDirectory\file.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
